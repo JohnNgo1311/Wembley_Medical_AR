@@ -76,7 +76,7 @@ public class SignalRData : MonoBehaviour
 
 
     void Start()
-    {
+    {   //! Kết nối đến server
         StartConnectWebApi();
     }
 
@@ -84,6 +84,7 @@ public class SignalRData : MonoBehaviour
     {
         GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
         GlobalVariable.hubConnection.StopAsync();
+        //? StopAsync là ngắt kết nối server
 
     }
 
@@ -92,16 +93,17 @@ public class SignalRData : MonoBehaviour
 
         if (GlobalVariable.hubConnection == null)
         {
-            // Tạo kết nối
-            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url)
+            //! Tạo kết nối đến server, gán Url rồi build
+            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url) 
             // .WithAutomaticReconnect()
             .Build();
+            //? hàm Build là để build Hubconnection thôi, không phải kết nối đến server
             GlobalVariable.isConnecting = true;
         }
 
-
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
-        {
+        { //?Đăng ký sẵn đến Topic OnTagChanged,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
+          //? Chỉ việc đăng ký sẵn, khi Server thực hiện xong hàm nào đó, rồi return dữ liệu cho topic "OnTagChanged" thì phần xử lý phía dưới sẽ chạy
             Debug.Log("$$" + str);
             DataSignalR data = JsonConvert.DeserializeObject<DataSignalR>(str);
             if (data != null)
@@ -109,18 +111,18 @@ public class SignalRData : MonoBehaviour
                 UpdateData(data);
             }
         });
+
+           //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", async (str) =>
-        {
+        {   
             if (str.Contains("Connected"))
             {
-                UpdateTopics(GlobalVariable.subscribedTopics);
+                UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
-
                 //string a = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
-
                 var listInitialData = await GetBufferList();
-
+                //? Khi connect Thành công thì GetBufferList để lấy các dữ liệu lần gần nhất được retain
                 foreach (var data in listInitialData)
                 {
                     UpdateData(data);
@@ -133,7 +135,8 @@ public class SignalRData : MonoBehaviour
         try
         {
             await GlobalVariable.hubConnection.StartAsync().ContinueWith(task =>
-            {
+            {  //? Hàm StartAsync để kết nối lên server
+               //? ContinueWith để khi hoàn thành hàm StartAsync thì tiếp tục xử lý phía dưới, trong trường hợp này là để xử lý xem khi connect được và ko được
                 if (task.IsFaulted)
                 {
                     Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
@@ -182,11 +185,15 @@ public class SignalRData : MonoBehaviour
     public void PublishStationIndex(int index)
     {
         GlobalVariable.hubConnection.InvokeAsync("SelectStation", index);
+         //? Gọi hàm SelectStation trên Backend để phân luồng đọc trạm nào 
+
     }
     public void UpdateTopics(List<string> topics)
     {
         GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
+        //? Gọi hàm UpdateTopics trên Server để Server subscribe đến broker, khi đó dữ liệu sẽ đi về trên AR app
     }
+    //! Hàm UpdateData dưới đây là cho MÁY NÚT CHẶN
     void UpdateData(DataSignalR data)
     {
         if (data.StationId == "Metric" && data.LineId == "IE-F2-HCA01")
@@ -200,7 +207,7 @@ public class SignalRData : MonoBehaviour
 
                     int index = int.Parse(data.TagId.Remove(0, 6));
                     bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS1[index].SetActive(value);
+                    inputCheckS1[index].SetActive(value);       //! Dòng này là cho I/O list 
                     GlobalVariable.inputStation1[index] = value;
                     if (index == 0)
                     {
@@ -1006,7 +1013,9 @@ public class SignalRData : MonoBehaviour
     public async Task GetBuffer(string tagId)
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+        //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất,đó là một String rất dài nên cần xử lý phía dưới
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+        //? convert sang kiểu dữ liệu là List<DataSignalR>
         var filteredList = tags.Where(data => data.TagId == tagId);
         ErrorInfor errorInfor;
         GlobalVariable.errorInfors.Clear();
@@ -1021,9 +1030,12 @@ public class SignalRData : MonoBehaviour
         }
     }
     public async Task<List<DataSignalR>> GetBufferList()
-    {
+    { 
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+        //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất. đó là một String rất dài nên cần xử lý phía dưới
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+        //? convert sang kiểu dữ liệu là List<DataSignalR>
+
         if (tags is null) return new List<DataSignalR>();
         return tags;
 

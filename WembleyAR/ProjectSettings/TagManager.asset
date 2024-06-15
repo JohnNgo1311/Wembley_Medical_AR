@@ -4,93 +4,85 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Arrow
-  - S1_Arrow_1
+  - S1_Arrow_OMT
+  - S5_Return_Btn
+  - S2_Horz
+  - S11_Horz
+  - S5_Sensor
+  - S2_Arrow_2
+  - S2_Sensor
+  - S4_Arrow_3
+  - S1_Lifting_tag
+  - S4_Lifting
+  - S3_Return_Btn
+  - S6_Monitor_Return
+  - S12_Arrow_1
+  - Mqtt
+  - S9_pop
+  - S1_sensor3_pop
+  - S10_Monitor_Return
+  - S4_sensor2_pop
+  - S12_Sensor
+  - S5_Monitor_Return
+  - S1_Sensor_tag
+  - S4_Sensor
+  - S12_Gripper
+  - S11_Horz_Snr
+  - S7_Arrow
+  - S2_Arrow_1
+  - S10_PS
+  - S2_Vacuum
+  - S3_Arrow
+  - S1_Horz_Snr_tag
+  - S10_Return_Btn
+  - S11_Gripper
+  - S3_Sensor
+  - S4_Arrow_1
+  - S1_Horz_tag
+  - S2_Monitor_Return
+  - S10_Cyl
+  - S5_Cyl_Snr
   - S1_Arrow_2
   - S1_Arrow_3
-  - S1_Arrow_4
-  - S3_Arrow
-  - S5_Arrow
-  - S6_Arrow
-  - S7_Arrow
-  - S8_Arrow
-  - S9_Arrow
-  - S10_Arrow
-  - S8_pop
-  - S9_pop
-  - S7_pop
-  - S6_pop
-  - S5_pop_general
-  - S5_pop_station
-  - S5_pop_sensor
-  - S5_pop_wiring
-  - S1_sensor1_pop
-  - S4_Arrow_3
-  - S4_Arrow_1
-  - S4_Arrow_2
-  - S2_Arrow_1
-  - S2_Arrow_2
-  - S11_Arrow
-  - S12_Arrow_1
-  - S12_Arrow_2
-  - S12_sensor1_pop
-  - S2_sensor1_pop
+  - S2_Horz_snr
+  - S4_Horz_Snr
   - S4_sensor1_pop
-  - S4_sensor2_pop
-  - S1_sensor2_pop
-  - S1_sensor3_pop
-  - Mqtt
-  - manufacturingInfoScript
-  - signalR
+  - S10_Arrow
+  - S6_Arrow
+  - S9_Arrow
+  - S11_Monitor_Return
+  - S5_Arrow
+  - S1_sensor1_pop
   - S3_Arrow_1
   - S1_Return
-  - S1_Sensor_tag
-  - S1_Horz_tag
-  - S1_Lifting_tag
-  - S1_Horz_Snr_tag
-  - S1_Gripper_tag
-  - S2_Return_Btn
-  - S3_Return_Btn
-  - S4_Return_Btn
-  - S5_Return_Btn
-  - S10_Return_Btn
-  - S11_Return_Btn
-  - S2_Vacuum
-  - S2_Horz
-  - S2_Horz_snr
-  - S2_Sensor
-  - S2_Gripper
-  - S2_Vert_Lifting
-  - S3_Press_Cyl
-  - S3_Sensor
+  - S8_Arrow
+  - signalR
+  - S2_sensor1_pop
   - S3_Cyl_Snr
-  - S4_Gripper
-  - S4_Horz
-  - S4_Horz_Snr
-  - S4_Sensor
-  - S5_Cyl
-  - S5_Cyl_Snr
-  - S5_Sensor
-  - S10_Air_Blow
-  - S10_PS
-  - S10_Cyl
-  - S11_Gripper
-  - S11_Horz
-  - S11_Horz_Snr
-  - S12_Gripper
-  - S12_Sensor
-  - S4_Lifting
-  - Close Content
-  - Close_Content
+  - S4_Arrow_2
+  - S1_sensor2_pop
   - S1_Monitor_Return
-  - S2_Monitor_Return
-  - S3_Monitor_Return
+  - S12_sensor1_pop
+  - S5_Cyl
+  - S2_Vert_Lifting
+  - S12_Arrow_2
+  - S10_Air_Blow
   - S4_Monitor_Return
-  - S5_Monitor_Return
-  - S6_Monitor_Return
-  - S7_Monitor_Return
-  - S10_Monitor_Return
-  - S11_Monitor_Return
+  - S3_Press_Cyl
+  - S1_Arrow_1
+  - S1_Gripper_tag
+  - S4_Horz
+  - S8_pop
+  - S2_Gripper
+  - S4_Gripper
+  - S11_Return_Btn
+  - S2_Return_Btn
+  - S3_Monitor_Return
+  - S4_Return_Btn
+  - S1_Arrow_4
+  - manufacturingInfoScript
+  - SignalR_OMT
+  - S1_OMT_Arrow_Back_Monitor
   layers:
   - Default
   - TransparentFX

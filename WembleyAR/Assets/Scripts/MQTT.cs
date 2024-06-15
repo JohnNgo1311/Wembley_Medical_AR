@@ -19,6 +19,8 @@ public class Data
     public static Data CreateFromJSON(string jsonString)
     {
         return JsonUtility.FromJson<Data>(jsonString);
+    //?Nhận jsonString rồi đưa về dạng Data ==>giải mã chuỗi JSON thành một đối tượng Data (mapping Code)
+
     }
 
 }
@@ -31,6 +33,7 @@ public class DoubleTypeData
     public static DoubleTypeData CreateFromJSON(string jsonString)
     {
         return JsonUtility.FromJson<DoubleTypeData>(jsonString);
+        //?Nhận jsonString rồi đưa về dạng DoubleTypeData ==>giải mã chuỗi JSON thành một đối tượng DoubleTypeData (mapping Code)
     }
 
 }
@@ -47,8 +50,6 @@ public class TagMessage
 
 public class MQTT : M2MqttUnity.M2MqttUnityClient
 {
-
-
     public GameObject[] inputCheckS1;
     public GameObject[] outputCheckS1;
     public GameObject[] inputCheckS2;
@@ -70,7 +71,6 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
     public GameObject[] inputCheckS12;
     public GameObject[] outputCheckS12;
     //public GameObject[] S1SensorCheck;
-
 
     public GameObject[] S3SensorCheck_2;
 
@@ -139,14 +139,27 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
     public void SubscribeTopic(List<string> topics)
     {
         foreach (var topic in topics)
-        {
+        {   //? Subscribe từng topic trong topics, mỗi lần chỉ subscribe 1 topic, đảm bảo tin nhắn gửi đến broker 1 lần duy nhất
+
             client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE });
         }
     }
+     /* client.Subscribe(new string[] { topic }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE });:
+     Dòng code này thực hiện việc đăng ký (subscribe) vào các chủ đề MQTT.
+     Subscribe là một phương thức của đối tượng client dùng để đăng ký.  
+     new string[] { topic } tạo ra một mảng string chỉ chứa một phần tử,
+     phần tử đó chính là topic được lấy ra từ vòng lặp foreach.
+     new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE } tạo ra một mảng byte chỉ chứa một phần tử. 
+     Giá trị của phần tử này thiết lập mức độ dịch vụ (Quality of Service - QoS) cho việc đăng ký.
+     Trong trường hợp này, MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE là một hằng số được định nghĩa sẵn,
+     thường có giá trị là 0, biểu thị mức QoS thấp nhất, chỉ đảm bảo tin nhắn được gửi đi một lần, không đảm bảo đến được thiết bị.
+     */
+
+   
     public void UnsubscribeTopic(List<string> topics)
     {
         foreach (var topic in topics)
-        {
+        { //? UnSubscribe từng topic trong topics, mỗi lần chỉ Unsubscribe 1 topic, cứ thế mà đủ vòng lặp
             client.Unsubscribe(new string[] { topic });
         }
     }
@@ -158,11 +171,13 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
     public void Publish_Message(int station)
     {
 
-        client.Publish("Wembley/HerapinCap/IE-F2-HCA01/EnableStation", System.Text.Encoding.UTF8.GetBytes(station.ToString()), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
+        client.Publish($"{GlobalVariable.basedTopic}/EnableStation", System.Text.Encoding.UTF8.GetBytes(station.ToString()), MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE, false);
 
     }
     protected override void DecodeMessage(string topic, byte[] message)
-    {
+    //? Topic này do bên MQTT gửi đến, ko nhất thiết phải là basedTopic
+       //! Xử lý dữ liệu trả về
+    {  //! Nhận về là chuỗi Byte phải chuyển sang dạng String
         string msg = System.Text.Encoding.UTF8.GetString(message);
 
         // Debug.Log(msg);
@@ -199,19 +214,22 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
                 }  */
         //! đổi based topic thì đổi số ở đây
         string valueKey = topic.Remove(0, 23);
+        //! Chỗ này để xóa cái basedTopic đi
         // string msg = System.Text.Encoding.UTF8.GetString(message);
 
         msg = msg.TrimStart("[").TrimEnd("]");
+        //! MQTT gửi về có 2 dâu [] nên phải xóa đi
 
         if (topic.Contains("Encoder Value"))
         {
             GlobalVariable.encoderPosition = int.Parse(Data.CreateFromJSON(msg).value);
+            //? lấy chuỗi string msg chuyển về dạng Data, sau đó lấy value rồi ép về kiểu int rồi lưu vào GlobalVariable.encoderPosition
 
         }
         //! S1
+        //? Lưu ý là valueKey là topic đã xóa đi basedTopioc
         else if (valueKey.Contains("S1/in/"))
         {
-
             int index = int.Parse(valueKey.Remove(0, 6));
             bool value = Data.CreateFromJSON(msg).value == "1" ? true : false;
             inputCheckS1[index].SetActive(value);
@@ -376,7 +394,10 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
         {
             int index = int.Parse(valueKey.Remove(0, 7));
             bool value = Data.CreateFromJSON(msg).value == "1" ? true : false;
-            outputCheckS3[index].SetActive(value);
+
+            outputCheckS3[index].SetActive(value); //! Dòng này là setActive (true/false) Check box trong I/O list
+
+            //! Phần dưới đây là trigger Monitor tags
             if (index == 1)
             {
                 S3_Press_Dn[0].SetActive(value);
@@ -795,6 +816,9 @@ public class MQTT : M2MqttUnity.M2MqttUnityClient
             int index = int.Parse(valueKey.Remove(0, 11));
             GlobalVariable.goodProductCountTR[index - 1] = int.Parse(Data.CreateFromJSON(msg).value);
         }
+
+
+
         else if (valueKey.Contains("BAD_CNT_TR"))
         {
             int index = int.Parse(valueKey.Remove(0, 10));

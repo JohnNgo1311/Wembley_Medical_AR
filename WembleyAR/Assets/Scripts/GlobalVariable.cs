@@ -6,24 +6,38 @@ using Microsoft.AspNetCore.SignalR.Client;
 using UnityEngine;
 
 public class GlobalVariable : MonoBehaviour
-{
+{   //! Phần này chỉ liên quan SignalR
     public static HubConnection hubConnection;
-    public static string url = "https://wembleyscada.azurewebsites.net/NotificationHub";
+    public static string url = "https://wembleymedicalscada.azurewebsites.net/NotificationHub"; 
     //public static string basedTopic = "Wembley/HerapinCap/IE-F2-HCA01";
     public static string basedTopic = "HCM/IE-F2-HCA01/Metric";
+    //! Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
+    public static string basedTopicOMT = "WembleyMedical/BTM/IE-F3-BLO06";
+
     public static List<string> initialTopic = new List<string> {
         $"{basedTopic}/errorStatus" ,
         $"{basedTopic}/endErrorStatus" ,
           };
+          //! 2 topic này luôn luôn phải được đăng ký
+          //! initialTopic là List những Topic cần phải đăng ký
+    
+    public static List<string> initialTopicOMT = new List<string> {
+    
+          };
     public static List<string> subscribedTopics = initialTopic;
+    public static List<string> subscribedTopicsOMT = initialTopicOMT;
+
+
     public static bool networkConnected = false;
     public static bool serverConnected = false;
     public static bool isConnecting = false;
     public static bool errorServerConnected = false;
+    //!Hết phần chỉ liên quan SignalR
 
+
+    //! Bắt đầu phần  liên quan MQTT
     public static int encoderPosition = 0;
     //? Station 1
-
     public static bool[] inputStation1 = new bool[14];
     public static bool[] outputStation1 = new bool[19];
     //? Station 2
@@ -38,14 +52,12 @@ public class GlobalVariable : MonoBehaviour
     //? Station 5
     public static bool[] inputStation5 = new bool[5];
     public static bool[] outputStation5 = new bool[2];
-
     //? Station 6
     public static bool[] inputStation6 = new bool[7];
     public static bool[] outputStation6 = new bool[9];
     //? Station 7
     public static bool[] inputStation7 = new bool[7];
     public static bool[] outputStation7 = new bool[7];
-
     //? Station 8
     //! TR1
     public static double S8_max_1 = 21.32;
@@ -61,13 +73,12 @@ public class GlobalVariable : MonoBehaviour
     public static double S8_measured_3 = 21.24;
     //? S9
     //! TR2
-    //! TR3
     public static double S9_max_2 = 21.32;
     public static double S9_min_2 = 21.00;
     public static double S9_offset_2 = 20.95;
     public static double S9_current_2 = 0.29;
     public static double S9_measured_2 = 21.24;
-    //! TR3
+    //! TR4
     public static double S9_max_4 = 21.32;
     public static double S9_min_4 = 21.00;
     public static double S9_offset_4 = 20.95;
@@ -82,8 +93,10 @@ public class GlobalVariable : MonoBehaviour
     //? Station 12
     public static bool[] inputStation12 = new bool[4];
     public static bool[] outputStation12 = new bool[2];
-
     //monitor
+    //! Hết phần liên quan  MQTT
+
+    //! Bắt đầu phần liên quan cả MQTT lẫn SignalR
     public static int productCount = 0;
     public static int goodProductCount = 0;
     public static int badProductCount = 0;
