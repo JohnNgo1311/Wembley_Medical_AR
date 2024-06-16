@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
+
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
@@ -16,6 +17,17 @@ public class SignalRDataOMT : MonoBehaviour
     public GameObject[] inputCheckS2;
     public GameObject[] outputCheckS2;
     public TMP_Text heatingTemp;
+    public TMP_Text operationTimeRaw;
+    public TMP_Text goodTubes;
+    public TMP_Text badTubes;
+
+    public TMP_Text TotalTray;
+    public TMP_Text TotalProducts;
+    public TMP_Text Efficiency;
+    public TMP_Text[] ChemicalDetectionValue;
+   
+
+
    /* public GameObject[] inputCheckS3;
     public GameObject[] outputCheckS3;
     public GameObject[] inputCheckS4;
@@ -217,27 +229,8 @@ public class SignalRDataOMT : MonoBehaviour
                     bool value = data.TagValue == "1" ? true : false;
                     inputCheckS1[index].SetActive(value);       //! Dòng này là cho I/O list 
                    // GlobalVariable.inputStation1[index] = value;
-                     Debug.Log("SetActive@@@");  
-
-                    /*
-                    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S1_Horz_Snr_On.SetActive(true);
-                            S1_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S1_Horz_Snr_Off.SetActive(true);
-                            S1_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-                    else if (index > 1 && index < 6)
-                    {
-                        S1_SensorCheck[index - 2].SetActive(value);
-                    }
-             */
+                     Debug.Log("SetActive@@@"); 
+                   
                 }
 
                 else if (data.TagId.Contains("S1/out/"))
@@ -292,6 +285,7 @@ public class SignalRDataOMT : MonoBehaviour
                 
                 }
               
+              
               //! S2
                 else if (data.TagId.Contains("S2/in/"))
                 {
@@ -299,87 +293,52 @@ public class SignalRDataOMT : MonoBehaviour
                     bool value = data.TagValue == "1" ? true : false; 
                     inputCheckS2[index].SetActive(value); //! IO List ==> Input
 
-                /*    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S2_Horz_Snr_On.SetActive(true);
-                            S2_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S2_Horz_Snr_Off.SetActive(true);
-                            S2_Horz_Snr_On.SetActive(false);
-                        }
-                    }*/
-                    // else if (index != 0 && index != 1)
-                    // {
-                    //     S2SensorCheck[index - 2].SetActive(value);
-                    // }
-
                 }
-               
-                  /*  if (index == 6)
-                    {
-                        S2_GripperOn[0].SetActive(value);
-
-                    }
-                    else if (index == 7)
-                    {
-                        S2_GripperOn[1].SetActive(value);
-
-                    }
-                    else if (index == 8)
-                    {
-                        S2_GripperOn[2].SetActive(value);
-
-                    }
-                    else if (index == 9)
-                    {
-                        S2_GripperOn[3].SetActive(value);
-                    }
-                    else if (index == 17 && value)
-                    {
-
-                        S2_Vert_Up.SetActive(true);
-                        S2_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S2_Vert_Dn.SetActive(true);
-                        S2_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S2_Horz_Fwd.SetActive(true);
-                        S2_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S2_Horz_Rev.SetActive(true);
-                        S2_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 3)
-                    {
-                        if (value)
-                        {
-                            S2_Vacuum_On.SetActive(true);
-                        }
-                        else
-                        {
-                            S2_Vacuum_On.SetActive(false);
-                        }
-                    }*/
-
-
                 }
-                 else if (data.TagId == "S1_HEATING_TEMP")
+           
+            else if (data.TagId == "operationTimeRaw")
+                {
+                   operationTimeRaw.text = data.TagValue;
+                
+                }
+            else if (data.TagId.Contains("S1_FS_CURRENT_"))
+                {  // S1_FS_CURRENT_1_5
+                   //  ChemicalDetectionValue[15]
+                string index1 =data.TagId.Remove(0, 14); //index1= 1_5
+                int index2 =int.Parse(index1.Remove(1, 1));    //index_2 = 15          
+                ChemicalDetectionValue[index2].text = data.TagValue; //! IO List ==> Input
+                }
+            else if (data.TagId == "S1_PLASTIC_TRAYS_QTY")
+                {
+                  TotalTray.text = data.TagValue;
+                
+                }
+            else if (data.TagId == "productCountRaw ")
+                {
+                  TotalProducts.text = data.TagValue;
+                
+                }  
+            else if (data.TagId == "goodProductRaw")
+                {
+                   goodTubes.text = data.TagValue;
+                
+                } 
+            else if (data.TagId == "errorProductRaw")
+                {
+                   badTubes.text = data.TagValue;
+                
+                }                       
+            else if (data.TagId == "EFF")
+                {
+                  Efficiency.text = data.TagValue;
+                
+                } 
+            else if (data.TagId == "S1_HEATING_TEMP")
                 {
                    heatingTemp.text = data.TagValue;
-            
                 
-                }}
+                }
+                }   
                 }
                 /*  //! S3
                 else if (data.TagId.Contains("S3/in/"))

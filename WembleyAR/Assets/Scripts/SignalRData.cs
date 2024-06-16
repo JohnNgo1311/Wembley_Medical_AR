@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -7,7 +6,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
 using System.Linq;
-using System.Diagnostics.Tracing;
 public class SignalRData : MonoBehaviour
 {
     public GameObject alarmScript;

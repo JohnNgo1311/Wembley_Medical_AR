@@ -6,12 +6,10 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
 {
     SignalRDataOMT signalR;
     List<string> topicStation1 = new List<string>  {
-         $"{GlobalVariable.basedTopicOMT}/Extension/Input" ,
-         $"{GlobalVariable.basedTopicOMT}/Extension/Output" ,
-         $"{GlobalVariable.basedTopicOMT}/Parameter/ProductionData" ,
-         $"{GlobalVariable.basedTopicOMT}/Parameter/operationTimeRaw" ,
-         $"{GlobalVariable.basedTopicOMT}/Parameter/errorStatus" ,
-            $"{GlobalVariable.basedTopicOMT}/Parameter/endErrorStatus" ,
+         $"{GlobalVariable.basedTopicOMT}/Extension",
+         $"{GlobalVariable.basedTopicOMT}/ChemicalDetection" ,
+         $"{GlobalVariable.basedTopicOMT}/Parameter",
+
           };
     void Awake()
     {
