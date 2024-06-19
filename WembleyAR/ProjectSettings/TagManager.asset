@@ -83,6 +83,8 @@ TagManager:
   - manufacturingInfoScript
   - SignalR_OMT
   - S1_OMT_Arrow_Back_Monitor
+  - S3_Arrow_OMT
+  - S2_Arrow_OMT
   layers:
   - Default
   - TransparentFX

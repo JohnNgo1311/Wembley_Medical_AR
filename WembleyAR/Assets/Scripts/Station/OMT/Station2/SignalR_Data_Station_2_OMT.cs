@@ -6,8 +6,10 @@ public class SignalR_Data_Station_2_OMT : MonoBehaviour
 {
     SignalRDataOMT signalR;
     List<string> topicStation2 = new List<string>  {
-         $"{GlobalVariable.basedTopicOMT}/Input" ,
-         $"{GlobalVariable.basedTopicOMT}/Output" ,
+
+         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Extension",
+
+
 
           };
     void Awake()
@@ -18,19 +20,15 @@ public class SignalR_Data_Station_2_OMT : MonoBehaviour
     {
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation2);
-
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
-
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        
         Debug.Log("SignalR_Data_Station_2_OMT OnEnable");
-      //  signalR.PublishStationIndex(1);
+        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        //  signalR.PublishStationIndex(1);
     }
 
     void OnDisable()
     {
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-     //   signalR.PublishStationIndex(0);
+        //   signalR.PublishStationIndex(0);
     }
 }

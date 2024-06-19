@@ -8,23 +8,22 @@ using UnityEngine;
 public class GlobalVariable : MonoBehaviour
 {   //! Phần này chỉ liên quan SignalR
     public static HubConnection hubConnection;
-    public static string url = "https://wembleymedicalscada.azurewebsites.net/NotificationHub"; 
-    //public static string basedTopic = "Wembley/HerapinCap/IE-F2-HCA01";
+    public static string url = "https://wembleyscadawebappapi.azurewebsites.net/NotificationHub";
+
     public static string basedTopic = "HCM/IE-F2-HCA01/Metric";
     //! Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
-    public static string basedTopicOMT = "WembleyMedical/BTM/IE-F3-BLO06";
-
     public static List<string> initialTopic = new List<string> {
         $"{basedTopic}/errorStatus" ,
         $"{basedTopic}/endErrorStatus" ,
           };
-          //! 2 topic này luôn luôn phải được đăng ký
-          //! initialTopic là List những Topic cần phải đăng ký
-    
-    public static List<string> initialTopicOMT = new List<string> {
-    
-          };
+    //! 2 topic này luôn luôn phải được đăng ký
+    //! initialTopic là List những Topic cần phải đăng ký
     public static List<string> subscribedTopics = initialTopic;
+
+    public static string basedTopicOMT = "WembleyMedical/BTM";
+    public static List<string> initialTopicOMT = new List<string>
+    {
+    };
     public static List<string> subscribedTopicsOMT = initialTopicOMT;
 
 
@@ -111,6 +110,59 @@ public class GlobalVariable : MonoBehaviour
     public static int[] RejCountS89TR = new int[4];
 
     public static int[] RejCountS10TR = new int[4];
+
+
+    public static List<string> productionDataBLO06 = new List<string>() {
+    "operationTimeRaw" ,
+    "S1_PLASTIC_TRAYS_QTY" ,
+    "productCountRaw" ,
+    "goodProductRaw" ,
+    "errorProductRaw" ,
+    "EFF",
+    "S1_HEATING_TEMP"
+};
+    public static List<string> visionProcessingBLO06 = new List<string>() {
+    "S1_VISION_TOTAL_TUBES" ,
+    "S1_VISION_GOOD_TUBES" ,
+    "S1_VISION_BAD_TUBES" ,
+    "S1_STYROFOAM_TRAYS_QTY",
+    };
+    public static List<string> visionProcessingBLO02 = new List<string>() {
+    "S3_VISION_TOTAL_TUBES" ,
+    "S3_VISION_GOOD_TUBES" ,
+    "S3_VISION_BAD_TUBES" ,
+    "S3_STYROFOAM_TRAYS_QTY" ,
+    "S3_VISION_CURRENT_GDS" ,
+    "S3_VISION_CURRENT_BDS" ,
+};
+    public static List<string> visionProcessingBLO01 = new List<string>() {
+    "S2_VISION_TOTAL_TUBES" ,
+    "S2_VISION_GOOD_TUBES" ,
+    "S2_VISION_BAD_TUBES" ,
+    "S2_STYROFOAM_TRAYS_QTY" ,
+    "S2_VISION_CURRENT_GDS" ,
+    "S2_VISION_CURRENT_BDS" ,
+};
+    public static List<string> enableStationBLO06 = new List<string>() {
+    "S1_DRYING_1_ENABLE" ,
+    "S1_DRYING_2_ENABLE" ,
+    "S1_ROBOT_ARM_DISABLE" ,
+    "S1_CAP_RUBBER_ENABLE" ,
+    "S1_CAP_NON_RUBBER_ENABLE" ,
+};
+    public static List<string> enableStationBLO02 = new List<string>() {
+    "S3_CAP_DISABLE" ,
+    "S3_TUBE_DISABLE" ,
+    "S3_COMMUNICATION_DISABLE" ,
+    "S3_LIFT_MOTOR_DISABLE" ,
+    "S3_PUSH_TRAY_DISABLE" ,
+    "S3_VISION_ENABLE" ,
+};
+    public static List<string> enableStationBLO01 = new List<string>() {
+    "S2_CAP_DISABLE" ,
+    "S2_TUBE_DISABLE" ,
+    "S2_COMMUNICATION_DISABLE"
+};
 
     //? Error
     public static List<ErrorInfor> errorInfors = new List<ErrorInfor>();

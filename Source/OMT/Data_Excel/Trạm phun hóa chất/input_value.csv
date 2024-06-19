@@ -1,0 +1,33 @@
+No.,Input_Index,ID_Input,Input_Name,Input_Type,Value,,Comment
+0,0,X0,cb_quang_5_(NC),b,1,,
+1,1,X1,cb_quang_4_(nc),b,1,,
+2,2,X2,cb_quang_6_(NC),b,0,,
+3,3,X3,driver_alarm_y,b,1,,
+4,4,X4,cb_quang_2,b,1,,"C?m bi?n quang s? 2 (t??ng h?), c?m bi?n home c?a robot theo tr?c Z"
+5,5,X5,cb_quang_3_(NC),b,1,,"C?m bi?n quang s? 3 (t??ng ?óng), c?m bi?n gi?i h?n trên c?a robot theo tr?c Z"
+6,6,X6,cb_quang_1_(_rut)_nc,b,0,,"C?m bi?n quang s? 1, c?m bi?n gi?i h?n d??i c?a robot theo tr?c Z (H? r?i)"
+7,7,X7,rut_ra_canh_bao_(lien_quan_driver),b,0,,
+8,8,X10,rut,b,1,,
+9,9,X11,ctht_high_xl_say_2,b,0,,Công t?c hành trình trên xylanh tr?m s?y 2
+10,10,X12,low_xl_say_2_rut,b,0,,Công t?c hành trình d??i xylanh tr?m s?y 2
+11,11,X13,ss_say_2,b,0,,C?m bi?n kim lo?i tr?m s?y 2
+12,12,X14,cb_5_1,b,0,,C?m bi?n kim lo?i 1
+13,13,X15,cb_5_2,b,1,,C?m bi?n kim lo?i 2
+14,14,X16,cb_5_3,b,0,,C?m bi?n kim lo?i 3
+15,15,X17,cb_5_4,b,0,,C?m bi?n kim lo?i 4
+16,16,X20,cb_5_5,b,1,,C?m bi?n kim lo?i 5
+17,17,X21,ss_say1,b,0,,C?m bi?n kim lo?i tr?m s?y 1
+18,18,X22,high_say_1,b,0,,Công t?c hành trình trên tr?m s?y 1
+19,19,X23,low_say_1,b,0,,Công t?c hành trình d??i tr?m s?y 1
+20,20,X24,x11,b,0,,
+21,21,X25,dong_ho_nhiet,b,0,,
+22,22,X26,x12,b,0,,
+23,23,X27,manu_auto,b,1,,
+24,24,X30,nut_pause,b,0,,
+25,25,X31,relay_kich_nguon_driver_sevor,b,0,,
+26,26,X32,dong_ho_ap_suat,b,0,,
+27,27,X33,tc1,b,1,,"C?m bi?n ti?m c?n tr?m s?y 1, phát hi?n s?n ph?m ?i qua"
+28,28,X34,rut,b,0,,
+29,29,X35,xtc_2_,b,0,,"C?m bi?n ti?m c?n tr?m s?y 2, phát hi?n s?n ph?m ?i qua"
+30,30,X36,kich_hoat_say_2,b,0,,
+31,31,X37,rut,b,0,,

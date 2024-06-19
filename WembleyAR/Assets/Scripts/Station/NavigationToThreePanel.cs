@@ -5,7 +5,7 @@ using UnityEngine;
 public class NavigationToThreePanel : MonoBehaviour
 {
     public GameObject initialScreen, destinationScreen_1, destinationScreen_2, destinationScreen_3;
-    public string tagName;
+  //  public string tagName;
     void Start()
     {
         initialScreen.SetActive(true);
@@ -15,7 +15,7 @@ public class NavigationToThreePanel : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+       /* if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -25,7 +25,7 @@ public class NavigationToThreePanel : MonoBehaviour
             }
          
 
-        }
+        }*/
     }
 
     public void NavigateToScreen_1()

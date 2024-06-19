@@ -3,89 +3,71 @@ using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
-
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
+using UnityEngine.UI;
 using System.Linq;
-using System.Diagnostics.Tracing;
 public class SignalRDataOMT : MonoBehaviour
 {
-   // public GameObject alarmScript;
+    // public GameObject alarmScript;
     public GameObject[] inputCheckS1;
     public GameObject[] outputCheckS1;
     public GameObject[] inputCheckS2;
     public GameObject[] outputCheckS2;
-    public TMP_Text heatingTemp;
-    public TMP_Text operationTimeRaw;
-    public TMP_Text goodTubes;
-    public TMP_Text badTubes;
+    public GameObject[] inputCheckS3;
+    public GameObject[] outputCheckS3;
 
+    public TMP_Text[] productionDataS1;
+    // public TMP_Text[] productionDataS2;
+    //  public TMP_Text[] productionDataS3;
+
+
+    /*public TMP_Text heatingTemp;
+    public TMP_Text operationTimeRaw;
+    public TMP_Text goodCap;
+    public TMP_Text badCap;
     public TMP_Text TotalTray;
     public TMP_Text TotalProducts;
-    public TMP_Text Efficiency;
+    public TMP_Text Efficiency;*/
+
+
+    /*public TMP_Text totalTubes;
+    public TMP_Text goodTubes;
+    public TMP_Text badTubes;
+    public TMP_Text StyrofoamTrays;*/
+
+    public TMP_Text[] enableValuesS1;
+    public TMP_Text[] visionProcessingValuesS1;
+    public GameObject[] enableFrameS1;
+    //public TMP_Text[] enableValuesS2;
+    //public TMP_Text[] visionProcessingValuesS2;
+    //!
+    // public GameObject[] enableFrameS2;
+    //public TMP_Text[] enableValuesS3;
+
+    // public TMP_Text[] visionProcessingValuesS3;
+    // public GameObject[] enableFrameS3;
+    //!
+    /* public TMP_Text drying1EnableValue;
+     public TMP_Text drying2EnableValue;
+
+     public TMP_Text capRubberEnableValue;
+
+     public TMP_Text capNonRubberEnableValue;
+     public TMP_Text RobotArmEnableValue;*/
+
+    /* public GameObject drying1EnableFrame;
+     public GameObject drying2EnableFrame;
+
+     public GameObject capRubberEnableFrame;
+
+     public GameObject capNonRubberEnableFrame;
+     public GameObject RobotArmEnableFrame;*/
+
+
     public TMP_Text[] ChemicalDetectionValue;
-   
-
-
-   /* public GameObject[] inputCheckS3;
-    public GameObject[] outputCheckS3;
-    public GameObject[] inputCheckS4;
-    public GameObject[] outputCheckS4;
-    public GameObject[] inputCheckS5;
-    public GameObject[] outputCheckS5;
-    public GameObject[] inputCheckS6;
-    public GameObject[] outputCheckS6;
-    public GameObject[] inputCheckS7;
-    public GameObject[] outputCheckS7;
-    public GameObject[] inputCheckS10;
-    public GameObject[] outputCheckS10;
-    public GameObject[] inputCheckS11;
-    public GameObject[] outputCheckS11;
-    public GameObject[] inputCheckS12;
-    public GameObject[] outputCheckS12;
-    //public GameObject[] S1SensorCheck;
-
-
-    public GameObject[] S3SensorCheck_2;
-
-    // public GameObject[] S5SensorCheck_1;
-    public GameObject[] S5SensorCheck_2;
-    public GameObject[] S10SensorCheck;
-
-    //? S1
-    public GameObject S1_Horz_Snr_On, S1_Horz_Snr_Off, S1_Vert_Up, S1_Vert_Dn, S1_Horz_Fwd, S1_Horz_Rev, S1_Gripper_On, S1_Gripper_Off;
-    public GameObject[] S1_SensorCheck;
-    //? S2
-    public GameObject S2_Horz_Snr_On, S2_Horz_Snr_Off, S2_Vert_Up, S2_Vert_Dn, S2_Horz_Fwd, S2_Horz_Rev, S2_Vacuum_On, S2_Vacuum_Off;
-    // GameObject[] S2SensorCheck;
-    public GameObject[] S2_GripperOn;
-    bool isReset;
-    //? S3
-    public GameObject[] S3_Press_Dn;
-    public GameObject S3_Hold_Fwd;
-    public GameObject[] S3SensorCheck_1;
-    //? S3
-
-    public GameObject S5_Slide_Dn;
-    public GameObject[] S5SensorCheck_1;
-    //? S4
-    public GameObject S4_Horz_Snr_On, S4_Horz_Snr_Off, S4_Vert_Up, S4_Vert_Dn, S4_Horz_Fwd, S4_Horz_Rev;
-    //public GameObject[] S4_SensorCheck;
-    public GameObject[] S4_GripperOn;
-    //? S11/S12
-    public GameObject S11_Horz_Snr_On, S11_Horz_Snr_Off, S12_Gripper_On, S12_Gripper_Off, S11_Horz_Fwd, S11_Horz_Rev;
-    public GameObject[] S12_SensorCheck;
-    public GameObject[] S11_GripperOn;
-    //? S10
-
-    public GameObject[] S10_Holding_Fwd;
-    public GameObject[] S10_AirBlow_On;
-
-    //? S6
-    public TMP_Text[] S6_OperationParameter;
-    //? S7
-    public TMP_Text[] S7_OperationParameter;*/
+    public GameObject[] ChemicalDetectionFrameValue;
 
 
     void Start()
@@ -102,13 +84,13 @@ public class SignalRDataOMT : MonoBehaviour
 
     }
 
-    private async void StartConnectWebApi() 
+    private async void StartConnectWebApi()
     {
 
         if (GlobalVariable.hubConnection == null)
         {
             //! Tạo kết nối đến server, gán Url rồi build
-            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url) 
+            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url)
             // .WithAutomaticReconnect()
             .Build();
             //? hàm Build là để build Hubconnection thôi, không phải kết nối đến server
@@ -118,7 +100,7 @@ public class SignalRDataOMT : MonoBehaviour
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
         { //?Đăng ký sẵn đến Topic OnTagChanged,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
           //? Chỉ việc đăng ký sẵn, khi Server thực hiện xong hàm nào đó, rồi return dữ liệu cho topic "OnTagChanged" thì phần xử lý phía dưới sẽ chạy
-           
+
             DataSignalR data = JsonConvert.DeserializeObject<DataSignalR>(str);
             Debug.Log("$$" + str);
             if (data != null)
@@ -127,9 +109,9 @@ public class SignalRDataOMT : MonoBehaviour
             }
         });
 
-           //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
+        //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", async (str) =>
-        {   
+        {
             if (str.Contains("Connected"))
             {
                 UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
@@ -138,13 +120,13 @@ public class SignalRDataOMT : MonoBehaviour
                 //string a = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
                 var listInitialData = await GetBufferList();
                 //? Khi connect Thành công thì GetBufferList để lấy các dữ liệu lần gần nhất được retain
-       
+
                 foreach (var data in listInitialData)
                 {
                     UpdateData(data);
                 }
-             //   await GetBuffer("errorStatus");
-             //   await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
+                //   await GetBuffer("errorStatus");
+                //   await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
             }
         });
 
@@ -201,804 +183,368 @@ public class SignalRDataOMT : MonoBehaviour
     public void PublishStationIndex(int index)
     {
         GlobalVariable.hubConnection.InvokeAsync("SelectStation", index);
-         //? Gọi hàm SelectStation trên Backend để phân luồng đọc trạm nào 
-        
+        //? Gọi hàm SelectStation trên Backend để phân luồng đọc trạm nào 
+
 
     }
     public void UpdateTopics(List<string> topics)
     {
         GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
         //? Gọi hàm UpdateTopics trên Server để Server subscribe đến broker, khi đó dữ liệu sẽ đi về trên AR app
-        Debug.Log("UpdateTopic####");
     }
     void UpdateData(DataSignalR data)
-    {
+    {   //! S1
         if (data.StationId == "IE-F3-BLO06" && data.LineId == "BTM")
         {
-
-                               Debug.Log("%%%%");  
-
             if (data.TagId.Contains("/"))
             {
-
-                //! S1
+                //! I/O S1
                 if (data.TagId.Contains("S1/in/"))
                 {
 
                     int index = int.Parse(data.TagId.Remove(0, 6));
                     bool value = data.TagValue == "1" ? true : false;
                     inputCheckS1[index].SetActive(value);       //! Dòng này là cho I/O list 
-                   // GlobalVariable.inputStation1[index] = value;
-                     Debug.Log("SetActive@@@"); 
-                   
-                }
+                                                                // GlobalVariable.inputStation1[index] = value;
 
-                else if (data.TagId.Contains("S1/out/"))
+                }
+                if (data.TagId.Contains("S1/out/"))
                 {
-                    Debug.Log("S1/out/");
                     int index = int.Parse(data.TagId.Remove(0, 7));
                     bool value = data.TagValue == "1" ? true : false;
                     outputCheckS1[index].SetActive(value);
-                    //if(index==12) GlobalVariable.outputStation1[index] = value;
-             /*
-                    if (index == 17 && value)
-                    {
 
-                        S1_Vert_Up.SetActive(true);
-                        S1_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S1_Vert_Dn.SetActive(true);
-                        S1_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 13 && value)
-                    {
-                        S1_Horz_Fwd.SetActive(true);
-                        S1_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 14 && value)
-                    {
-                        S1_Horz_Rev.SetActive(true);
-                        S1_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S1_Gripper_On.SetActive(true);
-                        S1_Gripper_Off.SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S1_Gripper_Off.SetActive(true);
-                        S1_Gripper_On.SetActive(false);
-                    }
-              */
-              
                 }
-                else if(data.TagId.Contains("productCountRaw"))
+            }
+            //!  Setting của S1 
+            foreach (var item1 in GlobalVariable.visionProcessingBLO06)
+            {
+                if (data.TagId == item1)
+                {
+                    int index = GlobalVariable.enableStationBLO06.IndexOf(item1);
+                    visionProcessingValuesS1[index].text = data.TagValue.ToString();
+                    /* if (data.TagId == item1)
+                     {
+                         switch (data.TagId)
+                         {
+                             case "S1_VISION_TOTAL_TUBES":
+                                totalTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_GOOD_TUBES":
+                                 goodTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_BAD_TUBES":
+                                 badTubes.text = data.TagValue;
+                                 break;
+                             case "S1_STYROFOAM_TRAYS_QTY":
+                                 StyrofoamTrays.text = data.TagValue;
+                                 break;
+                             default:
+                                 Debug.LogWarning($"Unknown TagId: {data.TagId}");
+                                 break;
+                         }
+                     }*/
+                }
+            }
+            foreach (var item2 in GlobalVariable.enableStationBLO06)
+            {
+                if (data.TagId == item2)
+                {
+                    int index = GlobalVariable.enableStationBLO06.IndexOf(item2);
+                    enableValuesS1[index].text = data.TagValue.ToString();
+                    enableFrameS1[index].gameObject.GetComponent<Image>().color = data.TagValue == "1" ? Color.green : Color.grey;
+                    /*  switch (data.TagId)
+                          {
+                      case "S1_DRYING_1_ENABLE":
+                          bool temp1 = data.TagValue == "1" ? true : false;
+                          drying1EnableValue.text = temp1 ? "Drying 1: Use" : "Drying 1: Nonuse";
+                          drying1EnableFrame.gameObject.GetComponent<Image>().color = temp1 ? Color.green : Color.grey;
+                          break;
+                      case "S1_DRYING_2_ENABLE":
+                          bool temp2 = data.TagValue == "1" ? true : false;
+                          drying2EnableValue.text = temp2 ? "Drying 2: Use" : "Drying 2: Nonuse";
+                          drying2EnableFrame.gameObject.GetComponent<Image>().color = temp2 ? Color.green : Color.grey;
+                          break;
+                      case "S1_ROBOT_ARM_DISABLE":
+                          bool temp3 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp3 ? "Robot Arm: Use" : "Robot Arm: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp3 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_RUBBER_ENABLE":
+                          bool temp4 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp4 ? "Cap Rubber: Use" : "Cap Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp4 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_NON_RUBBER_ENABLE":    
+                          bool temp5 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp5 ? "Cap Non-Rubber: Use" : "Cap Non-Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp5 ? Color.green : Color.grey;
+                          break;
+                          }*/
+
+                }
+            }
+            foreach (var paraam in GlobalVariable.productionDataBLO06)
+            {
+
+                if (data.TagId == paraam)
+                {
+                    int index = GlobalVariable.productionDataBLO06.IndexOf(paraam);
+
+                    productionDataS1[index].text = data.TagValue.ToString();
+                }
+                /*    if (data.TagId.Contains(paraam) || data.TagId != paraam)
+                    {
+                        string index1 = data.TagId.Remove(0, 14); // index1 = 1_5
+                        int index2 = int.Parse(index1.Remove(1, 1)); // index2 = 15
+                        ChemicalDetectionValue[index2].text = data.TagValue;
+                        int value = int.Parse(data.TagValue);
+                        ChemicalDetectionFrameValue[index2].gameObject.GetComponent<Image>().color = (value > 20 && value < 70) ? Color.green : Color.red;
+                    }*/
+
+            }
+        }
+        switch (data.TagId)
+        {
+            case var tagId when tagId.Contains("S1_FS_CURRENT_"):
+                string index1 = tagId.Remove(0, 14); // index1 = 1_5
+                int index2 = int.Parse(index1.Remove(1, 1)); // index2 = 15
+                ChemicalDetectionValue[index2].text = data.TagValue;
+                int value = int.Parse(data.TagValue);
+                ChemicalDetectionFrameValue[index2].gameObject.GetComponent<Image>().color = (value > 20 && value < 70) ? Color.green : Color.red;
+                break;
+            default:
+                // Optional: handle cases where TagId does not match any known tags
+                Debug.LogWarning($"Unknown TagId: {data.TagId}");
+                break;
+        }
+        //! Param của S1
+        /*    switch (data.TagId)
+            {
+                case "operationTimeRaw":
+                    Debug.Log("operationTimeRaw");
+                    GlobalVariable.operationTime = data.TagId;
+                    operationTimeRaw.text = data.TagValue;
+                    break;
+
+              
+                case "S1_PLASTIC_TRAYS_QTY":
+                    TotalTray.text = data.TagValue;
+                    break;
+
+                case "productCountRaw":
+                    TotalProducts.text = data.TagValue;
+                    break;
+
+                case "goodProductRaw":
+                    goodCap.text = data.TagValue;
+                    break;
+
+                case "errorProductRaw":
+                    badCap.text = data.TagValue;
+                    break;
+
+                case "EFF":
+                    GlobalVariable.effective = float.Parse(data.TagValue);
+                    Efficiency.text = data.TagValue;
+                    break;
+
+                case "S1_HEATING_TEMP":
+                    heatingTemp.text = data.TagValue;
+                    break;
+                default:
+                    // Optional: handle cases where TagId does not match any known tags
+                    Debug.LogWarning($"Unknown TagId: {data.TagId}");
+                    break;
+            }
+        }*/
+
+        //! S2                     
+        if (data.StationId == "IE-F3-BLO01" && data.LineId == "BTM")
+        {
+            if (data.TagId.Contains("/"))
+            {
+                if (data.TagId.Contains("S2/in/"))
                 {
                     int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false; 
+                    bool value = data.TagValue == "1" ? true : false;
+
                     inputCheckS2[index].SetActive(value); //! IO List ==> Input
-                
-                
-                }
-              
-              
-              //! S2
-                else if (data.TagId.Contains("S2/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false; 
-                    inputCheckS2[index].SetActive(value); //! IO List ==> Input
 
                 }
-                }
-           
-            else if (data.TagId == "operationTimeRaw")
+                if (data.TagId.Contains("S2/out/"))
                 {
-                   operationTimeRaw.text = data.TagValue;
-                
-                }
-            else if (data.TagId.Contains("S1_FS_CURRENT_"))
-                {  // S1_FS_CURRENT_1_5
-                   //  ChemicalDetectionValue[15]
-                string index1 =data.TagId.Remove(0, 14); //index1= 1_5
-                int index2 =int.Parse(index1.Remove(1, 1));    //index_2 = 15          
-                ChemicalDetectionValue[index2].text = data.TagValue; //! IO List ==> Input
-                }
-            else if (data.TagId == "S1_PLASTIC_TRAYS_QTY")
-                {
-                  TotalTray.text = data.TagValue;
-                
-                }
-            else if (data.TagId == "productCountRaw ")
-                {
-                  TotalProducts.text = data.TagValue;
-                
-                }  
-            else if (data.TagId == "goodProductRaw")
-                {
-                   goodTubes.text = data.TagValue;
-                
-                } 
-            else if (data.TagId == "errorProductRaw")
-                {
-                   badTubes.text = data.TagValue;
-                
-                }                       
-            else if (data.TagId == "EFF")
-                {
-                  Efficiency.text = data.TagValue;
-                
-                } 
-            else if (data.TagId == "S1_HEATING_TEMP")
-                {
-                   heatingTemp.text = data.TagValue;
-                
-                }
-                }   
-                }
-                /*  //! S3
-                else if (data.TagId.Contains("S3/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS3[index].SetActive(value);
-                    if (index > 0 && index < 5)
-                    {
-                        S3SensorCheck_1[index - 1].SetActive(value);
-                    }
-
-
-                }
-                else if (data.TagId.Contains("S3/out/"))
-                {
+                    Debug.Log("S2/out/");
                     int index = int.Parse(data.TagId.Remove(0, 7));
                     bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS3[index].SetActive(value);
-                    if (index == 1)
-                    {
-                        S3_Press_Dn[0].SetActive(value);
-
-                    }
-                    else if (index == 3)
-                    {
-                        S3_Press_Dn[1].SetActive(value);
-
-                    }
-                    else if (index == 5)
-                    {
-                        S3_Press_Dn[2].SetActive(value);
-
-                    }
-                    else if (index == 7)
-                    {
-                        S3_Press_Dn[3].SetActive(value);
-                    }
-                    else if (index == 8 && value)
-                    {
-
-                        S3_Hold_Fwd.SetActive(true);
-
-
-                    }
-                    else if (index == 9 && value)
-                    {
-                        S3_Hold_Fwd.SetActive(false);
-
-                    }
-                }
-                //! S4
-                else if (data.TagId.Contains("S4/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS4[index].SetActive(value);
-                    if (index == 0)
-                    {
-                        // Debug.Log("lên");
-                        if (value)
-                        {
-                            S4_Horz_Snr_On.SetActive(true);
-                            S4_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S4_Horz_Snr_Off.SetActive(true);
-                            S4_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-                    // else if (index >= 6 && index <= 9)
-                    // {
-                    //     S4_SensorCheck[index - 6].SetActive(value);
-                    // }
-
-
-                }
-                else if (data.TagId.Contains("S4/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS4[index].SetActive(value);
-                    if (index == 22 && value)
-                    {
-
-                        S4_Vert_Up.SetActive(true);
-                        S4_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 23 && value)
-                    {
-                        S4_Vert_Dn.SetActive(true);
-                        S4_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 13 && value)
-                    {
-                        S4_Horz_Fwd.SetActive(true);
-                        S4_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 12 && value)
-                    {
-                        S4_Horz_Rev.SetActive(true);
-                        S4_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 14 && value)
-                    {
-                        S4_GripperOn[0].SetActive(true);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S4_GripperOn[0].SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S4_GripperOn[1].SetActive(true);
-                    }
-                    else if (index == 17 && value)
-                    {
-                        S4_GripperOn[1].SetActive(false);
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S4_GripperOn[2].SetActive(true);
-                    }
-                    else if (index == 19 && value)
-                    {
-                        S4_GripperOn[2].SetActive(false);
-                    }
-                    else if (index == 20 && value)
-                    {
-                        S4_GripperOn[3].SetActive(true);
-                    }
-                    else if (index == 21 && value)
-                    {
-                        S4_GripperOn[3].SetActive(false);
-                    }
-
-                }
-                //! S5
-                else if (data.TagId.Contains("S5/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS5[index].SetActive(value);
-                    if (index > 0)
-                    {
-                        S5SensorCheck_1[index - 1].SetActive(value);
-                    }
-
-                }
-                else if (data.TagId.Contains("S5/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS5[index].SetActive(value);
-                    if (index == 1 && value)
-                    {
-
-                        S5_Slide_Dn.SetActive(true);
-
-
-                    }
-                    else if (index == 0 && value)
-                    {
-                        S5_Slide_Dn.SetActive(false);
-
-                    }
-                }
-                //! S6
-                else if (data.TagId.Contains("S6/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS6[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S6/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS6[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S6/parameter/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 13));
-                    double value = double.Parse(data.TagValue);
-                    S6_OperationParameter[index].text = value.ToString();
-                }
-                //! S7
-                else if (data.TagId.Contains("S7/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS7[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S7/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS7[index].SetActive(value);
-
-                }
-                else if (data.TagId.Contains("S7/parameter/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 13));
-                    double value = double.Parse(data.TagValue);
-                    S7_OperationParameter[index].text = value.ToString();
-                }
-                //! S8 
-                else if (data.TagId.Contains("S8"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_max_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_min_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_current_1 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_measured_1 = double.Parse(data.TagValue);
-                        Debug.Log(GlobalVariable.S8_measured_1);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR1"))
-                    {
-                        GlobalVariable.S8_offset_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_max_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_min_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_current_3 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_measured_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR3"))
-                    {
-                        GlobalVariable.S8_offset_3 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S9
-                else if (data.TagId.Contains("S9"))
-                {
-                    // if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    // {
-                    //     Debug.Log(msg);
-                    //     Debug.Log(double.Parse(data.TagValue));
-
-                    // }
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_max_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_min_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_current_2 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_measured_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR2"))
-                    {
-                        GlobalVariable.S9_offset_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_max_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_min_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_current_4 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_measured_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR4"))
-                    {
-                        GlobalVariable.S9_offset_4 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S10
-                else if (data.TagId.Contains("S10/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS10[index].SetActive(value);
-
-
-                }
-                else if (data.TagId.Contains("S10/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS10[index].SetActive(value);
-                    if (index < 4) S10_AirBlow_On[index].SetActive(value);
-
-
+                    outputCheckS2[index].SetActive(value);
                 }
 
-                //!- S11
-                else if (data.TagId.Contains("S11/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS11[index].SetActive(value);
-                    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S11_Horz_Snr_On.SetActive(true);
-                            S11_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S11_Horz_Snr_Off.SetActive(true);
-                            S11_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-
-                }
-                else if (data.TagId.Contains("S11/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS11[index].SetActive(value);
-                    if (index == 0 && value)
-                    {
-
-                        S11_Horz_Fwd.SetActive(true);
-                        S11_Horz_Rev.SetActive(false);
-
-                    }
-                    else if (index == 1 && value)
-                    {
-                        S11_Horz_Rev.SetActive(true);
-                        S11_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 2 && value)
-                    {
-                        S11_GripperOn[0].SetActive(true);
-                    }
-                    else if (index == 3 && value)
-                    {
-                        S11_GripperOn[0].SetActive(false);
-                    }
-                    else if (index == 4 && value)
-                    {
-                        S11_GripperOn[1].SetActive(true);
-                    }
-                    else if (index == 5 && value)
-                    {
-                        S11_GripperOn[1].SetActive(false);
-                    }
-                    else if (index == 6 && value)
-                    {
-                        S11_GripperOn[2].SetActive(true);
-                    }
-                    else if (index == 7 && value)
-                    {
-                        S11_GripperOn[2].SetActive(false);
-                    }
-                    else if (index == 8 && value)
-                    {
-                        S11_GripperOn[3].SetActive(true);
-                    }
-                    else if (index == 9 && value)
-                    {
-                        S11_GripperOn[3].SetActive(false);
-                    }
-                }
-                //! S12
-                else if (data.TagId.Contains("S12/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS12[index].SetActive(value);
-                    S12_SensorCheck[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S12/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS12[index].SetActive(value);
-                    if (index == 0 && value)
-                    {
-
-                        S12_Gripper_On.SetActive(true);
-                        S12_Gripper_Off.SetActive(false);
-
-                    }
-                    else if (index == 1 && value)
-                    {
-                        S12_Gripper_Off.SetActive(true);
-                        S12_Gripper_On.SetActive(false);
-                    }
-                }
-            }
-            else if (data.TagId.Contains("HEIGHT"))
-            {
-                if (data.TagId.Contains("S8"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_max_1 = double.Parse(data.TagValue);
-
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_min_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_current_1 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_measured_1 = double.Parse(data.TagValue);
-                        // Debug.Log(GlobalVariable.S8_measured_1);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR1"))
-                    {
-                        GlobalVariable.S8_offset_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_max_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_min_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_current_3 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_measured_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR3"))
-                    {
-                        GlobalVariable.S8_offset_3 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S9
-                else if (data.TagId.Contains("S9"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_max_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_min_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_current_2 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_measured_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR2"))
-                    {
-                        GlobalVariable.S9_offset_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_max_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_min_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_current_4 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_measured_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR4"))
-                    {
-                        GlobalVariable.S9_offset_4 = double.Parse(data.TagValue);
-
-                    }
-                }
-                else if (data.TagId.Contains("REJ"))
-                {
-                    //data.TagId.Contains("HEIGHT_CHK_REJ_TR")
-                    int index = int.Parse(data.TagId.Remove(0, 17));
-                    GlobalVariable.RejCountS89TR[index - 1] = int.Parse(data.TagValue);
-                }
-            }
-
-            else if (data.TagId.Contains("CHECK_PRESSURE_S10_TRACK"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 24)) - 1;
-                bool value = data.TagValue == "1" ? true : false;
-                S10SensorCheck[index].SetActive(value);
-
-
-            }
-            else if (data.TagId.Contains("GOOD_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 11));
-                GlobalVariable.goodProductCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("BAD_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 10));
-                GlobalVariable.badProductCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("TOTAL_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 12));
-                GlobalVariable.productCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("BOTTOM_CAP_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 17));
-                GlobalVariable.RejCountS1TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("SILICON_PRESENCE_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 23));
-                GlobalVariable.RejCountS3TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("COVER_PRESENCE_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 21));
-                GlobalVariable.RejCountS5TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("HEIGHT_CHK_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 17));
-                GlobalVariable.RejCountS89TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("LEAK_TEST_CHK_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 16));
-                GlobalVariable.RejCountS10TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
-            {
-                GlobalVariable.RejCountS10TR[0] = int.Parse(data.TagValue);
             }
 
 
-            else
+            foreach (var item3 in GlobalVariable.visionProcessingBLO01)
             {
-                ErrorInfor errorInfor;
-                switch (data.TagId)
+                if (data.TagId == item3)
                 {
-                    case "Encoder Value":
-                        GlobalVariable.encoderPosition = int.Parse(data.TagValue);
-                        break;
-                    case "productCount":
-                        GlobalVariable.productCount = int.Parse(data.TagValue);
-                        break;
-                    case "goodProductRaw":
-                        GlobalVariable.goodProductCount = int.Parse(data.TagValue);
-                        break;
-                    case "errorProduct":
-                        GlobalVariable.badProductCount = int.Parse(data.TagValue);
-                        break;
-                    case "EFF":
-                        GlobalVariable.effective = double.Parse(data.TagValue);
-                        break;
-                    case "operationTimeRaw":
-                        GlobalVariable.operationTime = data.TagValue;
-                        break;
-                    case "errorStatus":
-                        if (data.TagValue != "Wifi disconnected" && GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue) == false)
+                    //int index = GlobalVariable.enableStationBLO01.IndexOf(item3);
+                    //  visionProcessingValuesS2[index].text = data.TagValue.ToString();
+                    /* if (data.TagId == item1)
+                     {
+                         switch (data.TagId)
+                         {
+                             case "S1_VISION_TOTAL_TUBES":
+                                totalTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_GOOD_TUBES":
+                                 goodTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_BAD_TUBES":
+                                 badTubes.text = data.TagValue;
+                                 break;
+                             case "S1_STYROFOAM_TRAYS_QTY":
+                                 StyrofoamTrays.text = data.TagValue;
+                                 break;
+                             default:
+                                 Debug.LogWarning($"Unknown TagId: {data.TagId}");
+                                 break;
+                         }
+                     }*/
+                }
+            }
+            foreach (var item4 in GlobalVariable.enableStationBLO01)
+            {
+                if (data.TagId == item4)
+                {
+                    // int index = GlobalVariable.enableStationBLO01.IndexOf(item4);
+                    // enableValuesS2[index].text = data.TagValue.ToString();
+                    //  enableFrameS2[index].gameObject.GetComponent<Image>().color = data.TagValue == "1" ? Color.green : Color.grey;
+                    /*  switch (data.TagId)
+                          {
+                      case "S1_DRYING_1_ENABLE":
+                          bool temp1 = data.TagValue == "1" ? true : false;
+                          drying1EnableValue.text = temp1 ? "Drying 1: Use" : "Drying 1: Nonuse";
+                          drying1EnableFrame.gameObject.GetComponent<Image>().color = temp1 ? Color.green : Color.grey;
+                          break;
+                      case "S1_DRYING_2_ENABLE":
+                          bool temp2 = data.TagValue == "1" ? true : false;
+                          drying2EnableValue.text = temp2 ? "Drying 2: Use" : "Drying 2: Nonuse";
+                          drying2EnableFrame.gameObject.GetComponent<Image>().color = temp2 ? Color.green : Color.grey;
+                          break;
+                      case "S1_ROBOT_ARM_DISABLE":
+                          bool temp3 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp3 ? "Robot Arm: Use" : "Robot Arm: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp3 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_RUBBER_ENABLE":
+                          bool temp4 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp4 ? "Cap Rubber: Use" : "Cap Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp4 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_NON_RUBBER_ENABLE":    
+                          bool temp5 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp5 ? "Cap Non-Rubber: Use" : "Cap Non-Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp5 ? Color.green : Color.grey;
+                          break;
+                          }*/
 
-                        {
-                            Debug.Log(data.TagValue);
-                            errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                            GlobalVariable.errorInfors.Add(errorInfor);
-                            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
-                        }
-                        break;
-                    case "endErrorStatus":
-                        //linQ
-                        GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
-                        // errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                        // for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
-                        // {
-                        //     if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
-                        //     {
-                        //         GlobalVariable.errorInfors.RemoveAt(i);
-                        //         break;
-                        //     }
-                        // }
-                        alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
-                        break;
-                    default:
-                        break;
                 }
             }
 
         }
-    }*/
-            
+        //! S3
+        if (data.StationId == "IE-F3-BLO02" && data.LineId == "BTM")
+        {
+
+            if (data.TagId.Contains("/"))
+            {
+                if (data.TagId.Contains("S3/in/"))
+                {
+                    int index = int.Parse(data.TagId.Remove(0, 6));
+                    bool value = data.TagValue == "1" ? true : false;
+                    inputCheckS3[index].SetActive(value); //! IO List ==> Input
+
+                }
+                if (data.TagId.Contains("S3/out/"))
+                {
+
+                    int index = int.Parse(data.TagId.Remove(0, 7));
+                    bool value = data.TagValue == "1" ? true : false;
+                    outputCheckS3[index].SetActive(value);
+                }
+
+            }
+
+            foreach (var item5 in GlobalVariable.visionProcessingBLO02)
+            {
+                if (data.TagId == item5)
+                {
+                    // int index = GlobalVariable.enableStationBLO02.IndexOf(item5);
+                    //visionProcessingValuesS3[index].text = data.TagValue.ToString();
+                    /* if (data.TagId == item1)
+                     {
+                         switch (data.TagId)
+                         {
+                             case "S1_VISION_TOTAL_TUBES":
+                                totalTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_GOOD_TUBES":
+                                 goodTubes.text = data.TagValue;
+                                 break;
+                             case "S1_VISION_BAD_TUBES":
+                                 badTubes.text = data.TagValue;
+                                 break;
+                             case "S1_STYROFOAM_TRAYS_QTY":
+                                 StyrofoamTrays.text = data.TagValue;
+                                 break;
+                             default:
+                                 Debug.LogWarning($"Unknown TagId: {data.TagId}");
+                                 break;
+                         }
+                     }*/
+                }
+            }
+
+            foreach (var item6 in GlobalVariable.enableStationBLO02)
+            {
+                if (data.TagId == item6)
+                {
+                    //    int index = GlobalVariable.enableStationBLO02.IndexOf(item6);
+                    //    enableValuesS3[index].text = data.TagValue.ToString();
+                    //     enableFrameS3[index].gameObject.GetComponent<Image>().color = data.TagValue == "1" ? Color.green : Color.grey;
+                    /*  switch (data.TagId)
+                          {
+                      case "S1_DRYING_1_ENABLE":
+                          bool temp1 = data.TagValue == "1" ? true : false;
+                          drying1EnableValue.text = temp1 ? "Drying 1: Use" : "Drying 1: Nonuse";
+                          drying1EnableFrame.gameObject.GetComponent<Image>().color = temp1 ? Color.green : Color.grey;
+                          break;
+                      case "S1_DRYING_2_ENABLE":
+                          bool temp2 = data.TagValue == "1" ? true : false;
+                          drying2EnableValue.text = temp2 ? "Drying 2: Use" : "Drying 2: Nonuse";
+                          drying2EnableFrame.gameObject.GetComponent<Image>().color = temp2 ? Color.green : Color.grey;
+                          break;
+                      case "S1_ROBOT_ARM_DISABLE":
+                          bool temp3 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp3 ? "Robot Arm: Use" : "Robot Arm: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp3 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_RUBBER_ENABLE":
+                          bool temp4 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp4 ? "Cap Rubber: Use" : "Cap Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp4 ? Color.green : Color.grey;
+                          break;
+                      case "S1_CAP_NON_RUBBER_ENABLE":    
+                          bool temp5 = data.TagValue == "1" ? true : false;
+                          RobotArmEnableValue.text = temp5 ? "Cap Non-Rubber: Use" : "Cap Non-Rubber: Nonuse";
+                           RobotArmEnableFrame.gameObject.GetComponent<Image>().color = temp5 ? Color.green : Color.grey;
+                          break;
+                          }*/
+
+                }
+            }
+        }
+    }
     public async Task GetBuffer(string tagId)
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
@@ -1006,29 +552,28 @@ public class SignalRDataOMT : MonoBehaviour
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
         //? convert sang kiểu dữ liệu là List<DataSignalR>
         var filteredList = tags.Where(data => data.TagId == tagId);
-       // ErrorInfor errorInfor;
-      //  GlobalVariable.errorInfors.Clear();
+        // ErrorInfor errorInfor;
+        //  GlobalVariable.errorInfors.Clear();
         foreach (var tag in filteredList)
         {
             if (tag.TagValue != "Wifi disconnected")
             {
                 Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-           //     errorInfor = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-          //      GlobalVariable.errorInfors.Add(errorInfor);
+                //     errorInfor = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                //      GlobalVariable.errorInfors.Add(errorInfor);
             }
         }
     }
     public async Task<List<DataSignalR>> GetBufferList()
-    { 
+    {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất. đó là một String rất dài nên cần xử lý phía dưới
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
         //? convert sang kiểu dữ liệu là List<DataSignalR>
-                         Debug.Log("getBuffer");
-
+        //Debug.Log(tags);
         if (tags is null) return new List<DataSignalR>();
-        return tags;
+        else return tags;
 
     }
 }
-        
+

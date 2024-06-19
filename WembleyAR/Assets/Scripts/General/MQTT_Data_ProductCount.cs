@@ -11,7 +11,7 @@ public class MQTT_Data_ProductCount : MonoBehaviour
          $"{GlobalVariable.basedTopic}/EFF" ,
          $"{GlobalVariable.basedTopic}/goodProductRaw" ,
          $"{GlobalVariable.basedTopic}/errorProduct" ,
-          $"{GlobalVariable.basedTopic}/operationTimeRaw" ,
+        $"{GlobalVariable.basedTopic}/operationTimeRaw" ,
          $"{GlobalVariable.basedTopic}/GOOD_CNT_TR1" ,
          $"{GlobalVariable.basedTopic}/GOOD_CNT_TR2" ,
          $"{GlobalVariable.basedTopic}/GOOD_CNT_TR3" ,
