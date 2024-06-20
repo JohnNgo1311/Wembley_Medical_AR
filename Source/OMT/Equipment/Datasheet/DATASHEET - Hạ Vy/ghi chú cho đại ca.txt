@@ -1,0 +1,5 @@
+Ngày 15/6/2024
+TN16X125S:
+Sai áp suất vận hành (0.1MPa - 1MPa) sửa thành (0.15MPa - 1MPa) ==> đã sửa lại ảnh và excel
+TN10X60S
+CDM2B40 - 200Z

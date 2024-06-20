@@ -92,7 +92,7 @@ public class SignalRData : MonoBehaviour
         if (GlobalVariable.hubConnection == null)
         {
             //! Tạo kết nối đến server, gán Url rồi build
-            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url) 
+            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url)
             // .WithAutomaticReconnect()
             .Build();
             //? hàm Build là để build Hubconnection thôi, không phải kết nối đến server
@@ -110,9 +110,9 @@ public class SignalRData : MonoBehaviour
             }
         });
 
-           //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
+        //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", async (str) =>
-        {   
+        {
             if (str.Contains("Connected"))
             {
                 UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
@@ -183,7 +183,7 @@ public class SignalRData : MonoBehaviour
     public void PublishStationIndex(int index)
     {
         GlobalVariable.hubConnection.InvokeAsync("SelectStation", index);
-         //? Gọi hàm SelectStation trên Backend để phân luồng đọc trạm nào 
+        //? Gọi hàm SelectStation trên Backend để phân luồng đọc trạm nào 
 
     }
     public void UpdateTopics(List<string> topics)
@@ -1028,7 +1028,7 @@ public class SignalRData : MonoBehaviour
         }
     }
     public async Task<List<DataSignalR>> GetBufferList()
-    { 
+    {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất. đó là một String rất dài nên cần xử lý phía dưới
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);

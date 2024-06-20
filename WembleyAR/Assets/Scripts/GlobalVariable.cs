@@ -31,10 +31,10 @@ public class GlobalVariable : MonoBehaviour
     public static bool serverConnected = false;
     public static bool isConnecting = false;
     public static bool errorServerConnected = false;
-    //!Hết phần chỉ liên quan SignalR
 
 
-    //! Bắt đầu phần  liên quan MQTT
+
+
     public static int encoderPosition = 0;
     //? Station 1
     public static bool[] inputStation1 = new bool[14];
@@ -93,9 +93,8 @@ public class GlobalVariable : MonoBehaviour
     public static bool[] inputStation12 = new bool[4];
     public static bool[] outputStation12 = new bool[2];
     //monitor
-    //! Hết phần liên quan  MQTT
 
-    //! Bắt đầu phần liên quan cả MQTT lẫn SignalR
+
     public static int productCount = 0;
     public static int goodProductCount = 0;
     public static int badProductCount = 0;
@@ -114,12 +113,51 @@ public class GlobalVariable : MonoBehaviour
 
     public static List<string> productionDataBLO06 = new List<string>() {
     "operationTimeRaw" ,
+    "EFF",
+    "errorProductRaw" ,
+    "goodProductRaw" ,
     "S1_PLASTIC_TRAYS_QTY" ,
     "productCountRaw" ,
-    "goodProductRaw" ,
-    "errorProductRaw" ,
-    "EFF",
-    "S1_HEATING_TEMP"
+    "S1_HEATING_TEMP",
+    "S1_CURRENT_GDS",
+    "S1_CURRENT_BDS",
+    "S1_VISION_CURRENT_GDS",
+    "S1_VISION_CURRENT_BDS",
+    "S1_STYROFOAM_TRAYS_QTY",
+    "S1_VISION_GOOD_TUBES",
+    "S1_VISION_TOTAL_TUBES",
+    "S1_VISION_BAD_TUBES",
+  //  "S1_CURRENT_LEVEL_AUTH",
+   // "S1_CURRENT_ID_AUTH",
+   // "S1_CYCLE_TIME"
+};
+    public static List<string> productionDataBLO01 = new List<string>() {
+    "operationTimeRaw",
+    "S2_PLASTIC_TRAYS_QTY",
+    "productCountRaw",
+   /* "S2_VISION_TOTAL_TUBES",
+    "S2_VISION_GOOD_TUBES",
+    "S2_VISION_BAD_TUBES",
+    "S2_STYROFOAM_TRAYS_QTY",
+    "S2_VISION_CURRENT_GDS",
+    "S2_VISION_CURRENT_BDS"
+    "S2_CURRENT_ID_AUTH",
+    "S2_CURRENT_LEVEL_AUTH",
+    "S2_CYCLE_TIME"*/
+};
+    public static List<string> productionDataBLO02 = new List<string>() {
+   "operationTimeRaw",
+   "S3_PLASTIC_TRAYS_QTY",
+   "productCountRaw",
+   /*"S3_VISION_TOTAL_TUBES",
+   "S3_VISION_GOOD_TUBES",
+   "S3_VISION_BAD_TUBES",
+   "S3_STYROFOAM_TRAYS_QTY",
+   "S3_VISION_CURRENT_GDS",
+   "S3_VISION_CURRENT_BDS",
+   "S3_CURRENT_ID_AUTH",
+   "S3_CURRENT_LEVEL_AUTH",
+   "S3_CYCLE_TIME"*/
 };
     public static List<string> visionProcessingBLO06 = new List<string>() {
     "S1_VISION_TOTAL_TUBES" ,
@@ -127,14 +165,6 @@ public class GlobalVariable : MonoBehaviour
     "S1_VISION_BAD_TUBES" ,
     "S1_STYROFOAM_TRAYS_QTY",
     };
-    public static List<string> visionProcessingBLO02 = new List<string>() {
-    "S3_VISION_TOTAL_TUBES" ,
-    "S3_VISION_GOOD_TUBES" ,
-    "S3_VISION_BAD_TUBES" ,
-    "S3_STYROFOAM_TRAYS_QTY" ,
-    "S3_VISION_CURRENT_GDS" ,
-    "S3_VISION_CURRENT_BDS" ,
-};
     public static List<string> visionProcessingBLO01 = new List<string>() {
     "S2_VISION_TOTAL_TUBES" ,
     "S2_VISION_GOOD_TUBES" ,
@@ -143,13 +173,27 @@ public class GlobalVariable : MonoBehaviour
     "S2_VISION_CURRENT_GDS" ,
     "S2_VISION_CURRENT_BDS" ,
 };
+    public static List<string> visionProcessingBLO02 = new List<string>() {
+    "S3_VISION_TOTAL_TUBES" ,
+    "S3_VISION_GOOD_TUBES" ,
+    "S3_VISION_BAD_TUBES" ,
+    "S3_STYROFOAM_TRAYS_QTY" ,
+    "S3_VISION_CURRENT_GDS" ,
+    "S3_VISION_CURRENT_BDS" ,
+};
     public static List<string> enableStationBLO06 = new List<string>() {
     "S1_DRYING_1_ENABLE" ,
     "S1_DRYING_2_ENABLE" ,
-    "S1_ROBOT_ARM_DISABLE" ,
+    "S1_ROBOT_ARM_DISABLE",
     "S1_CAP_RUBBER_ENABLE" ,
     "S1_CAP_NON_RUBBER_ENABLE" ,
 };
+    public static List<string> enableStationBLO01 = new List<string>() {
+    "S2_CAP_DISABLE" ,
+    "S2_TUBE_DISABLE" ,
+    "S2_COMMUNICATION_DISABLE"
+};
+
     public static List<string> enableStationBLO02 = new List<string>() {
     "S3_CAP_DISABLE" ,
     "S3_TUBE_DISABLE" ,
@@ -158,11 +202,7 @@ public class GlobalVariable : MonoBehaviour
     "S3_PUSH_TRAY_DISABLE" ,
     "S3_VISION_ENABLE" ,
 };
-    public static List<string> enableStationBLO01 = new List<string>() {
-    "S2_CAP_DISABLE" ,
-    "S2_TUBE_DISABLE" ,
-    "S2_COMMUNICATION_DISABLE"
-};
+
 
     //? Error
     public static List<ErrorInfor> errorInfors = new List<ErrorInfor>();
