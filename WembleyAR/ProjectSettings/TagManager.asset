@@ -87,6 +87,8 @@ TagManager:
   - S2_Arrow_OMT
   - S2_OMT_Arrow_Back_Monitor
   - S3_OMT_Arrow_Back_Monitor
+  - Machine_Status_Btn
+  - Error_List_Btn
   layers:
   - Default
   - TransparentFX

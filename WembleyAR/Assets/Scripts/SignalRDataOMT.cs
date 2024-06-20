@@ -6,11 +6,14 @@ using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
+
 using UnityEngine.UI;
 using System.Linq;
 
 public class SignalRDataOMT : MonoBehaviour
 {
+    public GameObject alarmScript;
+
     public GameObject[] inputCheckS1;
     public GameObject[] outputCheckS1;
     public GameObject[] inputCheckS2;
@@ -33,7 +36,7 @@ public class SignalRDataOMT : MonoBehaviour
     public GameObject[] enableFrameS3;
     public TMP_Text[] ChemicalDetectionValue;
     public GameObject[] ChemicalDetectionFrameValue;
-
+    public GameObject[] listMachineStatusS1;
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
 
     void Start()
@@ -127,11 +130,13 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS1(DataSignalR data)
     {
+        UpdateMachineStatus(data, listMachineStatusS1);
         UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
         UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
         UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
+        UpdateListError(data, "S1");
     }
 
     void HandleStationS2(DataSignalR data)
@@ -199,6 +204,25 @@ public class SignalRDataOMT : MonoBehaviour
         }
     }
 
+    void UpdateMachineStatus(DataSignalR data, GameObject[] listMachineStatus)
+    {
+        Color32[] colors = new Color32[]
+        {
+        new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0"
+        Color.green,                         // case "1"
+        Color.red,                           // case "2"
+        new Color32(0xFF, 0xC0, 0x00, 0xFF), // case "3"
+        new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
+        Color.grey                           // case "5"
+        };
+
+        if (int.TryParse(data.TagValue, out int index) && index >= 0 && index < listMachineStatus.Length)
+        {
+            listMachineStatus[index].GetComponent<Image>().color = colors[index];
+        }
+    }
+
+
     void UpdateProductionData(DataSignalR data, List<string> productionDataTags, TMP_Text[] productionDataValues)
     {
         int index = productionDataTags.IndexOf(data.TagId);
@@ -220,6 +244,43 @@ public class SignalRDataOMT : MonoBehaviour
             int value = int.Parse(data.TagValue);
             chemicalFrames[index].gameObject.GetComponent<Image>().color = (value > 20 && value < 70) ? Color.green : Color.red;
 
+        }
+    }
+
+    void UpdateListError(DataSignalR data, string stationPrefix)
+    {
+        if (data.TagId == "errorStatus" && data.TagValue != "Wifi disconnected" &&
+            !GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue))
+        {
+            Debug.Log(data.TagValue);
+            var errorInfor = new ErrorInfor
+            {
+                errorName = data.TagValue,
+                time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy")
+            };
+            GlobalVariable.errorInfors.Add(errorInfor);
+            UpdateStationErrorList(stationPrefix);
+        }
+        else if (data.TagId == "endErrorStatus")
+        {
+            GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
+            UpdateStationErrorList(stationPrefix);
+        }
+    }
+
+    void UpdateStationErrorList(string stationPrefix)
+    {
+        if (stationPrefix.Contains("S1"))
+        {
+            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1);
+        }
+        else if (stationPrefix.Contains("S2"))
+        {
+            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2);
+        }
+        else if (stationPrefix.Contains("S3"))
+        {
+            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3);
         }
     }
 

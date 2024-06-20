@@ -206,6 +206,11 @@ public class GlobalVariable : MonoBehaviour
 
     //? Error
     public static List<ErrorInfor> errorInfors = new List<ErrorInfor>();
+    public static List<ErrorInfor> errorInfors1 = new List<ErrorInfor>();
+
+    public static List<ErrorInfor> errorInfors2 = new List<ErrorInfor>();
+
+    public static List<ErrorInfor> errorInfors3 = new List<ErrorInfor>();
 
 
 }
