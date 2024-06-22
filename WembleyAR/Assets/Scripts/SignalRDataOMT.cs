@@ -12,7 +12,9 @@ using System.Linq;
 
 public class SignalRDataOMT : MonoBehaviour
 {
-    public GameObject alarmScript;
+    public GameObject alarmScriptS1;
+    public GameObject alarmScriptS2;
+    public GameObject alarmScriptS3;
 
     public GameObject[] inputCheckS1;
     public GameObject[] outputCheckS1;
@@ -37,6 +39,18 @@ public class SignalRDataOMT : MonoBehaviour
     public TMP_Text[] ChemicalDetectionValue;
     public GameObject[] ChemicalDetectionFrameValue;
     public GameObject[] listMachineStatusS1;
+    public GameObject[] listMachineStatusS2;
+    public GameObject[] listMachineStatusS3;
+
+    public TMP_Text[] connectionStatusValueS1;
+    public TMP_Text[] connectionStatusValueS2;
+    public TMP_Text[] connectionStatusValueS3;
+    public GameObject[] connectionStatusFrameS1;
+    public GameObject[] connectionStatusFrameS2;
+    public GameObject[] connectionStatusFrameS3;
+    public TMP_Text[] settingValuesS2;
+    public TMP_Text[] settingValuesS3;
+
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
 
     void Start()
@@ -89,13 +103,39 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
                 var listInitialData = await GetBufferList();
-                foreach (var data in listInitialData)
-                {
-                    if (dataHandlers.TryGetValue(data.StationId, out var handler))
-                    {
-                        handler(data);
-                    }
-                }
+                /*   foreach (var data in listInitialData)
+                   {
+                       UpdateMachineStatus(data, listMachineStatusS1);
+                       UpdateListError(data, "S1");
+                       UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
+                       UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
+                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
+                       UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
+                       UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
+                       UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
+
+                       UpdateMachineStatus(data, listMachineStatusS2);
+                       UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
+                       UpdateListError(data, "S2");
+                       UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
+                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
+                       UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
+                       UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
+                       UpdateSetting(data, "S2", GlobalVariable.settingValuesBLO01, settingValuesS2);
+
+                       UpdateMachineStatus(data, listMachineStatusS3);
+                       UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
+                       UpdateListError(data, "S3");
+                       UpdateSetting(data, "S3", GlobalVariable.settingValuesBLO02, settingValuesS3);
+                       UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
+                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+                       UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
+                       UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+                       // if (dataHandlers.TryGetValue(data.StationId, out var handler))
+                       // {
+                       //    handler(data);
+                       // }
+                   }*/
             }
         });
 
@@ -131,25 +171,34 @@ public class SignalRDataOMT : MonoBehaviour
     void HandleStationS1(DataSignalR data)
     {
         UpdateMachineStatus(data, listMachineStatusS1);
+        UpdateListError(data, "S1");
+        UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
         UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
         UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
         UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
-        UpdateListError(data, "S1");
+
     }
 
     void HandleStationS2(DataSignalR data)
     {
+        UpdateMachineStatus(data, listMachineStatusS2);
+        UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
+        UpdateListError(data, "S2");
         UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
         UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
-
+        UpdateSetting(data, "S2", GlobalVariable.settingValuesBLO01, settingValuesS2);
     }
 
     void HandleStationS3(DataSignalR data)
     {
+        UpdateMachineStatus(data, listMachineStatusS3);
+        UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
+        UpdateListError(data, "S3");
+        UpdateSetting(data, "S3", GlobalVariable.settingValuesBLO02, settingValuesS3);
         UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
@@ -181,7 +230,17 @@ public class SignalRDataOMT : MonoBehaviour
             visionProcessingValues[index].text = data.TagValue;
         }
     }
-
+    void UpdateSetting(DataSignalR data, string stationIndex, List<string> settingValueTags, TMP_Text[] settingValues)
+    {
+        if (data.TagId.Contains(stationIndex))
+        {
+            int index = settingValueTags.IndexOf(data.TagId);
+            if (index >= 0)
+            {
+                settingValues[index].text = data.TagValue;
+            }
+        }
+    }
     void UpdateEnableValues(DataSignalR data, List<string> enableTags, TMP_Text[] enableValues, GameObject[] enableFrames)
     {
         int index = enableTags.IndexOf(data.TagId);
@@ -218,9 +277,48 @@ public class SignalRDataOMT : MonoBehaviour
 
         if (int.TryParse(data.TagValue, out int index) && index >= 0 && index < listMachineStatus.Length)
         {
+            foreach (var status in listMachineStatus)
+            {
+                status.GetComponent<Image>().color = colors[5];
+            }
             listMachineStatus[index].GetComponent<Image>().color = colors[index];
         }
     }
+
+    void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
+    {
+        Color32[] colors = new Color32[]
+        {
+        Color.green,
+        Color.grey,
+        new Color32(2, 192, 245, 255)
+        };
+
+        if (data.TagId == "isConnectPLC")
+        {
+            bool isConnected = int.Parse(data.TagValue) == 1;
+            connectStatusFrames[1].GetComponent<Image>().color = isConnected ? colors[0] : colors[1];
+            connectStatuValues[1].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
+        }
+
+        if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
+        {
+            connectStatusFrames[0].GetComponent<Image>().color = colors[0];
+            connectStatuValues[0].text = "Server Connection: Connected";
+        }
+        else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
+        {
+            connectStatusFrames[1].GetComponent<Image>().color = colors[1];
+            connectStatuValues[1].text = "Server Connection: Disconnected";
+        }
+        else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)
+        {
+            connectStatusFrames[1].GetComponent<Image>().color = colors[2];
+            connectStatuValues[1].text = "Server Connection: Connecting";
+        }
+    }
+
+
 
 
     void UpdateProductionData(DataSignalR data, List<string> productionDataTags, TMP_Text[] productionDataValues)
@@ -272,15 +370,15 @@ public class SignalRDataOMT : MonoBehaviour
     {
         if (stationPrefix.Contains("S1"))
         {
-            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1);
+            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1);
         }
         else if (stationPrefix.Contains("S2"))
         {
-            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2);
+            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2);
         }
         else if (stationPrefix.Contains("S3"))
         {
-            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3);
+            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3);
         }
     }
 
@@ -301,6 +399,8 @@ public class SignalRDataOMT : MonoBehaviour
     public async Task<List<DataSignalR>> GetBufferList()
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+        Debug.Log(response);
         return JsonConvert.DeserializeObject<List<DataSignalR>>(response) ?? new List<DataSignalR>();
+
     }
 }

@@ -89,6 +89,13 @@ TagManager:
   - S3_OMT_Arrow_Back_Monitor
   - Machine_Status_Btn
   - Error_List_Btn
+  - Machine_Status_Btn_S2
+  - Machine_Status_Btn_S3
+  - Error_List_Btn_S2
+  - Error_List_Btn_S3
+  - Connection_Status_Btn_S1
+  - Connection_Status_Btn_S2
+  - Connection_Status_Btn_S3
   layers:
   - Default
   - TransparentFX

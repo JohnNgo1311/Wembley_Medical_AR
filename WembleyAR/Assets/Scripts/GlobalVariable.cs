@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using Microsoft.AspNetCore.SignalR.Client;
+using TMPro;
 using UnityEngine;
 
 public class GlobalVariable : MonoBehaviour
@@ -109,10 +110,24 @@ public class GlobalVariable : MonoBehaviour
     public static int[] RejCountS89TR = new int[4];
 
     public static int[] RejCountS10TR = new int[4];
-
+    public static List<Color32> colors = new List<Color32>
+        {
+           new Color32(0x3D, 0xFF, 0x7F, 0xFF)     ,                   // Màu xanh lá
+            new Color32(0x02, 0xC0, 0xF5, 0xFF), // Xanh nhạt
+            new Color32(0xFF, 0x4E, 0x4E, 0xFF),  // đỏ
+            Color.grey,                          // Màu xám
+            Color.blue,                          // Màu xanh dương
+            Color.cyan,                          // Màu xanh cyan
+            Color.magenta,                       // Màu hồng tím
+            Color.yellow,                        // Màu vàng
+            Color.black,                         // Màu đen
+            Color.white,                         // Màu trắng
+            new Color32(0xFF, 0xA5, 0x00, 0xFF), // Màu cam
+            new Color32(0x80, 0x00, 0x80, 0xFF), // Màu tím
+            new Color32(0x80, 0x80, 0x00, 0xFF)  // Màu xanh olive
+        };
 
     public static List<string> productionDataBLO06 = new List<string>() {
-    "operationTimeRaw" ,
     "EFF",
     "errorProductRaw" ,
     "goodProductRaw" ,
@@ -132,7 +147,6 @@ public class GlobalVariable : MonoBehaviour
    // "S1_CYCLE_TIME"
 };
     public static List<string> productionDataBLO01 = new List<string>() {
-    "operationTimeRaw",
     "S2_PLASTIC_TRAYS_QTY",
     "productCountRaw",
    /* "S2_VISION_TOTAL_TUBES",
@@ -146,7 +160,6 @@ public class GlobalVariable : MonoBehaviour
     "S2_CYCLE_TIME"*/
 };
     public static List<string> productionDataBLO02 = new List<string>() {
-   "operationTimeRaw",
    "S3_PLASTIC_TRAYS_QTY",
    "productCountRaw",
    /*"S3_VISION_TOTAL_TUBES",
@@ -203,6 +216,30 @@ public class GlobalVariable : MonoBehaviour
     "S3_VISION_ENABLE" ,
 };
 
+    public static List<string> settingValuesBLO01 = new List<string>() {
+    "S2_FEEDING_CAPS_TIME",
+    "S2_CAPPING_TIME",
+    "S2_DELAY_CAPPING_TIME",
+    "S2_TAKE_TUBE_TIME",
+    "S2_FEED_TUBE_TIME",
+
+}; public static List<string> settingValuesBLO02 = new List<string>() {
+    "S3_PUSHTRAY_QUANTITYTRAY",
+    "S3_PUSHTRAY_VELOCITY_AUTO",
+    "S3_PUSHTRAY_VELOCITY_MAN",
+    "S3_PUSHTRAY_STEPDISTANCE",
+    "S3_PUSHTRAY_POSITION",
+    "S3_FEEDING_CAPS_TIME",
+    "S3_CAPPING_TIME",
+    "S3_DELAY_CAPPING_TIME",
+    "S3_TAKE_TUBE_TIME",
+    "S3_FEED_TUBE_TIME",
+
+};
+    public static string operationTimeS1;
+    public static string operationTimeS2;
+    public static string operationTimeS3;
+
 
     //? Error
     public static List<ErrorInfor> errorInfors = new List<ErrorInfor>();
@@ -232,6 +269,12 @@ public class DataSignalR
 //     public double TagValue;
 //     public string TimeStamp;
 // }
+[System.Serializable]
+public class DialogModel
+{
+    public GameObject frameDialog;
+    public TMP_Text contentDialog;
+}
 
 
 [System.Serializable]
@@ -245,6 +288,17 @@ public class ManufacturingInfo
     public int lotSize;
     public Line line;
     public StationInfo[] stations;
+}
+
+
+[System.Serializable]
+public class OperationTime
+{
+    public string stationId;
+    public int shiftNumber;
+    public int status;
+    public DateTime date;
+    public DateTime timestamp;
 }
 [System.Serializable]
 public class Line
@@ -274,6 +328,10 @@ public class Mfc
     public int minValue;
     public int maxValue;
 }
+
+
+
+
 [System.Serializable]
 public class Wrapper
 {

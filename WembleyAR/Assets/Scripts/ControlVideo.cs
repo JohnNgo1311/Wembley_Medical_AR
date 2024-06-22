@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Video;
 
 public class ControlVideo : MonoBehaviour
-{   public GameObject panelVideo;
+{
+    public GameObject panelVideo;
     public VideoPlayer video;  // Đối tượng VideoPlayer
     public GameObject btnPlay, btnPause;  // Nút Play và Pause
     public GameObject knob;  // Nút kéo
@@ -36,13 +37,16 @@ public class ControlVideo : MonoBehaviour
     }
 
     void AdjustUIElements(float videoDuration)
-    {BoxCollider collider = panelVideo.GetComponent<BoxCollider>();
-        Vector3 size = collider.size; 
+    {
+        BoxCollider collider = panelVideo.GetComponent<BoxCollider>();
+        Vector3 size = collider.size;
         Debug.Log(size.x);
-        if( videoDuration < size.x/1.5){
-progressBarWidth=size.x*5/6;}
+        if (videoDuration < size.x / 1.5)
+        {
+            progressBarWidth = size.x * 5 / 6;
+        }
         // Giả sử mỗi giây tương ứng với một đơn vị chiều dài
-       else progressBarWidth = videoDuration;  // Đặt chiều rộng của thanh tiến trình bằng thời lượng video
+        else progressBarWidth = videoDuration;  // Đặt chiều rộng của thanh tiến trình bằng thời lượng video
 
         // Đặt kích thước của progressBarBG, progressBar, và knob
         Vector3 progressBarBGScale = progressBarBG.transform.localScale;
@@ -67,7 +71,7 @@ progressBarWidth=size.x*5/6;}
                 knob.transform.localPosition = new Vector2(progressBar.transform.localPosition.x + (progressBarWidth * progress), knob.transform.localPosition.y);  // Cập nhật vị trí của nút kéo
             }
         }
-        
+
         if (Input.touchCount > 0) // Kiểm tra có cảm ứng không
         {
             Touch touch = Input.GetTouch(0); // Lấy cảm ứng đầu tiên

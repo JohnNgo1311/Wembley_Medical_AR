@@ -8,8 +8,9 @@ public class Station3_Motor_Canvas : MonoBehaviour
     List<string> topicStation2 = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter",
-         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Extension",
-         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Setting"
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Setting"  ,
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter",
+
           };
     void Awake()
     {
