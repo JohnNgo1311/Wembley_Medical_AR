@@ -20,8 +20,7 @@ public class InitialSceneLoader : MonoBehaviour
             }
         }
         else
-        {
-            // Nếu không có cảnh nào được lưu, tải cảnh ban đầu
+        {        // Nếu không có cảnh nào được lưu, tải cảnh ban đầu
             SceneManager.LoadScene(InitialSceneName);
         }
     }

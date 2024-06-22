@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="traystation" size="50.000000 50.000000" />
+    <ImageTarget name="station1" size="50.000000 50.000000" />
     <ImageTarget name="station3" size="50.000000 50.000000" />
     <ImageTarget name="station2" size="50.000000 50.000000" />
-    <ImageTarget name="station1" size="50.000000 50.000000" />
     <ImageTarget name="huong_dan_thay_kim_phun" size="50.000000 50.000000" />
   </Tracking>
 </QCARConfig>

@@ -39,11 +39,15 @@ public class UILogin : MonoBehaviour
         if (staffDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
         {
             SceneManager.LoadScene(targetSceneName);
-            Debug.Log("User authenticated");
+
+            // Lưu tên cảnh hiện tại
+            PlayerPrefs.SetString(targetSceneName, SceneManager.GetActiveScene().name);
+
+            //  Debug.Log("User authenticated");
         }
         else
         {
-            Debug.Log("Invalid password");
+            //   Debug.Log("Invalid password");
         }
     }
 }
