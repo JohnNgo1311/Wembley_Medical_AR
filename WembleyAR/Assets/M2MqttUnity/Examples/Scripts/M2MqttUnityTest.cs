@@ -1,4 +1,4 @@
-﻿/*
+/*
 The MIT License (MIT)
 
 Copyright (c) 2018 Giovanni Paolo Vigano'
@@ -59,7 +59,7 @@ namespace M2MqttUnity.Examples
         public void TestPublish()
         {
             client.Publish("M2MQTT_Unity/test", System.Text.Encoding.UTF8.GetBytes("Test message"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-            Debug.Log("Test message published");
+            //Debug.Log("Test message published");
             AddUiMessage("Test message published.");
         }
 
@@ -203,7 +203,7 @@ namespace M2MqttUnity.Examples
         protected override void DecodeMessage(string topic, byte[] message)
         {
             string msg = System.Text.Encoding.UTF8.GetString(message);
-            Debug.Log("Received: " + msg);
+            // Debug.Log("Received: " + msg);
             StoreMessage(msg);
             if (topic == "M2MQTT_Unity/test")
             {

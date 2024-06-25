@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class EfficiencySlider : MonoBehaviour
 {
-    
+
     public GameObject effSlider;
- 
+
     // Update is called once per frame
     void Update()
     {
-        
-        effSlider.GetComponent<Slider>().value =  (float)GlobalVariable.effective;
+
+        effSlider.GetComponent<Slider>().value = (float)GlobalVariable.effective;
     }
 
 

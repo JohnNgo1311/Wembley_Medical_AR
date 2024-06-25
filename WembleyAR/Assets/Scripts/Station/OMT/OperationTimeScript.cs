@@ -93,17 +93,20 @@ public class OperationTimeScript : MonoBehaviour
     {
         operationTimeOn = operationTime[0].timestamp;
         operationTimeOff = operationTime[1].timestamp;
+        Debug.Log($"Time On:{operationTimeOn}");
+        Debug.Log($"Time Off:{operationTimeOff}");
         UpdateOperationTimeDisplay(stationIndex);
     }
 
     private void UpdateOperationTimeDisplay(int stationIndex)
     {
         DateTime operationTimeActive = DateTime.UtcNow.ToLocalTime(); //? Lấy thời gian hiện tại
-        if (operationTimeOn.TimeOfDay.CompareTo(operationTimeOff.TimeOfDay) < 0)
+        if (operationTimeOn.CompareTo(operationTimeOff) < 0)
         {
             SetGlobalOperationTime(stationIndex, "00:00:00");
+            //   Debug.Log("Lấy Sai time");
         }
-        else if (operationTimeOn.TimeOfDay.CompareTo(operationTimeOff.TimeOfDay) > 0)
+        else if (operationTimeOff.CompareTo(operationTimeOff) >= 0)
         {
             TimeSpan operationDuration = operationTimeActive - operationTimeOn;
             SetGlobalOperationTime(stationIndex, operationDuration.ToString(@"hh\:mm\:ss"));

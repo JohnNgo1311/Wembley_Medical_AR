@@ -126,7 +126,7 @@ public class SignalRData : MonoBehaviour
                     UpdateData(data);
                 }
                 await GetBuffer("errorStatus");
-                await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
+                await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "s1");
             }
         });
 
@@ -577,7 +577,7 @@ public class SignalRData : MonoBehaviour
                     else if (data.TagId.Contains("TOTAL_HEIGHT_TR1"))
                     {
                         GlobalVariable.S8_measured_1 = double.Parse(data.TagValue);
-                        Debug.Log(GlobalVariable.S8_measured_1);
+                        //     Debug.Log(GlobalVariable.S8_measured_1);
 
                     }
                     else if (data.TagId.Contains("OFF_SET_TR1"))
@@ -981,10 +981,10 @@ public class SignalRData : MonoBehaviour
                         if (data.TagValue != "Wifi disconnected" && GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue) == false)
 
                         {
-                            Debug.Log(data.TagValue);
+                            //            Debug.Log(data.TagValue);
                             errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                             GlobalVariable.errorInfors.Add(errorInfor);
-                            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
+                            alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "S1");
                         }
                         break;
                     case "endErrorStatus":
@@ -999,7 +999,7 @@ public class SignalRData : MonoBehaviour
                         //         break;
                         //     }
                         // }
-                        alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors);
+                        alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "S1");
                         break;
                     default:
                         break;

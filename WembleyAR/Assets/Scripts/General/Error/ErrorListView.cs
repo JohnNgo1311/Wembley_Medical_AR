@@ -12,11 +12,11 @@ public class ErrorListView : MonoBehaviour
     void Start()
     {
         // GenerateListView(GlobalVariable.errorInfors);
-        //ErrorInfor errorInfor = new ErrorInfor { errorName = "Error 1 description", time = "12:00:00" };
+        // ErrorInfor errorInfor = new ErrorInfor { errorName = "Error 1 description", time = "12:00:00" };
         // GenerateListView(new List<ErrorInfor>());
     }
 
-    public Task GenerateListView(List<ErrorInfor> errorInfors)
+    public Task GenerateListView(List<ErrorInfor> errorInfors, string stationIndex)
     {
         // xóa hết phần tử của listview cũ 
         foreach (Transform child in listView.transform)
@@ -26,15 +26,35 @@ public class ErrorListView : MonoBehaviour
 
         for (var i = 0; i < errorInfors.Count; i++)
         {
-            GameObject error = Instantiate(errorPrefab, listView.transform);
+            GameObject error = Instantiate(errorPrefab, listView.transform);  // Tạo 1 instance mới từ prefab và dặt vào trong listview
             error.SetActive(true);
             error.transform.localScale = new Vector3(1, 1, 1);
             //? đổi tên lỗi
-            GameObject errorNameText = error.transform.Find("Alarm_Name").gameObject;
-            errorNameText.GetComponent<TMP_Text>().text = errorInfors[i].errorName;
+            if (stationIndex == "S1")
+            {
+                GameObject errorNameText = error.transform.Find("Alarm_Name_1").gameObject;
+                errorNameText.GetComponent<TMP_Text>().text = errorInfors[i].errorName;
+                GameObject timeText = error.transform.Find("Time_text_1").gameObject;
+                timeText.GetComponent<TMP_Text>().text = errorInfors[i].time;
+
+            }
+            if (stationIndex == "S2")
+            {
+                GameObject errorNameText = error.transform.Find("Alarm_Name_2").gameObject;
+                errorNameText.GetComponent<TMP_Text>().text = errorInfors[i].errorName;
+                GameObject timeText = error.transform.Find("Time_text_2").gameObject;
+                timeText.GetComponent<TMP_Text>().text = errorInfors[i].time;
+            }
+            if (stationIndex == "S3")
+            {
+                GameObject errorNameText = error.transform.Find("Alarm_Name_3").gameObject;
+                errorNameText.GetComponent<TMP_Text>().text = errorInfors[i].errorName;
+                GameObject timeText = error.transform.Find("Time_text_3").gameObject;
+                timeText.GetComponent<TMP_Text>().text = errorInfors[i].time;
+            }
+
             //? đổi thời gian
-            GameObject timeText = error.transform.Find("Time_text").gameObject;
-            timeText.GetComponent<TMP_Text>().text = errorInfors[i].time;
+
         }
         scrollRect.verticalNormalizedPosition = 1;
         return Task.CompletedTask;

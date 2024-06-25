@@ -53,102 +53,129 @@ public class SignalRDataOMT : MonoBehaviour
 
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
 
+    //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
     void Start()
-    {
-        InitializeDataHandlers();
+    {   //! Kết nối đến server
+        Debug.Log("Chạy Start");
         StartConnectWebApi();
-        Debug.Log("StartConnectWebApi");
+        InitializeDataHandlers();
     }
 
     void OnDestroy()
     {
-        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string> { });
+        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
         GlobalVariable.hubConnection.StopAsync();
+        //? StopAsync là ngắt kết nối server
+
     }
 
     private void InitializeDataHandlers()
     {
         dataHandlers = new Dictionary<string, Action<DataSignalR>>
-        {
-            // Populate with handlers for different stations and tag IDs
-            { "IE-F3-BLO06", HandleStationS1 },
+        {   // "IE-F3-BLO06" : key
+            // HandleStationS1 : hành động tương ứng  
+            { "IE-F3-BLO06", HandleStationS1},
             { "IE-F3-BLO01", HandleStationS2 },
             { "IE-F3-BLO02", HandleStationS3 }
         };
+
     }
 
     private async void StartConnectWebApi()
-    {
+    {    //? Kết nối với server
         if (GlobalVariable.hubConnection == null)
         {
             GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).Build();
             GlobalVariable.isConnecting = true;
-        }
 
+        }
+        //? Cập nhật thay đổi
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
         {
             var data = JsonConvert.DeserializeObject<DataSignalR>(str);
-            Debug.Log("$$" + str);
+            //  Debug.Log("$$" + str);
             if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-            {
+            {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
                 handler(data);
             }
-        });
-
+        }
+        );
+        //? Kết nối thành công
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", async (str) =>
         {
             if (str.Contains("Connected"))
             {
-                UpdateTopics(GlobalVariable.subscribedTopics);
+                Debug.Log("Connected");
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
+                /*await GetBuffer("errorStatus", "S1");
+                  await GetBuffer("errorStatus", "S2");
+                  await GetBuffer("errorStatus", "S3");*/
+                // Inside StartConnectWebApi()
                 var listInitialData = await GetBufferList();
-                /*   foreach (var data in listInitialData)
-                   {
-                       UpdateMachineStatus(data, listMachineStatusS1);
-                       UpdateListError(data, "S1");
-                       UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
-                       UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
-                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
-                       UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
-                       UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
-                       UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
+                // Await the completion of GetBufferList()
+                UpdateTopics(GlobalVariable.allTopicOMT);
+                foreach (var data in listInitialData)
+                {
+                    if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+                    {
+                        if (!data.TagId.StartsWith("M1"))
+                        {
+                            handler(data);
+                            if (dataHandlers.Any())
+                            {
+                                Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
 
-                       UpdateMachineStatus(data, listMachineStatusS2);
-                       UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
-                       UpdateListError(data, "S2");
-                       UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
-                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
-                       UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
-                       UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
-                       UpdateSetting(data, "S2", GlobalVariable.settingValuesBLO01, settingValuesS2);
+                            }
+                        }
+                    }
+                }
 
-                       UpdateMachineStatus(data, listMachineStatusS3);
-                       UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
-                       UpdateListError(data, "S3");
-                       UpdateSetting(data, "S3", GlobalVariable.settingValuesBLO02, settingValuesS3);
-                       UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
-                       UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
-                       UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
-                       UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
-                       // if (dataHandlers.TryGetValue(data.StationId, out var handler))
-                       // {
-                       //    handler(data);
-                       // }
-                   }*/
+                UpdateTopics(GlobalVariable.initialTopicOMT);
+
             }
         });
+        GlobalVariable.hubConnection.Closed += async (error) =>
+            {
+                Debug.Log($"Connection closed: {error?.Message}");
+                GlobalVariable.serverConnected = false;
+                GlobalVariable.isConnecting = false;
+                await HandleReconnect();
+            };
 
+        GlobalVariable.hubConnection.Reconnecting += (error) =>
+        {
+            Debug.Log($"Reconnecting: {error?.Message}");
+            GlobalVariable.isConnecting = true;
+            return Task.CompletedTask;
+        };
+
+        GlobalVariable.hubConnection.Reconnected += (connectionId) =>
+        {
+            Debug.Log($"Reconnected: {connectionId}");
+            GlobalVariable.isConnecting = false;
+            GlobalVariable.serverConnected = true;
+            return Task.CompletedTask;
+        };
         try
         {
             await GlobalVariable.hubConnection.StartAsync().ContinueWith(task =>
-            {
+            {  //? Hàm StartAsync để kết nối lên server
+               //? ContinueWith để khi hoàn thành hàm StartAsync thì tiếp tục xử lý phía dưới, trong trường hợp này là để xử lý xem khi connect được và ko được
                 if (task.IsFaulted)
                 {
-                    Debug.Log("Error opening the GlobalVariable.hubConnection: " + task.Exception.GetBaseException());
+                    Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
                     GlobalVariable.errorServerConnected = true;
                     GlobalVariable.isConnecting = false;
                 }
+                if (task.IsCompletedSuccessfully)
+                {
+                    // GlobalVariable.isConnecting = false;
+                    // GlobalVariable.serverConnected = true;
+                    // GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
+                    // UpdateTopics(GlobalVariable.subscribedTopics);
+                }
+
             });
         }
         catch (Exception e)
@@ -156,8 +183,38 @@ public class SignalRDataOMT : MonoBehaviour
             Debug.Log(e);
             throw;
         }
+
+
+    }
+    private async Task HandleReconnect()
+    {
+        while (!GlobalVariable.serverConnected)
+        {
+            if (IsInternetAvailable())
+            {
+                try
+                {
+                    Debug.Log("Reconnecting...");
+                    StartConnectWebApi();
+                }
+                catch (Exception e)
+                {
+                    Debug.Log(e);
+                }
+            }
+            else
+            {
+                Debug.Log("No internet connection. Waiting to retry...");
+            }
+
+            await Task.Delay(3000); // Random delay before retrying
+        }
     }
 
+    private bool IsInternetAvailable()
+    {
+        return Application.internetReachability != NetworkReachability.NotReachable;
+    }
     public void PublishStationIndex(int index)
     {
         GlobalVariable.hubConnection.InvokeAsync("SelectStation", index);
@@ -171,38 +228,40 @@ public class SignalRDataOMT : MonoBehaviour
     void HandleStationS1(DataSignalR data)
     {
         UpdateMachineStatus(data, listMachineStatusS1);
-        UpdateListError(data, "S1");
         UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
         UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
         UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
         UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
-
+        UpdateListError(data, "S1");
     }
 
     void HandleStationS2(DataSignalR data)
     {
+
         UpdateMachineStatus(data, listMachineStatusS2);
         UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
-        UpdateListError(data, "S2");
         UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
         UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
-        UpdateSetting(data, "S2", GlobalVariable.settingValuesBLO01, settingValuesS2);
+        UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
+        UpdateListError(data, "S2");
+
     }
 
     void HandleStationS3(DataSignalR data)
     {
+
         UpdateMachineStatus(data, listMachineStatusS3);
         UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
-        UpdateListError(data, "S3");
-        UpdateSetting(data, "S3", GlobalVariable.settingValuesBLO02, settingValuesS3);
         UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
         UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+        UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+        UpdateListError(data, "S3");
 
     }
 
@@ -224,40 +283,44 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateVisionProcessing(DataSignalR data, List<string> visionProcessingTags, TMP_Text[] visionProcessingValues)
     {
-        int index = visionProcessingTags.IndexOf(data.TagId);
-        if (index >= 0)
+        if (visionProcessingTags.Contains(data.TagId))
         {
-            visionProcessingValues[index].text = data.TagValue;
+            Debug.Log("Vision Processing:" + data.TagId + "/" + data.TagValue);
+            int index = visionProcessingTags.IndexOf(data.TagId);
+            if (index >= 0)
+            {
+                visionProcessingValues[index].text = data.TagValue;
+                //  Debug.Log(visionProcessingValues[index].text);
+            }
         }
+
     }
-    void UpdateSetting(DataSignalR data, string stationIndex, List<string> settingValueTags, TMP_Text[] settingValues)
+    void UpdateSetting(DataSignalR data, List<string> settingValueTags, TMP_Text[] settingValues)
     {
-        if (data.TagId.Contains(stationIndex))
+        if (settingValueTags.Contains(data.TagId))
         {
+            Debug.Log("Setting:" + data.TagId + ":" + data.TagValue);
             int index = settingValueTags.IndexOf(data.TagId);
             if (index >= 0)
             {
                 settingValues[index].text = data.TagValue;
             }
+
         }
+
     }
     void UpdateEnableValues(DataSignalR data, List<string> enableTags, TMP_Text[] enableValues, GameObject[] enableFrames)
     {
-        int index = enableTags.IndexOf(data.TagId);
-        if (index >= 0)
+        if (enableTags.Contains(data.TagId))
         {
-            if (enableTags[index].Contains("DISABLE"))
-            {
-                bool isDisabled = data.TagValue == "1";
-                enableValues[index].text = isDisabled ? "Nonuse" : "use";
-                enableFrames[index].GetComponent<Image>().color = isDisabled ? new Color32(0xBC, 0xBC, 0xBC, 255) : Color.green;
+            Debug.Log("Enable:" + "" + data.StationId + "+" + data.TagId + "+" + data.TagValue);
 
-            }
-            else if (enableTags[index].Contains("Enable"))
+            int index = enableTags.IndexOf(data.TagId);
+            if (index >= 0)
             {
                 bool isEnabled = data.TagValue == "1";
-                enableValues[index].text = isEnabled ? "Use" : "Nonuse";
-                enableFrames[index].GetComponent<Image>().color = isEnabled ? Color.green : new Color32(0xBC, 0xBC, 0xBC, 255);
+                enableValues[index].text = isEnabled ? "Use" : "Unuse";
+                enableFrames[index].GetComponent<Image>().color = isEnabled ? Color.green : new Color32(0x76, 0x76, 0x76, 0xFF);
             }
 
         }
@@ -265,68 +328,85 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateMachineStatus(DataSignalR data, GameObject[] listMachineStatus)
     {
-        Color32[] colors = new Color32[]
-        {
-        new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0"
-        Color.green,                         // case "1"
-        Color.red,                           // case "2"
-        new Color32(0xFF, 0xC0, 0x00, 0xFF), // case "3"
-        new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
-        Color.grey                           // case "5"
-        };
 
-        if (int.TryParse(data.TagValue, out int index) && index >= 0 && index < listMachineStatus.Length)
+
+
+
+        if (data.TagId == "machineStatus")
         {
-            foreach (var status in listMachineStatus)
+            Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
+            Color32[] colors = new Color32[]
+             {
+        new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
+        Color.green,                         // case "1"
+        new Color32(0xFF, 0xC0, 0x00, 0xFF), //case "2"
+                      Color.red,             // case "3"
+        new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
+        Color.yellow// case "5"
+             };
+            //Debug.Log("MachineStatus: " + data.TagValue); 
+            int value = int.Parse(data.TagValue);
+
+            // Reset all statuses to grey using a loop
+            for (int i = 0; i < listMachineStatus.Length; i++)
             {
-                status.GetComponent<Image>().color = colors[5];
+                listMachineStatus[i].GetComponent<Image>().color = GlobalVariable.colors[3];
             }
-            listMachineStatus[index].GetComponent<Image>().color = colors[index];
+
+            // Set the specific status based on the value
+            if (value >= 0 && value < listMachineStatus.Length)
+            {
+                listMachineStatus[value].GetComponent<Image>().color = colors[value];
+            }
         }
     }
 
+
     void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
     {
-        Color32[] colors = new Color32[]
+        if (!dataHandlers.Any())
         {
-        Color.green,
-        Color.grey,
-        new Color32(2, 192, 245, 255)
-        };
+            Debug.Log($"{dataHandlers} + aaaaaaa  + {data.TagId} + {data.TagValue}");
+
+        }
+
 
         if (data.TagId == "isConnectPLC")
         {
             bool isConnected = int.Parse(data.TagValue) == 1;
-            connectStatusFrames[1].GetComponent<Image>().color = isConnected ? colors[0] : colors[1];
-            connectStatuValues[1].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
+            Debug.Log("PLC Connection: " + isConnected);
+            connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : new Color32(0x76, 0x76, 0x76, 0xFF);
+            connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
+            if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
+            {
+                connectStatusFrames[1].GetComponent<Image>().color = Color.green;
+                connectStatuValues[1].text = "Server Connection: Connected";
+            }
+            else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
+            {
+                connectStatusFrames[1].GetComponent<Image>().color = new Color32(0x76, 0x76, 0x76, 0xFF);
+                connectStatuValues[1].text = "Server Connection: Disconnected";
+            }
+            else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)
+            {
+                connectStatusFrames[1].GetComponent<Image>().color = Color.blue;
+                connectStatuValues[1].text = "Server Connection: Connecting";
+            }
+            //  Debug.Log(data.StationId + "" + data.TagId + "" + GlobalVariable.isConnecting + GlobalVariable.serverConnected + GlobalVariable.errorServerConnected);
         }
 
-        if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
-        {
-            connectStatusFrames[0].GetComponent<Image>().color = colors[0];
-            connectStatuValues[0].text = "Server Connection: Connected";
-        }
-        else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
-        {
-            connectStatusFrames[1].GetComponent<Image>().color = colors[1];
-            connectStatuValues[1].text = "Server Connection: Disconnected";
-        }
-        else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)
-        {
-            connectStatusFrames[1].GetComponent<Image>().color = colors[2];
-            connectStatuValues[1].text = "Server Connection: Connecting";
-        }
     }
-
-
 
 
     void UpdateProductionData(DataSignalR data, List<string> productionDataTags, TMP_Text[] productionDataValues)
     {
-        int index = productionDataTags.IndexOf(data.TagId);
-        if (index >= 0)
+        if (productionDataTags.Contains(data.TagId))
         {
-            productionDataValues[index].text = data.TagValue;
+            int index = productionDataTags.IndexOf(data.TagId);
+            if (index >= 0)
+            {
+                productionDataValues[index].text = data.TagValue;
+            }
         }
     }
 
@@ -347,60 +427,182 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateListError(DataSignalR data, string stationPrefix)
     {
-        if (data.TagId == "errorStatus" && data.TagValue != "Wifi disconnected" &&
-            !GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue))
+        if (data.TagId == "errorStatus" && data.TagValue != "Wifi disconnected")
+        //    &&
+        //  !GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue)
+
         {
-            Debug.Log(data.TagValue);
-            var errorInfor = new ErrorInfor
+            //   Debug.Log(data.TagValue);
+            if (stationPrefix == "S1")
             {
-                errorName = data.TagValue,
-                time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy")
-            };
-            GlobalVariable.errorInfors.Add(errorInfor);
-            UpdateStationErrorList(stationPrefix);
+                var errorInfor = new ErrorInfor
+                {
+                    errorName = data.TagValue,
+                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                };
+                Debug.Log("Error S1");
+                GlobalVariable.errorInfors1.Add(errorInfor);
+                UpdateStationErrorList("S1");
+
+            }
+            else if (stationPrefix == "S2")
+            {
+                var errorInfor = new ErrorInfor
+                {
+                    errorName = data.TagValue,
+                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                };
+                Debug.Log("Error S2");
+
+                GlobalVariable.errorInfors2.Add(errorInfor);
+                UpdateStationErrorList("S2");
+
+            }
+            else if (stationPrefix == "S3")
+            {
+                var errorInfor = new ErrorInfor
+                {
+                    errorName = data.TagValue,
+                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                };
+                Debug.Log("Error S3");
+                GlobalVariable.errorInfors3.Add(errorInfor);
+                Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                UpdateStationErrorList("S3");
+
+            }
         }
         else if (data.TagId == "endErrorStatus")
         {
-            GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
-            UpdateStationErrorList(stationPrefix);
+            if (stationPrefix.Contains("S1"))
+            {
+                Debug.Log("End Error S1");
+                GlobalVariable.errorInfors1.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
+                UpdateStationErrorList(stationPrefix);
+
+            }
+            else if (stationPrefix.Contains("S2"))
+            {
+                Debug.Log("End Error S2");
+                GlobalVariable.errorInfors2.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
+            }
+            else if (stationPrefix.Contains("S3"))
+            {
+                Debug.Log("End Error S3");
+                GlobalVariable.errorInfors3.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
+            }
         }
     }
 
     void UpdateStationErrorList(string stationPrefix)
     {
-        if (stationPrefix.Contains("S1"))
+        if (stationPrefix == "S1")
         {
-            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1);
+            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
         }
-        else if (stationPrefix.Contains("S2"))
+        else if (stationPrefix == "S2")
         {
-            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2);
+            alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
         }
-        else if (stationPrefix.Contains("S3"))
+        else if (stationPrefix == "S3")
         {
-            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3);
+            alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
         }
     }
 
-    public async Task GetBuffer(string tagId)
+    public async Task GetBuffer(string tagId, string stationIndex)
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
-        var filteredList = tags.Where(data => data.TagId == tagId);
-        foreach (var tag in filteredList)
+        var filteredList = tags.Where(data => data.TagId == tagId && data.TagValue != "Wifi disconnected");
+
+        switch (stationIndex)
         {
-            if (tag.TagValue != "Wifi disconnected")
-            {
-                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-            }
+            case "S1":
+                GlobalVariable.errorInfors1.Clear();
+                foreach (var tag in filteredList)
+                {
+                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    GlobalVariable.errorInfors1.Add(errorInfor1);
+                }
+                break;
+
+            case "S2":
+                GlobalVariable.errorInfors2.Clear();
+                foreach (var tag in filteredList)
+                {
+                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    GlobalVariable.errorInfors2.Add(errorInfor2);
+                }
+                break;
+
+            case "S3":
+                GlobalVariable.errorInfors3.Clear();
+                foreach (var tag in filteredList)
+                {
+                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    GlobalVariable.errorInfors3.Add(errorInfor3);
+                }
+                break;
         }
     }
+
+
+
 
     public async Task<List<DataSignalR>> GetBufferList()
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
-        Debug.Log(response);
-        return JsonConvert.DeserializeObject<List<DataSignalR>>(response) ?? new List<DataSignalR>();
+        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+        // Debug.Log("GetBufferList" + tags.Count);
+        var filteredList1 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO06");
+        var filteredList2 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO01");
+        var filteredList3 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO02");
 
+        if (filteredList1.Any())
+        {
+
+            GlobalVariable.errorInfors1.Clear();
+            foreach (var tag in filteredList1)
+            {
+                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                GlobalVariable.errorInfors1.Add(errorInfor1);
+                await alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
+            }
+        }
+
+        if (filteredList2.Any())
+        {
+
+            GlobalVariable.errorInfors2.Clear();
+            foreach (var tag in filteredList2)
+            {
+                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                GlobalVariable.errorInfors2.Add(errorInfor2);
+                await alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
+
+            }
+        }
+        if (filteredList3.Any())
+        {
+
+            GlobalVariable.errorInfors3.Clear();
+            foreach (var tag in filteredList3)
+            {
+                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                GlobalVariable.errorInfors3.Add(errorInfor3);
+                await alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
+
+            }
+        }
+
+        if (tags is null) return new List<DataSignalR>();
+        return tags;
     }
 }

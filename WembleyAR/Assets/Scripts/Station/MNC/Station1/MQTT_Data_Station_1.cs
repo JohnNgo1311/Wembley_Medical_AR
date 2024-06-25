@@ -7,7 +7,7 @@ public class MQTT_Data_Station_1 : MonoBehaviour
     MQTT mqtt;
     //! List topics mà Station 1 đăng ký đến broker
     List<string> topicStation1 = new List<string>  {
-         $"{GlobalVariable.basedTopic}/S1/in/00" , 
+         $"{GlobalVariable.basedTopic}/S1/in/00" ,
          $"{GlobalVariable.basedTopic}/S1/in/01" ,
          $"{GlobalVariable.basedTopic}/S1/in/02" ,
          $"{GlobalVariable.basedTopic}/S1/in/03" ,
@@ -42,9 +42,9 @@ public class MQTT_Data_Station_1 : MonoBehaviour
          $"{GlobalVariable.basedTopic}/S1/out/18",
           };
     void Awake()
-    {    Debug.Log("@@@@@");
+    {   // Debug.Log("@@@@@");
         mqtt = GameObject.FindWithTag("Mqtt").GetComponent<MQTT>();
-       
+
     }
     void OnEnable()
     {

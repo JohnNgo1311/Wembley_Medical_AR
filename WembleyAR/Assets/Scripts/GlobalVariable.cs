@@ -24,10 +24,24 @@ public class GlobalVariable : MonoBehaviour
     public static string basedTopicOMT = "WembleyMedical/BTM";
     public static List<string> initialTopicOMT = new List<string>
     {
+
     };
     public static List<string> subscribedTopicsOMT = initialTopicOMT;
 
-
+    public static List<string> allTopicOMT = new List<string>
+    {         $"{basedTopicOMT}/IE-F3-BLO06/Extension",
+              $"{basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",
+              $"{basedTopicOMT}/IE-F3-BLO06/Parameter",
+              $"{basedTopicOMT}/IE-F3-BLO06/Status",
+              $"{basedTopicOMT}/IE-F3-BLO01/Extension",
+              $"{basedTopicOMT}/IE-F3-BLO01/Setting",
+              $"{basedTopicOMT}/IE-F3-BLO01/Parameter",
+              $"{basedTopicOMT}/IE-F3-BLO01/Status",
+              $"{basedTopicOMT}/IE-F3-BLO02/Extension",
+              $"{basedTopicOMT}/IE-F3-BLO02/Parameter",
+              $"{basedTopicOMT}/IE-F3-BLO02/Setting",
+              $"{basedTopicOMT}/IE-F3-BLO02/Status",
+    };
     public static bool networkConnected = false;
     public static bool serverConnected = false;
     public static bool isConnecting = false;
@@ -112,36 +126,29 @@ public class GlobalVariable : MonoBehaviour
     public static int[] RejCountS10TR = new int[4];
     public static List<Color32> colors = new List<Color32>
         {
-           new Color32(0x3D, 0xFF, 0x7F, 0xFF)     ,                   // Màu xanh lá
-            new Color32(0x02, 0xC0, 0xF5, 0xFF), // Xanh nhạt
-            new Color32(0xFF, 0x4E, 0x4E, 0xFF),  // đỏ
-            Color.grey,                          // Màu xám
-            Color.blue,                          // Màu xanh dương
-            Color.cyan,                          // Màu xanh cyan
-            Color.magenta,                       // Màu hồng tím
-            Color.yellow,                        // Màu vàng
-            Color.black,                         // Màu đen
-            Color.white,                         // Màu trắng
-            new Color32(0xFF, 0xA5, 0x00, 0xFF), // Màu cam
-            new Color32(0x80, 0x00, 0x80, 0xFF), // Màu tím
-            new Color32(0x80, 0x80, 0x00, 0xFF)  // Màu xanh olive
+            new Color32(0x3D, 0xFF, 0x7F, 0xFF)  , // Màu xanh lá   0
+            new Color32(0x02, 0xC0, 0xF5, 0xFF), // Xanh nhạt 1
+            new Color32(0xFF, 0x4E, 0x4E, 0xFF),  // đỏ 2
+            new Color32(0x76, 0x76, 0x76, 0xFF)  ,                       // Màu xám 3
+            Color.blue,                          // Màu xanh dương 4
+            Color.cyan,                          // Màu xanh cyan 5
+            Color.magenta,                       // Màu hồng tím 6
+            Color.yellow,                        // Màu vàng 7
+            Color.black,                         // Màu đen 8
+            Color.white,                         // Màu trắng 9
+            new Color32(0xFF, 0xA5, 0x00, 0xFF), // Màu cam 10
+            new Color32(0x80, 0x00, 0x80, 0xFF), // Màu tím 11
+            new Color32(0x80, 0x80, 0x00, 0xFF)  // Màu xanh olive 12
+            
         };
 
     public static List<string> productionDataBLO06 = new List<string>() {
-    "EFF",
+    "S1_PLASTIC_TRAYS_QTY",
+    "productCountRaw",
+    "goodProductRaw",
     "errorProductRaw" ,
-    "goodProductRaw" ,
-    "S1_PLASTIC_TRAYS_QTY" ,
-    "productCountRaw" ,
+    "EFF",
     "S1_HEATING_TEMP",
-    "S1_CURRENT_GDS",
-    "S1_CURRENT_BDS",
-    "S1_VISION_CURRENT_GDS",
-    "S1_VISION_CURRENT_BDS",
-    "S1_STYROFOAM_TRAYS_QTY",
-    "S1_VISION_GOOD_TUBES",
-    "S1_VISION_TOTAL_TUBES",
-    "S1_VISION_BAD_TUBES",
   //  "S1_CURRENT_LEVEL_AUTH",
    // "S1_CURRENT_ID_AUTH",
    // "S1_CYCLE_TIME"
@@ -149,61 +156,47 @@ public class GlobalVariable : MonoBehaviour
     public static List<string> productionDataBLO01 = new List<string>() {
     "S2_PLASTIC_TRAYS_QTY",
     "productCountRaw",
-   /* "S2_VISION_TOTAL_TUBES",
-    "S2_VISION_GOOD_TUBES",
-    "S2_VISION_BAD_TUBES",
-    "S2_STYROFOAM_TRAYS_QTY",
-    "S2_VISION_CURRENT_GDS",
-    "S2_VISION_CURRENT_BDS"
-    "S2_CURRENT_ID_AUTH",
-    "S2_CURRENT_LEVEL_AUTH",
-    "S2_CYCLE_TIME"*/
 };
     public static List<string> productionDataBLO02 = new List<string>() {
    "S3_PLASTIC_TRAYS_QTY",
    "productCountRaw",
-   /*"S3_VISION_TOTAL_TUBES",
-   "S3_VISION_GOOD_TUBES",
-   "S3_VISION_BAD_TUBES",
-   "S3_STYROFOAM_TRAYS_QTY",
-   "S3_VISION_CURRENT_GDS",
-   "S3_VISION_CURRENT_BDS",
-   "S3_CURRENT_ID_AUTH",
-   "S3_CURRENT_LEVEL_AUTH",
-   "S3_CYCLE_TIME"*/
 };
     public static List<string> visionProcessingBLO06 = new List<string>() {
-    "S1_VISION_TOTAL_TUBES" ,
-    "S1_VISION_GOOD_TUBES" ,
-    "S1_VISION_BAD_TUBES" ,
+    "S1_VISION_TOTAL_TUBES",
+    "S1_VISION_GOOD_TUBES",
+    "S1_VISION_BAD_TUBES",
     "S1_STYROFOAM_TRAYS_QTY",
+    "S1_VISION_CURRENT_GDS",
+    "S1_VISION_CURRENT_BDS",
     };
     public static List<string> visionProcessingBLO01 = new List<string>() {
     "S2_VISION_TOTAL_TUBES" ,
     "S2_VISION_GOOD_TUBES" ,
     "S2_VISION_BAD_TUBES" ,
     "S2_STYROFOAM_TRAYS_QTY" ,
-    "S2_VISION_CURRENT_GDS" ,
-    "S2_VISION_CURRENT_BDS" ,
+    "S2_VISION_CURRENT_GDS",
+    "S2_VISION_CURRENT_BDS",
 };
     public static List<string> visionProcessingBLO02 = new List<string>() {
     "S3_VISION_TOTAL_TUBES" ,
     "S3_VISION_GOOD_TUBES" ,
     "S3_VISION_BAD_TUBES" ,
     "S3_STYROFOAM_TRAYS_QTY" ,
-    "S3_VISION_CURRENT_GDS" ,
-    "S3_VISION_CURRENT_BDS" ,
+    "S3_VISION_CURRENT_GDS",
+    "S3_VISION_CURRENT_BDS",
 };
     public static List<string> enableStationBLO06 = new List<string>() {
-    "S1_DRYING_1_ENABLE" ,
-    "S1_DRYING_2_ENABLE" ,
+    "S1_DRYING_1_DISABLE",
+    "S1_DRYING_2_DISABLE",
     "S1_ROBOT_ARM_DISABLE",
-    "S1_CAP_RUBBER_ENABLE" ,
-    "S1_CAP_NON_RUBBER_ENABLE" ,
+    "S1_CAP_RUBBER_ENABLE",
+    "S1_CAP_NON_RUBBER_ENABLE",
+    "S1_VISION_ENABLE",
+
 };
     public static List<string> enableStationBLO01 = new List<string>() {
-    "S2_CAP_DISABLE" ,
-    "S2_TUBE_DISABLE" ,
+    "S2_CAP_DISABLE",
+    "S2_TUBE_DISABLE",
     "S2_COMMUNICATION_DISABLE"
 };
 
@@ -220,10 +213,11 @@ public class GlobalVariable : MonoBehaviour
     "S2_FEEDING_CAPS_TIME",
     "S2_CAPPING_TIME",
     "S2_DELAY_CAPPING_TIME",
+    "S2_EJECTING_TIME",
     "S2_TAKE_TUBE_TIME",
     "S2_FEED_TUBE_TIME",
-
-}; public static List<string> settingValuesBLO02 = new List<string>() {
+};
+    public static List<string> settingValuesBLO02 = new List<string>() {
     "S3_PUSHTRAY_QUANTITYTRAY",
     "S3_PUSHTRAY_VELOCITY_AUTO",
     "S3_PUSHTRAY_VELOCITY_MAN",
@@ -234,7 +228,6 @@ public class GlobalVariable : MonoBehaviour
     "S3_DELAY_CAPPING_TIME",
     "S3_TAKE_TUBE_TIME",
     "S3_FEED_TUBE_TIME",
-
 };
     public static string operationTimeS1;
     public static string operationTimeS2;

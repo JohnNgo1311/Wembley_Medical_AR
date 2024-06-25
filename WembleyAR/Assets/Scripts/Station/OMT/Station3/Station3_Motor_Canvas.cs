@@ -7,10 +7,9 @@ public class Station3_Motor_Canvas : MonoBehaviour
     SignalRDataOMT signalR;
     List<string> topicStation2 = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter",
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Setting"  ,
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter",
-
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter/ProductionData",
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Setting/Setting",
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Setting/StationStatus",
           };
     void Awake()
     {
@@ -22,7 +21,7 @@ public class Station3_Motor_Canvas : MonoBehaviour
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation2);
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         //  signalR.PublishStationIndex(1);
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        //   Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
 
     void OnDisable()

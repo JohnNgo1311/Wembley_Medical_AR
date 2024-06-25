@@ -7,7 +7,7 @@ public class Station2_Machine_Status : MonoBehaviour
     SignalRDataOMT signalR;
     List<string> topic = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Status",
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Status/machineStatus",
           };
     void Awake()
     {
@@ -19,7 +19,7 @@ public class Station2_Machine_Status : MonoBehaviour
         GlobalVariable.subscribedTopicsOMT.AddRange(topic);
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         //  signalR.PublishStationIndex(1);
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        //    Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
 
     void OnDisable()

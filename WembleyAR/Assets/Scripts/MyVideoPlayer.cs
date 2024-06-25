@@ -121,7 +121,7 @@ public class MyVideoPlayer : MonoBehaviour
 
     public void VideoPlay()
     {
-        Debug.Log("play video");
+        //  Debug.Log("play video");
         videoIsPlaying = true;
         videoPlayer.Play();
         btnPlay.gameObject.SetActive(false);

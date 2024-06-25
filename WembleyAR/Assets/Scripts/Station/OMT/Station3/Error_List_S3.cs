@@ -5,20 +5,23 @@ using UnityEngine;
 public class Error_List_S3 : MonoBehaviour
 {
     SignalRDataOMT signalR;
-    List<string> topic = new List<string>  {
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter",
+    List<string> topicStation3 = new List<string>  {
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter/errorStatus",
+         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO02/Parameter/endErrorStatus",
+
           };
+
     void Awake()
     {
         signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        GlobalVariable.subscribedTopicsOMT.AddRange(topic);
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        // GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
+        signalR.UpdateTopics(topicStation3);
+        Debug.Log("Error_List_S3 OnEnable");
         //  signalR.PublishStationIndex(1);
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        //  Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
 
     void OnDisable()

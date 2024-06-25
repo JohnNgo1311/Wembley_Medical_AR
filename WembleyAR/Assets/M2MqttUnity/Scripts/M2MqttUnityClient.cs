@@ -130,7 +130,7 @@ namespace M2MqttUnity
         /// </summary>
         protected virtual void OnConnectionFailed(string errorMessage)
         {
-            Debug.LogWarning("Connection failed.");
+            //    Debug.LogWarning("Connection failed.");
             if (ConnectionFailed != null)
             {
                 ConnectionFailed();
@@ -185,7 +185,7 @@ namespace M2MqttUnity
         /// </summary>
         protected virtual void DecodeMessage(string topic, byte[] message)
         {
-            Debug.LogFormat("Message received on topic: {0}", topic);
+            //    Debug.LogFormat("Message received on topic: {0}", topic);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace M2MqttUnity
         /// </summary>
         protected virtual void OnDisconnected()
         {
-            Debug.Log("Disconnected.");
+            //     Debug.Log("Disconnected.");
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace M2MqttUnity
         /// </summary>
         protected virtual void OnConnectionLost()
         {
-            Debug.LogWarning("CONNECTION LOST!");
+            //     Debug.LogWarning("CONNECTION LOST!");
         }
 
         /// <summary>

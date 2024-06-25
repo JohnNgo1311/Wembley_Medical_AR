@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Station1_Connection_Machine_Status : MonoBehaviour
+public class Station1_Connection_Status : MonoBehaviour
 {
     SignalRDataOMT signalR;
     List<string> topic = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Status",
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Status/isConnectPLC",
           };
     void Awake()
     {
@@ -19,7 +19,7 @@ public class Station1_Connection_Machine_Status : MonoBehaviour
         GlobalVariable.subscribedTopicsOMT.AddRange(topic);
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         //  signalR.PublishStationIndex(1);
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        //    Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
 
     void OnDisable()

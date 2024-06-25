@@ -5,8 +5,10 @@ using UnityEngine;
 public class Error_List_S2 : MonoBehaviour
 {
     SignalRDataOMT signalR;
-    List<string> topic = new List<string>  {
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Parameter",
+    List<string> topicStation2 = new List<string>  {
+         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Parameter/errorStatus",
+         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Parameter/endErrorStatus",
+
           };
     void Awake()
     {
@@ -14,11 +16,10 @@ public class Error_List_S2 : MonoBehaviour
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        GlobalVariable.subscribedTopicsOMT.AddRange(topic);
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        //  GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
+        signalR.UpdateTopics(topicStation2);
         //  signalR.PublishStationIndex(1);
-        Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        //  Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
 
     void OnDisable()
