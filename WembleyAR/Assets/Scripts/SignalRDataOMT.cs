@@ -131,7 +131,7 @@ public class SignalRDataOMT : MonoBehaviour
                     }
                 }
 
-                UpdateTopics(GlobalVariable.initialTopicOMT);
+                //  UpdateTopics(GlobalVariable.initialTopicOMT);
 
             }
         });
@@ -139,6 +139,7 @@ public class SignalRDataOMT : MonoBehaviour
             {
                 Debug.Log($"Connection closed: {error?.Message}");
                 GlobalVariable.serverConnected = false;
+                GlobalVariable.errorServerConnected = false;
                 GlobalVariable.isConnecting = false;
                 await HandleReconnect();
             };
@@ -147,6 +148,9 @@ public class SignalRDataOMT : MonoBehaviour
         {
             Debug.Log($"Reconnecting: {error?.Message}");
             GlobalVariable.isConnecting = true;
+            GlobalVariable.serverConnected = false;
+            GlobalVariable.errorServerConnected = false;
+
             return Task.CompletedTask;
         };
 
@@ -154,6 +158,7 @@ public class SignalRDataOMT : MonoBehaviour
         {
             Debug.Log($"Reconnected: {connectionId}");
             GlobalVariable.isConnecting = false;
+            GlobalVariable.errorServerConnected = false;
             GlobalVariable.serverConnected = true;
             return Task.CompletedTask;
         };
@@ -166,6 +171,7 @@ public class SignalRDataOMT : MonoBehaviour
                 {
                     Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
                     GlobalVariable.errorServerConnected = true;
+                    GlobalVariable.serverConnected = false;
                     GlobalVariable.isConnecting = false;
                 }
                 if (task.IsCompletedSuccessfully)
@@ -246,8 +252,8 @@ public class SignalRDataOMT : MonoBehaviour
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
         UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
-        UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
         UpdateListError(data, "S2");
+        UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
 
     }
 
@@ -320,7 +326,7 @@ public class SignalRDataOMT : MonoBehaviour
             {
                 bool isEnabled = data.TagValue == "1";
                 enableValues[index].text = isEnabled ? "Use" : "Unuse";
-                enableFrames[index].GetComponent<Image>().color = isEnabled ? Color.green : new Color32(0x76, 0x76, 0x76, 0xFF);
+                enableFrames[index].GetComponent<Image>().color = isEnabled ? Color.green : GlobalVariable.colors[3];
             }
 
         }
@@ -329,9 +335,6 @@ public class SignalRDataOMT : MonoBehaviour
     void UpdateMachineStatus(DataSignalR data, GameObject[] listMachineStatus)
     {
 
-
-
-
         if (data.TagId == "machineStatus")
         {
             Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
@@ -339,8 +342,8 @@ public class SignalRDataOMT : MonoBehaviour
              {
         new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
         Color.green,                         // case "1"
-        new Color32(0xFF, 0xC0, 0x00, 0xFF), //case "2"
-                      Color.red,             // case "3"
+        new Color32(0xFF, 0xC0, 0x00, 0xFF), //case "2" ==> Cam
+        Color.red,             // case "3"
         new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
         Color.yellow// case "5"
              };
@@ -364,18 +367,18 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
     {
-        if (!dataHandlers.Any())
-        {
-            Debug.Log($"{dataHandlers} + aaaaaaa  + {data.TagId} + {data.TagValue}");
+        /*  if (!dataHandlers.Any())
+          {
+              Debug.Log($"{dataHandlers} + aaaaaaa  + {data.TagId} + {data.TagValue}");
 
-        }
+          }*/
 
 
         if (data.TagId == "isConnectPLC")
         {
             bool isConnected = int.Parse(data.TagValue) == 1;
             Debug.Log("PLC Connection: " + isConnected);
-            connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : new Color32(0x76, 0x76, 0x76, 0xFF);
+            connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : GlobalVariable.colors[3];
             connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
             if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
             {
@@ -384,7 +387,7 @@ public class SignalRDataOMT : MonoBehaviour
             }
             else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
             {
-                connectStatusFrames[1].GetComponent<Image>().color = new Color32(0x76, 0x76, 0x76, 0xFF);
+                connectStatusFrames[1].GetComponent<Image>().color = GlobalVariable.colors[3];
                 connectStatuValues[1].text = "Server Connection: Disconnected";
             }
             else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)

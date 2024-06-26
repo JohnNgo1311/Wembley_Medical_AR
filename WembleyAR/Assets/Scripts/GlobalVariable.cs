@@ -129,7 +129,7 @@ public class GlobalVariable : MonoBehaviour
             new Color32(0x3D, 0xFF, 0x7F, 0xFF)  , // Màu xanh lá   0
             new Color32(0x02, 0xC0, 0xF5, 0xFF), // Xanh nhạt 1
             new Color32(0xFF, 0x4E, 0x4E, 0xFF),  // đỏ 2
-            new Color32(0x76, 0x76, 0x76, 0xFF)  ,                       // Màu xám 3
+            new Color32(0xC1, 0xC1, 0xC1, 0xFF)  ,// Màu xám 3
             Color.blue,                          // Màu xanh dương 4
             Color.cyan,                          // Màu xanh cyan 5
             Color.magenta,                       // Màu hồng tím 6
