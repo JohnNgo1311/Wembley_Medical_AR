@@ -7,9 +7,9 @@ public class Station1_Motor_Canvas : MonoBehaviour
     SignalRDataOMT signalR;
     List<string> topicStation1 = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
-         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Parameter/ProductionData",
-         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/ChemicalDetection" ,
-         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Parameter",                //? S1 Production Data,S1 Error, S1 End Error
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",    //? S1 Enable
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/ChemicalDetection" ,
           };
     void Awake()
     {

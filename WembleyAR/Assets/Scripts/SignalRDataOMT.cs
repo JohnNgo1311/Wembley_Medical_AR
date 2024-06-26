@@ -6,7 +6,6 @@ using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using TMPro;
-
 using UnityEngine.UI;
 using System.Linq;
 
@@ -131,7 +130,7 @@ public class SignalRDataOMT : MonoBehaviour
                     }
                 }
 
-                //  UpdateTopics(GlobalVariable.initialTopicOMT);
+                //   UpdateTopics(GlobalVariable.initialTopicOMT);
 
             }
         });
@@ -233,6 +232,7 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS1(DataSignalR data)
     {
+        //GetBufferListSpecificStation("IE-F3-BLO06").Wait(2000);
         UpdateMachineStatus(data, listMachineStatusS1);
         UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
         UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
@@ -259,7 +259,7 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS3(DataSignalR data)
     {
-
+        // GetBufferListSpecificStation("IE-F3-BLO02").Wait(2000);
         UpdateMachineStatus(data, listMachineStatusS3);
         UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
         UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
@@ -409,6 +409,10 @@ public class SignalRDataOMT : MonoBehaviour
             if (index >= 0)
             {
                 productionDataValues[index].text = data.TagValue;
+                if (data.TagId == "EFF")
+                {
+                    GlobalVariable.effective = double.Parse(data.TagValue);
+                }
             }
         }
     }
@@ -554,6 +558,13 @@ public class SignalRDataOMT : MonoBehaviour
     }
 
 
+    public async Task<List<DataSignalR>> GetBufferListSpecificStation(string stationIdSpecific)
+    {
+        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+        var filteredList = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == stationIdSpecific);
+        return tags;
+    }
 
 
     public async Task<List<DataSignalR>> GetBufferList()

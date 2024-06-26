@@ -29,18 +29,29 @@ public class GlobalVariable : MonoBehaviour
     public static List<string> subscribedTopicsOMT = initialTopicOMT;
 
     public static List<string> allTopicOMT = new List<string>
-    {         $"{basedTopicOMT}/IE-F3-BLO06/Extension",
-              $"{basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",
-              $"{basedTopicOMT}/IE-F3-BLO06/Parameter",
-              $"{basedTopicOMT}/IE-F3-BLO06/Status",
-              $"{basedTopicOMT}/IE-F3-BLO01/Extension",
-              $"{basedTopicOMT}/IE-F3-BLO01/Setting",
-              $"{basedTopicOMT}/IE-F3-BLO01/Parameter",
-              $"{basedTopicOMT}/IE-F3-BLO01/Status",
-              $"{basedTopicOMT}/IE-F3-BLO02/Extension",
-              $"{basedTopicOMT}/IE-F3-BLO02/Parameter",
-              $"{basedTopicOMT}/IE-F3-BLO02/Setting",
-              $"{basedTopicOMT}/IE-F3-BLO02/Status",
+    {
+        //! S1
+        $"{basedTopicOMT}/IE-F3-BLO06/Status/isConnectPLC",      //? S1 Connection PLC
+        $"{basedTopicOMT}/IE-F3-BLO06/Status/machineStatus",     //? S1 Machine Status
+        $"{basedTopicOMT}/IE-F3-BLO06/Extension",                //? S1 I/O
+        $"{basedTopicOMT}/IE-F3-BLO06/Parameter",                //? S1 Production Data,S1 Error, S1 End Error
+        $"{basedTopicOMT}/IE-F3-BLO06/Setting/Setting",          //? S1 Time Setting
+        $"{basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",    //? S1 Enable
+        $"{basedTopicOMT}/IE-F3-BLO06/ChemicalDetection" ,
+        //! S2
+        $"{basedTopicOMT}/IE-F3-BLO01/Status/isConnectPLC",      //? S2 Connection PLC
+        $"{basedTopicOMT}/IE-F3-BLO01/Status/machineStatus",     //? S2 Machine Status
+        $"{basedTopicOMT}/IE-F3-BLO01/Parameter",                //? S2 Production Data,S2 Error, S2 End Error
+        $"{basedTopicOMT}/IE-F3-BLO01/Setting/Setting",          //? S2 Time Setting
+        $"{basedTopicOMT}/IE-F3-BLO01/Setting/StationStatus",    //? S2 Enable
+        $"{basedTopicOMT}/IE-F3-BLO01/Extension",                //? S2 I/O
+        //! S3
+        $"{basedTopicOMT}/IE-F3-BLO02/Status/isConnectPLC",      //? S3Connection PLC
+        $"{basedTopicOMT}/IE-F3-BLO02/Status/machineStatus",     //? S3Machine Status
+        $"{basedTopicOMT}/IE-F3-BLO02/Parameter",                //? S3Production Data,S3Error, S3End Error
+        $"{basedTopicOMT}/IE-F3-BLO02/Setting/Setting",          //? S3Time Setting
+        $"{basedTopicOMT}/IE-F3-BLO02/Setting/StationStatus",    //? S3Enable
+        $"{basedTopicOMT}/IE-F3-BLO02/Extension",                //? S3I/O
     };
     public static bool networkConnected = false;
     public static bool serverConnected = false;

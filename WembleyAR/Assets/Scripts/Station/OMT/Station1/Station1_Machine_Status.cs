@@ -8,6 +8,7 @@ public class Station1_Machine_Status : MonoBehaviour
     List<string> topic = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Status/machineStatus",
+       
           };
     void Awake()
     {

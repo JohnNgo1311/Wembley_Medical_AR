@@ -12,7 +12,7 @@ public class EfficiencySlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         effSlider.GetComponent<Slider>().value = (float)GlobalVariable.effective;
     }
 
