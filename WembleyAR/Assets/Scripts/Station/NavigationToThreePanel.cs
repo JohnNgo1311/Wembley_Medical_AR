@@ -5,7 +5,7 @@ using UnityEngine;
 public class NavigationToThreePanel : MonoBehaviour
 {
     public GameObject initialScreen, destinationScreen_1, destinationScreen_2, destinationScreen_3;
-    
+
     //  public string tagName;
     void Start()
     {
@@ -28,7 +28,6 @@ public class NavigationToThreePanel : MonoBehaviour
 
          }*/
     }
-
     public void NavigateToScreen_1()
     {
         initialScreen.SetActive(false);

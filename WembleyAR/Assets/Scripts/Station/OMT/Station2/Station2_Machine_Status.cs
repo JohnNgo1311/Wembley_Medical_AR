@@ -12,9 +12,11 @@ public class Station2_Machine_Status : MonoBehaviour
     void Awake()
     {
         signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
+
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topic);
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);

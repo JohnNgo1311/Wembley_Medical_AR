@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class SignalRDataOMT : MonoBehaviour
 {
@@ -49,24 +50,35 @@ public class SignalRDataOMT : MonoBehaviour
     public GameObject[] connectionStatusFrameS3;
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
-
+    private bool isInitialized = false;
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
 
     //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
     void Start()
     {   //! Kết nối đến server
-        Debug.Log("Chạy Start");
-        StartConnectWebApi();
-        InitializeDataHandlers();
+        if (!isInitialized)
+        {
+            Debug.Log("Chạy Start");
+            IsInternetAvailable();
+            StartConnectWebApi();
+            InitializeDataHandlers();
+            isInitialized = true;
+        }
     }
 
-    void OnDestroy()
+
+    void OnDestroy() //! OnDestroy được gọi khi thoát Scence
     {
-        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
-        GlobalVariable.hubConnection.StopAsync();
-        //? StopAsync là ngắt kết nối server
-
+        if (GlobalVariable.hubConnection != null)
+        {
+            GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
+            GlobalVariable.hubConnection.StopAsync();
+            /* GlobalVariable.hubConnection.Remove("OnTagChanged");
+             GlobalVariable.hubConnection.Remove("LogInfoMessage");
+             GlobalVariable.hubConnection = null;*/
+        }
     }
+
 
     private void InitializeDataHandlers()
     {
@@ -79,22 +91,28 @@ public class SignalRDataOMT : MonoBehaviour
         };
 
     }
+    private void Update()
+    {
 
-    private async void StartConnectWebApi()
-    {    //? Kết nối với server
+    }
+    private void StartConnectWebApi()
+    {
+        //? Kết nối với server
         if (GlobalVariable.hubConnection == null)
         {
             GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).Build();
-            GlobalVariable.isConnecting = true;
-
+            Debug.Log("CreateHubConnection");
+            //  GlobalVariable.isConnecting = true;
         }
         //? Cập nhật thay đổi
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
         {
+            Debug.Log("OnTagChanged" + str);
             var data = JsonConvert.DeserializeObject<DataSignalR>(str);
             //  Debug.Log("$$" + str);
             if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
             {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
+                Debug.Log("$$" + "Handler");
                 handler(data);
             }
         }
@@ -107,104 +125,121 @@ public class SignalRDataOMT : MonoBehaviour
                 Debug.Log("Connected");
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
+                GlobalVariable.errorServerConnected = false;
                 /*await GetBuffer("errorStatus", "S1");
                   await GetBuffer("errorStatus", "S2");
                   await GetBuffer("errorStatus", "S3");*/
                 // Inside StartConnectWebApi()
-                var listInitialData = await GetBufferList();
+                //?   var listInitialData = await GetBufferList();
                 // Await the completion of GetBufferList()
-                UpdateTopics(GlobalVariable.allTopicOMT);
-                foreach (var data in listInitialData)
-                {
-                    if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-                    {
-                        if (!data.TagId.StartsWith("M1"))
-                        {
-                            handler(data);
-                            if (dataHandlers.Any())
-                            {
-                                Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
+                //  UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+                /* foreach (var data in listInitialData)
+                 {
+                     if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+                     {
+                         if (!data.TagId.StartsWith("M1"))
+                         {
+                             handler(data);
+                             if (dataHandlers.Any())
+                             {
+                                 Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
 
-                            }
-                        }
-                    }
-                }
+                             }
+                         }
+                     }
+                 }*/
+                await LoadInitialData();
 
                 //   UpdateTopics(GlobalVariable.initialTopicOMT);
 
             }
         });
-        GlobalVariable.hubConnection.Closed += async (error) =>
-            {
-                Debug.Log($"Connection closed: {error?.Message}");
-                GlobalVariable.serverConnected = false;
-                GlobalVariable.errorServerConnected = false;
-                GlobalVariable.isConnecting = false;
-                await HandleReconnect();
-            };
+        // Gọi phương thức này khi khởi tạo kết nối
 
+        // Đăng ký xử lý khi kết nối bị đóng
+        GlobalVariable.hubConnection.Closed += (error) =>
+         {
+             Debug.Log($"Connection closed: {error?.Message}");
+             GlobalVariable.serverConnected = false;
+             GlobalVariable.errorServerConnected = true;
+             GlobalVariable.isConnecting = false;
+             TryReconnectAsync();
+             return Task.CompletedTask;
+         };
+
+
+        // Đăng ký xử lý khi đang kết nối lại
         GlobalVariable.hubConnection.Reconnecting += (error) =>
         {
             Debug.Log($"Reconnecting: {error?.Message}");
             GlobalVariable.isConnecting = true;
             GlobalVariable.serverConnected = false;
             GlobalVariable.errorServerConnected = false;
-
             return Task.CompletedTask;
         };
 
+        // Đăng ký xử lý khi kết nối lại thành công
         GlobalVariable.hubConnection.Reconnected += (connectionId) =>
         {
             Debug.Log($"Reconnected: {connectionId}");
             GlobalVariable.isConnecting = false;
             GlobalVariable.errorServerConnected = false;
             GlobalVariable.serverConnected = true;
+            // Gọi hàm tải lại dữ liệu khi kết nối lại thành công
+            // LoadInitialData().Wait();
+            // TryReconnectAsync();
+
             return Task.CompletedTask;
         };
+
+        // Thử khởi động kết nối
         try
         {
-            await GlobalVariable.hubConnection.StartAsync().ContinueWith(task =>
-            {  //? Hàm StartAsync để kết nối lên server
-               //? ContinueWith để khi hoàn thành hàm StartAsync thì tiếp tục xử lý phía dưới, trong trường hợp này là để xử lý xem khi connect được và ko được
-                if (task.IsFaulted)
-                {
-                    Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
-                    GlobalVariable.errorServerConnected = true;
-                    GlobalVariable.serverConnected = false;
-                    GlobalVariable.isConnecting = false;
-                }
-                if (task.IsCompletedSuccessfully)
-                {
-                    // GlobalVariable.isConnecting = false;
-                    // GlobalVariable.serverConnected = true;
-                    // GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
-                    // UpdateTopics(GlobalVariable.subscribedTopics);
-                }
+            while (!GlobalVariable.isInternetConnected)
+            {
+                IsInternetAvailable();
+            }
+            if (GlobalVariable.isInternetConnected)
+            {
+                GlobalVariable.hubConnection.StartAsync().ContinueWith(task =>
+                                        {
+                                            if (task.IsFaulted)
+                                            {
+                                                Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
+                                                GlobalVariable.errorServerConnected = true;
+                                                GlobalVariable.serverConnected = false;
+                                                GlobalVariable.isConnecting = false;
+                                            }
+                                            else if (task.IsCompletedSuccessfully)
+                                            {
 
-            });
+                                                // Xử lý khi kết nối thành công (nếu cần)
+                                            }
+                                        });
+            }
+
+
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.Log("Error: " + e.Message);
             throw;
         }
-
-
     }
-    private async Task HandleReconnect()
+    private void TryReconnectAsync()
     {
         while (!GlobalVariable.serverConnected)
         {
             if (IsInternetAvailable())
             {
+                Debug.Log("Reconnecting...");
                 try
                 {
-                    Debug.Log("Reconnecting...");
                     StartConnectWebApi();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Debug.Log(e);
+                    Debug.LogError($"Failed to reconnect: {ex.Message}");
                 }
             }
             else
@@ -212,13 +247,35 @@ public class SignalRDataOMT : MonoBehaviour
                 Debug.Log("No internet connection. Waiting to retry...");
             }
 
-            await Task.Delay(3000); // Random delay before retrying
+        }
+    }
+
+    private async Task LoadInitialData()
+    {
+        // Gọi lại các dữ liệu ban đầu từ server
+        var listInitialData = await GetBufferList();
+        foreach (var data in listInitialData)
+        {
+            if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+            {
+                if (!data.TagId.StartsWith("M1"))
+                {
+                    handler(data);
+                    if (dataHandlers.Any())
+                    {
+                        Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
+                    }
+                }
+            }
         }
     }
 
     private bool IsInternetAvailable()
     {
-        return Application.internetReachability != NetworkReachability.NotReachable;
+        bool isConnected = Application.internetReachability != NetworkReachability.NotReachable;
+        Debug.Log("Internet connection: " + isConnected);
+        GlobalVariable.isInternetConnected = isConnected;
+        return isConnected;
     }
     public void PublishStationIndex(int index)
     {
@@ -232,7 +289,6 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS1(DataSignalR data)
     {
-        //GetBufferListSpecificStation("IE-F3-BLO06").Wait(2000);
         UpdateMachineStatus(data, listMachineStatusS1);
         UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
         UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
@@ -245,7 +301,6 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS2(DataSignalR data)
     {
-
         UpdateMachineStatus(data, listMachineStatusS2);
         UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
         UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
@@ -291,7 +346,7 @@ public class SignalRDataOMT : MonoBehaviour
     {
         if (visionProcessingTags.Contains(data.TagId))
         {
-            Debug.Log("Vision Processing:" + data.TagId + "/" + data.TagValue);
+            // Debug.Log("Vision Processing:" + data.TagId + "/" + data.TagValue);
             int index = visionProcessingTags.IndexOf(data.TagId);
             if (index >= 0)
             {
@@ -305,7 +360,7 @@ public class SignalRDataOMT : MonoBehaviour
     {
         if (settingValueTags.Contains(data.TagId))
         {
-            Debug.Log("Setting:" + data.TagId + ":" + data.TagValue);
+            // Debug.Log("Setting:" + data.TagId + ":" + data.TagValue);
             int index = settingValueTags.IndexOf(data.TagId);
             if (index >= 0)
             {
@@ -319,7 +374,7 @@ public class SignalRDataOMT : MonoBehaviour
     {
         if (enableTags.Contains(data.TagId))
         {
-            Debug.Log("Enable:" + "" + data.StationId + "+" + data.TagId + "+" + data.TagValue);
+            //    Debug.Log("Enable:" + "" + data.StationId + "+" + data.TagId + "+" + data.TagValue);
 
             int index = enableTags.IndexOf(data.TagId);
             if (index >= 0)
@@ -337,7 +392,7 @@ public class SignalRDataOMT : MonoBehaviour
 
         if (data.TagId == "machineStatus")
         {
-            Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
+            // Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
             Color32[] colors = new Color32[]
              {
         new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
@@ -361,23 +416,23 @@ public class SignalRDataOMT : MonoBehaviour
             {
                 listMachineStatus[value].GetComponent<Image>().color = colors[value];
             }
+            if (data.TagValue == null)
+            {
+                listMachineStatus[value].GetComponent<Image>().color = colors[5];
+            }
+
         }
     }
 
 
     void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
     {
-        /*  if (!dataHandlers.Any())
-          {
-              Debug.Log($"{dataHandlers} + aaaaaaa  + {data.TagId} + {data.TagValue}");
-
-          }*/
 
 
         if (data.TagId == "isConnectPLC")
         {
             bool isConnected = int.Parse(data.TagValue) == 1;
-            Debug.Log("PLC Connection: " + isConnected);
+            // Debug.Log("PLC Connection: " + isConnected);
             connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : GlobalVariable.colors[3];
             connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
             if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
@@ -408,10 +463,25 @@ public class SignalRDataOMT : MonoBehaviour
             int index = productionDataTags.IndexOf(data.TagId);
             if (index >= 0)
             {
-                productionDataValues[index].text = data.TagValue;
+                if (data.TagId != "OEE" && data.TagId != "P" && data.TagId != "A" && data.TagId != "Q")
+                {
+                    productionDataValues[index].text = data.TagValue;
+
+
+                }
                 if (data.TagId == "EFF")
                 {
                     GlobalVariable.effective = double.Parse(data.TagValue);
+                }
+                if (data.TagId == "OEE" || data.TagId == "P" || data.TagId == "A" || data.TagId == "Q")
+                {
+                    productionDataValues[index].text = (double.Parse(data.TagValue) * 100).ToString("0.00");
+                    if (data.TagId == "OEE")
+                    {
+                        GlobalVariable.oEEValue = double.Parse(data.TagValue);
+                    }
+                    // Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+
                 }
             }
         }
@@ -427,8 +497,8 @@ public class SignalRDataOMT : MonoBehaviour
             int index = int.Parse(concatenated);
             chemicalValues[index].text = data.TagValue;
             int value = int.Parse(data.TagValue);
-            chemicalFrames[index].gameObject.GetComponent<Image>().color = (value > 20 && value < 70) ? Color.green : Color.red;
-
+            chemicalFrames[index].gameObject.GetComponent<Image>().color = (value > 17 && value < 30) ? Color.green : Color.red;
+            //  Debug.Log("ChemicalDetection: " + data.TagId + " " + data.TagValue);
         }
     }
 
@@ -447,7 +517,7 @@ public class SignalRDataOMT : MonoBehaviour
                     errorName = data.TagValue,
                     time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
-                Debug.Log("Error S1");
+                //  Debug.Log("Error S1");
                 GlobalVariable.errorInfors1.Add(errorInfor);
                 UpdateStationErrorList("S1");
 
@@ -459,7 +529,7 @@ public class SignalRDataOMT : MonoBehaviour
                     errorName = data.TagValue,
                     time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
-                Debug.Log("Error S2");
+                //  Debug.Log("Error S2");
 
                 GlobalVariable.errorInfors2.Add(errorInfor);
                 UpdateStationErrorList("S2");
@@ -472,9 +542,9 @@ public class SignalRDataOMT : MonoBehaviour
                     errorName = data.TagValue,
                     time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
-                Debug.Log("Error S3");
+                // Debug.Log("Error S3");
                 GlobalVariable.errorInfors3.Add(errorInfor);
-                Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                // Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                 UpdateStationErrorList("S3");
 
             }
@@ -483,19 +553,19 @@ public class SignalRDataOMT : MonoBehaviour
         {
             if (stationPrefix.Contains("S1"))
             {
-                Debug.Log("End Error S1");
+                //    Debug.Log("End Error S1");
                 GlobalVariable.errorInfors1.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
                 UpdateStationErrorList(stationPrefix);
 
             }
             else if (stationPrefix.Contains("S2"))
             {
-                Debug.Log("End Error S2");
+                //  Debug.Log("End Error S2");
                 GlobalVariable.errorInfors2.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
             }
             else if (stationPrefix.Contains("S3"))
             {
-                Debug.Log("End Error S3");
+                //   Debug.Log("End Error S3");
                 GlobalVariable.errorInfors3.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
             }
         }
@@ -529,7 +599,7 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors1.Clear();
                 foreach (var tag in filteredList)
                 {
-                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                     var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors1.Add(errorInfor1);
                 }
@@ -539,7 +609,7 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors2.Clear();
                 foreach (var tag in filteredList)
                 {
-                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                     var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors2.Add(errorInfor2);
                 }
@@ -549,7 +619,7 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors3.Clear();
                 foreach (var tag in filteredList)
                 {
-                    Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                     var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors3.Add(errorInfor3);
                 }
@@ -582,7 +652,7 @@ public class SignalRDataOMT : MonoBehaviour
             GlobalVariable.errorInfors1.Clear();
             foreach (var tag in filteredList1)
             {
-                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                 var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                 GlobalVariable.errorInfors1.Add(errorInfor1);
                 await alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
@@ -595,7 +665,7 @@ public class SignalRDataOMT : MonoBehaviour
             GlobalVariable.errorInfors2.Clear();
             foreach (var tag in filteredList2)
             {
-                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                 var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                 GlobalVariable.errorInfors2.Add(errorInfor2);
                 await alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
@@ -608,7 +678,7 @@ public class SignalRDataOMT : MonoBehaviour
             GlobalVariable.errorInfors3.Clear();
             foreach (var tag in filteredList3)
             {
-                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
                 var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
                 GlobalVariable.errorInfors3.Add(errorInfor3);
                 await alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");

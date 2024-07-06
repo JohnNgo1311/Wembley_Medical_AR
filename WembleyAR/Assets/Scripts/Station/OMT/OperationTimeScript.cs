@@ -9,9 +9,9 @@ using System;
 public class OperationTimeScript : MonoBehaviour
 {
     public static List<string> url = new List<string>() {
-        "https://wembleyscadawebappapi.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
-        "https://wembleyscadawebappapi.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO01",
-        "https://wembleyscadawebappapi.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",
+        "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
+        "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO01",
+        "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",
     };
 
     public TMP_Text operationTimeText;
@@ -106,7 +106,7 @@ public class OperationTimeScript : MonoBehaviour
             SetGlobalOperationTime(stationIndex, "00:00:00");
             //   Debug.Log("Lấy Sai time");
         }
-        else if (operationTimeOff.CompareTo(operationTimeOff) >= 0)
+        else if (operationTimeOn.CompareTo(operationTimeOff) >= 0)
         {
             TimeSpan operationDuration = operationTimeActive - operationTimeOn;
             SetGlobalOperationTime(stationIndex, operationDuration.ToString(@"hh\:mm\:ss"));

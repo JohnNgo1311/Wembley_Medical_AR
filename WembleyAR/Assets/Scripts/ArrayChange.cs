@@ -5,6 +5,9 @@ using UnityEngine;
 public class ArrayChange : MonoBehaviour
 {
     public GameObject[] stepPanel;
+    public string tagName1;
+    public string tagName2;
+
     private int index;
     // Start is called before the first frame update
     void Start()
@@ -15,25 +18,47 @@ public class ArrayChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (index >= 8)
+        if (Input.GetMouseButtonDown(0))
         {
-            index = 8;
-        }
-        if (index < 0)
-        {
-            index = 0;
-        }
-        if (index == 0)
-            for (int i = 0; i < stepPanel.Length; i++)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName1))
             {
-                stepPanel[i].gameObject.SetActive(false);
-                stepPanel[0].gameObject.SetActive(true);
+
+                next();
+
             }
+            if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName2))
+            {
+                previous();
+            }
+
+
+            if (index >= 8)
+            {
+                index = 8;
+            }
+            if (index < 0)
+            {
+                index = 0;
+            }
+            if (index == 0)
+                for (int i = 0; i < stepPanel.Length; i++)
+                {
+                    stepPanel[i].gameObject.SetActive(false);
+                    stepPanel[0].gameObject.SetActive(true);
+                }
+        }
+
+
+
+
+
 
 
     }
     //! Next_Arrow_Btn
-    public void next()
+    private void next()
     {
         //? Mỗi lần nhấn thì index tăng 1
         if (index <= 6) index += 1; // index = index +1        
@@ -45,7 +70,7 @@ public class ArrayChange : MonoBehaviour
         //   Debug.Log(index);
     }
     //! Previous_Arrow_Btn
-    public void previous()
+    private void previous()
     {
         //? Mỗi lần nhấn thì index giảm 1
         if (index >= 1) index -= 1; // index = index -11

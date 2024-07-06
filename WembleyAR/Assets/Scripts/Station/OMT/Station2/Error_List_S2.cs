@@ -13,10 +13,12 @@ public class Error_List_S2 : MonoBehaviour
     void Awake()
     {
         signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
         //  GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
+
         signalR.UpdateTopics(topicStation2);
         //  signalR.PublishStationIndex(1);
         //  Debug.Log(GlobalVariable.subscribedTopicsOMT);

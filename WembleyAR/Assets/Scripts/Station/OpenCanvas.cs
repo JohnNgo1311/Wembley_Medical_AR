@@ -8,6 +8,7 @@ public class OpenCanvas : MonoBehaviour
     public GameObject homeScreen;
     public string tagName;
     bool isShowCanvas = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,11 +47,15 @@ public class OpenCanvas : MonoBehaviour
         targetCanvas.SetActive(true);
         arrowClose.SetActive(true);
         arrowOpen.SetActive(false);
+
+
     }
     void onCloseCanvas()
     {
         targetCanvas.SetActive(false);
         arrowClose.SetActive(false);
         arrowOpen.SetActive(true);
+
+
     }
 }

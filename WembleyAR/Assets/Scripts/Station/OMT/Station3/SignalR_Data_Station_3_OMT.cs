@@ -11,9 +11,11 @@ public class SignalR_Data_Station_3_OMT : MonoBehaviour
     void Awake()
     {
         signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+
     }
     void OnEnable()
     {
+
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation3);
         //  Debug.Log("SignalR_Data_Station_3_OMT OnEnable");
@@ -26,6 +28,5 @@ public class SignalR_Data_Station_3_OMT : MonoBehaviour
     {
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-
     }
 }

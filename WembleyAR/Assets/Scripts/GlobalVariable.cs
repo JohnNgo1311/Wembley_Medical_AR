@@ -9,7 +9,7 @@ using UnityEngine;
 public class GlobalVariable : MonoBehaviour
 {   //! Phần này chỉ liên quan SignalR
     public static HubConnection hubConnection;
-    public static string url = "https://wembleyscadawebappapi.azurewebsites.net/NotificationHub";
+    public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub";
 
     public static string basedTopic = "HCM/IE-F2-HCA01/Metric";
     //! Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
@@ -58,6 +58,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool isConnecting = false;
     public static bool errorServerConnected = false;
 
+    public static bool isInternetConnected = false;
 
 
 
@@ -126,6 +127,7 @@ public class GlobalVariable : MonoBehaviour
     public static int badProductCount = 0;
     public static string operationTime = "00:00:00";
     public static double effective = 0;
+    public static double oEEValue = 0.0;
     public static int[] goodProductCountTR = new int[4];
     public static int[] badProductCountTR = new int[4];
     public static int[] productCountTR = new int[4];
@@ -157,9 +159,13 @@ public class GlobalVariable : MonoBehaviour
     "S1_PLASTIC_TRAYS_QTY",
     "productCountRaw",
     "goodProductRaw",
-    "errorProductRaw" ,
+    "errorProductRaw",
     "EFF",
     "S1_HEATING_TEMP",
+    "P",
+    "A",
+    "Q",
+    "OEE"
   //  "S1_CURRENT_LEVEL_AUTH",
    // "S1_CURRENT_ID_AUTH",
    // "S1_CYCLE_TIME"
@@ -252,6 +258,45 @@ public class GlobalVariable : MonoBehaviour
     public static List<ErrorInfor> errorInfors2 = new List<ErrorInfor>();
 
     public static List<ErrorInfor> errorInfors3 = new List<ErrorInfor>();
+
+    public static GameObject alarmScriptS1;
+    public static GameObject alarmScriptS2;
+    public static GameObject alarmScriptS3;
+
+    public static GameObject[] inputCheckS1;
+    public static GameObject[] outputCheckS1;
+    public static GameObject[] inputCheckS2;
+    public static GameObject[] outputCheckS2;
+    public static GameObject[] inputCheckS3;
+    public static GameObject[] outputCheckS3;
+    public static TMP_Text[] productionDataS1;
+    public static TMP_Text[] productionDataS2;
+
+    public static TMP_Text[] productionDataS3;
+
+    public static TMP_Text[] visionProcessingValuesS1;
+    public static TMP_Text[] visionProcessingValuesS2;
+    public static TMP_Text[] enableValuesS1;
+    public static TMP_Text[] enableValuesS2;
+    public static GameObject[] enableFrameS1;
+    public static GameObject[] enableFrameS2;
+    public static TMP_Text[] enableValuesS3;
+    public static TMP_Text[] visionProcessingValuesS3;
+    public static GameObject[] enableFrameS3;
+    public static TMP_Text[] ChemicalDetectionValue;
+    public static GameObject[] ChemicalDetectionFrameValue;
+    public static GameObject[] listMachineStatusS1;
+    public static GameObject[] listMachineStatusS2;
+    public static GameObject[] listMachineStatusS3;
+
+    public static TMP_Text[] connectionStatusValueS1;
+    public static TMP_Text[] connectionStatusValueS2;
+    public static TMP_Text[] connectionStatusValueS3;
+    public static GameObject[] connectionStatusFrameS1;
+    public static GameObject[] connectionStatusFrameS2;
+    public static GameObject[] connectionStatusFrameS3;
+    public static TMP_Text[] settingValuesS2;
+    public static TMP_Text[] settingValuesS3;
 
 
 }

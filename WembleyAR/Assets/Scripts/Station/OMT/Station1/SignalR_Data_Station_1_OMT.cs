@@ -13,9 +13,11 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
     void Awake()
     {
         signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
+
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation1);
         //  Debug.Log("SignalR_Data_Station_1_OMT OnEnable");
@@ -31,6 +33,5 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
     {
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //   signalR.PublishStationIndex(0);
     }
 }

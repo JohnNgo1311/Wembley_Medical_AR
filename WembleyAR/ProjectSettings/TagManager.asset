@@ -96,6 +96,8 @@ TagManager:
   - Connection_Status_Btn_S1
   - Connection_Status_Btn_S2
   - Connection_Status_Btn_S3
+  - manualArrowNext
+  - manualArrowPrevious
   layers:
   - Default
   - TransparentFX

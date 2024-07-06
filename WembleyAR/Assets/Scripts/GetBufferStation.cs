@@ -47,7 +47,6 @@ public class GetBufferStation : MonoBehaviour
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
     public string stationIdSpecific;
-    private Dictionary<string, Action<DataSignalR>> dataHandlers;
 
     void OnEnable()
     {
@@ -271,8 +270,23 @@ public class GetBufferStation : MonoBehaviour
             int index = productionDataTags.IndexOf(data.TagId);
             if (index >= 0)
             {
-                productionDataValues[index].text = data.TagValue;
+
+                if (data.TagId != "OEE" && data.TagId != "P" && data.TagId != "A" && data.TagId != "Q")
+                {
+                    productionDataValues[index].text = data.TagValue;
+
+                }
+                if (data.TagId == "OEE" || data.TagId == "P" || data.TagId == "A" || data.TagId == "Q")
+                {
+                    Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+                    productionDataValues[index].text = (double.Parse(data.TagValue) * 100).ToString("0.00");
+                }
+                if (data.TagId == "EFF")
+                {
+                    GlobalVariable.effective = double.Parse(data.TagValue);
+                }
             }
+
         }
     }
 
@@ -300,7 +314,7 @@ public class GetBufferStation : MonoBehaviour
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
-        return tags.Where(data => data.StationId == stationIdSpecific).ToList();
+        return tags.Where(data => data.StationId == stationIdSpecific && !data.TagId.StartsWith("M1")).ToList();
     }
 
 
