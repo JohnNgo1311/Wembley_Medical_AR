@@ -18,6 +18,7 @@ public class Station1_Motor_Canvas : MonoBehaviour
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
+        GlobalVariable.isInitialize["S1_ProductionData"] = false;
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation1);
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
@@ -27,8 +28,13 @@ public class Station1_Motor_Canvas : MonoBehaviour
 
     void OnDisable()
     {
+        GlobalVariable.isInitialize["S1_ProductionData"] = true;
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
     }
+    private void OnDestroy()
+    {
+        GlobalVariable.isInitialize["S1_ProductionData"] = true;
 
+    }
 }

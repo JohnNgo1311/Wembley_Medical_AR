@@ -52,11 +52,12 @@ public class SignalRDataOMT : MonoBehaviour
     public TMP_Text[] settingValuesS3;
     private bool isInitialized = false;
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
+    private static HashSet<string> processedStrings = new HashSet<string>();
 
     //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
     void Start()
     {   //! Kết nối đến server
-        if (!isInitialized)
+        if (isInitialized == false)
         {
             Debug.Log("Chạy Start");
             IsInternetAvailable();
@@ -107,18 +108,30 @@ public class SignalRDataOMT : MonoBehaviour
         //? Cập nhật thay đổi
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
         {
-            Debug.Log("OnTagChanged" + str);
-            var data = JsonConvert.DeserializeObject<DataSignalR>(str);
-            //  Debug.Log("$$" + str);
-            if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-            {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
-                Debug.Log("$$" + "Handler");
-                handler(data);
+            if (processedStrings.Contains(str))
+            {
+                return; // Nếu đã xử lý, bỏ qua
+            }
+            processedStrings.Add(str); // Thêm vào danh sách đã xử lý
+            foreach (var item in GlobalVariable.isInitialize)
+            {
+                if (item.Value == false)
+                {
+
+                    var data = JsonConvert.DeserializeObject<DataSignalR>(str);
+                    if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+                    {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
+                       // Debug.Log("$$" + "Handler");
+                        Debug.Log("OnTagChanged" + str);
+                        handler(data);
+                        break;
+                    }
+                }
             }
         }
         );
         //? Kết nối thành công
-        GlobalVariable.hubConnection.On<string>("LogInfoMessage", async (str) =>
+        GlobalVariable.hubConnection.On<string>("LogInfoMessage", (str) =>
         {
             if (str.Contains("Connected"))
             {
@@ -148,7 +161,7 @@ public class SignalRDataOMT : MonoBehaviour
                          }
                      }
                  }*/
-                await LoadInitialData();
+                // await LoadInitialData();
 
                 //   UpdateTopics(GlobalVariable.initialTopicOMT);
 

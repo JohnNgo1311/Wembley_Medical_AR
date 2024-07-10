@@ -15,6 +15,8 @@ public class SignalR_Data_Station_3_OMT : MonoBehaviour
     }
     void OnEnable()
     {
+        GlobalVariable.isInitialize["S3_IO"] = false;
+
 
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topicStation3);
@@ -26,7 +28,14 @@ public class SignalR_Data_Station_3_OMT : MonoBehaviour
 
     void OnDisable()
     {
+        GlobalVariable.isInitialize["S3_IO"] = true;
+
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+    }
+    private void OnDestroy()
+    {
+        GlobalVariable.isInitialize["S3_IO"] = true;
+
     }
 }

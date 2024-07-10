@@ -126,8 +126,12 @@ public class GlobalVariable : MonoBehaviour
     public static int goodProductCount = 0;
     public static int badProductCount = 0;
     public static string operationTime = "00:00:00";
-    public static double effective = 0;
+    public static double effective = 0.0;
     public static double oEEValue = 0.0;
+    public static double P = 0.0;
+    public static double A = 0.0;
+    public static double Q = 0.0;
+
     public static int[] goodProductCountTR = new int[4];
     public static int[] badProductCountTR = new int[4];
     public static int[] productCountTR = new int[4];
@@ -249,6 +253,21 @@ public class GlobalVariable : MonoBehaviour
     public static string operationTimeS1;
     public static string operationTimeS2;
     public static string operationTimeS3;
+
+    public static Dictionary<string, bool> isInitialize = new Dictionary<string, bool> {
+    { "S1_IO", true},
+    { "S2_IO", true},
+    { "S3_IO", true},
+    { "S1_Connection", true},
+    { "S2_Connection", true},
+    { "S3_Connection", true},
+    { "S1_ProductionData", true},
+    { "S2_ProductionData", true},
+    { "S3_ProductionData", true},
+    { "S1_MachineStatus", true},
+    { "S2_MachineStatus", true},
+    { "S3_MachineStatus", true},
+    };
 
 
     //? Error

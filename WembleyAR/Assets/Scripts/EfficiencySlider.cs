@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class EfficiencySlider : MonoBehaviour
 {
 
-    public GameObject effSlider;
-    public GameObject oEESlider;
+    public GameObject effSlider, Pslider, Aslider, Qslider, oEESlider;
 
     // Update is called once per frame
     void Update()

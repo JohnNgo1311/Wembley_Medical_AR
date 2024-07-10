@@ -285,6 +285,10 @@ public class GetBufferStation : MonoBehaviour
                 {
                     GlobalVariable.effective = double.Parse(data.TagValue);
                 }
+                if (data.TagId == "OEE")
+                {
+                    GlobalVariable.oEEValue = double.Parse(data.TagValue);
+                }
             }
 
         }

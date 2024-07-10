@@ -16,6 +16,7 @@ public class Station3_Connection_Status : MonoBehaviour
     }
     void OnEnable()
     {   // GlobalVariable.initialTopicOMT đang là []
+        GlobalVariable.isInitialize["S3_Connection"] = false;
 
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topic);
@@ -26,8 +27,15 @@ public class Station3_Connection_Status : MonoBehaviour
 
     void OnDisable()
     {
+        GlobalVariable.isInitialize["S3_Connection"] = true;
+
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         //   signalR.PublishStationIndex(0);
+    }
+    private void OnDestroy()
+    {
+        GlobalVariable.isInitialize["S3_Connection"] = true;
+
     }
 }

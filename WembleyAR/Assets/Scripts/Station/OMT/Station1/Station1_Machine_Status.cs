@@ -18,6 +18,8 @@ public class Station1_Machine_Status : MonoBehaviour
 
     void OnEnable()
     {
+        GlobalVariable.isInitialize["S1_MachineStatus"] = false;
+
         // GlobalVariable.initialTopicOMT đang là []
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         GlobalVariable.subscribedTopicsOMT.AddRange(topic);
@@ -28,8 +30,13 @@ public class Station1_Machine_Status : MonoBehaviour
 
     void OnDisable()
     {
+        GlobalVariable.isInitialize["S1_MachineStatus"] = true;
         GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
         signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         // Xóa GameObject này khi OnDisable được gọi
+    }
+    private void OnDestroy()
+    {
+        GlobalVariable.isInitialize["S1_MachineStatus"] = true;
     }
 }
