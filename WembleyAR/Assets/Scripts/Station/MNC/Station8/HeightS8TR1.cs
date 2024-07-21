@@ -19,6 +19,12 @@ public class HeightS8TR1 : MonoBehaviour
 
     void Start()
     {
+        minText.SetActive(false);
+        maxText.SetActive(false);
+    }
+    void Update()
+    {
+
         //get API
         offsetHeight = GlobalVariable.S8_offset_1;
         minHeight = GlobalVariable.S8_min_1;
@@ -26,8 +32,6 @@ public class HeightS8TR1 : MonoBehaviour
         // measuredHeight = 21.12f;
         //tắt cho chắc
 
-        minText.SetActive(false);
-        maxText.SetActive(false);
         // lấy chiều cao của Slider 
         barHeight = highLimit.GetComponent<RectTransform>().anchoredPosition.y;
         // lấy hình ảnh của heightBar
@@ -37,11 +41,6 @@ public class HeightS8TR1 : MonoBehaviour
         offsetValueText.text = offsetHeight.ToString("F2");
 
         SetUpSlider(slider, offsetHeight, minHeight, maxHeight, minText, maxText, offsetValueText, minValueText, maxValueText);
-    }
-    void Update()
-    {
-        minHeight = GlobalVariable.S8_min_1;
-        maxHeight = GlobalVariable.S8_max_1;
         double measuredHeight = GlobalVariable.S8_measured_1;
         double currentHeight = GlobalVariable.S8_current_1;
         currentValueText.text = currentHeight.ToString("F2");

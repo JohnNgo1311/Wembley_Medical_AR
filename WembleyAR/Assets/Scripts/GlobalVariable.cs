@@ -23,8 +23,7 @@ public class GlobalVariable : MonoBehaviour
     public static List<string> subscribedTopics = initialTopic;
     public static List<string> allTopic = new List<string>
     {
-        $"{basedTopic}/Setting",
-
+        $"{basedTopic}",
     };
 
     //! OMT
@@ -34,7 +33,7 @@ public class GlobalVariable : MonoBehaviour
 
     };
     public static List<string> subscribedTopicsOMT = initialTopicOMT;
-
+    public static bool isUpdatingData = false;
     public static List<string> allTopicOMT = new List<string>
     {
         //! S1

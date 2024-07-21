@@ -76,7 +76,7 @@ public class SignalRData : MonoBehaviour
 
     void OnDestroy()
     {
-        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
+        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string> { });
         GlobalVariable.hubConnection.StopAsync();
         //? StopAsync là ngắt kết nối server
 
@@ -89,7 +89,7 @@ public class SignalRData : MonoBehaviour
         {
             //! Tạo kết nối đến server, gán Url rồi build
             GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url)
-            // .WithAutomaticReconnect()
+            .WithAutomaticReconnect()
             .Build();
             //? hàm Build là để build Hubconnection thôi, không phải kết nối đến server
             GlobalVariable.isConnecting = true;
@@ -98,12 +98,16 @@ public class SignalRData : MonoBehaviour
         GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
         { //?Đăng ký sẵn đến Topic OnTagChanged,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
           //? Chỉ việc đăng ký sẵn, khi Server thực hiện xong hàm nào đó, rồi return dữ liệu cho topic "OnTagChanged" thì phần xử lý phía dưới sẽ chạy
-            Debug.Log("$$" + str);
-            DataSignalR data = JsonConvert.DeserializeObject<DataSignalR>(str);
-            if (data != null)
+            if (GlobalVariable.isUpdatingData)
             {
-                UpdateData(data);
+                Debug.Log("$$" + str);
+                DataSignalR data = JsonConvert.DeserializeObject<DataSignalR>(str);
+                if (data != null)
+                {
+                    UpdateData(data);
+                }
             }
+
         });
 
         //?Đăng ký sẵn đến Topic LogInfoMessage,Topic này sẽ chứa giá trị kiểu dữ liệu String mà trên server quy định sau khi thực hiện hàm nào đó
@@ -113,20 +117,25 @@ public class SignalRData : MonoBehaviour
             {
                 Debug.Log("Connected");
                 //      UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
-                UpdateTopics(GlobalVariable.allTopic);
+                // UpdateTopics(GlobalVariable.allTopic);
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
                 //string a = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
                 var listInitialData = await GetBufferList();
+                var filterList = listInitialData.Where(data => data.StationId == "IE-F2-HCA01");
+                Debug.Log("List Initial Data: " + filterList);
                 //? Khi connect Thành công thì GetBufferList để lấy các dữ liệu lần gần nhất được retain
-                foreach (var data in listInitialData)
+                foreach (var data in filterList)
                 {
                     Debug.Log($"{data.LineId}" + " " + $"{data.StationId}" + " " + $"{data.TagId}" + " " + $"{data.TagValue}");
                     UpdateData(data);
                 }
                 //? await GetBuffer("errorStatus");
                 //?  await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "s1");
+                //UpdateTopics(new List<string> {});
             }
+
+
         });
 
         try
@@ -155,26 +164,26 @@ public class SignalRData : MonoBehaviour
             Debug.Log(e);
             throw;
         }
-        // GlobalVariable.hubConnection.Reconnecting += (exception) =>
-        //     {
+        GlobalVariable.hubConnection.Reconnecting += (exception) =>
+            {
 
-        //         if (exception != null)
-        //         {
-        //             Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + exception.GetBaseException());
-        //             GlobalVariable.errorServerConnected = true;
-        //             GlobalVariable.isConnecting = false;
-        //         }
+                if (exception != null)
+                {
+                    Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + exception.GetBaseException());
+                    GlobalVariable.errorServerConnected = true;
+                    GlobalVariable.isConnecting = false;
+                }
 
-        //         GlobalVariable.isConnecting = true;
-        //         return Task.CompletedTask;
-        //     };
+                GlobalVariable.isConnecting = true;
+                return Task.CompletedTask;
+            };
 
-        // GlobalVariable.hubConnection.Reconnected += (ConnectionId) =>
-        // {
-        //     GlobalVariable.isConnecting = false;
-        //     GlobalVariable.serverConnected = true;
-        //     return Task.CompletedTask;
-        // };
+        GlobalVariable.hubConnection.Reconnected += (ConnectionId) =>
+        {
+            GlobalVariable.isConnecting = false;
+            GlobalVariable.serverConnected = true;
+            return Task.CompletedTask;
+        };
 
 
     }
@@ -269,97 +278,97 @@ public class SignalRData : MonoBehaviour
     void ProcessData(DataSignalR data)
     {
         string tagId = data.TagId;
-        bool value = data.TagValue == "1";
-        int index = int.Parse(tagId.Substring(tagId.LastIndexOf('/') + 1));
+        //?    bool value = data.TagValue == "1";
+        //? int index = int.Parse(tagId.Substring(tagId.LastIndexOf('/') + 1));
         switch (true)
         {  //! I_O
-            case var _ when tagId.Contains("S1/in/"):
-                HandleS1Input(index, value);
-                break;
+            /* case var _ when tagId.Contains("S1/in/"):
+                 HandleS1Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S1/out/"):
-                HandleS1Output(index, value);
-                break;
+             case var _ when tagId.Contains("S1/out/"):
+                 HandleS1Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S2/in/"):
-                HandleS2Input(index, value);
-                break;
+             case var _ when tagId.Contains("S2/in/"):
+                 HandleS2Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S2/out/"):
-                HandleS2Output(index, value);
-                break;
+             case var _ when tagId.Contains("S2/out/"):
+                 HandleS2Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S3/in/"):
-                HandleS3Input(index, value);
-                break;
+             case var _ when tagId.Contains("S3/in/"):
+                 HandleS3Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S3/out/"):
-                HandleS3Output(index, value);
-                break;
+             case var _ when tagId.Contains("S3/out/"):
+                 HandleS3Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S4/in/"):
-                HandleS4Input(index, value);
-                break;
+             case var _ when tagId.Contains("S4/in/"):
+                 HandleS4Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S4/out/"):
-                HandleS4Output(index, value);
-                break;
+             case var _ when tagId.Contains("S4/out/"):
+                 HandleS4Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S5/in/"):
-                HandleS5Input(index, value);
-                break;
+             case var _ when tagId.Contains("S5/in/"):
+                 HandleS5Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S5/out/"):
-                HandleS5Output(index, value);
-                break;
+             case var _ when tagId.Contains("S5/out/"):
+                 HandleS5Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S6/in/"):
-                HandleS6Input(index, value);
-                break;
+             case var _ when tagId.Contains("S6/in/"):
+                 HandleS6Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S6/out/"):
-                HandleS6Output(index, value);
-                break;
+             case var _ when tagId.Contains("S6/out/"):
+                 HandleS6Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S7/in/"):
-                HandleS7Input(index, value);
-                break;
+             case var _ when tagId.Contains("S7/in/"):
+                 HandleS7Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S7/out/"):
-                HandleS7Output(index, value);
-                break;
+             case var _ when tagId.Contains("S7/out/"):
+                 HandleS7Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S10/in/"):
-                HandleS10Input(index, value);
-                break;
+             case var _ when tagId.Contains("S10/in/"):
+                 HandleS10Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S10/out/"):
-                HandleS10Output(index, value);
-                break;
+             case var _ when tagId.Contains("S10/out/"):
+                 HandleS10Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S11/in/"):
-                HandleS11Input(index, value);
-                break;
+             case var _ when tagId.Contains("S11/in/"):
+                 HandleS11Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S11/out/"):
-                HandleS11Output(index, value);
-                break;
+             case var _ when tagId.Contains("S11/out/"):
+                 HandleS11Output(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S12/in/"):
-                HandleS12Input(index, value);
-                break;
+             case var _ when tagId.Contains("S12/in/"):
+                 HandleS12Input(index, value);
+                 break;
 
-            case var _ when tagId.Contains("S12/out/"):
-                HandleS12Output(index, value);
-                break;
-            //! Parameter
-            case var _ when tagId.Contains("S6/parameter/"):
-                HandleS6Parameter(index, data.TagValue);
-                break;
-            case var _ when tagId.Contains("S7/parameter/"):
-                HandleS7Parameter(index, data.TagValue);
-                break;
-
+             case var _ when tagId.Contains("S12/out/"):
+                 HandleS12Output(index, value);
+                 break;
+             //! Parameter
+             case var _ when tagId.Contains("S6/parameter/"):
+                 HandleS6Parameter(index, data.TagValue);
+                 break;
+             case var _ when tagId.Contains("S7/parameter/"):
+                 HandleS7Parameter(index, data.TagValue);
+                 break;
+ */
             case var _ when tagId.Contains("S8"):
                 HandleS8Parameter(tagId, data.TagValue);
                 break;
@@ -598,15 +607,15 @@ public class SignalRData : MonoBehaviour
                     case "endErrorStatus":
                         //linQ
                         GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
-                        /* errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                         for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
-                         {
-                             if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
-                             {
-                                 GlobalVariable.errorInfors.RemoveAt(i);
-                                 break;
-                             }
-                        /* }*/
+                        errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                        for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
+                        {
+                            if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
+                            {
+                                GlobalVariable.errorInfors.RemoveAt(i);
+                                break;
+                            }
+                        }
                         alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "S1");
                         break;
                     default:
@@ -639,11 +648,10 @@ public class SignalRData : MonoBehaviour
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất. đó là một String rất dài nên cần xử lý phía dưới
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response).Where(data => data.StationId != "IE-F3-BLO02" && data.StationId != "IE-F3-BLO06" && data.StationId != "IE-F3-BLO01");
+        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
         //? convert sang kiểu dữ liệu là List<DataSignalR>
-
         if (tags is null) return new List<DataSignalR>();
-        return (List<DataSignalR>)tags;
+        return tags;
 
     }
 }

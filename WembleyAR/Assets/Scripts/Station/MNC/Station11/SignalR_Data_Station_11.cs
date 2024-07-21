@@ -6,22 +6,22 @@ public class SignalR_Data_Station_11 : MonoBehaviour
 {
     SignalRData signalR;
     List<string> topicStation11 = new List<string>  {
-         $"{GlobalVariable.basedTopic}/S11/" ,
+         $"{GlobalVariable.basedTopic}"
           };
     void Awake()
     {
-        signalR = GameObject.FindWithTag("signalR").GetComponent<SignalRData>();
+      //  signalR = GameObject.FindWithTag("signalR").GetComponent<SignalRData>();
     }
     void OnEnable()
     {
         GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
         GlobalVariable.subscribedTopics.AddRange(topicStation11);
-        signalR.UpdateTopics(GlobalVariable.subscribedTopics);
+    //    signalR.UpdateTopics(GlobalVariable.subscribedTopics);
     }
 
     void OnDisable()
     {
         GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
-        signalR.UpdateTopics(GlobalVariable.subscribedTopics);
+      //  signalR.UpdateTopics(GlobalVariable.subscribedTopics);
     }
 }
