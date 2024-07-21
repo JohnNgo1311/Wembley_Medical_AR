@@ -10,7 +10,6 @@ public class HeightS8TR1 : MonoBehaviour
     // Start is called before the first frame update
     public GameObject highLimit;
     public GameObject slider, minText, maxText; //? 2 text này là GameObject chứa ghi chú và value
-
     public TMP_Text minValueText, maxValueText, currentValueText, offsetValueText, measuredValueText;
     public GameObject valueBar;
     Image valueBarImg;
@@ -41,6 +40,8 @@ public class HeightS8TR1 : MonoBehaviour
     }
     void Update()
     {
+        minHeight = GlobalVariable.S8_min_1;
+        maxHeight = GlobalVariable.S8_max_1;
         double measuredHeight = GlobalVariable.S8_measured_1;
         double currentHeight = GlobalVariable.S8_current_1;
         currentValueText.text = currentHeight.ToString("F2");

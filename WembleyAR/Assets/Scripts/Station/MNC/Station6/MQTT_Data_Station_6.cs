@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class MQTT_Data_Station_6 : MonoBehaviour
 {
     MQTT mqtt;
@@ -39,3 +39,4 @@ public class MQTT_Data_Station_6 : MonoBehaviour
     }
 }
 
+*/

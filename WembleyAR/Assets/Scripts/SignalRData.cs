@@ -30,14 +30,10 @@ public class SignalRData : MonoBehaviour
     public GameObject[] inputCheckS12;
     public GameObject[] outputCheckS12;
     //public GameObject[] S1SensorCheck;
-
-
     public GameObject[] S3SensorCheck_2;
-
     // public GameObject[] S5SensorCheck_1;
     public GameObject[] S5SensorCheck_2;
     public GameObject[] S10SensorCheck;
-
     //? S1
     public GameObject S1_Horz_Snr_On, S1_Horz_Snr_Off, S1_Vert_Up, S1_Vert_Dn, S1_Horz_Fwd, S1_Horz_Rev, S1_Gripper_On, S1_Gripper_Off;
     public GameObject[] S1_SensorCheck;
@@ -115,7 +111,9 @@ public class SignalRData : MonoBehaviour
         {
             if (str.Contains("Connected"))
             {
-                UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
+                Debug.Log("Connected");
+                //      UpdateTopics(GlobalVariable.subscribedTopics); //? Đăng ký đến topic nào luôn luôn phải đăng ký là error và errorStatus
+                UpdateTopics(GlobalVariable.allTopic);
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
                 //string a = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
@@ -123,10 +121,11 @@ public class SignalRData : MonoBehaviour
                 //? Khi connect Thành công thì GetBufferList để lấy các dữ liệu lần gần nhất được retain
                 foreach (var data in listInitialData)
                 {
+                    Debug.Log($"{data.LineId}" + " " + $"{data.StationId}" + " " + $"{data.TagId}" + " " + $"{data.TagValue}");
                     UpdateData(data);
                 }
-                await GetBuffer("errorStatus");
-                await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "s1");
+                //? await GetBuffer("errorStatus");
+                //?  await alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "s1");
             }
         });
 
@@ -192,767 +191,374 @@ public class SignalRData : MonoBehaviour
         //? Gọi hàm UpdateTopics trên Server để Server subscribe đến broker, khi đó dữ liệu sẽ đi về trên AR app
     }
     //! Hàm UpdateData dưới đây là cho MÁY NÚT CHẶN
+
+
+    void HandleS1Input(int index, bool value)
+    {
+        inputCheckS1[index].SetActive(value);
+        GlobalVariable.inputStation1[index] = value;
+        if (index == 0)
+        {
+            S1_Horz_Snr_On.SetActive(value);
+            S1_Horz_Snr_Off.SetActive(!value);
+        }
+        else if (index > 1 && index < 6)
+        {
+            S1_SensorCheck[index - 2].SetActive(value);
+        }
+    }
+
+    void HandleS1Output(int index, bool value)
+    {
+        outputCheckS1[index].SetActive(value);
+        // Handle specific cases
+        SetActiveBasedOnIndex(index, value, S1_Vert_Up, S1_Vert_Dn, S1_Horz_Fwd, S1_Horz_Rev, S1_Gripper_On, S1_Gripper_Off);
+    }
+
+    void HandleS2Input(int index, bool value)
+    {
+        inputCheckS2[index].SetActive(value);
+        if (index == 0)
+        {
+            S2_Horz_Snr_On.SetActive(value);
+            S2_Horz_Snr_Off.SetActive(!value);
+        }
+    }
+
+    void HandleS2Output(int index, bool value)
+    {
+        outputCheckS2[index].SetActive(value);
+        SetActiveBasedOnIndex(index, value, S2_Vert_Up, S2_Vert_Dn, S2_Horz_Fwd, S2_Horz_Rev, S2_Vacuum_On);
+    }
+
+    void HandleS3Input(int index, bool value)
+    {
+        inputCheckS3[index].SetActive(value);
+        if (index > 0 && index < 5)
+        {
+            S3SensorCheck_1[index - 1].SetActive(value);
+        }
+    }
+
+    void HandleS3Output(int index, bool value)
+    {
+        outputCheckS3[index].SetActive(value);
+        if (index % 2 == 1)
+        {
+            S3_Press_Dn[(index - 1) / 2].SetActive(value);
+        }
+        else if (index == 8 && value)
+        {
+            S3_Hold_Fwd.SetActive(true);
+        }
+        else if (index == 9 && !value)
+        {
+            S3_Hold_Fwd.SetActive(false);
+        }
+    }
+
+    void HandleS4Input(int index, bool value)
+    {
+        inputCheckS4[index].SetActive(value);
+        if (index == 0)
+        {
+            S4_Horz_Snr_On.SetActive(value);
+            S4_Horz_Snr_Off.SetActive(!value);
+        }
+    }
+    void ProcessData(DataSignalR data)
+    {
+        string tagId = data.TagId;
+        bool value = data.TagValue == "1";
+        int index = int.Parse(tagId.Substring(tagId.LastIndexOf('/') + 1));
+        switch (true)
+        {  //! I_O
+            case var _ when tagId.Contains("S1/in/"):
+                HandleS1Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S1/out/"):
+                HandleS1Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S2/in/"):
+                HandleS2Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S2/out/"):
+                HandleS2Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S3/in/"):
+                HandleS3Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S3/out/"):
+                HandleS3Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S4/in/"):
+                HandleS4Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S4/out/"):
+                HandleS4Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S5/in/"):
+                HandleS5Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S5/out/"):
+                HandleS5Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S6/in/"):
+                HandleS6Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S6/out/"):
+                HandleS6Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S7/in/"):
+                HandleS7Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S7/out/"):
+                HandleS7Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S10/in/"):
+                HandleS10Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S10/out/"):
+                HandleS10Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S11/in/"):
+                HandleS11Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S11/out/"):
+                HandleS11Output(index, value);
+                break;
+
+            case var _ when tagId.Contains("S12/in/"):
+                HandleS12Input(index, value);
+                break;
+
+            case var _ when tagId.Contains("S12/out/"):
+                HandleS12Output(index, value);
+                break;
+            //! Parameter
+            case var _ when tagId.Contains("S6/parameter/"):
+                HandleS6Parameter(index, data.TagValue);
+                break;
+            case var _ when tagId.Contains("S7/parameter/"):
+                HandleS7Parameter(index, data.TagValue);
+                break;
+
+            case var _ when tagId.Contains("S8"):
+                HandleS8Parameter(tagId, data.TagValue);
+                break;
+
+            case var _ when tagId.Contains("S9"):
+                HandleS9Parameter(tagId, data.TagValue);
+                break;
+        }
+    }
+
+    void HandleS4Output(int index, bool value)
+    {
+        outputCheckS4[index].SetActive(value);
+        SetActiveBasedOnIndex(index, value, S4_Vert_Up, S4_Vert_Dn, S4_Horz_Fwd, S4_Horz_Rev, S4_GripperOn[index]);
+    }
+
+    void HandleS5Input(int index, bool value)
+    {
+        inputCheckS5[index].SetActive(value);
+        if (index > 0)
+        {
+            S5SensorCheck_1[index - 1].SetActive(value);
+        }
+    }
+
+    void HandleS5Output(int index, bool value)
+    {
+        outputCheckS5[index].SetActive(value);
+        if (index == 1 && value)
+        {
+            S5_Slide_Dn.SetActive(true);
+        }
+        else if (index == 0 && !value)
+        {
+            S5_Slide_Dn.SetActive(false);
+        }
+    }
+
+    void HandleS6Input(int index, bool value)
+    {
+        inputCheckS6[index].SetActive(value);
+    }
+
+    void HandleS6Output(int index, bool value)
+    {
+        outputCheckS6[index].SetActive(value);
+    }
+
+    void HandleS6Parameter(int index, string value)
+    {
+        S6_OperationParameter[index].text = value;
+    }
+
+    void HandleS7Input(int index, bool value)
+    {
+        inputCheckS7[index].SetActive(value);
+    }
+
+    void HandleS7Output(int index, bool value)
+    {
+        outputCheckS7[index].SetActive(value);
+    }
+
+    void HandleS7Parameter(int index, string value)
+    {
+        S7_OperationParameter[index].text = value;
+    }
+
+    void HandleS8Parameter(string tagId, string value)
+    {
+        if (tagId.Contains("MAXIMUM_HEIGHT_VALUE_TR1")) GlobalVariable.S8_max_1 = double.Parse(value);
+        if (tagId.Contains("MINIMUN_HEIGHT_VALUE_TR1")) GlobalVariable.S8_min_1 = double.Parse(value);
+        if (tagId.Contains("CURRENT_HEIGHT_TR1")) GlobalVariable.S8_current_1 = double.Parse(value);
+        if (tagId.Contains("TOTAL_HEIGHT_TR1")) GlobalVariable.S8_measured_1 = double.Parse(value);
+        if (tagId.Contains("OFF_SET_TR1")) GlobalVariable.S8_offset_1 = double.Parse(value);
+        if (tagId.Contains("MAXIMUM_HEIGHT_VALUE_TR3")) GlobalVariable.S8_max_3 = double.Parse(value);
+        if (tagId.Contains("MINIMUN_HEIGHT_VALUE_TR3")) GlobalVariable.S8_min_3 = double.Parse(value);
+        if (tagId.Contains("CURRENT_HEIGHT_TR3")) GlobalVariable.S8_current_3 = double.Parse(value);
+        if (tagId.Contains("TOTAL_HEIGHT_TR3")) GlobalVariable.S8_measured_3 = double.Parse(value);
+        if (tagId.Contains("OFF_SET_TR3")) GlobalVariable.S8_offset_3 = double.Parse(value);
+    }
+
+    void HandleS9Parameter(string tagId, string value)
+    {
+        if (tagId.Contains("MAXIMUM_HEIGHT_VALUE_TR2")) GlobalVariable.S9_max_2 = double.Parse(value);
+        if (tagId.Contains("MINIMUN_HEIGHT_VALUE_TR2")) GlobalVariable.S9_min_2 = double.Parse(value);
+        if (tagId.Contains("CURRENT_HEIGHT_TR2")) GlobalVariable.S9_current_2 = double.Parse(value);
+        if (tagId.Contains("TOTAL_HEIGHT_TR2")) GlobalVariable.S9_measured_2 = double.Parse(value);
+        if (tagId.Contains("OFF_SET_TR2")) GlobalVariable.S9_offset_2 = double.Parse(value);
+        if (tagId.Contains("MAXIMUM_HEIGHT_VALUE_TR4")) GlobalVariable.S9_max_4 = double.Parse(value);
+        if (tagId.Contains("MINIMUN_HEIGHT_VALUE_TR4")) GlobalVariable.S9_min_4 = double.Parse(value);
+        if (tagId.Contains("CURRENT_HEIGHT_TR4")) GlobalVariable.S9_current_4 = double.Parse(value);
+        if (tagId.Contains("TOTAL_HEIGHT_TR4")) GlobalVariable.S9_measured_4 = double.Parse(value);
+        if (tagId.Contains("OFF_SET_TR4")) GlobalVariable.S9_offset_4 = double.Parse(value);
+    }
+
+    void HandleS10Input(int index, bool value)
+    {
+        inputCheckS10[index].SetActive(value);
+    }
+
+    void HandleS10Output(int index, bool value)
+    {
+        outputCheckS10[index].SetActive(value);
+    }
+
+    void HandleS11Input(int index, bool value)
+    {
+        inputCheckS11[index].SetActive(value);
+    }
+
+    void HandleS11Output(int index, bool value)
+    {
+        outputCheckS11[index].SetActive(value);
+    }
+
+    void HandleS12Input(int index, bool value)
+    {
+        inputCheckS12[index].SetActive(value);
+    }
+
+    void HandleS12Output(int index, bool value)
+    {
+        outputCheckS12[index].SetActive(value);
+    }
+
+    void SetActiveBasedOnIndex(int index, bool value, params GameObject[] targets)
+    {
+        if (index >= 0 && index < targets.Length)
+        {
+            targets[index].SetActive(value);
+        }
+    }
     void UpdateData(DataSignalR data)
     {
-        if (data.StationId == "Metric" && data.LineId == "IE-F2-HCA01")
+        if (data.StationId == "IE-F2-HCA01")
         {
-            if (data.TagId.Contains("/"))
+            //?? Xử lý I/O với Height của Station 8 và Station 9 (Setting value)
+            ProcessData(data);
+            //?? Xử lý Checking REJ
+            if (data.TagId.Contains("REJ"))
             {
-
-                //! S1
-                if (data.TagId.Contains("S1/in/"))
+                if (data.TagId.Contains("BOTTOM_CAP_REJ_TR"))
                 {
-
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS1[index].SetActive(value);       //! Dòng này là cho I/O list 
-                    GlobalVariable.inputStation1[index] = value;
-                    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S1_Horz_Snr_On.SetActive(true);
-                            S1_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S1_Horz_Snr_Off.SetActive(true);
-                            S1_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-                    else if (index > 1 && index < 6)
-                    {
-                        S1_SensorCheck[index - 2].SetActive(value);
-                    }
+                    int indx = int.Parse(data.TagId.Remove(0, 17));
+                    GlobalVariable.RejCountS1TR[indx - 1] = int.Parse(data.TagValue);
                 }
-                else if (data.TagId.Contains("S1/out/"))
+                if (data.TagId.Contains("SILICON_PRESENCE_REJ_TR"))
                 {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS1[index].SetActive(value);
-                    //if(index==12) GlobalVariable.outputStation1[index] = value;
-                    if (index == 17 && value)
-                    {
-
-                        S1_Vert_Up.SetActive(true);
-                        S1_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S1_Vert_Dn.SetActive(true);
-                        S1_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 13 && value)
-                    {
-                        S1_Horz_Fwd.SetActive(true);
-                        S1_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 14 && value)
-                    {
-                        S1_Horz_Rev.SetActive(true);
-                        S1_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S1_Gripper_On.SetActive(true);
-                        S1_Gripper_Off.SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S1_Gripper_Off.SetActive(true);
-                        S1_Gripper_On.SetActive(false);
-                    }
+                    int indx = int.Parse(data.TagId.Remove(0, 23));
+                    GlobalVariable.RejCountS3TR[indx - 1] = int.Parse(data.TagValue);
                 }
-                //! S2
-                else if (data.TagId.Contains("S2/in/"))
+                if (data.TagId.Contains("COVER_PRESENCE_REJ_TR"))
                 {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS2[index].SetActive(value);
-
-                    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S2_Horz_Snr_On.SetActive(true);
-                            S2_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S2_Horz_Snr_Off.SetActive(true);
-                            S2_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-                    // else if (index != 0 && index != 1)
-                    // {
-                    //     S2SensorCheck[index - 2].SetActive(value);
-                    // }
-
+                    int indx = int.Parse(data.TagId.Remove(0, 21));
+                    GlobalVariable.RejCountS5TR[indx - 1] = int.Parse(data.TagValue);
                 }
-                else if (data.TagId.Contains("S2/out/"))
+                if (data.TagId.Contains("HEIGHT_CHK_REJ_TR"))
                 {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS2[index].SetActive(value);
-                    if (index == 6)
-                    {
-                        S2_GripperOn[0].SetActive(value);
-
-                    }
-                    else if (index == 7)
-                    {
-                        S2_GripperOn[1].SetActive(value);
-
-                    }
-                    else if (index == 8)
-                    {
-                        S2_GripperOn[2].SetActive(value);
-
-                    }
-                    else if (index == 9)
-                    {
-                        S2_GripperOn[3].SetActive(value);
-                    }
-                    else if (index == 17 && value)
-                    {
-
-                        S2_Vert_Up.SetActive(true);
-                        S2_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S2_Vert_Dn.SetActive(true);
-                        S2_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S2_Horz_Fwd.SetActive(true);
-                        S2_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S2_Horz_Rev.SetActive(true);
-                        S2_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 3)
-                    {
-                        if (value)
-                        {
-                            S2_Vacuum_On.SetActive(true);
-                        }
-                        else
-                        {
-                            S2_Vacuum_On.SetActive(false);
-                        }
-                    }
-
-
-                }
-                //! S3
-                else if (data.TagId.Contains("S3/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS3[index].SetActive(value);
-                    if (index > 0 && index < 5)
-                    {
-                        S3SensorCheck_1[index - 1].SetActive(value);
-                    }
-
-
-                }
-                else if (data.TagId.Contains("S3/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS3[index].SetActive(value);
-                    if (index == 1)
-                    {
-                        S3_Press_Dn[0].SetActive(value);
-
-                    }
-                    else if (index == 3)
-                    {
-                        S3_Press_Dn[1].SetActive(value);
-
-                    }
-                    else if (index == 5)
-                    {
-                        S3_Press_Dn[2].SetActive(value);
-
-                    }
-                    else if (index == 7)
-                    {
-                        S3_Press_Dn[3].SetActive(value);
-                    }
-                    else if (index == 8 && value)
-                    {
-
-                        S3_Hold_Fwd.SetActive(true);
-
-
-                    }
-                    else if (index == 9 && value)
-                    {
-                        S3_Hold_Fwd.SetActive(false);
-
-                    }
-                }
-                //! S4
-                else if (data.TagId.Contains("S4/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS4[index].SetActive(value);
-                    if (index == 0)
-                    {
-                        // Debug.Log("lên");
-                        if (value)
-                        {
-                            S4_Horz_Snr_On.SetActive(true);
-                            S4_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S4_Horz_Snr_Off.SetActive(true);
-                            S4_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-                    // else if (index >= 6 && index <= 9)
-                    // {
-                    //     S4_SensorCheck[index - 6].SetActive(value);
-                    // }
-
-
-                }
-                else if (data.TagId.Contains("S4/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS4[index].SetActive(value);
-                    if (index == 22 && value)
-                    {
-
-                        S4_Vert_Up.SetActive(true);
-                        S4_Vert_Dn.SetActive(false);
-
-                    }
-                    else if (index == 23 && value)
-                    {
-                        S4_Vert_Dn.SetActive(true);
-                        S4_Vert_Up.SetActive(false);
-                    }
-                    else if (index == 13 && value)
-                    {
-                        S4_Horz_Fwd.SetActive(true);
-                        S4_Horz_Rev.SetActive(false);
-                    }
-                    else if (index == 12 && value)
-                    {
-                        S4_Horz_Rev.SetActive(true);
-                        S4_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 14 && value)
-                    {
-                        S4_GripperOn[0].SetActive(true);
-                    }
-                    else if (index == 15 && value)
-                    {
-                        S4_GripperOn[0].SetActive(false);
-                    }
-                    else if (index == 16 && value)
-                    {
-                        S4_GripperOn[1].SetActive(true);
-                    }
-                    else if (index == 17 && value)
-                    {
-                        S4_GripperOn[1].SetActive(false);
-                    }
-                    else if (index == 18 && value)
-                    {
-                        S4_GripperOn[2].SetActive(true);
-                    }
-                    else if (index == 19 && value)
-                    {
-                        S4_GripperOn[2].SetActive(false);
-                    }
-                    else if (index == 20 && value)
-                    {
-                        S4_GripperOn[3].SetActive(true);
-                    }
-                    else if (index == 21 && value)
-                    {
-                        S4_GripperOn[3].SetActive(false);
-                    }
-
-                }
-                //! S5
-                else if (data.TagId.Contains("S5/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS5[index].SetActive(value);
-                    if (index > 0)
-                    {
-                        S5SensorCheck_1[index - 1].SetActive(value);
-                    }
-
-                }
-                else if (data.TagId.Contains("S5/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS5[index].SetActive(value);
-                    if (index == 1 && value)
-                    {
-
-                        S5_Slide_Dn.SetActive(true);
-
-
-                    }
-                    else if (index == 0 && value)
-                    {
-                        S5_Slide_Dn.SetActive(false);
-
-                    }
-                }
-                //! S6
-                else if (data.TagId.Contains("S6/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS6[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S6/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS6[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S6/parameter/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 13));
-                    double value = double.Parse(data.TagValue);
-                    S6_OperationParameter[index].text = value.ToString();
-                }
-                //! S7
-                else if (data.TagId.Contains("S7/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 6));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS7[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S7/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS7[index].SetActive(value);
-
-                }
-                else if (data.TagId.Contains("S7/parameter/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 13));
-                    double value = double.Parse(data.TagValue);
-                    S7_OperationParameter[index].text = value.ToString();
-                }
-                //! S8 
-                else if (data.TagId.Contains("S8"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_max_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_min_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_current_1 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_measured_1 = double.Parse(data.TagValue);
-                        //     Debug.Log(GlobalVariable.S8_measured_1);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR1"))
-                    {
-                        GlobalVariable.S8_offset_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_max_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_min_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_current_3 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_measured_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR3"))
-                    {
-                        GlobalVariable.S8_offset_3 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S9
-                else if (data.TagId.Contains("S9"))
-                {
-                    // if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    // {
-                    //     Debug.Log(msg);
-                    //     Debug.Log(double.Parse(data.TagValue));
-
-                    // }
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_max_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_min_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_current_2 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_measured_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR2"))
-                    {
-                        GlobalVariable.S9_offset_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_max_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_min_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_current_4 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_measured_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR4"))
-                    {
-                        GlobalVariable.S9_offset_4 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S10
-                else if (data.TagId.Contains("S10/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS10[index].SetActive(value);
-
-
-                }
-                else if (data.TagId.Contains("S10/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS10[index].SetActive(value);
-                    if (index < 4) S10_AirBlow_On[index].SetActive(value);
-
-
+                    int indx = int.Parse(data.TagId.Remove(0, 17));
+                    GlobalVariable.RejCountS89TR[indx - 1] = int.Parse(data.TagValue);
                 }
 
-                //!- S11
-                else if (data.TagId.Contains("S11/in/"))
+                else if (data.TagId.Contains("LEAK_TEST_CHK_TR"))
                 {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS11[index].SetActive(value);
-                    if (index == 0)
-                    {
-                        if (value)
-                        {
-                            S11_Horz_Snr_On.SetActive(true);
-                            S11_Horz_Snr_Off.SetActive(false);
-                        }
-                        else
-                        {
-                            S11_Horz_Snr_Off.SetActive(true);
-                            S11_Horz_Snr_On.SetActive(false);
-                        }
-                    }
-
+                    int index = int.Parse(data.TagId.Remove(0, 16));
+                    GlobalVariable.RejCountS10TR[index - 2] = int.Parse(data.TagValue);
                 }
-                else if (data.TagId.Contains("S11/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS11[index].SetActive(value);
-                    if (index == 0 && value)
-                    {
-
-                        S11_Horz_Fwd.SetActive(true);
-                        S11_Horz_Rev.SetActive(false);
-
-                    }
-                    else if (index == 1 && value)
-                    {
-                        S11_Horz_Rev.SetActive(true);
-                        S11_Horz_Fwd.SetActive(false);
-                    }
-                    else if (index == 2 && value)
-                    {
-                        S11_GripperOn[0].SetActive(true);
-                    }
-                    else if (index == 3 && value)
-                    {
-                        S11_GripperOn[0].SetActive(false);
-                    }
-                    else if (index == 4 && value)
-                    {
-                        S11_GripperOn[1].SetActive(true);
-                    }
-                    else if (index == 5 && value)
-                    {
-                        S11_GripperOn[1].SetActive(false);
-                    }
-                    else if (index == 6 && value)
-                    {
-                        S11_GripperOn[2].SetActive(true);
-                    }
-                    else if (index == 7 && value)
-                    {
-                        S11_GripperOn[2].SetActive(false);
-                    }
-                    else if (index == 8 && value)
-                    {
-                        S11_GripperOn[3].SetActive(true);
-                    }
-                    else if (index == 9 && value)
-                    {
-                        S11_GripperOn[3].SetActive(false);
-                    }
-                }
-                //! S12
-                else if (data.TagId.Contains("S12/in/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 7));
-                    bool value = data.TagValue == "1" ? true : false;
-                    inputCheckS12[index].SetActive(value);
-                    S12_SensorCheck[index].SetActive(value);
-                }
-                else if (data.TagId.Contains("S12/out/"))
-                {
-                    int index = int.Parse(data.TagId.Remove(0, 8));
-                    bool value = data.TagValue == "1" ? true : false;
-                    outputCheckS12[index].SetActive(value);
-                    if (index == 0 && value)
-                    {
-
-                        S12_Gripper_On.SetActive(true);
-                        S12_Gripper_Off.SetActive(false);
-
-                    }
-                    else if (index == 1 && value)
-                    {
-                        S12_Gripper_Off.SetActive(true);
-                        S12_Gripper_On.SetActive(false);
-                    }
-                }
-            }
-            else if (data.TagId.Contains("HEIGHT"))
-            {
-                if (data.TagId.Contains("S8"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_max_1 = double.Parse(data.TagValue);
-
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR1"))
-                    {
-                        GlobalVariable.S8_min_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_current_1 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR1"))
-                    {
-                        GlobalVariable.S8_measured_1 = double.Parse(data.TagValue);
-                        // Debug.Log(GlobalVariable.S8_measured_1);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR1"))
-                    {
-                        GlobalVariable.S8_offset_1 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_max_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR3"))
-                    {
-                        GlobalVariable.S8_min_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_current_3 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR3"))
-                    {
-                        GlobalVariable.S8_measured_3 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR3"))
-                    {
-                        GlobalVariable.S8_offset_3 = double.Parse(data.TagValue);
-
-                    }
-                }
-                //! S9
-                else if (data.TagId.Contains("S9"))
-                {
-                    if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_max_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR2"))
-                    {
-                        GlobalVariable.S9_min_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_current_2 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR2"))
-                    {
-                        GlobalVariable.S9_measured_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR2"))
-                    {
-                        GlobalVariable.S9_offset_2 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MAXIMUM_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_max_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("MINIMUN_HEIGHT_VALUE_TR4"))
-                    {
-                        GlobalVariable.S9_min_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("CURRENT_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_current_4 = double.Parse(data.TagValue);
-                    }
-                    else if (data.TagId.Contains("TOTAL_HEIGHT_TR4"))
-                    {
-                        GlobalVariable.S9_measured_4 = double.Parse(data.TagValue);
-
-                    }
-                    else if (data.TagId.Contains("OFF_SET_TR4"))
-                    {
-                        GlobalVariable.S9_offset_4 = double.Parse(data.TagValue);
-
-                    }
-                }
-                else if (data.TagId.Contains("REJ"))
-                {
-                    //data.TagId.Contains("HEIGHT_CHK_REJ_TR")
-                    int index = int.Parse(data.TagId.Remove(0, 17));
-                    GlobalVariable.RejCountS89TR[index - 1] = int.Parse(data.TagValue);
-                }
-            }
-
-            else if (data.TagId.Contains("CHECK_PRESSURE_S10_TRACK"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 24)) - 1;
-                bool value = data.TagValue == "1" ? true : false;
-                S10SensorCheck[index].SetActive(value);
-
 
             }
-            else if (data.TagId.Contains("GOOD_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 11));
-                GlobalVariable.goodProductCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("BAD_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 10));
-                GlobalVariable.badProductCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("TOTAL_CNT_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 12));
-                GlobalVariable.productCountTR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("BOTTOM_CAP_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 17));
-                GlobalVariable.RejCountS1TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("SILICON_PRESENCE_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 23));
-                GlobalVariable.RejCountS3TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("COVER_PRESENCE_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 21));
-                GlobalVariable.RejCountS5TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("HEIGHT_CHK_REJ_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 17));
-                GlobalVariable.RejCountS89TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("LEAK_TEST_CHK_TR"))
-            {
-                int index = int.Parse(data.TagId.Remove(0, 16));
-                GlobalVariable.RejCountS10TR[index - 1] = int.Parse(data.TagValue);
-            }
-            else if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
+            if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
             {
                 GlobalVariable.RejCountS10TR[0] = int.Parse(data.TagValue);
             }
 
+            //! Suy nghĩ bỏ cái này 
+            if (data.TagId.Contains("CHECK_PRESSURE_S10_TRACK"))
+            {
+                int index = int.Parse(data.TagId.Remove(0, 24)) - 1;
+                bool value = data.TagValue == "1" ? true : false;
+                S10SensorCheck[index].SetActive(value);
+            }
+
+
+            if (data.TagId.Contains("GOOD_CNT_TR"))
+            {
+                int index = int.Parse(data.TagId.Remove(0, 11));
+                GlobalVariable.goodProductCountTR[index - 1] = int.Parse(data.TagValue);
+            }
+            if (data.TagId.Contains("BAD_CNT_TR"))
+            {
+                int index = int.Parse(data.TagId.Remove(0, 10));
+                GlobalVariable.badProductCountTR[index - 1] = int.Parse(data.TagValue);
+            }
+            if (data.TagId.Contains("TOTAL_CNT_TR"))
+            {
+                int index = int.Parse(data.TagId.Remove(0, 12));
+                GlobalVariable.productCountTR[index - 1] = int.Parse(data.TagValue);
+            }
 
             else
             {
@@ -965,7 +571,7 @@ public class SignalRData : MonoBehaviour
                     case "productCount":
                         GlobalVariable.productCount = int.Parse(data.TagValue);
                         break;
-                    case "goodProductRaw":
+                    case "goodProduct":
                         GlobalVariable.goodProductCount = int.Parse(data.TagValue);
                         break;
                     case "errorProduct":
@@ -974,9 +580,11 @@ public class SignalRData : MonoBehaviour
                     case "EFF":
                         GlobalVariable.effective = double.Parse(data.TagValue);
                         break;
-                    case "operationTimeRaw":
+                    //! OperationTime lấy từ API => Sửa lại
+                    case "operationTime":
                         GlobalVariable.operationTime = data.TagValue;
                         break;
+
                     case "errorStatus":
                         if (data.TagValue != "Wifi disconnected" && GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue) == false)
 
@@ -990,23 +598,23 @@ public class SignalRData : MonoBehaviour
                     case "endErrorStatus":
                         //linQ
                         GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
-                        // errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                        // for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
-                        // {
-                        //     if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
-                        //     {
-                        //         GlobalVariable.errorInfors.RemoveAt(i);
-                        //         break;
-                        //     }
-                        // }
+                        /* errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                         for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
+                         {
+                             if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
+                             {
+                                 GlobalVariable.errorInfors.RemoveAt(i);
+                                 break;
+                             }
+                        /* }*/
                         alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "S1");
                         break;
                     default:
                         break;
                 }
             }
-
         }
+
     }
     public async Task GetBuffer(string tagId)
     {
@@ -1031,11 +639,11 @@ public class SignalRData : MonoBehaviour
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         //? Gọi hàm SendAll trên Server để lấy tất cả các dữ liệu gần nhất. đó là một String rất dài nên cần xử lý phía dưới
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response).Where(data => data.StationId != "IE-F3-BLO02" && data.StationId != "IE-F3-BLO06" && data.StationId != "IE-F3-BLO01");
         //? convert sang kiểu dữ liệu là List<DataSignalR>
 
         if (tags is null) return new List<DataSignalR>();
-        return tags;
+        return (List<DataSignalR>)tags;
 
     }
 }

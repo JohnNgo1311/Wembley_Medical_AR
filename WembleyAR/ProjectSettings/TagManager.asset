@@ -98,6 +98,7 @@ TagManager:
   - Connection_Status_Btn_S3
   - manualArrowNext
   - manualArrowPrevious
+  - S7_Monitor_Return
   layers:
   - Default
   - TransparentFX

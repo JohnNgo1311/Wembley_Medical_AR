@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MQTT_Data_Station_11 : MonoBehaviour
+/*public class MQTT_Data_Station_11 : MonoBehaviour
 {
     MQTT mqtt;
     List<string> topicStation11 = new List<string> {
@@ -33,3 +33,4 @@ public class MQTT_Data_Station_11 : MonoBehaviour
     }
 }
 
+*/

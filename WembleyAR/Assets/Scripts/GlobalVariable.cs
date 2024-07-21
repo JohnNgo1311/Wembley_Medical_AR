@@ -7,20 +7,27 @@ using TMPro;
 using UnityEngine;
 
 public class GlobalVariable : MonoBehaviour
-{   //! Phần này chỉ liên quan SignalR
+{
     public static HubConnection hubConnection;
-    public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub";
+    public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub"; // chung server
 
-    public static string basedTopic = "HCM/IE-F2-HCA01/Metric";
-    //! Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
+    //! OMT
+    public static string basedTopic = "WembleyMedical/HCM/IE-F2-HCA01";
+    //? Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
     public static List<string> initialTopic = new List<string> {
-        $"{basedTopic}/errorStatus" ,
-        $"{basedTopic}/endErrorStatus" ,
+        $"{basedTopic}/errorStatus",
+        $"{basedTopic}/endErrorStatus",
           };
-    //! 2 topic này luôn luôn phải được đăng ký
-    //! initialTopic là List những Topic cần phải đăng ký
+    //? 2 topic này luôn luôn phải được đăng ký
+    //? initialTopic là List những Topic cần phải đăng ký
     public static List<string> subscribedTopics = initialTopic;
+    public static List<string> allTopic = new List<string>
+    {
+        $"{basedTopic}/Setting",
 
+    };
+
+    //! OMT
     public static string basedTopicOMT = "WembleyMedical/BTM";
     public static List<string> initialTopicOMT = new List<string>
     {

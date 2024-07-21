@@ -41,6 +41,8 @@ public class HeightS8TR3 : MonoBehaviour
     }
     void Update()
     {
+        minHeight = GlobalVariable.S8_min_3;
+        maxHeight = GlobalVariable.S8_max_3;
         measuredHeight = GlobalVariable.S8_measured_3;
         currentHeight = GlobalVariable.S8_current_3;
         UpdateHeightValue(measuredHeight, currentHeight);

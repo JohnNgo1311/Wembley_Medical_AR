@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class MQTT_Encoder_Position_Subscribe : MonoBehaviour
 {
     MQTT mqtt;
@@ -25,3 +25,4 @@ public class MQTT_Encoder_Position_Subscribe : MonoBehaviour
     }
 }
 
+*/
