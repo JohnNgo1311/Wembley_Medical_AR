@@ -19,17 +19,13 @@ public class Station1_Motor_Canvas : MonoBehaviour
             signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
 
-        if (signalR == null)
-        {
-            Debug.LogError("SignalRDataOMT component not found!");
-        }
     }
 
     void OnEnable()
     {
         if (signalR != null)
         {
-            GlobalVariable.isInitialize["S1_ProductionData"] = false;
+            //  GlobalVariable.isInitialize["S1_ProductionData"] = false;
             // Chỉ thêm nếu topic chưa được thêm vào trước đó
             foreach (var topic in topicStation1)
             {
@@ -46,7 +42,7 @@ public class Station1_Motor_Canvas : MonoBehaviour
     {
         if (signalR != null)
         {
-            GlobalVariable.isInitialize["S1_ProductionData"] = true;
+            // GlobalVariable.isInitialize["S1_ProductionData"] = true;
             // Xóa chủ đề của Station 1 thay vì xóa toàn bộ danh sách
             foreach (var topic in topicStation1)
             {
@@ -60,6 +56,6 @@ public class Station1_Motor_Canvas : MonoBehaviour
     private void OnDestroy()
     {
         // Không cần kiểm tra signalR ở đây, chỉ đặt trạng thái khởi tạo
-        GlobalVariable.isInitialize["S1_ProductionData"] = true;
+        //  GlobalVariable.isInitialize["S1_ProductionData"] = true;
     }
 }

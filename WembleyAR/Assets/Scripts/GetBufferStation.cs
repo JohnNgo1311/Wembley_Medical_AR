@@ -233,63 +233,73 @@ public class GetBufferStation : MonoBehaviour
 
     void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
     {
-        if (data.TagId == "isConnectPLC")
+        if (data.TagId != "isConnectPLC") return;
+
+        bool isConnected = int.Parse(data.TagValue) == 1;
+        Debug.Log("PLC Connection: " + isConnected);
+        // Update PLC connection status
+        connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : GlobalVariable.colors[3];
+        connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
+        // Determine server connection status
+        Color serverColor;
+        string serverStatus;
+        if (GlobalVariable.errorServerConnected)
         {
-            bool isConnected = int.Parse(data.TagValue) == 1;
-            Debug.Log("PLC Connection: " + isConnected);
-            connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : GlobalVariable.colors[3];
-            connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
-            if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = Color.green;
-                connectStatuValues[1].text = "Server Connection: Connected";
-            }
-            else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = GlobalVariable.colors[3];
-                connectStatuValues[1].text = "Server Connection: Disconnected";
-            }
-            else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = Color.blue;
-                connectStatuValues[1].text = "Server Connection: Connecting";
-            }
-            //  Debug.Log(data.StationId + "" + data.TagId + "" + GlobalVariable.isConnecting + GlobalVariable.serverConnected + GlobalVariable.errorServerConnected);
+            serverColor = GlobalVariable.colors[3];
+            serverStatus = "Server Connection: Disconnected";
+        }
+        else if (GlobalVariable.isConnecting)
+        {
+            serverColor = Color.blue;
+            serverStatus = "Server Connection: Connecting";
+        }
+        else if (GlobalVariable.serverConnected)
+        {
+            serverColor = Color.green;
+            serverStatus = "Server Connection: Connected";
+        }
+        else
+        {
+            serverColor = GlobalVariable.colors[3];
+            serverStatus = "Server Connection: Disconnected";
         }
 
+        // Update server connection status
+        connectStatusFrames[1].GetComponent<Image>().color = serverColor;
+        connectStatuValues[1].text = serverStatus;
     }
 
 
     void UpdateProductionData(DataSignalR data, List<string> productionDataTags, TMP_Text[] productionDataValues)
     {
-        if (productionDataTags.Contains(data.TagId))
+        int index = productionDataTags.IndexOf(data.TagId);
+        if (index < 0) return;
+        double parsedValue = double.Parse(data.TagValue);
+        switch (data.TagId)
         {
-            int index = productionDataTags.IndexOf(data.TagId);
-            if (index >= 0)
-            {
+            case "EFF":
+                GlobalVariable.effective = parsedValue;
+                productionDataValues[index].text = data.TagValue;
+                break;
 
-                if (data.TagId != "OEE" && data.TagId != "P" && data.TagId != "A" && data.TagId != "Q")
-                {
-                    productionDataValues[index].text = data.TagValue;
+            case "OEE":
+                GlobalVariable.oEEValue = parsedValue;
+                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+                break;
 
-                }
-                if (data.TagId == "OEE" || data.TagId == "P" || data.TagId == "A" || data.TagId == "Q")
-                {
-                    Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
-                    productionDataValues[index].text = (double.Parse(data.TagValue) * 100).ToString("0.00");
-                }
-                if (data.TagId == "EFF")
-                {
-                    GlobalVariable.effective = double.Parse(data.TagValue);
-                }
-                if (data.TagId == "OEE")
-                {
-                    GlobalVariable.oEEValue = double.Parse(data.TagValue);
-                }
-            }
-
+            case "P":
+            case "A":
+            case "Q":
+                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+                break;
+            default:
+                productionDataValues[index].text = data.TagValue;
+                break;
         }
     }
+
 
     void UpdateChemicalDetection(DataSignalR data, string prefix, TMP_Text[] chemicalValues, GameObject[] chemicalFrames)
     {

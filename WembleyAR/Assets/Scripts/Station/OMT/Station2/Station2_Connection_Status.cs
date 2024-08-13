@@ -5,37 +5,56 @@ using UnityEngine;
 public class Station2_Connection_Status : MonoBehaviour
 {
     SignalRDataOMT signalR;
-    List<string> topic = new List<string>  {
+    List<string> topicStation2 = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Status/isConnectPLC",
           };
+
     void Awake()
     {
-        signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+        // Nếu chưa được gán qua Inspector, tìm SignalRDataOMT thông qua tag
+        if (signalR == null)
+        {
+            signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
+        }
 
     }
-    void OnEnable()
-    {   // GlobalVariable.initialTopicOMT đang là []
-        GlobalVariable.isInitialize["S2_Connection"] = false;
 
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        GlobalVariable.subscribedTopicsOMT.AddRange(topic);
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //  signalR.PublishStationIndex(1);
-        //    Debug.Log(GlobalVariable.subscribedTopicsOMT);
+    void OnEnable()
+    {
+        if (signalR != null)
+        {
+            //   GlobalVariable.isInitialize["S1_Connection"] = false;
+            // Chỉ thêm nếu topic chưa được thêm vào trước đó
+            foreach (var topic in topicStation2)
+            {
+                if (!GlobalVariable.subscribedTopicsOMT.Contains(topic))
+                {
+                    GlobalVariable.subscribedTopicsOMT.Add(topic);
+                }
+            }
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
 
     void OnDisable()
     {
-        GlobalVariable.isInitialize["S2_Connection"] = true;
+        if (signalR != null)
+        {
+            //  GlobalVariable.isInitialize["S1_Connection"] = true;
+            // Xóa chủ đề của Station 1 thay vì xóa toàn bộ danh sách
+            foreach (var topic in topicStation2)
+            {
+                GlobalVariable.subscribedTopicsOMT.Remove(topic);
+            }
 
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //   signalR.PublishStationIndex(0);
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
+
     private void OnDestroy()
     {
-        GlobalVariable.isInitialize["S2_Connection"] = true;
-
+        // Không cần kiểm tra signalR ở đây, chỉ đặt trạng thái khởi tạo
+        //  GlobalVariable.isInitialize["S1_Connection"] = true;
     }
 }

@@ -5,36 +5,56 @@ using UnityEngine;
 public class Station1_Machine_Status : MonoBehaviour
 {
     SignalRDataOMT signalR;
-    List<string> topic = new List<string>  {
+    List<string> topicStation1 = new List<string>  {
         // GlobalVariable.basedTopicOMT = WembleyMedical/BTM     
         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Status/machineStatus",
     };
-
     void Awake()
     {
-        signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
+        // Nếu chưa được gán qua Inspector, tìm SignalRDataOMT thông qua tag
+        if (signalR == null)
+        {
+            signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
+        }
 
+      
     }
 
     void OnEnable()
     {
-        GlobalVariable.isInitialize["S1_MachineStatus"] = false;
-
-        // GlobalVariable.initialTopicOMT đang là []
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        GlobalVariable.subscribedTopicsOMT.AddRange(topic);
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //    Debug.Log(GlobalVariable.subscribedTopicsOMT);
+        if (signalR != null)
+        {
+            //GlobalVariable.isInitialize["S1_MachineStatus"] = false;
+            // Chỉ thêm nếu topic chưa được thêm vào trước đó
+            foreach (var topic in topicStation1)
+            {
+                if (!GlobalVariable.subscribedTopicsOMT.Contains(topic))
+                {
+                    GlobalVariable.subscribedTopicsOMT.Add(topic);
+                }
+            }
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
 
     void OnDisable()
     {
-        GlobalVariable.isInitialize["S1_MachineStatus"] = true;
-        signalR.UpdateTopics(new List<string>() { });
-        // Xóa GameObject này khi OnDisable được gọi
+        if (signalR != null)
+        {
+            //GlobalVariable.isInitialize["S1_MachineStatus"] = true;
+            // Xóa chủ đề của Station 1 thay vì xóa toàn bộ danh sách
+            foreach (var topic in topicStation1)
+            {
+                GlobalVariable.subscribedTopicsOMT.Remove(topic);
+            }
+
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
+
     private void OnDestroy()
     {
-        GlobalVariable.isInitialize["S1_MachineStatus"] = true;
+        // Không cần kiểm tra signalR ở đây, chỉ đặt trạng thái khởi tạo
+      //  GlobalVariable.isInitialize["S1_MachineStatus"] = true;
     }
 }

@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using System.Linq;
 using Unity.VisualScripting;
 using System.Xml.Serialization;
+using System.Threading;
 
 public class SignalRDataOMT : MonoBehaviour
 {
@@ -100,10 +101,12 @@ public class SignalRDataOMT : MonoBehaviour
                                         handler(data);
                                     }
                                 }
-
                                 );
         }
-        else { }
+        else
+        {
+
+        }
     }
     private void StartConnectWebApi()
     {
@@ -242,24 +245,24 @@ public class SignalRDataOMT : MonoBehaviour
     }
     void HandleStationS1(DataSignalR data)
     {
+        UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
+        UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
+        UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
+        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
         UpdateMachineStatus(data, listMachineStatusS1);
         UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
-        UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
-        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
-        UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
-        UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
         UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
         UpdateListError(data, "S1");
     }
 
     void HandleStationS2(DataSignalR data)
     {
+        UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
+        UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
         UpdateMachineStatus(data, listMachineStatusS2);
         UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
-        UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
-        UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
         UpdateListError(data, "S2");
         UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
 
@@ -267,33 +270,48 @@ public class SignalRDataOMT : MonoBehaviour
 
     void HandleStationS3(DataSignalR data)
     {
-        // GetBufferListSpecificStation("IE-F3-BLO02").Wait(2000);
-        UpdateMachineStatus(data, listMachineStatusS3);
-        UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
         UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
-        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
-        UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
         UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
         UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+        UpdateMachineStatus(data, listMachineStatusS3);
+        UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
+        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+        UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
         UpdateListError(data, "S3");
 
     }
 
     void UpdateIO(DataSignalR data, string stationPrefix, GameObject[] inputChecks, GameObject[] outputChecks)
     {
-        if (data.TagId.Contains($"{stationPrefix}/in/"))
+        string tagId = data.TagId;
+        string tagPrefixIn = $"{stationPrefix}/in/";
+        string tagPrefixOut = $"{stationPrefix}/out/";
+        bool isInput = tagId.StartsWith(tagPrefixIn);
+        bool isOutput = tagId.StartsWith(tagPrefixOut);
+
+        if (isInput || isOutput)
         {
-            int index = int.Parse(data.TagId.Substring($"{stationPrefix}/in/".Length));
+            int index;
             bool value = data.TagValue == "1";
-            inputChecks[index].SetActive(value);
-        }
-        if (data.TagId.Contains($"{stationPrefix}/out/"))
-        {
-            int index = int.Parse(data.TagId.Substring($"{stationPrefix}/out/".Length));
-            bool value = data.TagValue == "1";
-            outputChecks[index].SetActive(value);
+            if (isInput)
+            {
+                index = int.Parse(tagId.Substring(tagPrefixIn.Length));
+                if (index >= 0 && index < inputChecks.Length)
+                {
+                    inputChecks[index].SetActive(value);
+                }
+            }
+            else if (isOutput)
+            {
+                index = int.Parse(tagId.Substring(tagPrefixOut.Length));
+                if (index >= 0 && index < outputChecks.Length)
+                {
+                    outputChecks[index].SetActive(value);
+                }
+            }
         }
     }
+
 
     void UpdateVisionProcessing(DataSignalR data, List<string> visionProcessingTags, TMP_Text[] visionProcessingValues)
     {
@@ -380,65 +398,75 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateConnectionStatus(DataSignalR data, GameObject[] connectStatusFrames, TMP_Text[] connectStatuValues)
     {
+        if (data.TagId != "isConnectPLC") return;
 
+        bool isPLCConnected = int.Parse(data.TagValue) == 1;
+        Debug.Log("PLC Connection: " + isPLCConnected);
 
-        if (data.TagId == "isConnectPLC")
+        // Update PLC connection status
+        connectStatusFrames[0].GetComponent<Image>().color = isPLCConnected ? Color.green : GlobalVariable.colors[3];
+        connectStatuValues[0].text = isPLCConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
+
+        // Determine server connection status
+        Color serverColor;
+        string serverStatus;
+
+        if (GlobalVariable.errorServerConnected)
         {
-            bool isConnected = int.Parse(data.TagValue) == 1;
-            // Debug.Log("PLC Connection: " + isConnected);
-            connectStatusFrames[0].GetComponent<Image>().color = isConnected ? Color.green : GlobalVariable.colors[3];
-            connectStatuValues[0].text = isConnected ? "PLC Connection: Connected" : "PLC Connection: Disconnected";
-            if (GlobalVariable.serverConnected && !GlobalVariable.isConnecting && !GlobalVariable.errorServerConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = Color.green;
-                connectStatuValues[1].text = "Server Connection: Connected";
-            }
-            else if (GlobalVariable.errorServerConnected && !GlobalVariable.isConnecting && !GlobalVariable.serverConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = GlobalVariable.colors[3];
-                connectStatuValues[1].text = "Server Connection: Disconnected";
-            }
-            else if (GlobalVariable.isConnecting && !GlobalVariable.serverConnected && !GlobalVariable.errorServerConnected)
-            {
-                connectStatusFrames[1].GetComponent<Image>().color = Color.blue;
-                connectStatuValues[1].text = "Server Connection: Connecting";
-            }
-            //  Debug.Log(data.StationId + "" + data.TagId + "" + GlobalVariable.isConnecting + GlobalVariable.serverConnected + GlobalVariable.errorServerConnected);
+            serverColor = GlobalVariable.colors[3];
+            serverStatus = "Server Connection: Disconnected";
+        }
+        else if (GlobalVariable.isConnecting)
+        {
+            serverColor = Color.blue;
+            serverStatus = "Server Connection: Connecting";
+        }
+        else if (GlobalVariable.serverConnected)
+        {
+            serverColor = Color.green;
+            serverStatus = "Server Connection: Connected";
+        }
+        else
+        {
+            serverColor = GlobalVariable.colors[3];
+            serverStatus = "Server Connection: Disconnected";
         }
 
+        // Update server connection status
+        connectStatusFrames[1].GetComponent<Image>().color = serverColor;
+        connectStatuValues[1].text = serverStatus;
     }
+
 
 
     void UpdateProductionData(DataSignalR data, List<string> productionDataTags, TMP_Text[] productionDataValues)
     {
-        if (productionDataTags.Contains(data.TagId))
+        int index = productionDataTags.IndexOf(data.TagId);
+        if (index < 0) return;
+        double parsedValue = double.Parse(data.TagValue);
+        switch (data.TagId)
         {
-            int index = productionDataTags.IndexOf(data.TagId);
-            if (index >= 0)
-            {
-                if (data.TagId != "OEE" && data.TagId != "P" && data.TagId != "A" && data.TagId != "Q")
-                {
-                    productionDataValues[index].text = data.TagValue;
+            case "EFF":
+                GlobalVariable.effective = parsedValue;
+                productionDataValues[index].text = data.TagValue;
+                break;
 
+            case "OEE":
+                GlobalVariable.oEEValue = parsedValue;
+                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                break;
 
-                }
-                if (data.TagId == "EFF")
-                {
-                    GlobalVariable.effective = double.Parse(data.TagValue);
-                }
-                if (data.TagId == "OEE" || data.TagId == "P" || data.TagId == "A" || data.TagId == "Q")
-                {
-                    productionDataValues[index].text = (double.Parse(data.TagValue) * 100).ToString("0.00");
-                    if (data.TagId == "OEE")
-                    {
-                        GlobalVariable.oEEValue = double.Parse(data.TagValue);
-                    }
-                    // Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
-
-                }
-            }
+            case "P":
+            case "A":
+            case "Q":
+                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                break;
+            default:
+                productionDataValues[index].text = data.TagValue;
+                break;
         }
     }
+
 
     void UpdateChemicalDetection(DataSignalR data, string prefix, TMP_Text[] chemicalValues, GameObject[] chemicalFrames)
     {

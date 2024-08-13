@@ -11,6 +11,11 @@ public class UILogin : MonoBehaviour
     public TMPro.TMP_InputField passwordField;
     public Button loginButton;
     public string targetSceneName;
+
+    void Awake()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
     void Start()
     {
         //Subscribe to onClick event
@@ -19,7 +24,7 @@ public class UILogin : MonoBehaviour
 
     Dictionary<string, string> staffDetails = new Dictionary<string, string>
     {
-        {"wembleyadmin","123456" },
+        {"admin","123456" },
         {"Tuyến","123456" },
         {"Duy","123456" },
 

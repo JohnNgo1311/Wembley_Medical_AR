@@ -10,32 +10,49 @@ public class SignalR_Data_Station_2_OMT : MonoBehaviour
          $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO01/Extension",
           };
     void Awake()
-    {
-        signalR = GameObject.FindWithTag("SignalR_OMT").GetComponent<SignalRDataOMT>();
-
+    {      
+        // Nếu chưa được gán qua Inspector, tìm SignalRDataOMT thông qua tag
+        if (signalR == null)
+        {
+            signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
+        }
     }
+
     void OnEnable()
     {
-        GlobalVariable.isInitialize["S2_IO"] = false;
-
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        GlobalVariable.subscribedTopicsOMT.AddRange(topicStation2);
-        //  Debug.Log("SignalR_Data_Station_2_OMT OnEnable");
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //  signalR.PublishStationIndex(1);
+        if (signalR != null)
+        {
+            //   GlobalVariable.isInitialize["S1_Connection"] = false;
+            // Chỉ thêm nếu topic chưa được thêm vào trước đó
+            foreach (var topic in topicStation2)
+            {
+                if (!GlobalVariable.subscribedTopicsOMT.Contains(topic))
+                {
+                    GlobalVariable.subscribedTopicsOMT.Add(topic);
+                }
+            }
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
 
     void OnDisable()
     {
-        GlobalVariable.isInitialize["S2_IO"] = true;
+        if (signalR != null)
+        {
+            //  GlobalVariable.isInitialize["S1_Connection"] = true;
+            // Xóa chủ đề của Station 1 thay vì xóa toàn bộ danh sách
+            foreach (var topic in topicStation2)
+            {
+                GlobalVariable.subscribedTopicsOMT.Remove(topic);
+            }
 
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-        //   signalR.PublishStationIndex(0);
+            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        }
     }
+
     private void OnDestroy()
     {
-        GlobalVariable.isInitialize["S2_IO"] = true;
-
+        // Không cần kiểm tra signalR ở đây, chỉ đặt trạng thái khởi tạo
+        //  GlobalVariable.isInitialize["S1_Connection"] = true;
     }
 }

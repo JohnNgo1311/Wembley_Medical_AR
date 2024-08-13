@@ -133,6 +133,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Frame
+    uniqueID: 2729947285
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: General
+    uniqueID: 546268267
     locked: 0
