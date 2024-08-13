@@ -6,7 +6,6 @@ public class CloseBtnCanvas : MonoBehaviour
 {
     public GameObject btnCanvas;
     public bool isMonitorCanvasOpen = false;
-    // Start is called before the first frame update
     void OnEnable()
     {
         btnCanvas.SetActive(false);
@@ -16,7 +15,6 @@ public class CloseBtnCanvas : MonoBehaviour
         if (isMonitorCanvasOpen)
         {
             btnCanvas.SetActive(false);
-
         }
         else btnCanvas.SetActive(true);
     }

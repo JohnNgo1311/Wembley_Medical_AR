@@ -40,8 +40,7 @@ public class NavigationToThreePanel : MonoBehaviour
     }
     public void NavigateToScreen_3()
     {
-        initialScreen.SetActive(false);
-        destinationScreen_3.SetActive(true);
+
     }
     public void NavigatePop()
     {

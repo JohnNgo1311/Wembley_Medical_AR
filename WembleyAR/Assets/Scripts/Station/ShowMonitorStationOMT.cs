@@ -6,19 +6,13 @@ using Vuforia;
 public class ShowMonitorStationOMT : MonoBehaviour
 {
     public GameObject stationCanvas, clickBtn;
-    public GameObject arrowOpen, arrowClose;
-    public string tagName;
     public GameObject MonitorStation;
+    public string tagName;
     public Camera ARCamera;
-
-
 
     void Start()
     {
-
         MonitorStation.SetActive(false);
-
-        //  externalDeviceTag.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -38,16 +32,14 @@ public class ShowMonitorStationOMT : MonoBehaviour
         stationCanvas.SetActive(false);
         MonitorStation.SetActive(true);
         ARCamera.GetComponent<VuforiaBehaviour>().enabled = false;
-        arrowClose.SetActive(false);
+        // arrowClose.SetActive(false);
     }
-    public void ReturnCanvas()
+    private void ReturnCanvas()
     {
-        stationCanvas.SetActive(true);
         MonitorStation.SetActive(false);
+        stationCanvas.SetActive(true);
         ARCamera.GetComponent<VuforiaBehaviour>().enabled = true;
-        arrowClose.SetActive(true);
-
-        //   signalR.PublishStationIndex(0);
+        // arrowClose.SetActive(true);
     }
 
 

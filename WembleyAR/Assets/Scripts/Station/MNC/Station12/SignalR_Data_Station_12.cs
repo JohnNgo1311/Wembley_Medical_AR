@@ -9,22 +9,22 @@ public class SignalR_Data_Station_12 : MonoBehaviour
          $"{GlobalVariable.basedTopic}/S11" ,
          $"{GlobalVariable.basedTopic}/S12"
           };
-    void Awake()
+   void Awake()
     {
-      //  signalR = GameObject.FindWithTag("signalR").GetComponent<SignalRData>();
+        signalR = GameObject.FindWithTag("signalR").GetComponent<SignalRData>();
     }
     void OnEnable()
     {
+        GlobalVariable.isUpdatingData = true;
         GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
         GlobalVariable.subscribedTopics.AddRange(topicStation12);
-      //  signalR.UpdateTopics(GlobalVariable.subscribedTopics);
-        //  signalR.PublishStationIndex(12);
+        signalR.UpdateTopics(GlobalVariable.subscribedTopics);
     }
 
     void OnDisable()
     {
+        GlobalVariable.isUpdatingData = false;
         GlobalVariable.subscribedTopics = GlobalVariable.initialTopic;
-      //  signalR.UpdateTopics(GlobalVariable.subscribedTopics);
-        //     signalR.PublishStationIndex(0);
+        signalR.UpdateTopics(GlobalVariable.subscribedTopics);
     }
 }

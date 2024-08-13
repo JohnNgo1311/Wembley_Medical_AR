@@ -11,14 +11,14 @@ using System;
 
 public class ManufacturingInfoScript : MonoBehaviour
 {
-    static string url = "https://wembleyscada.azurewebsites.net/api/References/Parameters?LineId=HerapinCap";
+    static string url = "https://wembleymedicalscada1.azurewebsites.net/api/References/Parameters?LineId=HCM";
     public TMP_Text productNameText, referenceIdText, lotCodeText, lotSizeText, employeeText;
     private ManufacturingInfo[] manufacturingData;
     public GameObject loadingAnimator;
 
     void Start()
     {
-        //loadingAnimator.SetActive(false);
+        loadingAnimator.SetActive(false);
 
     }
     //? The error you're seeing is because void cannot be awaited. The async keyword enables the await keyword in that method. When you await a method, it must return a Task or Task<T>.
@@ -102,14 +102,14 @@ public class ManufacturingInfoScript : MonoBehaviour
         referenceIdText.text = manufacturingData.referenceId ?? "--";
         lotCodeText.text = manufacturingData.lotCode ?? "--";
         lotSizeText.text = manufacturingData.lotSize.ToString() ?? "--";
-        if (manufacturingData.stations.Length > 0 && manufacturingData.stations[0].employees.Length > 0)
-        {
-            employeeText.text = $"{manufacturingData.stations[0].employees[0].employeeId} - {manufacturingData.stations[0].employees[0].employeeName}";
-        }
-        else
-        {
-            employeeText.text = "--";
-        }
+        /*    if (manufacturingData.stations.Length > 0 && manufacturingData.stations[0].employees.Length > 0)
+            {
+                employeeText.text = $"{manufacturingData.stations[0].employees[0].employeeId} - {manufacturingData.stations[0].employees[0].employeeName}";
+            }
+            else
+            {
+                employeeText.text = "--";
+            }*/
 
     }
 }

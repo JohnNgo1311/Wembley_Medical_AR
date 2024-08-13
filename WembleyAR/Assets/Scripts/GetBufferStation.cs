@@ -54,19 +54,16 @@ public class GetBufferStation : MonoBehaviour
         {
             GetInitialStationDataS1();
             Debug.Log("GETBUFFFRSTATION s1");
-
         }
         if (stationIdSpecific == "S2")
         {
             GetInitialStationDataS2();
             Debug.Log("GETBUFFFRSTATION s2");
-
         }
         if (stationIdSpecific == "S3")
         {
             GetInitialStationDataS3();
             Debug.Log("GETBUFFFRSTATION s3");
-
         }
     }
 
@@ -309,18 +306,10 @@ public class GetBufferStation : MonoBehaviour
         }
     }
 
-
-
-
-
-
     public async Task<List<DataSignalR>> GetBufferListSpecificStation(string stationIdSpecific)
     {
         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
         return tags.Where(data => data.StationId == stationIdSpecific && !data.TagId.StartsWith("M1")).ToList();
     }
-
-
-
 }

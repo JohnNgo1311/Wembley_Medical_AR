@@ -167,9 +167,9 @@ public class GlobalVariable : MonoBehaviour
 
     public static List<string> productionDataBLO06 = new List<string>() {
     "S1_PLASTIC_TRAYS_QTY",
-    "productCountRaw",
-    "goodProductRaw",
-    "errorProductRaw",
+    "productCount",
+    "goodProduct",
+    "errorProduct",
     "EFF",
     "S1_HEATING_TEMP",
     "P",
@@ -182,11 +182,11 @@ public class GlobalVariable : MonoBehaviour
 };
     public static List<string> productionDataBLO01 = new List<string>() {
     "S2_PLASTIC_TRAYS_QTY",
-    "productCountRaw",
+    "productCount",
 };
     public static List<string> productionDataBLO02 = new List<string>() {
    "S3_PLASTIC_TRAYS_QTY",
-   "productCountRaw",
+   "productCount",
 };
     public static List<string> visionProcessingBLO06 = new List<string>() {
     "S1_VISION_TOTAL_TUBES",
@@ -275,7 +275,6 @@ public class GlobalVariable : MonoBehaviour
     { "S3_MachineStatus", true},
     };
 
-
     //? Error
     public static List<ErrorInfor> errorInfors = new List<ErrorInfor>();
     public static List<ErrorInfor> errorInfors1 = new List<ErrorInfor>();
@@ -358,8 +357,8 @@ public class ManufacturingInfo
     public string referenceId;
     public string referenceName;
 
-    public string lotCode;
-    public int lotSize;
+    public string lotCode;  //số lô
+    public int lotSize;  // cỡ lô
     public Line line;
     public StationInfo[] stations;
 }

@@ -66,7 +66,7 @@ public class SignalRData : MonoBehaviour
     //? S6
     public TMP_Text[] S6_OperationParameter;
     //? S7
-    public TMP_Text[] S7_OperationParameter;
+    //public TMP_Text[] S7_OperationParameter;
 
 
     void Start()
@@ -432,10 +432,10 @@ public class SignalRData : MonoBehaviour
         outputCheckS7[index].SetActive(value);
     }
 
-    void HandleS7Parameter(int index, string value)
+  /*  void HandleS7Parameter(int index, string value)
     {
         S7_OperationParameter[index].text = value;
-    }
+    }*/
 
     void HandleS8Parameter(string tagId, string value)
     {
@@ -535,14 +535,14 @@ public class SignalRData : MonoBehaviour
                 else if (data.TagId.Contains("LEAK_TEST_CHK_TR"))
                 {
                     int index = int.Parse(data.TagId.Remove(0, 16));
-                    GlobalVariable.RejCountS10TR[index - 2] = int.Parse(data.TagValue);
+                    GlobalVariable.RejCountS10TR[index - 1] = int.Parse(data.TagValue);
                 }
 
             }
-            if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
+       /*     if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
             {
                 GlobalVariable.RejCountS10TR[0] = int.Parse(data.TagValue);
-            }
+            }*/
 
             //! Suy nghĩ bỏ cái này 
             if (data.TagId.Contains("CHECK_PRESSURE_S10_TRACK"))

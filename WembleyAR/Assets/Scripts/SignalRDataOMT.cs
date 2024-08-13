@@ -9,6 +9,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Linq;
 using Unity.VisualScripting;
+using System.Xml.Serialization;
 
 public class SignalRDataOMT : MonoBehaviour
 {
@@ -50,86 +51,69 @@ public class SignalRDataOMT : MonoBehaviour
     public GameObject[] connectionStatusFrameS3;
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
-    private bool isInitialized = false;
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
     private static HashSet<string> processedStrings = new HashSet<string>();
 
     //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
     void Start()
-    {   //! Kết nối đến server
-        if (isInitialized == false)
-        {
-            Debug.Log("Chạy Start");
-            IsInternetAvailable();
-            StartConnectWebApi();
-            InitializeDataHandlers();
-            isInitialized = true;
-        }
+    {
+        Debug.Log("Chạy Start");
+        IsInternetAvailable();
+        StartConnectWebApi();
+        InitializeDataHandlers();
     }
 
-
-    void OnDestroy() //! OnDestroy được gọi khi thoát Scence
+    void OnDestroy() //! OnDestroy được gọi khi instance bị destroy hoặc thoát scene
     {
         if (GlobalVariable.hubConnection != null)
         {
             GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
             GlobalVariable.hubConnection.StopAsync();
-            /* GlobalVariable.hubConnection.Remove("OnTagChanged");
-             GlobalVariable.hubConnection.Remove("LogInfoMessage");
-             GlobalVariable.hubConnection = null;*/
         }
     }
-
 
     private void InitializeDataHandlers()
     {
         dataHandlers = new Dictionary<string, Action<DataSignalR>>
-        {   // "IE-F3-BLO06" : key
-            // HandleStationS1 : hành động tương ứng  
+        {   //? "IE-F3-BLO06" : key
+            //? HandleStationS1 : hành động tương ứng  
             { "IE-F3-BLO06", HandleStationS1},
             { "IE-F3-BLO01", HandleStationS2 },
             { "IE-F3-BLO02", HandleStationS3 }
         };
-
     }
     private void Update()
     {
+        if (GlobalVariable.hubConnection != null)
+        {
+            GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
+                                {
+                                    if (processedStrings.Contains(str))
+                                    {
+                                        return; // Nếu đã xử lý, bỏ qua
+                                    }
+                                    processedStrings.Add(str); // Thêm vào danh sách đã xử lý
+                                    var data = JsonConvert.DeserializeObject<DataSignalR>(str);
+                                    if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+                                    {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
+                                        Debug.Log("OnTagChanged" + str);
+                                        handler(data);
+                                    }
+                                }
 
+                                );
+        }
+        else { }
     }
     private void StartConnectWebApi()
     {
         //? Kết nối với server
         if (GlobalVariable.hubConnection == null)
         {
-            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).Build();
+            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).WithAutomaticReconnect().Build();
             Debug.Log("CreateHubConnection");
             //  GlobalVariable.isConnecting = true;
         }
-        //? Cập nhật thay đổi
-        GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
-        {
-            if (processedStrings.Contains(str))
-            {
-                return; // Nếu đã xử lý, bỏ qua
-            }
-            processedStrings.Add(str); // Thêm vào danh sách đã xử lý
-            foreach (var item in GlobalVariable.isInitialize)
-            {
-                if (item.Value == false)
-                {
-
-                    var data = JsonConvert.DeserializeObject<DataSignalR>(str);
-                    if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-                    {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
-                       // Debug.Log("$$" + "Handler");
-                        Debug.Log("OnTagChanged" + str);
-                        handler(data);
-                        break;
-                    }
-                }
-            }
-        }
-        );
         //? Kết nối thành công
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", (str) =>
         {
@@ -139,37 +123,10 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
                 GlobalVariable.errorServerConnected = false;
-                /*await GetBuffer("errorStatus", "S1");
-                  await GetBuffer("errorStatus", "S2");
-                  await GetBuffer("errorStatus", "S3");*/
-                // Inside StartConnectWebApi()
-                //?   var listInitialData = await GetBufferList();
-                // Await the completion of GetBufferList()
-                //  UpdateTopics(GlobalVariable.subscribedTopicsOMT);
-                /* foreach (var data in listInitialData)
-                 {
-                     if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-                     {
-                         if (!data.TagId.StartsWith("M1"))
-                         {
-                             handler(data);
-                             if (dataHandlers.Any())
-                             {
-                                 Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
-
-                             }
-                         }
-                     }
-                 }*/
-                // await LoadInitialData();
-
-                //   UpdateTopics(GlobalVariable.initialTopicOMT);
-
             }
         });
-        // Gọi phương thức này khi khởi tạo kết nối
 
-        // Đăng ký xử lý khi kết nối bị đóng
+
         GlobalVariable.hubConnection.Closed += (error) =>
          {
              Debug.Log($"Connection closed: {error?.Message}");
@@ -179,9 +136,6 @@ public class SignalRDataOMT : MonoBehaviour
              TryReconnectAsync();
              return Task.CompletedTask;
          };
-
-
-        // Đăng ký xử lý khi đang kết nối lại
         GlobalVariable.hubConnection.Reconnecting += (error) =>
         {
             Debug.Log($"Reconnecting: {error?.Message}");
@@ -190,8 +144,6 @@ public class SignalRDataOMT : MonoBehaviour
             GlobalVariable.errorServerConnected = false;
             return Task.CompletedTask;
         };
-
-        // Đăng ký xử lý khi kết nối lại thành công
         GlobalVariable.hubConnection.Reconnected += (connectionId) =>
         {
             Debug.Log($"Reconnected: {connectionId}");
@@ -201,7 +153,6 @@ public class SignalRDataOMT : MonoBehaviour
             // Gọi hàm tải lại dữ liệu khi kết nối lại thành công
             // LoadInitialData().Wait();
             // TryReconnectAsync();
-
             return Task.CompletedTask;
         };
 
@@ -225,13 +176,9 @@ public class SignalRDataOMT : MonoBehaviour
                                             }
                                             else if (task.IsCompletedSuccessfully)
                                             {
-
-                                                // Xử lý khi kết nối thành công (nếu cần)
                                             }
                                         });
             }
-
-
         }
         catch (Exception e)
         {
@@ -282,7 +229,10 @@ public class SignalRDataOMT : MonoBehaviour
             }
         }
     }
-
+    public void UpdateTopics(List<string> topics)
+    {
+        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
+    }
     private bool IsInternetAvailable()
     {
         bool isConnected = Application.internetReachability != NetworkReachability.NotReachable;
@@ -290,16 +240,6 @@ public class SignalRDataOMT : MonoBehaviour
         GlobalVariable.isInternetConnected = isConnected;
         return isConnected;
     }
-    public void PublishStationIndex(int index)
-    {
-        GlobalVariable.hubConnection.InvokeAsync("SelectStation", index);
-    }
-
-    public void UpdateTopics(List<string> topics)
-    {
-        GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
-    }
-
     void HandleStationS1(DataSignalR data)
     {
         UpdateMachineStatus(data, listMachineStatusS1);

@@ -9,11 +9,6 @@ public class IOListS1_OMT : MonoBehaviour
     public GameObject inputBtn, outputBtn;
     public Sprite inputBtnOn, inputBtnOff;
     public Sprite outputBtnOn, outputBtnOff;
-    // public GameObject[] inputCheck;
-    // public GameObject[] outputCheck;
-
-
-    // Start is called before the first frame update
     void Start()
     {
         inputBtn.GetComponent<Image>().sprite = inputBtnOn;
@@ -21,6 +16,7 @@ public class IOListS1_OMT : MonoBehaviour
         contentInput.SetActive(true);
         contentOutput.SetActive(false);
     }
+  
     // void Update()
     // {
     //     for (var i = 0; i < inputCheck.Length; i++)

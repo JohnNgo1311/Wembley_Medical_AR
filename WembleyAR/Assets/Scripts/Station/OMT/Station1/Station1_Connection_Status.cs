@@ -24,12 +24,11 @@ public class Station1_Connection_Status : MonoBehaviour
         //  signalR.PublishStationIndex(1);
         //    Debug.Log(GlobalVariable.subscribedTopicsOMT);
     }
-
+   
     void OnDisable()
     {
         GlobalVariable.isInitialize["S1_Connection"] = true;
-        GlobalVariable.subscribedTopicsOMT = GlobalVariable.initialTopicOMT;
-        signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+        signalR.UpdateTopics(new List<string>() { });
     }
     private void OnDestroy()
     {
