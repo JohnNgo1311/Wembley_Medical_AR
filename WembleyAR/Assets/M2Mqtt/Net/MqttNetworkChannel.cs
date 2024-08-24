@@ -126,7 +126,7 @@ namespace uPLibrary.Networking.M2Mqtt
         {
 
         }
-        
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -444,7 +444,7 @@ namespace uPLibrary.Networking.M2Mqtt
                 case MqttSslProtocols.None:
                     return SslProtocols.None;
                 case MqttSslProtocols.SSLv3:
-                    return SslProtocols.Ssl3;
+                    return SslProtocols.Tls;
                 case MqttSslProtocols.TLSv1_0:
                     return SslProtocols.Tls;
                 case MqttSslProtocols.TLSv1_1:

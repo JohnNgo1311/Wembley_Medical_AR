@@ -18,7 +18,6 @@ public class DialogController : MonoBehaviour
 
     public void ShowDialogFor2Seconds()
     {
-
         StartCoroutine(ShowDialogCoroutine());
     }
 

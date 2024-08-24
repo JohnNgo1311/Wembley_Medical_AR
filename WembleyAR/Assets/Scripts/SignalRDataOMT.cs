@@ -55,6 +55,8 @@ public class SignalRDataOMT : MonoBehaviour
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
     private static HashSet<string> processedStrings = new HashSet<string>();
 
+    Dictionary<string, DateTime> elementWithTimestamp = new Dictionary<string, DateTime>();
+
     //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
     void Start()
     {
@@ -76,24 +78,31 @@ public class SignalRDataOMT : MonoBehaviour
     private void InitializeDataHandlers()
     {
         dataHandlers = new Dictionary<string, Action<DataSignalR>>
-        {   //? "IE-F3-BLO06" : key
-            //? HandleStationS1 : hành động tương ứng  
-            { "IE-F3-BLO06", HandleStationS1},
-            { "IE-F3-BLO01", HandleStationS2 },
-            { "IE-F3-BLO02", HandleStationS3 }
-        };
+         {   //? "IE-F3-BLO06" : key
+             //? HandleStationS1 : hành động tương ứng  
+             { "IE-F3-BLO06", HandleStationS1},
+             { "IE-F3-BLO01", HandleStationS2 },
+             { "IE-F3-BLO02", HandleStationS3 }
+         };
     }
     private void Update()
     {
+        string strSaved = "";
+
         if (GlobalVariable.hubConnection != null)
         {
             GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
                                 {
                                     if (processedStrings.Contains(str))
                                     {
-                                        return; // Nếu đã xử lý, bỏ qua
+                                        return;
                                     }
-                                    processedStrings.Add(str); // Thêm vào danh sách đã xử lý
+                                    else
+                                    {
+                                        processedStrings.Add(str);
+                                        strSaved = str;
+                                        elementWithTimestamp[strSaved] = DateTime.Now;
+                                    };
                                     var data = JsonConvert.DeserializeObject<DataSignalR>(str);
                                     if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
                                     {  //! Dựa vào key là StationId để thực hiên hàm tương ứng
@@ -103,9 +112,16 @@ public class SignalRDataOMT : MonoBehaviour
                                 }
                                 );
         }
-        else
-        {
 
+        // Xóa phần tử quá hạn
+        foreach (var item in elementWithTimestamp.Keys.ToList())
+        {
+            if ((DateTime.Now - elementWithTimestamp[item]).TotalSeconds > 10) // 10 phút TTL
+            {
+                elementWithTimestamp.Remove(item);
+                processedStrings.Remove(item);
+                Debug.Log("Remove: " + item);
+            }
         }
     }
     private void StartConnectWebApi()
@@ -213,25 +229,25 @@ public class SignalRDataOMT : MonoBehaviour
         }
     }
 
-    private async Task LoadInitialData()
-    {
-        // Gọi lại các dữ liệu ban đầu từ server
-        var listInitialData = await GetBufferList();
-        foreach (var data in listInitialData)
-        {
-            if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
-            {
-                if (!data.TagId.StartsWith("M1"))
-                {
-                    handler(data);
-                    if (dataHandlers.Any())
-                    {
-                        Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
-                    }
-                }
-            }
-        }
-    }
+    /* private async Task LoadInitialData()
+     {
+         // Gọi lại các dữ liệu ban đầu từ server
+         var listInitialData = await GetBufferList();
+         foreach (var data in listInitialData)
+         {
+             if (data != null && dataHandlers.TryGetValue(data.StationId, out var handler))
+             {
+                 if (!data.TagId.StartsWith("M1"))
+                 {
+                     handler(data);
+                     if (dataHandlers.Any())
+                     {
+                         Debug.Log($"{dataHandlers.Count}  + {data.StationId}  + {data.TagId} + {data.TagValue}");
+                     }
+                 }
+             }
+         }
+     }*/
     public void UpdateTopics(List<string> topics)
     {
         GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
@@ -360,26 +376,25 @@ public class SignalRDataOMT : MonoBehaviour
 
     void UpdateMachineStatus(DataSignalR data, GameObject[] listMachineStatus)
     {
-
         if (data.TagId == "machineStatus")
         {
             // Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
             Color32[] colors = new Color32[]
              {
-        new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
-        Color.green,                         // case "1"
-        new Color32(0xFF, 0xC0, 0x00, 0xFF), //case "2" ==> Cam
-        Color.red,             // case "3"
-        new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
-        Color.yellow// case "5"
+               new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
+               Color.green,                         // case "1" ==> xanh
+               new Color32(0xFF, 0xC0, 0x00, 0xFF), // case "2"  ==> vàng Cam
+               Color.red,                           // case "3" ==> Đỏ
+               new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4" ==> Cam nhạt
+               Color.yellow                         // case "5" ==> Vàng
              };
-            //Debug.Log("MachineStatus: " + data.TagValue); 
+
             int value = int.Parse(data.TagValue);
 
             // Reset all statuses to grey using a loop
             for (int i = 0; i < listMachineStatus.Length; i++)
             {
-                listMachineStatus[i].GetComponent<Image>().color = GlobalVariable.colors[3];
+                listMachineStatus[i].GetComponent<Image>().color = GlobalVariable.colors[3]; //xám
             }
 
             // Set the specific status based on the value
@@ -387,6 +402,7 @@ public class SignalRDataOMT : MonoBehaviour
             {
                 listMachineStatus[value].GetComponent<Image>().color = colors[value];
             }
+
             if (data.TagValue == null)
             {
                 listMachineStatus[value].GetComponent<Image>().color = colors[5];
@@ -496,7 +512,7 @@ public class SignalRDataOMT : MonoBehaviour
                 var errorInfor = new ErrorInfor
                 {
                     errorName = data.TagValue,
-                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
                 //  Debug.Log("Error S1");
                 GlobalVariable.errorInfors1.Add(errorInfor);
@@ -508,7 +524,7 @@ public class SignalRDataOMT : MonoBehaviour
                 var errorInfor = new ErrorInfor
                 {
                     errorName = data.TagValue,
-                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
                 //  Debug.Log("Error S2");
 
@@ -521,11 +537,11 @@ public class SignalRDataOMT : MonoBehaviour
                 var errorInfor = new ErrorInfor
                 {
                     errorName = data.TagValue,
-                    time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"),
+                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
                 };
                 // Debug.Log("Error S3");
                 GlobalVariable.errorInfors3.Add(errorInfor);
-                // Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
+                // Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
                 UpdateStationErrorList("S3");
 
             }
@@ -580,8 +596,8 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors1.Clear();
                 foreach (var tag in filteredList)
                 {
-                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                    var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors1.Add(errorInfor1);
                 }
                 break;
@@ -590,8 +606,8 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors2.Clear();
                 foreach (var tag in filteredList)
                 {
-                    //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                    var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors2.Add(errorInfor2);
                 }
                 break;
@@ -600,8 +616,8 @@ public class SignalRDataOMT : MonoBehaviour
                 GlobalVariable.errorInfors3.Clear();
                 foreach (var tag in filteredList)
                 {
-                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                    var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                    // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                    var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                     GlobalVariable.errorInfors3.Add(errorInfor3);
                 }
                 break;
@@ -609,65 +625,65 @@ public class SignalRDataOMT : MonoBehaviour
     }
 
 
-    public async Task<List<DataSignalR>> GetBufferListSpecificStation(string stationIdSpecific)
-    {
-        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
-        var filteredList = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == stationIdSpecific);
-        return tags;
-    }
+    /* public async Task<List<DataSignalR>> GetBufferListSpecificStation(string stationIdSpecific)
+     {
+         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+         var filteredList = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == stationIdSpecific);
+         return tags;
+     }*/
 
 
-    public async Task<List<DataSignalR>> GetBufferList()
-    {
-        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
-        // Debug.Log("GetBufferList" + tags.Count);
-        var filteredList1 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO06");
-        var filteredList2 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO01");
-        var filteredList3 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO02");
+    /* public async Task<List<DataSignalR>> GetBufferList()
+     {
+         var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
+         var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
+         // Debug.Log("GetBufferList" + tags.Count);
+         var filteredList1 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO06");
+         var filteredList2 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO01");
+         var filteredList3 = tags.Where(data => (data.TagId == "errorStatus") && (data.TagValue != "Wifi disconnected") && data.StationId == "IE-F3-BLO02");
 
-        if (filteredList1.Any())
-        {
+         if (filteredList1.Any())
+         {
 
-            GlobalVariable.errorInfors1.Clear();
-            foreach (var tag in filteredList1)
-            {
-                //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                GlobalVariable.errorInfors1.Add(errorInfor1);
-                await alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
-            }
-        }
+             GlobalVariable.errorInfors1.Clear();
+             foreach (var tag in filteredList1)
+             {
+                 //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                 var errorInfor1 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
+                 GlobalVariable.errorInfors1.Add(errorInfor1);
+                 await alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
+             }
+         }
 
-        if (filteredList2.Any())
-        {
+         if (filteredList2.Any())
+         {
 
-            GlobalVariable.errorInfors2.Clear();
-            foreach (var tag in filteredList2)
-            {
-                // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                GlobalVariable.errorInfors2.Add(errorInfor2);
-                await alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
+             GlobalVariable.errorInfors2.Clear();
+             foreach (var tag in filteredList2)
+             {
+                 // Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                 var errorInfor2 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
+                 GlobalVariable.errorInfors2.Add(errorInfor2);
+                 await alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
 
-            }
-        }
-        if (filteredList3.Any())
-        {
+             }
+         }
+         if (filteredList3.Any())
+         {
 
-            GlobalVariable.errorInfors3.Clear();
-            foreach (var tag in filteredList3)
-            {
-                //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
-                GlobalVariable.errorInfors3.Add(errorInfor3);
-                await alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
+             GlobalVariable.errorInfors3.Clear();
+             foreach (var tag in filteredList3)
+             {
+                 //  Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                 var errorInfor3 = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
+                 GlobalVariable.errorInfors3.Add(errorInfor3);
+                 await alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
 
-            }
-        }
+             }
+         }
 
-        if (tags is null) return new List<DataSignalR>();
-        return tags;
-    }
+         if (tags is null) return new List<DataSignalR>();
+         return tags;
+     }*/
 }

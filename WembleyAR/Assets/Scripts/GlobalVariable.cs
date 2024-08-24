@@ -149,10 +149,10 @@ public class GlobalVariable : MonoBehaviour
     public static int[] RejCountS10TR = new int[4];
     public static List<Color32> colors = new List<Color32>
         {
-            new Color32(0x3D, 0xFF, 0x7F, 0xFF)  , // Màu xanh lá   0
+            new Color32(0x3D, 0xFF, 0x7F, 0xFF), // Màu xanh lá   0
             new Color32(0x02, 0xC0, 0xF5, 0xFF), // Xanh nhạt 1
-            new Color32(0xFF, 0x4E, 0x4E, 0xFF),  // đỏ 2
-            new Color32(0xC1, 0xC1, 0xC1, 0xFF)  ,// Màu xám 3
+            new Color32(0xFF, 0x4E, 0x4E, 0xFF), // đỏ 2
+            new Color32(0xC1, 0xC1, 0xC1, 0xFF), // Màu xám 3
             Color.blue,                          // Màu xanh dương 4
             Color.cyan,                          // Màu xanh cyan 5
             Color.magenta,                       // Màu hồng tím 6
@@ -331,8 +331,10 @@ public class DataSignalR
     public string LineId;
     public string TagId;
     public string TagValue;
-    public DateTime TimeStamp;
+    public DateTime? TimeStamp;
 }
+
+
 // [System.Serializable]
 // public class DoubleTypeDataModel
 // {

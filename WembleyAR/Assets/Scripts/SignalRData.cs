@@ -432,10 +432,10 @@ public class SignalRData : MonoBehaviour
         outputCheckS7[index].SetActive(value);
     }
 
-  /*  void HandleS7Parameter(int index, string value)
-    {
-        S7_OperationParameter[index].text = value;
-    }*/
+    /*  void HandleS7Parameter(int index, string value)
+      {
+          S7_OperationParameter[index].text = value;
+      }*/
 
     void HandleS8Parameter(string tagId, string value)
     {
@@ -539,10 +539,10 @@ public class SignalRData : MonoBehaviour
                 }
 
             }
-       /*     if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
-            {
-                GlobalVariable.RejCountS10TR[0] = int.Parse(data.TagValue);
-            }*/
+            /*     if (data.TagId.Contains("LEAK_TEST_CHK_OK_TR1"))
+                 {
+                     GlobalVariable.RejCountS10TR[0] = int.Parse(data.TagValue);
+                 }*/
 
             //! Suy nghĩ bỏ cái này 
             if (data.TagId.Contains("CHECK_PRESSURE_S10_TRACK"))
@@ -599,7 +599,7 @@ public class SignalRData : MonoBehaviour
 
                         {
                             //            Debug.Log(data.TagValue);
-                            errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                            errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                             GlobalVariable.errorInfors.Add(errorInfor);
                             alarmScript.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors, "S1");
                         }
@@ -607,7 +607,7 @@ public class SignalRData : MonoBehaviour
                     case "endErrorStatus":
                         //linQ
                         GlobalVariable.errorInfors.RemoveAll(x => x.errorName == data.TagValue);
-                        errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                        errorInfor = new ErrorInfor { errorName = data.TagValue, time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                         for (int i = 0; i < GlobalVariable.errorInfors.Count; i++)
                         {
                             if (GlobalVariable.errorInfors[i].errorName == errorInfor.errorName)
@@ -638,8 +638,8 @@ public class SignalRData : MonoBehaviour
         {
             if (tag.TagValue != "Wifi disconnected")
             {
-                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy"));
-                errorInfor = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp.ToString("HH:mm:ss dd/MM/yyyy") };
+                Debug.Log("Error: " + tag.TagValue + " at " + tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
+                errorInfor = new ErrorInfor { errorName = tag.TagValue, time = tag.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy") };
                 GlobalVariable.errorInfors.Add(errorInfor);
             }
         }

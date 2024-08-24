@@ -16,9 +16,7 @@ public class Error_List_S1 : MonoBehaviour
         {
             signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
-
     }
-
     void OnEnable()
     {
         if (signalR != null)

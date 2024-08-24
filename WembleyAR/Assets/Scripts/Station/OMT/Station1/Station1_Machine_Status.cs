@@ -16,10 +16,7 @@ public class Station1_Machine_Status : MonoBehaviour
         {
             signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
-
-      
     }
-
     void OnEnable()
     {
         if (signalR != null)
@@ -55,6 +52,6 @@ public class Station1_Machine_Status : MonoBehaviour
     private void OnDestroy()
     {
         // Không cần kiểm tra signalR ở đây, chỉ đặt trạng thái khởi tạo
-      //  GlobalVariable.isInitialize["S1_MachineStatus"] = true;
+        //  GlobalVariable.isInitialize["S1_MachineStatus"] = true;
     }
 }

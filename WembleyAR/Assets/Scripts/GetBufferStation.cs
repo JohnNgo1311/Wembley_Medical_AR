@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.AspNetCore.SignalR.Client;
@@ -46,94 +45,136 @@ public class GetBufferStation : MonoBehaviour
     public GameObject[] connectionStatusFrameS3;
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
-    public string stationIdSpecific;
+    public string station_Id_Specific;
 
+    [SerializeField]
+    private string update_Specific_Function = "default";
     void OnEnable()
     {
-        if (stationIdSpecific == "S1")
+        switch (station_Id_Specific)
         {
-            GetInitialStationDataS1();
-            Debug.Log("GETBUFFFRSTATION s1");
-        }
-        if (stationIdSpecific == "S2")
-        {
-            GetInitialStationDataS2();
-            Debug.Log("GETBUFFFRSTATION s2");
-        }
-        if (stationIdSpecific == "S3")
-        {
-            GetInitialStationDataS3();
-            Debug.Log("GETBUFFFRSTATION s3");
+            case "S1":
+                GetInitialStationDataS1();
+                Debug.Log("GETBUFFFRSTATION S1");
+                break;
+            case "S2":
+                GetInitialStationDataS2();
+                Debug.Log("GETBUFFFRSTATION S2");
+                break;
+            case "S3":
+                GetInitialStationDataS3();
+                Debug.Log("GETBUFFFRSTATION S3");
+                break;
+            default:
+                break;
         }
     }
 
     private async void GetInitialStationDataS1()
     {
-        var listInitialData1 = await GetBufferListSpecificStation("IE-F3-BLO06");
-
-        foreach (var data in listInitialData1)
-        {
-            HandleStationS1(data);
-            Debug.Log($" GETBUFFFER S1: {data.StationId} {data.TagId} {data.TagValue} ");
-        }
+        await GetInitialStationData("IE-F3-BLO06", HandleStationS1);
     }
 
     private async void GetInitialStationDataS2()
     {
-        var listInitialData2 = await GetBufferListSpecificStation("IE-F3-BLO01");
-        foreach (var data in listInitialData2)
-        {
-            HandleStationS2(data);
-            Debug.Log($" GETBUFFFER S2: {data.StationId} {data.TagId} {data.TagValue}");
-
-        }
+        await GetInitialStationData("IE-F3-BLO01", HandleStationS2);
     }
+
     private async void GetInitialStationDataS3()
     {
-        var listInitialData3 = await GetBufferListSpecificStation("IE-F3-BLO02");
+        await GetInitialStationData("IE-F3-BLO02", HandleStationS3);
+    }
 
-        foreach (var data in listInitialData3)
+    private async Task GetInitialStationData(string stationId, Action<DataSignalR> handleStation)
+    {
+        var listInitialData = await GetBufferListSpecificStation(stationId);
+        foreach (var data in listInitialData)
         {
-            Debug.Log($" GETBUFFFER S3: {data.StationId} {data.TagId} {data.TagValue} ");
-            HandleStationS3(data);
-
-
-
+            handleStation(data);
+            Debug.Log($" GETBUFFFER {stationId}: {data.StationId} {data.TagId} {data.TagValue} ");
         }
     }
     void HandleStationS1(DataSignalR data)
     {
-        UpdateMachineStatus(data, listMachineStatusS1);
-        UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
-        UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
-        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
-        UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
-        UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
-        UpdateChemicalDetection(data, "S1_FS_CURRENT_", ChemicalDetectionValue, ChemicalDetectionFrameValue);
+        switch (update_Specific_Function)
+        {
+            case "updateMachineStatus":
+                UpdateMachineStatus(data, listMachineStatusS1);
+                break;
+            case "updateConnectionStatus":
+                UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
+                break;
+            case "updateIO":
+                UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
+                break;
+            default:
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+                break;
+        }
     }
 
     void HandleStationS2(DataSignalR data)
     {
+        switch (update_Specific_Function)
+        {
+            case "updateMachineStatus":
+                UpdateMachineStatus(data, listMachineStatusS2);
+                break;
+            case "updateConnectionStatus":
+                UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
+                break;
+            case "updateIO":
+                UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
+                break;
+            default:
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+                break;
+        }
 
-        UpdateMachineStatus(data, listMachineStatusS2);
+        /*UpdateMachineStatus(data, listMachineStatusS2);
         UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
         UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
         UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
-        UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
+        UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);*/
 
     }
 
     void HandleStationS3(DataSignalR data)
     {
-        UpdateMachineStatus(data, listMachineStatusS3);
-        UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
-        UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
-        UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
-        UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
-        UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
-        UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+        switch (update_Specific_Function)
+        {
+            case "updateMachineStatus":
+                UpdateMachineStatus(data, listMachineStatusS3);
+                break;
+            case "updateConnectionStatus":
+                UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
+                break;
+            case "updateIO":
+                UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
+                break;
+            default:
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+                break;
+        }
+        /*
+                UpdateMachineStatus(data, listMachineStatusS3);
+                UpdateConnectionStatus(data, connectionStatusFrameS3, connectionStatusValueS3);
+                UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
+                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);*/
 
     }
 
@@ -177,9 +218,7 @@ public class GetBufferStation : MonoBehaviour
             {
                 settingValues[index].text = data.TagValue;
             }
-
         }
-
     }
     void UpdateEnableValues(DataSignalR data, List<string> enableTags, TMP_Text[] enableValues, GameObject[] enableFrames)
     {
@@ -200,28 +239,26 @@ public class GetBufferStation : MonoBehaviour
 
     void UpdateMachineStatus(DataSignalR data, GameObject[] listMachineStatus)
     {
-
         if (data.TagId == "machineStatus")
         {
             Debug.Log(data.StationId + "MachineStatus: " + data.TagValue);
             Color32[] colors = new Color32[]
-             {
-        new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
-        Color.green,                         // case "1"
-        new Color32(0xFF, 0xC0, 0x00, 0xFF), //case "2" ==> Cam
-        Color.red,             // case "3"
-        new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4"
-        Color.yellow// case "5"
-             };
+            {
+               new Color32(0xFF, 0x01, 0xA8, 0xD7), // case "0" ==> Hồng sáng
+               Color.green,                         // case "1" ==> xanh
+               new Color32(0xFF, 0xC0, 0x00, 0xFF), // case "2"  ==> vàng Cam
+               Color.red,                           // case "3" ==> Đỏ
+               new Color32(0xFF, 0x9A, 0x39, 0xFB), // case "4" ==> Cam nhạt
+               Color.yellow                         // case "5" ==> Vàng
+            };
             //Debug.Log("MachineStatus: " + data.TagValue); 
             int value = int.Parse(data.TagValue);
 
             // Reset all statuses to grey using a loop
             for (int i = 0; i < listMachineStatus.Length; i++)
             {
-                listMachineStatus[i].GetComponent<Image>().color = GlobalVariable.colors[3];
+                listMachineStatus[i].GetComponent<Image>().color = GlobalVariable.colors[3]; //xám toàn bộ
             }
-
             // Set the specific status based on the value
             if (value >= 0 && value < listMachineStatus.Length)
             {
@@ -316,10 +353,10 @@ public class GetBufferStation : MonoBehaviour
         }
     }
 
-    public async Task<List<DataSignalR>> GetBufferListSpecificStation(string stationIdSpecific)
+    public async Task<List<DataSignalR>> GetBufferListSpecificStation(string station_Id_Specific)
     {
-        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll");
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response);
-        return tags.Where(data => data.StationId == stationIdSpecific && !data.TagId.StartsWith("M1")).ToList();
+        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll"); // Gọi hàm SenAll từ server
+        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response); // Chuyển đổi dữ liệu từ chuỗi JSON sang List<DataSignalR> ==> Mapping code
+        return tags.Where(data => data.StationId == station_Id_Specific && !data.TagId.StartsWith("M1")).ToList();
     }
 }

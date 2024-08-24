@@ -17,8 +17,6 @@ public class Station1_Connection_Status : MonoBehaviour
         {
             signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
-
-        
     }
 
     void OnEnable()
