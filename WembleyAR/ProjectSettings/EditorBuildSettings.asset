@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MayOngMauScene.unity
     guid: 42217d8d85a054b4b88a27a77cd29354
-  - enabled: 0
-    path: Assets/Scenes/MayNutChan.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: accf9cf374518534a968e52597a9924c,
       type: 2}

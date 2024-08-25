@@ -50,7 +50,6 @@ public class OnCLickShowDialog : MonoBehaviour
         // Ẩn hộp thoại
         dialogModel.frameDialog.SetActive(false);
         dialogCanvas.SetActive(false);
-
     }
 
 }

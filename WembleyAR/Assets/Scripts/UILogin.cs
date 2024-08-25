@@ -1,58 +1,85 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+
 public class UILogin : MonoBehaviour
 {
+    [SerializeField] private TMP_InputField userNameField;
+    [SerializeField] private TMP_InputField passwordField;
+    [SerializeField] private Button loginButton;
+    [SerializeField] private string targetSceneName;
+    [SerializeField] private DialogModel dialogModel;
+    [SerializeField] private GameObject dialogCanvas;
+    [SerializeField] private float timeDialog;
+    private Image frameDialogImage;
 
-    public TMPro.TMP_InputField userNameField;
-    public TMPro.TMP_InputField passwordField;
-    public Button loginButton;
-    public string targetSceneName;
+    private readonly Dictionary<string, string> staff_Account = new Dictionary<string, string>
+    {
+        {"admin", "123456"},
+        {"tuyến", "123456"},
+        {"duy", "123456"},
+    };
 
-    void Awake()
+    private void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
     }
-    void Start()
+
+    private void Start()
     {
-        //Subscribe to onClick event
-        loginButton.onClick.AddListener(adminDetails);
+        frameDialogImage = dialogModel.frameDialog.GetComponent<Image>();
+        loginButton.onClick.AddListener(LoginButtonClicked);
     }
 
-    Dictionary<string, string> staffDetails = new Dictionary<string, string>
+    private void LoginButtonClicked()
     {
-        {"admin","123456" },
-        {"Tuyến","123456" },
-        {"Duy","123456" },
+        string userName = userNameField.text;
+        string password = passwordField.text;
 
-    };
-
-
-    public void adminDetails()
-    {
-        //Get Username from Input then convert it to int
-        string userName;
-        userName = userNameField.text;
-        //Get Password from Input
-        string password;
-        password = passwordField.text;
-
-        string foundPassword;
-        if (staffDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
+        if (staff_Account.TryGetValue(userName, out string foundPassword) && foundPassword.ToLower() == password.ToLower())
         {
-            SceneManager.LoadScene(targetSceneName);
-
-            // Lưu tên cảnh hiện tại
-            PlayerPrefs.SetString(targetSceneName, SceneManager.GetActiveScene().name);
-
-            //  Debug.Log("User authenticated");
+            StartCoroutine(ShowDialogCoroutine("loading"));
         }
         else
         {
-            //   Debug.Log("Invalid password");
+            StartCoroutine(ShowDialogCoroutine("failure"));
         }
+    }
+
+    private IEnumerator ShowDialogCoroutine(string type)
+    {
+
+        dialogModel.contentDialog.color = Color.white; // Đỏ
+
+        switch (type)
+        {
+            case "loading":
+                frameDialogImage.color = new Color32(0x3D, 0xFF, 0x7F, 0xFF); // Xanh nhạt
+                dialogModel.contentDialog.text = "Đang đăng nhập...";
+                break;
+            case "success":
+                frameDialogImage.color = GlobalVariable.colors[0]; // Xanh lá
+                break;
+            case "failure":
+                frameDialogImage.color = GlobalVariable.colors[2]; // Đỏ);
+                dialogModel.contentDialog.text = "Tài khoản không chính xác, hãy thử lại lại!";   // Đỏ
+                break;
+        }
+
+        dialogModel.frameDialog.SetActive(true);
+        dialogCanvas.SetActive(true);
+        yield return new WaitForSeconds(timeDialog);
+        dialogModel.frameDialog.SetActive(false);
+        dialogCanvas.SetActive(false);
+
+        if (type == "loading")
+        {
+            PlayerPrefs.SetString(targetSceneName, SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(targetSceneName);
+        }
+
     }
 }
