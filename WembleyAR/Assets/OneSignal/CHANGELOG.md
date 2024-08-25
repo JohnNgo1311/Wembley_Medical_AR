@@ -5,6 +5,81 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [5.1.7]
+### Changed
+- Updated included Android SDK from 5.1.13 to [5.1.17](https://github.com/OneSignal/OneSignal-Android-SDK/releases/tag/5.1.17)
+  - Fixed Xiaomi notification click not foregrounding app
+  - Fixed FCM push token not being refreshed
+  - Poll for notification permission changes to detect permission change when prompting outside of OneSignal
+  - Cold start creates new session and refreshes the user from the server
+  - Immediately process pending operations when privacy consent goes from false to true
+  - Fixed OneSignal.Notifications.RequestPermissionAsync() not firing when permission was already granted
+  - Fixed Operation Model Store adding duplicate operations when the same ones that were previously added to the store and persisted, are re-read from cache
+  - Fixed a bug causing clicking an unexpanded group notification results in only registering the click result for the final notification in the group
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-Android-SDK/releases)
+- Updated included iOS SDK from 5.2.0 to [5.2.2](https://github.com/OneSignal/OneSignal-iOS-SDK/releases/tag/5.2.2)
+  - Prevent In-App Message request crashes by making null values safe
+  - Added Dispatch Queues to all executors to prevent concurrency crashes
+  - Fixed clearing notifications incorrectly such as when pulling down the notification center
+  - Fixed a purchases bug for the amount spent
+  - Fixed a build issue for mac catalyst
+  - Fixed crash when IAM window fails to load by using the main thread
+  - Network call optimizations: Combine user property updates for network call improvements
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-iOS-SDK/releases)
+### Fixed
+- Additional instance of OneSignal error when calling OneSignal methods in Awake()
+- iOS Mac Catalyst build error: Use of undeclared identifier 'OneSignalLiveActivitiesManagerImpl'
+
+## [5.1.6]
+### Fixed
+- iOS build error: No type or protocol named OSLiveActivities
+
+## [5.1.5]
+### Changed
+- Updated included Android SDK from 5.1.10 to [5.1.13](https://github.com/OneSignal/OneSignal-Android-SDK/releases/tag/5.1.13)
+  - Fixed the ANR issue caused by prolonged loading of OperationRepo and potentially by extended holding of the model lock during disk I/O read operations
+  - Fixed IndexOutOfBounds exception thrown from OperationRepo.loadSavedOperations if app was opened offline, some operations done, and then the app is opened again
+  - Targets JDK11 instead of JDK21 to address build errors encountered on certain development environments using JDK versions below 21
+  - Fixed grouping skipping opRepoPostCreateDelay, causing operations being applied out of order when multiple login operations are pending
+  - Fixed cancelling permission request dialog not firing continuation
+  - Fixed RecoverFromDroppedLoginBug not running in very rare cases
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-Android-SDK/releases)
+- Updated included iOS SDK from 5.1.6 to [5.2.0](https://github.com/OneSignal/OneSignal-iOS-SDK/releases/tag/5.2.0)
+  - Added additional 6 privacy manifests to the 6 sub-targets that are included in the primary targets clients import
+  - Updated User Defaults API reason to include app groups for appropriate modules
+  - Fixed rare scenario of dropping data when multiple logins are called
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-iOS-SDK/releases)
+
+## [5.1.4]
+### Changed
+- Updated included Android SDK from 5.1.9 to [5.1.10](https://github.com/OneSignal/OneSignal-Android-SDK/releases/tag/5.1.10)
+  - Handle incorrect 404 responses; add a delay after creates and retries on 404 of new ids
+  - Added network call optimizations
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-Android-SDK/releases)
+- Updated included iOS SDK from 5.1.5 to [5.1.6](https://github.com/OneSignal/OneSignal-iOS-SDK/releases/tag/5.1.6)
+  - Fixed pending properties from being sent to the incorrect user when quickly changing users
+  - Fixed crashes when encoding user models
+  - Fixed crash in OneSignalAttachmentHandler trimURLSpacing method
+  - Fixed crash when handling a dialog result
+  - Removed IAM window when an in app message is inactive
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-iOS-SDK/releases)
+
+## [5.1.3]
+### Changed
+- Updated included Android SDK from 5.1.8 to [5.1.9](https://github.com/OneSignal/OneSignal-Android-SDK/releases/tag/5.1.9)
+  - Added AndroidManifest option to override In-App Messages gray overlay and dropshadow
+    - \<meta-data android:name="com.onesignal.inAppMessageHideGrayOverlay" android:value="true"/>
+    - \<meta-data android:name="com.onesignal.inAppMessageHideDropShadow" android:value="true"/>
+  - Fixed WorkManager not initialized crash
+  - Fixed don't re-create user on failed remove alias
+  - Added network call optimizations 
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-Android-SDK/releases)
+- Updated included iOS SDK from 5.1.4 to [5.1.5](https://github.com/OneSignal/OneSignal-iOS-SDK/releases/tag/5.1.5)
+  - Added plist option to hide gray overlay and disable dropshadow for In-App Messages
+    - OneSignal_in_app_message_hide_gray_overlay
+    - OneSignal_in_app_message_hide_drop_shadow
+  - For full changes, see the [native release notes](https://github.com/OneSignal/OneSignal-iOS-SDK/releases)
+
 ## [5.1.2]
 ### Changed
 - Updated included Android SDK from 5.1.6 to [5.1.8](https://github.com/OneSignal/OneSignal-Android-SDK/releases/tag/5.1.8)
@@ -304,7 +379,12 @@ If you run into any problems, please don’t hesitate to [open an issue](https:/
   - If you are updating from a previous version of the OneSignal Unity SDK please follow the Unity Asset Store instructions in
       the [README](https://github.com/OneSignal/OneSignal-Unity-SDK/README.md#unity-asset-store) to ensure a smooth transition.
 
-[Unreleased]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.2...HEAD
+[Unreleased]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.7...HEAD
+[5.1.7]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.6...5.1.7
+[5.1.6]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.5...5.1.6
+[5.1.5]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.4...5.1.5
+[5.1.4]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.3...5.1.4
+[5.1.3]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.2...5.1.3
 [5.1.2]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.1...5.1.2
 [5.1.1]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.1.0...5.1.1
 [5.1.0]: https://github.com/OneSignal/OneSignal-Unity-SDK/compare/5.0.6...5.1.0

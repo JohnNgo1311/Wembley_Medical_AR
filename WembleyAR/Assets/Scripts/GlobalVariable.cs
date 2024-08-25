@@ -150,6 +150,15 @@ public class GlobalVariable : MonoBehaviour
     public static int[] RejCountS89TR = new int[4];
 
     public static int[] RejCountS10TR = new int[4];
+
+    public static bool loginSuccess = false;
+    public static string recentScence = "";
+    public static AccountModel accountModel = new AccountModel()
+    {
+        userName = "",
+        password = ""
+    };
+
     public static List<Color32> colors = new List<Color32>
         {
             new Color32(0x3D, 0xFF, 0x7F, 0xFF), // Màu xanh lá   0
@@ -352,6 +361,13 @@ public class DialogModel
 {
     public GameObject frameDialog;
     public TMP_Text contentDialog;
+}
+
+[System.Serializable]
+public class AccountModel
+{
+    public string userName;
+    public string password;
 }
 
 

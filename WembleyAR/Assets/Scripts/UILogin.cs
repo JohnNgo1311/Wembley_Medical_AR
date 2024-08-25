@@ -26,6 +26,13 @@ public class UILogin : MonoBehaviour
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
+        GlobalVariable.recentScence = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("recentScene", GlobalVariable.recentScence);
+        if (!string.IsNullOrWhiteSpace(GlobalVariable.accountModel.userName) && !string.IsNullOrWhiteSpace(GlobalVariable.accountModel.password) && staff_Account.ContainsKey(GlobalVariable.accountModel.userName) && GlobalVariable.loginSuccess)
+        {
+            userNameField.text = GlobalVariable.accountModel.userName;
+            passwordField.text = GlobalVariable.accountModel.password;
+        }
     }
 
     private void Start()
@@ -41,6 +48,8 @@ public class UILogin : MonoBehaviour
 
         if (staff_Account.TryGetValue(userName, out string foundPassword) && foundPassword.ToLower() == password.ToLower())
         {
+            GlobalVariable.accountModel.userName = userName;
+            GlobalVariable.accountModel.password = password;
             StartCoroutine(ShowDialogCoroutine("loading"));
         }
         else
@@ -77,7 +86,6 @@ public class UILogin : MonoBehaviour
 
         if (type == "loading")
         {
-            PlayerPrefs.SetString(targetSceneName, SceneManager.GetActiveScene().name);
             SceneManager.LoadScene(targetSceneName);
         }
 

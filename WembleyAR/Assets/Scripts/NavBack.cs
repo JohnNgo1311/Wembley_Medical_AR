@@ -6,21 +6,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class NavBack : MonoBehaviour
 {
-    public string previousSceneName;
-    public string recentSceneName;
+    public string previousScene;
     void Start()
     {
 
     }
     private void Awake()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-    }
+        GlobalVariable.recentScence = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("recentScene", GlobalVariable.recentScence);
+        if (GlobalVariable.recentScence != "LoginSence")
+        {
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
 
+        }
+    }
 
     public void NavigatePop()
     {
-        SceneManager.LoadScene(recentSceneName);
-        PlayerPrefs.SetString(recentSceneName, SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(previousScene);
     }
 }

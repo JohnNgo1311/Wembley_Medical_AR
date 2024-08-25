@@ -1,27 +1,27 @@
 {
   "dependencies": {
     "com.onesignal.unity.android": {
-      "version": "5.1.6",
+      "version": "5.1.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.onesignal.unity.core": "5.1.6"
+        "com.onesignal.unity.core": "5.1.7"
       },
       "url": "https://registry.npmjs.org"
     },
     "com.onesignal.unity.core": {
-      "version": "5.1.6",
-      "depth": 1,
+      "version": "5.1.7",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.org"
     },
     "com.onesignal.unity.ios": {
-      "version": "5.1.2",
+      "version": "5.1.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.onesignal.unity.core": "5.1.2"
+        "com.onesignal.unity.core": "5.1.7"
       },
       "url": "https://registry.npmjs.org"
     },
@@ -127,6 +127,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.mobile.android-logcat": {
+      "version": "1.3.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
       "depth": 2,
@@ -228,7 +235,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {

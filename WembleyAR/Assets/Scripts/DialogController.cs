@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogController : MonoBehaviour
@@ -10,42 +11,46 @@ public class DialogController : MonoBehaviour
     public string dialogText;
     public string typeDialog;
     public float timeDialog;
+    private Image frameDialogImage;
 
+    void Awake()
+    {
+        frameDialogImage = dialogModel.frameDialog.GetComponent<Image>();
+    }
 
     void Start()
     {
+        if (!GlobalVariable.loginSuccess)
+        {
+            StartCoroutine(ShowDialogCoroutine(typeDialog));
+        }
     }
 
-    public void ShowDialogFor2Seconds()
+    private IEnumerator ShowDialogCoroutine(string type)
     {
-        StartCoroutine(ShowDialogCoroutine());
-    }
+        dialogModel.contentDialog.color = Color.white;
 
-    private IEnumerator ShowDialogCoroutine()
-    {
-        switch (typeDialog)
+        switch (type)
         {
             case "loading":
-                dialogModel.frameDialog.GetComponent<Image>().color = GlobalVariable.colors[1];
+                frameDialogImage.color = GlobalVariable.colors[1];
                 break;
             case "success":
-                dialogModel.frameDialog.GetComponent<Image>().color = GlobalVariable.colors[0];
+                frameDialogImage.color = GlobalVariable.colors[0];
                 break;
             case "failure":
-                dialogModel.frameDialog.GetComponent<Image>().color = GlobalVariable.colors[3];
+                frameDialogImage.color = GlobalVariable.colors[2];
                 break;
         }
 
-        // Hiển thị hộp thoại
         dialogModel.contentDialog.text = dialogText;
         dialogModel.frameDialog.SetActive(true);
         dialogCanvas.SetActive(true);
-        // Đợi
-        yield return new WaitForSeconds((float)timeDialog);
 
+        yield return new WaitForSeconds(timeDialog);
         // Ẩn hộp thoại
         dialogModel.frameDialog.SetActive(false);
         dialogCanvas.SetActive(false);
-
+        GlobalVariable.loginSuccess = true;
     }
 }
