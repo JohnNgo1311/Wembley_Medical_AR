@@ -12,6 +12,7 @@
 
 
 
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Memory;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Memory_CodeGenModule;
 const Il2CppCodeGenModule g_System_Memory_CodeGenModule = 
 {
@@ -27,7 +28,7 @@ const Il2CppCodeGenModule g_System_Memory_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationSystem_Memory,
 	NULL, // module initializer,
 	NULL,
 	NULL,

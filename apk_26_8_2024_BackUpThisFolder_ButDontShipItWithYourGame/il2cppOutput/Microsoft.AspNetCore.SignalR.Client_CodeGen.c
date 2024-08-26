@@ -62,22 +62,23 @@ static Il2CppMethodPointer s_methodPointers[15] =
 };
 static const int32_t s_InvokerIndices[15] = 
 {
-	12412,
-	11420,
-	11419,
-	10843,
-	12412,
-	11420,
-	11419,
-	10843,
-	10838,
-	7451,
-	7451,
-	4171,
-	7451,
-	9330,
-	7451,
+	10238,
+	9439,
+	9438,
+	8934,
+	10238,
+	9439,
+	9438,
+	8934,
+	8929,
+	6158,
+	6158,
+	3471,
+	6158,
+	7683,
+	6158,
 };
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationMicrosoft_AspNetCore_SignalR_Client;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_AspNetCore_SignalR_Client_CodeGenModule;
 const Il2CppCodeGenModule g_Microsoft_AspNetCore_SignalR_Client_CodeGenModule = 
 {
@@ -93,7 +94,7 @@ const Il2CppCodeGenModule g_Microsoft_AspNetCore_SignalR_Client_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationMicrosoft_AspNetCore_SignalR_Client,
 	NULL, // module initializer,
 	NULL,
 	NULL,

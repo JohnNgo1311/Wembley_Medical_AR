@@ -98,8 +98,25 @@ IL2CPP_EXTERN_C RuntimeClass* ISignalRBuilder_tBAC203801CA49662107D1EC06A0D069BA
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteralF063CD3C72AEBEF2BDE907CB9EC53110D1976528;
+IL2CPP_EXTERN_C const RuntimeMethod* HttpConnectionOptionsDerivedHttpEndPoint__ctor_m56AF8FA2C76A70B05B27CC09C359C6D27BE5BC12_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HttpConnectionOptions_get_Url_m555B96C44A9D3F50680D2F0BA50D5F36841FEE7F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HttpConnectionOptions_set_DefaultTransferFormat_mD23A151DEBD70C6FC3A0AA8DAE9FDEACD6EB799C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HttpConnectionOptions_set_Transports_mD25685BC5B4BF72AD95773E88C2CB4CE148EE897_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HttpConnectionOptions_set_Url_m9557716C85F120EAE2927A9286EAB374AB934E16_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrlCore_mDC0E5B85DC27DADA6A6B704B9CF444BD508C8EC1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m33A69376EF5C809F764832E5DBAFDAD7371F925F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m4962A4687E137E3EBEA1DB617962F6CE088CDAD2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m5917252549153853B7A7C6E1F4BD7BC27505BB71_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m5A5DAB98820375ACD7A2C4B10F11ED2254EB0982_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m622751D55E51A955D2446FB2F18F206B01E39FDF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_m8AB90909435FA6115DF817B1C14DFF390B78085F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_mE152E722948ED818510F152BA33A199895CE2730_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubConnectionBuilderHttpExtensions_WithUrl_mFF41D6A22B6F6D8BD324705BCFADC62E91316AFD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubProtocolDerivedHttpOptionsConfigurer_Configure_m3934C1BC96B6D7796736D6F1D0D6BE89E681D1A8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubProtocolDerivedHttpOptionsConfigurer_Configure_m57CF6C24A10565F9BE731107BC92D03F91F1B17B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HubProtocolDerivedHttpOptionsConfigurer__ctor_m2979B4AAA2FDAB20B360C8796628D9AAB3B8B5BB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_m655FF317BB4047CFACAE393B41B3016759FD2E59_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mB1F55188CDD50D6D725D41F55D2F2540CD15FB20_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mE34842316EC1088DA92E882FA584DD0B8B9438F9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_Value_mD79EBF9EFADA9DA290528E6B1238CFA83EB3EE65_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* OptionsServiceCollectionExtensions_Configure_TisHttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E_mF70C48FAB805B094EF7919B5D135717D3D879E72_RuntimeMethod_var;
@@ -107,6 +124,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingl
 IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_TisIConfigureOptions_1_t09BEE047A28F7DE4280F5DE1928746DE16ECD8FC_TisHubProtocolDerivedHttpOptionsConfigurer_t77F5DC01D4FF029AD37AA6AF6C0A5847F49B3A64_m36E7421381F3EBDB9A1F752B1661B6F1DB697FD9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_TisIConnectionFactory_t6B96A9BA4E9458D99E75C063C3CF71535FCEE325_TisHttpConnectionFactory_tE7F6811B0CEFAAEA53849451711CE83EE928F19B_m44CBA00B0F510A38D064D563934DB75514F032E5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass8_0_U3CWithUrlCoreU3Eb__0_m014A6EED3BBCD0D937A8638A10D248AC533BF625_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass8_0__ctor_m70F483B22CE057F386F4FCAAE92F79B6F4B968E5_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -663,11 +681,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m5A5DAB98820375ACD7A2C4B10F11ED2254EB0982_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Nullable_1_tFAE29A217347CC0A8FC4F2A9B5CF9FE6912099B1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m5A5DAB98820375ACD7A2C4B10F11ED2254EB0982_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		String_t* L_1 = ___url1;
@@ -688,11 +709,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m5917252549153853B7A7C6E1F4BD7BC27505BB71_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Nullable_1_tFAE29A217347CC0A8FC4F2A9B5CF9FE6912099B1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m5917252549153853B7A7C6E1F4BD7BC27505BB71_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		String_t* L_1 = ___url1;
@@ -714,10 +738,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_mFF41D6A22B6F6D8BD324705BCFADC62E91316AFD_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m655FF317BB4047CFACAE393B41B3016759FD2E59_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_mFF41D6A22B6F6D8BD324705BCFADC62E91316AFD_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		String_t* L_1 = ___url1;
@@ -740,10 +767,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m8AB90909435FA6115DF817B1C14DFF390B78085F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m655FF317BB4047CFACAE393B41B3016759FD2E59_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m8AB90909435FA6115DF817B1C14DFF390B78085F_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		String_t* L_1 = ___url1;
@@ -764,8 +794,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 // Microsoft.AspNetCore.SignalR.Client.IHubConnectionBuilder Microsoft.AspNetCore.SignalR.Client.HubConnectionBuilderHttpExtensions::WithUrl(Microsoft.AspNetCore.SignalR.Client.IHubConnectionBuilder,System.Uri)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtensions_WithUrl_m622751D55E51A955D2446FB2F18F206B01E39FDF (RuntimeObject* ___hubConnectionBuilder0, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___url1, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m622751D55E51A955D2446FB2F18F206B01E39FDF_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	Nullable_1_tFAE29A217347CC0A8FC4F2A9B5CF9FE6912099B1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m622751D55E51A955D2446FB2F18F206B01E39FDF_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = ___url1;
@@ -780,8 +818,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 // Microsoft.AspNetCore.SignalR.Client.IHubConnectionBuilder Microsoft.AspNetCore.SignalR.Client.HubConnectionBuilderHttpExtensions::WithUrl(Microsoft.AspNetCore.SignalR.Client.IHubConnectionBuilder,System.Uri,System.Action`1<Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionOptions>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtensions_WithUrl_m33A69376EF5C809F764832E5DBAFDAD7371F925F (RuntimeObject* ___hubConnectionBuilder0, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___url1, Action_1_tC0C8BDADC337A9D2FDAAF5B71A1AFD5801955A5A* ___configureHttpConnection2, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m33A69376EF5C809F764832E5DBAFDAD7371F925F_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	Nullable_1_tFAE29A217347CC0A8FC4F2A9B5CF9FE6912099B1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m33A69376EF5C809F764832E5DBAFDAD7371F925F_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = ___url1;
@@ -800,9 +846,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_mE152E722948ED818510F152BA33A199895CE2730_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m655FF317BB4047CFACAE393B41B3016759FD2E59_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_mE152E722948ED818510F152BA33A199895CE2730_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = ___url1;
@@ -822,9 +871,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrl_m4962A4687E137E3EBEA1DB617962F6CE088CDAD2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m655FF317BB4047CFACAE393B41B3016759FD2E59_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrl_m4962A4687E137E3EBEA1DB617962F6CE088CDAD2_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___hubConnectionBuilder0;
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = ___url1;
@@ -846,6 +898,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tC0C8BDADC337A9D2FDAAF5B71A1AFD5801955A5A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubConnectionBuilderHttpExtensions_WithUrlCore_mDC0E5B85DC27DADA6A6B704B9CF444BD508C8EC1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ISignalRBuilder_tBAC203801CA49662107D1EC06A0D069BA33D9A17_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OptionsServiceCollectionExtensions_Configure_TisHttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E_mF70C48FAB805B094EF7919B5D135717D3D879E72_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_TisEndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564_TisHttpConnectionOptionsDerivedHttpEndPoint_t0D570AE63C638135F379FC2451385866EB935DB8_m1E2EEBB49A2643ADCC51124F9284143299432EB9_RuntimeMethod_var);
@@ -856,6 +909,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HubConnectionBuilderHttpExtens
 		s_Il2CppMethodInitialized = true;
 	}
 	U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D* V_0 = NULL;
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubConnectionBuilderHttpExtensions_WithUrlCore_mDC0E5B85DC27DADA6A6B704B9CF444BD508C8EC1_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D* L_0 = (U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
@@ -949,9 +1004,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpConnectionOptionsDerivedHttpEndPoint
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HttpConnectionOptionsDerivedHttpEndPoint__ctor_m56AF8FA2C76A70B05B27CC09C359C6D27BE5BC12_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOptions_1_tBD67C03B3AEBF7D72E4E790EC46E943763841169_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HttpConnectionOptionsDerivedHttpEndPoint__ctor_m56AF8FA2C76A70B05B27CC09C359C6D27BE5BC12_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		RuntimeObject* L_0 = ___httpConnectionOptions0;
 		NullCheck(L_0);
@@ -978,9 +1036,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubProtocolDerivedHttpOptionsConfigurer__ctor_m2979B4AAA2FDAB20B360C8796628D9AAB3B8B5BB_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IHubProtocol_tC52127A81CFC3DCC986906DD54CE241F5E9F7FAD_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubProtocolDerivedHttpOptionsConfigurer__ctor_m2979B4AAA2FDAB20B360C8796628D9AAB3B8B5BB_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		RuntimeObject* L_0 = ___hubProtocol0;
@@ -994,6 +1055,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_
 // System.Void Microsoft.AspNetCore.SignalR.Client.HubConnectionBuilderHttpExtensions/HubProtocolDerivedHttpOptionsConfigurer::Configure(System.String,Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionOptions)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_Configure_m3934C1BC96B6D7796736D6F1D0D6BE89E681D1A8 (HubProtocolDerivedHttpOptionsConfigurer_t77F5DC01D4FF029AD37AA6AF6C0A5847F49B3A64* __this, String_t* ___name0, HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* ___options1, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubProtocolDerivedHttpOptionsConfigurer_Configure_m3934C1BC96B6D7796736D6F1D0D6BE89E681D1A8_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubProtocolDerivedHttpOptionsConfigurer_Configure_m3934C1BC96B6D7796736D6F1D0D6BE89E681D1A8_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* L_0 = ___options1;
 		HubProtocolDerivedHttpOptionsConfigurer_Configure_m57CF6C24A10565F9BE731107BC92D03F91F1B17B(__this, L_0, NULL);
@@ -1003,6 +1072,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_
 // System.Void Microsoft.AspNetCore.SignalR.Client.HubConnectionBuilderHttpExtensions/HubProtocolDerivedHttpOptionsConfigurer::Configure(Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionOptions)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_Configure_m57CF6C24A10565F9BE731107BC92D03F91F1B17B (HubProtocolDerivedHttpOptionsConfigurer_t77F5DC01D4FF029AD37AA6AF6C0A5847F49B3A64* __this, HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* ___options0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HubProtocolDerivedHttpOptionsConfigurer_Configure_m57CF6C24A10565F9BE731107BC92D03F91F1B17B_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HubProtocolDerivedHttpOptionsConfigurer_Configure_m57CF6C24A10565F9BE731107BC92D03F91F1B17B_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* L_0 = ___options0;
 		int32_t L_1 = __this->____defaultTransferFormat_0;
@@ -1022,6 +1099,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HubProtocolDerivedHttpOptionsConfigurer_
 // System.Void Microsoft.AspNetCore.SignalR.Client.HubConnectionBuilderHttpExtensions/<>c__DisplayClass8_0::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0__ctor_m70F483B22CE057F386F4FCAAE92F79B6F4B968E5 (U3CU3Ec__DisplayClass8_0_t18BF517AAE9FD7C289C176BF253C8A37346FD60D* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass8_0__ctor_m70F483B22CE057F386F4FCAAE92F79B6F4B968E5_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CU3Ec__DisplayClass8_0__ctor_m70F483B22CE057F386F4FCAAE92F79B6F4B968E5_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -1035,8 +1120,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass8_0_U3CWithUrlCoreU
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mE34842316EC1088DA92E882FA584DD0B8B9438F9_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_Value_mD79EBF9EFADA9DA290528E6B1238CFA83EB3EE65_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass8_0_U3CWithUrlCoreU3Eb__0_m014A6EED3BBCD0D937A8638A10D248AC533BF625_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CU3Ec__DisplayClass8_0_U3CWithUrlCoreU3Eb__0_m014A6EED3BBCD0D937A8638A10D248AC533BF625_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* L_0 = ___o0;
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = __this->___url_0;
@@ -1069,6 +1157,14 @@ IL_002a:
 #endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* HttpConnectionOptions_get_Url_m555B96C44A9D3F50680D2F0BA50D5F36841FEE7F_inline (HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HttpConnectionOptions_get_Url_m555B96C44A9D3F50680D2F0BA50D5F36841FEE7F_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HttpConnectionOptions_get_Url_m555B96C44A9D3F50680D2F0BA50D5F36841FEE7F_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_0 = __this->___U3CUrlU3Ek__BackingField_4;
 		return L_0;
@@ -1076,6 +1172,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_DefaultTransferFormat_mD23A151DEBD70C6FC3A0AA8DAE9FDEACD6EB799C_inline (HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HttpConnectionOptions_set_DefaultTransferFormat_mD23A151DEBD70C6FC3A0AA8DAE9FDEACD6EB799C_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HttpConnectionOptions_set_DefaultTransferFormat_mD23A151DEBD70C6FC3A0AA8DAE9FDEACD6EB799C_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___value0;
 		__this->___U3CDefaultTransferFormatU3Ek__BackingField_12 = L_0;
@@ -1084,6 +1188,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_De
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_Url_m9557716C85F120EAE2927A9286EAB374AB934E16_inline (HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___value0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HttpConnectionOptions_set_Url_m9557716C85F120EAE2927A9286EAB374AB934E16_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HttpConnectionOptions_set_Url_m9557716C85F120EAE2927A9286EAB374AB934E16_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_0 = ___value0;
 		__this->___U3CUrlU3Ek__BackingField_4 = L_0;
@@ -1093,6 +1205,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_Ur
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_Transports_mD25685BC5B4BF72AD95773E88C2CB4CE148EE897_inline (HttpConnectionOptions_t5F775FF971DB8248A9972725DEBCD70FD81EFC6E* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HttpConnectionOptions_set_Transports_mD25685BC5B4BF72AD95773E88C2CB4CE148EE897_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, HttpConnectionOptions_set_Transports_mD25685BC5B4BF72AD95773E88C2CB4CE148EE897_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		int32_t L_0 = ___value0;
 		__this->___U3CTransportsU3Ek__BackingField_5 = L_0;
@@ -1101,6 +1221,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HttpConnectionOptions_set_Tr
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mB1F55188CDD50D6D725D41F55D2F2540CD15FB20_gshared_inline (Nullable_1_t163D49A1147F217B7BD43BE8ACC8A5CC6B846D14* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mB1F55188CDD50D6D725D41F55D2F2540CD15FB20_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Nullable_1_get_HasValue_mB1F55188CDD50D6D725D41F55D2F2540CD15FB20_RuntimeMethod_var, NULL, NULL, NULL);
+	CHECK_PAUSE_POINT;
 	{
 		bool L_0 = (bool)__this->___hasValue_0;
 		return L_0;

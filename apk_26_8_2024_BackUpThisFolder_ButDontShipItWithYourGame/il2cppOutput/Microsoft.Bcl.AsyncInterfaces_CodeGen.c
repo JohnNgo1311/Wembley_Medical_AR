@@ -12,6 +12,7 @@
 
 
 
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationMicrosoft_Bcl_AsyncInterfaces;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule;
 const Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule = 
 {
@@ -27,7 +28,7 @@ const Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationMicrosoft_Bcl_AsyncInterfaces,
 	NULL, // module initializer,
 	NULL,
 	NULL,

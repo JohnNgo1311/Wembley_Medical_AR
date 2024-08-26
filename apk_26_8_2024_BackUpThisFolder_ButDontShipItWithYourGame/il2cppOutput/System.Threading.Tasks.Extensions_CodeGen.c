@@ -12,6 +12,7 @@
 
 
 
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationSystem_Threading_Tasks_Extensions;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Threading_Tasks_Extensions_CodeGenModule;
 const Il2CppCodeGenModule g_System_Threading_Tasks_Extensions_CodeGenModule = 
 {
@@ -27,7 +28,7 @@ const Il2CppCodeGenModule g_System_Threading_Tasks_Extensions_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationSystem_Threading_Tasks_Extensions,
 	NULL, // module initializer,
 	NULL,
 	NULL,

@@ -58,35 +58,33 @@ extern void TrackedPoseDriver_CacheLocalPosition_m8D577E735DA73CDEB6CCAD152E457B
 extern void TrackedPoseDriver_ResetToCachedLocalPosition_m7FD46724D2BF37DFD65CEFB2DBD1A6F03BD3A90D (void);
 // 0x00000017 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::Awake()
 extern void TrackedPoseDriver_Awake_m1939FF8E60FD6C4D91FFCDFE3B861F83BB6C7EEE (void);
-// 0x00000018 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnDestroy()
-extern void TrackedPoseDriver_OnDestroy_m34A5CEA220217311DF4076BFA69F1013D0F2DAAA (void);
-// 0x00000019 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnEnable()
+// 0x00000018 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnEnable()
 extern void TrackedPoseDriver_OnEnable_m36C815D001B992B28CD69CA2F282EC7660C8E9F7 (void);
-// 0x0000001A System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnDisable()
+// 0x00000019 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnDisable()
 extern void TrackedPoseDriver_OnDisable_mC6EB0D19C5ECC17A8F17DB478C978CAE0280790F (void);
-// 0x0000001B System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::FixedUpdate()
+// 0x0000001A System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::FixedUpdate()
 extern void TrackedPoseDriver_FixedUpdate_m43910F40F01F60740C97F82D3157AFAE3587551A (void);
-// 0x0000001C System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::Update()
+// 0x0000001B System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::Update()
 extern void TrackedPoseDriver_Update_mA2D898B30A3072B68ED650C68DDF8A8461E04CCA (void);
-// 0x0000001D System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnBeforeRender()
+// 0x0000001C System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::OnBeforeRender()
 extern void TrackedPoseDriver_OnBeforeRender_m81B27C3A2FE49926AF76BB1E3332D35C313D2438 (void);
-// 0x0000001E System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::SetLocalTransform(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.SpatialTracking.PoseDataFlags)
+// 0x0000001D System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::SetLocalTransform(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.SpatialTracking.PoseDataFlags)
 extern void TrackedPoseDriver_SetLocalTransform_m470407210CD80790C2887973D09AFE97454CC2DF (void);
-// 0x0000001F UnityEngine.Pose UnityEngine.SpatialTracking.TrackedPoseDriver::TransformPoseByOriginIfNeeded(UnityEngine.Pose)
+// 0x0000001E UnityEngine.Pose UnityEngine.SpatialTracking.TrackedPoseDriver::TransformPoseByOriginIfNeeded(UnityEngine.Pose)
 extern void TrackedPoseDriver_TransformPoseByOriginIfNeeded_mA8C3ADCF55349F26E6AC90CC2488217ECC49F1B2 (void);
-// 0x00000020 System.Boolean UnityEngine.SpatialTracking.TrackedPoseDriver::HasStereoCamera()
+// 0x0000001F System.Boolean UnityEngine.SpatialTracking.TrackedPoseDriver::HasStereoCamera()
 extern void TrackedPoseDriver_HasStereoCamera_mE463A159FA7B7116C667A01B6197B44B340823CE (void);
-// 0x00000021 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::PerformUpdate()
+// 0x00000020 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::PerformUpdate()
 extern void TrackedPoseDriver_PerformUpdate_m7ECADDEEA9C6EC284D0EB169605B6BCA34449D97 (void);
-// 0x00000022 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::.ctor()
+// 0x00000021 System.Void UnityEngine.SpatialTracking.TrackedPoseDriver::.ctor()
 extern void TrackedPoseDriver__ctor_mCB5636C22D685907A7D30BEA4FF3D5BD2FE5D3F0 (void);
-// 0x00000023 UnityEngine.SpatialTracking.PoseDataFlags UnityEngine.Experimental.XR.Interaction.BasePoseProvider::GetPoseFromProvider(UnityEngine.Pose&)
+// 0x00000022 UnityEngine.SpatialTracking.PoseDataFlags UnityEngine.Experimental.XR.Interaction.BasePoseProvider::GetPoseFromProvider(UnityEngine.Pose&)
 extern void BasePoseProvider_GetPoseFromProvider_m815E60EB1A0C2D449B60F60DDD0D49DCF7E68A69 (void);
-// 0x00000024 System.Boolean UnityEngine.Experimental.XR.Interaction.BasePoseProvider::TryGetPoseFromProvider(UnityEngine.Pose&)
+// 0x00000023 System.Boolean UnityEngine.Experimental.XR.Interaction.BasePoseProvider::TryGetPoseFromProvider(UnityEngine.Pose&)
 extern void BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0 (void);
-// 0x00000025 System.Void UnityEngine.Experimental.XR.Interaction.BasePoseProvider::.ctor()
+// 0x00000024 System.Void UnityEngine.Experimental.XR.Interaction.BasePoseProvider::.ctor()
 extern void BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020 (void);
-static Il2CppMethodPointer s_methodPointers[37] = 
+static Il2CppMethodPointer s_methodPointers[36] = 
 {
 	TrackedPoseDriverDataDescription__cctor_mB66097427DE427D6DAC5B5A68CC2D35E7526BE27,
 	PoseDataSource_GetNodePoseData_m07EE5781C7E0EB625084A340D115C34C47B07B8E,
@@ -111,7 +109,6 @@ static Il2CppMethodPointer s_methodPointers[37] =
 	TrackedPoseDriver_CacheLocalPosition_m8D577E735DA73CDEB6CCAD152E457B141CB7A7D5,
 	TrackedPoseDriver_ResetToCachedLocalPosition_m7FD46724D2BF37DFD65CEFB2DBD1A6F03BD3A90D,
 	TrackedPoseDriver_Awake_m1939FF8E60FD6C4D91FFCDFE3B861F83BB6C7EEE,
-	TrackedPoseDriver_OnDestroy_m34A5CEA220217311DF4076BFA69F1013D0F2DAAA,
 	TrackedPoseDriver_OnEnable_m36C815D001B992B28CD69CA2F282EC7660C8E9F7,
 	TrackedPoseDriver_OnDisable_mC6EB0D19C5ECC17A8F17DB478C978CAE0280790F,
 	TrackedPoseDriver_FixedUpdate_m43910F40F01F60740C97F82D3157AFAE3587551A,
@@ -126,51 +123,51 @@ static Il2CppMethodPointer s_methodPointers[37] =
 	BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0,
 	BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020,
 };
-static const int32_t s_InvokerIndices[37] = 
+static const int32_t s_InvokerIndices[36] = 
 {
-	14152,
-	12279,
-	12279,
-	14152,
-	9125,
-	7410,
-	9125,
-	7410,
-	2523,
-	9169,
-	7451,
-	1788,
-	9125,
-	7410,
-	9125,
-	7410,
-	9052,
-	7334,
-	9181,
-	7466,
-	9330,
-	9330,
-	9330,
-	9330,
-	9330,
-	9330,
-	9330,
-	9330,
-	9330,
-	2266,
-	6642,
-	9052,
-	9330,
-	9330,
-	6104,
-	5186,
-	9330,
+	11693,
+	10125,
+	10125,
+	11693,
+	7499,
+	6125,
+	7499,
+	6125,
+	2178,
+	7537,
+	6158,
+	1530,
+	7499,
+	6125,
+	7499,
+	6125,
+	7432,
+	6057,
+	7549,
+	6172,
+	7683,
+	7683,
+	7683,
+	7683,
+	7683,
+	7683,
+	7683,
+	7683,
+	1960,
+	5491,
+	7432,
+	7683,
+	7683,
+	5058,
+	4288,
+	7683,
 };
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationUnityEngine_SpatialTracking;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule = 
 {
 	"UnityEngine.SpatialTracking.dll",
-	37,
+	36,
 	s_methodPointers,
 	0,
 	NULL,
@@ -181,7 +178,7 @@ const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationUnityEngine_SpatialTracking,
 	NULL, // module initializer,
 	NULL,
 	NULL,
