@@ -9,8 +9,8 @@ using UnityEngine;
 public class GlobalVariable : MonoBehaviour
 {
     public static HubConnection hubConnection;
-    public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub"; // chung server
-    //      public static string url = "http://10.0.70.45:81/NotificationHub"; // chung 
+    //public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub"; // chung server
+    public static string url = "http://10.0.70.45:81/NotificationHub"; // chung 
     //! SignalR nên phải có NotificationHub
 
 

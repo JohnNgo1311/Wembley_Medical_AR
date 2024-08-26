@@ -51,23 +51,27 @@ public class GetBufferStation : MonoBehaviour
     private string update_Specific_Function = "default";
     void OnEnable()
     {
-        switch (station_Id_Specific)
+        if (GlobalVariable.hubConnection != null)
         {
-            case "S1":
-                GetInitialStationDataS1();
-                Debug.Log("GETBUFFFRSTATION S1");
-                break;
-            case "S2":
-                GetInitialStationDataS2();
-                Debug.Log("GETBUFFFRSTATION S2");
-                break;
-            case "S3":
-                GetInitialStationDataS3();
-                Debug.Log("GETBUFFFRSTATION S3");
-                break;
-            default:
-                break;
+            switch (station_Id_Specific)
+            {
+                case "S1":
+                    GetInitialStationDataS1();
+                    Debug.Log("GETBUFFFRSTATION S1");
+                    break;
+                case "S2":
+                    GetInitialStationDataS2();
+                    Debug.Log("GETBUFFFRSTATION S2");
+                    break;
+                case "S3":
+                    GetInitialStationDataS3();
+                    Debug.Log("GETBUFFFRSTATION S3");
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 
     private async void GetInitialStationDataS1()
@@ -100,18 +104,20 @@ public class GetBufferStation : MonoBehaviour
         {
             case "updateMachineStatus":
                 UpdateMachineStatus(data, listMachineStatusS1);
+                Debug.Log("MachineStatus: " + data.TagValue);
                 break;
             case "updateConnectionStatus":
                 UpdateConnectionStatus(data, connectionStatusFrameS1, connectionStatusValueS1);
+                Debug.Log("ConnectionStatus: " + data.TagValue);
                 break;
             case "updateIO":
                 UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
+                Debug.Log("IO: " + data.TagValue);
                 break;
             default:
-                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
-                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
-                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
-                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
                 break;
         }
     }
@@ -130,10 +136,10 @@ public class GetBufferStation : MonoBehaviour
                 UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
                 break;
             default:
-                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO02, visionProcessingValuesS3);
-                UpdateEnableValues(data, GlobalVariable.enableStationBLO02, enableValuesS3, enableFrameS3);
-                UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
-                UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
+                UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
+                UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
+                UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
+                UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
                 break;
         }
 
@@ -355,8 +361,12 @@ public class GetBufferStation : MonoBehaviour
 
     public async Task<List<DataSignalR>> GetBufferListSpecificStation(string station_Id_Specific)
     {
-        var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll"); // Gọi hàm SenAll từ server
-        var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response); // Chuyển đổi dữ liệu từ chuỗi JSON sang List<DataSignalR> ==> Mapping code
-        return tags.Where(data => data.StationId == station_Id_Specific && !data.TagId.StartsWith("M1")).ToList();
+        if (GlobalVariable.hubConnection.State == HubConnectionState.Connected)
+        {
+            var response = await GlobalVariable.hubConnection.InvokeAsync<string>("SendAll"); // Gọi hàm SenAll từ server
+            var tags = JsonConvert.DeserializeObject<List<DataSignalR>>(response); // Chuyển đổi dữ liệu từ chuỗi JSON sang List<DataSignalR> ==> Mapping code
+            return tags.Where(data => data.StationId == station_Id_Specific && !data.TagId.StartsWith("M1")).ToList();
+        }
+        else return new List<DataSignalR>();
     }
 }

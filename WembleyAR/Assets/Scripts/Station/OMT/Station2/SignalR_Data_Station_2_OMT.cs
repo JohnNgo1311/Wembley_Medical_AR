@@ -31,7 +31,8 @@ public class SignalR_Data_Station_2_OMT : MonoBehaviour
                     GlobalVariable.subscribedTopicsOMT.Add(topic);
                 }
             }
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 
@@ -46,7 +47,8 @@ public class SignalR_Data_Station_2_OMT : MonoBehaviour
                 GlobalVariable.subscribedTopicsOMT.Remove(topic);
             }
 
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 

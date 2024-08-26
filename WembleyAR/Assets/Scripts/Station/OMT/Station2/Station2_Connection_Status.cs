@@ -15,7 +15,8 @@ public class Station2_Connection_Status : MonoBehaviour
         // Nếu chưa được gán qua Inspector, tìm SignalRDataOMT thông qua tag
         if (signalR == null)
         {
-            signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
+            if (GlobalVariable.hubConnection != null)
+                signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
 
     }
@@ -33,7 +34,8 @@ public class Station2_Connection_Status : MonoBehaviour
                     GlobalVariable.subscribedTopicsOMT.Add(topic);
                 }
             }
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 

@@ -33,7 +33,8 @@ public class Station2_Machine_Status : MonoBehaviour
                     GlobalVariable.subscribedTopicsOMT.Add(topic);
                 }
             }
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 
@@ -48,7 +49,8 @@ public class Station2_Machine_Status : MonoBehaviour
                 GlobalVariable.subscribedTopicsOMT.Remove(topic);
             }
 
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 

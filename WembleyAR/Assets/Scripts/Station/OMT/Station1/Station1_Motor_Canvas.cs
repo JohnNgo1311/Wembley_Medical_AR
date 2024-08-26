@@ -7,9 +7,9 @@ public class Station1_Motor_Canvas : MonoBehaviour
     SignalRDataOMT signalR;
     List<string> topicStation1 = new List<string>
     {
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Parameter/ProductionData",           //? S1 Production Data
+        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Parameter/ProductionData",          //? S1 Production Data
         $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",            //? S1 Enable
-        $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/ChemicalDetection/Current" ,       //? S1 Chemical Detection
+     //   $"{GlobalVariable.basedTopicOMT}/IE-F3-BLO06/ChemicalDetection/Current" ,       //? S1 Chemical Detection
  };
     void Awake()
     {
@@ -34,7 +34,8 @@ public class Station1_Motor_Canvas : MonoBehaviour
                     GlobalVariable.subscribedTopicsOMT.Add(topic);
                 }
             }
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 
@@ -49,7 +50,8 @@ public class Station1_Motor_Canvas : MonoBehaviour
                 GlobalVariable.subscribedTopicsOMT.Remove(topic);
             }
 
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 

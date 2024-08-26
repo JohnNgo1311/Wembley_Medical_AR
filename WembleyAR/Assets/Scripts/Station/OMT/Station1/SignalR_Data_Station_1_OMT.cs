@@ -20,7 +20,7 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
             signalR = GameObject.FindWithTag("SignalR_OMT")?.GetComponent<SignalRDataOMT>();
         }
 
-        
+
     }
 
     void OnEnable()
@@ -36,7 +36,8 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
                     GlobalVariable.subscribedTopicsOMT.Add(topic);
                 }
             }
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null)
+                signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 
@@ -51,7 +52,7 @@ public class SignalR_Data_Station_1_OMT : MonoBehaviour
                 GlobalVariable.subscribedTopicsOMT.Remove(topic);
             }
 
-            signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
+            if (GlobalVariable.hubConnection != null) signalR.UpdateTopics(GlobalVariable.subscribedTopicsOMT);
         }
     }
 

@@ -66,7 +66,7 @@ public class UILogin : MonoBehaviour
         switch (type)
         {
             case "loading":
-                frameDialogImage.color = new Color32(0x3D, 0xFF, 0x7F, 0xFF); // Xanh nhạt
+                frameDialogImage.color = GlobalVariable.colors[1]; //
                 dialogModel.contentDialog.text = "Đang đăng nhập...";
                 break;
             case "success":
@@ -88,6 +88,7 @@ public class UILogin : MonoBehaviour
         {
             SceneManager.LoadScene(targetSceneName);
         }
+        GlobalVariable.loginSuccess = false;
 
     }
 }

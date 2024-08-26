@@ -93,6 +93,10 @@ public class SignalRDataOMT : MonoBehaviour
         {
             GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
                                 {
+                                    /* string lastCharacter = str.Substring(str.Length - 14); // Tách phần tử cuối cùng của chuỗi
+
+                                     string remainingCharacters = str.Substring(0, str.Length - 14);*/
+
                                     if (processedStrings.Contains(str))
                                     {
                                         return;
@@ -116,7 +120,7 @@ public class SignalRDataOMT : MonoBehaviour
         // Xóa phần tử quá hạn
         foreach (var item in elementWithTimestamp.Keys.ToList())
         {
-            if ((DateTime.Now - elementWithTimestamp[item]).TotalSeconds > 10) // 10 phút TTL
+            if ((DateTime.Now - elementWithTimestamp[item]).TotalMinutes > 1) // 1p TTL
             {
                 elementWithTimestamp.Remove(item);
                 processedStrings.Remove(item);
@@ -127,7 +131,7 @@ public class SignalRDataOMT : MonoBehaviour
     private void StartConnectWebApi()
     {
         //? Kết nối với server
-        if (GlobalVariable.hubConnection == null)
+        if (GlobalVariable.hubConnection == null || GlobalVariable.hubConnection.State == HubConnectionState.Disconnected)
         {
             GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).WithAutomaticReconnect().Build();
             Debug.Log("CreateHubConnection");
@@ -300,33 +304,26 @@ public class SignalRDataOMT : MonoBehaviour
     void UpdateIO(DataSignalR data, string stationPrefix, GameObject[] inputChecks, GameObject[] outputChecks)
     {
         string tagId = data.TagId;
-        string tagPrefixIn = $"{stationPrefix}/in/";
-        string tagPrefixOut = $"{stationPrefix}/out/";
-        bool isInput = tagId.StartsWith(tagPrefixIn);
-        bool isOutput = tagId.StartsWith(tagPrefixOut);
+        int prefixLengthIn = stationPrefix.Length + 4;  // Độ dài của stationPrefix + "/in/"
+        int prefixLengthOut = stationPrefix.Length + 5; // Độ dài của stationPrefix + "/out/"
+        bool value = data.TagValue == "1";
 
-        if (isInput || isOutput)
+        if (tagId.Length > prefixLengthIn && tagId[prefixLengthIn - 4] == '/' && tagId[prefixLengthIn - 3] == 'i' && tagId[prefixLengthIn - 2] == 'n' && tagId[prefixLengthIn - 1] == '/')
         {
-            int index;
-            bool value = data.TagValue == "1";
-            if (isInput)
+            if (int.TryParse(tagId.AsSpan(prefixLengthIn), out int index) && index >= 0 && index < inputChecks.Length)
             {
-                index = int.Parse(tagId.Substring(tagPrefixIn.Length));
-                if (index >= 0 && index < inputChecks.Length)
-                {
-                    inputChecks[index].SetActive(value);
-                }
+                inputChecks[index].SetActive(value);
             }
-            else if (isOutput)
+        }
+        else if (tagId.Length > prefixLengthOut && tagId[prefixLengthOut - 5] == '/' && tagId[prefixLengthOut - 4] == 'o' && tagId[prefixLengthOut - 3] == 'u' && tagId[prefixLengthOut - 2] == 't' && tagId[prefixLengthOut - 1] == '/')
+        {
+            if (int.TryParse(tagId.AsSpan(prefixLengthOut), out int index) && index >= 0 && index < outputChecks.Length)
             {
-                index = int.Parse(tagId.Substring(tagPrefixOut.Length));
-                if (index >= 0 && index < outputChecks.Length)
-                {
-                    outputChecks[index].SetActive(value);
-                }
+                outputChecks[index].SetActive(value);
             }
         }
     }
+
 
 
     void UpdateVisionProcessing(DataSignalR data, List<string> visionProcessingTags, TMP_Text[] visionProcessingValues)
