@@ -1,0 +1,8705 @@
+﻿#include "pch-cpp.hpp"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include <limits>
+#include <stdint.h>
+
+
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct VirtualFuncInvoker1
+{
+	typedef R (*Func)(void*, T1, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename R, typename T1, typename T2>
+struct VirtualFuncInvoker2
+{
+	typedef R (*Func)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct GenericVirtualFuncInvoker1
+{
+	typedef R (*Func)(void*, T1, const RuntimeMethod*);
+
+	static inline R Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
+		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct InterfaceActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename R>
+struct InterfaceFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct InterfaceFuncInvoker1
+{
+	typedef R (*Func)(void*, T1, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct GenericInterfaceFuncInvoker1
+{
+	typedef R (*Func)(void*, T1, const RuntimeMethod*);
+
+	static inline R Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
+		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename R, typename T1, typename T2>
+struct InvokerFuncInvoker2;
+template <typename R, typename T1, typename T2>
+struct InvokerFuncInvoker2<R, T1*, T2*>
+{
+	static inline R Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2)
+	{
+		R ret;
+		void* params[2] = { p1, p2 };
+		method->invoker_method(methodPtr, method, obj, params, &ret);
+		return ret;
+	}
+};
+template <typename R, typename T1, typename T2, typename T3>
+struct InvokerFuncInvoker3;
+template <typename R, typename T1, typename T2, typename T3>
+struct InvokerFuncInvoker3<R, T1*, T2*, T3*>
+{
+	static inline R Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2, T3* p3)
+	{
+		R ret;
+		void* params[3] = { p1, p2, p3 };
+		method->invoker_method(methodPtr, method, obj, params, &ret);
+		return ret;
+	}
+};
+
+// System.Dynamic.Utils.CacheDict`2<System.Type,System.Func`5<System.Linq.Expressions.Expression,System.String,System.Boolean,System.Collections.ObjectModel.ReadOnlyCollection`1<System.Linq.Expressions.ParameterExpression>,System.Linq.Expressions.LambdaExpression>>
+struct CacheDict_2_t3592A9BE3B1E812BCE8A13D901156E74C707DBB7;
+// System.Dynamic.Utils.CacheDict`2<System.Type,System.Reflection.MethodInfo>
+struct CacheDict_2_tB695739D50653F4D4C3DA03BCF07CC868196FB15;
+// System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Linq.Expressions.Expression,System.Linq.Expressions.Expression/ExtensionInfo>
+struct ConditionalWeakTable_2_t0F3FDA57EE333DF8B8C1F3FB944E4E19C5DDCFC7;
+// System.Collections.Generic.Dictionary`2<System.String,System.Resources.ResourceSet>
+struct Dictionary_2_tAC32B254416DD510DC3E7E36B0706A6B031D7A53;
+// System.Linq.Expressions.Expression`1<System.Func`3<System.IServiceProvider,System.Object[],System.Object>>
+struct Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4;
+// System.Linq.Expressions.Expression`1<System.Func`5<System.IServiceProvider,System.Type,System.Type,System.Boolean,System.Object>>
+struct Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2;
+// System.Linq.Expressions.Expression`1<System.Object>
+struct Expression_1_t63D438A2F366BA0B43CCDBBFCE66D131C313A7D7;
+// System.Func`2<System.IServiceProvider,System.Object>
+struct Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4;
+// System.Func`2<System.Object,System.Boolean>
+struct Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00;
+// System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceDescriptor,System.Boolean>
+struct Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E;
+// System.Func`3<System.IServiceProvider,System.Object[],System.Object>
+struct Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093;
+// System.Collections.Generic.IEnumerable`1<System.Object>
+struct IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9;
+// System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>
+struct IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660;
+// System.Collections.Generic.IReadOnlyList`1<System.Linq.Expressions.Expression>
+struct IReadOnlyList_1_tB86476F62FBF3BB3389F17E0FFB65836DD3F2F65;
+// System.Collections.ObjectModel.ReadOnlyCollection`1<System.Reflection.MemberInfo>
+struct ReadOnlyCollection_1_tDAE35E503783CF053392CFBB43ACBDCE72C6C996;
+// System.Nullable`1<System.Int32>[]
+struct Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43;
+// System.Byte[]
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+// System.Reflection.ConstructorInfo[]
+struct ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A;
+// System.Delegate[]
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+// System.Linq.Expressions.Expression[]
+struct ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F;
+// System.IntPtr[]
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+// System.Object[]
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+// System.Linq.Expressions.ParameterExpression[]
+struct ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C;
+// System.Reflection.ParameterInfo[]
+struct ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C;
+// System.Diagnostics.StackTrace[]
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+// System.String[]
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+// System.Type[]
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilitiesConstructorAttribute
+struct ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC;
+// System.Diagnostics.CodeAnalysis.AllowNullAttribute
+struct AllowNullAttribute_t4A5AE3716EA82E0569A4B9A578AC8EAC1CC47E0D;
+// System.ArgumentException
+struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263;
+// System.ArgumentNullException
+struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129;
+// System.Reflection.Assembly
+struct Assembly_t;
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+// System.Attribute
+struct Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA;
+// System.Linq.Expressions.BinaryExpression
+struct BinaryExpression_t4D7BC929A5BBC587BBC045505C9029557B8D32B4;
+// System.Reflection.Binder
+struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+// System.Linq.Expressions.ConstantExpression
+struct ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547;
+// System.Reflection.ConstructorInfo
+struct ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB;
+// System.Globalization.CultureInfo
+struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0;
+// System.Delegate
+struct Delegate_t;
+// System.DelegateData
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+// System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+struct DisallowNullAttribute_t410E073B4D77E9744A6AE4AAB51693EBD22B07EC;
+// System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+struct DoesNotReturnAttribute_t317891B1739785866A3FE46907B4FABE8B6FA037;
+// System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+struct DoesNotReturnIfAttribute_tE35E47C780E03BB79129441924C4E22EE5D958B8;
+// System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute
+struct DynamicallyAccessedMembersAttribute_t32A93E390065BE96AD120568DB033AFF59F9A95C;
+// Microsoft.CodeAnalysis.EmbeddedAttribute
+struct EmbeddedAttribute_tF17F62C9D7DA6B113CA3A79224FEB5C3E409CBA2;
+// System.Exception
+struct Exception_t;
+// System.Runtime.ExceptionServices.ExceptionDispatchInfo
+struct ExceptionDispatchInfo_tD7AF19E75FEC22F4A8329FD1E9EDF96615CB2757;
+// System.Linq.Expressions.Expression
+struct Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785;
+// System.Collections.Hashtable
+struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D;
+// System.IAsyncResult
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+// System.Collections.IDictionary
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+// System.IFormatProvider
+struct IFormatProvider_tC202922D43BFF3525109ABF3FB79625F5646AB52;
+// System.Resources.IResourceGroveler
+struct IResourceGroveler_tDEE701BD41E9E5D260606F79F75427B42C4CC0C0;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection
+struct IServiceCollection_t8A3E94272E3A36C47F44609B05C67D29649366C7;
+// System.IServiceProvider
+struct IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6;
+// Microsoft.Extensions.DependencyInjection.IServiceScope
+struct IServiceScope_t0758A8C38890204C187698991C5958813D35E56E;
+// Microsoft.Extensions.DependencyInjection.IServiceScopeFactory
+struct IServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932;
+// System.Linq.Expressions.IndexExpression
+struct IndexExpression_t3EE6D9B088DD1886D3206BBB603C988A4B817347;
+// System.InvalidOperationException
+struct InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB;
+// System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+struct MaybeNullAttribute_t249B8A5C69FDCCD26D3726ECC4FE66A8A0929E07;
+// System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+struct MaybeNullWhenAttribute_t448AC26D1FC4E91C352A4A17685921BE11CE9EFE;
+// System.Reflection.MemberFilter
+struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
+// System.Reflection.MemberInfo
+struct MemberInfo_t;
+// System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+struct MemberNotNullAttribute_tE7CFBD5A82CF0A19B6EE7475E126161931259A49;
+// System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+struct MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA;
+// System.Reflection.MethodBase
+struct MethodBase_t;
+// System.Linq.Expressions.MethodCallExpression
+struct MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB;
+// System.Reflection.MethodInfo
+struct MethodInfo_t;
+// System.Linq.Expressions.NewExpression
+struct NewExpression_t71592C0B1A33F4FD5FA0283BC2657C31D95EED51;
+// System.Diagnostics.CodeAnalysis.NotNullAttribute
+struct NotNullAttribute_t44BAA9E007F85BC931E148C2AEBF9DCD352253C4;
+// System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+struct NotNullIfNotNullAttribute_t23D6BAF10981CA5C278A0E68A798A5613F6123A1;
+// System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+struct NotNullWhenAttribute_tA79B6D078587964DD0E540B5A898AFA59FDBE333;
+// System.Runtime.CompilerServices.NullableAttribute
+struct NullableAttribute_t97F9A2D5664B13D882836AC8F74EFAC88AFFC2AF;
+// System.Runtime.CompilerServices.NullableContextAttribute
+struct NullableContextAttribute_t66D75A13A92DBEBB68D303EF11A83C60679628D4;
+// System.Runtime.CompilerServices.NullablePublicOnlyAttribute
+struct NullablePublicOnlyAttribute_tD766562F61EDE1166F8E2FAD369C1FAB846D4E73;
+// Microsoft.Extensions.DependencyInjection.ObjectFactory
+struct ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950;
+// Microsoft.Extensions.Internal.ParameterDefaultValue
+struct ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315;
+// System.Linq.Expressions.ParameterExpression
+struct ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110;
+// System.Reflection.ParameterInfo
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F;
+// System.Reflection.PropertyInfo
+struct PropertyInfo_t;
+// System.Resources.ResourceManager
+struct ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB;
+// System.Reflection.RuntimeAssembly
+struct RuntimeAssembly_tA26A4DE82E77826DFC3D58AD976BCFC6BCA918AF;
+// System.Runtime.Serialization.SafeSerializationManager
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor
+struct ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE;
+// System.String
+struct String_t;
+// System.Type
+struct Type_t;
+// System.Reflection.TypeInfo
+struct TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D;
+// System.Linq.Expressions.UnaryExpression
+struct UnaryExpression_tFB4F40A211A2FF9B58F1A86E0EDB474121867B96;
+// System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute
+struct UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8;
+// System.Version
+struct Version_tE426DB5655D0F22920AE16A2AA9AB7781B8255A7;
+// System.Void
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c
+struct U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD;
+// System.Resources.ResourceManager/CultureNameResourceSetPair
+struct CultureNameResourceSetPair_t06C5772C09CA853E70E42C0E8BC57FE0AA2CB674;
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0
+struct U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249;
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0
+struct U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B;
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0
+struct U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43;
+
+IL2CPP_EXTERN_C RuntimeClass* ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AppContext_t0380D19FAC72CD59D46947D86DC1DAA3BCE638E0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IList_1_t25A4F8273D1B057CEDAAFF8FF7EDCCF8C35AB65E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ISupportRequiredService_tDE14BBE64AAE0D65C963F50EDB2D1A710A459C95_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MethodInfo_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MissingManifestResourceException_t136A089345909ADB6333D6F4E2AA84C7A00CB3FD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ServiceLifetime_tF8E5596558473DD147F0761F5E42386AEF5A815B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral059AB8FE8DEC48B335F3DEEC5DD071299BB001AC;
+IL2CPP_EXTERN_C String_t* _stringLiteral106CF8B6C25989122240E7EB1263C2EB32DB3F16;
+IL2CPP_EXTERN_C String_t* _stringLiteral123A148507EE9AA988F24918EC9D63657EC9F74B;
+IL2CPP_EXTERN_C String_t* _stringLiteral167C65EB6C975B3A8544FD111059B733CFBA964A;
+IL2CPP_EXTERN_C String_t* _stringLiteral175C84C8167E36B12F4445F08F3CCFAE61121D5A;
+IL2CPP_EXTERN_C String_t* _stringLiteral1CCEE987CFB65D68EEB5CFFD47445AD2B3C53D62;
+IL2CPP_EXTERN_C String_t* _stringLiteral1E9918A305DD44C6C5253BF7305AB7758C686BB5;
+IL2CPP_EXTERN_C String_t* _stringLiteral1FD00C6F0B4C9F1E0466E1DD4659F667503F4B04;
+IL2CPP_EXTERN_C String_t* _stringLiteral25DF26F9216E3E00ED168A90DD0E9DAF1C534586;
+IL2CPP_EXTERN_C String_t* _stringLiteral2F808A260DDA3BED57BF1251CA66AD92DC1FA24C;
+IL2CPP_EXTERN_C String_t* _stringLiteral4027EB6DEAA9950CB5AAE5982F01F90152DF2EE6;
+IL2CPP_EXTERN_C String_t* _stringLiteral4484D73E5D13E98119AFD8332CD8BC78758E004F;
+IL2CPP_EXTERN_C String_t* _stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25;
+IL2CPP_EXTERN_C String_t* _stringLiteral554C3DD66F287ABB3CF60D79DBEF38320C1CED02;
+IL2CPP_EXTERN_C String_t* _stringLiteral5B9FE05484B470B354696B4F06C3B12F71B5BB4A;
+IL2CPP_EXTERN_C String_t* _stringLiteral613CD9F5AB80FD3364CC32C7D855B4ED8F18EF6A;
+IL2CPP_EXTERN_C String_t* _stringLiteral63D6E9AE3EE2FA41B7C1AFB2FA5FADB63675466D;
+IL2CPP_EXTERN_C String_t* _stringLiteral64C7BF1ED7E82B4BA2573BBEF05D2C5D71A254F1;
+IL2CPP_EXTERN_C String_t* _stringLiteral68FB1D2C9FFF0D771B9B705E90F8A5891EA88BDA;
+IL2CPP_EXTERN_C String_t* _stringLiteral6B866DCFF4A3EC3D3C30879F029D88106601B1B2;
+IL2CPP_EXTERN_C String_t* _stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94;
+IL2CPP_EXTERN_C String_t* _stringLiteral7434CFB1B64AE9F03B145093A7B1B7D90A94209D;
+IL2CPP_EXTERN_C String_t* _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D;
+IL2CPP_EXTERN_C String_t* _stringLiteral76DEA610DFCED3B7842C7C70A5255AEFA2383CAD;
+IL2CPP_EXTERN_C String_t* _stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07;
+IL2CPP_EXTERN_C String_t* _stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3;
+IL2CPP_EXTERN_C String_t* _stringLiteral8414375DCEB07E1FC8C12D4D68E2DA9267885352;
+IL2CPP_EXTERN_C String_t* _stringLiteral8B8AA5273679EF7F7E3FB552E405DCF30B14ECA1;
+IL2CPP_EXTERN_C String_t* _stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E;
+IL2CPP_EXTERN_C String_t* _stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843;
+IL2CPP_EXTERN_C String_t* _stringLiteralA33A5CAE02B786C2060461DF8C6764B4C05E9423;
+IL2CPP_EXTERN_C String_t* _stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD;
+IL2CPP_EXTERN_C String_t* _stringLiteralAA236E134566FACF682D16CDBC3E2C735E0EF19D;
+IL2CPP_EXTERN_C String_t* _stringLiteralB5528CA07A43AEA4EFA2F7B2DEF38E0A5D87ECD6;
+IL2CPP_EXTERN_C String_t* _stringLiteralCCCAF75F6781FC7A40EF6693F66F651A4F139125;
+IL2CPP_EXTERN_C String_t* _stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA;
+IL2CPP_EXTERN_C String_t* _stringLiteralDF73B874236192E4304748C8C9159248D7F005AB;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_CreateInstance_mC9555A99351AA8DE4C229D509D5B4B62223E0F42_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_FindApplicableConstructor_m34554C31D1FD38198ABDCEAB1617B8B437040FBC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_GetMethodInfo_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_mC5EC61B5AC8435D00AA38EC0D59459C6149D8505_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_GetService_m8FFC64B4C3FA9CD3BBE97317DEAA65E661BA504B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ActivatorUtilities_TryFindMatchingConstructor_m533CBC668756EF21F6847F62372899BB80118604_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_FirstOrDefault_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m6ED27BC30651E1F8AA9D6517B3CFC05DE4F70046_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Expression_1_Compile_m1C4DD85947C855F964A4D02BDB8D3BE5940C54A8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Expression_Lambda_TisFunc_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093_m23DEF827804CA29573E8BCF658B151FF955DE0F1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Expression_Lambda_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_m259A292B2C8778D6341D0DD5552309535E5C2E78_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Func_3_Invoke_m3920D23C723D5053989C3EC0075342E6FA056206_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_Add_m279D5503F65C8521736787A83C80CB3F4B823578_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_Add_mBE7B261BE06FA03AF6AC01ECCF0968A6C4C272BA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_RemoveAll_mEFA5BDFB6C066BB266BA7BB23CCE560A82257812_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_Replace_m97430AC9AEBA9CF4DE45796007B4122CD538BDDF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddEnumerable_mF02DFBAD3F3500C7C1EC2334B4DC656862D7D240_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddScoped_m82FE8207DC7EAA3F284420190AA45CF90C8F782D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddScoped_m89A9C629A85983844A9CF3B559D429524741D5BA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddScoped_mD9A275CF906601F8DF385A5D0125201FDD4E3A82_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddSingleton_m1DB122D220CC0DE37AF5856B32132BF3C60BE28A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddSingleton_mAEBDF5F84B9D491197EDD5C1054004BBB65EA19D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddSingleton_mC7351E0338364F4F12799211123E9247ECF71CC9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddTransient_m62B271EAFE0DF4760EBAA9BB15434F423E840E7D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddTransient_m6BE2F142E25DF2BC91371BA1539B04D51B9EB2AC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAddTransient_mBF5D05AF30D20E755A2587DF1451D9DBA9EB08B3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionDescriptorExtensions_TryAdd_mAAB37A58E6C83CC8738623C0BC57EFA8952FF868_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddScoped_mCBEC0EA60DBD5EEA51BB3F9AA158A394FDDE77E4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddScoped_mFA3DB8AEE4A4A7947A7BD948CB23DA3FA11C6498_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_m025598643CF82EBD59FC1F2309A0C4EA902F8686_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_m689212B9EFB0CBC63A052BF87D7DF890E96F2A17_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddSingleton_mC00FF373273DF26BBEA781F28B430B4BE7BFFA90_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddTransient_m1EFE290B42BB4D57C93B9EF72012219B8981EAAC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceCollectionServiceExtensions_AddTransient_m95D8F10AE141C74A2127382241F908E44560B577_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Singleton_m64276FC3ECC1ECA316DD427B4C5D38C745C3D8FD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceProviderServiceExtensions_GetRequiredService_TisIServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_m59983201416E5F6CAB9F118DAFAEC75CC5549E26_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ServiceProviderServiceExtensions_GetServices_m1631163B916BCE7CB498DF1B8080B7D548003BE9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass23_0_U3CTryAddEnumerableU3Eb__0_m1BADBCCA1A5F9C2C9276BCEBDBB4EABD759A58A8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass25_0_U3CReplaceU3Eb__0_mDD99D331059280A05711628234FECEE8D5E10262_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_0_U3CTryAddU3Eb__0_mDD824CD224EEB1083D8A302A45FB3C8BE4AC9288_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeType* ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* IEnumerable_1_t6D39F4BC58A66D98BCEB112169CFDE48809FC555_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Nullable_1_tCC12E6AC31BF7E862A033EBEFF48D5000D6291E6_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* RuntimeObject_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* SR_t868D65A44E2478CF307DD48140B2BE4CA78A1E9B_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* Type_t_0_0_0_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F;;
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com;
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com;;
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke;
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke;;
+
+struct Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C;
+struct ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// <Module>
+struct U3CModuleU3E_t7399C531C9AC8707114947FF6FA34171181470D4 
+{
+};
+
+// System.EmptyArray`1<System.Object>
+struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE  : public RuntimeObject
+{
+};
+
+struct EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields
+{
+	// T[] System.EmptyArray`1::Value
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___Value_0;
+};
+
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilities
+struct ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE  : public RuntimeObject
+{
+};
+
+struct ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_StaticFields
+{
+	// System.Reflection.MethodInfo Microsoft.Extensions.DependencyInjection.ActivatorUtilities::GetServiceInfo
+	MethodInfo_t* ___GetServiceInfo_0;
+};
+struct Il2CppArrayBounds;
+
+// System.Attribute
+struct Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA  : public RuntimeObject
+{
+};
+
+// System.Runtime.ExceptionServices.ExceptionDispatchInfo
+struct ExceptionDispatchInfo_tD7AF19E75FEC22F4A8329FD1E9EDF96615CB2757  : public RuntimeObject
+{
+	// System.Exception System.Runtime.ExceptionServices.ExceptionDispatchInfo::m_Exception
+	Exception_t* ___m_Exception_0;
+	// System.Object System.Runtime.ExceptionServices.ExceptionDispatchInfo::m_stackTrace
+	RuntimeObject* ___m_stackTrace_1;
+};
+
+// System.Linq.Expressions.Expression
+struct Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785  : public RuntimeObject
+{
+};
+
+struct Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_StaticFields
+{
+	// System.Dynamic.Utils.CacheDict`2<System.Type,System.Reflection.MethodInfo> System.Linq.Expressions.Expression::s_lambdaDelegateCache
+	CacheDict_2_tB695739D50653F4D4C3DA03BCF07CC868196FB15* ___s_lambdaDelegateCache_0;
+	// System.Dynamic.Utils.CacheDict`2<System.Type,System.Func`5<System.Linq.Expressions.Expression,System.String,System.Boolean,System.Collections.ObjectModel.ReadOnlyCollection`1<System.Linq.Expressions.ParameterExpression>,System.Linq.Expressions.LambdaExpression>> modreq(System.Runtime.CompilerServices.IsVolatile) System.Linq.Expressions.Expression::s_lambdaFactories
+	CacheDict_2_t3592A9BE3B1E812BCE8A13D901156E74C707DBB7* ___s_lambdaFactories_1;
+	// System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Linq.Expressions.Expression,System.Linq.Expressions.Expression/ExtensionInfo> System.Linq.Expressions.Expression::s_legacyCtorSupportTable
+	ConditionalWeakTable_2_t0F3FDA57EE333DF8B8C1F3FB944E4E19C5DDCFC7* ___s_legacyCtorSupportTable_2;
+};
+
+// System.Reflection.MemberInfo
+struct MemberInfo_t  : public RuntimeObject
+{
+};
+
+// Microsoft.Extensions.Internal.ParameterDefaultValue
+struct ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315  : public RuntimeObject
+{
+};
+
+struct ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_StaticFields
+{
+	// System.Type Microsoft.Extensions.Internal.ParameterDefaultValue::_nullable
+	Type_t* ____nullable_0;
+};
+
+// System.Reflection.ParameterInfo
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F  : public RuntimeObject
+{
+	// System.Reflection.ParameterAttributes System.Reflection.ParameterInfo::AttrsImpl
+	int32_t ___AttrsImpl_0;
+	// System.Type System.Reflection.ParameterInfo::ClassImpl
+	Type_t* ___ClassImpl_1;
+	// System.Object System.Reflection.ParameterInfo::DefaultValueImpl
+	RuntimeObject* ___DefaultValueImpl_2;
+	// System.Reflection.MemberInfo System.Reflection.ParameterInfo::MemberImpl
+	MemberInfo_t* ___MemberImpl_3;
+	// System.String System.Reflection.ParameterInfo::NameImpl
+	String_t* ___NameImpl_4;
+	// System.Int32 System.Reflection.ParameterInfo::PositionImpl
+	int32_t ___PositionImpl_5;
+};
+// Native definition for P/Invoke marshalling of System.Reflection.ParameterInfo
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke
+{
+	int32_t ___AttrsImpl_0;
+	Type_t* ___ClassImpl_1;
+	Il2CppIUnknown* ___DefaultValueImpl_2;
+	MemberInfo_t* ___MemberImpl_3;
+	char* ___NameImpl_4;
+	int32_t ___PositionImpl_5;
+};
+// Native definition for COM marshalling of System.Reflection.ParameterInfo
+struct ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com
+{
+	int32_t ___AttrsImpl_0;
+	Type_t* ___ClassImpl_1;
+	Il2CppIUnknown* ___DefaultValueImpl_2;
+	MemberInfo_t* ___MemberImpl_3;
+	Il2CppChar* ___NameImpl_4;
+	int32_t ___PositionImpl_5;
+};
+
+// System.Resources.ResourceManager
+struct ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB  : public RuntimeObject
+{
+	// System.String System.Resources.ResourceManager::BaseNameField
+	String_t* ___BaseNameField_0;
+	// System.Collections.Hashtable System.Resources.ResourceManager::ResourceSets
+	Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* ___ResourceSets_1;
+	// System.Collections.Generic.Dictionary`2<System.String,System.Resources.ResourceSet> System.Resources.ResourceManager::_resourceSets
+	Dictionary_2_tAC32B254416DD510DC3E7E36B0706A6B031D7A53* ____resourceSets_2;
+	// System.String System.Resources.ResourceManager::moduleDir
+	String_t* ___moduleDir_3;
+	// System.Reflection.Assembly System.Resources.ResourceManager::MainAssembly
+	Assembly_t* ___MainAssembly_4;
+	// System.Type System.Resources.ResourceManager::_locationInfo
+	Type_t* ____locationInfo_5;
+	// System.Type System.Resources.ResourceManager::_userResourceSet
+	Type_t* ____userResourceSet_6;
+	// System.Globalization.CultureInfo System.Resources.ResourceManager::_neutralResourcesCulture
+	CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ____neutralResourcesCulture_7;
+	// System.Resources.ResourceManager/CultureNameResourceSetPair System.Resources.ResourceManager::_lastUsedResourceCache
+	CultureNameResourceSetPair_t06C5772C09CA853E70E42C0E8BC57FE0AA2CB674* ____lastUsedResourceCache_8;
+	// System.Boolean System.Resources.ResourceManager::_ignoreCase
+	bool ____ignoreCase_9;
+	// System.Boolean System.Resources.ResourceManager::UseManifest
+	bool ___UseManifest_10;
+	// System.Boolean System.Resources.ResourceManager::UseSatelliteAssem
+	bool ___UseSatelliteAssem_11;
+	// System.Resources.UltimateResourceFallbackLocation System.Resources.ResourceManager::_fallbackLoc
+	int32_t ____fallbackLoc_12;
+	// System.Version System.Resources.ResourceManager::_satelliteContractVersion
+	Version_tE426DB5655D0F22920AE16A2AA9AB7781B8255A7* ____satelliteContractVersion_13;
+	// System.Boolean System.Resources.ResourceManager::_lookedForSatelliteContractVersion
+	bool ____lookedForSatelliteContractVersion_14;
+	// System.Reflection.Assembly System.Resources.ResourceManager::_callingAssembly
+	Assembly_t* ____callingAssembly_15;
+	// System.Reflection.RuntimeAssembly System.Resources.ResourceManager::m_callingAssembly
+	RuntimeAssembly_tA26A4DE82E77826DFC3D58AD976BCFC6BCA918AF* ___m_callingAssembly_16;
+	// System.Resources.IResourceGroveler System.Resources.ResourceManager::resourceGroveler
+	RuntimeObject* ___resourceGroveler_17;
+};
+
+struct ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB_StaticFields
+{
+	// System.Int32 System.Resources.ResourceManager::MagicNumber
+	int32_t ___MagicNumber_18;
+	// System.Int32 System.Resources.ResourceManager::HeaderVersionNumber
+	int32_t ___HeaderVersionNumber_19;
+	// System.Type System.Resources.ResourceManager::_minResourceSet
+	Type_t* ____minResourceSet_20;
+	// System.String System.Resources.ResourceManager::ResReaderTypeName
+	String_t* ___ResReaderTypeName_21;
+	// System.String System.Resources.ResourceManager::ResSetTypeName
+	String_t* ___ResSetTypeName_22;
+	// System.String System.Resources.ResourceManager::MscorlibName
+	String_t* ___MscorlibName_23;
+	// System.Int32 System.Resources.ResourceManager::DEBUG
+	int32_t ___DEBUG_24;
+};
+
+// FxResources.Microsoft.Extensions.DependencyInjection.Abstractions.SR
+struct SR_t868D65A44E2478CF307DD48140B2BE4CA78A1E9B  : public RuntimeObject
+{
+};
+
+// System.SR
+struct SR_t80EFA8120943712E1DFED1AA1EE965E253401B43  : public RuntimeObject
+{
+};
+
+struct SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields
+{
+	// System.Boolean System.SR::s_usingResourceKeys
+	bool ___s_usingResourceKeys_0;
+	// System.Resources.ResourceManager System.SR::s_resourceManager
+	ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* ___s_resourceManager_1;
+};
+
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions
+struct ServiceCollectionDescriptorExtensions_t449B4799FA2EA8157046E74D794C2786C09F96E2  : public RuntimeObject
+{
+};
+
+// Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions
+struct ServiceCollectionServiceExtensions_t984396827B33B0DEA984FF8B797B9C0AA4F4D0BB  : public RuntimeObject
+{
+};
+
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor
+struct ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE  : public RuntimeObject
+{
+	// Microsoft.Extensions.DependencyInjection.ServiceLifetime Microsoft.Extensions.DependencyInjection.ServiceDescriptor::<Lifetime>k__BackingField
+	int32_t ___U3CLifetimeU3Ek__BackingField_0;
+	// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::<ServiceType>k__BackingField
+	Type_t* ___U3CServiceTypeU3Ek__BackingField_1;
+	// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::<ImplementationType>k__BackingField
+	Type_t* ___U3CImplementationTypeU3Ek__BackingField_2;
+	// System.Object Microsoft.Extensions.DependencyInjection.ServiceDescriptor::<ImplementationInstance>k__BackingField
+	RuntimeObject* ___U3CImplementationInstanceU3Ek__BackingField_3;
+	// System.Func`2<System.IServiceProvider,System.Object> Microsoft.Extensions.DependencyInjection.ServiceDescriptor::<ImplementationFactory>k__BackingField
+	Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___U3CImplementationFactoryU3Ek__BackingField_4;
+};
+
+// Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions
+struct ServiceProviderServiceExtensions_tA45B762CD0A94D5A0AA9EF9ADCF0BC79F41010EF  : public RuntimeObject
+{
+};
+
+// System.String
+struct String_t  : public RuntimeObject
+{
+	// System.Int32 System.String::_stringLength
+	int32_t ____stringLength_4;
+	// System.Char System.String::_firstChar
+	Il2CppChar ____firstChar_5;
+};
+
+struct String_t_StaticFields
+{
+	// System.String System.String::Empty
+	String_t* ___Empty_6;
+};
+
+// System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c
+struct U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD  : public RuntimeObject
+{
+};
+
+struct U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_StaticFields
+{
+	// Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c::<>9
+	U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD* ___U3CU3E9_0;
+};
+
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0
+struct U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249  : public RuntimeObject
+{
+	// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0::descriptor
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor_0;
+	// System.Type Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0::implementationType
+	Type_t* ___implementationType_1;
+};
+
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0
+struct U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B  : public RuntimeObject
+{
+	// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0::descriptor
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor_0;
+};
+
+// Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0
+struct U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43  : public RuntimeObject
+{
+	// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0::descriptor
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor_0;
+};
+
+// System.Nullable`1<System.Int32>
+struct Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 
+{
+	// System.Boolean System.Nullable`1::hasValue
+	bool ___hasValue_0;
+	// T System.Nullable`1::value
+	int32_t ___value_1;
+};
+
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilitiesConstructorAttribute
+struct ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Diagnostics.CodeAnalysis.AllowNullAttribute
+struct AllowNullAttribute_t4A5AE3716EA82E0569A4B9A578AC8EAC1CC47E0D  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Linq.Expressions.BinaryExpression
+struct BinaryExpression_t4D7BC929A5BBC587BBC045505C9029557B8D32B4  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Linq.Expressions.Expression System.Linq.Expressions.BinaryExpression::<Right>k__BackingField
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___U3CRightU3Ek__BackingField_3;
+	// System.Linq.Expressions.Expression System.Linq.Expressions.BinaryExpression::<Left>k__BackingField
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___U3CLeftU3Ek__BackingField_4;
+};
+
+// System.Boolean
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	// System.Boolean System.Boolean::m_value
+	bool ___m_value_0;
+};
+
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	// System.String System.Boolean::TrueString
+	String_t* ___TrueString_5;
+	// System.String System.Boolean::FalseString
+	String_t* ___FalseString_6;
+};
+
+// System.Byte
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	// System.Byte System.Byte::m_value
+	uint8_t ___m_value_0;
+};
+
+// System.Linq.Expressions.ConstantExpression
+struct ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Object System.Linq.Expressions.ConstantExpression::<Value>k__BackingField
+	RuntimeObject* ___U3CValueU3Ek__BackingField_3;
+};
+
+// System.Diagnostics.CodeAnalysis.DisallowNullAttribute
+struct DisallowNullAttribute_t410E073B4D77E9744A6AE4AAB51693EBD22B07EC  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute
+struct DoesNotReturnAttribute_t317891B1739785866A3FE46907B4FABE8B6FA037  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute
+struct DoesNotReturnIfAttribute_tE35E47C780E03BB79129441924C4E22EE5D958B8  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Boolean System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute::<ParameterValue>k__BackingField
+	bool ___U3CParameterValueU3Ek__BackingField_0;
+};
+
+// System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute
+struct DynamicallyAccessedMembersAttribute_t32A93E390065BE96AD120568DB033AFF59F9A95C  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute::<MemberTypes>k__BackingField
+	int32_t ___U3CMemberTypesU3Ek__BackingField_0;
+};
+
+// Microsoft.CodeAnalysis.EmbeddedAttribute
+struct EmbeddedAttribute_tF17F62C9D7DA6B113CA3A79224FEB5C3E409CBA2  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Linq.Expressions.IndexExpression
+struct IndexExpression_t3EE6D9B088DD1886D3206BBB603C988A4B817347  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Collections.Generic.IReadOnlyList`1<System.Linq.Expressions.Expression> System.Linq.Expressions.IndexExpression::_arguments
+	RuntimeObject* ____arguments_3;
+	// System.Linq.Expressions.Expression System.Linq.Expressions.IndexExpression::<Object>k__BackingField
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___U3CObjectU3Ek__BackingField_4;
+	// System.Reflection.PropertyInfo System.Linq.Expressions.IndexExpression::<Indexer>k__BackingField
+	PropertyInfo_t* ___U3CIndexerU3Ek__BackingField_5;
+};
+
+// System.Int32
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	// System.Int32 System.Int32::m_value
+	int32_t ___m_value_0;
+};
+
+// System.IntPtr
+struct IntPtr_t 
+{
+	// System.Void* System.IntPtr::m_value
+	void* ___m_value_0;
+};
+
+struct IntPtr_t_StaticFields
+{
+	// System.IntPtr System.IntPtr::Zero
+	intptr_t ___Zero_1;
+};
+
+// System.Linq.Expressions.LambdaExpression
+struct LambdaExpression_tD26FB6AEAD01B2EBB668CDEAFAAFA4948697300E  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Linq.Expressions.Expression System.Linq.Expressions.LambdaExpression::_body
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ____body_3;
+};
+
+// System.Diagnostics.CodeAnalysis.MaybeNullAttribute
+struct MaybeNullAttribute_t249B8A5C69FDCCD26D3726ECC4FE66A8A0929E07  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute
+struct MaybeNullWhenAttribute_t448AC26D1FC4E91C352A4A17685921BE11CE9EFE  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Boolean System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute::<ReturnValue>k__BackingField
+	bool ___U3CReturnValueU3Ek__BackingField_0;
+};
+
+// System.Diagnostics.CodeAnalysis.MemberNotNullAttribute
+struct MemberNotNullAttribute_tE7CFBD5A82CF0A19B6EE7475E126161931259A49  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.String[] System.Diagnostics.CodeAnalysis.MemberNotNullAttribute::<Members>k__BackingField
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CMembersU3Ek__BackingField_0;
+};
+
+// System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute
+struct MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Boolean System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::<ReturnValue>k__BackingField
+	bool ___U3CReturnValueU3Ek__BackingField_0;
+	// System.String[] System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::<Members>k__BackingField
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___U3CMembersU3Ek__BackingField_1;
+};
+
+// System.Reflection.MethodBase
+struct MethodBase_t  : public MemberInfo_t
+{
+};
+
+// System.Linq.Expressions.MethodCallExpression
+struct MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Reflection.MethodInfo System.Linq.Expressions.MethodCallExpression::<Method>k__BackingField
+	MethodInfo_t* ___U3CMethodU3Ek__BackingField_3;
+};
+
+// System.Linq.Expressions.NewExpression
+struct NewExpression_t71592C0B1A33F4FD5FA0283BC2657C31D95EED51  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Collections.Generic.IReadOnlyList`1<System.Linq.Expressions.Expression> System.Linq.Expressions.NewExpression::_arguments
+	RuntimeObject* ____arguments_3;
+	// System.Reflection.ConstructorInfo System.Linq.Expressions.NewExpression::<Constructor>k__BackingField
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___U3CConstructorU3Ek__BackingField_4;
+	// System.Collections.ObjectModel.ReadOnlyCollection`1<System.Reflection.MemberInfo> System.Linq.Expressions.NewExpression::<Members>k__BackingField
+	ReadOnlyCollection_1_tDAE35E503783CF053392CFBB43ACBDCE72C6C996* ___U3CMembersU3Ek__BackingField_5;
+};
+
+// System.Diagnostics.CodeAnalysis.NotNullAttribute
+struct NotNullAttribute_t44BAA9E007F85BC931E148C2AEBF9DCD352253C4  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+};
+
+// System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute
+struct NotNullIfNotNullAttribute_t23D6BAF10981CA5C278A0E68A798A5613F6123A1  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.String System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute::<ParameterName>k__BackingField
+	String_t* ___U3CParameterNameU3Ek__BackingField_0;
+};
+
+// System.Diagnostics.CodeAnalysis.NotNullWhenAttribute
+struct NotNullWhenAttribute_tA79B6D078587964DD0E540B5A898AFA59FDBE333  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Boolean System.Diagnostics.CodeAnalysis.NotNullWhenAttribute::<ReturnValue>k__BackingField
+	bool ___U3CReturnValueU3Ek__BackingField_0;
+};
+
+// System.Runtime.CompilerServices.NullableAttribute
+struct NullableAttribute_t97F9A2D5664B13D882836AC8F74EFAC88AFFC2AF  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Byte[] System.Runtime.CompilerServices.NullableAttribute::NullableFlags
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___NullableFlags_0;
+};
+
+// System.Runtime.CompilerServices.NullableContextAttribute
+struct NullableContextAttribute_t66D75A13A92DBEBB68D303EF11A83C60679628D4  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Byte System.Runtime.CompilerServices.NullableContextAttribute::Flag
+	uint8_t ___Flag_0;
+};
+
+// System.Runtime.CompilerServices.NullablePublicOnlyAttribute
+struct NullablePublicOnlyAttribute_tD766562F61EDE1166F8E2FAD369C1FAB846D4E73  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Boolean System.Runtime.CompilerServices.NullablePublicOnlyAttribute::IncludesInternals
+	bool ___IncludesInternals_0;
+};
+
+// System.Linq.Expressions.ParameterExpression
+struct ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.String System.Linq.Expressions.ParameterExpression::<Name>k__BackingField
+	String_t* ___U3CNameU3Ek__BackingField_3;
+};
+
+// System.Linq.Expressions.UnaryExpression
+struct UnaryExpression_tFB4F40A211A2FF9B58F1A86E0EDB474121867B96  : public Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785
+{
+	// System.Type System.Linq.Expressions.UnaryExpression::<Type>k__BackingField
+	Type_t* ___U3CTypeU3Ek__BackingField_3;
+	// System.Linq.Expressions.ExpressionType System.Linq.Expressions.UnaryExpression::<NodeType>k__BackingField
+	int32_t ___U3CNodeTypeU3Ek__BackingField_4;
+	// System.Linq.Expressions.Expression System.Linq.Expressions.UnaryExpression::<Operand>k__BackingField
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___U3COperandU3Ek__BackingField_5;
+	// System.Reflection.MethodInfo System.Linq.Expressions.UnaryExpression::<Method>k__BackingField
+	MethodInfo_t* ___U3CMethodU3Ek__BackingField_6;
+};
+
+// System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute
+struct UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<Category>k__BackingField
+	String_t* ___U3CCategoryU3Ek__BackingField_0;
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<CheckId>k__BackingField
+	String_t* ___U3CCheckIdU3Ek__BackingField_1;
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<Scope>k__BackingField
+	String_t* ___U3CScopeU3Ek__BackingField_2;
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<Target>k__BackingField
+	String_t* ___U3CTargetU3Ek__BackingField_3;
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<MessageId>k__BackingField
+	String_t* ___U3CMessageIdU3Ek__BackingField_4;
+	// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::<Justification>k__BackingField
+	String_t* ___U3CJustificationU3Ek__BackingField_5;
+};
+
+// System.Void
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+
+// Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+struct ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805 
+{
+	// System.Reflection.ConstructorInfo Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::_constructor
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ____constructor_0;
+	// System.Reflection.ParameterInfo[] Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::_parameters
+	ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* ____parameters_1;
+	// System.Object[] Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::_parameterValues
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____parameterValues_2;
+};
+// Native definition for P/Invoke marshalling of Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+struct ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_pinvoke
+{
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ____constructor_0;
+	ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke** ____parameters_1;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____parameterValues_2;
+};
+// Native definition for COM marshalling of Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+struct ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_com
+{
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ____constructor_0;
+	ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com** ____parameters_1;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____parameterValues_2;
+};
+
+// System.Linq.Expressions.Expression`1<System.Func`3<System.IServiceProvider,System.Object[],System.Object>>
+struct Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4  : public LambdaExpression_tD26FB6AEAD01B2EBB668CDEAFAAFA4948697300E
+{
+};
+
+// System.Linq.Expressions.Expression`1<System.Func`5<System.IServiceProvider,System.Type,System.Type,System.Boolean,System.Object>>
+struct Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2  : public LambdaExpression_tD26FB6AEAD01B2EBB668CDEAFAAFA4948697300E
+{
+};
+
+// System.Reflection.ConstructorInfo
+struct ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB  : public MethodBase_t
+{
+};
+
+struct ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_StaticFields
+{
+	// System.String System.Reflection.ConstructorInfo::ConstructorName
+	String_t* ___ConstructorName_0;
+	// System.String System.Reflection.ConstructorInfo::TypeConstructorName
+	String_t* ___TypeConstructorName_1;
+};
+
+// System.Delegate
+struct Delegate_t  : public RuntimeObject
+{
+	// System.IntPtr System.Delegate::method_ptr
+	Il2CppMethodPointer ___method_ptr_0;
+	// System.IntPtr System.Delegate::invoke_impl
+	intptr_t ___invoke_impl_1;
+	// System.Object System.Delegate::m_target
+	RuntimeObject* ___m_target_2;
+	// System.IntPtr System.Delegate::method
+	intptr_t ___method_3;
+	// System.IntPtr System.Delegate::delegate_trampoline
+	intptr_t ___delegate_trampoline_4;
+	// System.IntPtr System.Delegate::extra_arg
+	intptr_t ___extra_arg_5;
+	// System.IntPtr System.Delegate::method_code
+	intptr_t ___method_code_6;
+	// System.IntPtr System.Delegate::interp_method
+	intptr_t ___interp_method_7;
+	// System.IntPtr System.Delegate::interp_invoke_impl
+	intptr_t ___interp_invoke_impl_8;
+	// System.Reflection.MethodInfo System.Delegate::method_info
+	MethodInfo_t* ___method_info_9;
+	// System.Reflection.MethodInfo System.Delegate::original_method_info
+	MethodInfo_t* ___original_method_info_10;
+	// System.DelegateData System.Delegate::data
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	// System.Boolean System.Delegate::method_is_virtual
+	bool ___method_is_virtual_12;
+};
+// Native definition for P/Invoke marshalling of System.Delegate
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr_0;
+	intptr_t ___invoke_impl_1;
+	Il2CppIUnknown* ___m_target_2;
+	intptr_t ___method_3;
+	intptr_t ___delegate_trampoline_4;
+	intptr_t ___extra_arg_5;
+	intptr_t ___method_code_6;
+	intptr_t ___interp_method_7;
+	intptr_t ___interp_invoke_impl_8;
+	MethodInfo_t* ___method_info_9;
+	MethodInfo_t* ___original_method_info_10;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	int32_t ___method_is_virtual_12;
+};
+// Native definition for COM marshalling of System.Delegate
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr_0;
+	intptr_t ___invoke_impl_1;
+	Il2CppIUnknown* ___m_target_2;
+	intptr_t ___method_3;
+	intptr_t ___delegate_trampoline_4;
+	intptr_t ___extra_arg_5;
+	intptr_t ___method_code_6;
+	intptr_t ___interp_method_7;
+	intptr_t ___interp_invoke_impl_8;
+	MethodInfo_t* ___method_info_9;
+	MethodInfo_t* ___original_method_info_10;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data_11;
+	int32_t ___method_is_virtual_12;
+};
+
+// System.Exception
+struct Exception_t  : public RuntimeObject
+{
+	// System.String System.Exception::_className
+	String_t* ____className_1;
+	// System.String System.Exception::_message
+	String_t* ____message_2;
+	// System.Collections.IDictionary System.Exception::_data
+	RuntimeObject* ____data_3;
+	// System.Exception System.Exception::_innerException
+	Exception_t* ____innerException_4;
+	// System.String System.Exception::_helpURL
+	String_t* ____helpURL_5;
+	// System.Object System.Exception::_stackTrace
+	RuntimeObject* ____stackTrace_6;
+	// System.String System.Exception::_stackTraceString
+	String_t* ____stackTraceString_7;
+	// System.String System.Exception::_remoteStackTraceString
+	String_t* ____remoteStackTraceString_8;
+	// System.Int32 System.Exception::_remoteStackIndex
+	int32_t ____remoteStackIndex_9;
+	// System.Object System.Exception::_dynamicMethods
+	RuntimeObject* ____dynamicMethods_10;
+	// System.Int32 System.Exception::_HResult
+	int32_t ____HResult_11;
+	// System.String System.Exception::_source
+	String_t* ____source_12;
+	// System.Runtime.Serialization.SafeSerializationManager System.Exception::_safeSerializationManager
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager_13;
+	// System.Diagnostics.StackTrace[] System.Exception::captured_traces
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces_14;
+	// System.IntPtr[] System.Exception::native_trace_ips
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips_15;
+	// System.Int32 System.Exception::caught_in_unmanaged
+	int32_t ___caught_in_unmanaged_16;
+};
+
+struct Exception_t_StaticFields
+{
+	// System.Object System.Exception::s_EDILock
+	RuntimeObject* ___s_EDILock_0;
+};
+// Native definition for P/Invoke marshalling of System.Exception
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className_1;
+	char* ____message_2;
+	RuntimeObject* ____data_3;
+	Exception_t_marshaled_pinvoke* ____innerException_4;
+	char* ____helpURL_5;
+	Il2CppIUnknown* ____stackTrace_6;
+	char* ____stackTraceString_7;
+	char* ____remoteStackTraceString_8;
+	int32_t ____remoteStackIndex_9;
+	Il2CppIUnknown* ____dynamicMethods_10;
+	int32_t ____HResult_11;
+	char* ____source_12;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager_13;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces_14;
+	Il2CppSafeArray/*NONE*/* ___native_trace_ips_15;
+	int32_t ___caught_in_unmanaged_16;
+};
+// Native definition for COM marshalling of System.Exception
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className_1;
+	Il2CppChar* ____message_2;
+	RuntimeObject* ____data_3;
+	Exception_t_marshaled_com* ____innerException_4;
+	Il2CppChar* ____helpURL_5;
+	Il2CppIUnknown* ____stackTrace_6;
+	Il2CppChar* ____stackTraceString_7;
+	Il2CppChar* ____remoteStackTraceString_8;
+	int32_t ____remoteStackIndex_9;
+	Il2CppIUnknown* ____dynamicMethods_10;
+	int32_t ____HResult_11;
+	Il2CppChar* ____source_12;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager_13;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces_14;
+	Il2CppSafeArray/*NONE*/* ___native_trace_ips_15;
+	int32_t ___caught_in_unmanaged_16;
+};
+
+// System.Reflection.MethodInfo
+struct MethodInfo_t  : public MethodBase_t
+{
+};
+
+// System.RuntimeMethodHandle
+struct RuntimeMethodHandle_tB35B96E97214DCBE20B0B02B1E687884B34680B2 
+{
+	// System.IntPtr System.RuntimeMethodHandle::value
+	intptr_t ___value_0;
+};
+
+// System.RuntimeTypeHandle
+struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
+{
+	// System.IntPtr System.RuntimeTypeHandle::value
+	intptr_t ___value_0;
+};
+
+// System.ApplicationException
+struct ApplicationException_tA744BED4E90266BD255285CD4CF909BAB3EE811A  : public Exception_t
+{
+};
+
+// System.MulticastDelegate
+struct MulticastDelegate_t  : public Delegate_t
+{
+	// System.Delegate[] System.MulticastDelegate::delegates
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates_13;
+};
+// Native definition for P/Invoke marshalling of System.MulticastDelegate
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates_13;
+};
+// Native definition for COM marshalling of System.MulticastDelegate
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates_13;
+};
+
+// System.SystemException
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+
+// System.Type
+struct Type_t  : public MemberInfo_t
+{
+	// System.RuntimeTypeHandle System.Type::_impl
+	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl_8;
+};
+
+struct Type_t_StaticFields
+{
+	// System.Reflection.Binder modreq(System.Runtime.CompilerServices.IsVolatile) System.Type::s_defaultBinder
+	Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235* ___s_defaultBinder_0;
+	// System.Char System.Type::Delimiter
+	Il2CppChar ___Delimiter_1;
+	// System.Type[] System.Type::EmptyTypes
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___EmptyTypes_2;
+	// System.Object System.Type::Missing
+	RuntimeObject* ___Missing_3;
+	// System.Reflection.MemberFilter System.Type::FilterAttribute
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterAttribute_4;
+	// System.Reflection.MemberFilter System.Type::FilterName
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName_5;
+	// System.Reflection.MemberFilter System.Type::FilterNameIgnoreCase
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase_6;
+};
+
+// System.Func`2<System.IServiceProvider,System.Object>
+struct Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4  : public MulticastDelegate_t
+{
+};
+
+// System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceDescriptor,System.Boolean>
+struct Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E  : public MulticastDelegate_t
+{
+};
+
+// System.Func`3<System.IServiceProvider,System.Object[],System.Object>
+struct Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093  : public MulticastDelegate_t
+{
+};
+
+// System.ArgumentException
+struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+	// System.String System.ArgumentException::_paramName
+	String_t* ____paramName_18;
+};
+
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
+{
+};
+
+// System.FormatException
+struct FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+
+// System.InvalidOperationException
+struct InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+
+// System.Resources.MissingManifestResourceException
+struct MissingManifestResourceException_t136A089345909ADB6333D6F4E2AA84C7A00CB3FD  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+
+// Microsoft.Extensions.DependencyInjection.ObjectFactory
+struct ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950  : public MulticastDelegate_t
+{
+};
+
+// System.Reflection.TargetInvocationException
+struct TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2  : public ApplicationException_tA744BED4E90266BD255285CD4CF909BAB3EE811A
+{
+};
+
+// System.Reflection.TypeInfo
+struct TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D  : public Type_t
+{
+};
+
+// System.ArgumentNullException
+struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129  : public ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263
+{
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// System.Byte[]
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+// System.Object[]
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.String[]
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Type[]
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Type_t* m_Items[1];
+
+	inline Type_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Type_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Type_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Type_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Type_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Type_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Reflection.ConstructorInfo[]
+struct ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A  : public RuntimeArray
+{
+	ALIGN_FIELD (8) ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* m_Items[1];
+
+	inline ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Nullable`1<System.Int32>[]
+struct Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 m_Items[1];
+
+	inline Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 value)
+	{
+		m_Items[index] = value;
+	}
+};
+// System.Linq.Expressions.ParameterExpression[]
+struct ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C  : public RuntimeArray
+{
+	ALIGN_FIELD (8) ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* m_Items[1];
+
+	inline ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Reflection.ParameterInfo[]
+struct ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C  : public RuntimeArray
+{
+	ALIGN_FIELD (8) ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* m_Items[1];
+
+	inline ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Linq.Expressions.Expression[]
+struct ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* m_Items[1];
+
+	inline Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Delegate[]
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_pinvoke(const ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F& unmarshaled, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke& marshaled);
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_pinvoke_back(const ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke& marshaled, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F& unmarshaled);
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_pinvoke_cleanup(ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_pinvoke& marshaled);
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_com(const ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F& unmarshaled, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com& marshaled);
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_com_back(const ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com& marshaled, ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F& unmarshaled);
+IL2CPP_EXTERN_C void ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshal_com_cleanup(ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F_marshaled_com& marshaled);
+
+// T Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService<System.Object>(System.IServiceProvider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceProviderServiceExtensions_GetRequiredService_TisRuntimeObject_m6B9985B4A7BD311169F8AA28F1CF6AAAC50942F9_gshared (RuntimeObject* ___provider0, const RuntimeMethod* method) ;
+// System.Linq.Expressions.Expression`1<TDelegate> System.Linq.Expressions.Expression::Lambda<System.Object>(System.Linq.Expressions.Expression,System.Linq.Expressions.ParameterExpression[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Expression_1_t63D438A2F366BA0B43CCDBBFCE66D131C313A7D7* Expression_Lambda_TisRuntimeObject_m43F07C2527F3E7D93E3099A9627771361B451038_gshared (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___body0, ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* ___parameters1, const RuntimeMethod* method) ;
+// TDelegate System.Linq.Expressions.Expression`1<System.Object>::Compile()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Expression_1_Compile_mAE60BB2984F0B64C621A225AA174F670BBAE11EC_gshared (Expression_1_t63D438A2F366BA0B43CCDBBFCE66D131C313A7D7* __this, const RuntimeMethod* method) ;
+// T[] System.Array::Empty<System.Object>()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<System.Int32>::.ctor(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method) ;
+// System.Reflection.MethodInfo Microsoft.Extensions.DependencyInjection.ActivatorUtilities::GetMethodInfo<System.Object>(System.Linq.Expressions.Expression`1<T>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodInfo_t* ActivatorUtilities_GetMethodInfo_TisRuntimeObject_mFE76E9EF459327696874A97930FFD9C6E7E74138_gshared (Expression_1_t63D438A2F366BA0B43CCDBBFCE66D131C313A7D7* ___expr0, const RuntimeMethod* method) ;
+// System.Void System.Func`2<System.Object,System.Boolean>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared (Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Boolean System.Linq.Enumerable::Any<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisRuntimeObject_mF6C6AC8DF8971883615734832D09C9210B956F0F_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::FirstOrDefault<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_FirstOrDefault_TisRuntimeObject_mFACC750E4D7AF7B43F5B866C84F613B3ECC41994_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
+
+// System.Void System.Attribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2 (Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA* __this, const RuntimeMethod* method) ;
+// System.Boolean System.SR::UsingResourceKeys()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline (const RuntimeMethod* method) ;
+// System.Resources.ResourceManager System.SR::get_ResourceManager()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* SR_get_ResourceManager_mDCED040BA4BE9F2AB06DDF206D96234D3AEAC5C7 (const RuntimeMethod* method) ;
+// System.Boolean System.String::Equals(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D (String_t* __this, String_t* ___value0, const RuntimeMethod* method) ;
+// System.String System.String::Join(System.String,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7 (String_t* ___separator0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___values1, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___format0, RuntimeObject* ___arg01, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___format0, RuntimeObject* ___arg01, RuntimeObject* ___arg12, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C (String_t* ___format0, RuntimeObject* ___arg01, RuntimeObject* ___arg12, RuntimeObject* ___arg23, const RuntimeMethod* method) ;
+// System.String System.String::Concat(System.String,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___str00, String_t* ___str11, String_t* ___str22, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.String,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m918500C1EFB475181349A79989BB79BB36102894 (String_t* ___format0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args1, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.IFormatProvider,System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m3844098E7C18576D263AAF62F69BE5C70BF9A744 (RuntimeObject* ___provider0, String_t* ___format1, RuntimeObject* ___arg02, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56 (RuntimeObject* ___provider0, String_t* ___format1, RuntimeObject* ___arg02, RuntimeObject* ___arg13, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mF8E53122BE8F0F617357DFB75C3912D1242DE263 (RuntimeObject* ___provider0, String_t* ___format1, RuntimeObject* ___arg02, RuntimeObject* ___arg13, RuntimeObject* ___arg24, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.IFormatProvider,System.String,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m447B585713E5EB3EBF5D9D0710706D01E8A56D75 (RuntimeObject* ___provider0, String_t* ___format1, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args2, const RuntimeMethod* method) ;
+// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___handle0, const RuntimeMethod* method) ;
+// System.Void System.Resources.ResourceManager::.ctor(System.Type)
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void ResourceManager__ctor_mC93D478F43E5089ACC407FDECF067A0F208A3784 (ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* __this, Type_t* ___resourceSource0, const RuntimeMethod* method) ;
+// System.String System.SR::GetResourceString(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE (String_t* ___resourceKey0, String_t* ___defaultString1, const RuntimeMethod* method) ;
+// System.Boolean System.AppContext::TryGetSwitch(System.String,System.Boolean&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AppContext_TryGetSwitch_mD2500DB32F941228B6964BC53CAA0EA7047AEB78 (String_t* ___switchName0, bool* ___isEnabled1, const RuntimeMethod* method) ;
+// System.Boolean System.Type::op_Equality(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
+// System.Boolean System.Type::get_IsValueType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_get_IsValueType_m59AE2E0439DC06347B8D6B38548F3CBA54D38318 (Type_t* __this, const RuntimeMethod* method) ;
+// System.Object Microsoft.Extensions.Internal.ParameterDefaultValue::<TryGetDefaultValue>g__CreateValueType|1_0(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ParameterDefaultValue_U3CTryGetDefaultValueU3Eg__CreateValueTypeU7C1_0_mD7B7B938B600212A5FDCD4014D3EFAEC66FCD22C (Type_t* ___t0, const RuntimeMethod* method) ;
+// System.Type System.Nullable::GetUnderlyingType(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Nullable_GetUnderlyingType_mA8FA7F61D3B8E56EB4E40378020FD2854838BDF8 (Type_t* ___nullableType0, const RuntimeMethod* method) ;
+// System.Boolean System.Type::op_Inequality(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172 (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
+// System.Object System.Enum::ToObject(System.Type,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enum_ToObject_mD898E0819FA640BC4E98924613B5DBD41146D1FF (Type_t* ___enumType0, RuntimeObject* ___value1, const RuntimeMethod* method) ;
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Object System.Activator::CreateInstance(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Activator_CreateInstance_mFF030428C64FDDFACC74DFAC97388A1C628BFBCF (Type_t* ___type0, const RuntimeMethod* method) ;
+// System.Void System.ArgumentNullException::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* __this, String_t* ___paramName0, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_Add_mD5AEDEFB4BFF3A47DDB4DCBD8A6C6D17DEF124B6 (RuntimeObject* ___collection0, Type_t* ___serviceType1, Type_t* ___implementationType2, int32_t ___lifetime3, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_Add_m5DBDAE1C1459D1DCEE80B2944B4B609719BD6417 (RuntimeObject* ___collection0, Type_t* ___serviceType1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, int32_t ___lifetime3, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, RuntimeObject* ___instance1, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, Type_t* ___implementationType1, int32_t ___lifetime2, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___factory1, int32_t ___lifetime2, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m5EB0C7BC115735ABCBF36C31FE7EB4128C76BCE3 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, int32_t ___lifetime1, const RuntimeMethod* method) ;
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ServiceType()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceLifetime Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_Lifetime()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ServiceDescriptor_get_Lifetime_mF5CC52F90D7A16272E4AC41ABF857586F5932C61_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationType()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// System.String System.String::Concat(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method) ;
+// System.Func`2<System.IServiceProvider,System.Object> Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationFactory()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// System.Reflection.MethodInfo System.Delegate::get_Method()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodInfo_t* Delegate_get_Method_mB684A7525653DFE0EFC35E58449E1FC8E2A9F019 (Delegate_t* __this, const RuntimeMethod* method) ;
+// System.Object Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationInstance()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// System.Type System.Object::GetType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Describe(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Describe_mE0FABDFDCC23DCEB8B9C87636A3FC50DE05213F7 (Type_t* ___serviceType0, Type_t* ___implementationType1, int32_t ___lifetime2, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Describe(System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Describe_m36DCA3F0D16C5C60881A37F1B39334F521DE857B (Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, int32_t ___lifetime2, const RuntimeMethod* method) ;
+// System.String System.SR::get_NoServiceRegistered()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_NoServiceRegistered_mBE8DAE2E906DD01140C56A47773A4C4344D786AC (const RuntimeMethod* method) ;
+// System.String System.SR::Format(System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_mD18A3DAD68F66F971CA6B573D34831045BE7CF7F (String_t* ___resourceFormat0, RuntimeObject* ___p11, const RuntimeMethod* method) ;
+// System.Void System.InvalidOperationException::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___message0, const RuntimeMethod* method) ;
+// System.Object Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService(System.IServiceProvider,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16 (RuntimeObject* ___provider0, Type_t* ___serviceType1, const RuntimeMethod* method) ;
+// T Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService<Microsoft.Extensions.DependencyInjection.IServiceScopeFactory>(System.IServiceProvider)
+inline RuntimeObject* ServiceProviderServiceExtensions_GetRequiredService_TisIServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_m59983201416E5F6CAB9F118DAFAEC75CC5549E26 (RuntimeObject* ___provider0, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject* (*) (RuntimeObject*, const RuntimeMethod*))ServiceProviderServiceExtensions_GetRequiredService_TisRuntimeObject_m6B9985B4A7BD311169F8AA28F1CF6AAAC50942F9_gshared)(___provider0, method);
+}
+// System.Reflection.TypeInfo System.Reflection.IntrospectionExtensions::GetTypeInfo(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5 (Type_t* ___type0, const RuntimeMethod* method) ;
+// System.Boolean System.Type::get_IsAbstract()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_get_IsAbstract_m16FA83463867635ED9DECAE1C5F6BE96B4579CE5 (Type_t* __this, const RuntimeMethod* method) ;
+// System.Reflection.ConstructorInfo[] System.Type::GetConstructors()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* Type_GetConstructors_m1F758EB484E2AD8B1F662C967178B017A886A964 (Type_t* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Reflection.MethodBase::get_IsStatic()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MethodBase_get_IsStatic_mD2921396167EC4F99E2ADC46C39CCCEC3CD0E16E (MethodBase_t* __this, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::.ctor(System.Reflection.ConstructorInfo)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstructorMatcher__ctor_mAD53F78CA132B73F685629EC7423FCEAC104DFAC (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, const RuntimeMethod* method) ;
+// System.Int32 Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::Match(System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ConstructorMatcher_Match_m4C2039B8A1F472D04C437341A455B6DB4B3E871C (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___givenParameters0, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::ThrowMultipleCtorsMarkedWithAttributeException()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B (const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::ThrowMarkedCtorDoesNotTakeAllProvidedArguments()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27 (const RuntimeMethod* method) ;
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::CreateInstance(System.IServiceProvider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7 (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, RuntimeObject* ___provider0, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::FindApplicableConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_FindApplicableConstructor_m34554C31D1FD38198ABDCEAB1617B8B437040FBC (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___matchingParameterMap3, const RuntimeMethod* method) ;
+// System.Linq.Expressions.ParameterExpression System.Linq.Expressions.Expression::Parameter(System.Type,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992 (Type_t* ___type0, String_t* ___name1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ActivatorUtilities::BuildFactoryExpression(System.Reflection.ConstructorInfo,System.Nullable`1<System.Int32>[],System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ActivatorUtilities_BuildFactoryExpression_mBE4B139C00FA8BCB52EF5391B7729DBB82DAB1B1 (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* ___parameterMap1, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___serviceProvider2, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___factoryArgumentArray3, const RuntimeMethod* method) ;
+// System.Linq.Expressions.Expression`1<TDelegate> System.Linq.Expressions.Expression::Lambda<System.Func`3<System.IServiceProvider,System.Object[],System.Object>>(System.Linq.Expressions.Expression,System.Linq.Expressions.ParameterExpression[])
+inline Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* Expression_Lambda_TisFunc_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093_m23DEF827804CA29573E8BCF658B151FF955DE0F1 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___body0, ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* ___parameters1, const RuntimeMethod* method)
+{
+	return ((  Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* (*) (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*, ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*, const RuntimeMethod*))Expression_Lambda_TisRuntimeObject_m43F07C2527F3E7D93E3099A9627771361B451038_gshared)(___body0, ___parameters1, method);
+}
+// TDelegate System.Linq.Expressions.Expression`1<System.Func`3<System.IServiceProvider,System.Object[],System.Object>>::Compile()
+inline Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093* Expression_1_Compile_m1C4DD85947C855F964A4D02BDB8D3BE5940C54A8 (Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* __this, const RuntimeMethod* method)
+{
+	return ((  Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093* (*) (Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4*, const RuntimeMethod*))Expression_1_Compile_mAE60BB2984F0B64C621A225AA174F670BBAE11EC_gshared)(__this, method);
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ObjectFactory::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectFactory__ctor_m685CCDD654CEBD03B1691F70E0E3E0BAE99894F0 (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// T[] System.Array::Empty<System.Object>()
+inline ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline (const RuntimeMethod* method)
+{
+	return ((  ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* (*) (const RuntimeMethod*))Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline)(method);
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities::CreateInstance(System.IServiceProvider,System.Type,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ActivatorUtilities_CreateInstance_mC9555A99351AA8DE4C229D509D5B4B62223E0F42 (RuntimeObject* ___provider0, Type_t* ___instanceType1, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___parameters2, const RuntimeMethod* method) ;
+// System.Boolean Microsoft.Extensions.Internal.ParameterDefaultValue::TryGetDefaultValue(System.Reflection.ParameterInfo,System.Object&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D (ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* ___parameter0, RuntimeObject** ___defaultValue1, const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<System.Int32>::get_HasValue()
+inline bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline)(__this, method);
+}
+// System.Linq.Expressions.ConstantExpression System.Linq.Expressions.Expression::Constant(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* Expression_Constant_mF3E703732161EF83B1848E433F7DD1FB166BFE44 (RuntimeObject* ___value0, const RuntimeMethod* method) ;
+// System.Linq.Expressions.IndexExpression System.Linq.Expressions.Expression::ArrayAccess(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IndexExpression_t3EE6D9B088DD1886D3206BBB603C988A4B817347* Expression_ArrayAccess_m0ECEC416D1865DCB4564B2A6AF08C8B82DA51A60 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___array0, ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* ___indexes1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.ConstantExpression System.Linq.Expressions.Expression::Constant(System.Object,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* Expression_Constant_m71DA28DF529697FFF5205A455CACAD09A4FD30CE (RuntimeObject* ___value0, Type_t* ___type1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.MethodCallExpression System.Linq.Expressions.Expression::Call(System.Reflection.MethodInfo,System.Linq.Expressions.Expression[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB* Expression_Call_mD94E7CF72C83BF40BEEB31F7EB6519741A0043D2 (MethodInfo_t* ___method0, ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* ___arguments1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.BinaryExpression System.Linq.Expressions.Expression::Coalesce(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BinaryExpression_t4D7BC929A5BBC587BBC045505C9029557B8D32B4* Expression_Coalesce_m1C145BF8302D605BA953321A8F0E21B0F56ADB23 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___left0, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___right1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.UnaryExpression System.Linq.Expressions.Expression::Convert(System.Linq.Expressions.Expression,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnaryExpression_tFB4F40A211A2FF9B58F1A86E0EDB474121867B96* Expression_Convert_mD5233B60383B3FD0F5A044E4440FB32CBF9609D5 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___expression0, Type_t* ___type1, const RuntimeMethod* method) ;
+// System.Linq.Expressions.NewExpression System.Linq.Expressions.Expression::New(System.Reflection.ConstructorInfo,System.Linq.Expressions.Expression[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NewExpression_t71592C0B1A33F4FD5FA0283BC2657C31D95EED51* Expression_New_m447E4F4F22912AE5F06493267B37F481F5818E75 (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* ___arguments1, const RuntimeMethod* method) ;
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryFindPreferredConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryFindPreferredConstructor_mBF0947AA817A48C4E124AE1C5758F1126FCB1B55 (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap3, const RuntimeMethod* method) ;
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryFindMatchingConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryFindMatchingConstructor_m533CBC668756EF21F6847F62372899BB80118604 (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap3, const RuntimeMethod* method) ;
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryCreateParameterMap(System.Reflection.ParameterInfo[],System.Type[],System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryCreateParameterMap_m5F8100C8C1B3CA4978DC441CF896968708D34B29 (ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* ___constructorParameters0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap2, const RuntimeMethod* method) ;
+// System.Boolean System.Reflection.ConstructorInfo::op_Inequality(System.Reflection.ConstructorInfo,System.Reflection.ConstructorInfo)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ConstructorInfo_op_Inequality_mB3CB8B779FA4400BBF7069097CC64E6CA1D235A4 (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___left0, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___right1, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<System.Int32>::.ctor(T)
+inline void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703 (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	((  void (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, int32_t, const RuntimeMethod*))Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared)(__this, ___value0, method);
+}
+// System.Reflection.MethodBase System.Reflection.MethodBase::GetMethodFromHandle(System.RuntimeMethodHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodBase_t* MethodBase_GetMethodFromHandle_m55E706B5156C0FDC1EA1DEF95B4FE36FE6A96EA9 (RuntimeMethodHandle_tB35B96E97214DCBE20B0B02B1E687884B34680B2 ___handle0, const RuntimeMethod* method) ;
+// System.Linq.Expressions.MethodCallExpression System.Linq.Expressions.Expression::Call(System.Linq.Expressions.Expression,System.Reflection.MethodInfo,System.Linq.Expressions.Expression[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB* Expression_Call_mF08321E4E99D835F221F58B40C8077C60530CE62 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___instance0, MethodInfo_t* ___method1, ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* ___arguments2, const RuntimeMethod* method) ;
+// System.Linq.Expressions.Expression`1<TDelegate> System.Linq.Expressions.Expression::Lambda<System.Func`5<System.IServiceProvider,System.Type,System.Type,System.Boolean,System.Object>>(System.Linq.Expressions.Expression,System.Linq.Expressions.ParameterExpression[])
+inline Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2* Expression_Lambda_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_m259A292B2C8778D6341D0DD5552309535E5C2E78 (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___body0, ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* ___parameters1, const RuntimeMethod* method)
+{
+	return ((  Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2* (*) (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*, ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*, const RuntimeMethod*))Expression_Lambda_TisRuntimeObject_m43F07C2527F3E7D93E3099A9627771361B451038_gshared)(___body0, ___parameters1, method);
+}
+// System.Reflection.MethodInfo Microsoft.Extensions.DependencyInjection.ActivatorUtilities::GetMethodInfo<System.Func`5<System.IServiceProvider,System.Type,System.Type,System.Boolean,System.Object>>(System.Linq.Expressions.Expression`1<T>)
+inline MethodInfo_t* ActivatorUtilities_GetMethodInfo_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_mC5EC61B5AC8435D00AA38EC0D59459C6149D8505 (Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2* ___expr0, const RuntimeMethod* method)
+{
+	return ((  MethodInfo_t* (*) (Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2*, const RuntimeMethod*))ActivatorUtilities_GetMethodInfo_TisRuntimeObject_mFE76E9EF459327696874A97930FFD9C6E7E74138_gshared)(___expr0, method);
+}
+// System.Object System.Reflection.ConstructorInfo::Invoke(System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ConstructorInfo_Invoke_m15FDF2B682BD01CC934BE4D314EF2193103CECFE (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___parameters0, const RuntimeMethod* method) ;
+// System.Exception System.Exception::get_InnerException()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) ;
+// System.Runtime.ExceptionServices.ExceptionDispatchInfo System.Runtime.ExceptionServices.ExceptionDispatchInfo::Capture(System.Exception)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ExceptionDispatchInfo_tD7AF19E75FEC22F4A8329FD1E9EDF96615CB2757* ExceptionDispatchInfo_Capture_mC1C1C30D83DC04B2B7813DFCB67D07CCD4909803 (Exception_t* ___source0, const RuntimeMethod* method) ;
+// System.Void System.Runtime.ExceptionServices.ExceptionDispatchInfo::Throw()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExceptionDispatchInfo_Throw_m06F398E346AE94C1CCEB636763A8CB26511F6330 (ExceptionDispatchInfo_tD7AF19E75FEC22F4A8329FD1E9EDF96615CB2757* __this, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m38CCF6ED3762192B5E07E502730C61ED9DC10A97 (U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD* __this, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_0__ctor_m7FA9678204A4590264D789BC5257E6536213F73B (U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* __this, const RuntimeMethod* method) ;
+// System.Void System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceDescriptor,System.Boolean>::.ctor(System.Object,System.IntPtr)
+inline void Func_2__ctor_m873D6DFC4673927D41BCFE68D2AE13A12BE1CA56 (Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
+{
+	((  void (*) (Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_2__ctor_m13C0A7F33154D861E2A041B52E88461832DA1697_gshared)(__this, ___object0, ___method1, method);
+}
+// System.Boolean System.Linq.Enumerable::Any<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+inline bool Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5 (RuntimeObject* ___source0, Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* ___predicate1, const RuntimeMethod* method)
+{
+	return ((  bool (*) (RuntimeObject*, Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*, const RuntimeMethod*))Enumerable_Any_TisRuntimeObject_mF6C6AC8DF8971883615734832D09C9210B956F0F_gshared)(___source0, ___predicate1, method);
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0 (RuntimeObject* ___collection0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Transient(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0 (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Transient(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9 (Type_t* ___service0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Scoped(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Scoped_m6B653C5EB4E0822F7F316BAD8DBEA8C11F25EA7D (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Scoped(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24 (Type_t* ___service0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Singleton(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) ;
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Singleton(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567 (Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass23_0__ctor_m85313197463AD99A4E8F929F889717AE6E7A6E86 (U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* __this, const RuntimeMethod* method) ;
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::GetImplementationType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_GetImplementationType_mCBC9467640135A95ABD22E6C373D9025F88F1466 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) ;
+// System.String System.SR::get_TryAddIndistinguishableTypeToEnumerable()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_TryAddIndistinguishableTypeToEnumerable_m7C7693DB9C93D19D0077A102F556BBBE66780BEE (const RuntimeMethod* method) ;
+// System.String System.SR::Format(System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m910EF993FA7C46FB1F623B0BC59B44E493268EC9 (String_t* ___resourceFormat0, RuntimeObject* ___p11, RuntimeObject* ___p22, const RuntimeMethod* method) ;
+// System.Void System.ArgumentException::.ctor(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentException__ctor_m8F9D40CE19D19B698A70F9A258640EB52DB39B62 (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* __this, String_t* ___message0, String_t* ___paramName1, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738 (RuntimeObject* ___services0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) ;
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass25_0__ctor_m6965445FF0A332DB8B0C9EBD53FD766E9D8C0FA2 (U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* __this, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::FirstOrDefault<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
+inline ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* Enumerable_FirstOrDefault_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m6ED27BC30651E1F8AA9D6517B3CFC05DE4F70046 (RuntimeObject* ___source0, Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* ___predicate1, const RuntimeMethod* method)
+{
+	return ((  ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* (*) (RuntimeObject*, Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*, const RuntimeMethod*))Enumerable_FirstOrDefault_TisRuntimeObject_mFACC750E4D7AF7B43F5B866C84F613B3ECC41994_gshared)(___source0, ___predicate1, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmbeddedAttribute__ctor_m2C1631A10790E7E74A56AC53102B4CBE2DDCD317 (EmbeddedAttribute_tF17F62C9D7DA6B113CA3A79224FEB5C3E409CBA2* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullableAttribute__ctor_m9AB59F7849E9D66904E8CA3A8D1C76CEC54238C3 (NullableAttribute_t97F9A2D5664B13D882836AC8F74EFAC88AFFC2AF* __this, uint8_t p0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		uint8_t L_2 = p0;
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (uint8_t)L_2);
+		__this->___NullableFlags_0 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___NullableFlags_0), (void*)L_1);
+		return;
+	}
+}
+// System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullableAttribute__ctor_m00A8A7716408D61501E23C0F75B58F4C9495155C (NullableAttribute_t97F9A2D5664B13D882836AC8F74EFAC88AFFC2AF* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* p0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = p0;
+		__this->___NullableFlags_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___NullableFlags_0), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Runtime.CompilerServices.NullableContextAttribute::.ctor(System.Byte)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullableContextAttribute__ctor_mEADB8877D5E4A9D26F937EE97BA0BD03D9F7CADB (NullableContextAttribute_t66D75A13A92DBEBB68D303EF11A83C60679628D4* __this, uint8_t p0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		uint8_t L_0 = p0;
+		__this->___Flag_0 = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Runtime.CompilerServices.NullablePublicOnlyAttribute::.ctor(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NullablePublicOnlyAttribute__ctor_m184D8B62C71A8CAC07D5FD2B2FE999C8EA844B0B (NullablePublicOnlyAttribute_tD766562F61EDE1166F8E2FAD369C1FAB846D4E73* __this, bool p0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = p0;
+		__this->___IncludesInternals_0 = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Boolean System.SR::UsingResourceKeys()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0 = ((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_usingResourceKeys_0;
+		return L_0;
+	}
+}
+// System.String System.SR::GetResourceString(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE (String_t* ___resourceKey0, String_t* ___defaultString1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	String_t* G_B3_0 = NULL;
+	String_t* G_B2_0 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		String_t* L_1 = ___defaultString1;
+		String_t* L_2 = L_1;
+		G_B2_0 = L_2;
+		if (L_2)
+		{
+			G_B3_0 = L_2;
+			goto IL_000d;
+		}
+	}
+	{
+		String_t* L_3 = ___resourceKey0;
+		G_B3_0 = L_3;
+	}
+
+IL_000d:
+	{
+		return G_B3_0;
+	}
+
+IL_000e:
+	{
+		V_0 = (String_t*)NULL;
+	}
+	try
+	{// begin try (depth: 1)
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* L_4;
+		L_4 = SR_get_ResourceManager_mDCED040BA4BE9F2AB06DDF206D96234D3AEAC5C7(NULL);
+		String_t* L_5 = ___resourceKey0;
+		NullCheck(L_4);
+		String_t* L_6;
+		L_6 = VirtualFuncInvoker1< String_t*, String_t* >::Invoke(7 /* System.String System.Resources.ResourceManager::GetString(System.String) */, L_4, L_5);
+		V_0 = L_6;
+		goto IL_0021;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MissingManifestResourceException_t136A089345909ADB6333D6F4E2AA84C7A00CB3FD_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_001e;
+		}
+		throw e;
+	}
+
+CATCH_001e:
+	{// begin catch(System.Resources.MissingManifestResourceException)
+		IL2CPP_POP_ACTIVE_EXCEPTION();
+		goto IL_0021;
+	}// end catch (depth: 1)
+
+IL_0021:
+	{
+		String_t* L_7 = ___defaultString1;
+		if (!L_7)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		String_t* L_8 = ___resourceKey0;
+		String_t* L_9 = V_0;
+		NullCheck(L_8);
+		bool L_10;
+		L_10 = String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D(L_8, L_9, NULL);
+		if (!L_10)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		String_t* L_11 = ___defaultString1;
+		return L_11;
+	}
+
+IL_002f:
+	{
+		String_t* L_12 = V_0;
+		return L_12;
+	}
+}
+// System.String System.SR::Format(System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_mD18A3DAD68F66F971CA6B573D34831045BE7CF7F (String_t* ___resourceFormat0, RuntimeObject* ___p11, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat0;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p11;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		String_t* L_6;
+		L_6 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_4, NULL);
+		return L_6;
+	}
+
+IL_0020:
+	{
+		String_t* L_7 = ___resourceFormat0;
+		RuntimeObject* L_8 = ___p11;
+		String_t* L_9;
+		L_9 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_7, L_8, NULL);
+		return L_9;
+	}
+}
+// System.String System.SR::Format(System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m910EF993FA7C46FB1F623B0BC59B44E493268EC9 (String_t* ___resourceFormat0, RuntimeObject* ___p11, RuntimeObject* ___p22, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat0;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p11;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = L_4;
+		RuntimeObject* L_7 = ___p22;
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, L_7);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_7);
+		String_t* L_8;
+		L_8 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_6, NULL);
+		return L_8;
+	}
+
+IL_0024:
+	{
+		String_t* L_9 = ___resourceFormat0;
+		RuntimeObject* L_10 = ___p11;
+		RuntimeObject* L_11 = ___p22;
+		String_t* L_12;
+		L_12 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(L_9, L_10, L_11, NULL);
+		return L_12;
+	}
+}
+// System.String System.SR::Format(System.String,System.Object,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m21AE07652DE70DEA285092C4CB95FC06CCEB7478 (String_t* ___resourceFormat0, RuntimeObject* ___p11, RuntimeObject* ___p22, RuntimeObject* ___p33, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat0;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p11;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = L_4;
+		RuntimeObject* L_7 = ___p22;
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, L_7);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_7);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = L_6;
+		RuntimeObject* L_9 = ___p33;
+		NullCheck(L_8);
+		ArrayElementTypeCheck (L_8, L_9);
+		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_9);
+		String_t* L_10;
+		L_10 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_8, NULL);
+		return L_10;
+	}
+
+IL_0028:
+	{
+		String_t* L_11 = ___resourceFormat0;
+		RuntimeObject* L_12 = ___p11;
+		RuntimeObject* L_13 = ___p22;
+		RuntimeObject* L_14 = ___p33;
+		String_t* L_15;
+		L_15 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(L_11, L_12, L_13, L_14, NULL);
+		return L_15;
+	}
+}
+// System.String System.SR::Format(System.String,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m77C76D5E50DCADFA671DA5165235F01C679A9B10 (String_t* ___resourceFormat0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ___args1;
+		if (!L_0)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_1)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_2 = ___resourceFormat0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = ___args1;
+		String_t* L_4;
+		L_4 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_3, NULL);
+		String_t* L_5;
+		L_5 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_2, _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_4, NULL);
+		return L_5;
+	}
+
+IL_0021:
+	{
+		String_t* L_6 = ___resourceFormat0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_7 = ___args1;
+		String_t* L_8;
+		L_8 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(L_6, L_7, NULL);
+		return L_8;
+	}
+
+IL_0029:
+	{
+		String_t* L_9 = ___resourceFormat0;
+		return L_9;
+	}
+}
+// System.String System.SR::Format(System.IFormatProvider,System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_mD3E2AD97F821492AEBE3DA0003422BFE0B342C82 (RuntimeObject* ___provider0, String_t* ___resourceFormat1, RuntimeObject* ___p12, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat1;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p12;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		String_t* L_6;
+		L_6 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_4, NULL);
+		return L_6;
+	}
+
+IL_0020:
+	{
+		RuntimeObject* L_7 = ___provider0;
+		String_t* L_8 = ___resourceFormat1;
+		RuntimeObject* L_9 = ___p12;
+		String_t* L_10;
+		L_10 = String_Format_m3844098E7C18576D263AAF62F69BE5C70BF9A744(L_7, L_8, L_9, NULL);
+		return L_10;
+	}
+}
+// System.String System.SR::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m9FB79D019348C9EDDD2F6A95765AE8FD36446A18 (RuntimeObject* ___provider0, String_t* ___resourceFormat1, RuntimeObject* ___p12, RuntimeObject* ___p23, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat1;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p12;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = L_4;
+		RuntimeObject* L_7 = ___p23;
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, L_7);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_7);
+		String_t* L_8;
+		L_8 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_6, NULL);
+		return L_8;
+	}
+
+IL_0024:
+	{
+		RuntimeObject* L_9 = ___provider0;
+		String_t* L_10 = ___resourceFormat1;
+		RuntimeObject* L_11 = ___p12;
+		RuntimeObject* L_12 = ___p23;
+		String_t* L_13;
+		L_13 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_9, L_10, L_11, L_12, NULL);
+		return L_13;
+	}
+}
+// System.String System.SR::Format(System.IFormatProvider,System.String,System.Object,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_m305CEC9F22AD60A27C10CA72EB40A430EF10AB65 (RuntimeObject* ___provider0, String_t* ___resourceFormat1, RuntimeObject* ___p12, RuntimeObject* ___p23, RuntimeObject* ___p34, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_0)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		String_t* L_3 = ___resourceFormat1;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		RuntimeObject* L_5 = ___p12;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_5);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = L_4;
+		RuntimeObject* L_7 = ___p23;
+		NullCheck(L_6);
+		ArrayElementTypeCheck (L_6, L_7);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_7);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = L_6;
+		RuntimeObject* L_9 = ___p34;
+		NullCheck(L_8);
+		ArrayElementTypeCheck (L_8, L_9);
+		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_9);
+		String_t* L_10;
+		L_10 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_8, NULL);
+		return L_10;
+	}
+
+IL_0029:
+	{
+		RuntimeObject* L_11 = ___provider0;
+		String_t* L_12 = ___resourceFormat1;
+		RuntimeObject* L_13 = ___p12;
+		RuntimeObject* L_14 = ___p23;
+		RuntimeObject* L_15 = ___p34;
+		String_t* L_16;
+		L_16 = String_Format_mF8E53122BE8F0F617357DFB75C3912D1242DE263(L_11, L_12, L_13, L_14, L_15, NULL);
+		return L_16;
+	}
+}
+// System.String System.SR::Format(System.IFormatProvider,System.String,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_Format_mC79D379FB2F0D1DF779B2BB766D8DB9D6D8BB424 (RuntimeObject* ___provider0, String_t* ___resourceFormat1, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___args2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ___args2;
+		if (!L_0)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline(NULL);
+		if (!L_1)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		String_t* L_2 = ___resourceFormat1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = ___args2;
+		String_t* L_4;
+		L_4 = String_Join_m1DE9E42021535E27E1623C55608AC7EF370AB3D7(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_3, NULL);
+		String_t* L_5;
+		L_5 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_2, _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_4, NULL);
+		return L_5;
+	}
+
+IL_0021:
+	{
+		RuntimeObject* L_6 = ___provider0;
+		String_t* L_7 = ___resourceFormat1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = ___args2;
+		String_t* L_9;
+		L_9 = String_Format_m447B585713E5EB3EBF5D9D0710706D01E8A56D75(L_6, L_7, L_8, NULL);
+		return L_9;
+	}
+
+IL_002a:
+	{
+		String_t* L_10 = ___resourceFormat1;
+		return L_10;
+	}
+}
+// System.Resources.ResourceManager System.SR::get_ResourceManager()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* SR_get_ResourceManager_mDCED040BA4BE9F2AB06DDF206D96234D3AEAC5C7 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t868D65A44E2478CF307DD48140B2BE4CA78A1E9B_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* G_B2_0 = NULL;
+	ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* G_B1_0 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* L_0 = ((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_resourceManager_1;
+		ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* L_1 = L_0;
+		G_B1_0 = L_1;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_001e;
+		}
+	}
+	{
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_2 = { reinterpret_cast<intptr_t> (SR_t868D65A44E2478CF307DD48140B2BE4CA78A1E9B_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_3;
+		L_3 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_2, NULL);
+		ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* L_4 = (ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB*)il2cpp_codegen_object_new(ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB_il2cpp_TypeInfo_var);
+		NullCheck(L_4);
+		ResourceManager__ctor_mC93D478F43E5089ACC407FDECF067A0F208A3784(L_4, L_3, NULL);
+		ResourceManager_t311D6D32A753224008949B32CC6A5468C47498EB* L_5 = L_4;
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_resourceManager_1 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_resourceManager_1), (void*)L_5);
+		G_B2_0 = L_5;
+	}
+
+IL_001e:
+	{
+		return G_B2_0;
+	}
+}
+// System.String System.SR::get_AmbiguousConstructorMatch()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_AmbiguousConstructorMatch_m48C8B74DF01A646EA525DE6A979DB8D94541CA34 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral64C7BF1ED7E82B4BA2573BBEF05D2C5D71A254F1);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral64C7BF1ED7E82B4BA2573BBEF05D2C5D71A254F1, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.String System.SR::get_CannotLocateImplementation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_CannotLocateImplementation_m845C30EFBBEEEF4923F9F828D6084AEF067C5A1C (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8414375DCEB07E1FC8C12D4D68E2DA9267885352);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral8414375DCEB07E1FC8C12D4D68E2DA9267885352, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.String System.SR::get_CannotResolveService()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_CannotResolveService_mE8F9B54C0E2C2D39AA5B4ADF29EF0567E142DE83 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral613CD9F5AB80FD3364CC32C7D855B4ED8F18EF6A);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral613CD9F5AB80FD3364CC32C7D855B4ED8F18EF6A, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.String System.SR::get_NoConstructorMatch()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_NoConstructorMatch_m8E3823E76E3D9C9BFDE83F64C04BF6FCB64C3CF3 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2F808A260DDA3BED57BF1251CA66AD92DC1FA24C);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral2F808A260DDA3BED57BF1251CA66AD92DC1FA24C, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.String System.SR::get_NoServiceRegistered()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_NoServiceRegistered_mBE8DAE2E906DD01140C56A47773A4C4344D786AC (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral554C3DD66F287ABB3CF60D79DBEF38320C1CED02);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral554C3DD66F287ABB3CF60D79DBEF38320C1CED02, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.String System.SR::get_TryAddIndistinguishableTypeToEnumerable()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SR_get_TryAddIndistinguishableTypeToEnumerable_m7C7693DB9C93D19D0077A102F556BBBE66780BEE (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral123A148507EE9AA988F24918EC9D63657EC9F74B);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		String_t* L_0;
+		L_0 = SR_GetResourceString_mD6566501A3E2A159722C3B9B682207B861BD98DE(_stringLiteral123A148507EE9AA988F24918EC9D63657EC9F74B, (String_t*)NULL, NULL);
+		return L_0;
+	}
+}
+// System.Void System.SR::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SR__cctor_m0CBBBF596A9324D9B5D6116710AF60DE2AE75371 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AppContext_t0380D19FAC72CD59D46947D86DC1DAA3BCE638E0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB5528CA07A43AEA4EFA2F7B2DEF38E0A5D87ECD6);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		il2cpp_codegen_runtime_class_init_inline(AppContext_t0380D19FAC72CD59D46947D86DC1DAA3BCE638E0_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = AppContext_TryGetSwitch_mD2500DB32F941228B6964BC53CAA0EA7047AEB78(_stringLiteralB5528CA07A43AEA4EFA2F7B2DEF38E0A5D87ECD6, (&V_0), NULL);
+		if (L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		goto IL_0012;
+	}
+
+IL_0011:
+	{
+		bool L_1 = V_0;
+		G_B3_0 = ((int32_t)(L_1));
+	}
+
+IL_0012:
+	{
+		((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_usingResourceKeys_0 = (bool)G_B3_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute::.ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicallyAccessedMembersAttribute__ctor_m8DC98DD6330D496C01DFB982D670488D4CB81888 (DynamicallyAccessedMembersAttribute_t32A93E390065BE96AD120568DB033AFF59F9A95C* __this, int32_t ___memberTypes0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		int32_t L_0 = ___memberTypes0;
+		__this->___U3CMemberTypesU3Ek__BackingField_0 = L_0;
+		return;
+	}
+}
+// System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute::get_MemberTypes()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DynamicallyAccessedMembersAttribute_get_MemberTypes_mDEF0810575CF22545AD12AACFA2F87179F6D2C7A (DynamicallyAccessedMembersAttribute_t32A93E390065BE96AD120568DB033AFF59F9A95C* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3CMemberTypesU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::.ctor(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnconditionalSuppressMessageAttribute__ctor_mD0692DF6D4498B9FE5855060BE1DFA2ACE16E1C1 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, String_t* ___category0, String_t* ___checkId1, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		String_t* L_0 = ___category0;
+		__this->___U3CCategoryU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCategoryU3Ek__BackingField_0), (void*)L_0);
+		String_t* L_1 = ___checkId1;
+		__this->___U3CCheckIdU3Ek__BackingField_1 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCheckIdU3Ek__BackingField_1), (void*)L_1);
+		return;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Category()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_Category_m54DF754A2A2CBD239FB8083A298D2A396D00561B (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CCategoryU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_CheckId()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_CheckId_mCF4C6D739E5201837F26473F1C8A559AE0DE9540 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CCheckIdU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Scope()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_Scope_m9717C937B2FFCEBE8D1102DE28DF5E8E95F03654 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CScopeU3Ek__BackingField_2;
+		return L_0;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Scope(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnconditionalSuppressMessageAttribute_set_Scope_m5475DBC622C0F00D9CA02EBB43DB136279245C3D (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, String_t* ___value0, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->___U3CScopeU3Ek__BackingField_2 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CScopeU3Ek__BackingField_2), (void*)L_0);
+		return;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Target()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_Target_mC18142A19AAB336C026E1239FE34BCADC948BA4E (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CTargetU3Ek__BackingField_3;
+		return L_0;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Target(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnconditionalSuppressMessageAttribute_set_Target_m657AE4FE35A92875B00A7B806E1C8BD9C9C4B40E (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, String_t* ___value0, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->___U3CTargetU3Ek__BackingField_3 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTargetU3Ek__BackingField_3), (void*)L_0);
+		return;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_MessageId()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_MessageId_m9E971F05038230BCFBA9AE0A4B781017FF10DDC0 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CMessageIdU3Ek__BackingField_4;
+		return L_0;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_MessageId(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnconditionalSuppressMessageAttribute_set_MessageId_mF46BCB9AFECD463FA376CA46FDB2F6A4D4A76194 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, String_t* ___value0, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->___U3CMessageIdU3Ek__BackingField_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageIdU3Ek__BackingField_4), (void*)L_0);
+		return;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Justification()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnconditionalSuppressMessageAttribute_get_Justification_m4EA3E1E047219E1BACA74FE0493527CDEB785577 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CJustificationU3Ek__BackingField_5;
+		return L_0;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Justification(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnconditionalSuppressMessageAttribute_set_Justification_mF8F75CB7B7BDBA1BB87D5D4CC5B01396F1A2C339 (UnconditionalSuppressMessageAttribute_tA75665643C4B2B78FC02EA1B42403D9EC3AC92D8* __this, String_t* ___value0, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->___U3CJustificationU3Ek__BackingField_5 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CJustificationU3Ek__BackingField_5), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.AllowNullAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AllowNullAttribute__ctor_m9B817C77761B6F06E770E8BDABBD8A6AFFC898FA (AllowNullAttribute_t4A5AE3716EA82E0569A4B9A578AC8EAC1CC47E0D* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.DisallowNullAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DisallowNullAttribute__ctor_m178AFFEB0815EE530EABAE6B0E8736B76175E341 (DisallowNullAttribute_t410E073B4D77E9744A6AE4AAB51693EBD22B07EC* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.MaybeNullAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MaybeNullAttribute__ctor_mFA2B79B41CD4E0DD5792088A25E7CCC7D6FF488B (MaybeNullAttribute_t249B8A5C69FDCCD26D3726ECC4FE66A8A0929E07* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.NotNullAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotNullAttribute__ctor_m323CF1B592DB7CE25EFA9B7614B66F489E186F9F (NotNullAttribute_t44BAA9E007F85BC931E148C2AEBF9DCD352253C4* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute::.ctor(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MaybeNullWhenAttribute__ctor_m8687E48495FDF43126609B81C6DC1C363C7330EC (MaybeNullWhenAttribute_t448AC26D1FC4E91C352A4A17685921BE11CE9EFE* __this, bool ___returnValue0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = ___returnValue0;
+		__this->___U3CReturnValueU3Ek__BackingField_0 = L_0;
+		return;
+	}
+}
+// System.Boolean System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute::get_ReturnValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MaybeNullWhenAttribute_get_ReturnValue_m0569F34945A8A5935A2973EC96CCD0DBEE096C99 (MaybeNullWhenAttribute_t448AC26D1FC4E91C352A4A17685921BE11CE9EFE* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CReturnValueU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.NotNullWhenAttribute::.ctor(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotNullWhenAttribute__ctor_mDF8A18143D7CCCDDC73CF4D68D58226ECCD91BC3 (NotNullWhenAttribute_tA79B6D078587964DD0E540B5A898AFA59FDBE333* __this, bool ___returnValue0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = ___returnValue0;
+		__this->___U3CReturnValueU3Ek__BackingField_0 = L_0;
+		return;
+	}
+}
+// System.Boolean System.Diagnostics.CodeAnalysis.NotNullWhenAttribute::get_ReturnValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NotNullWhenAttribute_get_ReturnValue_mDD9A8F6FABEBC3C7882E8697E3B151C03C6ED4F0 (NotNullWhenAttribute_tA79B6D078587964DD0E540B5A898AFA59FDBE333* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CReturnValueU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotNullIfNotNullAttribute__ctor_mED1C89B040D3A3C642603B5481EA1C4508D28291 (NotNullIfNotNullAttribute_t23D6BAF10981CA5C278A0E68A798A5613F6123A1* __this, String_t* ___parameterName0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		String_t* L_0 = ___parameterName0;
+		__this->___U3CParameterNameU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CParameterNameU3Ek__BackingField_0), (void*)L_0);
+		return;
+	}
+}
+// System.String System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute::get_ParameterName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NotNullIfNotNullAttribute_get_ParameterName_m448AEF870FA00F9D55989D3C2F4E6232B0450434 (NotNullIfNotNullAttribute_t23D6BAF10981CA5C278A0E68A798A5613F6123A1* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CParameterNameU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DoesNotReturnAttribute__ctor_m5CBBA55A1DA82A334B1E7EB38DDF18749839A0C8 (DoesNotReturnAttribute_t317891B1739785866A3FE46907B4FABE8B6FA037* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute::.ctor(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DoesNotReturnIfAttribute__ctor_m0DEC32B3B894B27A4259C5B87374C31124EDB0C0 (DoesNotReturnIfAttribute_tE35E47C780E03BB79129441924C4E22EE5D958B8* __this, bool ___parameterValue0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = ___parameterValue0;
+		__this->___U3CParameterValueU3Ek__BackingField_0 = L_0;
+		return;
+	}
+}
+// System.Boolean System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute::get_ParameterValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DoesNotReturnIfAttribute_get_ParameterValue_mD087F64787C5159B5B73536D46E74EFF18DB325B (DoesNotReturnIfAttribute_tE35E47C780E03BB79129441924C4E22EE5D958B8* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CParameterValueU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.MemberNotNullAttribute::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemberNotNullAttribute__ctor_m52B834951B7E7A6D5F479499E257D81479E11801 (MemberNotNullAttribute_tE7CFBD5A82CF0A19B6EE7475E126161931259A49* __this, String_t* ___member0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = L_0;
+		String_t* L_2 = ___member0;
+		NullCheck(L_1);
+		ArrayElementTypeCheck (L_1, L_2);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_2);
+		__this->___U3CMembersU3Ek__BackingField_0 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMembersU3Ek__BackingField_0), (void*)L_1);
+		return;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.MemberNotNullAttribute::.ctor(System.String[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemberNotNullAttribute__ctor_m181D84684AB25EF3258FDF8A8561C4CF7F2EC613 (MemberNotNullAttribute_tE7CFBD5A82CF0A19B6EE7475E126161931259A49* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___members0, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = ___members0;
+		__this->___U3CMembersU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMembersU3Ek__BackingField_0), (void*)L_0);
+		return;
+	}
+}
+// System.String[] System.Diagnostics.CodeAnalysis.MemberNotNullAttribute::get_Members()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* MemberNotNullAttribute_get_Members_mCACAFCFA553EE966486F1FE9F32C918CBC70D055 (MemberNotNullAttribute_tE7CFBD5A82CF0A19B6EE7475E126161931259A49* __this, const RuntimeMethod* method) 
+{
+	{
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = __this->___U3CMembersU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::.ctor(System.Boolean,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemberNotNullWhenAttribute__ctor_m65D5D56440E940CAEB3063830D060453512B762B (MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA* __this, bool ___returnValue0, String_t* ___member1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = ___returnValue0;
+		__this->___U3CReturnValueU3Ek__BackingField_0 = L_0;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = L_1;
+		String_t* L_3 = ___member1;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_3);
+		__this->___U3CMembersU3Ek__BackingField_1 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMembersU3Ek__BackingField_1), (void*)L_2);
+		return;
+	}
+}
+// System.Void System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::.ctor(System.Boolean,System.String[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MemberNotNullWhenAttribute__ctor_m090AA7579D9E3470D0AF52CCB9C61A8239D2F287 (MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA* __this, bool ___returnValue0, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___members1, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		bool L_0 = ___returnValue0;
+		__this->___U3CReturnValueU3Ek__BackingField_0 = L_0;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = ___members1;
+		__this->___U3CMembersU3Ek__BackingField_1 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMembersU3Ek__BackingField_1), (void*)L_1);
+		return;
+	}
+}
+// System.Boolean System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::get_ReturnValue()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MemberNotNullWhenAttribute_get_ReturnValue_m93046FAF31DE301C836C0C19267B27160E31848B (MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CReturnValueU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+// System.String[] System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute::get_Members()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* MemberNotNullWhenAttribute_get_Members_mF1423207382566B3C0336D8F1D46F3D3B504AE80 (MemberNotNullWhenAttribute_tA250C0B42762DBD6FDC84204ECFE024F7783FACA* __this, const RuntimeMethod* method) 
+{
+	{
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = __this->___U3CMembersU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Boolean Microsoft.Extensions.Internal.ParameterDefaultValue::TryGetDefaultValue(System.Reflection.ParameterInfo,System.Object&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D (ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* ___parameter0, RuntimeObject** ___defaultValue1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	Type_t* V_2 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B* G_B4_0 = NULL;
+	FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B* G_B3_0 = NULL;
+	int32_t G_B5_0 = 0;
+	{
+		V_1 = (bool)1;
+		RuntimeObject** L_0 = ___defaultValue1;
+		*((RuntimeObject**)L_0) = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)NULL);
+	}
+	try
+	{// begin try (depth: 1)
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_1 = ___parameter0;
+		NullCheck(L_1);
+		bool L_2;
+		L_2 = VirtualFuncInvoker0< bool >::Invoke(14 /* System.Boolean System.Reflection.ParameterInfo::get_HasDefaultValue() */, L_1);
+		V_0 = L_2;
+		goto IL_003c;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+	}
+	{// begin filter(depth: 1)
+		bool __filter_local = false;
+		try
+		{// begin implicit try block
+			{
+				FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B* L_3 = ((FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B*)IsInstClass((RuntimeObject*)((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*)), ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&FormatException_tCD210E92627903FFEDAAA706C08FB6222B4D012B_il2cpp_TypeInfo_var))));
+				G_B3_0 = L_3;
+				if (L_3)
+				{
+					G_B4_0 = L_3;
+					goto IL_001a;
+				}
+			}
+			{
+				G_B5_0 = 0;
+				goto IL_0033;
+			}
+
+IL_001a:
+			{
+				ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_4 = ___parameter0;
+				NullCheck(L_4);
+				Type_t* L_5;
+				L_5 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_4);
+				RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_6 = { reinterpret_cast<intptr_t> (((RuntimeType*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_0_0_0_var))) };
+				il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Type_t_il2cpp_TypeInfo_var)));
+				Type_t* L_7;
+				L_7 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_6, NULL);
+				bool L_8;
+				L_8 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, L_7, NULL);
+				G_B5_0 = ((!(((uint32_t)L_8) <= ((uint32_t)0)))? 1 : 0);
+			}
+
+IL_0033:
+			{
+				__filter_local = (G_B5_0) ? true : false;
+			}
+		}// end implicit try block
+		catch(Il2CppExceptionWrapper&)
+		{// begin implicit catch block
+			__filter_local = false;
+		}// end implicit catch block
+		if (__filter_local)
+		{
+			goto FILTER_0035;
+		}
+		else
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*), ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D_RuntimeMethod_var)));
+		}
+	}// end filter (depth: 1)
+
+FILTER_0035:
+	{// begin catch(filter)
+		V_0 = (bool)1;
+		V_1 = (bool)0;
+		IL2CPP_POP_ACTIVE_EXCEPTION();
+		goto IL_003c;
+	}// end catch (depth: 1)
+
+IL_003c:
+	{
+		bool L_9 = V_0;
+		if (!L_9)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		bool L_10 = V_1;
+		if (!L_10)
+		{
+			goto IL_004a;
+		}
+	}
+	{
+		RuntimeObject** L_11 = ___defaultValue1;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_12 = ___parameter0;
+		NullCheck(L_12);
+		RuntimeObject* L_13;
+		L_13 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(13 /* System.Object System.Reflection.ParameterInfo::get_DefaultValue() */, L_12);
+		*((RuntimeObject**)L_11) = (RuntimeObject*)L_13;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_11, (void*)(RuntimeObject*)L_13);
+	}
+
+IL_004a:
+	{
+		RuntimeObject** L_14 = ___defaultValue1;
+		RuntimeObject* L_15 = *((RuntimeObject**)L_14);
+		if (L_15)
+		{
+			goto IL_0068;
+		}
+	}
+	{
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_16 = ___parameter0;
+		NullCheck(L_16);
+		Type_t* L_17;
+		L_17 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_16);
+		NullCheck(L_17);
+		bool L_18;
+		L_18 = Type_get_IsValueType_m59AE2E0439DC06347B8D6B38548F3CBA54D38318(L_17, NULL);
+		if (!L_18)
+		{
+			goto IL_0068;
+		}
+	}
+	{
+		RuntimeObject** L_19 = ___defaultValue1;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_20 = ___parameter0;
+		NullCheck(L_20);
+		Type_t* L_21;
+		L_21 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_20);
+		il2cpp_codegen_runtime_class_init_inline(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		RuntimeObject* L_22;
+		L_22 = ParameterDefaultValue_U3CTryGetDefaultValueU3Eg__CreateValueTypeU7C1_0_mD7B7B938B600212A5FDCD4014D3EFAEC66FCD22C(L_21, NULL);
+		*((RuntimeObject**)L_19) = (RuntimeObject*)L_22;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_19, (void*)(RuntimeObject*)L_22);
+	}
+
+IL_0068:
+	{
+		RuntimeObject** L_23 = ___defaultValue1;
+		RuntimeObject* L_24 = *((RuntimeObject**)L_23);
+		if (!L_24)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_25 = ___parameter0;
+		NullCheck(L_25);
+		Type_t* L_26;
+		L_26 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_25);
+		NullCheck(L_26);
+		bool L_27;
+		L_27 = VirtualFuncInvoker0< bool >::Invoke(40 /* System.Boolean System.Type::get_IsGenericType() */, L_26);
+		if (!L_27)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_28 = ___parameter0;
+		NullCheck(L_28);
+		Type_t* L_29;
+		L_29 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_28);
+		NullCheck(L_29);
+		Type_t* L_30;
+		L_30 = VirtualFuncInvoker0< Type_t* >::Invoke(48 /* System.Type System.Type::GetGenericTypeDefinition() */, L_29);
+		il2cpp_codegen_runtime_class_init_inline(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		Type_t* L_31 = ((ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_StaticFields*)il2cpp_codegen_static_fields_for(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var))->____nullable_0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_32;
+		L_32 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_30, L_31, NULL);
+		if (!L_32)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_33 = ___parameter0;
+		NullCheck(L_33);
+		Type_t* L_34;
+		L_34 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_33);
+		Type_t* L_35;
+		L_35 = Nullable_GetUnderlyingType_mA8FA7F61D3B8E56EB4E40378020FD2854838BDF8(L_34, NULL);
+		V_2 = L_35;
+		Type_t* L_36 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_37;
+		L_37 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_36, (Type_t*)NULL, NULL);
+		if (!L_37)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		Type_t* L_38 = V_2;
+		NullCheck(L_38);
+		bool L_39;
+		L_39 = VirtualFuncInvoker0< bool >::Invoke(69 /* System.Boolean System.Type::get_IsEnum() */, L_38);
+		if (!L_39)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		RuntimeObject** L_40 = ___defaultValue1;
+		Type_t* L_41 = V_2;
+		RuntimeObject** L_42 = ___defaultValue1;
+		RuntimeObject* L_43 = *((RuntimeObject**)L_42);
+		il2cpp_codegen_runtime_class_init_inline(Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_il2cpp_TypeInfo_var);
+		RuntimeObject* L_44;
+		L_44 = Enum_ToObject_mD898E0819FA640BC4E98924613B5DBD41146D1FF(L_41, L_43, NULL);
+		*((RuntimeObject**)L_40) = (RuntimeObject*)L_44;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_40, (void*)(RuntimeObject*)L_44);
+	}
+
+IL_00b7:
+	{
+		bool L_45 = V_0;
+		return L_45;
+	}
+}
+// System.Void Microsoft.Extensions.Internal.ParameterDefaultValue::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterDefaultValue__ctor_mFFAA89A0691C08D4F6CE875B7195FCA6BDCC45A7 (ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.Internal.ParameterDefaultValue::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterDefaultValue__cctor_mB97BBF084F51EB34F7857EBDE39809BFCFE8EBC8 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_tCC12E6AC31BF7E862A033EBEFF48D5000D6291E6_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (Nullable_1_tCC12E6AC31BF7E862A033EBEFF48D5000D6291E6_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		((ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_StaticFields*)il2cpp_codegen_static_fields_for(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var))->____nullable_0 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_StaticFields*)il2cpp_codegen_static_fields_for(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var))->____nullable_0), (void*)L_1);
+		return;
+	}
+}
+// System.Object Microsoft.Extensions.Internal.ParameterDefaultValue::<TryGetDefaultValue>g__CreateValueType|1_0(System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ParameterDefaultValue_U3CTryGetDefaultValueU3Eg__CreateValueTypeU7C1_0_mD7B7B938B600212A5FDCD4014D3EFAEC66FCD22C (Type_t* ___t0, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = ___t0;
+		RuntimeObject* L_1;
+		L_1 = Activator_CreateInstance_mFF030428C64FDDFACC74DFAC97388A1C628BFBCF(L_0, NULL);
+		return L_1;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		RuntimeObject* L_8 = ___services0;
+		Type_t* L_9 = ___serviceType1;
+		Type_t* L_10 = ___implementationType2;
+		RuntimeObject* L_11;
+		L_11 = ServiceCollectionServiceExtensions_Add_mD5AEDEFB4BFF3A47DDB4DCBD8A6C6D17DEF124B6(L_8, L_9, L_10, 2, NULL);
+		return L_11;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddTransient_m95D8F10AE141C74A2127382241F908E44560B577 (RuntimeObject* ___services0, Type_t* ___serviceType1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m95D8F10AE141C74A2127382241F908E44560B577_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m95D8F10AE141C74A2127382241F908E44560B577_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m95D8F10AE141C74A2127382241F908E44560B577_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		RuntimeObject* L_7 = ___services0;
+		Type_t* L_8 = ___serviceType1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_9 = ___implementationFactory2;
+		RuntimeObject* L_10;
+		L_10 = ServiceCollectionServiceExtensions_Add_m5DBDAE1C1459D1DCEE80B2944B4B609719BD6417(L_7, L_8, L_9, 2, NULL);
+		return L_10;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddTransient_m1EFE290B42BB4D57C93B9EF72012219B8981EAAC (RuntimeObject* ___services0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m1EFE290B42BB4D57C93B9EF72012219B8981EAAC_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddTransient_m1EFE290B42BB4D57C93B9EF72012219B8981EAAC_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_5 = ___services0;
+		Type_t* L_6 = ___serviceType1;
+		Type_t* L_7 = ___serviceType1;
+		RuntimeObject* L_8;
+		L_8 = ServiceCollectionServiceExtensions_AddTransient_m465E6340DC575D480458578FDE2ED9E6789C8687(L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		RuntimeObject* L_8 = ___services0;
+		Type_t* L_9 = ___serviceType1;
+		Type_t* L_10 = ___implementationType2;
+		RuntimeObject* L_11;
+		L_11 = ServiceCollectionServiceExtensions_Add_mD5AEDEFB4BFF3A47DDB4DCBD8A6C6D17DEF124B6(L_8, L_9, L_10, 1, NULL);
+		return L_11;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddScoped_mCBEC0EA60DBD5EEA51BB3F9AA158A394FDDE77E4 (RuntimeObject* ___services0, Type_t* ___serviceType1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_mCBEC0EA60DBD5EEA51BB3F9AA158A394FDDE77E4_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_mCBEC0EA60DBD5EEA51BB3F9AA158A394FDDE77E4_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_mCBEC0EA60DBD5EEA51BB3F9AA158A394FDDE77E4_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		RuntimeObject* L_7 = ___services0;
+		Type_t* L_8 = ___serviceType1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_9 = ___implementationFactory2;
+		RuntimeObject* L_10;
+		L_10 = ServiceCollectionServiceExtensions_Add_m5DBDAE1C1459D1DCEE80B2944B4B609719BD6417(L_7, L_8, L_9, 1, NULL);
+		return L_10;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddScoped_mFA3DB8AEE4A4A7947A7BD948CB23DA3FA11C6498 (RuntimeObject* ___services0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_mFA3DB8AEE4A4A7947A7BD948CB23DA3FA11C6498_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddScoped_mFA3DB8AEE4A4A7947A7BD948CB23DA3FA11C6498_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_5 = ___services0;
+		Type_t* L_6 = ___serviceType1;
+		Type_t* L_7 = ___serviceType1;
+		RuntimeObject* L_8;
+		L_8 = ServiceCollectionServiceExtensions_AddScoped_m3DF89C59C3D858C482EB4148DD84126CD12CCE26(L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2 (RuntimeObject* ___services0, Type_t* ___serviceType1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		RuntimeObject* L_8 = ___services0;
+		Type_t* L_9 = ___serviceType1;
+		Type_t* L_10 = ___implementationType2;
+		RuntimeObject* L_11;
+		L_11 = ServiceCollectionServiceExtensions_Add_mD5AEDEFB4BFF3A47DDB4DCBD8A6C6D17DEF124B6(L_8, L_9, L_10, 0, NULL);
+		return L_11;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddSingleton_m689212B9EFB0CBC63A052BF87D7DF890E96F2A17 (RuntimeObject* ___services0, Type_t* ___serviceType1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m689212B9EFB0CBC63A052BF87D7DF890E96F2A17_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m689212B9EFB0CBC63A052BF87D7DF890E96F2A17_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m689212B9EFB0CBC63A052BF87D7DF890E96F2A17_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		RuntimeObject* L_7 = ___services0;
+		Type_t* L_8 = ___serviceType1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_9 = ___implementationFactory2;
+		RuntimeObject* L_10;
+		L_10 = ServiceCollectionServiceExtensions_Add_m5DBDAE1C1459D1DCEE80B2944B4B609719BD6417(L_7, L_8, L_9, 0, NULL);
+		return L_10;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddSingleton_mC00FF373273DF26BBEA781F28B430B4BE7BFFA90 (RuntimeObject* ___services0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_mC00FF373273DF26BBEA781F28B430B4BE7BFFA90_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_mC00FF373273DF26BBEA781F28B430B4BE7BFFA90_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_5 = ___services0;
+		Type_t* L_6 = ___serviceType1;
+		Type_t* L_7 = ___serviceType1;
+		RuntimeObject* L_8;
+		L_8 = ServiceCollectionServiceExtensions_AddSingleton_m91BE361EEAE4DDB8EB7E7476130951154B48D1C2(L_5, L_6, L_7, NULL);
+		return L_8;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::AddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_AddSingleton_m025598643CF82EBD59FC1F2309A0C4EA902F8686 (RuntimeObject* ___services0, Type_t* ___serviceType1, RuntimeObject* ___implementationInstance2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m025598643CF82EBD59FC1F2309A0C4EA902F8686_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m025598643CF82EBD59FC1F2309A0C4EA902F8686_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_5 = ___implementationInstance2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1FD00C6F0B4C9F1E0466E1DD4659F667503F4B04)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionServiceExtensions_AddSingleton_m025598643CF82EBD59FC1F2309A0C4EA902F8686_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		Type_t* L_7 = ___serviceType1;
+		RuntimeObject* L_8 = ___implementationInstance2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_9);
+		ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259(L_9, L_7, L_8, NULL);
+		V_0 = L_9;
+		RuntimeObject* L_10 = ___services0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_0;
+		NullCheck(L_10);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_10, L_11);
+		RuntimeObject* L_12 = ___services0;
+		return L_12;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_Add_mD5AEDEFB4BFF3A47DDB4DCBD8A6C6D17DEF124B6 (RuntimeObject* ___collection0, Type_t* ___serviceType1, Type_t* ___implementationType2, int32_t ___lifetime3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		Type_t* L_0 = ___serviceType1;
+		Type_t* L_1 = ___implementationType2;
+		int32_t L_2 = ___lifetime3;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_3 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD(L_3, L_0, L_1, L_2, NULL);
+		V_0 = L_3;
+		RuntimeObject* L_4 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_5 = V_0;
+		NullCheck(L_4);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_4, L_5);
+		RuntimeObject* L_6 = ___collection0;
+		return L_6;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionServiceExtensions_Add_m5DBDAE1C1459D1DCEE80B2944B4B609719BD6417 (RuntimeObject* ___collection0, Type_t* ___serviceType1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, int32_t ___lifetime3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		Type_t* L_0 = ___serviceType1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_1 = ___implementationFactory2;
+		int32_t L_2 = ___lifetime3;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_3 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12(L_3, L_0, L_1, L_2, NULL);
+		V_0 = L_3;
+		RuntimeObject* L_4 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_5 = V_0;
+		NullCheck(L_4);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_4, L_5);
+		RuntimeObject* L_6 = ___collection0;
+		return L_6;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, Type_t* ___implementationType1, int32_t ___lifetime2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		int32_t L_1 = ___lifetime2;
+		ServiceDescriptor__ctor_m5EB0C7BC115735ABCBF36C31FE7EB4128C76BCE3(__this, L_0, L_1, NULL);
+		Type_t* L_2 = ___serviceType0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		Type_t* L_5 = ___implementationType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		Type_t* L_8 = ___implementationType1;
+		__this->___U3CImplementationTypeU3Ek__BackingField_2 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CImplementationTypeU3Ek__BackingField_2), (void*)L_8);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, RuntimeObject* ___instance1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		ServiceDescriptor__ctor_m5EB0C7BC115735ABCBF36C31FE7EB4128C76BCE3(__this, L_0, 0, NULL);
+		Type_t* L_1 = ___serviceType0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_1, (Type_t*)NULL, NULL);
+		if (!L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_3 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		RuntimeObject* L_4 = ___instance1;
+		if (L_4)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_5 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_5);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralAA236E134566FACF682D16CDBC3E2C735E0EF19D)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259_RuntimeMethod_var)));
+	}
+
+IL_002a:
+	{
+		RuntimeObject* L_6 = ___instance1;
+		__this->___U3CImplementationInstanceU3Ek__BackingField_3 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CImplementationInstanceU3Ek__BackingField_3), (void*)L_6);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___factory1, int32_t ___lifetime2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		int32_t L_1 = ___lifetime2;
+		ServiceDescriptor__ctor_m5EB0C7BC115735ABCBF36C31FE7EB4128C76BCE3(__this, L_0, L_1, NULL);
+		Type_t* L_2 = ___serviceType0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___factory1;
+		if (L_5)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7434CFB1B64AE9F03B145093A7B1B7D90A94209D)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12_RuntimeMethod_var)));
+	}
+
+IL_002a:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_7 = ___factory1;
+		__this->___U3CImplementationFactoryU3Ek__BackingField_4 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CImplementationFactoryU3Ek__BackingField_4), (void*)L_7);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ServiceDescriptor::.ctor(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceDescriptor__ctor_m5EB0C7BC115735ABCBF36C31FE7EB4128C76BCE3 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, Type_t* ___serviceType0, int32_t ___lifetime1, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___lifetime1;
+		__this->___U3CLifetimeU3Ek__BackingField_0 = L_0;
+		Type_t* L_1 = ___serviceType0;
+		__this->___U3CServiceTypeU3Ek__BackingField_1 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CServiceTypeU3Ek__BackingField_1), (void*)L_1);
+		return;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceLifetime Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_Lifetime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ServiceDescriptor_get_Lifetime_mF5CC52F90D7A16272E4AC41ABF857586F5932C61 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3CLifetimeU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ServiceType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = __this->___U3CServiceTypeU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = __this->___U3CImplementationTypeU3Ek__BackingField_2;
+		return L_0;
+	}
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationInstance()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CImplementationInstanceU3Ek__BackingField_3;
+		return L_0;
+	}
+}
+// System.Func`2<System.IServiceProvider,System.Object> Microsoft.Extensions.DependencyInjection.ServiceDescriptor::get_ImplementationFactory()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_0 = __this->___U3CImplementationFactoryU3Ek__BackingField_4;
+		return L_0;
+	}
+}
+// System.String Microsoft.Extensions.DependencyInjection.ServiceDescriptor::ToString()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ServiceDescriptor_ToString_mA84A2B8C8DC6BCD7E31FDE1D61D2F026AF7BA76D (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceLifetime_tF8E5596558473DD147F0761F5E42386AEF5A815B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1CCEE987CFB65D68EEB5CFFD47445AD2B3C53D62);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4027EB6DEAA9950CB5AAE5982F01F90152DF2EE6);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral63D6E9AE3EE2FA41B7C1AFB2FA5FADB63675466D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral76DEA610DFCED3B7842C7C70A5255AEFA2383CAD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCCCAF75F6781FC7A40EF6693F66F651A4F139125);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDF73B874236192E4304748C8C9159248D7F005AB);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = L_0;
+		NullCheck(L_1);
+		ArrayElementTypeCheck (L_1, _stringLiteral4027EB6DEAA9950CB5AAE5982F01F90152DF2EE6);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral4027EB6DEAA9950CB5AAE5982F01F90152DF2EE6);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = L_1;
+		Type_t* L_3;
+		L_3 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(__this, NULL);
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_2;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, _stringLiteral76DEA610DFCED3B7842C7C70A5255AEFA2383CAD);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)_stringLiteral76DEA610DFCED3B7842C7C70A5255AEFA2383CAD);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5 = L_4;
+		int32_t L_6;
+		L_6 = ServiceDescriptor_get_Lifetime_mF5CC52F90D7A16272E4AC41ABF857586F5932C61_inline(__this, NULL);
+		int32_t L_7 = L_6;
+		RuntimeObject* L_8 = Box(ServiceLifetime_tF8E5596558473DD147F0761F5E42386AEF5A815B_il2cpp_TypeInfo_var, &L_7);
+		NullCheck(L_5);
+		ArrayElementTypeCheck (L_5, L_8);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_8);
+		String_t* L_9;
+		L_9 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralDF73B874236192E4304748C8C9159248D7F005AB, L_5, NULL);
+		V_0 = L_9;
+		Type_t* L_10;
+		L_10 = ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_10, (Type_t*)NULL, NULL);
+		if (!L_11)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		String_t* L_12 = V_0;
+		Type_t* L_13;
+		L_13 = ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline(__this, NULL);
+		String_t* L_14;
+		L_14 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD, _stringLiteral1CCEE987CFB65D68EEB5CFFD47445AD2B3C53D62, L_13, NULL);
+		String_t* L_15;
+		L_15 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_12, L_14, NULL);
+		return L_15;
+	}
+
+IL_0062:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_16;
+		L_16 = ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline(__this, NULL);
+		if (!L_16)
+		{
+			goto IL_008b;
+		}
+	}
+	{
+		String_t* L_17 = V_0;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_18;
+		L_18 = ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline(__this, NULL);
+		NullCheck(L_18);
+		MethodInfo_t* L_19;
+		L_19 = Delegate_get_Method_mB684A7525653DFE0EFC35E58449E1FC8E2A9F019(L_18, NULL);
+		String_t* L_20;
+		L_20 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD, _stringLiteralCCCAF75F6781FC7A40EF6693F66F651A4F139125, L_19, NULL);
+		String_t* L_21;
+		L_21 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_17, L_20, NULL);
+		return L_21;
+	}
+
+IL_008b:
+	{
+		String_t* L_22 = V_0;
+		RuntimeObject* L_23;
+		L_23 = ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037_inline(__this, NULL);
+		String_t* L_24;
+		L_24 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA3C48F920CA03FE8BCEF33375645725C40BA7ADD, _stringLiteral63D6E9AE3EE2FA41B7C1AFB2FA5FADB63675466D, L_23, NULL);
+		String_t* L_25;
+		L_25 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_22, L_24, NULL);
+		return L_25;
+	}
+}
+// System.Type Microsoft.Extensions.DependencyInjection.ServiceDescriptor::GetImplementationType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_GetImplementationType_mCBC9467640135A95ABD22E6C373D9025F88F1466 (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* V_0 = NULL;
+	{
+		Type_t* L_0;
+		L_0 = ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		Type_t* L_2;
+		L_2 = ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline(__this, NULL);
+		return L_2;
+	}
+
+IL_0015:
+	{
+		RuntimeObject* L_3;
+		L_3 = ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037_inline(__this, NULL);
+		if (!L_3)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		RuntimeObject* L_4;
+		L_4 = ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037_inline(__this, NULL);
+		NullCheck(L_4);
+		Type_t* L_5;
+		L_5 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_4, NULL);
+		return L_5;
+	}
+
+IL_0029:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_6;
+		L_6 = ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline(__this, NULL);
+		if (!L_6)
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_7;
+		L_7 = ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline(__this, NULL);
+		NullCheck(L_7);
+		Type_t* L_8;
+		L_8 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_7, NULL);
+		NullCheck(L_8);
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_9;
+		L_9 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(49 /* System.Type[] System.Type::get_GenericTypeArguments() */, L_8);
+		V_0 = L_9;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_10 = V_0;
+		NullCheck(L_10);
+		int32_t L_11 = 1;
+		Type_t* L_12 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
+		return L_12;
+	}
+
+IL_0046:
+	{
+		return (Type_t*)NULL;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Transient(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0 (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___service0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		Type_t* L_3 = ___implementationType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_3, (Type_t*)NULL, NULL);
+		if (!L_4)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_5 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_5);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0_RuntimeMethod_var)));
+	}
+
+IL_0028:
+	{
+		Type_t* L_6 = ___service0;
+		Type_t* L_7 = ___implementationType1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_8;
+		L_8 = ServiceDescriptor_Describe_mE0FABDFDCC23DCEB8B9C87636A3FC50DE05213F7(L_6, L_7, 2, NULL);
+		return L_8;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Transient(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9 (Type_t* ___service0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___service0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_3 = ___implementationFactory1;
+		if (L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___service0;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_6 = ___implementationFactory1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Describe_m36DCA3F0D16C5C60881A37F1B39334F521DE857B(L_5, L_6, 2, NULL);
+		return L_7;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Scoped(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Scoped_m6B653C5EB4E0822F7F316BAD8DBEA8C11F25EA7D (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = ___service0;
+		Type_t* L_1 = ___implementationType1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2;
+		L_2 = ServiceDescriptor_Describe_mE0FABDFDCC23DCEB8B9C87636A3FC50DE05213F7(L_0, L_1, 1, NULL);
+		return L_2;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Scoped(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24 (Type_t* ___service0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___service0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_3 = ___implementationFactory1;
+		if (L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___service0;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_6 = ___implementationFactory1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Describe_m36DCA3F0D16C5C60881A37F1B39334F521DE857B(L_5, L_6, 1, NULL);
+		return L_7;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Singleton(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA (Type_t* ___service0, Type_t* ___implementationType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___service0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		Type_t* L_3 = ___implementationType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_3, (Type_t*)NULL, NULL);
+		if (!L_4)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_5 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_5);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA_RuntimeMethod_var)));
+	}
+
+IL_0028:
+	{
+		Type_t* L_6 = ___service0;
+		Type_t* L_7 = ___implementationType1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_8;
+		L_8 = ServiceDescriptor_Describe_mE0FABDFDCC23DCEB8B9C87636A3FC50DE05213F7(L_6, L_7, 0, NULL);
+		return L_8;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Singleton(System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567 (Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_3 = ___implementationFactory1;
+		if (L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___serviceType0;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_6 = ___implementationFactory1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Describe_m36DCA3F0D16C5C60881A37F1B39334F521DE857B(L_5, L_6, 0, NULL);
+		return L_7;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Singleton(System.Type,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Singleton_m64276FC3ECC1ECA316DD427B4C5D38C745C3D8FD (Type_t* ___serviceType0, RuntimeObject* ___implementationInstance1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m64276FC3ECC1ECA316DD427B4C5D38C745C3D8FD_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		RuntimeObject* L_3 = ___implementationInstance1;
+		if (L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1FD00C6F0B4C9F1E0466E1DD4659F667503F4B04)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceDescriptor_Singleton_m64276FC3ECC1ECA316DD427B4C5D38C745C3D8FD_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___serviceType0;
+		RuntimeObject* L_6 = ___implementationInstance1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_7);
+		ServiceDescriptor__ctor_m996867A0F3FA2BCF82F21CFA0962362A7B5A5259(L_7, L_5, L_6, NULL);
+		return L_7;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Describe(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Describe_mE0FABDFDCC23DCEB8B9C87636A3FC50DE05213F7 (Type_t* ___serviceType0, Type_t* ___implementationType1, int32_t ___lifetime2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		Type_t* L_1 = ___implementationType1;
+		int32_t L_2 = ___lifetime2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_3 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		ServiceDescriptor__ctor_m84A1D0AED0B0E29DF6E5C00A70F46192CD5649DD(L_3, L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceDescriptor::Describe(System.Type,System.Func`2<System.IServiceProvider,System.Object>,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ServiceDescriptor_Describe_m36DCA3F0D16C5C60881A37F1B39334F521DE857B (Type_t* ___serviceType0, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory1, int32_t ___lifetime2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Type_t* L_0 = ___serviceType0;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_1 = ___implementationFactory1;
+		int32_t L_2 = ___lifetime2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_3 = (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*)il2cpp_codegen_object_new(ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		ServiceDescriptor__ctor_m448E36DAF872D048B24FA894F4D2BA5482A7AF12(L_3, L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Object Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetRequiredService(System.IServiceProvider,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16 (RuntimeObject* ___provider0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ISupportRequiredService_tDE14BBE64AAE0D65C963F50EDB2D1A710A459C95_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	RuntimeObject* V_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___provider0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1E9918A305DD44C6C5253BF7305AB7758C686BB5)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_5 = ___provider0;
+		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)L_5, ISupportRequiredService_tDE14BBE64AAE0D65C963F50EDB2D1A710A459C95_il2cpp_TypeInfo_var));
+		RuntimeObject* L_6 = V_0;
+		if (!L_6)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		RuntimeObject* L_7 = V_0;
+		Type_t* L_8 = ___serviceType1;
+		NullCheck(L_7);
+		RuntimeObject* L_9;
+		L_9 = InterfaceFuncInvoker1< RuntimeObject*, Type_t* >::Invoke(0 /* System.Object Microsoft.Extensions.DependencyInjection.ISupportRequiredService::GetRequiredService(System.Type) */, ISupportRequiredService_tDE14BBE64AAE0D65C963F50EDB2D1A710A459C95_il2cpp_TypeInfo_var, L_7, L_8);
+		return L_9;
+	}
+
+IL_0034:
+	{
+		RuntimeObject* L_10 = ___provider0;
+		Type_t* L_11 = ___serviceType1;
+		NullCheck(L_10);
+		RuntimeObject* L_12;
+		L_12 = InterfaceFuncInvoker1< RuntimeObject*, Type_t* >::Invoke(0 /* System.Object System.IServiceProvider::GetService(System.Type) */, IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var, L_10, L_11);
+		V_1 = L_12;
+		RuntimeObject* L_13 = V_1;
+		if (L_13)
+		{
+			goto IL_0050;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var)));
+		String_t* L_14;
+		L_14 = SR_get_NoServiceRegistered_mBE8DAE2E906DD01140C56A47773A4C4344D786AC(NULL);
+		Type_t* L_15 = ___serviceType1;
+		String_t* L_16;
+		L_16 = SR_Format_mD18A3DAD68F66F971CA6B573D34831045BE7CF7F(L_14, L_15, NULL);
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_17 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_17);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_17, L_16, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_17, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16_RuntimeMethod_var)));
+	}
+
+IL_0050:
+	{
+		RuntimeObject* L_18 = V_1;
+		return L_18;
+	}
+}
+// System.Collections.Generic.IEnumerable`1<System.Object> Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::GetServices(System.IServiceProvider,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceProviderServiceExtensions_GetServices_m1631163B916BCE7CB498DF1B8080B7D548003BE9 (RuntimeObject* ___provider0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t6D39F4BC58A66D98BCEB112169CFDE48809FC555_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Type_t* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___provider0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1E9918A305DD44C6C5253BF7305AB7758C686BB5)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceProviderServiceExtensions_GetServices_m1631163B916BCE7CB498DF1B8080B7D548003BE9_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceProviderServiceExtensions_GetServices_m1631163B916BCE7CB498DF1B8080B7D548003BE9_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (IEnumerable_1_t6D39F4BC58A66D98BCEB112169CFDE48809FC555_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_7 = (TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB*)(TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB*)SZArrayNew(TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB_il2cpp_TypeInfo_var, (uint32_t)1);
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_8 = L_7;
+		Type_t* L_9 = ___serviceType1;
+		NullCheck(L_8);
+		ArrayElementTypeCheck (L_8, L_9);
+		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(0), (Type_t*)L_9);
+		NullCheck(L_6);
+		Type_t* L_10;
+		L_10 = VirtualFuncInvoker1< Type_t*, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(123 /* System.Type System.Type::MakeGenericType(System.Type[]) */, L_6, L_8);
+		V_0 = L_10;
+		RuntimeObject* L_11 = ___provider0;
+		Type_t* L_12 = V_0;
+		RuntimeObject* L_13;
+		L_13 = ServiceProviderServiceExtensions_GetRequiredService_m7945406B05E18F4E708FF70EC88787E1DCF80A16(L_11, L_12, NULL);
+		return ((RuntimeObject*)Castclass((RuntimeObject*)L_13, IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9_il2cpp_TypeInfo_var));
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceScope Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions::CreateScope(System.IServiceProvider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceProviderServiceExtensions_CreateScope_mBBBBF5B9E7AC1A4B13332DC00FFD9617FA84F7F6 (RuntimeObject* ___provider0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ServiceProviderServiceExtensions_GetRequiredService_TisIServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_m59983201416E5F6CAB9F118DAFAEC75CC5549E26_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___provider0;
+		RuntimeObject* L_1;
+		L_1 = ServiceProviderServiceExtensions_GetRequiredService_TisIServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_m59983201416E5F6CAB9F118DAFAEC75CC5549E26(L_0, ServiceProviderServiceExtensions_GetRequiredService_TisIServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_m59983201416E5F6CAB9F118DAFAEC75CC5549E26_RuntimeMethod_var);
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* Microsoft.Extensions.DependencyInjection.IServiceScope Microsoft.Extensions.DependencyInjection.IServiceScopeFactory::CreateScope() */, IServiceScopeFactory_t03B1BE4A62ECEB1691CAB6ED0B9FF688FF856932_il2cpp_TypeInfo_var, L_1);
+		return L_2;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities::CreateInstance(System.IServiceProvider,System.Type,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ActivatorUtilities_CreateInstance_mC9555A99351AA8DE4C229D509D5B4B62223E0F42 (RuntimeObject* ___provider0, Type_t* ___instanceType1, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___parameters2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* V_3 = NULL;
+	int32_t V_4 = 0;
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* V_5 = NULL;
+	ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805 V_6;
+	memset((&V_6), 0, sizeof(V_6));
+	bool V_7 = false;
+	int32_t V_8 = 0;
+	String_t* V_9 = NULL;
+	{
+		V_0 = (-1);
+		V_1 = (bool)0;
+		il2cpp_codegen_initobj((&V_2), sizeof(ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805));
+		Type_t* L_0 = ___instanceType1;
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_1;
+		L_1 = IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5(L_0, NULL);
+		NullCheck(L_1);
+		bool L_2;
+		L_2 = Type_get_IsAbstract_m16FA83463867635ED9DECAE1C5F6BE96B4579CE5(L_1, NULL);
+		if (L_2)
+		{
+			goto IL_0092;
+		}
+	}
+	{
+		Type_t* L_3 = ___instanceType1;
+		NullCheck(L_3);
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_4;
+		L_4 = Type_GetConstructors_m1F758EB484E2AD8B1F662C967178B017A886A964(L_3, NULL);
+		V_3 = L_4;
+		V_4 = 0;
+		goto IL_008b;
+	}
+
+IL_0025:
+	{
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_5 = V_3;
+		int32_t L_6 = V_4;
+		NullCheck(L_5);
+		int32_t L_7 = L_6;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		V_5 = L_8;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_9 = V_5;
+		NullCheck(L_9);
+		bool L_10;
+		L_10 = MethodBase_get_IsStatic_mD2921396167EC4F99E2ADC46C39CCCEC3CD0E16E(L_9, NULL);
+		if (L_10)
+		{
+			goto IL_0085;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_11 = V_5;
+		ConstructorMatcher__ctor_mAD53F78CA132B73F685629EC7423FCEAC104DFAC((&V_6), L_11, NULL);
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_12 = V_5;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_13 = { reinterpret_cast<intptr_t> (ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_14;
+		L_14 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_13, NULL);
+		NullCheck(L_12);
+		bool L_15;
+		L_15 = VirtualFuncInvoker2< bool, Type_t*, bool >::Invoke(12 /* System.Boolean System.Reflection.MemberInfo::IsDefined(System.Type,System.Boolean) */, L_12, L_14, (bool)0);
+		V_7 = L_15;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_16 = ___parameters2;
+		int32_t L_17;
+		L_17 = ConstructorMatcher_Match_m4C2039B8A1F472D04C437341A455B6DB4B3E871C((&V_6), L_16, NULL);
+		V_8 = L_17;
+		bool L_18 = V_7;
+		if (!L_18)
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		bool L_19 = V_1;
+		if (!L_19)
+		{
+			goto IL_0067;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B(NULL);
+	}
+
+IL_0067:
+	{
+		int32_t L_20 = V_8;
+		if ((!(((uint32_t)L_20) == ((uint32_t)(-1)))))
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27(NULL);
+	}
+
+IL_0071:
+	{
+		bool L_21 = V_7;
+		if (L_21)
+		{
+			goto IL_007a;
+		}
+	}
+	{
+		int32_t L_22 = V_0;
+		int32_t L_23 = V_8;
+		if ((((int32_t)L_22) >= ((int32_t)L_23)))
+		{
+			goto IL_0080;
+		}
+	}
+
+IL_007a:
+	{
+		int32_t L_24 = V_8;
+		V_0 = L_24;
+		ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805 L_25 = V_6;
+		V_2 = L_25;
+	}
+
+IL_0080:
+	{
+		bool L_26 = V_1;
+		bool L_27 = V_7;
+		V_1 = (bool)((int32_t)((int32_t)L_26|(int32_t)L_27));
+	}
+
+IL_0085:
+	{
+		int32_t L_28 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_28, 1));
+	}
+
+IL_008b:
+	{
+		int32_t L_29 = V_4;
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_30 = V_3;
+		NullCheck(L_30);
+		if ((((int32_t)L_29) < ((int32_t)((int32_t)(((RuntimeArray*)L_30)->max_length)))))
+		{
+			goto IL_0025;
+		}
+	}
+
+IL_0092:
+	{
+		int32_t L_31 = V_0;
+		if ((!(((uint32_t)L_31) == ((uint32_t)(-1)))))
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		Type_t* L_32 = ___instanceType1;
+		String_t* L_33;
+		L_33 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral175C84C8167E36B12F4445F08F3CCFAE61121D5A)), L_32, NULL);
+		V_9 = L_33;
+		String_t* L_34 = V_9;
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_35 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_35);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_35, L_34, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_35, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_CreateInstance_mC9555A99351AA8DE4C229D509D5B4B62223E0F42_RuntimeMethod_var)));
+	}
+
+IL_00ab:
+	{
+		RuntimeObject* L_36 = ___provider0;
+		RuntimeObject* L_37;
+		L_37 = ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7((&V_2), L_36, NULL);
+		return L_37;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.ObjectFactory Microsoft.Extensions.DependencyInjection.ActivatorUtilities::CreateFactory(System.Type,System.Type[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* ActivatorUtilities_CreateFactory_m4AB7ECDE1396360FE1CFF1D3BF22C42A142115BD (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_1_Compile_m1C4DD85947C855F964A4D02BDB8D3BE5940C54A8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_Lambda_TisFunc_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093_m23DEF827804CA29573E8BCF658B151FF955DE0F1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_3_Invoke_m3920D23C723D5053989C3EC0075342E6FA056206_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral167C65EB6C975B3A8544FD111059B733CFBA964A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1E9918A305DD44C6C5253BF7305AB7758C686BB5);
+		s_Il2CppMethodInitialized = true;
+	}
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* V_0 = NULL;
+	Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* V_1 = NULL;
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_2 = NULL;
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_3 = NULL;
+	Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* V_4 = NULL;
+	Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* V_5 = NULL;
+	Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093* V_6 = NULL;
+	{
+		Type_t* L_0 = ___instanceType0;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_1 = ___argumentTypes1;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		ActivatorUtilities_FindApplicableConstructor_m34554C31D1FD38198ABDCEAB1617B8B437040FBC(L_0, L_1, (&V_0), (&V_1), NULL);
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_2 = { reinterpret_cast<intptr_t> (IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_3;
+		L_3 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_4;
+		L_4 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_3, _stringLiteral1E9918A305DD44C6C5253BF7305AB7758C686BB5, NULL);
+		V_2 = L_4;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_0_0_0_var) };
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_7;
+		L_7 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_6, _stringLiteral167C65EB6C975B3A8544FD111059B733CFBA964A, NULL);
+		V_3 = L_7;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_8 = V_0;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_9 = V_1;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_10 = V_2;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_11 = V_3;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_12;
+		L_12 = ActivatorUtilities_BuildFactoryExpression_mBE4B139C00FA8BCB52EF5391B7729DBB82DAB1B1(L_8, L_9, L_10, L_11, NULL);
+		V_4 = L_12;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_13 = V_4;
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_14 = (ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*)(ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*)SZArrayNew(ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C_il2cpp_TypeInfo_var, (uint32_t)2);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_15 = L_14;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_16 = V_2;
+		NullCheck(L_15);
+		ArrayElementTypeCheck (L_15, L_16);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(0), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_16);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_17 = L_15;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_18 = V_3;
+		NullCheck(L_17);
+		ArrayElementTypeCheck (L_17, L_18);
+		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(1), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_18);
+		Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* L_19;
+		L_19 = Expression_Lambda_TisFunc_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093_m23DEF827804CA29573E8BCF658B151FF955DE0F1(L_13, L_17, Expression_Lambda_TisFunc_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093_m23DEF827804CA29573E8BCF658B151FF955DE0F1_RuntimeMethod_var);
+		V_5 = L_19;
+		Expression_1_tB6A4FCFB0F165962F00D9953932C64360137E3C4* L_20 = V_5;
+		NullCheck(L_20);
+		Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093* L_21;
+		L_21 = Expression_1_Compile_m1C4DD85947C855F964A4D02BDB8D3BE5940C54A8(L_20, Expression_1_Compile_m1C4DD85947C855F964A4D02BDB8D3BE5940C54A8_RuntimeMethod_var);
+		V_6 = L_21;
+		Func_3_t2D3C1B6F5B4B14BE6C8E7004CC36F4E57001C093* L_22 = V_6;
+		ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* L_23 = (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950*)il2cpp_codegen_object_new(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950_il2cpp_TypeInfo_var);
+		NullCheck(L_23);
+		ObjectFactory__ctor_m685CCDD654CEBD03B1691F70E0E3E0BAE99894F0(L_23, L_22, (intptr_t)((void*)Func_3_Invoke_m3920D23C723D5053989C3EC0075342E6FA056206_RuntimeMethod_var), NULL);
+		return L_23;
+	}
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities::GetServiceOrCreateInstance(System.IServiceProvider,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ActivatorUtilities_GetServiceOrCreateInstance_m73048B559B1F38FB40E5716282C33BC4CB3D9BA2 (RuntimeObject* ___provider0, Type_t* ___type1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* G_B2_0 = NULL;
+	RuntimeObject* G_B1_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___provider0;
+		Type_t* L_1 = ___type1;
+		NullCheck(L_0);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker1< RuntimeObject*, Type_t* >::Invoke(0 /* System.Object System.IServiceProvider::GetService(System.Type) */, IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var, L_0, L_1);
+		RuntimeObject* L_3 = L_2;
+		G_B1_0 = L_3;
+		if (L_3)
+		{
+			G_B2_0 = L_3;
+			goto IL_0017;
+		}
+	}
+	{
+		RuntimeObject* L_4 = ___provider0;
+		Type_t* L_5 = ___type1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6;
+		L_6 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		RuntimeObject* L_7;
+		L_7 = ActivatorUtilities_CreateInstance_mC9555A99351AA8DE4C229D509D5B4B62223E0F42(L_4, L_5, L_6, NULL);
+		G_B2_0 = L_7;
+	}
+
+IL_0017:
+	{
+		return G_B2_0;
+	}
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities::GetService(System.IServiceProvider,System.Type,System.Type,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ActivatorUtilities_GetService_m8FFC64B4C3FA9CD3BBE97317DEAA65E661BA504B (RuntimeObject* ___sp0, Type_t* ___type1, Type_t* ___requiredBy2, bool ___isDefaultParameterRequired3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	String_t* V_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___sp0;
+		Type_t* L_1 = ___type1;
+		NullCheck(L_0);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker1< RuntimeObject*, Type_t* >::Invoke(0 /* System.Object System.IServiceProvider::GetService(System.Type) */, IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var, L_0, L_1);
+		V_0 = L_2;
+		RuntimeObject* L_3 = V_0;
+		if (L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		bool L_4 = ___isDefaultParameterRequired3;
+		if (L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		Type_t* L_5 = ___type1;
+		Type_t* L_6 = ___requiredBy2;
+		String_t* L_7;
+		L_7 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral25DF26F9216E3E00ED168A90DD0E9DAF1C534586)), L_5, L_6, NULL);
+		V_1 = L_7;
+		String_t* L_8 = V_1;
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_9 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_9);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_9, L_8, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_GetService_m8FFC64B4C3FA9CD3BBE97317DEAA65E661BA504B_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		RuntimeObject* L_10 = V_0;
+		return L_10;
+	}
+}
+// System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ActivatorUtilities::BuildFactoryExpression(System.Reflection.ConstructorInfo,System.Nullable`1<System.Int32>[],System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ActivatorUtilities_BuildFactoryExpression_mBE4B139C00FA8BCB52EF5391B7729DBB82DAB1B1 (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* ___parameterMap1, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___serviceProvider2, Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* ___factoryArgumentArray3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* V_0 = NULL;
+	ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* V_1 = NULL;
+	int32_t V_2 = 0;
+	ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* V_3 = NULL;
+	Type_t* V_4 = NULL;
+	bool V_5 = false;
+	RuntimeObject* V_6 = NULL;
+	ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* V_7 = NULL;
+	ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* V_8 = NULL;
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_0 = ___constructor0;
+		NullCheck(L_0);
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_1;
+		L_1 = VirtualFuncInvoker0< ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* >::Invoke(16 /* System.Reflection.ParameterInfo[] System.Reflection.MethodBase::GetParameters() */, L_0);
+		V_0 = L_1;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_2 = V_0;
+		NullCheck(L_2);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_3 = (ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)SZArrayNew(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_2)->max_length)));
+		V_1 = L_3;
+		V_2 = 0;
+		goto IL_00e1;
+	}
+
+IL_0017:
+	{
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_4 = V_0;
+		int32_t L_5 = V_2;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		V_3 = L_7;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_8 = V_3;
+		NullCheck(L_8);
+		Type_t* L_9;
+		L_9 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_8);
+		V_4 = L_9;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_10 = V_3;
+		il2cpp_codegen_runtime_class_init_inline(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D(L_10, (&V_6), NULL);
+		V_5 = L_11;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_12 = ___parameterMap1;
+		int32_t L_13 = V_2;
+		NullCheck(L_12);
+		bool L_14;
+		L_14 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline(((L_12)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_13))), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (!L_14)
+		{
+			goto IL_0060;
+		}
+	}
+	{
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_15 = V_1;
+		int32_t L_16 = V_2;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_17 = ___factoryArgumentArray3;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_18 = (ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)SZArrayNew(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var, (uint32_t)1);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_19 = L_18;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_20 = ___parameterMap1;
+		int32_t L_21 = V_2;
+		NullCheck(L_20);
+		int32_t L_22 = L_21;
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_24 = L_23;
+		RuntimeObject* L_25 = Box(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28_il2cpp_TypeInfo_var, &L_24);
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_26;
+		L_26 = Expression_Constant_mF3E703732161EF83B1848E433F7DD1FB166BFE44(L_25, NULL);
+		NullCheck(L_19);
+		ArrayElementTypeCheck (L_19, L_26);
+		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(0), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_26);
+		IndexExpression_t3EE6D9B088DD1886D3206BBB603C988A4B817347* L_27;
+		L_27 = Expression_ArrayAccess_m0ECEC416D1865DCB4564B2A6AF08C8B82DA51A60(L_17, L_19, NULL);
+		NullCheck(L_15);
+		ArrayElementTypeCheck (L_15, L_27);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(L_16), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_27);
+		goto IL_00b6;
+	}
+
+IL_0060:
+	{
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_28 = (ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)SZArrayNew(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var, (uint32_t)4);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_29 = L_28;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_30 = ___serviceProvider2;
+		NullCheck(L_29);
+		ArrayElementTypeCheck (L_29, L_30);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(0), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_30);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_31 = L_29;
+		Type_t* L_32 = V_4;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_33 = { reinterpret_cast<intptr_t> (Type_t_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_34;
+		L_34 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_33, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_35;
+		L_35 = Expression_Constant_m71DA28DF529697FFF5205A455CACAD09A4FD30CE(L_32, L_34, NULL);
+		NullCheck(L_31);
+		ArrayElementTypeCheck (L_31, L_35);
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(1), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_35);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_36 = L_31;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_37 = ___constructor0;
+		NullCheck(L_37);
+		Type_t* L_38;
+		L_38 = VirtualFuncInvoker0< Type_t* >::Invoke(9 /* System.Type System.Reflection.MemberInfo::get_DeclaringType() */, L_37);
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_39 = { reinterpret_cast<intptr_t> (Type_t_0_0_0_var) };
+		Type_t* L_40;
+		L_40 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_39, NULL);
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_41;
+		L_41 = Expression_Constant_m71DA28DF529697FFF5205A455CACAD09A4FD30CE(L_38, L_40, NULL);
+		NullCheck(L_36);
+		ArrayElementTypeCheck (L_36, L_41);
+		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(2), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_41);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_42 = L_36;
+		bool L_43 = V_5;
+		bool L_44 = L_43;
+		RuntimeObject* L_45 = Box(Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var, &L_44);
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_46;
+		L_46 = Expression_Constant_mF3E703732161EF83B1848E433F7DD1FB166BFE44(L_45, NULL);
+		NullCheck(L_42);
+		ArrayElementTypeCheck (L_42, L_46);
+		(L_42)->SetAt(static_cast<il2cpp_array_size_t>(3), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_46);
+		V_7 = L_42;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_47 = V_1;
+		int32_t L_48 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		MethodInfo_t* L_49 = ((ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_StaticFields*)il2cpp_codegen_static_fields_for(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var))->___GetServiceInfo_0;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_50 = V_7;
+		MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB* L_51;
+		L_51 = Expression_Call_mD94E7CF72C83BF40BEEB31F7EB6519741A0043D2(L_49, L_50, NULL);
+		NullCheck(L_47);
+		ArrayElementTypeCheck (L_47, L_51);
+		(L_47)->SetAt(static_cast<il2cpp_array_size_t>(L_48), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_51);
+	}
+
+IL_00b6:
+	{
+		bool L_52 = V_5;
+		if (!L_52)
+		{
+			goto IL_00d0;
+		}
+	}
+	{
+		RuntimeObject* L_53 = V_6;
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_54;
+		L_54 = Expression_Constant_mF3E703732161EF83B1848E433F7DD1FB166BFE44(L_53, NULL);
+		V_8 = L_54;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_55 = V_1;
+		int32_t L_56 = V_2;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_57 = V_1;
+		int32_t L_58 = V_2;
+		NullCheck(L_57);
+		int32_t L_59 = L_58;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_60 = (L_57)->GetAt(static_cast<il2cpp_array_size_t>(L_59));
+		ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547* L_61 = V_8;
+		BinaryExpression_t4D7BC929A5BBC587BBC045505C9029557B8D32B4* L_62;
+		L_62 = Expression_Coalesce_m1C145BF8302D605BA953321A8F0E21B0F56ADB23(L_60, L_61, NULL);
+		NullCheck(L_55);
+		ArrayElementTypeCheck (L_55, L_62);
+		(L_55)->SetAt(static_cast<il2cpp_array_size_t>(L_56), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_62);
+	}
+
+IL_00d0:
+	{
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_63 = V_1;
+		int32_t L_64 = V_2;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_65 = V_1;
+		int32_t L_66 = V_2;
+		NullCheck(L_65);
+		int32_t L_67 = L_66;
+		Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* L_68 = (L_65)->GetAt(static_cast<il2cpp_array_size_t>(L_67));
+		Type_t* L_69 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		UnaryExpression_tFB4F40A211A2FF9B58F1A86E0EDB474121867B96* L_70;
+		L_70 = Expression_Convert_mD5233B60383B3FD0F5A044E4440FB32CBF9609D5(L_68, L_69, NULL);
+		NullCheck(L_63);
+		ArrayElementTypeCheck (L_63, L_70);
+		(L_63)->SetAt(static_cast<il2cpp_array_size_t>(L_64), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_70);
+		int32_t L_71 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_71, 1));
+	}
+
+IL_00e1:
+	{
+		int32_t L_72 = V_2;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_73 = V_0;
+		NullCheck(L_73);
+		if ((((int32_t)L_72) < ((int32_t)((int32_t)(((RuntimeArray*)L_73)->max_length)))))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_74 = ___constructor0;
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_75 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		NewExpression_t71592C0B1A33F4FD5FA0283BC2657C31D95EED51* L_76;
+		L_76 = Expression_New_m447E4F4F22912AE5F06493267B37F481F5818E75(L_74, L_75, NULL);
+		return L_76;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::FindApplicableConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_FindApplicableConstructor_m34554C31D1FD38198ABDCEAB1617B8B437040FBC (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___matchingParameterMap3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* V_0 = NULL;
+	Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* V_1 = NULL;
+	String_t* V_2 = NULL;
+	{
+		V_0 = (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB*)NULL;
+		V_1 = (Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43*)NULL;
+		Type_t* L_0 = ___instanceType0;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_1 = ___argumentTypes1;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = ActivatorUtilities_TryFindPreferredConstructor_mBF0947AA817A48C4E124AE1C5758F1126FCB1B55(L_0, L_1, (&V_0), (&V_1), NULL);
+		if (L_2)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		Type_t* L_3 = ___instanceType0;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_4 = ___argumentTypes1;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = ActivatorUtilities_TryFindMatchingConstructor_m533CBC668756EF21F6847F62372899BB80118604(L_3, L_4, (&V_0), (&V_1), NULL);
+		if (L_5)
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		Type_t* L_6 = ___instanceType0;
+		String_t* L_7;
+		L_7 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral175C84C8167E36B12F4445F08F3CCFAE61121D5A)), L_6, NULL);
+		V_2 = L_7;
+		String_t* L_8 = V_2;
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_9 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_9);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_9, L_8, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_FindApplicableConstructor_m34554C31D1FD38198ABDCEAB1617B8B437040FBC_RuntimeMethod_var)));
+	}
+
+IL_0031:
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_10 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_11 = V_0;
+		*((RuntimeObject**)L_10) = (RuntimeObject*)L_11;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_10, (void*)(RuntimeObject*)L_11);
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_12 = ___matchingParameterMap3;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_13 = V_1;
+		*((RuntimeObject**)L_12) = (RuntimeObject*)L_13;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_12, (void*)(RuntimeObject*)L_13);
+		return;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryFindMatchingConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryFindMatchingConstructor_m533CBC668756EF21F6847F62372899BB80118604 (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* V_0 = NULL;
+	int32_t V_1 = 0;
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* V_2 = NULL;
+	Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* V_3 = NULL;
+	{
+		Type_t* L_0 = ___instanceType0;
+		NullCheck(L_0);
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_1;
+		L_1 = Type_GetConstructors_m1F758EB484E2AD8B1F662C967178B017A886A964(L_0, NULL);
+		V_0 = L_1;
+		V_1 = 0;
+		goto IL_004c;
+	}
+
+IL_000b:
+	{
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_2 = V_0;
+		int32_t L_3 = V_1;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_2 = L_5;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_6 = V_2;
+		NullCheck(L_6);
+		bool L_7;
+		L_7 = MethodBase_get_IsStatic_mD2921396167EC4F99E2ADC46C39CCCEC3CD0E16E(L_6, NULL);
+		if (L_7)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_8 = V_2;
+		NullCheck(L_8);
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_9;
+		L_9 = VirtualFuncInvoker0< ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* >::Invoke(16 /* System.Reflection.ParameterInfo[] System.Reflection.MethodBase::GetParameters() */, L_8);
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_10 = ___argumentTypes1;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = ActivatorUtilities_TryCreateParameterMap_m5F8100C8C1B3CA4978DC441CF896968708D34B29(L_9, L_10, (&V_3), NULL);
+		if (!L_11)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_12 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_13 = *((ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB**)L_12);
+		il2cpp_codegen_runtime_class_init_inline(ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var);
+		bool L_14;
+		L_14 = ConstructorInfo_op_Inequality_mB3CB8B779FA4400BBF7069097CC64E6CA1D235A4(L_13, (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB*)NULL, NULL);
+		if (!L_14)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		Type_t* L_15 = ___instanceType0;
+		String_t* L_16;
+		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral68FB1D2C9FFF0D771B9B705E90F8A5891EA88BDA)), L_15, NULL);
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_17 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_17);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_17, L_16, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_17, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_TryFindMatchingConstructor_m533CBC668756EF21F6847F62372899BB80118604_RuntimeMethod_var)));
+	}
+
+IL_0042:
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_18 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_19 = V_2;
+		*((RuntimeObject**)L_18) = (RuntimeObject*)L_19;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_18, (void*)(RuntimeObject*)L_19);
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_20 = ___parameterMap3;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_21 = V_3;
+		*((RuntimeObject**)L_20) = (RuntimeObject*)L_21;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_20, (void*)(RuntimeObject*)L_21);
+	}
+
+IL_0048:
+	{
+		int32_t L_22 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_22, 1));
+	}
+
+IL_004c:
+	{
+		int32_t L_23 = V_1;
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_24 = V_0;
+		NullCheck(L_24);
+		if ((((int32_t)L_23) < ((int32_t)((int32_t)(((RuntimeArray*)L_24)->max_length)))))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_25 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_26 = *((ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB**)L_25);
+		il2cpp_codegen_runtime_class_init_inline(ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var);
+		bool L_27;
+		L_27 = ConstructorInfo_op_Inequality_mB3CB8B779FA4400BBF7069097CC64E6CA1D235A4(L_26, (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB*)NULL, NULL);
+		if (!L_27)
+		{
+			goto IL_005e;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_005e:
+	{
+		return (bool)0;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryFindPreferredConstructor(System.Type,System.Type[],System.Reflection.ConstructorInfo&,System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryFindPreferredConstructor_mBF0947AA817A48C4E124AE1C5758F1126FCB1B55 (Type_t* ___instanceType0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** ___matchingConstructor2, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* V_1 = NULL;
+	int32_t V_2 = 0;
+	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* V_3 = NULL;
+	Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* V_4 = NULL;
+	{
+		V_0 = (bool)0;
+		Type_t* L_0 = ___instanceType0;
+		NullCheck(L_0);
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_1;
+		L_1 = Type_GetConstructors_m1F758EB484E2AD8B1F662C967178B017A886A964(L_0, NULL);
+		V_1 = L_1;
+		V_2 = 0;
+		goto IL_0056;
+	}
+
+IL_000d:
+	{
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_2 = V_1;
+		int32_t L_3 = V_2;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_3 = L_5;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_6 = V_3;
+		NullCheck(L_6);
+		bool L_7;
+		L_7 = MethodBase_get_IsStatic_mD2921396167EC4F99E2ADC46C39CCCEC3CD0E16E(L_6, NULL);
+		if (L_7)
+		{
+			goto IL_0052;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_8 = V_3;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_9 = { reinterpret_cast<intptr_t> (ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_10;
+		L_10 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_9, NULL);
+		NullCheck(L_8);
+		bool L_11;
+		L_11 = VirtualFuncInvoker2< bool, Type_t*, bool >::Invoke(12 /* System.Boolean System.Reflection.MemberInfo::IsDefined(System.Type,System.Boolean) */, L_8, L_10, (bool)0);
+		if (!L_11)
+		{
+			goto IL_0052;
+		}
+	}
+	{
+		bool L_12 = V_0;
+		if (!L_12)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B(NULL);
+	}
+
+IL_0034:
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_13 = V_3;
+		NullCheck(L_13);
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_14;
+		L_14 = VirtualFuncInvoker0< ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* >::Invoke(16 /* System.Reflection.ParameterInfo[] System.Reflection.MethodBase::GetParameters() */, L_13);
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_15 = ___argumentTypes1;
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		bool L_16;
+		L_16 = ActivatorUtilities_TryCreateParameterMap_m5F8100C8C1B3CA4978DC441CF896968708D34B29(L_14, L_15, (&V_4), NULL);
+		if (L_16)
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27(NULL);
+	}
+
+IL_0049:
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_17 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_18 = V_3;
+		*((RuntimeObject**)L_17) = (RuntimeObject*)L_18;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_17, (void*)(RuntimeObject*)L_18);
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_19 = ___parameterMap3;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_20 = V_4;
+		*((RuntimeObject**)L_19) = (RuntimeObject*)L_20;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_19, (void*)(RuntimeObject*)L_20);
+		V_0 = (bool)1;
+	}
+
+IL_0052:
+	{
+		int32_t L_21 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_21, 1));
+	}
+
+IL_0056:
+	{
+		int32_t L_22 = V_2;
+		ConstructorInfoU5BU5D_t515A0B944728842263B6033C9A62F6392C3BCD8A* L_23 = V_1;
+		NullCheck(L_23);
+		if ((((int32_t)L_22) < ((int32_t)((int32_t)(((RuntimeArray*)L_23)->max_length)))))
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB** L_24 = ___matchingConstructor2;
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_25 = *((ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB**)L_24);
+		il2cpp_codegen_runtime_class_init_inline(ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB_il2cpp_TypeInfo_var);
+		bool L_26;
+		L_26 = ConstructorInfo_op_Inequality_mB3CB8B779FA4400BBF7069097CC64E6CA1D235A4(L_25, (ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB*)NULL, NULL);
+		if (!L_26)
+		{
+			goto IL_0068;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0068:
+	{
+		return (bool)0;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.ActivatorUtilities::TryCreateParameterMap(System.Reflection.ParameterInfo[],System.Type[],System.Nullable`1<System.Int32>[]&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ActivatorUtilities_TryCreateParameterMap_m5F8100C8C1B3CA4978DC441CF896968708D34B29 (ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* ___constructorParameters0, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___argumentTypes1, Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** ___parameterMap2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* V_2 = NULL;
+	int32_t V_3 = 0;
+	{
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_0 = ___parameterMap2;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_1 = ___constructorParameters0;
+		NullCheck(L_1);
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_2 = (Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43*)(Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43*)SZArrayNew(Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_1)->max_length)));
+		*((RuntimeObject**)L_0) = (RuntimeObject*)L_2;
+		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)L_2);
+		V_0 = 0;
+		goto IL_0066;
+	}
+
+IL_000e:
+	{
+		V_1 = (bool)0;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_3 = ___argumentTypes1;
+		int32_t L_4 = V_0;
+		NullCheck(L_3);
+		int32_t L_5 = L_4;
+		Type_t* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_7;
+		L_7 = IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5(L_6, NULL);
+		V_2 = L_7;
+		V_3 = 0;
+		goto IL_0057;
+	}
+
+IL_001d:
+	{
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_8 = ___parameterMap2;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_9 = *((Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43**)L_8);
+		int32_t L_10 = V_3;
+		NullCheck(L_9);
+		bool L_11;
+		L_11 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline(((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10))), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_11)
+		{
+			goto IL_0053;
+		}
+	}
+	{
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_12 = ___constructorParameters0;
+		int32_t L_13 = V_3;
+		NullCheck(L_12);
+		int32_t L_14 = L_13;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+		NullCheck(L_15);
+		Type_t* L_16;
+		L_16 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_15);
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_17;
+		L_17 = IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5(L_16, NULL);
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_18 = V_2;
+		NullCheck(L_17);
+		bool L_19;
+		L_19 = VirtualFuncInvoker1< bool, TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* >::Invoke(136 /* System.Boolean System.Reflection.TypeInfo::IsAssignableFrom(System.Reflection.TypeInfo) */, L_17, L_18);
+		if (!L_19)
+		{
+			goto IL_0053;
+		}
+	}
+	{
+		V_1 = (bool)1;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43** L_20 = ___parameterMap2;
+		Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43* L_21 = *((Nullable_1U5BU5D_t4BBED9A00EC2D72318A66049CDB2B0B2553D4B43**)L_20);
+		int32_t L_22 = V_3;
+		int32_t L_23 = V_0;
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_24;
+		memset((&L_24), 0, sizeof(L_24));
+		Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703((&L_24), L_23, /*hidden argument*/Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var);
+		NullCheck(L_21);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(L_22), (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28)L_24);
+		goto IL_005d;
+	}
+
+IL_0053:
+	{
+		int32_t L_25 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_25, 1));
+	}
+
+IL_0057:
+	{
+		int32_t L_26 = V_3;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_27 = ___constructorParameters0;
+		NullCheck(L_27);
+		if ((((int32_t)L_26) < ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)))))
+		{
+			goto IL_001d;
+		}
+	}
+
+IL_005d:
+	{
+		bool L_28 = V_1;
+		if (L_28)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0062:
+	{
+		int32_t L_29 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_29, 1));
+	}
+
+IL_0066:
+	{
+		int32_t L_30 = V_0;
+		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_31 = ___argumentTypes1;
+		NullCheck(L_31);
+		if ((((int32_t)L_30) < ((int32_t)((int32_t)(((RuntimeArray*)L_31)->max_length)))))
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		return (bool)1;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::ThrowMultipleCtorsMarkedWithAttributeException()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B (const RuntimeMethod* method) 
+{
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_0 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral059AB8FE8DEC48B335F3DEEC5DD071299BB001AC)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_ThrowMultipleCtorsMarkedWithAttributeException_m9A99E06DCFE97B0ADA11AE90BCE140DB0B97B64B_RuntimeMethod_var)));
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::ThrowMarkedCtorDoesNotTakeAllProvidedArguments()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27 (const RuntimeMethod* method) 
+{
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_0 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral106CF8B6C25989122240E7EB1263C2EB32DB3F16)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ActivatorUtilities_ThrowMarkedCtorDoesNotTakeAllProvidedArguments_m238EEA9A6F30D6CC5ADD5AA76CBE7750513C3A27_RuntimeMethod_var)));
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilities__cctor_m9183B2EA23B59477D79BD23067E9F7C879353460 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_GetMethodInfo_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_mC5EC61B5AC8435D00AA38EC0D59459C6149D8505_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_GetService_m8FFC64B4C3FA9CD3BBE97317DEAA65E661BA504B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_Lambda_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_m259A292B2C8778D6341D0DD5552309535E5C2E78_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MethodInfo_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5B9FE05484B470B354696B4F06C3B12F71B5BB4A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B866DCFF4A3EC3D3C30879F029D88106601B1B2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8B8AA5273679EF7F7E3FB552E405DCF30B14ECA1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA33A5CAE02B786C2060461DF8C6764B4C05E9423);
+		s_Il2CppMethodInitialized = true;
+	}
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_0 = NULL;
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_1 = NULL;
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_2 = NULL;
+	ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* V_3 = NULL;
+	{
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_0 = { reinterpret_cast<intptr_t> (IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_1;
+		L_1 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_0, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785_il2cpp_TypeInfo_var);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_2;
+		L_2 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_1, _stringLiteral8B8AA5273679EF7F7E3FB552E405DCF30B14ECA1, NULL);
+		V_0 = L_2;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_3 = { reinterpret_cast<intptr_t> (Type_t_0_0_0_var) };
+		Type_t* L_4;
+		L_4 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_3, NULL);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_5;
+		L_5 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_4, _stringLiteral6B866DCFF4A3EC3D3C30879F029D88106601B1B2, NULL);
+		V_1 = L_5;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_6 = { reinterpret_cast<intptr_t> (Type_t_0_0_0_var) };
+		Type_t* L_7;
+		L_7 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_6, NULL);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_8;
+		L_8 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_7, _stringLiteralA33A5CAE02B786C2060461DF8C6764B4C05E9423, NULL);
+		V_2 = L_8;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_9 = { reinterpret_cast<intptr_t> (Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_0_0_0_var) };
+		Type_t* L_10;
+		L_10 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_9, NULL);
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_11;
+		L_11 = Expression_Parameter_mF825EFB5FBAABE8355C9D44B286AB4EA02F8B992(L_10, _stringLiteral5B9FE05484B470B354696B4F06C3B12F71B5BB4A, NULL);
+		V_3 = L_11;
+		RuntimeMethodHandle_tB35B96E97214DCBE20B0B02B1E687884B34680B2 L_12 = { reinterpret_cast<intptr_t> (ActivatorUtilities_GetService_m8FFC64B4C3FA9CD3BBE97317DEAA65E661BA504B_RuntimeMethod_var) };
+		MethodBase_t* L_13;
+		L_13 = MethodBase_GetMethodFromHandle_m55E706B5156C0FDC1EA1DEF95B4FE36FE6A96EA9(L_12, NULL);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_14 = (ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F*)SZArrayNew(ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F_il2cpp_TypeInfo_var, (uint32_t)4);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_15 = L_14;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_16 = V_0;
+		NullCheck(L_15);
+		ArrayElementTypeCheck (L_15, L_16);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(0), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_16);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_17 = L_15;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_18 = V_1;
+		NullCheck(L_17);
+		ArrayElementTypeCheck (L_17, L_18);
+		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(1), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_18);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_19 = L_17;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_20 = V_2;
+		NullCheck(L_19);
+		ArrayElementTypeCheck (L_19, L_20);
+		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(2), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_20);
+		ExpressionU5BU5D_tA9F782C3F01235FA1BEE94C80141F0CE1CB1BF6F* L_21 = L_19;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_22 = V_3;
+		NullCheck(L_21);
+		ArrayElementTypeCheck (L_21, L_22);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(3), (Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)L_22);
+		MethodCallExpression_tC95F5EFAB9E7AB984F7F6931F57E6A2D094C22DB* L_23;
+		L_23 = Expression_Call_mF08321E4E99D835F221F58B40C8077C60530CE62((Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785*)NULL, ((MethodInfo_t*)CastclassClass((RuntimeObject*)L_13, MethodInfo_t_il2cpp_TypeInfo_var)), L_21, NULL);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_24 = (ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*)(ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C*)SZArrayNew(ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C_il2cpp_TypeInfo_var, (uint32_t)4);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_25 = L_24;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_26 = V_0;
+		NullCheck(L_25);
+		ArrayElementTypeCheck (L_25, L_26);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(0), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_26);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_27 = L_25;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_28 = V_1;
+		NullCheck(L_27);
+		ArrayElementTypeCheck (L_27, L_28);
+		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(1), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_28);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_29 = L_27;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_30 = V_2;
+		NullCheck(L_29);
+		ArrayElementTypeCheck (L_29, L_30);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(2), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_30);
+		ParameterExpressionU5BU5D_tA217A6969CA4383EF6D3C43B8EB0989358ABE72C* L_31 = L_29;
+		ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110* L_32 = V_3;
+		NullCheck(L_31);
+		ArrayElementTypeCheck (L_31, L_32);
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(3), (ParameterExpression_tE8D3A1137422F75D256CBB200EDC82820F240110*)L_32);
+		Expression_1_t2DC7D6BAB49660BD547C350C2817540D483211C2* L_33;
+		L_33 = Expression_Lambda_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_m259A292B2C8778D6341D0DD5552309535E5C2E78(L_23, L_31, Expression_Lambda_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_m259A292B2C8778D6341D0DD5552309535E5C2E78_RuntimeMethod_var);
+		MethodInfo_t* L_34;
+		L_34 = ActivatorUtilities_GetMethodInfo_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_mC5EC61B5AC8435D00AA38EC0D59459C6149D8505(L_33, ActivatorUtilities_GetMethodInfo_TisFunc_5_t8BEA11C86578CFEBA7F26FF34A0A60F01431DCB0_mC5EC61B5AC8435D00AA38EC0D59459C6149D8505_RuntimeMethod_var);
+		((ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_StaticFields*)il2cpp_codegen_static_fields_for(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var))->___GetServiceInfo_0 = L_34;
+		Il2CppCodeGenWriteBarrier((void**)(&((ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_StaticFields*)il2cpp_codegen_static_fields_for(ActivatorUtilities_t5A5E50FC8A985FB19772CFDA3A65BBCF907E9BEE_il2cpp_TypeInfo_var))->___GetServiceInfo_0), (void*)L_34);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+
+// Conversion methods for marshalling of: Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_pinvoke(const ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805& unmarshaled, ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_pinvoke& marshaled)
+{
+	Exception_t* ____constructor_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_constructor' of type 'ConstructorMatcher': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____constructor_0Exception, NULL);
+}
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_pinvoke_back(const ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_pinvoke& marshaled, ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805& unmarshaled)
+{
+	Exception_t* ____constructor_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_constructor' of type 'ConstructorMatcher': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____constructor_0Exception, NULL);
+}
+// Conversion method for clean up from marshalling of: Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_pinvoke_cleanup(ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_pinvoke& marshaled)
+{
+}
+
+
+// Conversion methods for marshalling of: Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_com(const ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805& unmarshaled, ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_com& marshaled)
+{
+	Exception_t* ____constructor_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_constructor' of type 'ConstructorMatcher': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____constructor_0Exception, NULL);
+}
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_com_back(const ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_com& marshaled, ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805& unmarshaled)
+{
+	Exception_t* ____constructor_0Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_constructor' of type 'ConstructorMatcher': Reference type field marshaling is not supported.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(____constructor_0Exception, NULL);
+}
+// Conversion method for clean up from marshalling of: Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher
+IL2CPP_EXTERN_C void ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshal_com_cleanup(ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805_marshaled_com& marshaled)
+{
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::.ctor(System.Reflection.ConstructorInfo)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstructorMatcher__ctor_mAD53F78CA132B73F685629EC7423FCEAC104DFAC (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_0 = ___constructor0;
+		__this->____constructor_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____constructor_0), (void*)L_0);
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_1 = __this->____constructor_0;
+		NullCheck(L_1);
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_2;
+		L_2 = VirtualFuncInvoker0< ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* >::Invoke(16 /* System.Reflection.ParameterInfo[] System.Reflection.MethodBase::GetParameters() */, L_1);
+		__this->____parameters_1 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____parameters_1), (void*)L_2);
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_3 = __this->____parameters_1;
+		NullCheck(L_3);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_3)->max_length)));
+		__this->____parameterValues_2 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____parameterValues_2), (void*)L_4);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void ConstructorMatcher__ctor_mAD53F78CA132B73F685629EC7423FCEAC104DFAC_AdjustorThunk (RuntimeObject* __this, ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___constructor0, const RuntimeMethod* method)
+{
+	ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805*>(__this + _offset);
+	ConstructorMatcher__ctor_mAD53F78CA132B73F685629EC7423FCEAC104DFAC(_thisAdjusted, ___constructor0, method);
+}
+// System.Int32 Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::Match(System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ConstructorMatcher_Match_m4C2039B8A1F472D04C437341A455B6DB4B3E871C (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___givenParameters0, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* V_3 = NULL;
+	bool V_4 = false;
+	int32_t V_5 = 0;
+	RuntimeObject* G_B3_0 = NULL;
+	RuntimeObject* G_B2_0 = NULL;
+	TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* G_B4_0 = NULL;
+	{
+		V_0 = 0;
+		V_1 = 0;
+		V_2 = 0;
+		goto IL_008e;
+	}
+
+IL_000b:
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ___givenParameters0;
+		int32_t L_1 = V_2;
+		NullCheck(L_0);
+		int32_t L_2 = L_1;
+		RuntimeObject* L_3 = (L_0)->GetAt(static_cast<il2cpp_array_size_t>(L_2));
+		RuntimeObject* L_4 = L_3;
+		G_B2_0 = L_4;
+		if (L_4)
+		{
+			G_B3_0 = L_4;
+			goto IL_0015;
+		}
+	}
+	{
+		G_B4_0 = ((TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D*)(NULL));
+		goto IL_001f;
+	}
+
+IL_0015:
+	{
+		NullCheck(G_B3_0);
+		Type_t* L_5;
+		L_5 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(G_B3_0, NULL);
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_6;
+		L_6 = IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5(L_5, NULL);
+		G_B4_0 = L_6;
+	}
+
+IL_001f:
+	{
+		V_3 = G_B4_0;
+		V_4 = (bool)0;
+		int32_t L_7 = V_0;
+		V_5 = L_7;
+		goto IL_0074;
+	}
+
+IL_0028:
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = __this->____parameterValues_2;
+		int32_t L_9 = V_5;
+		NullCheck(L_8);
+		int32_t L_10 = L_9;
+		RuntimeObject* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
+		if (L_11)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_12 = __this->____parameters_1;
+		int32_t L_13 = V_5;
+		NullCheck(L_12);
+		int32_t L_14 = L_13;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+		NullCheck(L_15);
+		Type_t* L_16;
+		L_16 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_15);
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_17;
+		L_17 = IntrospectionExtensions_GetTypeInfo_mF4497C8656153A91554F7DC469CE223AF2784FF5(L_16, NULL);
+		TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* L_18 = V_3;
+		NullCheck(L_17);
+		bool L_19;
+		L_19 = VirtualFuncInvoker1< bool, TypeInfo_tC4F59663C70D17D50BC99D53DCE74BFB9701012D* >::Invoke(136 /* System.Boolean System.Reflection.TypeInfo::IsAssignableFrom(System.Reflection.TypeInfo) */, L_17, L_18);
+		if (!L_19)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		V_4 = (bool)1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_20 = __this->____parameterValues_2;
+		int32_t L_21 = V_5;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_22 = ___givenParameters0;
+		int32_t L_23 = V_2;
+		NullCheck(L_22);
+		int32_t L_24 = L_23;
+		RuntimeObject* L_25 = (L_22)->GetAt(static_cast<il2cpp_array_size_t>(L_24));
+		NullCheck(L_20);
+		ArrayElementTypeCheck (L_20, L_25);
+		(L_20)->SetAt(static_cast<il2cpp_array_size_t>(L_21), (RuntimeObject*)L_25);
+		int32_t L_26 = V_0;
+		int32_t L_27 = V_5;
+		if ((!(((uint32_t)L_26) == ((uint32_t)L_27))))
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		int32_t L_28 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_28, 1));
+		int32_t L_29 = V_5;
+		int32_t L_30 = V_2;
+		if ((!(((uint32_t)L_29) == ((uint32_t)L_30))))
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		int32_t L_31 = V_5;
+		V_1 = L_31;
+	}
+
+IL_006e:
+	{
+		int32_t L_32 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_32, 1));
+	}
+
+IL_0074:
+	{
+		bool L_33 = V_4;
+		if (L_33)
+		{
+			goto IL_0084;
+		}
+	}
+	{
+		int32_t L_34 = V_5;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_35 = __this->____parameters_1;
+		NullCheck(L_35);
+		if ((!(((uint32_t)L_34) == ((uint32_t)((int32_t)(((RuntimeArray*)L_35)->max_length))))))
+		{
+			goto IL_0028;
+		}
+	}
+
+IL_0084:
+	{
+		bool L_36 = V_4;
+		if (L_36)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		return (-1);
+	}
+
+IL_008a:
+	{
+		int32_t L_37 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_37, 1));
+	}
+
+IL_008e:
+	{
+		int32_t L_38 = V_2;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_39 = ___givenParameters0;
+		NullCheck(L_39);
+		if ((!(((uint32_t)L_38) == ((uint32_t)((int32_t)(((RuntimeArray*)L_39)->max_length))))))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		int32_t L_40 = V_1;
+		return L_40;
+	}
+}
+IL2CPP_EXTERN_C  int32_t ConstructorMatcher_Match_m4C2039B8A1F472D04C437341A455B6DB4B3E871C_AdjustorThunk (RuntimeObject* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___givenParameters0, const RuntimeMethod* method)
+{
+	ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = ConstructorMatcher_Match_m4C2039B8A1F472D04C437341A455B6DB4B3E871C(_thisAdjusted, ___givenParameters0, method);
+	return _returnValue;
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ActivatorUtilities/ConstructorMatcher::CreateInstance(System.IServiceProvider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7 (ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* __this, RuntimeObject* ___provider0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	RuntimeObject* V_1 = NULL;
+	RuntimeObject* V_2 = NULL;
+	RuntimeObject* V_3 = NULL;
+	TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* V_4 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* G_B13_0 = NULL;
+	TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* G_B12_0 = NULL;
+	int32_t G_B14_0 = 0;
+	{
+		V_0 = 0;
+		goto IL_0076;
+	}
+
+IL_0004:
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = __this->____parameterValues_2;
+		int32_t L_1 = V_0;
+		NullCheck(L_0);
+		int32_t L_2 = L_1;
+		RuntimeObject* L_3 = (L_0)->GetAt(static_cast<il2cpp_array_size_t>(L_2));
+		if (L_3)
+		{
+			goto IL_0072;
+		}
+	}
+	{
+		RuntimeObject* L_4 = ___provider0;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_5 = __this->____parameters_1;
+		int32_t L_6 = V_0;
+		NullCheck(L_5);
+		int32_t L_7 = L_6;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		NullCheck(L_8);
+		Type_t* L_9;
+		L_9 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_8);
+		NullCheck(L_4);
+		RuntimeObject* L_10;
+		L_10 = InterfaceFuncInvoker1< RuntimeObject*, Type_t* >::Invoke(0 /* System.Object System.IServiceProvider::GetService(System.Type) */, IServiceProvider_t642A40617C0AF43F2D9DF6DF156D3F1809AD2BB6_il2cpp_TypeInfo_var, L_4, L_9);
+		V_1 = L_10;
+		RuntimeObject* L_11 = V_1;
+		if (L_11)
+		{
+			goto IL_0069;
+		}
+	}
+	{
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_12 = __this->____parameters_1;
+		int32_t L_13 = V_0;
+		NullCheck(L_12);
+		int32_t L_14 = L_13;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+		il2cpp_codegen_runtime_class_init_inline(ParameterDefaultValue_t1151823F580D0B764F91398110F42257DD7CD315_il2cpp_TypeInfo_var);
+		bool L_16;
+		L_16 = ParameterDefaultValue_TryGetDefaultValue_m2F931344E7826A75F891E2EEB94017064184E44D(L_15, (&V_2), NULL);
+		if (L_16)
+		{
+			goto IL_005e;
+		}
+	}
+	{
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_17 = __this->____parameters_1;
+		int32_t L_18 = V_0;
+		NullCheck(L_17);
+		int32_t L_19 = L_18;
+		ParameterInfo_tBC2D68304851A59EFB2EAE6B168714CD45445F2F* L_20 = (L_17)->GetAt(static_cast<il2cpp_array_size_t>(L_19));
+		NullCheck(L_20);
+		Type_t* L_21;
+		L_21 = VirtualFuncInvoker0< Type_t* >::Invoke(11 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_20);
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_22 = __this->____constructor_0;
+		NullCheck(L_22);
+		Type_t* L_23;
+		L_23 = VirtualFuncInvoker0< Type_t* >::Invoke(9 /* System.Type System.Reflection.MemberInfo::get_DeclaringType() */, L_22);
+		String_t* L_24;
+		L_24 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral25DF26F9216E3E00ED168A90DD0E9DAF1C534586)), L_21, L_23, NULL);
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_25 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_25);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_25, L_24, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_25, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7_RuntimeMethod_var)));
+	}
+
+IL_005e:
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_26 = __this->____parameterValues_2;
+		int32_t L_27 = V_0;
+		RuntimeObject* L_28 = V_2;
+		NullCheck(L_26);
+		ArrayElementTypeCheck (L_26, L_28);
+		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(L_27), (RuntimeObject*)L_28);
+		goto IL_0072;
+	}
+
+IL_0069:
+	{
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_29 = __this->____parameterValues_2;
+		int32_t L_30 = V_0;
+		RuntimeObject* L_31 = V_1;
+		NullCheck(L_29);
+		ArrayElementTypeCheck (L_29, L_31);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(L_30), (RuntimeObject*)L_31);
+	}
+
+IL_0072:
+	{
+		int32_t L_32 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_32, 1));
+	}
+
+IL_0076:
+	{
+		int32_t L_33 = V_0;
+		ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* L_34 = __this->____parameters_1;
+		NullCheck(L_34);
+		if ((!(((uint32_t)L_33) == ((uint32_t)((int32_t)(((RuntimeArray*)L_34)->max_length))))))
+		{
+			goto IL_0004;
+		}
+	}
+	{
+	}
+	try
+	{// begin try (depth: 1)
+		ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* L_35 = __this->____constructor_0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_36 = __this->____parameterValues_2;
+		NullCheck(L_35);
+		RuntimeObject* L_37;
+		L_37 = ConstructorInfo_Invoke_m15FDF2B682BD01CC934BE4D314EF2193103CECFE(L_35, L_36, NULL);
+		V_3 = L_37;
+		goto IL_00c7;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+	}
+	{// begin filter(depth: 1)
+		bool __filter_local = false;
+		try
+		{// begin implicit try block
+			{
+				TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* L_38 = ((TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2*)IsInstSealed((RuntimeObject*)((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*)), ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2_il2cpp_TypeInfo_var))));
+				G_B12_0 = L_38;
+				if (L_38)
+				{
+					G_B13_0 = L_38;
+					goto IL_00a2;
+				}
+			}
+			{
+				G_B14_0 = 0;
+				goto IL_00b1;
+			}
+
+IL_00a2:
+			{
+				V_4 = G_B13_0;
+				TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* L_39 = V_4;
+				NullCheck(L_39);
+				Exception_t* L_40;
+				L_40 = Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline(L_39, NULL);
+				G_B14_0 = ((!(((uint32_t)((!(((RuntimeObject*)(Exception_t*)L_40) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0)) <= ((uint32_t)0)))? 1 : 0);
+			}
+
+IL_00b1:
+			{
+				__filter_local = (G_B14_0) ? true : false;
+			}
+		}// end implicit try block
+		catch(Il2CppExceptionWrapper&)
+		{// begin implicit catch block
+			__filter_local = false;
+		}// end implicit catch block
+		if (__filter_local)
+		{
+			goto FILTER_00b3;
+		}
+		else
+		{
+			IL2CPP_RAISE_MANAGED_EXCEPTION(IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*), ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7_RuntimeMethod_var)));
+		}
+	}// end filter (depth: 1)
+
+FILTER_00b3:
+	{// begin catch(filter)
+		TargetInvocationException_t46C470A37ED9947AFD45BD814387DF64665B69F2* L_41 = V_4;
+		NullCheck(L_41);
+		Exception_t* L_42;
+		L_42 = Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline(L_41, NULL);
+		ExceptionDispatchInfo_tD7AF19E75FEC22F4A8329FD1E9EDF96615CB2757* L_43;
+		L_43 = ExceptionDispatchInfo_Capture_mC1C1C30D83DC04B2B7813DFCB67D07CCD4909803(L_42, NULL);
+		NullCheck(L_43);
+		ExceptionDispatchInfo_Throw_m06F398E346AE94C1CCEB636763A8CB26511F6330(L_43, NULL);
+		IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));
+	}// end catch (depth: 1)
+
+IL_00c7:
+	{
+		RuntimeObject* L_44 = V_3;
+		return L_44;
+	}
+}
+IL2CPP_EXTERN_C  RuntimeObject* ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7_AdjustorThunk (RuntimeObject* __this, RuntimeObject* ___provider0, const RuntimeMethod* method)
+{
+	ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<ConstructorMatcher_t8236FC4C26C9A8BB72943922B8C2221ADA70C805*>(__this + _offset);
+	RuntimeObject* _returnValue;
+	_returnValue = ConstructorMatcher_CreateInstance_mFADAEF32F80DF1138DA4AD9DF7028DE32F611FD7(_thisAdjusted, ___provider0, method);
+	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m8DB6E0C52C5DEC86A9FDADD0764D0208EDA6DEC0 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD* L_0 = (U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD*)il2cpp_codegen_object_new(U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__ctor_m38CCF6ED3762192B5E07E502730C61ED9DC10A97(L_0, NULL);
+		((U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_il2cpp_TypeInfo_var))->___U3CU3E9_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD_il2cpp_TypeInfo_var))->___U3CU3E9_0), (void*)L_0);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilities/<>c::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m38CCF6ED3762192B5E07E502730C61ED9DC10A97 (U3CU3Ec_t5FFEA295415C9073B9615E099176BD0852D509AD* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.ActivatorUtilitiesConstructorAttribute::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ActivatorUtilitiesConstructorAttribute__ctor_m3ECD14D55B1D665B2689F5618332CAE1D3C4F6FF (ActivatorUtilitiesConstructorAttribute_tAB4F4A6109686B5120AC2DBE5232149C72FBE1EC* __this, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_Multicast(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	RuntimeObject* retVal = NULL;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* currentDelegate = reinterpret_cast<ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950*>(delegatesToInvoke[i]);
+		typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___serviceProvider0, ___arguments1, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+	return retVal;
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenInst(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	NullCheck(___serviceProvider0);
+	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr_0)(___serviceProvider0, ___arguments1, method);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenStatic(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr_0)(___serviceProvider0, ___arguments1, method);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenStaticInvoker(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(__this->___method_ptr_0, method, NULL, ___serviceProvider0, ___arguments1);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_ClosedStaticInvoker(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker3< RuntimeObject*, RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___serviceProvider0, ___arguments1);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenVirtual(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	NullCheck(___serviceProvider0);
+	return VirtualFuncInvoker1< RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(il2cpp_codegen_method_get_slot(method), ___serviceProvider0, ___arguments1);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenInterface(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	NullCheck(___serviceProvider0);
+	return InterfaceFuncInvoker1< RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(il2cpp_codegen_method_get_slot(method), il2cpp_codegen_method_get_declaring_type(method), ___serviceProvider0, ___arguments1);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenGenericVirtual(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	NullCheck(___serviceProvider0);
+	return GenericVirtualFuncInvoker1< RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(method, ___serviceProvider0, ___arguments1);
+}
+RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenGenericInterface(ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method)
+{
+	NullCheck(___serviceProvider0);
+	return GenericInterfaceFuncInvoker1< RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(method, ___serviceProvider0, ___arguments1);
+}
+// System.Void Microsoft.Extensions.DependencyInjection.ObjectFactory::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectFactory__ctor_m685CCDD654CEBD03B1691F70E0E3E0BAE99894F0 (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 2;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+		{
+			if (__this->___method_is_virtual_12)
+			{
+				if (il2cpp_codegen_method_is_generic_instance_method((RuntimeMethod*)___method1))
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___method1))
+						__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenGenericInterface;
+					else
+						__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenGenericVirtual;
+				else
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___method1))
+						__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenInterface;
+					else
+						__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenVirtual;
+			}
+			else
+			{
+				__this->___invoke_impl_1 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_OpenInst;
+			}
+		}
+		else
+		{
+			if (___object0 == NULL)
+				il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+			__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+			__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+		}
+	}
+	__this->___extra_arg_5 = (intptr_t)&ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6_Multicast;
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ObjectFactory::Invoke(System.IServiceProvider,System.Object[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectFactory_Invoke_m26C6924D8B14C920E78B5C2D32101902FA35EEE6 (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, const RuntimeMethod* method) 
+{
+	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___serviceProvider0, ___arguments1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult Microsoft.Extensions.DependencyInjection.ObjectFactory::BeginInvoke(System.IServiceProvider,System.Object[],System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectFactory_BeginInvoke_mBFFF93998DD2C0546BBC521D40CB8A5F3537212B (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___serviceProvider0, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___arguments1, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback2, RuntimeObject* ___object3, const RuntimeMethod* method) 
+{
+	void *__d_args[3] = {0};
+	__d_args[0] = ___serviceProvider0;
+	__d_args[1] = ___arguments1;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback2, (RuntimeObject*)___object3);
+}
+// System.Object Microsoft.Extensions.DependencyInjection.ObjectFactory::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectFactory_EndInvoke_m2443789B9C07A4CDA96F7DB7AAA86526CB436587 (ObjectFactory_t2B8735B613B53003C57A4EC483CDA1898C039950* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+	return (RuntimeObject*)__result;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionDescriptorExtensions_Add_m279D5503F65C8521736787A83C80CB3F4B823578 (RuntimeObject* ___collection0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Add_m279D5503F65C8521736787A83C80CB3F4B823578_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = ___descriptor1;
+		if (L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_3 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Add_m279D5503F65C8521736787A83C80CB3F4B823578_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		RuntimeObject* L_4 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_5 = ___descriptor1;
+		NullCheck(L_4);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_4, L_5);
+		RuntimeObject* L_6 = ___collection0;
+		return L_6;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionDescriptorExtensions_Add_mBE7B261BE06FA03AF6AC01ECCF0968A6C4C272BA (RuntimeObject* ___collection0, RuntimeObject* ___descriptors1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Add_mBE7B261BE06FA03AF6AC01ECCF0968A6C4C272BA_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		RuntimeObject* L_2 = ___descriptors1;
+		if (L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_3 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4484D73E5D13E98119AFD8332CD8BC78758E004F)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Add_mBE7B261BE06FA03AF6AC01ECCF0968A6C4C272BA_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		RuntimeObject* L_4 = ___descriptors1;
+		NullCheck(L_4);
+		RuntimeObject* L_5;
+		L_5 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::GetEnumerator() */, IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var, L_4);
+		V_0 = L_5;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003d:
+			{// begin finally (depth: 1)
+				{
+					RuntimeObject* L_6 = V_0;
+					if (!L_6)
+					{
+						goto IL_0046;
+					}
+				}
+				{
+					RuntimeObject* L_7 = V_0;
+					NullCheck(L_7);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_7);
+				}
+
+IL_0046:
+				{
+					return;
+				}
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0033_1;
+			}
+
+IL_0025_1:
+			{
+				RuntimeObject* L_8 = V_0;
+				NullCheck(L_8);
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+				L_9 = InterfaceFuncInvoker0< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::get_Current() */, IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var, L_8);
+				V_1 = L_9;
+				RuntimeObject* L_10 = ___collection0;
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_1;
+				NullCheck(L_10);
+				InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_10, L_11);
+			}
+
+IL_0033_1:
+			{
+				RuntimeObject* L_12 = V_0;
+				NullCheck(L_12);
+				bool L_13;
+				L_13 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_12);
+				if (L_13)
+				{
+					goto IL_0025_1;
+				}
+			}
+			{
+				goto IL_0047;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0047:
+	{
+		RuntimeObject* L_14 = ___collection0;
+		return L_14;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0 (RuntimeObject* ___collection0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass2_0_U3CTryAddU3Eb__0_mDD824CD224EEB1083D8A302A45FB3C8BE4AC9288_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* V_0 = NULL;
+	{
+		U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* L_0 = (U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass2_0__ctor_m7FA9678204A4590264D789BC5257E6536213F73B(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* L_1 = V_0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = ___descriptor1;
+		NullCheck(L_1);
+		L_1->___descriptor_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___descriptor_0), (void*)L_2);
+		RuntimeObject* L_3 = ___collection0;
+		if (L_3)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0_RuntimeMethod_var)));
+	}
+
+IL_001b:
+	{
+		U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* L_5 = V_0;
+		NullCheck(L_5);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_6 = L_5->___descriptor_0;
+		if (L_6)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0_RuntimeMethod_var)));
+	}
+
+IL_002e:
+	{
+		RuntimeObject* L_8 = ___collection0;
+		U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* L_9 = V_0;
+		Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* L_10 = (Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*)il2cpp_codegen_object_new(Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		NullCheck(L_10);
+		Func_2__ctor_m873D6DFC4673927D41BCFE68D2AE13A12BE1CA56(L_10, L_9, (intptr_t)((void*)U3CU3Ec__DisplayClass2_0_U3CTryAddU3Eb__0_mDD824CD224EEB1083D8A302A45FB3C8BE4AC9288_RuntimeMethod_var), NULL);
+		bool L_11;
+		L_11 = Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5(L_8, L_10, Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5_RuntimeMethod_var);
+		if (L_11)
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		RuntimeObject* L_12 = ___collection0;
+		U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* L_13 = V_0;
+		NullCheck(L_13);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_14 = L_13->___descriptor_0;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_12, L_14);
+	}
+
+IL_004e:
+	{
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAdd_mAAB37A58E6C83CC8738623C0BC57EFA8952FF868 (RuntimeObject* ___collection0, RuntimeObject* ___descriptors1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAdd_mAAB37A58E6C83CC8738623C0BC57EFA8952FF868_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		RuntimeObject* L_2 = ___descriptors1;
+		if (L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_3 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4484D73E5D13E98119AFD8332CD8BC78758E004F)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAdd_mAAB37A58E6C83CC8738623C0BC57EFA8952FF868_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		RuntimeObject* L_4 = ___descriptors1;
+		NullCheck(L_4);
+		RuntimeObject* L_5;
+		L_5 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::GetEnumerator() */, IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var, L_4);
+		V_0 = L_5;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003d:
+			{// begin finally (depth: 1)
+				{
+					RuntimeObject* L_6 = V_0;
+					if (!L_6)
+					{
+						goto IL_0046;
+					}
+				}
+				{
+					RuntimeObject* L_7 = V_0;
+					NullCheck(L_7);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_7);
+				}
+
+IL_0046:
+				{
+					return;
+				}
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0033_1;
+			}
+
+IL_0025_1:
+			{
+				RuntimeObject* L_8 = V_0;
+				NullCheck(L_8);
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+				L_9 = InterfaceFuncInvoker0< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::get_Current() */, IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var, L_8);
+				V_1 = L_9;
+				RuntimeObject* L_10 = ___collection0;
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_1;
+				ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_10, L_11, NULL);
+			}
+
+IL_0033_1:
+			{
+				RuntimeObject* L_12 = V_0;
+				NullCheck(L_12);
+				bool L_13;
+				L_13 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_12);
+				if (L_13)
+				{
+					goto IL_0025_1;
+				}
+			}
+			{
+				goto IL_0047;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0047:
+	{
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddTransient_m6BE2F142E25DF2BC91371BA1539B04D51B9EB2AC (RuntimeObject* ___collection0, Type_t* ___service1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_m6BE2F142E25DF2BC91371BA1539B04D51B9EB2AC_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_m6BE2F142E25DF2BC91371BA1539B04D51B9EB2AC_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___service1;
+		Type_t* L_6 = ___service1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0(L_5, L_6, NULL);
+		V_0 = L_7;
+		RuntimeObject* L_8 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_8, L_9, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddTransient_m62B271EAFE0DF4760EBAA9BB15434F423E840E7D (RuntimeObject* ___collection0, Type_t* ___service1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_m62B271EAFE0DF4760EBAA9BB15434F423E840E7D_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_m62B271EAFE0DF4760EBAA9BB15434F423E840E7D_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_m62B271EAFE0DF4760EBAA9BB15434F423E840E7D_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		Type_t* L_8 = ___service1;
+		Type_t* L_9 = ___implementationType2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_10;
+		L_10 = ServiceDescriptor_Transient_mAB508A8A461AE6F4205F28F6C1B0C04B5BEFC0B0(L_8, L_9, NULL);
+		V_0 = L_10;
+		RuntimeObject* L_11 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_12 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_11, L_12, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddTransient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddTransient_mBF5D05AF30D20E755A2587DF1451D9DBA9EB08B3 (RuntimeObject* ___collection0, Type_t* ___service1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_mBF5D05AF30D20E755A2587DF1451D9DBA9EB08B3_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_mBF5D05AF30D20E755A2587DF1451D9DBA9EB08B3_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddTransient_mBF5D05AF30D20E755A2587DF1451D9DBA9EB08B3_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		Type_t* L_7 = ___service1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_8 = ___implementationFactory2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+		L_9 = ServiceDescriptor_Transient_mFD040E57A504461CC31C165C24AF47C2271514B9(L_7, L_8, NULL);
+		V_0 = L_9;
+		RuntimeObject* L_10 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_10, L_11, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddScoped_m89A9C629A85983844A9CF3B559D429524741D5BA (RuntimeObject* ___collection0, Type_t* ___service1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_m89A9C629A85983844A9CF3B559D429524741D5BA_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_m89A9C629A85983844A9CF3B559D429524741D5BA_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___service1;
+		Type_t* L_6 = ___service1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Scoped_m6B653C5EB4E0822F7F316BAD8DBEA8C11F25EA7D(L_5, L_6, NULL);
+		V_0 = L_7;
+		RuntimeObject* L_8 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_8, L_9, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddScoped_mD9A275CF906601F8DF385A5D0125201FDD4E3A82 (RuntimeObject* ___collection0, Type_t* ___service1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_mD9A275CF906601F8DF385A5D0125201FDD4E3A82_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_mD9A275CF906601F8DF385A5D0125201FDD4E3A82_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_mD9A275CF906601F8DF385A5D0125201FDD4E3A82_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		Type_t* L_8 = ___service1;
+		Type_t* L_9 = ___implementationType2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_10;
+		L_10 = ServiceDescriptor_Scoped_m6B653C5EB4E0822F7F316BAD8DBEA8C11F25EA7D(L_8, L_9, NULL);
+		V_0 = L_10;
+		RuntimeObject* L_11 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_12 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_11, L_12, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddScoped(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddScoped_m82FE8207DC7EAA3F284420190AA45CF90C8F782D (RuntimeObject* ___collection0, Type_t* ___service1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_m82FE8207DC7EAA3F284420190AA45CF90C8F782D_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_m82FE8207DC7EAA3F284420190AA45CF90C8F782D_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddScoped_m82FE8207DC7EAA3F284420190AA45CF90C8F782D_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		Type_t* L_7 = ___service1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_8 = ___implementationFactory2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+		L_9 = ServiceDescriptor_Scoped_m8DA17B83AE74B6EB081E058065761D849085BB24(L_7, L_8, NULL);
+		V_0 = L_9;
+		RuntimeObject* L_10 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_10, L_11, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddSingleton_m1DB122D220CC0DE37AF5856B32132BF3C60BE28A (RuntimeObject* ___collection0, Type_t* ___service1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_m1DB122D220CC0DE37AF5856B32132BF3C60BE28A_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_m1DB122D220CC0DE37AF5856B32132BF3C60BE28A_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___service1;
+		Type_t* L_6 = ___service1;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA(L_5, L_6, NULL);
+		V_0 = L_7;
+		RuntimeObject* L_8 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_8, L_9, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddSingleton_mAEBDF5F84B9D491197EDD5C1054004BBB65EA19D (RuntimeObject* ___collection0, Type_t* ___service1, Type_t* ___implementationType2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mAEBDF5F84B9D491197EDD5C1054004BBB65EA19D_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mAEBDF5F84B9D491197EDD5C1054004BBB65EA19D_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Type_t* L_5 = ___implementationType2;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		if (!L_6)
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral72021B304EBE762D77D1E2DFE9B2180DE3BBBD94)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mAEBDF5F84B9D491197EDD5C1054004BBB65EA19D_RuntimeMethod_var)));
+	}
+
+IL_0036:
+	{
+		Type_t* L_8 = ___service1;
+		Type_t* L_9 = ___implementationType2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_10;
+		L_10 = ServiceDescriptor_Singleton_m29C82CF0ED1A40C30F2043B924BFB85A447549DA(L_8, L_9, NULL);
+		V_0 = L_10;
+		RuntimeObject* L_11 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_12 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_11, L_12, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddSingleton(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddSingleton_mC7351E0338364F4F12799211123E9247ECF71CC9 (RuntimeObject* ___collection0, Type_t* ___service1, Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ___implementationFactory2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_0 = NULL;
+	{
+		RuntimeObject* L_0 = ___collection0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mC7351E0338364F4F12799211123E9247ECF71CC9_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		Type_t* L_2 = ___service1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_2, (Type_t*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDD20A4ABE85826C9E1FB7E7CF231364434408BFA)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mC7351E0338364F4F12799211123E9247ECF71CC9_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_5 = ___implementationFactory2;
+		if (L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_6 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_6);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8F111DA32136DD2B9C6A39ACCD9E489C9A40917E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddSingleton_mC7351E0338364F4F12799211123E9247ECF71CC9_RuntimeMethod_var)));
+	}
+
+IL_0030:
+	{
+		Type_t* L_7 = ___service1;
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_8 = ___implementationFactory2;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+		L_9 = ServiceDescriptor_Singleton_m3C0DBA99D5400F93C2C918594626F11FE375B567(L_7, L_8, NULL);
+		V_0 = L_9;
+		RuntimeObject* L_10 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_0;
+		ServiceCollectionDescriptorExtensions_TryAdd_m450939AAABAE677BB8FC23BCC85E5C8E11F675D0(L_10, L_11, NULL);
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738 (RuntimeObject* ___services0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RuntimeObject_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass23_0_U3CTryAddEnumerableU3Eb__0_m1BADBCCA1A5F9C2C9276BCEBDBB4EABD759A58A8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* V_0 = NULL;
+	{
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_0 = (U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass23_0__ctor_m85313197463AD99A4E8F929F889717AE6E7A6E86(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_1 = V_0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = ___descriptor1;
+		NullCheck(L_1);
+		L_1->___descriptor_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___descriptor_0), (void*)L_2);
+		RuntimeObject* L_3 = ___services0;
+		if (L_3)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738_RuntimeMethod_var)));
+	}
+
+IL_001b:
+	{
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_5 = V_0;
+		NullCheck(L_5);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_6 = L_5->___descriptor_0;
+		if (L_6)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738_RuntimeMethod_var)));
+	}
+
+IL_002e:
+	{
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_8 = V_0;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_9 = V_0;
+		NullCheck(L_9);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_10 = L_9->___descriptor_0;
+		NullCheck(L_10);
+		Type_t* L_11;
+		L_11 = ServiceDescriptor_GetImplementationType_mCBC9467640135A95ABD22E6C373D9025F88F1466(L_10, NULL);
+		NullCheck(L_8);
+		L_8->___implementationType_1 = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&L_8->___implementationType_1), (void*)L_11);
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_12 = V_0;
+		NullCheck(L_12);
+		Type_t* L_13 = L_12->___implementationType_1;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_14 = { reinterpret_cast<intptr_t> (RuntimeObject_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_15;
+		L_15 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_14, NULL);
+		bool L_16;
+		L_16 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_13, L_15, NULL);
+		if (L_16)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_17 = V_0;
+		NullCheck(L_17);
+		Type_t* L_18 = L_17->___implementationType_1;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_19 = V_0;
+		NullCheck(L_19);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_20 = L_19->___descriptor_0;
+		NullCheck(L_20);
+		Type_t* L_21;
+		L_21 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_20, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_18, L_21, NULL);
+		if (!L_22)
+		{
+			goto IL_0094;
+		}
+	}
+
+IL_006e:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var)));
+		String_t* L_23;
+		L_23 = SR_get_TryAddIndistinguishableTypeToEnumerable_m7C7693DB9C93D19D0077A102F556BBBE66780BEE(NULL);
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_24 = V_0;
+		NullCheck(L_24);
+		Type_t* L_25 = L_24->___implementationType_1;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_26 = V_0;
+		NullCheck(L_26);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_27 = L_26->___descriptor_0;
+		NullCheck(L_27);
+		Type_t* L_28;
+		L_28 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_27, NULL);
+		String_t* L_29;
+		L_29 = SR_Format_m910EF993FA7C46FB1F623B0BC59B44E493268EC9(L_23, L_25, L_28, NULL);
+		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_30 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
+		NullCheck(L_30);
+		ArgumentException__ctor_m8F9D40CE19D19B698A70F9A258640EB52DB39B62(L_30, L_29, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_30, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738_RuntimeMethod_var)));
+	}
+
+IL_0094:
+	{
+		RuntimeObject* L_31 = ___services0;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_32 = V_0;
+		Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* L_33 = (Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*)il2cpp_codegen_object_new(Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		NullCheck(L_33);
+		Func_2__ctor_m873D6DFC4673927D41BCFE68D2AE13A12BE1CA56(L_33, L_32, (intptr_t)((void*)U3CU3Ec__DisplayClass23_0_U3CTryAddEnumerableU3Eb__0_m1BADBCCA1A5F9C2C9276BCEBDBB4EABD759A58A8_RuntimeMethod_var), NULL);
+		bool L_34;
+		L_34 = Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5(L_31, L_33, Enumerable_Any_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m9542EE0712CF91A781EF93B2D809132EBF8C66C5_RuntimeMethod_var);
+		if (L_34)
+		{
+			goto IL_00b4;
+		}
+	}
+	{
+		RuntimeObject* L_35 = ___services0;
+		U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* L_36 = V_0;
+		NullCheck(L_36);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_37 = L_36->___descriptor_0;
+		NullCheck(L_35);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_35, L_37);
+	}
+
+IL_00b4:
+	{
+		return;
+	}
+}
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::TryAddEnumerable(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServiceCollectionDescriptorExtensions_TryAddEnumerable_mF02DFBAD3F3500C7C1EC2334B4DC656862D7D240 (RuntimeObject* ___services0, RuntimeObject* ___descriptors1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___services0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral97BA52F16D6634F698F0059CBBC07D3302FFD843)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddEnumerable_mF02DFBAD3F3500C7C1EC2334B4DC656862D7D240_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		RuntimeObject* L_2 = ___descriptors1;
+		if (L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_3 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4484D73E5D13E98119AFD8332CD8BC78758E004F)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_TryAddEnumerable_mF02DFBAD3F3500C7C1EC2334B4DC656862D7D240_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		RuntimeObject* L_4 = ___descriptors1;
+		NullCheck(L_4);
+		RuntimeObject* L_5;
+		L_5 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<T> System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::GetEnumerator() */, IEnumerable_1_t9CEFFE813C6314092997541038554C579EA0D660_il2cpp_TypeInfo_var, L_4);
+		V_0 = L_5;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003d:
+			{// begin finally (depth: 1)
+				{
+					RuntimeObject* L_6 = V_0;
+					if (!L_6)
+					{
+						goto IL_0046;
+					}
+				}
+				{
+					RuntimeObject* L_7 = V_0;
+					NullCheck(L_7);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_7);
+				}
+
+IL_0046:
+				{
+					return;
+				}
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0033_1;
+			}
+
+IL_0025_1:
+			{
+				RuntimeObject* L_8 = V_0;
+				NullCheck(L_8);
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_9;
+				L_9 = InterfaceFuncInvoker0< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(0 /* T System.Collections.Generic.IEnumerator`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::get_Current() */, IEnumerator_1_t0424E3E88FE271725BB2D35CC52E921AD1487F0D_il2cpp_TypeInfo_var, L_8);
+				V_1 = L_9;
+				RuntimeObject* L_10 = ___services0;
+				ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11 = V_1;
+				ServiceCollectionDescriptorExtensions_TryAddEnumerable_m3CE52A0EBD77DF51794F27C7BFD48BD8ED862738(L_10, L_11, NULL);
+			}
+
+IL_0033_1:
+			{
+				RuntimeObject* L_12 = V_0;
+				NullCheck(L_12);
+				bool L_13;
+				L_13 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_12);
+				if (L_13)
+				{
+					goto IL_0025_1;
+				}
+			}
+			{
+				goto IL_0047;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0047:
+	{
+		return;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::Replace(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionDescriptorExtensions_Replace_m97430AC9AEBA9CF4DE45796007B4122CD538BDDF (RuntimeObject* ___collection0, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___descriptor1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_FirstOrDefault_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m6ED27BC30651E1F8AA9D6517B3CFC05DE4F70046_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass25_0_U3CReplaceU3Eb__0_mDD99D331059280A05711628234FECEE8D5E10262_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* V_0 = NULL;
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_1 = NULL;
+	{
+		U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* L_0 = (U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CU3Ec__DisplayClass25_0__ctor_m6965445FF0A332DB8B0C9EBD53FD766E9D8C0FA2(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* L_1 = V_0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = ___descriptor1;
+		NullCheck(L_1);
+		L_1->___descriptor_0 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___descriptor_0), (void*)L_2);
+		RuntimeObject* L_3 = ___collection0;
+		if (L_3)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_4 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_4);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral469F05BE9BB4C7903C353D0EB9F6384C84A48B25)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Replace_m97430AC9AEBA9CF4DE45796007B4122CD538BDDF_RuntimeMethod_var)));
+	}
+
+IL_001b:
+	{
+		U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* L_5 = V_0;
+		NullCheck(L_5);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_6 = L_5->___descriptor_0;
+		if (L_6)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_7 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_7);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7A4A6E2A7090298F814A9D44C89F8634249BEF07)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_Replace_m97430AC9AEBA9CF4DE45796007B4122CD538BDDF_RuntimeMethod_var)));
+	}
+
+IL_002e:
+	{
+		RuntimeObject* L_8 = ___collection0;
+		U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* L_9 = V_0;
+		Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E* L_10 = (Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E*)il2cpp_codegen_object_new(Func_2_t76597A66A27F84D955F60C58691D0CB885B0045E_il2cpp_TypeInfo_var);
+		NullCheck(L_10);
+		Func_2__ctor_m873D6DFC4673927D41BCFE68D2AE13A12BE1CA56(L_10, L_9, (intptr_t)((void*)U3CU3Ec__DisplayClass25_0_U3CReplaceU3Eb__0_mDD99D331059280A05711628234FECEE8D5E10262_RuntimeMethod_var), NULL);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_11;
+		L_11 = Enumerable_FirstOrDefault_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m6ED27BC30651E1F8AA9D6517B3CFC05DE4F70046(L_8, L_10, Enumerable_FirstOrDefault_TisServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE_m6ED27BC30651E1F8AA9D6517B3CFC05DE4F70046_RuntimeMethod_var);
+		V_1 = L_11;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_12 = V_1;
+		if (!L_12)
+		{
+			goto IL_004c;
+		}
+	}
+	{
+		RuntimeObject* L_13 = ___collection0;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_14 = V_1;
+		NullCheck(L_13);
+		bool L_15;
+		L_15 = InterfaceFuncInvoker1< bool, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(6 /* System.Boolean System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Remove(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_13, L_14);
+	}
+
+IL_004c:
+	{
+		RuntimeObject* L_16 = ___collection0;
+		U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* L_17 = V_0;
+		NullCheck(L_17);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_18 = L_17->___descriptor_0;
+		NullCheck(L_16);
+		InterfaceActionInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* >::Invoke(2 /* System.Void System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::Add(T) */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_16, L_18);
+		RuntimeObject* L_19 = ___collection0;
+		return L_19;
+	}
+}
+// Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions::RemoveAll(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ServiceCollectionDescriptorExtensions_RemoveAll_mEFA5BDFB6C066BB266BA7BB23CCE560A82257812 (RuntimeObject* ___collection0, Type_t* ___serviceType1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t25A4F8273D1B057CEDAAFF8FF7EDCCF8C35AB65E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* V_1 = NULL;
+	{
+		Type_t* L_0 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_0, (Type_t*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_2 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7CF07A82A6183049D3E36912C678E6C35C021BE3)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ServiceCollectionDescriptorExtensions_RemoveAll_mEFA5BDFB6C066BB266BA7BB23CCE560A82257812_RuntimeMethod_var)));
+	}
+
+IL_0014:
+	{
+		RuntimeObject* L_3 = ___collection0;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::get_Count() */, ICollection_1_t83861895F34DB56CBA180B4DEAD9BD3CFEB04778_il2cpp_TypeInfo_var, L_3);
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_4, 1));
+		goto IL_0040;
+	}
+
+IL_001f:
+	{
+		RuntimeObject* L_5 = ___collection0;
+		int32_t L_6 = V_0;
+		NullCheck(L_5);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_7;
+		L_7 = InterfaceFuncInvoker1< ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::get_Item(System.Int32) */, IList_1_t25A4F8273D1B057CEDAAFF8FF7EDCCF8C35AB65E_il2cpp_TypeInfo_var, L_5, L_6);
+		V_1 = L_7;
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_8 = V_1;
+		NullCheck(L_8);
+		Type_t* L_9;
+		L_9 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_8, NULL);
+		Type_t* L_10 = ___serviceType1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_9, L_10, NULL);
+		if (!L_11)
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		RuntimeObject* L_12 = ___collection0;
+		int32_t L_13 = V_0;
+		NullCheck(L_12);
+		InterfaceActionInvoker1< int32_t >::Invoke(4 /* System.Void System.Collections.Generic.IList`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>::RemoveAt(System.Int32) */, IList_1_t25A4F8273D1B057CEDAAFF8FF7EDCCF8C35AB65E_il2cpp_TypeInfo_var, L_12, L_13);
+	}
+
+IL_003c:
+	{
+		int32_t L_14 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_14, 1));
+	}
+
+IL_0040:
+	{
+		int32_t L_15 = V_0;
+		if ((((int32_t)L_15) >= ((int32_t)0)))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		RuntimeObject* L_16 = ___collection0;
+		return L_16;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_0__ctor_m7FA9678204A4590264D789BC5257E6536213F73B (U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass2_0::<TryAdd>b__0(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass2_0_U3CTryAddU3Eb__0_mDD824CD224EEB1083D8A302A45FB3C8BE4AC9288 (U3CU3Ec__DisplayClass2_0_t47194E676CAD6095734406899AA7D999A8645A43* __this, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___d0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_0 = ___d0;
+		NullCheck(L_0);
+		Type_t* L_1;
+		L_1 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_0, NULL);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = __this->___descriptor_0;
+		NullCheck(L_2);
+		Type_t* L_3;
+		L_3 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_1, L_3, NULL);
+		return L_4;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass23_0__ctor_m85313197463AD99A4E8F929F889717AE6E7A6E86 (U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass23_0::<TryAddEnumerable>b__0(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass23_0_U3CTryAddEnumerableU3Eb__0_m1BADBCCA1A5F9C2C9276BCEBDBB4EABD759A58A8 (U3CU3Ec__DisplayClass23_0_t47762E80ADE15C9FC9082B2DCE72CA87A51D6249* __this, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___d0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_0 = ___d0;
+		NullCheck(L_0);
+		Type_t* L_1;
+		L_1 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_0, NULL);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = __this->___descriptor_0;
+		NullCheck(L_2);
+		Type_t* L_3;
+		L_3 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_1, L_3, NULL);
+		if (!L_4)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_5 = ___d0;
+		NullCheck(L_5);
+		Type_t* L_6;
+		L_6 = ServiceDescriptor_GetImplementationType_mCBC9467640135A95ABD22E6C373D9025F88F1466(L_5, NULL);
+		Type_t* L_7 = __this->___implementationType_1;
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_6, L_7, NULL);
+		return L_8;
+	}
+
+IL_002a:
+	{
+		return (bool)0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass25_0__ctor_m6965445FF0A332DB8B0C9EBD53FD766E9D8C0FA2 (U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// System.Boolean Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions/<>c__DisplayClass25_0::<Replace>b__0(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass25_0_U3CReplaceU3Eb__0_mDD99D331059280A05711628234FECEE8D5E10262 (U3CU3Ec__DisplayClass25_0_t516E1E66BB720D759B419AA64046666CB44E8C0B* __this, ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* ___s0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_0 = ___s0;
+		NullCheck(L_0);
+		Type_t* L_1;
+		L_1 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_0, NULL);
+		ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* L_2 = __this->___descriptor_0;
+		NullCheck(L_2);
+		Type_t* L_3;
+		L_3 = ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline(L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_1, L_3, NULL);
+		return L_4;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SR_UsingResourceKeys_m57412DB50BFFFB2F7D04C5A151FD31757BBFD4C4_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var);
+		bool L_0 = ((SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_StaticFields*)il2cpp_codegen_static_fields_for(SR_t80EFA8120943712E1DFED1AA1EE965E253401B43_il2cpp_TypeInfo_var))->___s_usingResourceKeys_0;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ServiceType_m58594D17CA943A5C935524123890EB2907FD7556_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = __this->___U3CServiceTypeU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ServiceDescriptor_get_Lifetime_mF5CC52F90D7A16272E4AC41ABF857586F5932C61_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3CLifetimeU3Ek__BackingField_0;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* ServiceDescriptor_get_ImplementationType_m839719EB654E7A83ACE7596D3805E411D25FEF72_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Type_t* L_0 = __this->___U3CImplementationTypeU3Ek__BackingField_2;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* ServiceDescriptor_get_ImplementationFactory_mFD0530062F7593DC0E608DEFB06E4CD16CBA0A6D_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		Func_2_t481D4444CB52AEE4267FB150F7FDE2214413FEB4* L_0 = __this->___U3CImplementationFactoryU3Ek__BackingField_4;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ServiceDescriptor_get_ImplementationInstance_m0BA8DD47A6538A8103B569309CE2CA21381F1037_inline (ServiceDescriptor_tB91195C463E85BED4D797D7E0A8E65C04D0E8EDE* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CImplementationInstanceU3Ek__BackingField_3;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) 
+{
+	{
+		Exception_t* L_0 = __this->____innerException_4;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
+{
+	{
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 0));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ((EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 0)))->___Value_0;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = (bool)__this->___hasValue_0;
+		return L_0;
+	}
+}

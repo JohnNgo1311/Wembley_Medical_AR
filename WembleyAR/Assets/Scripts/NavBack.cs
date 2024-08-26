@@ -9,16 +9,15 @@ public class NavBack : MonoBehaviour
     public string previousScene;
     void Start()
     {
-
+        GlobalVariable.recentScence = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("recentScene", GlobalVariable.recentScence);
     }
     private void Awake()
     {
-        GlobalVariable.recentScence = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString("recentScene", GlobalVariable.recentScence);
+
         if (GlobalVariable.recentScence != "LoginSence")
         {
             Screen.orientation = ScreenOrientation.LandscapeLeft;
-
         }
     }
 

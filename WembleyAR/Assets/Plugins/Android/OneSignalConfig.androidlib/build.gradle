@@ -5,8 +5,11 @@ android {
         main {
             manifest.srcFile 'AndroidManifest.xml'
         }
+   
     }
-
+ packagingOptions {
+        exclude 'META-INF/kotlinx_coroutines_core.version'
+    }
     def unityLib = project(':unityLibrary').extensions.getByName('android')
 
    defaultConfig {
