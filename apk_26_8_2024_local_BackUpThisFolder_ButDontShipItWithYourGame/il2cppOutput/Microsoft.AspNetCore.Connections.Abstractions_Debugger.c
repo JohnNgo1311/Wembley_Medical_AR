@@ -264,8 +264,8 @@ Il2CppSequencePoint g_sequencePointsMicrosoft_AspNetCore_Connections_Abstraction
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 65380, -1, 179, -1, -1 },
-{ 65388, -1, 53, -1, -1 },
+{ 65382, -1, 179, -1, -1 },
+{ 65390, -1, 53, -1, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

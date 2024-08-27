@@ -214,11 +214,11 @@ Il2CppSequencePoint g_sequencePointsMicrosoft_AspNetCore_SignalR_Common[1] = { {
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 66895, 15014, 339, 0, -1 },
-{ 66974, 15014, 70, 0, -1 },
-{ 66974, 15014, 163, 1, -1 },
-{ 66981, 15014, 70, 0, -1 },
-{ 66981, 15014, 163, 1, -1 },
+{ 66897, 15014, 339, 0, -1 },
+{ 66976, 15014, 70, 0, -1 },
+{ 66976, 15014, 163, 1, -1 },
+{ 66983, 15014, 70, 0, -1 },
+{ 66983, 15014, 163, 1, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

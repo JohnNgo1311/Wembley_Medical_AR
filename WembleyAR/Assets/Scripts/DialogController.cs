@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogController : MonoBehaviour
@@ -12,6 +11,7 @@ public class DialogController : MonoBehaviour
     public string typeDialog;
     public float timeDialog;
     private Image frameDialogImage;
+    [SerializeField] private bool isInitialize = false;
 
     void Awake()
     {
@@ -22,35 +22,36 @@ public class DialogController : MonoBehaviour
     {
         if (!GlobalVariable.loginSuccess)
         {
-            StartCoroutine(ShowDialogCoroutine(typeDialog));
+            if (isInitialize)
+            {
+                OnClickShowDialog();
+                GlobalVariable.loginSuccess = true;
+            }
+
         }
     }
 
-    private IEnumerator ShowDialogCoroutine(string type)
+    private IEnumerator ShowDialogRoutine()
     {
-        dialogModel.contentDialog.color = Color.white;
+        yield return new WaitForSeconds(timeDialog);
+        dialogModel.frameDialog.SetActive(false);
+        dialogCanvas.SetActive(false);
+    }
 
-        switch (type)
+    public void OnClickShowDialog()
+    {
+        frameDialogImage.color = typeDialog switch
         {
-            case "loading":
-                frameDialogImage.color = GlobalVariable.colors[1];
-                break;
-            case "success":
-                frameDialogImage.color = GlobalVariable.colors[0];
-                break;
-            case "failure":
-                frameDialogImage.color = GlobalVariable.colors[2];
-                break;
-        }
-
+            "loading" => (Color)GlobalVariable.colors[1],
+            "success" => (Color)GlobalVariable.colors[0],
+            "failure" => (Color)GlobalVariable.colors[2],
+            _ => (Color)GlobalVariable.colors[0],
+        };
+        dialogModel.contentDialog.color = Color.white;
         dialogModel.contentDialog.text = dialogText;
         dialogModel.frameDialog.SetActive(true);
         dialogCanvas.SetActive(true);
 
-        yield return new WaitForSeconds(timeDialog);
-        // Ẩn hộp thoại
-        dialogModel.frameDialog.SetActive(false);
-        dialogCanvas.SetActive(false);
-        GlobalVariable.loginSuccess = true;
+        StartCoroutine(ShowDialogRoutine());
     }
 }

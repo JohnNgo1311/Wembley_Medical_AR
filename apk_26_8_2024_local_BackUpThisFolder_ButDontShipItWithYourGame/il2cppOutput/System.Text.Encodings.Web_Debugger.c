@@ -412,7 +412,7 @@ Il2CppSequencePoint g_sequencePointsSystem_Text_Encodings_Web[1] = { { 0, 0, 0, 
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 63370, 18323, 30, 0, -1 },
+{ 63372, 18323, 30, 0, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

@@ -860,7 +860,7 @@ MonoBehaviour:
     frameDialog: {fileID: 427130831}
     contentDialog: {fileID: 359274027}
   dialogCanvas: {fileID: 1217364567}
-  timeDialog: 3
+  timeDialog: 2
 --- !u!1 &545438101
 GameObject:
   m_ObjectHideFlags: 0

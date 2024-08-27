@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading.Tasks;
 
 public class UILogin : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class UILogin : MonoBehaviour
     [SerializeField] private string targetSceneName;
     [SerializeField] private DialogModel dialogModel;
     [SerializeField] private GameObject dialogCanvas;
-    [SerializeField] private float timeDialog;
+    [SerializeField] private int timeDialog;
     private Image frameDialogImage;
 
     private readonly Dictionary<string, string> staff_Account = new Dictionary<string, string>
@@ -28,10 +28,11 @@ public class UILogin : MonoBehaviour
         Screen.orientation = ScreenOrientation.Portrait;
         GlobalVariable.recentScence = SceneManager.GetActiveScene().name;
         PlayerPrefs.SetString("recentScene", GlobalVariable.recentScence);
-        if (!string.IsNullOrWhiteSpace(GlobalVariable.accountModel.userName) && !string.IsNullOrWhiteSpace(GlobalVariable.accountModel.password) && staff_Account.ContainsKey(GlobalVariable.accountModel.userName) && GlobalVariable.loginSuccess)
+
+        if (GlobalVariable.loginSuccess && !string.IsNullOrWhiteSpace(GlobalVariable.accountModel.userName) && staff_Account.TryGetValue(GlobalVariable.accountModel.userName, out string password))
         {
             userNameField.text = GlobalVariable.accountModel.userName;
-            passwordField.text = GlobalVariable.accountModel.password;
+            passwordField.text = password;
         }
     }
 
@@ -46,49 +47,52 @@ public class UILogin : MonoBehaviour
         string userName = userNameField.text;
         string password = passwordField.text;
 
-        if (staff_Account.TryGetValue(userName, out string foundPassword) && foundPassword.ToLower() == password.ToLower())
+        if (staff_Account.TryGetValue(userName, out string foundPassword) && foundPassword == password)
         {
             GlobalVariable.accountModel.userName = userName;
             GlobalVariable.accountModel.password = password;
-            StartCoroutine(ShowDialogCoroutine("loading"));
+            ShowDialog("loading");
         }
         else
         {
-            StartCoroutine(ShowDialogCoroutine("failure"));
+            ShowDialog("failure");
         }
     }
 
-    private IEnumerator ShowDialogCoroutine(string type)
+    private async void ShowDialog(string type)
     {
-
-        dialogModel.contentDialog.color = Color.white; // Đỏ
-
         switch (type)
         {
             case "loading":
-                frameDialogImage.color = GlobalVariable.colors[1]; //
+                frameDialogImage.color = GlobalVariable.colors[1];
                 dialogModel.contentDialog.text = "Đang đăng nhập...";
                 break;
             case "success":
-                frameDialogImage.color = GlobalVariable.colors[0]; // Xanh lá
+                frameDialogImage.color = GlobalVariable.colors[0];
                 break;
             case "failure":
-                frameDialogImage.color = GlobalVariable.colors[2]; // Đỏ);
-                dialogModel.contentDialog.text = "Tài khoản không chính xác, hãy thử lại lại!";   // Đỏ
+                frameDialogImage.color = GlobalVariable.colors[2];
+                dialogModel.contentDialog.text = "Tài khoản không chính xác, hãy thử lại!";
                 break;
         }
 
+        dialogModel.contentDialog.color = Color.white;
         dialogModel.frameDialog.SetActive(true);
         dialogCanvas.SetActive(true);
-        yield return new WaitForSeconds(timeDialog);
-        dialogModel.frameDialog.SetActive(false);
-        dialogCanvas.SetActive(false);
 
         if (type == "loading")
         {
-            SceneManager.LoadScene(targetSceneName);
+            GlobalVariable.loginSuccess = true;
+            await WaitingTime(timeDialog);
+            ShowDialog("success"); // Hiển thị dialog thành công sau khi chờ
         }
-        GlobalVariable.loginSuccess = false;
+    }
 
+    private async Task WaitingTime(int time)
+    {
+        await Task.Delay(time);
+        dialogModel.frameDialog.SetActive(false);
+        dialogCanvas.SetActive(false);
+        SceneManager.LoadScene(targetSceneName);
     }
 }

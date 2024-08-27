@@ -519,10 +519,10 @@ Il2CppSequencePoint g_sequencePointsSystem_Diagnostics_DiagnosticSource[1] = { {
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 60987, 18323, 30, 0, -1 },
-{ 61178, 18900, 62, 0, -1 },
-{ 61190, 18900, 2, 0, -1 },
-{ 61196, 18900, 105, 0, -1 },
+{ 60989, 18323, 30, 0, -1 },
+{ 61180, 18900, 62, 0, -1 },
+{ 61192, 18900, 2, 0, -1 },
+{ 61198, 18900, 105, 0, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

@@ -9,6 +9,9 @@ public class OpenCanvas : MonoBehaviour
     public string tagName;
     bool isShowCanvas = false;
 
+    [SerializeField] private bool isOpen_MC_Error_CN_Cavas = false;
+    [SerializeField] private GameObject buttonCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +32,21 @@ public class OpenCanvas : MonoBehaviour
                 {
                     onCloseCanvas();
                     isShowCanvas = false;
+                    if (isOpen_MC_Error_CN_Cavas)
+                    {
+                        buttonCanvas.SetActive(true);
+                    }
                 }
                 else
                 {
                     onOpenCanvas();
                     isShowCanvas = true;
+                    if (isOpen_MC_Error_CN_Cavas)
+                    {
+
+                        buttonCanvas.SetActive(false);
+
+                    }
                 }
 
             }
