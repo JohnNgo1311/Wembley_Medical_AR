@@ -38726,11 +38726,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCaretBlinkU3Ed__276_MoveNext_mDD251CD
 	bool V_3 = false;
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CCaretBlinkU3Ed__276_MoveNext_mDD251CD28C8D1BDCAA212FB35443F07ECABB6E87_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19840));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19841));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19842));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19843));
 	int32_t G_B18_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19842));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19844));
 		int32_t L_0 = __this->___U3CU3E1__state_0;
 		V_0 = L_0;
 		int32_t L_1 = V_0;
@@ -38777,14 +38777,14 @@ IL_0024:
 IL_0026:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19843));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19845));
 		// m_CaretVisible = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19844));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19846));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_2 = __this->___U3CU3E4__this_2;
 		NullCheck(L_2);
 		L_2->___m_CaretVisible_80 = (bool)1;
 		// yield return null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19845));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19847));
 		__this->___U3CU3E2__current_1 = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
 		__this->___U3CU3E1__state_0 = 1;
@@ -38793,27 +38793,27 @@ IL_0026:
 
 IL_004a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19846));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19848));
 		__this->___U3CU3E1__state_0 = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19847));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19849));
 		goto IL_00fd;
 	}
 
 IL_0056:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19848));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19850));
 		// float blinkPeriod = 1f / m_CaretBlinkRate;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19849));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19851));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___U3CU3E4__this_2;
 		NullCheck(L_3);
 		float L_4 = L_3->___m_CaretBlinkRate_61;
 		__this->___U3CblinkPeriodU3E5__1_3 = ((float)((1.0f)/L_4));
 		// bool blinkState = (Time.unscaledTime - m_BlinkStartTime) % blinkPeriod < blinkPeriod / 2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19850));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19851));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19852));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19853));
 		float L_5;
 		L_5 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19851));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19853));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_6 = __this->___U3CU3E4__this_2;
 		NullCheck(L_6);
 		float L_7 = L_6->___m_BlinkStartTime_82;
@@ -38821,13 +38821,13 @@ IL_0056:
 		float L_9 = __this->___U3CblinkPeriodU3E5__1_3;
 		__this->___U3CblinkStateU3E5__2_4 = (bool)((((float)(fmodf(((float)il2cpp_codegen_subtract(L_5, L_7)), L_8))) < ((float)((float)(L_9/(2.0f)))))? 1 : 0);
 		// if (m_CaretVisible != blinkState)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19852));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19854));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_10 = __this->___U3CU3E4__this_2;
 		NullCheck(L_10);
 		bool L_11 = L_10->___m_CaretVisible_80;
 		bool L_12 = __this->___U3CblinkStateU3E5__2_4;
 		V_1 = (bool)((((int32_t)((((int32_t)L_11) == ((int32_t)L_12))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19853));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19855));
 		bool L_13 = V_1;
 		if (!L_13)
 		{
@@ -38835,23 +38835,23 @@ IL_0056:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19854));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19856));
 		// m_CaretVisible = blinkState;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19855));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19857));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_14 = __this->___U3CU3E4__this_2;
 		bool L_15 = __this->___U3CblinkStateU3E5__2_4;
 		NullCheck(L_14);
 		L_14->___m_CaretVisible_80 = L_15;
 		// if (!hasSelection)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19856));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19858));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_16 = __this->___U3CU3E4__this_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19857));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19859));
 		NullCheck(L_16);
 		bool L_17;
 		L_17 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(L_16, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19857));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19859));
 		V_2 = (bool)((((int32_t)L_17) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19858));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19860));
 		bool L_18 = V_2;
 		if (!L_18)
 		{
@@ -38860,23 +38860,23 @@ IL_0056:
 	}
 	{
 		// MarkGeometryAsDirty();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19859));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19861));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_19 = __this->___U3CU3E4__this_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19860));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19862));
 		NullCheck(L_19);
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(L_19, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19860));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19862));
 	}
 
 IL_00e4:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19861));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19863));
 	}
 
 IL_00e5:
 	{
 		// yield return null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19862));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19864));
 		__this->___U3CU3E2__current_1 = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
 		__this->___U3CU3E1__state_0 = 2;
@@ -38885,21 +38885,21 @@ IL_00e5:
 
 IL_00f5:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19863));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19865));
 		__this->___U3CU3E1__state_0 = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19864));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19866));
 	}
 
 IL_00fd:
 	{
 		// while ((isFocused || m_SelectionStillActive) && m_CaretBlinkRate > 0)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19865));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19867));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_20 = __this->___U3CU3E4__this_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19866));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19868));
 		NullCheck(L_20);
 		bool L_21;
 		L_21 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(L_20, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19866));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19868));
 		if (L_21)
 		{
 			goto IL_0117;
@@ -38932,7 +38932,7 @@ IL_012b:
 IL_012c:
 	{
 		V_3 = (bool)G_B18_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19867));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19869));
 		bool L_26 = V_3;
 		if (L_26)
 		{
@@ -38941,13 +38941,13 @@ IL_012c:
 	}
 	{
 		// m_BlinkCoroutine = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19868));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19870));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_27 = __this->___U3CU3E4__this_2;
 		NullCheck(L_27);
 		L_27->___m_BlinkCoroutine_81 = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_27->___m_BlinkCoroutine_81), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19869));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19871));
 		return (bool)0;
 	}
 }
@@ -39066,15 +39066,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMouseDragOutsideRectU3Ed__294_MoveNex
 	bool V_7 = false;
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, U3CMouseDragOutsideRectU3Ed__294_MoveNext_mE91DEA64A594ABE2D110805114C864C501529C0E_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19870));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19871));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19872));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19873));
 	U3CMouseDragOutsideRectU3Ed__294_t193AC97DD2625A0E3BB89FB5DB0911CDF3D4C958* G_B21_0 = NULL;
 	U3CMouseDragOutsideRectU3Ed__294_t193AC97DD2625A0E3BB89FB5DB0911CDF3D4C958* G_B20_0 = NULL;
 	float G_B22_0 = 0.0f;
 	U3CMouseDragOutsideRectU3Ed__294_t193AC97DD2625A0E3BB89FB5DB0911CDF3D4C958* G_B22_1 = NULL;
 	int32_t G_B30_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19872));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19874));
 		int32_t L_0 = __this->___U3CU3E1__state_0;
 		V_0 = L_0;
 		int32_t L_1 = V_0;
@@ -39117,64 +39117,64 @@ IL_0019:
 IL_001b:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19873));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19874));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19875));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19876));
 		goto IL_01d9;
 	}
 
 IL_0028:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19875));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19877));
 		// RectTransformUtility.ScreenPointToLocalPointInRectangle(textViewport, eventData.position, eventData.pressEventCamera, out localMousePos);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19876));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19878));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19877));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19879));
 		NullCheck(L_3);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_4;
 		L_4 = TMP_InputField_get_textViewport_m51E9CFB11A78199484D2BC2750F19DB7D2A26763(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19877));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19879));
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = __this->___eventData_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19878));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19880));
 		NullCheck(L_5);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6;
 		L_6 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19878));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19880));
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = __this->___eventData_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19879));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19881));
 		NullCheck(L_7);
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_8;
 		L_8 = PointerEventData_get_pressEventCamera_m8D6A377D5CA730307D9F8ABB8656FFB8FCD56AE3(L_7, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19879));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19881));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_9 = (&__this->___U3ClocalMousePosU3E5__1_4);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19880));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19882));
 		il2cpp_codegen_runtime_class_init_inline(RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var);
 		bool L_10;
 		L_10 = RectTransformUtility_ScreenPointToLocalPointInRectangle_m01A75CAFB6D1019F1C65BA606635EAB10AF31195(L_4, L_6, L_8, L_9, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19880));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19882));
 		// Rect rect = textViewport.rect;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19881));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19883));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_11 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19882));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19884));
 		NullCheck(L_11);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12;
 		L_12 = TMP_InputField_get_textViewport_m51E9CFB11A78199484D2BC2750F19DB7D2A26763(L_11, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19882));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19883));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19884));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19885));
 		NullCheck(L_12);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_13;
 		L_13 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_12, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19883));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19885));
 		__this->___U3CrectU3E5__2_5 = L_13;
 		// if (multiLine)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19884));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19886));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_14 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19885));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19887));
 		NullCheck(L_14);
 		bool L_15;
 		L_15 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(L_14, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19885));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19887));
 		V_1 = L_15;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19886));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19888));
 		bool L_16 = V_1;
 		if (!L_16)
 		{
@@ -39182,18 +39182,18 @@ IL_0028:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19887));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19889));
 		// if (localMousePos.y > rect.yMax)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19888));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19890));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_17 = (&__this->___U3ClocalMousePosU3E5__1_4);
 		float L_18 = L_17->___y_1;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_19 = (&__this->___U3CrectU3E5__2_5);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19889));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19891));
 		float L_20;
 		L_20 = Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E(L_19, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19889));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19891));
 		V_2 = (bool)((((float)L_18) > ((float)L_20))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19890));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19892));
 		bool L_21 = V_2;
 		if (!L_21)
 		{
@@ -39202,29 +39202,29 @@ IL_0028:
 	}
 	{
 		// MoveUp(true, true);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19891));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19893));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_22 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19892));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19894));
 		NullCheck(L_22);
 		TMP_InputField_MoveUp_m79291882C851A7AEC3945EB8479D31984941F8DB(L_22, (bool)1, (bool)1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19892));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19893));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19894));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19895));
 		goto IL_00d2;
 	}
 
 IL_00a8:
 	{
 		// else if (localMousePos.y < rect.yMin)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19894));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19896));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_23 = (&__this->___U3ClocalMousePosU3E5__1_4);
 		float L_24 = L_23->___y_1;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_25 = (&__this->___U3CrectU3E5__2_5);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19895));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19897));
 		float L_26;
 		L_26 = Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F(L_25, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19895));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19897));
 		V_3 = (bool)((((float)L_24) < ((float)L_26))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19896));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19898));
 		bool L_27 = V_3;
 		if (!L_27)
 		{
@@ -39233,35 +39233,35 @@ IL_00a8:
 	}
 	{
 		// MoveDown(true, true);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19897));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19899));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_28 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19898));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19900));
 		NullCheck(L_28);
 		TMP_InputField_MoveDown_m96FE2822D035DFBE82474737DEE8DED622AAD868(L_28, (bool)1, (bool)1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19898));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19900));
 	}
 
 IL_00d2:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19899));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19900));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19901));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19902));
 		goto IL_0131;
 	}
 
 IL_00d5:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19901));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19903));
 		// if (localMousePos.x < rect.xMin)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19902));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19904));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_29 = (&__this->___U3ClocalMousePosU3E5__1_4);
 		float L_30 = L_29->___x_0;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_31 = (&__this->___U3CrectU3E5__2_5);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19903));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19905));
 		float L_32;
 		L_32 = Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D(L_31, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19903));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19905));
 		V_4 = (bool)((((float)L_30) < ((float)L_32))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19904));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19906));
 		bool L_33 = V_4;
 		if (!L_33)
 		{
@@ -39270,29 +39270,29 @@ IL_00d5:
 	}
 	{
 		// MoveLeft(true, false);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19905));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19907));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_34 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19906));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19908));
 		NullCheck(L_34);
 		TMP_InputField_MoveLeft_m787CBD78E57FDD7DC28A10CA1624EA4118157898(L_34, (bool)1, (bool)0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19906));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19907));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19908));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19909));
 		goto IL_0130;
 	}
 
 IL_0104:
 	{
 		// else if (localMousePos.x > rect.xMax)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19908));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19910));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_35 = (&__this->___U3ClocalMousePosU3E5__1_4);
 		float L_36 = L_35->___x_0;
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_37 = (&__this->___U3CrectU3E5__2_5);
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19909));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19911));
 		float L_38;
 		L_38 = Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F(L_37, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19909));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19911));
 		V_5 = (bool)((((float)L_36) > ((float)L_38))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19910));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19912));
 		bool L_39 = V_5;
 		if (!L_39)
 		{
@@ -39301,36 +39301,36 @@ IL_0104:
 	}
 	{
 		// MoveRight(true, false);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19911));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19913));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_40 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19912));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19914));
 		NullCheck(L_40);
 		TMP_InputField_MoveRight_m8831525A4FF9E75CA86BD5E4BAC9351EF640D497(L_40, (bool)1, (bool)0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19912));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19914));
 	}
 
 IL_0130:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19913));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19915));
 	}
 
 IL_0131:
 	{
 		// UpdateLabel();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19914));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19916));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_41 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19915));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19917));
 		NullCheck(L_41);
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(L_41, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19915));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19917));
 		// float delay = multiLine ? kVScrollSpeed : kHScrollSpeed;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19916));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19918));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_42 = __this->___U3CU3E4__this_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19917));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19919));
 		NullCheck(L_42);
 		bool L_43;
 		L_43 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(L_42, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19917));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19919));
 		G_B20_0 = __this;
 		if (L_43)
 		{
@@ -39355,12 +39355,12 @@ IL_0157:
 		NullCheck(G_B22_1);
 		G_B22_1->___U3CdelayU3E5__3_6 = G_B22_0;
 		// if (m_WaitForSecondsRealtime == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19918));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19920));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_44 = __this->___U3CU3E4__this_3;
 		NullCheck(L_44);
 		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_45 = L_44->___m_WaitForSecondsRealtime_87;
 		V_6 = (bool)((((RuntimeObject*)(WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01*)L_45) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19919));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19921));
 		bool L_46 = V_6;
 		if (!L_46)
 		{
@@ -39369,39 +39369,39 @@ IL_0157:
 	}
 	{
 		// m_WaitForSecondsRealtime = new WaitForSecondsRealtime(delay);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19920));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19922));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_47 = __this->___U3CU3E4__this_3;
 		float L_48 = __this->___U3CdelayU3E5__3_6;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19921));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19923));
 		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_49 = (WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01*)il2cpp_codegen_object_new(WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01_il2cpp_TypeInfo_var);
 		NullCheck(L_49);
 		WaitForSecondsRealtime__ctor_mBFC1E4F0E042D5EC6E7EEB211A2FE5193A8F6D6F(L_49, L_48, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19921));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19923));
 		NullCheck(L_47);
 		L_47->___m_WaitForSecondsRealtime_87 = L_49;
 		Il2CppCodeGenWriteBarrier((void**)(&L_47->___m_WaitForSecondsRealtime_87), (void*)L_49);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19922));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19924));
 		goto IL_019f;
 	}
 
 IL_0188:
 	{
 		// m_WaitForSecondsRealtime.waitTime = delay;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19923));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19925));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_50 = __this->___U3CU3E4__this_3;
 		NullCheck(L_50);
 		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_51 = L_50->___m_WaitForSecondsRealtime_87;
 		float L_52 = __this->___U3CdelayU3E5__3_6;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19924));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19926));
 		NullCheck(L_51);
 		WaitForSecondsRealtime_set_waitTime_m8317E2B7A2B2DC4E4A1B0CD0F9D4479294B51FB5_inline(L_51, L_52, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19924));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19926));
 	}
 
 IL_019f:
 	{
 		// yield return m_WaitForSecondsRealtime;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19925));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19927));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_53 = __this->___U3CU3E4__this_3;
 		NullCheck(L_53);
 		WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01* L_54 = L_53->___m_WaitForSecondsRealtime_87;
@@ -39413,9 +39413,9 @@ IL_019f:
 
 IL_01b9:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19926));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19928));
 		__this->___U3CU3E1__state_0 = (-1);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19927));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19929));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_55 = (&__this->___U3ClocalMousePosU3E5__1_4);
 		il2cpp_codegen_initobj(L_55, sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_56 = (&__this->___U3CrectU3E5__2_5);
@@ -39425,7 +39425,7 @@ IL_01b9:
 IL_01d9:
 	{
 		// while (m_UpdateDrag && m_DragPositionOutOfBounds)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19928));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19930));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_57 = __this->___U3CU3E4__this_3;
 		NullCheck(L_57);
 		bool L_58 = L_57->___m_UpdateDrag_76;
@@ -39450,7 +39450,7 @@ IL_01f3:
 IL_01f4:
 	{
 		V_7 = (bool)G_B30_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19929));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19931));
 		bool L_61 = V_7;
 		if (L_61)
 		{
@@ -39459,13 +39459,13 @@ IL_01f4:
 	}
 	{
 		// m_DragCoroutine = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19930));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19932));
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_62 = __this->___U3CU3E4__this_3;
 		NullCheck(L_62);
 		L_62->___m_DragCoroutine_83 = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_62->___m_DragCoroutine_83), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19931));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19933));
 		return (bool)0;
 	}
 }
@@ -39541,13 +39541,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetPropertyUtility_SetColor_mBDA27D2F874
 	bool V_1 = false;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___currentValue0), (&___newValue1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, SetPropertyUtility_SetColor_mBDA27D2F874BAC08FEDDAED677ECF596B3743547_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19932));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19933));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19934));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19935));
 	int32_t G_B5_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19934));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19936));
 		// if (currentValue.r == newValue.r && currentValue.g == newValue.g && currentValue.b == newValue.b && currentValue.a == newValue.a)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19935));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19937));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_0 = ___currentValue0;
 		float L_1 = L_0->___r_0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = ___newValue1;
@@ -39594,7 +39594,7 @@ IL_003b:
 IL_003c:
 	{
 		V_0 = (bool)G_B5_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19936));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19938));
 		bool L_16 = V_0;
 		if (!L_16)
 		{
@@ -39603,7 +39603,7 @@ IL_003c:
 	}
 	{
 		// return false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19937));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19939));
 		V_1 = (bool)0;
 		goto IL_004f;
 	}
@@ -39611,12 +39611,12 @@ IL_003c:
 IL_0044:
 	{
 		// currentValue = newValue;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19938));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19940));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_17 = ___currentValue0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18 = ___newValue1;
 		*(Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)L_17 = L_18;
 		// return true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19939));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19941));
 		V_1 = (bool)1;
 		goto IL_004f;
 	}
@@ -39624,7 +39624,7 @@ IL_0044:
 IL_004f:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19940));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19942));
 		bool L_19 = V_1;
 		return L_19;
 	}
@@ -39690,58 +39690,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager__cctor_m9A67C84C9A17
 		s_Il2CppMethodInitialized = true;
 	}
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager__cctor_m9A67C84C9A17C88DA0C043F8B6C6604A0C609BC6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19982));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19983));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19984));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19985));
 	{
 		// private static List<MaskingMaterial> m_materialList = new List<MaskingMaterial>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19984));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19985));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19986));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19987));
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_0 = (List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F*)il2cpp_codegen_object_new(List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		List_1__ctor_m078BD27D7557AAFA39321BEAAF46482BA518E5CC(L_0, List_1__ctor_m078BD27D7557AAFA39321BEAAF46482BA518E5CC_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19985));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19987));
 		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0), (void*)L_0);
 		// private static Dictionary<long, FallbackMaterial> m_fallbackMaterials = new Dictionary<long, FallbackMaterial>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19986));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19987));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19988));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19989));
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_1 = (Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3*)il2cpp_codegen_object_new(Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3_il2cpp_TypeInfo_var);
 		NullCheck(L_1);
 		Dictionary_2__ctor_m9108596C0E817720F00BD87FCBFE799ADFD4B0B3(L_1, Dictionary_2__ctor_m9108596C0E817720F00BD87FCBFE799ADFD4B0B3_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19987));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19989));
 		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1 = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1), (void*)L_1);
 		// private static Dictionary<int, long> m_fallbackMaterialLookup = new Dictionary<int, long>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19988));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19989));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19990));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19991));
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_2 = (Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735*)il2cpp_codegen_object_new(Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735_il2cpp_TypeInfo_var);
 		NullCheck(L_2);
 		Dictionary_2__ctor_m5842AD2BDA247522D2E53DC24F64A97A02D3629C(L_2, Dictionary_2__ctor_m5842AD2BDA247522D2E53DC24F64A97A02D3629C_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19989));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19991));
 		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2), (void*)L_2);
 		// private static List<FallbackMaterial> m_fallbackCleanupList = new List<FallbackMaterial>();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19990));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19991));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19992));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19993));
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_3 = (List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517*)il2cpp_codegen_object_new(List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517_il2cpp_TypeInfo_var);
 		NullCheck(L_3);
 		List_1__ctor_m8B72DB2FB3D11C89B0E900AC3263DF66CE34F9CE(L_3, List_1__ctor_m8B72DB2FB3D11C89B0E900AC3263DF66CE34F9CE_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19991));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19993));
 		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3 = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3), (void*)L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19992));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19994));
 		// Canvas.willRenderCanvases += OnPreRender;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19993));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19994));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19995));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19996));
 		WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC* L_4 = (WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC*)il2cpp_codegen_object_new(WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC_il2cpp_TypeInfo_var);
 		NullCheck(L_4);
 		WillRenderCanvases__ctor_mD8174C0964F8864D65270FFCAF275BD0BAC8DCF3(L_4, NULL, (intptr_t)((void*)TMP_MaterialManager_OnPreRender_m568227EA396CF03FD388C00EBDD713D05A3558F3_RuntimeMethod_var), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19994));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19995));
-		Canvas_add_willRenderCanvases_m687D781C0082C147C4E9C2F5A82C59A696129E74(L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19995));
-		// }
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19996));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19997));
+		Canvas_add_willRenderCanvases_m687D781C0082C147C4E9C2F5A82C59A696129E74(L_4, NULL);
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19997));
+		// }
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19998));
 		return;
 	}
 }
@@ -39758,16 +39758,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_OnPreRender_m568227E
 	}
 	bool V_0 = false;
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_OnPreRender_m568227EA396CF03FD388C00EBDD713D05A3558F3_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19997));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19998));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19999));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20000));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 19999));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20001));
 		// if (isFallbackListDirty)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20000));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20002));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		bool L_0 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___isFallbackListDirty_4;
 		V_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20001));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20003));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -39775,23 +39775,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_OnPreRender_m568227E
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20002));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20004));
 		// CleanupFallbackMaterials();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20003));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20004));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20005));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20006));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		TMP_MaterialManager_CleanupFallbackMaterials_m94C5B0D70AE592181468BEB3046F51FEDE61698B(NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20004));
-		// isFallbackListDirty = false;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20005));
-		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___isFallbackListDirty_4 = (bool)0;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20006));
+		// isFallbackListDirty = false;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20007));
+		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___isFallbackListDirty_4 = (bool)0;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20008));
 	}
 
 IL_0018:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20007));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20009));
 		return;
 	}
 }
@@ -39819,49 +39819,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_ReleaseStencilMateri
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___stencilMaterial0));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_ReleaseStencilMaterial_mECF794E6299D84E46FBC0BC6F23155A8751FCD41_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20008));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20009));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20010));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20011));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20010));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20012));
 		// int stencilMaterialID = stencilMaterial.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20011));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20013));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___stencilMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20012));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20014));
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20012));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20014));
 		V_0 = L_1;
 		// for (int i = 0; i < m_materialList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20013));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20015));
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20014));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20016));
 		goto IL_0089;
 	}
 
 IL_000c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20015));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20017));
 		// if (m_materialList[i].stencilMaterial.GetInstanceID() == stencilMaterialID)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20016));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20018));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_2 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
 		int32_t L_3 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20017));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20019));
 		NullCheck(L_2);
 		MaskingMaterial_t8FEFB73A16A318BC617A015E4E56C2749829EF67* L_4;
 		L_4 = List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0(L_2, L_3, List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20017));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20019));
 		NullCheck(L_4);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = L_4->___stencilMaterial_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20018));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20020));
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20018));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20020));
 		int32_t L_7 = V_0;
 		V_2 = (bool)((((int32_t)L_6) == ((int32_t)L_7))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20019));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20021));
 		bool L_8 = V_2;
 		if (!L_8)
 		{
@@ -39869,21 +39869,21 @@ IL_000c:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20020));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20022));
 		// if (m_materialList[i].count > 1)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20021));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20023));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_9 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
 		int32_t L_10 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20022));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20024));
 		NullCheck(L_9);
 		MaskingMaterial_t8FEFB73A16A318BC617A015E4E56C2749829EF67* L_11;
 		L_11 = List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0(L_9, L_10, List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20022));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20024));
 		NullCheck(L_11);
 		int32_t L_12 = L_11->___count_1;
 		V_3 = (bool)((((int32_t)L_12) > ((int32_t)1))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20023));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20025));
 		bool L_13 = V_3;
 		if (!L_13)
 		{
@@ -39892,69 +39892,69 @@ IL_000c:
 	}
 	{
 		// m_materialList[i].count -= 1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20024));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20026));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_14 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
 		int32_t L_15 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20025));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20027));
 		NullCheck(L_14);
 		MaskingMaterial_t8FEFB73A16A318BC617A015E4E56C2749829EF67* L_16;
 		L_16 = List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0(L_14, L_15, List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20025));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20027));
 		MaskingMaterial_t8FEFB73A16A318BC617A015E4E56C2749829EF67* L_17 = L_16;
 		NullCheck(L_17);
 		int32_t L_18 = L_17->___count_1;
 		NullCheck(L_17);
 		L_17->___count_1 = ((int32_t)il2cpp_codegen_subtract(L_18, 1));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20026));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20028));
 		goto IL_0082;
 	}
 
 IL_005b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20027));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20029));
 		// Object.DestroyImmediate(m_materialList[i].stencilMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20028));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20030));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_19 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
 		int32_t L_20 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20029));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20031));
 		NullCheck(L_19);
 		MaskingMaterial_t8FEFB73A16A318BC617A015E4E56C2749829EF67* L_21;
 		L_21 = List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0(L_19, L_20, List_1_get_Item_m99203461811024F3B79B29FB7CD6DE33ED07A4E0_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20029));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20031));
 		NullCheck(L_21);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_22 = L_21->___stencilMaterial_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20030));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20032));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(L_22, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20030));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20032));
 		// m_materialList.RemoveAt(i);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20031));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20033));
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_23 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
 		int32_t L_24 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20032));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20034));
 		NullCheck(L_23);
 		List_1_RemoveAt_m67D2C0E302C88B388FE0AECF0DA6BD59FC33D12E(L_23, L_24, List_1_RemoveAt_m67D2C0E302C88B388FE0AECF0DA6BD59FC33D12E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20032));
-		// stencilMaterial = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20033));
-		___stencilMaterial0 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20034));
+		// stencilMaterial = null;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20035));
+		___stencilMaterial0 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20036));
 	}
 
 IL_0082:
 	{
 		// break;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20035));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20037));
 		goto IL_009f;
 	}
 
 IL_0084:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20036));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20038));
 		// for (int i = 0; i < m_materialList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20037));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20039));
 		int32_t L_25 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 	}
@@ -39962,17 +39962,17 @@ IL_0084:
 IL_0089:
 	{
 		// for (int i = 0; i < m_materialList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20038));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20040));
 		int32_t L_26 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_t2D422802284C607CCDF0AEC2E66140D97474AB4F* L_27 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_materialList_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20039));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20041));
 		NullCheck(L_27);
 		int32_t L_28;
 		L_28 = List_1_get_Count_m37F9E1909CE3099E1899AA19B91187E5270C6F1D_inline(L_27, List_1_get_Count_m37F9E1909CE3099E1899AA19B91187E5270C6F1D_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20039));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20041));
 		V_4 = (bool)((((int32_t)L_26) < ((int32_t)L_28))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20040));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20042));
 		bool L_29 = V_4;
 		if (L_29)
 		{
@@ -39983,7 +39983,7 @@ IL_0089:
 IL_009f:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20041));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20043));
 		return;
 	}
 }
@@ -40017,20 +40017,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___graphic0), (&___baseMaterial1));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_4));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_GetMaterialForRendering_mDC4BDF626B827DE3A6B13933DA0F376D7E77ABD4_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20042));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20043));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20044));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20045));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20044));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20046));
 		// if (baseMaterial == null)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20045));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20047));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___baseMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20046));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20048));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20046));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20048));
 		V_2 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20047));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20049));
 		bool L_2 = V_2;
 		if (!L_2)
 		{
@@ -40039,7 +40039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	}
 	{
 		// return null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20048));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20050));
 		V_3 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
 		goto IL_0055;
 	}
@@ -40047,52 +40047,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 IL_0010:
 	{
 		// var modifiers = TMP_ListPool<IMaterialModifier>.Get();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20049));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20050));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20051));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20052));
 		il2cpp_codegen_runtime_class_init_inline(TMP_ListPool_1_t9373AB314612B871D47F5F090333A73AEFF2336D_il2cpp_TypeInfo_var);
 		List_1_t953250D60F917E2EB933D26710F948C2C77DFC07* L_3;
 		L_3 = TMP_ListPool_1_Get_m9618C65CCA50A47D85D25BB655F2767947C3BAB7(TMP_ListPool_1_Get_m9618C65CCA50A47D85D25BB655F2767947C3BAB7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20050));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20052));
 		V_0 = L_3;
 		// graphic.GetComponents(modifiers);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20051));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20053));
 		MaskableGraphic_tFC5B6BE351C90DE53744DF2A70940242774B361E* L_4 = ___graphic0;
 		List_1_t953250D60F917E2EB933D26710F948C2C77DFC07* L_5 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20052));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20054));
 		NullCheck(L_4);
 		Component_GetComponents_TisIMaterialModifier_t0A879F072C9B47E87D5081E298D03D7EB4F5F2EE_m234EF2DEE22E55E42C72342A39E623EBD407E90A(L_4, L_5, Component_GetComponents_TisIMaterialModifier_t0A879F072C9B47E87D5081E298D03D7EB4F5F2EE_m234EF2DEE22E55E42C72342A39E623EBD407E90A_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20052));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20054));
 		// var result = baseMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20053));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20055));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_6 = ___baseMaterial1;
 		V_1 = L_6;
 		// for (int i = 0; i < modifiers.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20054));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20056));
 		V_4 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20055));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20057));
 		goto IL_003a;
 	}
 
 IL_0025:
 	{
 		// result = modifiers[i].GetModifiedMaterial(result);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20056));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20058));
 		List_1_t953250D60F917E2EB933D26710F948C2C77DFC07* L_7 = V_0;
 		int32_t L_8 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20057));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20059));
 		NullCheck(L_7);
 		RuntimeObject* L_9;
 		L_9 = List_1_get_Item_mE4EB9A6EAA13901798CF972350F6E18713A91984(L_7, L_8, List_1_get_Item_mE4EB9A6EAA13901798CF972350F6E18713A91984_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20057));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20059));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_10 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20058));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20060));
 		NullCheck(L_9);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_11;
 		L_11 = InterfaceFuncInvoker1< Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* >::Invoke(0 /* UnityEngine.Material UnityEngine.UI.IMaterialModifier::GetModifiedMaterial(UnityEngine.Material) */, IMaterialModifier_t0A879F072C9B47E87D5081E298D03D7EB4F5F2EE_il2cpp_TypeInfo_var, L_9, L_10);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20058));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20060));
 		V_1 = L_11;
 		// for (int i = 0; i < modifiers.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20059));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20061));
 		int32_t L_12 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_12, 1));
 	}
@@ -40100,16 +40100,16 @@ IL_0025:
 IL_003a:
 	{
 		// for (int i = 0; i < modifiers.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20060));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20062));
 		int32_t L_13 = V_4;
 		List_1_t953250D60F917E2EB933D26710F948C2C77DFC07* L_14 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20061));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20063));
 		NullCheck(L_14);
 		int32_t L_15;
 		L_15 = List_1_get_Count_m5DE8EAB445663C9CE7E7BE0BA12C04E729482E6B_inline(L_14, List_1_get_Count_m5DE8EAB445663C9CE7E7BE0BA12C04E729482E6B_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20061));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20063));
 		V_5 = (bool)((((int32_t)L_13) < ((int32_t)L_15))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20062));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20064));
 		bool L_16 = V_5;
 		if (L_16)
 		{
@@ -40118,14 +40118,14 @@ IL_003a:
 	}
 	{
 		// TMP_ListPool<IMaterialModifier>.Release(modifiers);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20063));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20065));
 		List_1_t953250D60F917E2EB933D26710F948C2C77DFC07* L_17 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20064));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20066));
 		il2cpp_codegen_runtime_class_init_inline(TMP_ListPool_1_t9373AB314612B871D47F5F090333A73AEFF2336D_il2cpp_TypeInfo_var);
 		TMP_ListPool_1_Release_mAA3156F33CC3424F41986CE8C7D769F62B8B5A59(L_17, TMP_ListPool_1_Release_mAA3156F33CC3424F41986CE8C7D769F62B8B5A59_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20064));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20066));
 		// return result;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20065));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20067));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_18 = V_1;
 		V_3 = L_18;
 		goto IL_0055;
@@ -40134,7 +40134,7 @@ IL_003a:
 IL_0055:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20066));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20068));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_19 = V_3;
 		return L_19;
 	}
@@ -40174,58 +40174,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___fontAsset0), (&___sourceMaterial1), (&___atlasIndex2));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2), (&V_3), (&V_4), (&V_5), (&V_7));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_GetFallbackMaterial_m95FD4E0D6101A850C43D5917D46D9ED7DAD9CBB3_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20067));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20068));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20069));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20070));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20069));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20071));
 		// int sourceMaterialID = sourceMaterial.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20070));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20072));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___sourceMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20071));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20073));
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20071));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20073));
 		V_0 = L_1;
 		// Texture tex = fontAsset.atlasTextures[atlasIndex];
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20072));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20074));
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_2 = ___fontAsset0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20073));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20075));
 		NullCheck(L_2);
 		Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* L_3;
 		L_3 = TMP_FontAsset_get_atlasTextures_m80D4DF83161F39AC7D06B0B097038B1E02AFE307(L_2, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20073));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20075));
 		int32_t L_4 = ___atlasIndex2;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_1 = L_6;
 		// int texID = tex.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20074));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20076));
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_7 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20075));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20077));
 		NullCheck(L_7);
 		int32_t L_8;
 		L_8 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_7, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20075));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20077));
 		V_2 = L_8;
 		// long key = (long)sourceMaterialID << 32 | (long)(uint)texID;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20076));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20078));
 		int32_t L_9 = V_0;
 		int32_t L_10 = V_2;
 		V_3 = ((int64_t)(((int64_t)(((int64_t)L_9)<<((int32_t)32)))|((int64_t)(uint64_t)((uint32_t)L_10))));
 		// if (m_fallbackMaterials.TryGetValue(key, out fallback))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20077));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20079));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_11 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_12 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20078));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20080));
 		NullCheck(L_11);
 		bool L_13;
 		L_13 = Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7(L_11, L_12, (&V_4), Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20078));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20080));
 		V_6 = L_13;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20079));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20081));
 		bool L_14 = V_6;
 		if (!L_14)
 		{
@@ -40233,24 +40233,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20080));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20082));
 		// int sourceMaterialCRC = sourceMaterial.ComputeCRC();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20081));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20083));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_15 = ___sourceMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20082));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20084));
 		NullCheck(L_15);
 		int32_t L_16;
 		L_16 = Material_ComputeCRC_m5F743B7178F5E474A8FE15E5C0B1A6527E6E3A77(L_15, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20082));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20084));
 		V_7 = L_16;
 		// if (sourceMaterialCRC == fallback.sourceMaterialCRC)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20083));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20085));
 		int32_t L_17 = V_7;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_18 = V_4;
 		NullCheck(L_18);
 		int32_t L_19 = L_18->___sourceMaterialCRC_2;
 		V_8 = (bool)((((int32_t)L_17) == ((int32_t)L_19))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20084));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20086));
 		bool L_20 = V_8;
 		if (!L_20)
 		{
@@ -40259,7 +40259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	}
 	{
 		// return fallback.fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20085));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20087));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_21 = V_4;
 		NullCheck(L_21);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_22 = L_21->___fallbackMaterial_3;
@@ -40270,23 +40270,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 IL_005c:
 	{
 		// CopyMaterialPresetProperties(sourceMaterial, fallback.fallbackMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20086));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20088));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_23 = ___sourceMaterial1;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_24 = V_4;
 		NullCheck(L_24);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_25 = L_24->___fallbackMaterial_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20087));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20089));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		TMP_MaterialManager_CopyMaterialPresetProperties_m091CA38EAB2582F1792E94216E05706A13DD3965(L_23, L_25, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20087));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20089));
 		// fallback.sourceMaterialCRC = sourceMaterialCRC;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20088));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20090));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_26 = V_4;
 		int32_t L_27 = V_7;
 		NullCheck(L_26);
 		L_26->___sourceMaterialCRC_2 = L_27;
 		// return fallback.fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20089));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20091));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_28 = V_4;
 		NullCheck(L_28);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_29 = L_28->___fallbackMaterial_3;
@@ -40297,47 +40297,47 @@ IL_005c:
 IL_0081:
 	{
 		// Material fallbackMaterial = new Material(sourceMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20090));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20092));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_30 = ___sourceMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20091));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20093));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_31 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		NullCheck(L_31);
 		Material__ctor_mFCC42FB90257F1E8F7516A8640A79C465A39961C(L_31, L_30, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20091));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20093));
 		V_5 = L_31;
 		// fallbackMaterial.SetTexture(ShaderUtilities.ID_MainTex, tex);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20092));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20094));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_32 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_33 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_MainTex_0;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_34 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20093));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20095));
 		NullCheck(L_32);
 		Material_SetTexture_mA9F8461850AAB88F992E9C6FA6F24C2E050B83FD(L_32, L_33, L_34, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20093));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20095));
 		// fallbackMaterial.hideFlags = HideFlags.HideAndDontSave;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20094));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20096));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_35 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20095));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20097));
 		NullCheck(L_35);
 		Object_set_hideFlags_mACB8BFC903FB3B01BBD427753E791BF28B5E33D4(L_35, ((int32_t)61), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20095));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20097));
 		// fallback = new FallbackMaterial();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20096));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20097));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20098));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20099));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_36 = (FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D*)il2cpp_codegen_object_new(FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D_il2cpp_TypeInfo_var);
 		NullCheck(L_36);
 		FallbackMaterial__ctor_m5AA6484722CD55AD1E40B459CAB79DD8990A713F(L_36, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20097));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20099));
 		V_4 = L_36;
 		// fallback.fallbackID = key;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20098));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20100));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_37 = V_4;
 		int64_t L_38 = V_3;
 		NullCheck(L_37);
 		L_37->___fallbackID_0 = L_38;
 		// fallback.sourceMaterial = fontAsset.material;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20099));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20101));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_39 = V_4;
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_40 = ___fontAsset0;
 		NullCheck(L_40);
@@ -40346,54 +40346,54 @@ IL_0081:
 		L_39->___sourceMaterial_1 = L_41;
 		Il2CppCodeGenWriteBarrier((void**)(&L_39->___sourceMaterial_1), (void*)L_41);
 		// fallback.sourceMaterialCRC = sourceMaterial.ComputeCRC();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20100));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20102));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_42 = V_4;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_43 = ___sourceMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20101));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20103));
 		NullCheck(L_43);
 		int32_t L_44;
 		L_44 = Material_ComputeCRC_m5F743B7178F5E474A8FE15E5C0B1A6527E6E3A77(L_43, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20101));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20103));
 		NullCheck(L_42);
 		L_42->___sourceMaterialCRC_2 = L_44;
 		// fallback.fallbackMaterial = fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20102));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20104));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_45 = V_4;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_46 = V_5;
 		NullCheck(L_45);
 		L_45->___fallbackMaterial_3 = L_46;
 		Il2CppCodeGenWriteBarrier((void**)(&L_45->___fallbackMaterial_3), (void*)L_46);
 		// fallback.count = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20103));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20105));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_47 = V_4;
 		NullCheck(L_47);
 		L_47->___count_4 = 0;
 		// m_fallbackMaterials.Add(key, fallback);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20104));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20106));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_48 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_49 = V_3;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_50 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20105));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20107));
 		NullCheck(L_48);
 		Dictionary_2_Add_m1A3132941BB2CB1E69AC7C4F5BCA92E1A70AF89F(L_48, L_49, L_50, Dictionary_2_Add_m1A3132941BB2CB1E69AC7C4F5BCA92E1A70AF89F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20105));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20107));
 		// m_fallbackMaterialLookup.Add(fallbackMaterial.GetInstanceID(), key);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20106));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20108));
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_51 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_52 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20107));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20109));
 		NullCheck(L_52);
 		int32_t L_53;
 		L_53 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_52, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20107));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20109));
 		int64_t L_54 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20108));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20110));
 		NullCheck(L_51);
 		Dictionary_2_Add_m2A8FE66334E77EF575C4CC2DCBD6F927FA28FA83(L_51, L_53, L_54, Dictionary_2_Add_m2A8FE66334E77EF575C4CC2DCBD6F927FA28FA83_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20108));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20110));
 		// return fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20109));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20111));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_55 = V_5;
 		V_9 = L_55;
 		goto IL_0102;
@@ -40402,7 +40402,7 @@ IL_0081:
 IL_0102:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20110));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20112));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_56 = V_9;
 		return L_56;
 	}
@@ -40443,57 +40443,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___sourceMaterial0), (&___targetMaterial1));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2), (&V_3), (&V_4), (&V_5), (&V_7));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_GetFallbackMaterial_m2DE6B5385E5AF9AF9CBBBE1D7D6F1497ED6498D0_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20111));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20112));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20113));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20114));
 	int32_t G_B7_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20113));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20115));
 		// int sourceID = sourceMaterial.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20114));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20116));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___sourceMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20115));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20117));
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_0, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20115));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20117));
 		V_0 = L_1;
 		// Texture tex = targetMaterial.GetTexture(ShaderUtilities.ID_MainTex);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20116));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20118));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_2 = ___targetMaterial1;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_3 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_MainTex_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20117));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20119));
 		NullCheck(L_2);
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_4;
 		L_4 = Material_GetTexture_mE5D02B13E7AF35ABAE4FFC49E69FAF8F36F91191(L_2, L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20117));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20119));
 		V_1 = L_4;
 		// int texID = tex.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20118));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20120));
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_5 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20119));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20121));
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_5, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20119));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20121));
 		V_2 = L_6;
 		// long key = (long)sourceID << 32 | (long)(uint)texID;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20120));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20122));
 		int32_t L_7 = V_0;
 		int32_t L_8 = V_2;
 		V_3 = ((int64_t)(((int64_t)(((int64_t)L_7)<<((int32_t)32)))|((int64_t)(uint64_t)((uint32_t)L_8))));
 		// if (m_fallbackMaterials.TryGetValue(key, out fallback))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20121));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20123));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_9 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_10 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20122));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20124));
 		NullCheck(L_9);
 		bool L_11;
 		L_11 = Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7(L_9, L_10, (&V_4), Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20122));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20124));
 		V_6 = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20123));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20125));
 		bool L_12 = V_6;
 		if (!L_12)
 		{
@@ -40501,24 +40501,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20124));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20126));
 		// int sourceMaterialCRC = sourceMaterial.ComputeCRC();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20125));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20127));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_13 = ___sourceMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20126));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20128));
 		NullCheck(L_13);
 		int32_t L_14;
 		L_14 = Material_ComputeCRC_m5F743B7178F5E474A8FE15E5C0B1A6527E6E3A77(L_13, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20126));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20128));
 		V_7 = L_14;
 		// if (sourceMaterialCRC == fallback.sourceMaterialCRC)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20127));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20129));
 		int32_t L_15 = V_7;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_16 = V_4;
 		NullCheck(L_16);
 		int32_t L_17 = L_16->___sourceMaterialCRC_2;
 		V_8 = (bool)((((int32_t)L_15) == ((int32_t)L_17))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20128));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20130));
 		bool L_18 = V_8;
 		if (!L_18)
 		{
@@ -40527,7 +40527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 	}
 	{
 		// return fallback.fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20129));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20131));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_19 = V_4;
 		NullCheck(L_19);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_20 = L_19->___fallbackMaterial_3;
@@ -40538,23 +40538,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 IL_005f:
 	{
 		// CopyMaterialPresetProperties(sourceMaterial, fallback.fallbackMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20130));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20132));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_21 = ___sourceMaterial0;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_22 = V_4;
 		NullCheck(L_22);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_23 = L_22->___fallbackMaterial_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20131));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20133));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		TMP_MaterialManager_CopyMaterialPresetProperties_m091CA38EAB2582F1792E94216E05706A13DD3965(L_21, L_23, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20131));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20133));
 		// fallback.sourceMaterialCRC = sourceMaterialCRC;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20132));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20134));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_24 = V_4;
 		int32_t L_25 = V_7;
 		NullCheck(L_24);
 		L_24->___sourceMaterialCRC_2 = L_25;
 		// return fallback.fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20133));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20135));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_26 = V_4;
 		NullCheck(L_26);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_27 = L_26->___fallbackMaterial_3;
@@ -40565,15 +40565,15 @@ IL_005f:
 IL_0084:
 	{
 		// if (sourceMaterial.HasProperty(ShaderUtilities.ID_GradientScale) && targetMaterial.HasProperty(ShaderUtilities.ID_GradientScale))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20134));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20136));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_28 = ___sourceMaterial0;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_29 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20135));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20137));
 		NullCheck(L_28);
 		bool L_30;
 		L_30 = Material_HasProperty_m52E2D3BC3049B8B228149E023CD73C34B05A5222(L_28, L_29, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20135));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20137));
 		if (!L_30)
 		{
 			goto IL_009e;
@@ -40583,11 +40583,11 @@ IL_0084:
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_31 = ___targetMaterial1;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_32 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20136));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20138));
 		NullCheck(L_31);
 		bool L_33;
 		L_33 = Material_HasProperty_m52E2D3BC3049B8B228149E023CD73C34B05A5222(L_31, L_32, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20136));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20138));
 		G_B7_0 = ((int32_t)(L_33));
 		goto IL_009f;
 	}
@@ -40600,7 +40600,7 @@ IL_009e:
 IL_009f:
 	{
 		V_10 = (bool)G_B7_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20137));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20139));
 		bool L_34 = V_10;
 		if (!L_34)
 		{
@@ -40608,200 +40608,200 @@ IL_009f:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20138));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20140));
 		// fallbackMaterial = new Material(sourceMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20139));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20141));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_35 = ___sourceMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20140));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20142));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_36 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		NullCheck(L_36);
 		Material__ctor_mFCC42FB90257F1E8F7516A8640A79C465A39961C(L_36, L_35, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20140));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20142));
 		V_5 = L_36;
 		// fallbackMaterial.hideFlags = HideFlags.HideAndDontSave;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20141));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20143));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_37 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20142));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20144));
 		NullCheck(L_37);
 		Object_set_hideFlags_mACB8BFC903FB3B01BBD427753E791BF28B5E33D4(L_37, ((int32_t)61), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20142));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20144));
 		// fallbackMaterial.SetTexture(ShaderUtilities.ID_MainTex, tex);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20143));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20145));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_38 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_39 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_MainTex_0;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_40 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20144));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20146));
 		NullCheck(L_38);
 		Material_SetTexture_mA9F8461850AAB88F992E9C6FA6F24C2E050B83FD(L_38, L_39, L_40, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20144));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20146));
 		// fallbackMaterial.SetFloat(ShaderUtilities.ID_GradientScale, targetMaterial.GetFloat(ShaderUtilities.ID_GradientScale));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20145));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20147));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_41 = V_5;
 		int32_t L_42 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_43 = ___targetMaterial1;
 		int32_t L_44 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20146));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20148));
 		NullCheck(L_43);
 		float L_45;
 		L_45 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_43, L_44, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20146));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20147));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20148));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20149));
 		NullCheck(L_41);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_41, L_42, L_45, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20147));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20149));
 		// fallbackMaterial.SetFloat(ShaderUtilities.ID_TextureWidth, targetMaterial.GetFloat(ShaderUtilities.ID_TextureWidth));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20148));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20150));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_46 = V_5;
 		int32_t L_47 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureWidth_26;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_48 = ___targetMaterial1;
 		int32_t L_49 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureWidth_26;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20149));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20151));
 		NullCheck(L_48);
 		float L_50;
 		L_50 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_48, L_49, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20149));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20150));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20151));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20152));
 		NullCheck(L_46);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_46, L_47, L_50, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20150));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20152));
 		// fallbackMaterial.SetFloat(ShaderUtilities.ID_TextureHeight, targetMaterial.GetFloat(ShaderUtilities.ID_TextureHeight));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20151));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20153));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_51 = V_5;
 		int32_t L_52 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureHeight_27;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_53 = ___targetMaterial1;
 		int32_t L_54 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureHeight_27;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20152));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20154));
 		NullCheck(L_53);
 		float L_55;
 		L_55 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_53, L_54, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20152));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20153));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20154));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20155));
 		NullCheck(L_51);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_51, L_52, L_55, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20153));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20155));
 		// fallbackMaterial.SetFloat(ShaderUtilities.ID_WeightNormal, targetMaterial.GetFloat(ShaderUtilities.ID_WeightNormal));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20154));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20156));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_56 = V_5;
 		int32_t L_57 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightNormal_12;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_58 = ___targetMaterial1;
 		int32_t L_59 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightNormal_12;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20155));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20157));
 		NullCheck(L_58);
 		float L_60;
 		L_60 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_58, L_59, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20155));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20156));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20157));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20158));
 		NullCheck(L_56);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_56, L_57, L_60, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20156));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20158));
 		// fallbackMaterial.SetFloat(ShaderUtilities.ID_WeightBold, targetMaterial.GetFloat(ShaderUtilities.ID_WeightBold));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20157));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20159));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_61 = V_5;
 		int32_t L_62 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightBold_13;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_63 = ___targetMaterial1;
 		int32_t L_64 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightBold_13;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20158));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20160));
 		NullCheck(L_63);
 		float L_65;
 		L_65 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_63, L_64, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20158));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20159));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20160));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20161));
 		NullCheck(L_61);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_61, L_62, L_65, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20159));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20160));
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20161));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20162));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20163));
 		goto IL_014e;
 	}
 
 IL_0144:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20162));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20164));
 		// fallbackMaterial = new Material(targetMaterial);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20163));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20165));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_66 = ___targetMaterial1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20164));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20166));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_67 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		NullCheck(L_67);
 		Material__ctor_mFCC42FB90257F1E8F7516A8640A79C465A39961C(L_67, L_66, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20164));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20166));
 		V_5 = L_67;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20165));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20167));
 	}
 
 IL_014e:
 	{
 		// fallback = new FallbackMaterial();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20166));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20167));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20168));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20169));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_68 = (FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D*)il2cpp_codegen_object_new(FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D_il2cpp_TypeInfo_var);
 		NullCheck(L_68);
 		FallbackMaterial__ctor_m5AA6484722CD55AD1E40B459CAB79DD8990A713F(L_68, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20167));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20169));
 		V_4 = L_68;
 		// fallback.fallbackID = key;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20168));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20170));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_69 = V_4;
 		int64_t L_70 = V_3;
 		NullCheck(L_69);
 		L_69->___fallbackID_0 = L_70;
 		// fallback.sourceMaterial = sourceMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20169));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20171));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_71 = V_4;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_72 = ___sourceMaterial0;
 		NullCheck(L_71);
 		L_71->___sourceMaterial_1 = L_72;
 		Il2CppCodeGenWriteBarrier((void**)(&L_71->___sourceMaterial_1), (void*)L_72);
 		// fallback.sourceMaterialCRC = sourceMaterial.ComputeCRC();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20170));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20172));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_73 = V_4;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_74 = ___sourceMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20171));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20173));
 		NullCheck(L_74);
 		int32_t L_75;
 		L_75 = Material_ComputeCRC_m5F743B7178F5E474A8FE15E5C0B1A6527E6E3A77(L_74, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20171));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20173));
 		NullCheck(L_73);
 		L_73->___sourceMaterialCRC_2 = L_75;
 		// fallback.fallbackMaterial = fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20172));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20174));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_76 = V_4;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_77 = V_5;
 		NullCheck(L_76);
 		L_76->___fallbackMaterial_3 = L_77;
 		Il2CppCodeGenWriteBarrier((void**)(&L_76->___fallbackMaterial_3), (void*)L_77);
 		// fallback.count = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20173));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20175));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_78 = V_4;
 		NullCheck(L_78);
 		L_78->___count_4 = 0;
 		// m_fallbackMaterials.Add(key, fallback);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20174));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20176));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_79 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_80 = V_3;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_81 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20175));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20177));
 		NullCheck(L_79);
 		Dictionary_2_Add_m1A3132941BB2CB1E69AC7C4F5BCA92E1A70AF89F(L_79, L_80, L_81, Dictionary_2_Add_m1A3132941BB2CB1E69AC7C4F5BCA92E1A70AF89F_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20175));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20177));
 		// m_fallbackMaterialLookup.Add(fallbackMaterial.GetInstanceID(), key);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20176));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20178));
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_82 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_83 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20177));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20179));
 		NullCheck(L_83);
 		int32_t L_84;
 		L_84 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_83, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20177));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20179));
 		int64_t L_85 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20178));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20180));
 		NullCheck(L_82);
 		Dictionary_2_Add_m2A8FE66334E77EF575C4CC2DCBD6F927FA28FA83(L_82, L_84, L_85, Dictionary_2_Add_m2A8FE66334E77EF575C4CC2DCBD6F927FA28FA83_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20178));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20180));
 		// return fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20179));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20181));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_86 = V_5;
 		V_9 = L_86;
 		goto IL_01aa;
@@ -40810,7 +40810,7 @@ IL_014e:
 IL_01aa:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20180));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20182));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_87 = V_9;
 		return L_87;
 	}
@@ -40841,20 +40841,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_AddFallbackMaterialR
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___targetMaterial0));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_4));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_AddFallbackMaterialReference_m945320584E67E1D285BF1D99C63FD19799E94993_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20181));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20182));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20183));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20184));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20183));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20185));
 		// if (targetMaterial == null) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20184));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20186));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___targetMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20185));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20187));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20185));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20187));
 		V_2 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20186));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20188));
 		bool L_2 = V_2;
 		if (!L_2)
 		{
@@ -40863,33 +40863,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_AddFallbackMaterialR
 	}
 	{
 		// if (targetMaterial == null) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20187));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20189));
 		goto IL_004c;
 	}
 
 IL_000e:
 	{
 		// int sourceID = targetMaterial.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20188));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20190));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_3 = ___targetMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20189));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20191));
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20189));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20191));
 		V_0 = L_4;
 		// if (m_fallbackMaterialLookup.TryGetValue(sourceID, out key))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20190));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20192));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_5 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2;
 		int32_t L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20191));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20193));
 		NullCheck(L_5);
 		bool L_7;
 		L_7 = Dictionary_2_TryGetValue_mA2E5AA5A45D4B27504CAC12A1C46A3147BF4D420(L_5, L_6, (&V_1), Dictionary_2_TryGetValue_mA2E5AA5A45D4B27504CAC12A1C46A3147BF4D420_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20191));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20193));
 		V_3 = L_7;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20192));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20194));
 		bool L_8 = V_3;
 		if (!L_8)
 		{
@@ -40897,19 +40897,19 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20193));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20195));
 		// if (m_fallbackMaterials.TryGetValue(key, out fallback))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20194));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20196));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_9 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_10 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20195));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20197));
 		NullCheck(L_9);
 		bool L_11;
 		L_11 = Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7(L_9, L_10, (&V_4), Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20195));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20197));
 		V_5 = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20196));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20198));
 		bool L_12 = V_5;
 		if (!L_12)
 		{
@@ -40917,27 +40917,27 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20197));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20199));
 		// fallback.count += 1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20198));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20200));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_13 = V_4;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_14 = L_13;
 		NullCheck(L_14);
 		int32_t L_15 = L_14->___count_4;
 		NullCheck(L_14);
 		L_14->___count_4 = ((int32_t)il2cpp_codegen_add(L_15, 1));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20199));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20201));
 	}
 
 IL_004b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20200));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20202));
 	}
 
 IL_004c:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20201));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20203));
 		return;
 	}
 }
@@ -40969,21 +40969,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_CleanupFallbackMater
 	bool V_5 = false;
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_1), (&V_2), (&V_4));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_CleanupFallbackMaterials_m94C5B0D70AE592181468BEB3046F51FEDE61698B_RuntimeMethod_var, NULL, NULL, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20202));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20203));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20204));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20205));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20204));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20206));
 		// if (m_fallbackCleanupList.Count == 0) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20205));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20207));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_0 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20206));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20208));
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_mF849B5EEE2AD44A6B9D2597D6623123311D233EF_inline(L_0, List_1_get_Count_mF849B5EEE2AD44A6B9D2597D6623123311D233EF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20206));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20208));
 		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20207));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20209));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -40992,40 +40992,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_CleanupFallbackMater
 	}
 	{
 		// if (m_fallbackCleanupList.Count == 0) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20208));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20210));
 		goto IL_008d;
 	}
 
 IL_0014:
 	{
 		// for (int i = 0; i < m_fallbackCleanupList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20209));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20211));
 		V_1 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20210));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20212));
 		goto IL_006f;
 	}
 
 IL_0018:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20211));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20213));
 		// FallbackMaterial fallback = m_fallbackCleanupList[i];
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20212));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20214));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_3 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3;
 		int32_t L_4 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20213));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20215));
 		NullCheck(L_3);
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_5;
 		L_5 = List_1_get_Item_m6BA262EC09AEBAE0D13AFB2BD6BE5E4A4D710CAF(L_3, L_4, List_1_get_Item_m6BA262EC09AEBAE0D13AFB2BD6BE5E4A4D710CAF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20213));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20215));
 		V_2 = L_5;
 		// if (fallback.count < 1)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20214));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20216));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_6 = V_2;
 		NullCheck(L_6);
 		int32_t L_7 = L_6->___count_4;
 		V_3 = (bool)((((int32_t)L_7) < ((int32_t)1))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20215));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20217));
 		bool L_8 = V_3;
 		if (!L_8)
 		{
@@ -41033,57 +41033,57 @@ IL_0018:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20216));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20218));
 		// Material mat = fallback.fallbackMaterial;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20217));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20219));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_9 = V_2;
 		NullCheck(L_9);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_10 = L_9->___fallbackMaterial_3;
 		V_4 = L_10;
 		// m_fallbackMaterials.Remove(fallback.fallbackID);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20218));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20220));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_11 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_12 = V_2;
 		NullCheck(L_12);
 		int64_t L_13 = L_12->___fallbackID_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20219));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20221));
 		NullCheck(L_11);
 		bool L_14;
 		L_14 = Dictionary_2_Remove_m0B1FB5B98125CC418F0830E6C29E472327801EA8(L_11, L_13, Dictionary_2_Remove_m0B1FB5B98125CC418F0830E6C29E472327801EA8_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20219));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20221));
 		// m_fallbackMaterialLookup.Remove(mat.GetInstanceID());
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20220));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20222));
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_15 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_16 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20221));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20223));
 		NullCheck(L_16);
 		int32_t L_17;
 		L_17 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_16, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20221));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20222));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20223));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20224));
 		NullCheck(L_15);
 		bool L_18;
 		L_18 = Dictionary_2_Remove_mAA8C9537962D6491438A8C5A0660F3E2F57B2AF1(L_15, L_17, Dictionary_2_Remove_mAA8C9537962D6491438A8C5A0660F3E2F57B2AF1_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20222));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20224));
 		// Object.DestroyImmediate(mat);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20223));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20225));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_19 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20224));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20226));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(L_19, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20224));
-		// mat = null;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20225));
-		V_4 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
 		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20226));
+		// mat = null;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20227));
+		V_4 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20228));
 	}
 
 IL_006a:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20227));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20229));
 		// for (int i = 0; i < m_fallbackCleanupList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20228));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20230));
 		int32_t L_20 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_20, 1));
 	}
@@ -41091,17 +41091,17 @@ IL_006a:
 IL_006f:
 	{
 		// for (int i = 0; i < m_fallbackCleanupList.Count; i++)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20229));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20231));
 		int32_t L_21 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_22 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20230));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20232));
 		NullCheck(L_22);
 		int32_t L_23;
 		L_23 = List_1_get_Count_mF849B5EEE2AD44A6B9D2597D6623123311D233EF_inline(L_22, List_1_get_Count_mF849B5EEE2AD44A6B9D2597D6623123311D233EF_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20230));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20232));
 		V_5 = (bool)((((int32_t)L_21) < ((int32_t)L_23))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20231));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20233));
 		bool L_24 = V_5;
 		if (L_24)
 		{
@@ -41110,19 +41110,19 @@ IL_006f:
 	}
 	{
 		// m_fallbackCleanupList.Clear();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20232));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20234));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_25 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20233));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20235));
 		NullCheck(L_25);
 		List_1_Clear_m15D1B5C55AB1FABC489CA3F5D6BC655C7FBCAFBE_inline(L_25, List_1_Clear_m15D1B5C55AB1FABC489CA3F5D6BC655C7FBCAFBE_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20233));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20235));
 	}
 
 IL_008d:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20234));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20236));
 		return;
 	}
 }
@@ -41154,20 +41154,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_ReleaseFallbackMater
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___fallbackMaterial0));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_4));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_ReleaseFallbackMaterial_m270B368718E0FBEC8300F0C518603B6E917E6668_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20235));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20236));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20237));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20238));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20237));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20239));
 		// if (fallbackMaterial == null) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20238));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20240));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___fallbackMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20239));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20241));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20239));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20241));
 		V_2 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20240));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20242));
 		bool L_2 = V_2;
 		if (!L_2)
 		{
@@ -41176,33 +41176,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_ReleaseFallbackMater
 	}
 	{
 		// if (fallbackMaterial == null) return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20241));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20243));
 		goto IL_006f;
 	}
 
 IL_000e:
 	{
 		// int materialID = fallbackMaterial.GetInstanceID();
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20242));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20244));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_3 = ___fallbackMaterial0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20243));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20245));
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = Object_GetInstanceID_m554FF4073C9465F3835574CC084E68AAEEC6CC6A(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20243));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20245));
 		V_0 = L_4;
 		// if (m_fallbackMaterialLookup.TryGetValue(materialID, out key))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20244));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20246));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_t3082339123A235665A1142FCA16B1B8BB2D63735* L_5 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterialLookup_2;
 		int32_t L_6 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20245));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20247));
 		NullCheck(L_5);
 		bool L_7;
 		L_7 = Dictionary_2_TryGetValue_mA2E5AA5A45D4B27504CAC12A1C46A3147BF4D420(L_5, L_6, (&V_1), Dictionary_2_TryGetValue_mA2E5AA5A45D4B27504CAC12A1C46A3147BF4D420_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20245));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20247));
 		V_3 = L_7;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20246));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20248));
 		bool L_8 = V_3;
 		if (!L_8)
 		{
@@ -41210,19 +41210,19 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20247));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20249));
 		// if (m_fallbackMaterials.TryGetValue(key, out fallback))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20248));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20250));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		Dictionary_2_tA56BE02D40F1DBAC22A481335E08C4D99F1639C3* L_9 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackMaterials_1;
 		int64_t L_10 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20249));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20251));
 		NullCheck(L_9);
 		bool L_11;
 		L_11 = Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7(L_9, L_10, (&V_4), Dictionary_2_TryGetValue_m0F2D80D2CFD584AA57353F86C648E747069697B7_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20249));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20251));
 		V_5 = L_11;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20250));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20252));
 		bool L_12 = V_5;
 		if (!L_12)
 		{
@@ -41230,9 +41230,9 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20251));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20253));
 		// fallback.count -= 1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20252));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20254));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_13 = V_4;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_14 = L_13;
 		NullCheck(L_14);
@@ -41240,12 +41240,12 @@ IL_000e:
 		NullCheck(L_14);
 		L_14->___count_4 = ((int32_t)il2cpp_codegen_subtract(L_15, 1));
 		// if (fallback.count < 1)
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20253));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20255));
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_16 = V_4;
 		NullCheck(L_16);
 		int32_t L_17 = L_16->___count_4;
 		V_6 = (bool)((((int32_t)L_17) < ((int32_t)1))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20254));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20256));
 		bool L_18 = V_6;
 		if (!L_18)
 		{
@@ -41254,30 +41254,30 @@ IL_000e:
 	}
 	{
 		// m_fallbackCleanupList.Add(fallback);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20255));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20257));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		List_1_tF19ED1D6C2920203E92D507F2E8F86DD09132517* L_19 = ((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___m_fallbackCleanupList_3;
 		FallbackMaterial_tD9784FC3E6506CC46C3AB5ED0B012C6943A76A5D* L_20 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20256));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20258));
 		NullCheck(L_19);
 		List_1_Add_m8047259010D5BC3945101289558661DF6620846E_inline(L_19, L_20, List_1_Add_m8047259010D5BC3945101289558661DF6620846E_RuntimeMethod_var);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20256));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20258));
 	}
 
 IL_0067:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20257));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20259));
 	}
 
 IL_0068:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20258));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20260));
 	}
 
 IL_0069:
 	{
 		// isFallbackListDirty = true;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20259));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20261));
 		il2cpp_codegen_runtime_class_init_inline(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var);
 		((TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_StaticFields*)il2cpp_codegen_static_fields_for(TMP_MaterialManager_t67E8437E12407A99A3E58F6033B8D3749A321A96_il2cpp_TypeInfo_var))->___isFallbackListDirty_4 = (bool)1;
 	}
@@ -41285,7 +41285,7 @@ IL_0069:
 IL_006f:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20260));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20262));
 		return;
 	}
 }
@@ -41312,21 +41312,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_CopyMaterialPresetPr
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___source0), (&___destination1));
 	DECLARE_METHOD_LOCALS(methodExecutionContextLocals, (&V_0), (&V_1), (&V_2), (&V_3), (&V_4), (&V_5));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, TMP_MaterialManager_CopyMaterialPresetProperties_m091CA38EAB2582F1792E94216E05706A13DD3965_RuntimeMethod_var, NULL, methodExecutionContextParameters, methodExecutionContextLocals);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20261));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20262));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20263));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20264));
 	int32_t G_B3_0 = 0;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20263));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20265));
 		// if (!source.HasProperty(ShaderUtilities.ID_GradientScale) || !destination.HasProperty(ShaderUtilities.ID_GradientScale))
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20264));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20266));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = ___source0;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_1 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20265));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20267));
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = Material_HasProperty_m52E2D3BC3049B8B228149E023CD73C34B05A5222(L_0, L_1, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20265));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20267));
 		if (!L_2)
 		{
 			goto IL_001e;
@@ -41336,11 +41336,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_MaterialManager_CopyMaterialPresetPr
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_3 = ___destination1;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_4 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20266));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20268));
 		NullCheck(L_3);
 		bool L_5;
 		L_5 = Material_HasProperty_m52E2D3BC3049B8B228149E023CD73C34B05A5222(L_3, L_4, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20266));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20268));
 		G_B3_0 = ((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
 		goto IL_001f;
 	}
@@ -41353,7 +41353,7 @@ IL_001e:
 IL_001f:
 	{
 		V_6 = (bool)G_B3_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20267));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20269));
 		bool L_6 = V_6;
 		if (!L_6)
 		{
@@ -41362,154 +41362,154 @@ IL_001f:
 	}
 	{
 		// return;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20268));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20270));
 		goto IL_00d9;
 	}
 
 IL_002a:
 	{
 		// Texture dst_texture = destination.GetTexture(ShaderUtilities.ID_MainTex);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20269));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20271));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_7 = ___destination1;
 		il2cpp_codegen_runtime_class_init_inline(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var);
 		int32_t L_8 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_MainTex_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20270));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20272));
 		NullCheck(L_7);
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_9;
 		L_9 = Material_GetTexture_mE5D02B13E7AF35ABAE4FFC49E69FAF8F36F91191(L_7, L_8, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20270));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20272));
 		V_0 = L_9;
 		// float dst_gradientScale = destination.GetFloat(ShaderUtilities.ID_GradientScale);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20271));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20273));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_10 = ___destination1;
 		int32_t L_11 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20272));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20274));
 		NullCheck(L_10);
 		float L_12;
 		L_12 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_10, L_11, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20272));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20274));
 		V_1 = L_12;
 		// float dst_texWidth = destination.GetFloat(ShaderUtilities.ID_TextureWidth);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20273));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20275));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_13 = ___destination1;
 		int32_t L_14 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureWidth_26;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20274));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20276));
 		NullCheck(L_13);
 		float L_15;
 		L_15 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_13, L_14, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20274));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20276));
 		V_2 = L_15;
 		// float dst_texHeight = destination.GetFloat(ShaderUtilities.ID_TextureHeight);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20275));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20277));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_16 = ___destination1;
 		int32_t L_17 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureHeight_27;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20276));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20278));
 		NullCheck(L_16);
 		float L_18;
 		L_18 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_16, L_17, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20276));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20278));
 		V_3 = L_18;
 		// float dst_weightNormal = destination.GetFloat(ShaderUtilities.ID_WeightNormal);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20277));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20279));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_19 = ___destination1;
 		int32_t L_20 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightNormal_12;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20278));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20280));
 		NullCheck(L_19);
 		float L_21;
 		L_21 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_19, L_20, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20278));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20280));
 		V_4 = L_21;
 		// float dst_weightBold = destination.GetFloat(ShaderUtilities.ID_WeightBold);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20279));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20281));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_22 = ___destination1;
 		int32_t L_23 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightBold_13;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20280));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20282));
 		NullCheck(L_22);
 		float L_24;
 		L_24 = Material_GetFloat_m52462F4AEDE20758BFB592B11DE83A79D2774932(L_22, L_23, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20280));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20282));
 		V_5 = L_24;
 		// destination.CopyPropertiesFromMaterial(source);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20281));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20283));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_25 = ___destination1;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_26 = ___source0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20282));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20284));
 		NullCheck(L_25);
 		Material_CopyPropertiesFromMaterial_m4148227E6A0B8E66315D8115F656B7F8BEAE915B(L_25, L_26, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20282));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20284));
 		// destination.shaderKeywords = source.shaderKeywords;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20283));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20285));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_27 = ___destination1;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_28 = ___source0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20284));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20286));
 		NullCheck(L_28);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_29;
 		L_29 = Material_get_shaderKeywords_m11982F09EED6BB0A892342E1A72AEA470C44B105(L_28, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20284));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20285));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20286));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20287));
 		NullCheck(L_27);
 		Material_set_shaderKeywords_mD650CF82B2DBB75F001E373E2E1ACA30876F3AB8(L_27, L_29, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20285));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20287));
 		// destination.SetTexture(ShaderUtilities.ID_MainTex, dst_texture);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20286));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20288));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_30 = ___destination1;
 		int32_t L_31 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_MainTex_0;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_32 = V_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20287));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20289));
 		NullCheck(L_30);
 		Material_SetTexture_mA9F8461850AAB88F992E9C6FA6F24C2E050B83FD(L_30, L_31, L_32, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20287));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20289));
 		// destination.SetFloat(ShaderUtilities.ID_GradientScale, dst_gradientScale);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20288));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20290));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_33 = ___destination1;
 		int32_t L_34 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_GradientScale_21;
 		float L_35 = V_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20289));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20291));
 		NullCheck(L_33);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_33, L_34, L_35, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20289));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20291));
 		// destination.SetFloat(ShaderUtilities.ID_TextureWidth, dst_texWidth);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20290));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20292));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_36 = ___destination1;
 		int32_t L_37 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureWidth_26;
 		float L_38 = V_2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20291));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20293));
 		NullCheck(L_36);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_36, L_37, L_38, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20291));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20293));
 		// destination.SetFloat(ShaderUtilities.ID_TextureHeight, dst_texHeight);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20292));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20294));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_39 = ___destination1;
 		int32_t L_40 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_TextureHeight_27;
 		float L_41 = V_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20293));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20295));
 		NullCheck(L_39);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_39, L_40, L_41, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20293));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20295));
 		// destination.SetFloat(ShaderUtilities.ID_WeightNormal, dst_weightNormal);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20294));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20296));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_42 = ___destination1;
 		int32_t L_43 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightNormal_12;
 		float L_44 = V_4;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20295));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20297));
 		NullCheck(L_42);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_42, L_43, L_44, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20295));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20297));
 		// destination.SetFloat(ShaderUtilities.ID_WeightBold, dst_weightBold);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20296));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20298));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_45 = ___destination1;
 		int32_t L_46 = ((ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_StaticFields*)il2cpp_codegen_static_fields_for(ShaderUtilities_t9BE0345DF949745FC0EB9A1119E204F2F129298F_il2cpp_TypeInfo_var))->___ID_WeightBold_13;
 		float L_47 = V_5;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20297));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20299));
 		NullCheck(L_45);
 		Material_SetFloat_m3ECFD92072347A8620254F014865984FA68211A8(L_45, L_46, L_47, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20297));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20299));
 	}
 
 IL_00d9:
 	{
 		// }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20298));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnity_TextMeshPro + 20300));
 		return;
 	}
 }
@@ -41533,25 +41533,25 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7C
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___r0), (&___g1), (&___b2), (&___a3));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9555));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9556));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9566));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9567));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9557));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9558));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9568));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9569));
 		__this->___rgba_0 = 0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9559));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9570));
 		uint8_t L_0 = ___r0;
 		__this->___r_1 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9560));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9571));
 		uint8_t L_1 = ___g1;
 		__this->___g_2 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9561));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9572));
 		uint8_t L_2 = ___b2;
 		__this->___b_3 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9562));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9573));
 		uint8_t L_3 = ___a3;
 		__this->___a_4 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9563));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9574));
 		return;
 	}
 }
@@ -41570,15 +41570,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D2
 	float V_2 = 0.0f;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0), (&___min1), (&___max2));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10177));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10178));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10188));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10189));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10179));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10180));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10190));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10191));
 		float L_0 = ___value0;
 		float L_1 = ___min1;
 		V_0 = (bool)((((float)L_0) < ((float)L_1))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10181));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10192));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -41586,20 +41586,20 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D2
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10182));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10193));
 		float L_3 = ___min1;
 		___value0 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10183));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10194));
 		goto IL_0019;
 	}
 
 IL_000e:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10184));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10195));
 		float L_4 = ___value0;
 		float L_5 = ___max2;
 		V_1 = (bool)((((float)L_4) > ((float)L_5))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10185));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10196));
 		bool L_6 = V_1;
 		if (!L_6)
 		{
@@ -41607,14 +41607,14 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10186));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10197));
 		float L_7 = ___max2;
 		___value0 = L_7;
 	}
 
 IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10187));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10198));
 		float L_8 = ___value0;
 		V_2 = L_8;
 		goto IL_001d;
@@ -41622,7 +41622,7 @@ IL_0019:
 
 IL_001d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10188));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10199));
 		float L_9 = V_2;
 		return L_9;
 	}
@@ -41639,23 +41639,23 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___r0), (&___g1), (&___b2), (&___a3));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9605));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9606));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9616));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9617));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9607));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9608));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9618));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9619));
 		float L_0 = ___r0;
 		__this->___r_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9609));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9620));
 		float L_1 = ___g1;
 		__this->___g_1 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9610));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9621));
 		float L_2 = ___b2;
 		__this->___b_2 = L_2;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9611));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9622));
 		float L_3 = ___a3;
 		__this->___a_3 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9612));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9623));
 		return;
 	}
 }
@@ -41671,17 +41671,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___x0), (&___y1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8111));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8112));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8122));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8123));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8113));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8114));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8124));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8125));
 		float L_0 = ___x0;
 		__this->___x_0 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8115));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8126));
 		float L_1 = ___y1;
 		__this->___y_1 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8116));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8127));
 		return;
 	}
 }
@@ -41698,11 +41698,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8316));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8317));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8327));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8328));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8318));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8319));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8329));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8330));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ((Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_StaticFields*)il2cpp_codegen_static_fields_for(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var))->___zeroVector_2;
 		V_0 = L_0;
 		goto IL_0009;
@@ -41710,7 +41710,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 
 IL_0009:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8320));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8331));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1 = V_0;
 		return L_1;
 	}
@@ -41727,23 +41727,23 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9747));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9748));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9758));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9759));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9749));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9750));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9751));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9760));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9761));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9762));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (1.0f), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9751));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9762));
 		V_0 = L_0;
 		goto IL_001d;
 	}
 
 IL_001d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9752));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9763));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
 		return L_1;
 	}
@@ -41760,26 +41760,26 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0
 	float V_0 = 0.0f;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1), (&___t2));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10212));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10213));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10223));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10224));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10214));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10215));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10225));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10226));
 		float L_0 = ___a0;
 		float L_1 = ___b1;
 		float L_2 = ___a0;
 		float L_3 = ___t2;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10216));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10227));
 		float L_4;
 		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_3, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10216));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10227));
 		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
 		goto IL_0010;
 	}
 
 IL_0010:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10217));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10228));
 		float L_5 = V_0;
 		return L_5;
 	}
@@ -41799,15 +41799,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5
 	int32_t V_2 = 0;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0), (&___min1), (&___max2));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10189));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10190));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10200));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10201));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10191));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10192));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10202));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10203));
 		int32_t L_0 = ___value0;
 		int32_t L_1 = ___min1;
 		V_0 = (bool)((((int32_t)L_0) < ((int32_t)L_1))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10193));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10204));
 		bool L_2 = V_0;
 		if (!L_2)
 		{
@@ -41815,20 +41815,20 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10194));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10205));
 		int32_t L_3 = ___min1;
 		___value0 = L_3;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10195));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10206));
 		goto IL_0019;
 	}
 
 IL_000e:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10196));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10207));
 		int32_t L_4 = ___value0;
 		int32_t L_5 = ___max2;
 		V_1 = (bool)((((int32_t)L_4) > ((int32_t)L_5))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10197));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10208));
 		bool L_6 = V_1;
 		if (!L_6)
 		{
@@ -41836,14 +41836,14 @@ IL_000e:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10198));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10209));
 		int32_t L_7 = ___max2;
 		___value0 = L_7;
 	}
 
 IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10199));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10210));
 		int32_t L_8 = ___value0;
 		V_2 = L_8;
 		goto IL_001d;
@@ -41851,7 +41851,7 @@ IL_0019:
 
 IL_001d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10200));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10211));
 		int32_t L_9 = V_2;
 		return L_9;
 	}
@@ -41869,11 +41869,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8249));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8250));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8260));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8261));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8251));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8252));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8262));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8263));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
 		float L_1 = L_0.___x_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b1;
@@ -41882,18 +41882,18 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		float L_5 = L_4.___y_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b1;
 		float L_7 = L_6.___y_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8253));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8264));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_8), ((float)il2cpp_codegen_subtract(L_1, L_3)), ((float)il2cpp_codegen_subtract(L_5, L_7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8253));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8264));
 		V_0 = L_8;
 		goto IL_0023;
 	}
 
 IL_0023:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8254));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8265));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_0;
 		return L_9;
 	}
@@ -41911,27 +41911,27 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___v0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8304));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8305));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8315));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8316));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8306));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8307));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8317));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8318));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___v0;
 		float L_1 = L_0.___x_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___v0;
 		float L_3 = L_2.___y_3;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8308));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8319));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_4), L_1, L_3, /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8308));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8319));
 		V_0 = L_4;
 		goto IL_0015;
 	}
 
 IL_0015:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8309));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8320));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5 = V_0;
 		return L_5;
 	}
@@ -41949,11 +41949,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8243));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8244));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8254));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8255));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8245));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8246));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8256));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8257));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
 		float L_1 = L_0.___x_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b1;
@@ -41962,18 +41962,18 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		float L_5 = L_4.___y_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b1;
 		float L_7 = L_6.___y_1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8247));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8258));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_8), ((float)il2cpp_codegen_add(L_1, L_3)), ((float)il2cpp_codegen_add(L_5, L_7)), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8247));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8258));
 		V_0 = L_8;
 		goto IL_0023;
 	}
 
 IL_0023:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8248));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8259));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_0;
 		return L_9;
 	}
@@ -41995,17 +41995,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_Item_m163510BFC
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___index0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector3_get_Item_m163510BFC2F7BFAD1B601DC9F3606B799CF199F2_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9235));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9236));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9246));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9247));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9237));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9238));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9248));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9249));
 		int32_t L_0 = ___index0;
 		V_1 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9239));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9250));
 		int32_t L_1 = V_1;
 		V_0 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9240));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9251));
 		int32_t L_2 = V_0;
 		switch (L_2)
 		{
@@ -42029,7 +42029,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_Item_m163510BFC
 
 IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9241));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9252));
 		float L_3 = __this->___x_2;
 		V_2 = L_3;
 		goto IL_003f;
@@ -42037,7 +42037,7 @@ IL_0019:
 
 IL_0022:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9242));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9253));
 		float L_4 = __this->___y_3;
 		V_2 = L_4;
 		goto IL_003f;
@@ -42045,7 +42045,7 @@ IL_0022:
 
 IL_002b:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9243));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9254));
 		float L_5 = __this->___z_4;
 		V_2 = L_5;
 		goto IL_003f;
@@ -42053,18 +42053,18 @@ IL_002b:
 
 IL_0034:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9244));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9245));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9255));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9256));
 		IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82* L_6 = (IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82_il2cpp_TypeInfo_var)));
 		NullCheck(L_6);
 		IndexOutOfRangeException__ctor_mFD06819F05B815BE2D6E826D4E04F4C449D0A425(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral27C7727EAAAD675C621F6257F2BD5190CE343979)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9245));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9256));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Vector3_get_Item_m163510BFC2F7BFAD1B601DC9F3606B799CF199F2_RuntimeMethod_var)));
 	}
 
 IL_003f:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9246));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9257));
 		float L_7 = V_2;
 		return L_7;
 	}
@@ -42086,17 +42086,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector2_get_Item_m18BC65BB0
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___index0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector2_get_Item_m18BC65BB0512B16A1F9C8BE4B83A3E7BBAD7064D_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8087));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8088));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8098));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8099));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8089));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8090));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8100));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8101));
 		int32_t L_0 = ___index0;
 		V_1 = L_0;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8091));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8102));
 		int32_t L_1 = V_1;
 		V_0 = L_1;
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8092));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8103));
 		int32_t L_2 = V_0;
 		if (!L_2)
 		{
@@ -42121,7 +42121,7 @@ IL_000a:
 
 IL_0010:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8093));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8104));
 		float L_4 = __this->___x_0;
 		V_2 = L_4;
 		goto IL_002d;
@@ -42129,7 +42129,7 @@ IL_0010:
 
 IL_0019:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8094));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8105));
 		float L_5 = __this->___y_1;
 		V_2 = L_5;
 		goto IL_002d;
@@ -42137,18 +42137,18 @@ IL_0019:
 
 IL_0022:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8095));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8096));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8106));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8107));
 		IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82* L_6 = (IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IndexOutOfRangeException_t7ECB35264FB6CA8FAA516BD958F4B2ADC78E8A82_il2cpp_TypeInfo_var)));
 		NullCheck(L_6);
 		IndexOutOfRangeException__ctor_mFD06819F05B815BE2D6E826D4E04F4C449D0A425(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4379B0249B80A34ABC2748B5F0D030FD7D4E007C)), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8096));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8107));
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Vector2_get_Item_m18BC65BB0512B16A1F9C8BE4B83A3E7BBAD7064D_RuntimeMethod_var)));
 	}
 
 IL_002d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8097));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 8108));
 		float L_7 = V_2;
 		return L_7;
 	}
@@ -42166,43 +42166,43 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_Approximately_m1DADD01
 	bool V_0 = false;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10242));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10243));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10253));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10254));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10244));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10245));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10255));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10256));
 		float L_0 = ___b1;
 		float L_1 = ___a0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10246));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10257));
 		float L_2;
 		L_2 = fabsf(((float)il2cpp_codegen_subtract(L_0, L_1)));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10246));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10257));
 		float L_3 = ___a0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10247));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10258));
 		float L_4;
 		L_4 = fabsf(L_3);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10247));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10258));
 		float L_5 = ___b1;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10248));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10259));
 		float L_6;
 		L_6 = fabsf(L_5);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10248));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10249));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10259));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10260));
 		float L_7;
 		L_7 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_4, L_6, NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10249));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10260));
 		float L_8 = ((Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields*)il2cpp_codegen_static_fields_for(Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_il2cpp_TypeInfo_var))->___Epsilon_0;
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10250));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10261));
 		float L_9;
 		L_9 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(((float)il2cpp_codegen_multiply((9.99999997E-07f), L_7)), ((float)il2cpp_codegen_multiply(L_8, (8.0f))), NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10250));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10261));
 		V_0 = (bool)((((float)L_2) < ((float)L_9))? 1 : 0);
 		goto IL_0035;
 	}
 
 IL_0035:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10251));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10262));
 		bool L_10 = V_0;
 		return L_10;
 	}
@@ -42220,11 +42220,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9412));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9413));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9423));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9424));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9414));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9415));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9425));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9426));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector_5;
 		V_0 = L_0;
 		goto IL_0009;
@@ -42232,7 +42232,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 
 IL_0009:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9416));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9427));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
 	}
@@ -42250,11 +42250,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9417));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9418));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9428));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9429));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9419));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9420));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9430));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9431));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___oneVector_6;
 		V_0 = L_0;
 		goto IL_0009;
@@ -42262,7 +42262,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 
 IL_0009:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9421));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9432));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
 	}
@@ -42279,23 +42279,23 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_RuntimeMethod_var, NULL, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9783));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9784));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9794));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9795));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9785));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9786));
-		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9787));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9796));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9797));
+		STORE_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9798));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.0f), (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9787));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9798));
 		V_0 = L_0;
 		goto IL_001d;
 	}
 
 IL_001d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9788));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 9799));
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
 		return L_1;
 	}
@@ -42401,11 +42401,11 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 	}
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_RuntimeMethod_var, methodExecutionContextThis, NULL, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20569));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20570));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20582));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20583));
 	{
 		// public Vector2 position { get; set; }
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20571));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_UI + 20584));
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CpositionU3Ek__BackingField_13;
 		return L_0;
 	}
@@ -42422,10 +42422,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void WaitForSecondsRealtime_set_w
 	DECLARE_METHOD_THIS(methodExecutionContextThis, (&__this));
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, WaitForSecondsRealtime_set_waitTime_m8317E2B7A2B2DC4E4A1B0CD0F9D4479294B51FB5_RuntimeMethod_var, methodExecutionContextThis, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7600));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7601));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7611));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7612));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7602));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 7613));
 		float L_0 = ___value0;
 		__this->___U3CwaitTimeU3Ek__BackingField_0 = L_0;
 		return;
@@ -42824,14 +42824,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA83
 	bool V_2 = false;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___value0));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10201));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10202));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10212));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10213));
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10203));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10204));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10214));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10215));
 		float L_0 = ___value0;
 		V_0 = (bool)((((float)L_0) < ((float)(0.0f)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10205));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10216));
 		bool L_1 = V_0;
 		if (!L_1)
 		{
@@ -42839,17 +42839,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA83
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10206));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10217));
 		V_1 = (0.0f);
 		goto IL_002d;
 	}
 
 IL_0015:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10207));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10218));
 		float L_2 = ___value0;
 		V_2 = (bool)((((float)L_2) > ((float)(1.0f)))? 1 : 0);
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10208));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10219));
 		bool L_3 = V_2;
 		if (!L_3)
 		{
@@ -42857,14 +42857,14 @@ IL_0015:
 		}
 	}
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10209));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10220));
 		V_1 = (1.0f);
 		goto IL_002d;
 	}
 
 IL_0029:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10210));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10221));
 		float L_4 = ___value0;
 		V_1 = L_4;
 		goto IL_002d;
@@ -42872,7 +42872,7 @@ IL_0029:
 
 IL_002d:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10211));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10222));
 		float L_5 = V_1;
 		return L_5;
 	}
@@ -42889,12 +42889,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76
 	float V_0 = 0.0f;
 	DECLARE_METHOD_PARAMS(methodExecutionContextParameters, (&___a0), (&___b1));
 	DECLARE_METHOD_EXEC_CTX(methodExecutionContext, Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_RuntimeMethod_var, NULL, methodExecutionContextParameters, NULL);
-	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10102));
-	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10103));
+	CHECK_METHOD_ENTRY_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10113));
+	CHECK_METHOD_EXIT_SEQ_POINT(methodExitChecker, methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10114));
 	float G_B3_0 = 0.0f;
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10104));
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10105));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10115));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10116));
 		float L_0 = ___a0;
 		float L_1 = ___b1;
 		if ((((float)L_0) > ((float)L_1)))
@@ -42922,7 +42922,7 @@ IL_0009:
 
 IL_000c:
 	{
-		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10106));
+		CHECK_SEQ_POINT(methodExecutionContext, (g_sequencePointsUnityEngine_CoreModule + 10117));
 		float L_4 = V_0;
 		return L_4;
 	}

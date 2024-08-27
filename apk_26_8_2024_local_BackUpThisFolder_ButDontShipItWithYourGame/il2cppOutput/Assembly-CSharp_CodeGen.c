@@ -1272,1106 +1272,1108 @@ extern void ShowMonitorStationOMT_Update_m60C6739933C19BD27418F007BC2E6063E45913
 extern void ShowMonitorStationOMT_OnShowingMonitorStation_m973B4C7A70D28894FF9E2DC27A89E7A8CF233497 (void);
 // 0x00000276 System.Void ShowMonitorStationOMT::ReturnCanvas()
 extern void ShowMonitorStationOMT_ReturnCanvas_m1A5B02AC032315B66C79190D3BD2694D492D7AC6 (void);
-// 0x00000277 System.Void ShowMonitorStationOMT::.ctor()
+// 0x00000277 System.Boolean ShowMonitorStationOMT::IsInputTriggered(UnityEngine.Ray&,UnityEngine.RaycastHit&)
+extern void ShowMonitorStationOMT_IsInputTriggered_m6821A6190C63696E1493CA6A3ADAF2BE7782F376 (void);
+// 0x00000278 System.Void ShowMonitorStationOMT::.ctor()
 extern void ShowMonitorStationOMT__ctor_mBE83680B29600A86CA957F8C7C856FF5ED19D27B (void);
-// 0x00000278 System.Void ShowMonitorTag::Start()
+// 0x00000279 System.Void ShowMonitorTag::Start()
 extern void ShowMonitorTag_Start_m1AF5C7C9B3CB9D777ECEE40040D312A23A93A935 (void);
-// 0x00000279 System.Void ShowMonitorTag::Update()
+// 0x0000027A System.Void ShowMonitorTag::Update()
 extern void ShowMonitorTag_Update_m8B8D3F9A7A1BD99647D72E7792C86930866E3BA4 (void);
-// 0x0000027A System.Void ShowMonitorTag::OnShowingMonitorTag()
+// 0x0000027B System.Void ShowMonitorTag::OnShowingMonitorTag()
 extern void ShowMonitorTag_OnShowingMonitorTag_m50F313E0B1A5B8DE27B75EB6F0791158B4CCE9B9 (void);
-// 0x0000027B System.Void ShowMonitorTag::ReturnCanvas()
+// 0x0000027C System.Void ShowMonitorTag::ReturnCanvas()
 extern void ShowMonitorTag_ReturnCanvas_m28D3D5E0E97EE66BD84C7A9B4AC564529F839D31 (void);
-// 0x0000027C System.Void ShowMonitorTag::.ctor()
+// 0x0000027D System.Void ShowMonitorTag::.ctor()
 extern void ShowMonitorTag__ctor_m7D719135E4D10A70B2A559F7CD16AFD79DD0FB51 (void);
-// 0x0000027D System.Void TagContent::Start()
+// 0x0000027E System.Void TagContent::Start()
 extern void TagContent_Start_m7E83D6A9DB8AB172C1B8545621D6CF5EE588DA3C (void);
-// 0x0000027E System.Void TagContent::Update()
+// 0x0000027F System.Void TagContent::Update()
 extern void TagContent_Update_mA619A09814766FD609D63A39B6C2BD8396561C1C (void);
-// 0x0000027F System.Void TagContent::.ctor()
+// 0x00000280 System.Void TagContent::.ctor()
 extern void TagContent__ctor_mD476AC0F97D5AAB23177B16F3406FB73DCCDC47F (void);
-// 0x00000280 System.Void TaskCycle::Start()
+// 0x00000281 System.Void TaskCycle::Start()
 extern void TaskCycle_Start_mCA89C34C80B7C87B05A7B7E72DAFF0532FC17473 (void);
-// 0x00000281 System.Void TaskCycle::Update()
+// 0x00000282 System.Void TaskCycle::Update()
 extern void TaskCycle_Update_mD9915C935515DC478279B76B5EE621006C8F4B8E (void);
-// 0x00000282 System.Void TaskCycle::.ctor()
+// 0x00000283 System.Void TaskCycle::.ctor()
 extern void TaskCycle__ctor_mDFDF5EDD0F0B7998114ADD6E63E58B5E05E35FC9 (void);
-// 0x00000283 System.Void WiringPanelNavigation::navigateToWiringPanel()
+// 0x00000284 System.Void WiringPanelNavigation::navigateToWiringPanel()
 extern void WiringPanelNavigation_navigateToWiringPanel_m44DCE0FE4A851739D23F42528FE5376AEF7448B0 (void);
-// 0x00000284 System.Void WiringPanelNavigation::navigatePop()
+// 0x00000285 System.Void WiringPanelNavigation::navigatePop()
 extern void WiringPanelNavigation_navigatePop_m3248188BF60340D2A0278A219AF17AE7D6CC13A8 (void);
-// 0x00000285 System.Void WiringPanelNavigation::.ctor()
+// 0x00000286 System.Void WiringPanelNavigation::.ctor()
 extern void WiringPanelNavigation__ctor_mD1508244CAC03765B3F83DB442E43D66D145CBFB (void);
-// 0x00000286 System.Void Turn_On_Off_Camera::Start()
+// 0x00000287 System.Void Turn_On_Off_Camera::Start()
 extern void Turn_On_Off_Camera_Start_m2D396F9D4E3DBB8B120BF4363248344B313C11BB (void);
-// 0x00000287 System.Void Turn_On_Off_Camera::Turn_On_Off_AR_Camera()
+// 0x00000288 System.Void Turn_On_Off_Camera::Turn_On_Off_AR_Camera()
 extern void Turn_On_Off_Camera_Turn_On_Off_AR_Camera_mA5B515C95E01101D72AA6589F636EF5A49855471 (void);
-// 0x00000288 System.Void Turn_On_Off_Camera::.ctor()
+// 0x00000289 System.Void Turn_On_Off_Camera::.ctor()
 extern void Turn_On_Off_Camera__ctor_m3B2EEA82E841E30868868A6D401629B164E7A8B5 (void);
-// 0x00000289 System.Void UILogin::Awake()
+// 0x0000028A System.Void UILogin::Awake()
 extern void UILogin_Awake_m17206A7845E0A977BAFFC27DBB8A1F63D01BE201 (void);
-// 0x0000028A System.Void UILogin::Start()
+// 0x0000028B System.Void UILogin::Start()
 extern void UILogin_Start_m43BC034AF078ACDF6C3DBBB315B2BD9C83491243 (void);
-// 0x0000028B System.Void UILogin::LoginButtonClicked()
+// 0x0000028C System.Void UILogin::LoginButtonClicked()
 extern void UILogin_LoginButtonClicked_m653603E5D4F1BDFBE26210D03914F339155BCFA7 (void);
-// 0x0000028C System.Void UILogin::ShowDialog(System.String)
+// 0x0000028D System.Void UILogin::ShowDialog(System.String)
 extern void UILogin_ShowDialog_m0191300E47722A4AB326FC4CAAEDA99B70F191FF (void);
-// 0x0000028D System.Threading.Tasks.Task UILogin::WaitingTime(System.Int32)
+// 0x0000028E System.Threading.Tasks.Task UILogin::WaitingTime(System.Int32)
 extern void UILogin_WaitingTime_m867B01AA63A5108BEDF87AC473928160FEADBD35 (void);
-// 0x0000028E System.Void UILogin::.ctor()
+// 0x0000028F System.Void UILogin::.ctor()
 extern void UILogin__ctor_m26D3C870D700943DE15F7A7686AB9D5C91059F1B (void);
-// 0x0000028F System.Void UILogin/<ShowDialog>d__12::.ctor()
+// 0x00000290 System.Void UILogin/<ShowDialog>d__12::.ctor()
 extern void U3CShowDialogU3Ed__12__ctor_m8212B8A3E440686345EE428394D9B1864E175B63 (void);
-// 0x00000290 System.Void UILogin/<ShowDialog>d__12::MoveNext()
+// 0x00000291 System.Void UILogin/<ShowDialog>d__12::MoveNext()
 extern void U3CShowDialogU3Ed__12_MoveNext_m379231B65BBF27057F71ACF0616AF3B8F25C7FBE (void);
-// 0x00000291 System.Void UILogin/<ShowDialog>d__12::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+// 0x00000292 System.Void UILogin/<ShowDialog>d__12::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 extern void U3CShowDialogU3Ed__12_SetStateMachine_mEE00845A183FF3B2F497B326991B5AC52C1C19A0 (void);
-// 0x00000292 System.Void UILogin/<WaitingTime>d__13::.ctor()
+// 0x00000293 System.Void UILogin/<WaitingTime>d__13::.ctor()
 extern void U3CWaitingTimeU3Ed__13__ctor_m015E8DCD8CD08540644E64BF67902B08C877F8AD (void);
-// 0x00000293 System.Void UILogin/<WaitingTime>d__13::MoveNext()
+// 0x00000294 System.Void UILogin/<WaitingTime>d__13::MoveNext()
 extern void U3CWaitingTimeU3Ed__13_MoveNext_m9DB58285EE3FDFF02DDC3E7C4951F650546C04F0 (void);
-// 0x00000294 System.Void UILogin/<WaitingTime>d__13::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+// 0x00000295 System.Void UILogin/<WaitingTime>d__13::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 extern void U3CWaitingTimeU3Ed__13_SetStateMachine_m15392C649AFBED3E6976316FA7AC83ED04C768F4 (void);
-// 0x00000295 System.Void ChatController::OnEnable()
+// 0x00000296 System.Void ChatController::OnEnable()
 extern void ChatController_OnEnable_m025CE203564D82A1CDCE5E5719DB07E29811D0B7 (void);
-// 0x00000296 System.Void ChatController::OnDisable()
+// 0x00000297 System.Void ChatController::OnDisable()
 extern void ChatController_OnDisable_mD49D03719CAEBB3F59F24A7FA8F4FD30C8B54E46 (void);
-// 0x00000297 System.Void ChatController::AddToChatOutput(System.String)
+// 0x00000298 System.Void ChatController::AddToChatOutput(System.String)
 extern void ChatController_AddToChatOutput_m9AB8FA8A32EA23F2E55795D8301ED0BF6A59F722 (void);
-// 0x00000298 System.Void ChatController::.ctor()
+// 0x00000299 System.Void ChatController::.ctor()
 extern void ChatController__ctor_m39C05E9EB8C8C40664D5655BCAB9EEBCB31F9719 (void);
-// 0x00000299 System.Void DropdownSample::OnButtonClick()
+// 0x0000029A System.Void DropdownSample::OnButtonClick()
 extern void DropdownSample_OnButtonClick_mF83641F913F3455A3AE6ADCEA5DEB2A323FCB58F (void);
-// 0x0000029A System.Void DropdownSample::.ctor()
+// 0x0000029B System.Void DropdownSample::.ctor()
 extern void DropdownSample__ctor_m0F0C6DD803E99B2C15F3369ABD94EC273FADC75B (void);
-// 0x0000029B System.Void EnvMapAnimator::Awake()
+// 0x0000029C System.Void EnvMapAnimator::Awake()
 extern void EnvMapAnimator_Awake_m1D86ECDDD4A7A6DF98748B11BAC74D2D3B2F9435 (void);
-// 0x0000029C System.Collections.IEnumerator EnvMapAnimator::Start()
+// 0x0000029D System.Collections.IEnumerator EnvMapAnimator::Start()
 extern void EnvMapAnimator_Start_mB8A6567BB58BDFD0FC70980AFA952748DF1E80E9 (void);
-// 0x0000029D System.Void EnvMapAnimator::.ctor()
+// 0x0000029E System.Void EnvMapAnimator::.ctor()
 extern void EnvMapAnimator__ctor_m465E8527E49D1AA672A9A8A3B96FE78C24D11138 (void);
-// 0x0000029E System.Void EnvMapAnimator/<Start>d__4::.ctor(System.Int32)
+// 0x0000029F System.Void EnvMapAnimator/<Start>d__4::.ctor(System.Int32)
 extern void U3CStartU3Ed__4__ctor_m432062D94FDEF42B01FAB69EBC06A4D137C525C2 (void);
-// 0x0000029F System.Void EnvMapAnimator/<Start>d__4::System.IDisposable.Dispose()
+// 0x000002A0 System.Void EnvMapAnimator/<Start>d__4::System.IDisposable.Dispose()
 extern void U3CStartU3Ed__4_System_IDisposable_Dispose_m8088B5A404D1CB754E73D37137F9A288E47E7E9C (void);
-// 0x000002A0 System.Boolean EnvMapAnimator/<Start>d__4::MoveNext()
+// 0x000002A1 System.Boolean EnvMapAnimator/<Start>d__4::MoveNext()
 extern void U3CStartU3Ed__4_MoveNext_mF689BF83350416D2071533C92042BF12AC52F0C0 (void);
-// 0x000002A1 System.Object EnvMapAnimator/<Start>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002A2 System.Object EnvMapAnimator/<Start>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CStartU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA3CCB9B113B234F43186B26439E10AD6609DD565 (void);
-// 0x000002A2 System.Void EnvMapAnimator/<Start>d__4::System.Collections.IEnumerator.Reset()
+// 0x000002A3 System.Void EnvMapAnimator/<Start>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CStartU3Ed__4_System_Collections_IEnumerator_Reset_m3EF23BF40634D4262D8A2AE3DB14140FEFB4BF52 (void);
-// 0x000002A3 System.Object EnvMapAnimator/<Start>d__4::System.Collections.IEnumerator.get_Current()
+// 0x000002A4 System.Object EnvMapAnimator/<Start>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CStartU3Ed__4_System_Collections_IEnumerator_get_Current_mB1C119A46A09AD8F0D4DE964F6B335BE2A460FAA (void);
-// 0x000002A4 System.Void Readme::.ctor()
+// 0x000002A5 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x000002A5 System.Void Readme/Section::.ctor()
+// 0x000002A6 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x000002A6 System.String VuforiaLicense::GetLicenseKey()
+// 0x000002A7 System.String VuforiaLicense::GetLicenseKey()
 extern void VuforiaLicense_GetLicenseKey_m796D51E5EF1C53F3D62BA4EA8806AC1FB1A5E3C4 (void);
-// 0x000002A7 System.Char TMPro.TMP_DigitValidator::Validate(System.String&,System.Int32&,System.Char)
+// 0x000002A8 System.Char TMPro.TMP_DigitValidator::Validate(System.String&,System.Int32&,System.Char)
 extern void TMP_DigitValidator_Validate_m786CF8A4D85EB9E1BE8785A58007F8796991BDB9 (void);
-// 0x000002A8 System.Void TMPro.TMP_DigitValidator::.ctor()
+// 0x000002A9 System.Void TMPro.TMP_DigitValidator::.ctor()
 extern void TMP_DigitValidator__ctor_m9DC5F1168E5F4963C063C88384ADEBA8980BBFE0 (void);
-// 0x000002A9 System.Char TMPro.TMP_PhoneNumberValidator::Validate(System.String&,System.Int32&,System.Char)
+// 0x000002AA System.Char TMPro.TMP_PhoneNumberValidator::Validate(System.String&,System.Int32&,System.Char)
 extern void TMP_PhoneNumberValidator_Validate_mE50FE1DE042CE58055C824840D77FCDA6A2AF4D3 (void);
-// 0x000002AA System.Void TMPro.TMP_PhoneNumberValidator::.ctor()
+// 0x000002AB System.Void TMPro.TMP_PhoneNumberValidator::.ctor()
 extern void TMP_PhoneNumberValidator__ctor_m70833F265A016119F88136746B4C59F45B5E067D (void);
-// 0x000002AB TMPro.TMP_TextEventHandler/CharacterSelectionEvent TMPro.TMP_TextEventHandler::get_onCharacterSelection()
+// 0x000002AC TMPro.TMP_TextEventHandler/CharacterSelectionEvent TMPro.TMP_TextEventHandler::get_onCharacterSelection()
 extern void TMP_TextEventHandler_get_onCharacterSelection_mA62049738125E3C48405E6DFF09E2D42300BE8C3 (void);
-// 0x000002AC System.Void TMPro.TMP_TextEventHandler::set_onCharacterSelection(TMPro.TMP_TextEventHandler/CharacterSelectionEvent)
+// 0x000002AD System.Void TMPro.TMP_TextEventHandler::set_onCharacterSelection(TMPro.TMP_TextEventHandler/CharacterSelectionEvent)
 extern void TMP_TextEventHandler_set_onCharacterSelection_m6B85C54F4E751BF080324D94FB8DA6286CD5A43C (void);
-// 0x000002AD TMPro.TMP_TextEventHandler/SpriteSelectionEvent TMPro.TMP_TextEventHandler::get_onSpriteSelection()
+// 0x000002AE TMPro.TMP_TextEventHandler/SpriteSelectionEvent TMPro.TMP_TextEventHandler::get_onSpriteSelection()
 extern void TMP_TextEventHandler_get_onSpriteSelection_m95CDEB7394FFF38F310717EEEFDCD481D96A5E82 (void);
-// 0x000002AE System.Void TMPro.TMP_TextEventHandler::set_onSpriteSelection(TMPro.TMP_TextEventHandler/SpriteSelectionEvent)
+// 0x000002AF System.Void TMPro.TMP_TextEventHandler::set_onSpriteSelection(TMPro.TMP_TextEventHandler/SpriteSelectionEvent)
 extern void TMP_TextEventHandler_set_onSpriteSelection_mFFBD9D70A791A3F2065C1063F258465EDA8AC2C5 (void);
-// 0x000002AF TMPro.TMP_TextEventHandler/WordSelectionEvent TMPro.TMP_TextEventHandler::get_onWordSelection()
+// 0x000002B0 TMPro.TMP_TextEventHandler/WordSelectionEvent TMPro.TMP_TextEventHandler::get_onWordSelection()
 extern void TMP_TextEventHandler_get_onWordSelection_mF22771B4213EEB3AEFCDA390A4FF28FED5D9184C (void);
-// 0x000002B0 System.Void TMPro.TMP_TextEventHandler::set_onWordSelection(TMPro.TMP_TextEventHandler/WordSelectionEvent)
+// 0x000002B1 System.Void TMPro.TMP_TextEventHandler::set_onWordSelection(TMPro.TMP_TextEventHandler/WordSelectionEvent)
 extern void TMP_TextEventHandler_set_onWordSelection_mA7EB31AF14EAADD968857DDAC994F7728B7B02E3 (void);
-// 0x000002B1 TMPro.TMP_TextEventHandler/LineSelectionEvent TMPro.TMP_TextEventHandler::get_onLineSelection()
+// 0x000002B2 TMPro.TMP_TextEventHandler/LineSelectionEvent TMPro.TMP_TextEventHandler::get_onLineSelection()
 extern void TMP_TextEventHandler_get_onLineSelection_mDDF07E7000993FCD6EAF2FBD2D2226EB66273908 (void);
-// 0x000002B2 System.Void TMPro.TMP_TextEventHandler::set_onLineSelection(TMPro.TMP_TextEventHandler/LineSelectionEvent)
+// 0x000002B3 System.Void TMPro.TMP_TextEventHandler::set_onLineSelection(TMPro.TMP_TextEventHandler/LineSelectionEvent)
 extern void TMP_TextEventHandler_set_onLineSelection_m098580AA8098939290113692072E18F9A293B427 (void);
-// 0x000002B3 TMPro.TMP_TextEventHandler/LinkSelectionEvent TMPro.TMP_TextEventHandler::get_onLinkSelection()
+// 0x000002B4 TMPro.TMP_TextEventHandler/LinkSelectionEvent TMPro.TMP_TextEventHandler::get_onLinkSelection()
 extern void TMP_TextEventHandler_get_onLinkSelection_m87FB9EABE7F917B2F910A18A3B5F1AE3020D976D (void);
-// 0x000002B4 System.Void TMPro.TMP_TextEventHandler::set_onLinkSelection(TMPro.TMP_TextEventHandler/LinkSelectionEvent)
+// 0x000002B5 System.Void TMPro.TMP_TextEventHandler::set_onLinkSelection(TMPro.TMP_TextEventHandler/LinkSelectionEvent)
 extern void TMP_TextEventHandler_set_onLinkSelection_m6741C71F7E218C744CD7AA18B7456382E4B703FF (void);
-// 0x000002B5 System.Void TMPro.TMP_TextEventHandler::Awake()
+// 0x000002B6 System.Void TMPro.TMP_TextEventHandler::Awake()
 extern void TMP_TextEventHandler_Awake_mE2D7EB8218B248F11BE54C507396B9B6B12E0052 (void);
-// 0x000002B6 System.Void TMPro.TMP_TextEventHandler::LateUpdate()
+// 0x000002B7 System.Void TMPro.TMP_TextEventHandler::LateUpdate()
 extern void TMP_TextEventHandler_LateUpdate_mBF0056A3C00834477F7D221BEE17C26784559DE1 (void);
-// 0x000002B7 System.Void TMPro.TMP_TextEventHandler::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+// 0x000002B8 System.Void TMPro.TMP_TextEventHandler::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextEventHandler_OnPointerEnter_mF5B4CCF0C9F2EFE24B6D4C7B31C620C91ABBC07A (void);
-// 0x000002B8 System.Void TMPro.TMP_TextEventHandler::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+// 0x000002B9 System.Void TMPro.TMP_TextEventHandler::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextEventHandler_OnPointerExit_mC0561024D04FED2D026BEB3EC183550092823AE6 (void);
-// 0x000002B9 System.Void TMPro.TMP_TextEventHandler::SendOnCharacterSelection(System.Char,System.Int32)
+// 0x000002BA System.Void TMPro.TMP_TextEventHandler::SendOnCharacterSelection(System.Char,System.Int32)
 extern void TMP_TextEventHandler_SendOnCharacterSelection_m5A891393BC3211CFEF2390B5E9899129CBDAC189 (void);
-// 0x000002BA System.Void TMPro.TMP_TextEventHandler::SendOnSpriteSelection(System.Char,System.Int32)
+// 0x000002BB System.Void TMPro.TMP_TextEventHandler::SendOnSpriteSelection(System.Char,System.Int32)
 extern void TMP_TextEventHandler_SendOnSpriteSelection_m8242C5F9626A3C1330927FEACF3ECAD287500475 (void);
-// 0x000002BB System.Void TMPro.TMP_TextEventHandler::SendOnWordSelection(System.String,System.Int32,System.Int32)
+// 0x000002BC System.Void TMPro.TMP_TextEventHandler::SendOnWordSelection(System.String,System.Int32,System.Int32)
 extern void TMP_TextEventHandler_SendOnWordSelection_mCB9E9ACB06AC524273C163743C9191CAF9C1FD33 (void);
-// 0x000002BC System.Void TMPro.TMP_TextEventHandler::SendOnLineSelection(System.String,System.Int32,System.Int32)
+// 0x000002BD System.Void TMPro.TMP_TextEventHandler::SendOnLineSelection(System.String,System.Int32,System.Int32)
 extern void TMP_TextEventHandler_SendOnLineSelection_mF0691C407CA44C2E8F2D7CD6C9C2099693CBE7A6 (void);
-// 0x000002BD System.Void TMPro.TMP_TextEventHandler::SendOnLinkSelection(System.String,System.String,System.Int32)
+// 0x000002BE System.Void TMPro.TMP_TextEventHandler::SendOnLinkSelection(System.String,System.String,System.Int32)
 extern void TMP_TextEventHandler_SendOnLinkSelection_m2809D6FFF57FAE45DC5BB4DD579328535E255A02 (void);
-// 0x000002BE System.Void TMPro.TMP_TextEventHandler::.ctor()
+// 0x000002BF System.Void TMPro.TMP_TextEventHandler::.ctor()
 extern void TMP_TextEventHandler__ctor_mADE4C28CAE14991CF0B1CC1A9D0EBAF0CF1107AB (void);
-// 0x000002BF System.Void TMPro.TMP_TextEventHandler/CharacterSelectionEvent::.ctor()
+// 0x000002C0 System.Void TMPro.TMP_TextEventHandler/CharacterSelectionEvent::.ctor()
 extern void CharacterSelectionEvent__ctor_m054FE9253D3C4478F57DE900A15AC9A61EC3C11E (void);
-// 0x000002C0 System.Void TMPro.TMP_TextEventHandler/SpriteSelectionEvent::.ctor()
+// 0x000002C1 System.Void TMPro.TMP_TextEventHandler/SpriteSelectionEvent::.ctor()
 extern void SpriteSelectionEvent__ctor_m89C1D1F720F140491B28D9B32B0C7202EE8C4963 (void);
-// 0x000002C1 System.Void TMPro.TMP_TextEventHandler/WordSelectionEvent::.ctor()
+// 0x000002C2 System.Void TMPro.TMP_TextEventHandler/WordSelectionEvent::.ctor()
 extern void WordSelectionEvent__ctor_m3F52F327A9627042EDB065C1080CEB764F1154F2 (void);
-// 0x000002C2 System.Void TMPro.TMP_TextEventHandler/LineSelectionEvent::.ctor()
+// 0x000002C3 System.Void TMPro.TMP_TextEventHandler/LineSelectionEvent::.ctor()
 extern void LineSelectionEvent__ctor_m419828B3E32BC3F6F5AAC88D7B90CF50A74C80B2 (void);
-// 0x000002C3 System.Void TMPro.TMP_TextEventHandler/LinkSelectionEvent::.ctor()
+// 0x000002C4 System.Void TMPro.TMP_TextEventHandler/LinkSelectionEvent::.ctor()
 extern void LinkSelectionEvent__ctor_m4083D6FF46F61AAF956F77FFE849B5166E2579BC (void);
-// 0x000002C4 System.Collections.IEnumerator TMPro.Examples.Benchmark01::Start()
+// 0x000002C5 System.Collections.IEnumerator TMPro.Examples.Benchmark01::Start()
 extern void Benchmark01_Start_m6CF91B0D99B3AC9317731D0C08B2EDA6AA56B9E9 (void);
-// 0x000002C5 System.Void TMPro.Examples.Benchmark01::.ctor()
+// 0x000002C6 System.Void TMPro.Examples.Benchmark01::.ctor()
 extern void Benchmark01__ctor_m9E12F5F809E8FF4A6EEFCDB016C1F884716347C4 (void);
-// 0x000002C6 System.Void TMPro.Examples.Benchmark01/<Start>d__10::.ctor(System.Int32)
+// 0x000002C7 System.Void TMPro.Examples.Benchmark01/<Start>d__10::.ctor(System.Int32)
 extern void U3CStartU3Ed__10__ctor_m242187966C9D563957FB0F76C467B25C25D91D69 (void);
-// 0x000002C7 System.Void TMPro.Examples.Benchmark01/<Start>d__10::System.IDisposable.Dispose()
+// 0x000002C8 System.Void TMPro.Examples.Benchmark01/<Start>d__10::System.IDisposable.Dispose()
 extern void U3CStartU3Ed__10_System_IDisposable_Dispose_m7AD303D116E090426086312CD69BFA256CD28B0D (void);
-// 0x000002C8 System.Boolean TMPro.Examples.Benchmark01/<Start>d__10::MoveNext()
+// 0x000002C9 System.Boolean TMPro.Examples.Benchmark01/<Start>d__10::MoveNext()
 extern void U3CStartU3Ed__10_MoveNext_m5F93878ED8166F8F4507EE8353856FAEABBBF1C9 (void);
-// 0x000002C9 System.Object TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002CA System.Object TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CStartU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8F5CE0A24226CB5F890D4C2A9FAD81A2696CE6F6 (void);
-// 0x000002CA System.Void TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.IEnumerator.Reset()
+// 0x000002CB System.Void TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.IEnumerator.Reset()
 extern void U3CStartU3Ed__10_System_Collections_IEnumerator_Reset_m553F892690ED74A33F57B1359743D31F8BB93C2A (void);
-// 0x000002CB System.Object TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.IEnumerator.get_Current()
+// 0x000002CC System.Object TMPro.Examples.Benchmark01/<Start>d__10::System.Collections.IEnumerator.get_Current()
 extern void U3CStartU3Ed__10_System_Collections_IEnumerator_get_Current_m50D65AEFE4D08E48AC72E017E00CD43273E1BDBD (void);
-// 0x000002CC System.Collections.IEnumerator TMPro.Examples.Benchmark01_UGUI::Start()
+// 0x000002CD System.Collections.IEnumerator TMPro.Examples.Benchmark01_UGUI::Start()
 extern void Benchmark01_UGUI_Start_m565A619941AAFFC17BB16A4A73DF63F7E54E3AFA (void);
-// 0x000002CD System.Void TMPro.Examples.Benchmark01_UGUI::.ctor()
+// 0x000002CE System.Void TMPro.Examples.Benchmark01_UGUI::.ctor()
 extern void Benchmark01_UGUI__ctor_m9DCE74210552C6961BF7460C1F812E484771F8EB (void);
-// 0x000002CE System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::.ctor(System.Int32)
+// 0x000002CF System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::.ctor(System.Int32)
 extern void U3CStartU3Ed__10__ctor_m515F107569D5BDE7C81F5DFDAB4A298A5399EB5A (void);
-// 0x000002CF System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.IDisposable.Dispose()
+// 0x000002D0 System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.IDisposable.Dispose()
 extern void U3CStartU3Ed__10_System_IDisposable_Dispose_mFFD5DC6FCF8EC489FF249BE7F91D4336F2AD76AC (void);
-// 0x000002D0 System.Boolean TMPro.Examples.Benchmark01_UGUI/<Start>d__10::MoveNext()
+// 0x000002D1 System.Boolean TMPro.Examples.Benchmark01_UGUI/<Start>d__10::MoveNext()
 extern void U3CStartU3Ed__10_MoveNext_mDCA96D0D1226C44C15F1FD85518F0711E6B395D9 (void);
-// 0x000002D1 System.Object TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002D2 System.Object TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CStartU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m109B5747CD8D1CF40DAC526C54BFB07223E1FB46 (void);
-// 0x000002D2 System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.IEnumerator.Reset()
+// 0x000002D3 System.Void TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.IEnumerator.Reset()
 extern void U3CStartU3Ed__10_System_Collections_IEnumerator_Reset_mC9F90586F057E3728D9F93BB0E12197C9B994EEA (void);
-// 0x000002D3 System.Object TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.IEnumerator.get_Current()
+// 0x000002D4 System.Object TMPro.Examples.Benchmark01_UGUI/<Start>d__10::System.Collections.IEnumerator.get_Current()
 extern void U3CStartU3Ed__10_System_Collections_IEnumerator_get_Current_mA4DCEFD742C012A03C20EF42A873B5BFF07AF87A (void);
-// 0x000002D4 System.Void TMPro.Examples.Benchmark02::Start()
+// 0x000002D5 System.Void TMPro.Examples.Benchmark02::Start()
 extern void Benchmark02_Start_mB56F21A9861A3DAF9F4E7F1DD4A023E05B379E29 (void);
-// 0x000002D5 System.Void TMPro.Examples.Benchmark02::.ctor()
+// 0x000002D6 System.Void TMPro.Examples.Benchmark02::.ctor()
 extern void Benchmark02__ctor_mE5DCB1CF4C1FDBA742B51B11427B9DE209630BF1 (void);
-// 0x000002D6 System.Void TMPro.Examples.Benchmark03::Start()
+// 0x000002D7 System.Void TMPro.Examples.Benchmark03::Start()
 extern void Benchmark03_Start_mCCFD9402E218265F6D34A1EA7ACCD3AD3D80380D (void);
-// 0x000002D7 System.Void TMPro.Examples.Benchmark03::.ctor()
+// 0x000002D8 System.Void TMPro.Examples.Benchmark03::.ctor()
 extern void Benchmark03__ctor_m8A29BB2CC6375B2D3D57B5A90D18F2435352E5F6 (void);
-// 0x000002D8 System.Void TMPro.Examples.Benchmark04::Start()
+// 0x000002D9 System.Void TMPro.Examples.Benchmark04::Start()
 extern void Benchmark04_Start_mD2F5056019DD08B3DB897F6D194E86AB66E92F90 (void);
-// 0x000002D9 System.Void TMPro.Examples.Benchmark04::.ctor()
+// 0x000002DA System.Void TMPro.Examples.Benchmark04::.ctor()
 extern void Benchmark04__ctor_m282E4E495D8D1921A87481729549B68BEDAD2D27 (void);
-// 0x000002DA System.Void TMPro.Examples.CameraController::Awake()
+// 0x000002DB System.Void TMPro.Examples.CameraController::Awake()
 extern void CameraController_Awake_m2D75756734457ADE0F15F191B63521A47C426788 (void);
-// 0x000002DB System.Void TMPro.Examples.CameraController::Start()
+// 0x000002DC System.Void TMPro.Examples.CameraController::Start()
 extern void CameraController_Start_m749E20374F32FF190EC51D70C717A8117934F2A5 (void);
-// 0x000002DC System.Void TMPro.Examples.CameraController::LateUpdate()
+// 0x000002DD System.Void TMPro.Examples.CameraController::LateUpdate()
 extern void CameraController_LateUpdate_m07E7F5C7D91713F8BB489480304D130570D7858F (void);
-// 0x000002DD System.Void TMPro.Examples.CameraController::GetPlayerInput()
+// 0x000002DE System.Void TMPro.Examples.CameraController::GetPlayerInput()
 extern void CameraController_GetPlayerInput_m31AE86C54785402EB078A40F37D83FEA9216388F (void);
-// 0x000002DE System.Void TMPro.Examples.CameraController::.ctor()
+// 0x000002DF System.Void TMPro.Examples.CameraController::.ctor()
 extern void CameraController__ctor_mE37608FBFBF61F76A1E0EEACF79B040321476878 (void);
-// 0x000002DF System.Void TMPro.Examples.ObjectSpin::Awake()
+// 0x000002E0 System.Void TMPro.Examples.ObjectSpin::Awake()
 extern void ObjectSpin_Awake_mC05FEB5A72FED289171C58787FE09DBD9356FC72 (void);
-// 0x000002E0 System.Void TMPro.Examples.ObjectSpin::Update()
+// 0x000002E1 System.Void TMPro.Examples.ObjectSpin::Update()
 extern void ObjectSpin_Update_m7FB0886C3E6D76C0020E4D38DC1C44AB70BF3695 (void);
-// 0x000002E1 System.Void TMPro.Examples.ObjectSpin::.ctor()
+// 0x000002E2 System.Void TMPro.Examples.ObjectSpin::.ctor()
 extern void ObjectSpin__ctor_mA786C14AE887FF4012A35FAB3DF59ECF6A77835A (void);
-// 0x000002E2 System.Void TMPro.Examples.ShaderPropAnimator::Awake()
+// 0x000002E3 System.Void TMPro.Examples.ShaderPropAnimator::Awake()
 extern void ShaderPropAnimator_Awake_m3D158D58F1840CBDA3B887326275893121E31371 (void);
-// 0x000002E3 System.Void TMPro.Examples.ShaderPropAnimator::Start()
+// 0x000002E4 System.Void TMPro.Examples.ShaderPropAnimator::Start()
 extern void ShaderPropAnimator_Start_mEF0B5D3EE00206199ABB80CE893AA85DF3FE5C88 (void);
-// 0x000002E4 System.Collections.IEnumerator TMPro.Examples.ShaderPropAnimator::AnimateProperties()
+// 0x000002E5 System.Collections.IEnumerator TMPro.Examples.ShaderPropAnimator::AnimateProperties()
 extern void ShaderPropAnimator_AnimateProperties_m9F466F9C9554AA7488F4607E7FAC9A5C61F46D56 (void);
-// 0x000002E5 System.Void TMPro.Examples.ShaderPropAnimator::.ctor()
+// 0x000002E6 System.Void TMPro.Examples.ShaderPropAnimator::.ctor()
 extern void ShaderPropAnimator__ctor_m51C29C66EFD7FCA3AE68CDEFD38A4A89BF48220B (void);
-// 0x000002E6 System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::.ctor(System.Int32)
+// 0x000002E7 System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::.ctor(System.Int32)
 extern void U3CAnimatePropertiesU3Ed__6__ctor_m2B0F8A634812D7FE998DD35188C5F07797E4FB0D (void);
-// 0x000002E7 System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.IDisposable.Dispose()
+// 0x000002E8 System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.IDisposable.Dispose()
 extern void U3CAnimatePropertiesU3Ed__6_System_IDisposable_Dispose_mCF53541AABFDC14249868837689AC287470F4E71 (void);
-// 0x000002E8 System.Boolean TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::MoveNext()
+// 0x000002E9 System.Boolean TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::MoveNext()
 extern void U3CAnimatePropertiesU3Ed__6_MoveNext_mB9586A9B61959C3BC38EFB8FC83109785F93F6AC (void);
-// 0x000002E9 System.Object TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002EA System.Object TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimatePropertiesU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7A34F7423FA726A91524CBA0CDD2A25E4AF8EE95 (void);
-// 0x000002EA System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.IEnumerator.Reset()
+// 0x000002EB System.Void TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.IEnumerator.Reset()
 extern void U3CAnimatePropertiesU3Ed__6_System_Collections_IEnumerator_Reset_m1C76BF8EAC2CDC2BAC58755622763B9318DA51CA (void);
-// 0x000002EB System.Object TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.IEnumerator.get_Current()
+// 0x000002EC System.Object TMPro.Examples.ShaderPropAnimator/<AnimateProperties>d__6::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimatePropertiesU3Ed__6_System_Collections_IEnumerator_get_Current_m289720A67EB6696F350EAC41DAAE3B917031B7EA (void);
-// 0x000002EC System.Void TMPro.Examples.SimpleScript::Start()
+// 0x000002ED System.Void TMPro.Examples.SimpleScript::Start()
 extern void SimpleScript_Start_mC4159EF79F863FBD86AEA2B81D86FDF04834A6F8 (void);
-// 0x000002ED System.Void TMPro.Examples.SimpleScript::Update()
+// 0x000002EE System.Void TMPro.Examples.SimpleScript::Update()
 extern void SimpleScript_Update_mBD8A31D53D01FEBB9B432077599239AC6A5DEAFE (void);
-// 0x000002EE System.Void TMPro.Examples.SimpleScript::.ctor()
+// 0x000002EF System.Void TMPro.Examples.SimpleScript::.ctor()
 extern void SimpleScript__ctor_mC91E912195EEE18292A8FCA7650739E3DDB81807 (void);
-// 0x000002EF System.Void TMPro.Examples.SkewTextExample::Awake()
+// 0x000002F0 System.Void TMPro.Examples.SkewTextExample::Awake()
 extern void SkewTextExample_Awake_m2D48E0903620C2D870D5176FCFD12A8989801C93 (void);
-// 0x000002F0 System.Void TMPro.Examples.SkewTextExample::Start()
+// 0x000002F1 System.Void TMPro.Examples.SkewTextExample::Start()
 extern void SkewTextExample_Start_m7577B96B07C4EB0666BF6F028074176258009690 (void);
-// 0x000002F1 UnityEngine.AnimationCurve TMPro.Examples.SkewTextExample::CopyAnimationCurve(UnityEngine.AnimationCurve)
+// 0x000002F2 UnityEngine.AnimationCurve TMPro.Examples.SkewTextExample::CopyAnimationCurve(UnityEngine.AnimationCurve)
 extern void SkewTextExample_CopyAnimationCurve_mD2C2C4CA7AFBAAC9F4B04CB2896DB9B32B015ACB (void);
-// 0x000002F2 System.Collections.IEnumerator TMPro.Examples.SkewTextExample::WarpText()
+// 0x000002F3 System.Collections.IEnumerator TMPro.Examples.SkewTextExample::WarpText()
 extern void SkewTextExample_WarpText_m462DE1568957770D72704E93D2461D8371C0D362 (void);
-// 0x000002F3 System.Void TMPro.Examples.SkewTextExample::.ctor()
+// 0x000002F4 System.Void TMPro.Examples.SkewTextExample::.ctor()
 extern void SkewTextExample__ctor_m711325FB390A6DFA994B6ADF746C9EBF846A0A22 (void);
-// 0x000002F4 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::.ctor(System.Int32)
+// 0x000002F5 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::.ctor(System.Int32)
 extern void U3CWarpTextU3Ed__7__ctor_m39944C7E44F317ACDEC971C8FF2DEC8EA1CCC1C2 (void);
-// 0x000002F5 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::System.IDisposable.Dispose()
+// 0x000002F6 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::System.IDisposable.Dispose()
 extern void U3CWarpTextU3Ed__7_System_IDisposable_Dispose_m54C900BFB8433103FA97A4E50B2C941D431B5A51 (void);
-// 0x000002F6 System.Boolean TMPro.Examples.SkewTextExample/<WarpText>d__7::MoveNext()
+// 0x000002F7 System.Boolean TMPro.Examples.SkewTextExample/<WarpText>d__7::MoveNext()
 extern void U3CWarpTextU3Ed__7_MoveNext_m50CEEC92FE0C83768B366E9F9B5B1C9DEF85928E (void);
-// 0x000002F7 System.Object TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002F8 System.Object TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CWarpTextU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m79CB1783D2DD0399E051969089A36819EDC66FCB (void);
-// 0x000002F8 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.IEnumerator.Reset()
+// 0x000002F9 System.Void TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.IEnumerator.Reset()
 extern void U3CWarpTextU3Ed__7_System_Collections_IEnumerator_Reset_mB6C5974E8F57160AE544E1D2FD44621EEF3ACAB5 (void);
-// 0x000002F9 System.Object TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.IEnumerator.get_Current()
+// 0x000002FA System.Object TMPro.Examples.SkewTextExample/<WarpText>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CWarpTextU3Ed__7_System_Collections_IEnumerator_get_Current_m5BDAFBB20F42A6E9EC65B6A2365F5AD98F42A1C5 (void);
-// 0x000002FA System.Void TMPro.Examples.TeleType::Awake()
+// 0x000002FB System.Void TMPro.Examples.TeleType::Awake()
 extern void TeleType_Awake_m8D56A3C1E06AD96B35B88C3AA8C61FB2A03E627D (void);
-// 0x000002FB System.Collections.IEnumerator TMPro.Examples.TeleType::Start()
+// 0x000002FC System.Collections.IEnumerator TMPro.Examples.TeleType::Start()
 extern void TeleType_Start_m3BFE1E2B1BB5ED247DED9DBEF293FCCBD63760C6 (void);
-// 0x000002FC System.Void TMPro.Examples.TeleType::.ctor()
+// 0x000002FD System.Void TMPro.Examples.TeleType::.ctor()
 extern void TeleType__ctor_m824BBE09CC217EB037FFB36756726A9C946526D0 (void);
-// 0x000002FD System.Void TMPro.Examples.TeleType/<Start>d__4::.ctor(System.Int32)
+// 0x000002FE System.Void TMPro.Examples.TeleType/<Start>d__4::.ctor(System.Int32)
 extern void U3CStartU3Ed__4__ctor_m7CB9C7DF4657B7B70F6ED6EEB00C0F422D8B0CAA (void);
-// 0x000002FE System.Void TMPro.Examples.TeleType/<Start>d__4::System.IDisposable.Dispose()
+// 0x000002FF System.Void TMPro.Examples.TeleType/<Start>d__4::System.IDisposable.Dispose()
 extern void U3CStartU3Ed__4_System_IDisposable_Dispose_mA57DA4D469190B581B5DCB406E9FB70DD33511F2 (void);
-// 0x000002FF System.Boolean TMPro.Examples.TeleType/<Start>d__4::MoveNext()
+// 0x00000300 System.Boolean TMPro.Examples.TeleType/<Start>d__4::MoveNext()
 extern void U3CStartU3Ed__4_MoveNext_mE1C3343B7258BAADC74C1A060E71C28951D39D45 (void);
-// 0x00000300 System.Object TMPro.Examples.TeleType/<Start>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000301 System.Object TMPro.Examples.TeleType/<Start>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CStartU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1819CF068B92E7EA9EEFD7F93CA316F38DF644BA (void);
-// 0x00000301 System.Void TMPro.Examples.TeleType/<Start>d__4::System.Collections.IEnumerator.Reset()
+// 0x00000302 System.Void TMPro.Examples.TeleType/<Start>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CStartU3Ed__4_System_Collections_IEnumerator_Reset_m9B7AEE80C1E70D2D2FF5811A54AFD6189CD7F5A9 (void);
-// 0x00000302 System.Object TMPro.Examples.TeleType/<Start>d__4::System.Collections.IEnumerator.get_Current()
+// 0x00000303 System.Object TMPro.Examples.TeleType/<Start>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CStartU3Ed__4_System_Collections_IEnumerator_get_Current_m5C22C5D235424F0613697F05E72ADB4D1A3420C8 (void);
-// 0x00000303 System.Void TMPro.Examples.TextConsoleSimulator::Awake()
+// 0x00000304 System.Void TMPro.Examples.TextConsoleSimulator::Awake()
 extern void TextConsoleSimulator_Awake_m55D28DC1F590D98621B0284B53C8A22D07CD3F7C (void);
-// 0x00000304 System.Void TMPro.Examples.TextConsoleSimulator::Start()
+// 0x00000305 System.Void TMPro.Examples.TextConsoleSimulator::Start()
 extern void TextConsoleSimulator_Start_m5667F64AE1F48EBA2FF1B3D2D53E2AFCAB738B39 (void);
-// 0x00000305 System.Void TMPro.Examples.TextConsoleSimulator::OnEnable()
+// 0x00000306 System.Void TMPro.Examples.TextConsoleSimulator::OnEnable()
 extern void TextConsoleSimulator_OnEnable_mDF58D349E4D62866410AAA376BE5BBAE4153FF95 (void);
-// 0x00000306 System.Void TMPro.Examples.TextConsoleSimulator::OnDisable()
+// 0x00000307 System.Void TMPro.Examples.TextConsoleSimulator::OnDisable()
 extern void TextConsoleSimulator_OnDisable_m4B3A741D6C5279590453148419B422E8D7314689 (void);
-// 0x00000307 System.Void TMPro.Examples.TextConsoleSimulator::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x00000308 System.Void TMPro.Examples.TextConsoleSimulator::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void TextConsoleSimulator_ON_TEXT_CHANGED_m050ECF4852B6A82000133662D6502577DFD57C3A (void);
-// 0x00000308 System.Collections.IEnumerator TMPro.Examples.TextConsoleSimulator::RevealCharacters(TMPro.TMP_Text)
+// 0x00000309 System.Collections.IEnumerator TMPro.Examples.TextConsoleSimulator::RevealCharacters(TMPro.TMP_Text)
 extern void TextConsoleSimulator_RevealCharacters_mAA4D3653F05692839313CE180250A44378024E52 (void);
-// 0x00000309 System.Collections.IEnumerator TMPro.Examples.TextConsoleSimulator::RevealWords(TMPro.TMP_Text)
+// 0x0000030A System.Collections.IEnumerator TMPro.Examples.TextConsoleSimulator::RevealWords(TMPro.TMP_Text)
 extern void TextConsoleSimulator_RevealWords_m0E52802FD4239665709F086E6E0B235CDE67E9B1 (void);
-// 0x0000030A System.Void TMPro.Examples.TextConsoleSimulator::.ctor()
+// 0x0000030B System.Void TMPro.Examples.TextConsoleSimulator::.ctor()
 extern void TextConsoleSimulator__ctor_mBDDE8A2DCED8B140D78D5FE560897665753AB025 (void);
-// 0x0000030B System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::.ctor(System.Int32)
+// 0x0000030C System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::.ctor(System.Int32)
 extern void U3CRevealCharactersU3Ed__7__ctor_m40A144070AB46560F2B3919EA5CB8BD51F8DDF45 (void);
-// 0x0000030C System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.IDisposable.Dispose()
+// 0x0000030D System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.IDisposable.Dispose()
 extern void U3CRevealCharactersU3Ed__7_System_IDisposable_Dispose_m7942532282ACF3B429FAD926284352907FFE087B (void);
-// 0x0000030D System.Boolean TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::MoveNext()
+// 0x0000030E System.Boolean TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::MoveNext()
 extern void U3CRevealCharactersU3Ed__7_MoveNext_m2D07AF9391894BCE39624FA2DCFA87AC6F8119AE (void);
-// 0x0000030E System.Object TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000030F System.Object TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CRevealCharactersU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m754C680B2751A9F05DBF253431A3CB42885F7854 (void);
-// 0x0000030F System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.IEnumerator.Reset()
+// 0x00000310 System.Void TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.IEnumerator.Reset()
 extern void U3CRevealCharactersU3Ed__7_System_Collections_IEnumerator_Reset_mD12057609EFCBCA8E7B61B0421D4A7C5A206C8C3 (void);
-// 0x00000310 System.Object TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.IEnumerator.get_Current()
+// 0x00000311 System.Object TMPro.Examples.TextConsoleSimulator/<RevealCharacters>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CRevealCharactersU3Ed__7_System_Collections_IEnumerator_get_Current_m9FD7DAB922AE6A58166112C295ABFF6E19E1D186 (void);
-// 0x00000311 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::.ctor(System.Int32)
+// 0x00000312 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::.ctor(System.Int32)
 extern void U3CRevealWordsU3Ed__8__ctor_mDF8D4C69F022D088AFC0E109FC0DBE0C9B938CAC (void);
-// 0x00000312 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.IDisposable.Dispose()
+// 0x00000313 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.IDisposable.Dispose()
 extern void U3CRevealWordsU3Ed__8_System_IDisposable_Dispose_m2F2F21F38D2DD8AE3D066E64850D404497A131C5 (void);
-// 0x00000313 System.Boolean TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::MoveNext()
+// 0x00000314 System.Boolean TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::MoveNext()
 extern void U3CRevealWordsU3Ed__8_MoveNext_mC5102728A86DCB2171E54CFEDFA7BE6F29AB355C (void);
-// 0x00000314 System.Object TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000315 System.Object TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CRevealWordsU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4D9A6269831C00345D245D0EED2E5FC20BBF4683 (void);
-// 0x00000315 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.IEnumerator.Reset()
+// 0x00000316 System.Void TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.IEnumerator.Reset()
 extern void U3CRevealWordsU3Ed__8_System_Collections_IEnumerator_Reset_mE5E0678716735BDF0D632FE43E392981E75A1C4D (void);
-// 0x00000316 System.Object TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.IEnumerator.get_Current()
+// 0x00000317 System.Object TMPro.Examples.TextConsoleSimulator/<RevealWords>d__8::System.Collections.IEnumerator.get_Current()
 extern void U3CRevealWordsU3Ed__8_System_Collections_IEnumerator_get_Current_m3E9D4960A972BD7601F6454E6F9A614AA21D553E (void);
-// 0x00000317 System.Void TMPro.Examples.TextMeshProFloatingText::Awake()
+// 0x00000318 System.Void TMPro.Examples.TextMeshProFloatingText::Awake()
 extern void TextMeshProFloatingText_Awake_m600F1825C26BB683047156FD815AE4376D2672F2 (void);
-// 0x00000318 System.Void TMPro.Examples.TextMeshProFloatingText::Start()
+// 0x00000319 System.Void TMPro.Examples.TextMeshProFloatingText::Start()
 extern void TextMeshProFloatingText_Start_m8121246A4310A0014ECA36144B9DCE093FE8AE49 (void);
-// 0x00000319 System.Collections.IEnumerator TMPro.Examples.TextMeshProFloatingText::DisplayTextMeshProFloatingText()
+// 0x0000031A System.Collections.IEnumerator TMPro.Examples.TextMeshProFloatingText::DisplayTextMeshProFloatingText()
 extern void TextMeshProFloatingText_DisplayTextMeshProFloatingText_mA1E370089458CD380E9BA7740C2BC2032F084148 (void);
-// 0x0000031A System.Collections.IEnumerator TMPro.Examples.TextMeshProFloatingText::DisplayTextMeshFloatingText()
+// 0x0000031B System.Collections.IEnumerator TMPro.Examples.TextMeshProFloatingText::DisplayTextMeshFloatingText()
 extern void TextMeshProFloatingText_DisplayTextMeshFloatingText_mA02B20CF33E43FE99FD5F1B90F7F350262F0BEBE (void);
-// 0x0000031B System.Void TMPro.Examples.TextMeshProFloatingText::.ctor()
+// 0x0000031C System.Void TMPro.Examples.TextMeshProFloatingText::.ctor()
 extern void TextMeshProFloatingText__ctor_mD08AF0FB6944A51BC6EA15D6BE4E33AA4A916E3E (void);
-// 0x0000031C System.Void TMPro.Examples.TextMeshProFloatingText::.cctor()
+// 0x0000031D System.Void TMPro.Examples.TextMeshProFloatingText::.cctor()
 extern void TextMeshProFloatingText__cctor_m272097816057A64A9FFE16F69C6844DCF88E9557 (void);
-// 0x0000031D System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::.ctor(System.Int32)
+// 0x0000031E System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::.ctor(System.Int32)
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15__ctor_mD3C24C6814482113FD231827E550FBBCC91424A0 (void);
-// 0x0000031E System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.IDisposable.Dispose()
+// 0x0000031F System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.IDisposable.Dispose()
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15_System_IDisposable_Dispose_m83285E807FA4462B99B68D1EB12B2360238C53EB (void);
-// 0x0000031F System.Boolean TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::MoveNext()
+// 0x00000320 System.Boolean TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::MoveNext()
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15_MoveNext_m588E025C05E03684A11ABC91B50734A349D28CC8 (void);
-// 0x00000320 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000321 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2412DC176F8CA3096658EB0E27AC28218DAEC03A (void);
-// 0x00000321 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.IEnumerator.Reset()
+// 0x00000322 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.IEnumerator.Reset()
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15_System_Collections_IEnumerator_Reset_mCCE19093B7355F3E23834E27A8517661DF833797 (void);
-// 0x00000322 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.IEnumerator.get_Current()
+// 0x00000323 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshProFloatingText>d__15::System.Collections.IEnumerator.get_Current()
 extern void U3CDisplayTextMeshProFloatingTextU3Ed__15_System_Collections_IEnumerator_get_Current_mE53E0B4DBE6AF5DAC110C3F626B34C5965845E54 (void);
-// 0x00000323 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::.ctor(System.Int32)
+// 0x00000324 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::.ctor(System.Int32)
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16__ctor_m1ECB51A93EE3B236301948784A3260FD72814923 (void);
-// 0x00000324 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.IDisposable.Dispose()
+// 0x00000325 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.IDisposable.Dispose()
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16_System_IDisposable_Dispose_m461761745A9C5FF4F7995C3DB33DB43848AEB05B (void);
-// 0x00000325 System.Boolean TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::MoveNext()
+// 0x00000326 System.Boolean TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::MoveNext()
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16_MoveNext_m1FC162511DF31A9CDBD0101083FBCB11380554C4 (void);
-// 0x00000326 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000327 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6A5E330ACDAD25422A7D642301F58E6C1EE1B041 (void);
-// 0x00000327 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.IEnumerator.Reset()
+// 0x00000328 System.Void TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.IEnumerator.Reset()
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16_System_Collections_IEnumerator_Reset_m5A7148435B35A0A84329416FF765D45F6AA0F4E1 (void);
-// 0x00000328 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.IEnumerator.get_Current()
+// 0x00000329 System.Object TMPro.Examples.TextMeshProFloatingText/<DisplayTextMeshFloatingText>d__16::System.Collections.IEnumerator.get_Current()
 extern void U3CDisplayTextMeshFloatingTextU3Ed__16_System_Collections_IEnumerator_get_Current_m066140B8D4CD5DE3527A3A05183AE89B487B5D55 (void);
-// 0x00000329 System.Void TMPro.Examples.TextMeshSpawner::Start()
+// 0x0000032A System.Void TMPro.Examples.TextMeshSpawner::Start()
 extern void TextMeshSpawner_Start_m3EE98071CA27A18904B859A0A6B215BDFEB50A66 (void);
-// 0x0000032A System.Void TMPro.Examples.TextMeshSpawner::.ctor()
+// 0x0000032B System.Void TMPro.Examples.TextMeshSpawner::.ctor()
 extern void TextMeshSpawner__ctor_m8409A62C31C4A6B6CEC2F48F1DC9777460C28233 (void);
-// 0x0000032B System.Void TMPro.Examples.TMPro_InstructionOverlay::Awake()
+// 0x0000032C System.Void TMPro.Examples.TMPro_InstructionOverlay::Awake()
 extern void TMPro_InstructionOverlay_Awake_m0F92D44F62A9AC086DE3DF1E4C7BFAF645EE7084 (void);
-// 0x0000032C System.Void TMPro.Examples.TMPro_InstructionOverlay::Set_FrameCounter_Position(TMPro.Examples.TMPro_InstructionOverlay/FpsCounterAnchorPositions)
+// 0x0000032D System.Void TMPro.Examples.TMPro_InstructionOverlay::Set_FrameCounter_Position(TMPro.Examples.TMPro_InstructionOverlay/FpsCounterAnchorPositions)
 extern void TMPro_InstructionOverlay_Set_FrameCounter_Position_m3CC1B812C740BAE87C6B5CA94DC64E6131F42A7C (void);
-// 0x0000032D System.Void TMPro.Examples.TMPro_InstructionOverlay::.ctor()
+// 0x0000032E System.Void TMPro.Examples.TMPro_InstructionOverlay::.ctor()
 extern void TMPro_InstructionOverlay__ctor_m247258528E488171765F77A9A3C6B7E079E64839 (void);
-// 0x0000032E System.Void TMPro.Examples.TMP_ExampleScript_01::Awake()
+// 0x0000032F System.Void TMPro.Examples.TMP_ExampleScript_01::Awake()
 extern void TMP_ExampleScript_01_Awake_m6E620605AE9CCC3789A2D5CFD841E5DAB8592063 (void);
-// 0x0000032F System.Void TMPro.Examples.TMP_ExampleScript_01::Update()
+// 0x00000330 System.Void TMPro.Examples.TMP_ExampleScript_01::Update()
 extern void TMP_ExampleScript_01_Update_m3D4A9AB04728F0ABD4C7C8A462E2C811308D97A1 (void);
-// 0x00000330 System.Void TMPro.Examples.TMP_ExampleScript_01::.ctor()
+// 0x00000331 System.Void TMPro.Examples.TMP_ExampleScript_01::.ctor()
 extern void TMP_ExampleScript_01__ctor_m43F9206FDB1606CD28F1A441188E777546CFEA2A (void);
-// 0x00000331 System.Void TMPro.Examples.TMP_FrameRateCounter::Awake()
+// 0x00000332 System.Void TMPro.Examples.TMP_FrameRateCounter::Awake()
 extern void TMP_FrameRateCounter_Awake_m99156EF53E5848DE83107BFAC803C33DC964265C (void);
-// 0x00000332 System.Void TMPro.Examples.TMP_FrameRateCounter::Start()
+// 0x00000333 System.Void TMPro.Examples.TMP_FrameRateCounter::Start()
 extern void TMP_FrameRateCounter_Start_m9B5D0A86D174DA019F3EB5C6E9BD54634B2F909A (void);
-// 0x00000333 System.Void TMPro.Examples.TMP_FrameRateCounter::Update()
+// 0x00000334 System.Void TMPro.Examples.TMP_FrameRateCounter::Update()
 extern void TMP_FrameRateCounter_Update_m5251EE9AC9DCB99D0871EE83624C8A9012E6A079 (void);
-// 0x00000334 System.Void TMPro.Examples.TMP_FrameRateCounter::Set_FrameCounter_Position(TMPro.Examples.TMP_FrameRateCounter/FpsCounterAnchorPositions)
+// 0x00000335 System.Void TMPro.Examples.TMP_FrameRateCounter::Set_FrameCounter_Position(TMPro.Examples.TMP_FrameRateCounter/FpsCounterAnchorPositions)
 extern void TMP_FrameRateCounter_Set_FrameCounter_Position_m1CC40A8236B2161050D19C4B2EBFF34B96645723 (void);
-// 0x00000335 System.Void TMPro.Examples.TMP_FrameRateCounter::.ctor()
+// 0x00000336 System.Void TMPro.Examples.TMP_FrameRateCounter::.ctor()
 extern void TMP_FrameRateCounter__ctor_mD8804AE37CED37A01DF943624D3C2C48FBC9AE43 (void);
-// 0x00000336 System.Void TMPro.Examples.TMP_TextEventCheck::OnEnable()
+// 0x00000337 System.Void TMPro.Examples.TMP_TextEventCheck::OnEnable()
 extern void TMP_TextEventCheck_OnEnable_mABF0C00DDBB37230534C49AD9CA342D96757AA3E (void);
-// 0x00000337 System.Void TMPro.Examples.TMP_TextEventCheck::OnDisable()
+// 0x00000338 System.Void TMPro.Examples.TMP_TextEventCheck::OnDisable()
 extern void TMP_TextEventCheck_OnDisable_m4AE76C19CBF131CB80B73A7C71378CA063CFC4C6 (void);
-// 0x00000338 System.Void TMPro.Examples.TMP_TextEventCheck::OnCharacterSelection(System.Char,System.Int32)
+// 0x00000339 System.Void TMPro.Examples.TMP_TextEventCheck::OnCharacterSelection(System.Char,System.Int32)
 extern void TMP_TextEventCheck_OnCharacterSelection_mB421E2CFB617397137CF1AE9CC2F49E46EB3F0AE (void);
-// 0x00000339 System.Void TMPro.Examples.TMP_TextEventCheck::OnSpriteSelection(System.Char,System.Int32)
+// 0x0000033A System.Void TMPro.Examples.TMP_TextEventCheck::OnSpriteSelection(System.Char,System.Int32)
 extern void TMP_TextEventCheck_OnSpriteSelection_mD88D899DE3321CC15502BB1174709BE290AB6215 (void);
-// 0x0000033A System.Void TMPro.Examples.TMP_TextEventCheck::OnWordSelection(System.String,System.Int32,System.Int32)
+// 0x0000033B System.Void TMPro.Examples.TMP_TextEventCheck::OnWordSelection(System.String,System.Int32,System.Int32)
 extern void TMP_TextEventCheck_OnWordSelection_m180B102DAED1F3313F2F4BB6CF588FF96C8CAB79 (void);
-// 0x0000033B System.Void TMPro.Examples.TMP_TextEventCheck::OnLineSelection(System.String,System.Int32,System.Int32)
+// 0x0000033C System.Void TMPro.Examples.TMP_TextEventCheck::OnLineSelection(System.String,System.Int32,System.Int32)
 extern void TMP_TextEventCheck_OnLineSelection_mE0538FFAFE04A286F937907D0E4664338DCF1559 (void);
-// 0x0000033C System.Void TMPro.Examples.TMP_TextEventCheck::OnLinkSelection(System.String,System.String,System.Int32)
+// 0x0000033D System.Void TMPro.Examples.TMP_TextEventCheck::OnLinkSelection(System.String,System.String,System.Int32)
 extern void TMP_TextEventCheck_OnLinkSelection_m72BF9241651D44805590F1DBADF2FD864D209779 (void);
-// 0x0000033D System.Void TMPro.Examples.TMP_TextEventCheck::.ctor()
+// 0x0000033E System.Void TMPro.Examples.TMP_TextEventCheck::.ctor()
 extern void TMP_TextEventCheck__ctor_m8F6CDB8774BDF6C6B909919393AC0290BA2BB0AF (void);
-// 0x0000033E System.Void TMPro.Examples.TMP_TextInfoDebugTool::.ctor()
+// 0x0000033F System.Void TMPro.Examples.TMP_TextInfoDebugTool::.ctor()
 extern void TMP_TextInfoDebugTool__ctor_m54C6EE99B1DC2B4DE1F8E870974B3B41B970C37E (void);
-// 0x0000033F System.Void TMPro.Examples.TMP_TextSelector_A::Awake()
+// 0x00000340 System.Void TMPro.Examples.TMP_TextSelector_A::Awake()
 extern void TMP_TextSelector_A_Awake_m662ED2E3CDB7AE16174109344A01A50AF3C44797 (void);
-// 0x00000340 System.Void TMPro.Examples.TMP_TextSelector_A::LateUpdate()
+// 0x00000341 System.Void TMPro.Examples.TMP_TextSelector_A::LateUpdate()
 extern void TMP_TextSelector_A_LateUpdate_m1A711EC87962C6C5A7157414CD059D984D3BD55B (void);
-// 0x00000341 System.Void TMPro.Examples.TMP_TextSelector_A::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+// 0x00000342 System.Void TMPro.Examples.TMP_TextSelector_A::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_A_OnPointerEnter_m747F05CBEF90BF713BF726E47CA37DC86D9B439A (void);
-// 0x00000342 System.Void TMPro.Examples.TMP_TextSelector_A::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+// 0x00000343 System.Void TMPro.Examples.TMP_TextSelector_A::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_A_OnPointerExit_m5D7D8A07591506FB7291E84A951AB5C43DAA5503 (void);
-// 0x00000343 System.Void TMPro.Examples.TMP_TextSelector_A::.ctor()
+// 0x00000344 System.Void TMPro.Examples.TMP_TextSelector_A::.ctor()
 extern void TMP_TextSelector_A__ctor_m4C56A438A3140D5CF9C7AFB8466E11142F4FA3BE (void);
-// 0x00000344 System.Void TMPro.Examples.TMP_TextSelector_B::Awake()
+// 0x00000345 System.Void TMPro.Examples.TMP_TextSelector_B::Awake()
 extern void TMP_TextSelector_B_Awake_m773D4C87E67823272DBF597B9CADE82DD3BFFD87 (void);
-// 0x00000345 System.Void TMPro.Examples.TMP_TextSelector_B::OnEnable()
+// 0x00000346 System.Void TMPro.Examples.TMP_TextSelector_B::OnEnable()
 extern void TMP_TextSelector_B_OnEnable_m8DA695DB0913F7123C4ADAFD5BEAB4424FA5861B (void);
-// 0x00000346 System.Void TMPro.Examples.TMP_TextSelector_B::OnDisable()
+// 0x00000347 System.Void TMPro.Examples.TMP_TextSelector_B::OnDisable()
 extern void TMP_TextSelector_B_OnDisable_mF2EF7AE0E015218AB77936BD5FD6863F7788F11D (void);
-// 0x00000347 System.Void TMPro.Examples.TMP_TextSelector_B::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x00000348 System.Void TMPro.Examples.TMP_TextSelector_B::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void TMP_TextSelector_B_ON_TEXT_CHANGED_m5B53EF1608E98B6A56AAA386085A3216B35A51EE (void);
-// 0x00000348 System.Void TMPro.Examples.TMP_TextSelector_B::LateUpdate()
+// 0x00000349 System.Void TMPro.Examples.TMP_TextSelector_B::LateUpdate()
 extern void TMP_TextSelector_B_LateUpdate_mE1B3969D788695E37240927FC6B1827CC6DD5EFF (void);
-// 0x00000349 System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+// 0x0000034A System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_B_OnPointerEnter_mBAF5711E20E579D21258BD4040454A64E1134D98 (void);
-// 0x0000034A System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+// 0x0000034B System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerExit(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_B_OnPointerExit_m40ED8F7E47FF6FD8B38BE96B2216267F61509D65 (void);
-// 0x0000034B System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerClick(UnityEngine.EventSystems.PointerEventData)
+// 0x0000034C System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerClick(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_B_OnPointerClick_m773B56D918B1D0F73C5ABC0EB22FD34D39AFBB97 (void);
-// 0x0000034C System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+// 0x0000034D System.Void TMPro.Examples.TMP_TextSelector_B::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
 extern void TMP_TextSelector_B_OnPointerUp_mF409D728900872CC323B18DDA7F91265058BE772 (void);
-// 0x0000034D System.Void TMPro.Examples.TMP_TextSelector_B::RestoreCachedVertexAttributes(System.Int32)
+// 0x0000034E System.Void TMPro.Examples.TMP_TextSelector_B::RestoreCachedVertexAttributes(System.Int32)
 extern void TMP_TextSelector_B_RestoreCachedVertexAttributes_m1FD258EC7A53C8E1ECB18EB6FFEFC6239780C398 (void);
-// 0x0000034E System.Void TMPro.Examples.TMP_TextSelector_B::.ctor()
+// 0x0000034F System.Void TMPro.Examples.TMP_TextSelector_B::.ctor()
 extern void TMP_TextSelector_B__ctor_mB45DD6360094ADBEF5E8020E8C62404B7E45E301 (void);
-// 0x0000034F System.Void TMPro.Examples.TMP_UiFrameRateCounter::Awake()
+// 0x00000350 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Awake()
 extern void TMP_UiFrameRateCounter_Awake_m3E0ECAD08FA25B61DD75F4D36EC3F1DE5A22A491 (void);
-// 0x00000350 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Start()
+// 0x00000351 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Start()
 extern void TMP_UiFrameRateCounter_Start_m11EF02C330E5D834C41F009CF088A3150352567F (void);
-// 0x00000351 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Update()
+// 0x00000352 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Update()
 extern void TMP_UiFrameRateCounter_Update_m568E467033B0FF7C67251895A0772CFA197789A3 (void);
-// 0x00000352 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Set_FrameCounter_Position(TMPro.Examples.TMP_UiFrameRateCounter/FpsCounterAnchorPositions)
+// 0x00000353 System.Void TMPro.Examples.TMP_UiFrameRateCounter::Set_FrameCounter_Position(TMPro.Examples.TMP_UiFrameRateCounter/FpsCounterAnchorPositions)
 extern void TMP_UiFrameRateCounter_Set_FrameCounter_Position_mAF25D6E90A6CB17EE041885B32579A2AEDBFCC36 (void);
-// 0x00000353 System.Void TMPro.Examples.TMP_UiFrameRateCounter::.ctor()
+// 0x00000354 System.Void TMPro.Examples.TMP_UiFrameRateCounter::.ctor()
 extern void TMP_UiFrameRateCounter__ctor_mBF5305427799EBC515580C2747FE604A6DFEC848 (void);
-// 0x00000354 System.Void TMPro.Examples.VertexColorCycler::Awake()
+// 0x00000355 System.Void TMPro.Examples.VertexColorCycler::Awake()
 extern void VertexColorCycler_Awake_m8895A9C06DB3EC4379334601DC726F1AFAF543C1 (void);
-// 0x00000355 System.Void TMPro.Examples.VertexColorCycler::Start()
+// 0x00000356 System.Void TMPro.Examples.VertexColorCycler::Start()
 extern void VertexColorCycler_Start_m36846DA72BFC7FDFA944A368C9DB62D17A15917B (void);
-// 0x00000356 System.Collections.IEnumerator TMPro.Examples.VertexColorCycler::AnimateVertexColors()
+// 0x00000357 System.Collections.IEnumerator TMPro.Examples.VertexColorCycler::AnimateVertexColors()
 extern void VertexColorCycler_AnimateVertexColors_m16733B3DFF4C0F625AA66B5DF9D3B04D723E49CC (void);
-// 0x00000357 System.Void TMPro.Examples.VertexColorCycler::.ctor()
+// 0x00000358 System.Void TMPro.Examples.VertexColorCycler::.ctor()
 extern void VertexColorCycler__ctor_m673CA077DC5E935BABCEA79E5E70116E9934F4C1 (void);
-// 0x00000358 System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::.ctor(System.Int32)
+// 0x00000359 System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::.ctor(System.Int32)
 extern void U3CAnimateVertexColorsU3Ed__3__ctor_m0245999D5FAAF8855583609DB16CAF48E9450262 (void);
-// 0x00000359 System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.IDisposable.Dispose()
+// 0x0000035A System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.IDisposable.Dispose()
 extern void U3CAnimateVertexColorsU3Ed__3_System_IDisposable_Dispose_mF965F484C619EFA1359F7DB6495C1C79A89001BF (void);
-// 0x0000035A System.Boolean TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::MoveNext()
+// 0x0000035B System.Boolean TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::MoveNext()
 extern void U3CAnimateVertexColorsU3Ed__3_MoveNext_m5C44B8CC0AB09A205BB1649931D2AC7C6F016E60 (void);
-// 0x0000035B System.Object TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000035C System.Object TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF9600944C968C16121129C479F8B25D8E8B7FDD1 (void);
-// 0x0000035C System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.IEnumerator.Reset()
+// 0x0000035D System.Void TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.IEnumerator.Reset()
 extern void U3CAnimateVertexColorsU3Ed__3_System_Collections_IEnumerator_Reset_m319AC50F2DE1572FB7D7AF4F5F65958D01477899 (void);
-// 0x0000035D System.Object TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.IEnumerator.get_Current()
+// 0x0000035E System.Object TMPro.Examples.VertexColorCycler/<AnimateVertexColors>d__3::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__3_System_Collections_IEnumerator_get_Current_mC19EC9CE0C245B49D987C18357571FF3462F1D2C (void);
-// 0x0000035E System.Void TMPro.Examples.VertexJitter::Awake()
+// 0x0000035F System.Void TMPro.Examples.VertexJitter::Awake()
 extern void VertexJitter_Awake_m0DF2AC9C728A15EEB427F1FE2426E3C31FBA544C (void);
-// 0x0000035F System.Void TMPro.Examples.VertexJitter::OnEnable()
+// 0x00000360 System.Void TMPro.Examples.VertexJitter::OnEnable()
 extern void VertexJitter_OnEnable_mCD5C1FDDBA809B04AC6F6CB00562D0AA45BC4354 (void);
-// 0x00000360 System.Void TMPro.Examples.VertexJitter::OnDisable()
+// 0x00000361 System.Void TMPro.Examples.VertexJitter::OnDisable()
 extern void VertexJitter_OnDisable_mB670406B3982BFC44CB6BB05A73F1BE877FDFAF2 (void);
-// 0x00000361 System.Void TMPro.Examples.VertexJitter::Start()
+// 0x00000362 System.Void TMPro.Examples.VertexJitter::Start()
 extern void VertexJitter_Start_mDE6155803CF2B1E6CE0EBAE8DF7DB93601E1DD76 (void);
-// 0x00000362 System.Void TMPro.Examples.VertexJitter::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x00000363 System.Void TMPro.Examples.VertexJitter::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void VertexJitter_ON_TEXT_CHANGED_m0CF9C49A1033B4475C04A417440F39490FED64A8 (void);
-// 0x00000363 System.Collections.IEnumerator TMPro.Examples.VertexJitter::AnimateVertexColors()
+// 0x00000364 System.Collections.IEnumerator TMPro.Examples.VertexJitter::AnimateVertexColors()
 extern void VertexJitter_AnimateVertexColors_m2A69F06CF58FA46B689BD4166DEF5AD15FA2FA88 (void);
-// 0x00000364 System.Void TMPro.Examples.VertexJitter::.ctor()
+// 0x00000365 System.Void TMPro.Examples.VertexJitter::.ctor()
 extern void VertexJitter__ctor_m41E4682405B3C0B19779BA8CB77156D65D64716D (void);
-// 0x00000365 System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::.ctor(System.Int32)
+// 0x00000366 System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::.ctor(System.Int32)
 extern void U3CAnimateVertexColorsU3Ed__11__ctor_m10C4D98A634474BAA883419ED308835B7D91C01A (void);
-// 0x00000366 System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.IDisposable.Dispose()
+// 0x00000367 System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.IDisposable.Dispose()
 extern void U3CAnimateVertexColorsU3Ed__11_System_IDisposable_Dispose_mB3756FBFDD731F3CC1EFF9AB132FF5075C8411F8 (void);
-// 0x00000367 System.Boolean TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::MoveNext()
+// 0x00000368 System.Boolean TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::MoveNext()
 extern void U3CAnimateVertexColorsU3Ed__11_MoveNext_mD694A3145B54B9C5EB351853752B9292DBFF0273 (void);
-// 0x00000368 System.Object TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000369 System.Object TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m79C3A529011A51B9A994106D3C1271548B02D405 (void);
-// 0x00000369 System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.IEnumerator.Reset()
+// 0x0000036A System.Void TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.IEnumerator.Reset()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_IEnumerator_Reset_m15291DCCCEC264095634B26DD6F24D52360BDAF0 (void);
-// 0x0000036A System.Object TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.IEnumerator.get_Current()
+// 0x0000036B System.Object TMPro.Examples.VertexJitter/<AnimateVertexColors>d__11::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_IEnumerator_get_Current_m0B8F21A4589C68BA16A8340938BB44C980260CC9 (void);
-// 0x0000036B System.Void TMPro.Examples.VertexShakeA::Awake()
+// 0x0000036C System.Void TMPro.Examples.VertexShakeA::Awake()
 extern void VertexShakeA_Awake_m092957B0A67A153E7CD56A75A438087DE4806867 (void);
-// 0x0000036C System.Void TMPro.Examples.VertexShakeA::OnEnable()
+// 0x0000036D System.Void TMPro.Examples.VertexShakeA::OnEnable()
 extern void VertexShakeA_OnEnable_m52E2A036C9EB2C1D633BA7F43E31C36983972304 (void);
-// 0x0000036D System.Void TMPro.Examples.VertexShakeA::OnDisable()
+// 0x0000036E System.Void TMPro.Examples.VertexShakeA::OnDisable()
 extern void VertexShakeA_OnDisable_m52F58AF9438377D222543AA67CFF7B30FCCB0F23 (void);
-// 0x0000036E System.Void TMPro.Examples.VertexShakeA::Start()
+// 0x0000036F System.Void TMPro.Examples.VertexShakeA::Start()
 extern void VertexShakeA_Start_mDD8B5538BDFBC2BA242B997B879E7ED64ACAFC5E (void);
-// 0x0000036F System.Void TMPro.Examples.VertexShakeA::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x00000370 System.Void TMPro.Examples.VertexShakeA::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void VertexShakeA_ON_TEXT_CHANGED_mE7A41CEFDB0008A1CD15F156EFEE1C895A92EE77 (void);
-// 0x00000370 System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
+// 0x00000371 System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
 extern void VertexShakeA_AnimateVertexColors_m5FD933D6BF976B64FC0B80614DE5112377D1DC38 (void);
-// 0x00000371 System.Void TMPro.Examples.VertexShakeA::.ctor()
+// 0x00000372 System.Void TMPro.Examples.VertexShakeA::.ctor()
 extern void VertexShakeA__ctor_m63ED483A292CA310B90144E0779C0472AAC22CBB (void);
-// 0x00000372 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::.ctor(System.Int32)
+// 0x00000373 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::.ctor(System.Int32)
 extern void U3CAnimateVertexColorsU3Ed__11__ctor_m440985E6DF2F1B461E2964101EA242FFD472A25A (void);
-// 0x00000373 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.IDisposable.Dispose()
+// 0x00000374 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.IDisposable.Dispose()
 extern void U3CAnimateVertexColorsU3Ed__11_System_IDisposable_Dispose_m74112773E1FD645722BC221FA5256331C068EAE7 (void);
-// 0x00000374 System.Boolean TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::MoveNext()
+// 0x00000375 System.Boolean TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::MoveNext()
 extern void U3CAnimateVertexColorsU3Ed__11_MoveNext_mA6858F6CA14AAE3DFB7EA13748E10E063BBAB934 (void);
-// 0x00000375 System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000376 System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8DD4F3768C9025EFAC0BFDBB942FEF7953FB20BE (void);
-// 0x00000376 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.IEnumerator.Reset()
+// 0x00000377 System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.IEnumerator.Reset()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_IEnumerator_Reset_m2F84864A089CBA0B878B7AC1EA39A49B82682A90 (void);
-// 0x00000377 System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.IEnumerator.get_Current()
+// 0x00000378 System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>d__11::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__11_System_Collections_IEnumerator_get_Current_m3106DAC17EF56701CBC9812DD031932B04BB730B (void);
-// 0x00000378 System.Void TMPro.Examples.VertexShakeB::Awake()
+// 0x00000379 System.Void TMPro.Examples.VertexShakeB::Awake()
 extern void VertexShakeB_Awake_mFA9A180BD1769CC79E6325314B5652D605ABE58E (void);
-// 0x00000379 System.Void TMPro.Examples.VertexShakeB::OnEnable()
+// 0x0000037A System.Void TMPro.Examples.VertexShakeB::OnEnable()
 extern void VertexShakeB_OnEnable_m4999DF4598174EDA2A47F4F667B5CE061DF97C21 (void);
-// 0x0000037A System.Void TMPro.Examples.VertexShakeB::OnDisable()
+// 0x0000037B System.Void TMPro.Examples.VertexShakeB::OnDisable()
 extern void VertexShakeB_OnDisable_m2FB32CBD277A271400BF8AF2A35294C09FE9B8E5 (void);
-// 0x0000037B System.Void TMPro.Examples.VertexShakeB::Start()
+// 0x0000037C System.Void TMPro.Examples.VertexShakeB::Start()
 extern void VertexShakeB_Start_m58786A0944340EF16E024ADB596C9AB5686C2AF1 (void);
-// 0x0000037C System.Void TMPro.Examples.VertexShakeB::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x0000037D System.Void TMPro.Examples.VertexShakeB::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void VertexShakeB_ON_TEXT_CHANGED_mF8641640C828A9664AE03AF01CB4832E14EF436D (void);
-// 0x0000037D System.Collections.IEnumerator TMPro.Examples.VertexShakeB::AnimateVertexColors()
+// 0x0000037E System.Collections.IEnumerator TMPro.Examples.VertexShakeB::AnimateVertexColors()
 extern void VertexShakeB_AnimateVertexColors_m06D25FE7F9F3EFF693DDC889BF725F01D0CF2A6F (void);
-// 0x0000037E System.Void TMPro.Examples.VertexShakeB::.ctor()
+// 0x0000037F System.Void TMPro.Examples.VertexShakeB::.ctor()
 extern void VertexShakeB__ctor_m9D068774503CF8642CC0BAC0E909ECE91E4E2198 (void);
-// 0x0000037F System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::.ctor(System.Int32)
+// 0x00000380 System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::.ctor(System.Int32)
 extern void U3CAnimateVertexColorsU3Ed__10__ctor_mBE5C0E4A0F65F07A7510D171683AD319F76E6C6D (void);
-// 0x00000380 System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.IDisposable.Dispose()
+// 0x00000381 System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.IDisposable.Dispose()
 extern void U3CAnimateVertexColorsU3Ed__10_System_IDisposable_Dispose_m4DD41FA568ABBC327FA38C0E345EFB6F1A71C2C8 (void);
-// 0x00000381 System.Boolean TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::MoveNext()
+// 0x00000382 System.Boolean TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::MoveNext()
 extern void U3CAnimateVertexColorsU3Ed__10_MoveNext_mDD84A4116FCAAF920F86BA72F890CE0BE76AF348 (void);
-// 0x00000382 System.Object TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000383 System.Object TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m250CC96EC17E74D79536FDA4EB6F5B5F985C0845 (void);
-// 0x00000383 System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.IEnumerator.Reset()
+// 0x00000384 System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.IEnumerator.Reset()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_IEnumerator_Reset_m5A5869FEFA67D5E9659F1145B83581D954550C1A (void);
-// 0x00000384 System.Object TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.IEnumerator.get_Current()
+// 0x00000385 System.Object TMPro.Examples.VertexShakeB/<AnimateVertexColors>d__10::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_IEnumerator_get_Current_m496F1BFEADA21FFB684F8C1996EAB707CFA1C5F0 (void);
-// 0x00000385 System.Void TMPro.Examples.VertexZoom::Awake()
+// 0x00000386 System.Void TMPro.Examples.VertexZoom::Awake()
 extern void VertexZoom_Awake_m29C1DE789B968D726EDD69F605321A223D47C1A0 (void);
-// 0x00000386 System.Void TMPro.Examples.VertexZoom::OnEnable()
+// 0x00000387 System.Void TMPro.Examples.VertexZoom::OnEnable()
 extern void VertexZoom_OnEnable_mE3719F01B6A8590066988F425F8A63103B5A7B47 (void);
-// 0x00000387 System.Void TMPro.Examples.VertexZoom::OnDisable()
+// 0x00000388 System.Void TMPro.Examples.VertexZoom::OnDisable()
 extern void VertexZoom_OnDisable_mBB91C9EFA049395743D27358A427BB2B05850B47 (void);
-// 0x00000388 System.Void TMPro.Examples.VertexZoom::Start()
+// 0x00000389 System.Void TMPro.Examples.VertexZoom::Start()
 extern void VertexZoom_Start_mB03D03148C98EBC9117D69510D24F21978546FCB (void);
-// 0x00000389 System.Void TMPro.Examples.VertexZoom::ON_TEXT_CHANGED(UnityEngine.Object)
+// 0x0000038A System.Void TMPro.Examples.VertexZoom::ON_TEXT_CHANGED(UnityEngine.Object)
 extern void VertexZoom_ON_TEXT_CHANGED_mFF049D0455A7DD19D6BDACBEEB737B4AAE32DDA7 (void);
-// 0x0000038A System.Collections.IEnumerator TMPro.Examples.VertexZoom::AnimateVertexColors()
+// 0x0000038B System.Collections.IEnumerator TMPro.Examples.VertexZoom::AnimateVertexColors()
 extern void VertexZoom_AnimateVertexColors_m632BD9DC8FB193AF2D5B540524B11AF139FDF5F0 (void);
-// 0x0000038B System.Void TMPro.Examples.VertexZoom::.ctor()
+// 0x0000038C System.Void TMPro.Examples.VertexZoom::.ctor()
 extern void VertexZoom__ctor_m454AF80ACB5C555BCB4B5E658A22B5A4FCC39422 (void);
-// 0x0000038C System.Void TMPro.Examples.VertexZoom/<>c__DisplayClass10_0::.ctor()
+// 0x0000038D System.Void TMPro.Examples.VertexZoom/<>c__DisplayClass10_0::.ctor()
 extern void U3CU3Ec__DisplayClass10_0__ctor_m8C69A89B34AA3D16243E69F1E0015856C791CC8A (void);
-// 0x0000038D System.Int32 TMPro.Examples.VertexZoom/<>c__DisplayClass10_0::<AnimateVertexColors>b__0(System.Int32,System.Int32)
+// 0x0000038E System.Int32 TMPro.Examples.VertexZoom/<>c__DisplayClass10_0::<AnimateVertexColors>b__0(System.Int32,System.Int32)
 extern void U3CU3Ec__DisplayClass10_0_U3CAnimateVertexColorsU3Eb__0_m8E51A05E012CCFA439DCF10A8B5C4FA196E4344A (void);
-// 0x0000038E System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::.ctor(System.Int32)
+// 0x0000038F System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::.ctor(System.Int32)
 extern void U3CAnimateVertexColorsU3Ed__10__ctor_m7A5B8E07B89E628DB7119F7F61311165A2DBC4D6 (void);
-// 0x0000038F System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.IDisposable.Dispose()
+// 0x00000390 System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.IDisposable.Dispose()
 extern void U3CAnimateVertexColorsU3Ed__10_System_IDisposable_Dispose_m974E92A444C6343E94C76BB6CC6508F7AE4FD36E (void);
-// 0x00000390 System.Boolean TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::MoveNext()
+// 0x00000391 System.Boolean TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::MoveNext()
 extern void U3CAnimateVertexColorsU3Ed__10_MoveNext_m6DBC52A95A92A54A1801DC4CEE548FA568251D5E (void);
-// 0x00000391 System.Object TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000392 System.Object TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m110CD16E89E725B1484D24FFB1753768F78A988B (void);
-// 0x00000392 System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.IEnumerator.Reset()
+// 0x00000393 System.Void TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.IEnumerator.Reset()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_IEnumerator_Reset_mDE5E71C88F5096FD70EB061287ADF0B847732821 (void);
-// 0x00000393 System.Object TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.IEnumerator.get_Current()
+// 0x00000394 System.Object TMPro.Examples.VertexZoom/<AnimateVertexColors>d__10::System.Collections.IEnumerator.get_Current()
 extern void U3CAnimateVertexColorsU3Ed__10_System_Collections_IEnumerator_get_Current_m14B89756695EE73AEBB6F3A613F65E1343A8CC2C (void);
-// 0x00000394 System.Void TMPro.Examples.WarpTextExample::Awake()
+// 0x00000395 System.Void TMPro.Examples.WarpTextExample::Awake()
 extern void WarpTextExample_Awake_m92842E51B4DBB2E4341ACB179468049FAB23949F (void);
-// 0x00000395 System.Void TMPro.Examples.WarpTextExample::Start()
+// 0x00000396 System.Void TMPro.Examples.WarpTextExample::Start()
 extern void WarpTextExample_Start_m3339EDC03B6FC498916520CBCCDB5F9FA090F809 (void);
-// 0x00000396 UnityEngine.AnimationCurve TMPro.Examples.WarpTextExample::CopyAnimationCurve(UnityEngine.AnimationCurve)
+// 0x00000397 UnityEngine.AnimationCurve TMPro.Examples.WarpTextExample::CopyAnimationCurve(UnityEngine.AnimationCurve)
 extern void WarpTextExample_CopyAnimationCurve_m65A93388CC2CF58CD2E08CC8EF682A2C97C558FF (void);
-// 0x00000397 System.Collections.IEnumerator TMPro.Examples.WarpTextExample::WarpText()
+// 0x00000398 System.Collections.IEnumerator TMPro.Examples.WarpTextExample::WarpText()
 extern void WarpTextExample_WarpText_mBE4B6E5B6D8AAE9340CD59B1FA9DFE9A34665E98 (void);
-// 0x00000398 System.Void TMPro.Examples.WarpTextExample::.ctor()
+// 0x00000399 System.Void TMPro.Examples.WarpTextExample::.ctor()
 extern void WarpTextExample__ctor_mBD48A5403123F25C45B5E60C19E1EA397FBA1795 (void);
-// 0x00000399 System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::.ctor(System.Int32)
+// 0x0000039A System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::.ctor(System.Int32)
 extern void U3CWarpTextU3Ed__8__ctor_m1943C34BBEAF121203BA8C5D725E991283A4A3BB (void);
-// 0x0000039A System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::System.IDisposable.Dispose()
+// 0x0000039B System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::System.IDisposable.Dispose()
 extern void U3CWarpTextU3Ed__8_System_IDisposable_Dispose_m145D2DA1026419984AD79D5D62FBC38C9441AB53 (void);
-// 0x0000039B System.Boolean TMPro.Examples.WarpTextExample/<WarpText>d__8::MoveNext()
+// 0x0000039C System.Boolean TMPro.Examples.WarpTextExample/<WarpText>d__8::MoveNext()
 extern void U3CWarpTextU3Ed__8_MoveNext_mCE7A826C5E4854C2C509C77BD18F5A9B6D691B02 (void);
-// 0x0000039C System.Object TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000039D System.Object TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CWarpTextU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD80368E9B7E259311C03E406B75161ED6F7618E3 (void);
-// 0x0000039D System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.IEnumerator.Reset()
+// 0x0000039E System.Void TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.IEnumerator.Reset()
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42 (void);
-// 0x0000039E System.Object TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.IEnumerator.get_Current()
+// 0x0000039F System.Object TMPro.Examples.WarpTextExample/<WarpText>d__8::System.Collections.IEnumerator.get_Current()
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19 (void);
-// 0x0000039F System.Void M2MqttUnity.M2MqttUnityClient::add_ConnectionSucceeded(System.Action)
+// 0x000003A0 System.Void M2MqttUnity.M2MqttUnityClient::add_ConnectionSucceeded(System.Action)
 extern void M2MqttUnityClient_add_ConnectionSucceeded_m531F5C46536C3DA8B566C007DA905D5504CD272B (void);
-// 0x000003A0 System.Void M2MqttUnity.M2MqttUnityClient::remove_ConnectionSucceeded(System.Action)
+// 0x000003A1 System.Void M2MqttUnity.M2MqttUnityClient::remove_ConnectionSucceeded(System.Action)
 extern void M2MqttUnityClient_remove_ConnectionSucceeded_mD7FFA772C5CFFF67B2E8823D2349544F01BE4297 (void);
-// 0x000003A1 System.Void M2MqttUnity.M2MqttUnityClient::add_ConnectionFailed(System.Action)
+// 0x000003A2 System.Void M2MqttUnity.M2MqttUnityClient::add_ConnectionFailed(System.Action)
 extern void M2MqttUnityClient_add_ConnectionFailed_mEDFD13124222001002E131E6470080FE6A113533 (void);
-// 0x000003A2 System.Void M2MqttUnity.M2MqttUnityClient::remove_ConnectionFailed(System.Action)
+// 0x000003A3 System.Void M2MqttUnity.M2MqttUnityClient::remove_ConnectionFailed(System.Action)
 extern void M2MqttUnityClient_remove_ConnectionFailed_m54BA1DF29679E47BA8BE32BFDD8FC7513B983724 (void);
-// 0x000003A3 System.Void M2MqttUnity.M2MqttUnityClient::Connect()
+// 0x000003A4 System.Void M2MqttUnity.M2MqttUnityClient::Connect()
 extern void M2MqttUnityClient_Connect_m8F663959F579ED19EF04B03916C4FA7A6AA8FEDF (void);
-// 0x000003A4 System.Void M2MqttUnity.M2MqttUnityClient::Disconnect()
+// 0x000003A5 System.Void M2MqttUnity.M2MqttUnityClient::Disconnect()
 extern void M2MqttUnityClient_Disconnect_m9C85FA056764FF4EB5FA7BDC14775478D4CECDCB (void);
-// 0x000003A5 System.Void M2MqttUnity.M2MqttUnityClient::OnConnecting()
+// 0x000003A6 System.Void M2MqttUnity.M2MqttUnityClient::OnConnecting()
 extern void M2MqttUnityClient_OnConnecting_m488BD851D0DAF105FF26618FFB3412ECD94ECFC5 (void);
-// 0x000003A6 System.Void M2MqttUnity.M2MqttUnityClient::OnConnected()
+// 0x000003A7 System.Void M2MqttUnity.M2MqttUnityClient::OnConnected()
 extern void M2MqttUnityClient_OnConnected_m2A3AE76E90645E9F71583E1AC070E572F5051433 (void);
-// 0x000003A7 System.Void M2MqttUnity.M2MqttUnityClient::OnConnectionFailed(System.String)
+// 0x000003A8 System.Void M2MqttUnity.M2MqttUnityClient::OnConnectionFailed(System.String)
 extern void M2MqttUnityClient_OnConnectionFailed_m1C8B060907D34856CF2BC57A516DA13A38324A77 (void);
-// 0x000003A8 System.Void M2MqttUnity.M2MqttUnityClient::SubscribeTopics()
+// 0x000003A9 System.Void M2MqttUnity.M2MqttUnityClient::SubscribeTopics()
 extern void M2MqttUnityClient_SubscribeTopics_m860A98A67893B78E085A96FD095C8D1E85AFC946 (void);
-// 0x000003A9 System.Void M2MqttUnity.M2MqttUnityClient::UnsubscribeTopics()
+// 0x000003AA System.Void M2MqttUnity.M2MqttUnityClient::UnsubscribeTopics()
 extern void M2MqttUnityClient_UnsubscribeTopics_m4C1DEEC8B9DD2B91F7DEA8676FF22340E1662C68 (void);
-// 0x000003AA System.Void M2MqttUnity.M2MqttUnityClient::OnApplicationQuit()
+// 0x000003AB System.Void M2MqttUnity.M2MqttUnityClient::OnApplicationQuit()
 extern void M2MqttUnityClient_OnApplicationQuit_m7AB3F337AB7BDA721E6B86F65E076F9898C1F518 (void);
-// 0x000003AB System.Void M2MqttUnity.M2MqttUnityClient::Awake()
+// 0x000003AC System.Void M2MqttUnity.M2MqttUnityClient::Awake()
 extern void M2MqttUnityClient_Awake_mD87F8A4DBA29B739F28A4AB3BB1A1E57AD77701F (void);
-// 0x000003AC System.Void M2MqttUnity.M2MqttUnityClient::Start()
+// 0x000003AD System.Void M2MqttUnity.M2MqttUnityClient::Start()
 extern void M2MqttUnityClient_Start_m56ACE216C4088661424E6530C5DFCD3AF7FC909B (void);
-// 0x000003AD System.Void M2MqttUnity.M2MqttUnityClient::DecodeMessage(System.String,System.Byte[])
+// 0x000003AE System.Void M2MqttUnity.M2MqttUnityClient::DecodeMessage(System.String,System.Byte[])
 extern void M2MqttUnityClient_DecodeMessage_m5E5EEF18C2B122C4C16BCCC737BC97A97F7EBBE9 (void);
-// 0x000003AE System.Void M2MqttUnity.M2MqttUnityClient::OnDisconnected()
+// 0x000003AF System.Void M2MqttUnity.M2MqttUnityClient::OnDisconnected()
 extern void M2MqttUnityClient_OnDisconnected_mE28D90C1563AC419C1ADEAD01704BFFB338D1383 (void);
-// 0x000003AF System.Void M2MqttUnity.M2MqttUnityClient::OnConnectionLost()
+// 0x000003B0 System.Void M2MqttUnity.M2MqttUnityClient::OnConnectionLost()
 extern void M2MqttUnityClient_OnConnectionLost_mAD6B2A017A343B6D526B29AEA65E157954DAE7D3 (void);
-// 0x000003B0 System.Void M2MqttUnity.M2MqttUnityClient::Update()
+// 0x000003B1 System.Void M2MqttUnity.M2MqttUnityClient::Update()
 extern void M2MqttUnityClient_Update_mC93F265545D6C05C8796329138C1BCE4AA47872B (void);
-// 0x000003B1 System.Void M2MqttUnity.M2MqttUnityClient::ProcessMqttEvents()
+// 0x000003B2 System.Void M2MqttUnity.M2MqttUnityClient::ProcessMqttEvents()
 extern void M2MqttUnityClient_ProcessMqttEvents_mFECA77F11E5714E132AAB3D0A26153C9843C500D (void);
-// 0x000003B2 System.Void M2MqttUnity.M2MqttUnityClient::ProcessMqttMessageBackgroundQueue()
+// 0x000003B3 System.Void M2MqttUnity.M2MqttUnityClient::ProcessMqttMessageBackgroundQueue()
 extern void M2MqttUnityClient_ProcessMqttMessageBackgroundQueue_m652D19881106E31D1FDC127057649B4B5B8B2898 (void);
-// 0x000003B3 System.Void M2MqttUnity.M2MqttUnityClient::SwapMqttMessageQueues()
+// 0x000003B4 System.Void M2MqttUnity.M2MqttUnityClient::SwapMqttMessageQueues()
 extern void M2MqttUnityClient_SwapMqttMessageQueues_m486CFF5181AAA9353A804E3AE852E6CD04335818 (void);
-// 0x000003B4 System.Void M2MqttUnity.M2MqttUnityClient::OnMqttMessageReceived(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs)
+// 0x000003B5 System.Void M2MqttUnity.M2MqttUnityClient::OnMqttMessageReceived(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs)
 extern void M2MqttUnityClient_OnMqttMessageReceived_m61DE6C6F59FAFD69D3099AE5C49E9A06F344221A (void);
-// 0x000003B5 System.Void M2MqttUnity.M2MqttUnityClient::OnMqttConnectionClosed(System.Object,System.EventArgs)
+// 0x000003B6 System.Void M2MqttUnity.M2MqttUnityClient::OnMqttConnectionClosed(System.Object,System.EventArgs)
 extern void M2MqttUnityClient_OnMqttConnectionClosed_m38B4CFA7FCECE71139A3CF7BE2CE7D0565D3BD03 (void);
-// 0x000003B6 System.Collections.IEnumerator M2MqttUnity.M2MqttUnityClient::DoConnect()
+// 0x000003B7 System.Collections.IEnumerator M2MqttUnity.M2MqttUnityClient::DoConnect()
 extern void M2MqttUnityClient_DoConnect_m3E82B587CEE19F2216CFB936632F6E6C8B17CF1F (void);
-// 0x000003B7 System.Collections.IEnumerator M2MqttUnity.M2MqttUnityClient::DoDisconnect()
+// 0x000003B8 System.Collections.IEnumerator M2MqttUnity.M2MqttUnityClient::DoDisconnect()
 extern void M2MqttUnityClient_DoDisconnect_m7CB2B636288A1FED46E0DEED99E40B99E765E367 (void);
-// 0x000003B8 System.Void M2MqttUnity.M2MqttUnityClient::CloseConnection()
+// 0x000003B9 System.Void M2MqttUnity.M2MqttUnityClient::CloseConnection()
 extern void M2MqttUnityClient_CloseConnection_mE34371BBC34C5866E2608D67DC41BB8F8D5F8508 (void);
-// 0x000003B9 System.Void M2MqttUnity.M2MqttUnityClient::.ctor()
+// 0x000003BA System.Void M2MqttUnity.M2MqttUnityClient::.ctor()
 extern void M2MqttUnityClient__ctor_m2B2034BDB102C8501661CBD0AC6700A7D81AA5CA (void);
-// 0x000003BA System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::.ctor(System.Int32)
+// 0x000003BB System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::.ctor(System.Int32)
 extern void U3CDoConnectU3Ed__40__ctor_m2C36F4D35693F7028B75A9EEB948E6095E22C47A (void);
-// 0x000003BB System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.IDisposable.Dispose()
+// 0x000003BC System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.IDisposable.Dispose()
 extern void U3CDoConnectU3Ed__40_System_IDisposable_Dispose_m5486D72032D7E30EB484BA2DB0109766A6EE0535 (void);
-// 0x000003BC System.Boolean M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::MoveNext()
+// 0x000003BD System.Boolean M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::MoveNext()
 extern void U3CDoConnectU3Ed__40_MoveNext_mE436C964F200872D967CA5E946C7FB38FF19F5D5 (void);
-// 0x000003BD System.Object M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000003BE System.Object M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoConnectU3Ed__40_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m93DB1664F9163912EC47D9218F781C6F0E9AD7C9 (void);
-// 0x000003BE System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.IEnumerator.Reset()
+// 0x000003BF System.Void M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.IEnumerator.Reset()
 extern void U3CDoConnectU3Ed__40_System_Collections_IEnumerator_Reset_m13935F63FD5FFB4035DB6C7A0867EE2701314112 (void);
-// 0x000003BF System.Object M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.IEnumerator.get_Current()
+// 0x000003C0 System.Object M2MqttUnity.M2MqttUnityClient/<DoConnect>d__40::System.Collections.IEnumerator.get_Current()
 extern void U3CDoConnectU3Ed__40_System_Collections_IEnumerator_get_Current_m63AA14FB1124156F6BBD14ABF0CB1F6E4EC0F615 (void);
-// 0x000003C0 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::.ctor(System.Int32)
+// 0x000003C1 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::.ctor(System.Int32)
 extern void U3CDoDisconnectU3Ed__41__ctor_m8CCECE074AFB5BF21058AFED4B03A47F99B85AA3 (void);
-// 0x000003C1 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.IDisposable.Dispose()
+// 0x000003C2 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.IDisposable.Dispose()
 extern void U3CDoDisconnectU3Ed__41_System_IDisposable_Dispose_m721AEF420B1494E252CD81C533498F447B10686F (void);
-// 0x000003C2 System.Boolean M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::MoveNext()
+// 0x000003C3 System.Boolean M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::MoveNext()
 extern void U3CDoDisconnectU3Ed__41_MoveNext_mE7163C7AB82EE8274A41A9541D45A310362B8EC1 (void);
-// 0x000003C3 System.Object M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000003C4 System.Object M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoDisconnectU3Ed__41_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m01A07B5EC0381A908E58521F7473324E1DA61062 (void);
-// 0x000003C4 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.IEnumerator.Reset()
+// 0x000003C5 System.Void M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.IEnumerator.Reset()
 extern void U3CDoDisconnectU3Ed__41_System_Collections_IEnumerator_Reset_mC40BB9AD70932385985A06AB74201F5259B9C5BA (void);
-// 0x000003C5 System.Object M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.IEnumerator.get_Current()
+// 0x000003C6 System.Object M2MqttUnity.M2MqttUnityClient/<DoDisconnect>d__41::System.Collections.IEnumerator.get_Current()
 extern void U3CDoDisconnectU3Ed__41_System_Collections_IEnumerator_get_Current_mF02A19F993CFEB7051EBE4B9271F28F2EBDD8822 (void);
-// 0x000003C6 System.Void M2MqttUnity.Examples.M2MqttUnityTest::TestPublish()
+// 0x000003C7 System.Void M2MqttUnity.Examples.M2MqttUnityTest::TestPublish()
 extern void M2MqttUnityTest_TestPublish_m8F0E3057EE8135B6D52887B25CBC39E3CE083215 (void);
-// 0x000003C7 System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetBrokerAddress(System.String)
+// 0x000003C8 System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetBrokerAddress(System.String)
 extern void M2MqttUnityTest_SetBrokerAddress_m907E14F37E0B75AD7F2600D9920C9AB1461DECA1 (void);
-// 0x000003C8 System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetBrokerPort(System.String)
+// 0x000003C9 System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetBrokerPort(System.String)
 extern void M2MqttUnityTest_SetBrokerPort_mD2EAF2C05362A4974672D98A9316EC5A56ABBDD4 (void);
-// 0x000003C9 System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetEncrypted(System.Boolean)
+// 0x000003CA System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetEncrypted(System.Boolean)
 extern void M2MqttUnityTest_SetEncrypted_m78B1F2CBC44CD1B3F31C01BBF81C762CE1E890F4 (void);
-// 0x000003CA System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetUiMessage(System.String)
+// 0x000003CB System.Void M2MqttUnity.Examples.M2MqttUnityTest::SetUiMessage(System.String)
 extern void M2MqttUnityTest_SetUiMessage_m0DDBF8C68A83C5C050EFF937B3E8D32531ED9EC3 (void);
-// 0x000003CB System.Void M2MqttUnity.Examples.M2MqttUnityTest::AddUiMessage(System.String)
+// 0x000003CC System.Void M2MqttUnity.Examples.M2MqttUnityTest::AddUiMessage(System.String)
 extern void M2MqttUnityTest_AddUiMessage_mB73DDAE6DC9F0D1B7956FBDC947465581C3D6336 (void);
-// 0x000003CC System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnecting()
+// 0x000003CD System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnecting()
 extern void M2MqttUnityTest_OnConnecting_m57AEAA25F6756706323D58E30E49873F41C4F8C6 (void);
-// 0x000003CD System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnected()
+// 0x000003CE System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnected()
 extern void M2MqttUnityTest_OnConnected_m4E08EFB47DDAEC316312EC74200AA2382D1F2E37 (void);
-// 0x000003CE System.Void M2MqttUnity.Examples.M2MqttUnityTest::SubscribeTopics()
+// 0x000003CF System.Void M2MqttUnity.Examples.M2MqttUnityTest::SubscribeTopics()
 extern void M2MqttUnityTest_SubscribeTopics_m01B25C91226442D987199216212FDCE27904D5E2 (void);
-// 0x000003CF System.Void M2MqttUnity.Examples.M2MqttUnityTest::UnsubscribeTopics()
+// 0x000003D0 System.Void M2MqttUnity.Examples.M2MqttUnityTest::UnsubscribeTopics()
 extern void M2MqttUnityTest_UnsubscribeTopics_m8B79F5AB8F64EE5047F4D8C039EFD923BE6FBA71 (void);
-// 0x000003D0 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnectionFailed(System.String)
+// 0x000003D1 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnectionFailed(System.String)
 extern void M2MqttUnityTest_OnConnectionFailed_m881C7BCEA9CDE0F2E08B3DDA81C9C4E103462A93 (void);
-// 0x000003D1 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnDisconnected()
+// 0x000003D2 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnDisconnected()
 extern void M2MqttUnityTest_OnDisconnected_mCB056C169FB70EC6FBC5772677BE9EB70747B5DC (void);
-// 0x000003D2 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnectionLost()
+// 0x000003D3 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnConnectionLost()
 extern void M2MqttUnityTest_OnConnectionLost_m72484011F82E667559D20D97A0DE531CB408EFEA (void);
-// 0x000003D3 System.Void M2MqttUnity.Examples.M2MqttUnityTest::UpdateUI()
+// 0x000003D4 System.Void M2MqttUnity.Examples.M2MqttUnityTest::UpdateUI()
 extern void M2MqttUnityTest_UpdateUI_mE061E0EB128C462E8E9E52494596FFDE98E4E126 (void);
-// 0x000003D4 System.Void M2MqttUnity.Examples.M2MqttUnityTest::Start()
+// 0x000003D5 System.Void M2MqttUnity.Examples.M2MqttUnityTest::Start()
 extern void M2MqttUnityTest_Start_m764493A946BF5A66F43ECF5C2A61F42FFC53242C (void);
-// 0x000003D5 System.Void M2MqttUnity.Examples.M2MqttUnityTest::DecodeMessage(System.String,System.Byte[])
+// 0x000003D6 System.Void M2MqttUnity.Examples.M2MqttUnityTest::DecodeMessage(System.String,System.Byte[])
 extern void M2MqttUnityTest_DecodeMessage_mEBF6B2FF6142F3E7533A54A055C001017D543D05 (void);
-// 0x000003D6 System.Void M2MqttUnity.Examples.M2MqttUnityTest::StoreMessage(System.String)
+// 0x000003D7 System.Void M2MqttUnity.Examples.M2MqttUnityTest::StoreMessage(System.String)
 extern void M2MqttUnityTest_StoreMessage_mB6DD8CE424A598B72541FA82D666B7E4840F9593 (void);
-// 0x000003D7 System.Void M2MqttUnity.Examples.M2MqttUnityTest::ProcessMessage(System.String)
+// 0x000003D8 System.Void M2MqttUnity.Examples.M2MqttUnityTest::ProcessMessage(System.String)
 extern void M2MqttUnityTest_ProcessMessage_m058227E6650E76EBF56C1F7C8019BDDE7AC430F1 (void);
-// 0x000003D8 System.Void M2MqttUnity.Examples.M2MqttUnityTest::Update()
+// 0x000003D9 System.Void M2MqttUnity.Examples.M2MqttUnityTest::Update()
 extern void M2MqttUnityTest_Update_m5DD4B1B054009C953BA710A38261A1ABEA80ACBB (void);
-// 0x000003D9 System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnDestroy()
+// 0x000003DA System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnDestroy()
 extern void M2MqttUnityTest_OnDestroy_mA9169A75E9D16B3FB3BA29E649F099BDAD7B7AB1 (void);
-// 0x000003DA System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnValidate()
+// 0x000003DB System.Void M2MqttUnity.Examples.M2MqttUnityTest::OnValidate()
 extern void M2MqttUnityTest_OnValidate_m1E2378D4ECCC596FD83E268BB6192E678375A7E2 (void);
-// 0x000003DB System.Void M2MqttUnity.Examples.M2MqttUnityTest::.ctor()
+// 0x000003DC System.Void M2MqttUnity.Examples.M2MqttUnityTest::.ctor()
 extern void M2MqttUnityTest__ctor_m35CCDCF052189BCE501EE6A7BA36321F9DC20599 (void);
-// 0x000003DC System.Int32 uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Receive(System.Byte[])
-// 0x000003DD System.Int32 uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Send(System.Byte[])
-// 0x000003DE System.Void uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Close()
-// 0x000003DF System.Void uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Connect()
-// 0x000003E0 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::add_MqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler)
+// 0x000003DD System.Int32 uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Receive(System.Byte[])
+// 0x000003DE System.Int32 uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Send(System.Byte[])
+// 0x000003DF System.Void uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Close()
+// 0x000003E0 System.Void uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel::Connect()
+// 0x000003E1 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::add_MqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler)
 extern void MqttClient_add_MqttMsgPublishReceived_mA4642E80F6F096B4C945DB82A8F5BEC5F63048F6 (void);
-// 0x000003E1 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::remove_MqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler)
+// 0x000003E2 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::remove_MqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler)
 extern void MqttClient_remove_MqttMsgPublishReceived_m8DC8618AD56E9B41341C901FE4067BD3C8BEAEAD (void);
-// 0x000003E2 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::add_ConnectionClosed(uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler)
+// 0x000003E3 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::add_ConnectionClosed(uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler)
 extern void MqttClient_add_ConnectionClosed_mAD357A14364E5C12015F0491A3AD451DB526BC1B (void);
-// 0x000003E3 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::remove_ConnectionClosed(uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler)
+// 0x000003E4 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::remove_ConnectionClosed(uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler)
 extern void MqttClient_remove_ConnectionClosed_m4AF2FBA0B21430BB138801BB3F96684975DD8B81 (void);
-// 0x000003E4 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::get_IsConnected()
+// 0x000003E5 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::get_IsConnected()
 extern void MqttClient_get_IsConnected_m43F167EF3CF14E2EDBE5DB654F4BFB5E6AF1BCAB (void);
-// 0x000003E5 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_IsConnected(System.Boolean)
+// 0x000003E6 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_IsConnected(System.Boolean)
 extern void MqttClient_set_IsConnected_m42D9F58108406AB20E75E140D1FD3341DD60CE3D (void);
-// 0x000003E6 System.String uPLibrary.Networking.M2Mqtt.MqttClient::get_ClientId()
+// 0x000003E7 System.String uPLibrary.Networking.M2Mqtt.MqttClient::get_ClientId()
 extern void MqttClient_get_ClientId_m1B27776F2637EFA3AF65B417C04A0A33DBDA905D (void);
-// 0x000003E7 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_ClientId(System.String)
+// 0x000003E8 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_ClientId(System.String)
 extern void MqttClient_set_ClientId_mB3A506898A0D3AEA9D4A497663F2791B56F6482F (void);
-// 0x000003E8 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::get_CleanSession()
+// 0x000003E9 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::get_CleanSession()
 extern void MqttClient_get_CleanSession_mBFF3297FDE18721D10114E3C06C489DBA37B0D93 (void);
-// 0x000003E9 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_CleanSession(System.Boolean)
+// 0x000003EA System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_CleanSession(System.Boolean)
 extern void MqttClient_set_CleanSession_m59858EF4786DD469BE747238AEC50380529C2FC9 (void);
-// 0x000003EA System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillFlag(System.Boolean)
+// 0x000003EB System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillFlag(System.Boolean)
 extern void MqttClient_set_WillFlag_m849F8A86E2F859F6EE3A507BD5D7D0BF03F325E0 (void);
-// 0x000003EB System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillQosLevel(System.Byte)
+// 0x000003EC System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillQosLevel(System.Byte)
 extern void MqttClient_set_WillQosLevel_mE342A5D2CAE058939456F205E45C48578F268D40 (void);
-// 0x000003EC System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillTopic(System.String)
+// 0x000003ED System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillTopic(System.String)
 extern void MqttClient_set_WillTopic_m2668885D8F2C81ABEC4B2F062473122EFDE9D94B (void);
-// 0x000003ED System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillMessage(System.String)
+// 0x000003EE System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_WillMessage(System.String)
 extern void MqttClient_set_WillMessage_m27C1343F78D076DA89EA93402799B4D3D178189F (void);
-// 0x000003EE uPLibrary.Networking.M2Mqtt.MqttProtocolVersion uPLibrary.Networking.M2Mqtt.MqttClient::get_ProtocolVersion()
+// 0x000003EF uPLibrary.Networking.M2Mqtt.MqttProtocolVersion uPLibrary.Networking.M2Mqtt.MqttClient::get_ProtocolVersion()
 extern void MqttClient_get_ProtocolVersion_mE84EA597920832CEA1C68FA6A2D65194BA44E0E4 (void);
-// 0x000003EF System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_ProtocolVersion(uPLibrary.Networking.M2Mqtt.MqttProtocolVersion)
+// 0x000003F0 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::set_ProtocolVersion(uPLibrary.Networking.M2Mqtt.MqttProtocolVersion)
 extern void MqttClient_set_ProtocolVersion_mA0204BFF26E5A005A12DDAEA66613A7B9E9D7B5F (void);
-// 0x000003F0 uPLibrary.Networking.M2Mqtt.MqttSettings uPLibrary.Networking.M2Mqtt.MqttClient::get_Settings()
+// 0x000003F1 uPLibrary.Networking.M2Mqtt.MqttSettings uPLibrary.Networking.M2Mqtt.MqttClient::get_Settings()
 extern void MqttClient_get_Settings_m37F440C8692C9718832EADC2C95544662F2681E1 (void);
-// 0x000003F1 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::.ctor(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols)
+// 0x000003F2 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::.ctor(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols)
 extern void MqttClient__ctor_m497EC05B11943CE72B505A329EAD888ABE192CC2 (void);
-// 0x000003F2 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Init(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.LocalCertificateSelectionCallback)
+// 0x000003F3 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Init(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.LocalCertificateSelectionCallback)
 extern void MqttClient_Init_mC167BB997C51889D3B15AC2978A1C2DD2D5F1EE7 (void);
-// 0x000003F3 System.Byte uPLibrary.Networking.M2Mqtt.MqttClient::Connect(System.String,System.String,System.String)
+// 0x000003F4 System.Byte uPLibrary.Networking.M2Mqtt.MqttClient::Connect(System.String,System.String,System.String)
 extern void MqttClient_Connect_m500CA0904CCAC35F6F712398DC89F00B30819347 (void);
-// 0x000003F4 System.Byte uPLibrary.Networking.M2Mqtt.MqttClient::Connect(System.String,System.String,System.String,System.Boolean,System.Byte,System.Boolean,System.String,System.String,System.Boolean,System.UInt16)
+// 0x000003F5 System.Byte uPLibrary.Networking.M2Mqtt.MqttClient::Connect(System.String,System.String,System.String,System.Boolean,System.Byte,System.Boolean,System.String,System.String,System.Boolean,System.UInt16)
 extern void MqttClient_Connect_m76ADED86E4CB78AC2461703D538F8ACDE34AE917 (void);
-// 0x000003F5 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Disconnect()
+// 0x000003F6 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Disconnect()
 extern void MqttClient_Disconnect_m85403AC89C2610D8987F2B916C044B39E9E1AA8E (void);
-// 0x000003F6 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Close()
+// 0x000003F7 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Close()
 extern void MqttClient_Close_m818E14098B1A731BC46FC7C3CFD811B7902917DC (void);
-// 0x000003F7 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp uPLibrary.Networking.M2Mqtt.MqttClient::Ping()
+// 0x000003F8 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp uPLibrary.Networking.M2Mqtt.MqttClient::Ping()
 extern void MqttClient_Ping_m8AC337D2327CBE690515E658F759E8FFF51BFDF9 (void);
-// 0x000003F8 System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Subscribe(System.String[],System.Byte[])
+// 0x000003F9 System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Subscribe(System.String[],System.Byte[])
 extern void MqttClient_Subscribe_mC0AAD292FE52F150A0932E7775E392574686AAAA (void);
-// 0x000003F9 System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Unsubscribe(System.String[])
+// 0x000003FA System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Unsubscribe(System.String[])
 extern void MqttClient_Unsubscribe_mF254AA16A1D7281560F010F0C2549A8B0D60A6F4 (void);
-// 0x000003FA System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Publish(System.String,System.Byte[],System.Byte,System.Boolean)
+// 0x000003FB System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::Publish(System.String,System.Byte[],System.Byte,System.Boolean)
 extern void MqttClient_Publish_mC699557896CDAB775673836858179FDD5D94C11E (void);
-// 0x000003FB System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnInternalEvent(uPLibrary.Networking.M2Mqtt.Internal.InternalEvent)
+// 0x000003FC System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnInternalEvent(uPLibrary.Networking.M2Mqtt.Internal.InternalEvent)
 extern void MqttClient_OnInternalEvent_m28784A390C243B9C15D34DF51CE2DFC38FE68078 (void);
-// 0x000003FC System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnConnectionClosing()
+// 0x000003FD System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnConnectionClosing()
 extern void MqttClient_OnConnectionClosing_mCDE7AC2DF5D3C8A20D14093A40E935E45E0116CD (void);
-// 0x000003FD System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish)
+// 0x000003FE System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgPublishReceived(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish)
 extern void MqttClient_OnMqttMsgPublishReceived_m48ECEC7765DFC361DB4A5E0919AA71A137D3880D (void);
-// 0x000003FE System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgPublished(System.UInt16,System.Boolean)
+// 0x000003FF System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgPublished(System.UInt16,System.Boolean)
 extern void MqttClient_OnMqttMsgPublished_m1778775C70EA78A1A7AC9B668BE92B96D6F27B15 (void);
-// 0x000003FF System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgSubscribed(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback)
+// 0x00000400 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgSubscribed(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback)
 extern void MqttClient_OnMqttMsgSubscribed_m81C1BB0CA06234605C7EA2B0AE7CC5F22D6B459A (void);
-// 0x00000400 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgUnsubscribed(System.UInt16)
+// 0x00000401 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnMqttMsgUnsubscribed(System.UInt16)
 extern void MqttClient_OnMqttMsgUnsubscribed_m5DB5C10E54C625AC72EE0155B272D33A2C555D59 (void);
-// 0x00000401 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnConnectionClosed()
+// 0x00000402 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::OnConnectionClosed()
 extern void MqttClient_OnConnectionClosed_m41E31EB50C743220B062DD806ECDB42B617BD532 (void);
-// 0x00000402 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Send(System.Byte[])
+// 0x00000403 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Send(System.Byte[])
 extern void MqttClient_Send_mBC4E714FC587C8948D87D92D37C95357F82B6500 (void);
-// 0x00000403 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Send(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
+// 0x00000404 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::Send(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
 extern void MqttClient_Send_m440B8D5E0B7D07366BE9E2977C89186F68D619B5 (void);
-// 0x00000404 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(System.Byte[],System.Int32)
+// 0x00000405 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(System.Byte[],System.Int32)
 extern void MqttClient_SendReceive_m7DA033ACC18884E6F12C34D97CAAF2B3BF892027 (void);
-// 0x00000405 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
+// 0x00000406 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
 extern void MqttClient_SendReceive_mADC539FCFC56D133791F376BA966C46F99947F60 (void);
-// 0x00000406 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,System.Int32)
+// 0x00000407 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.MqttClient::SendReceive(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,System.Int32)
 extern void MqttClient_SendReceive_m871F94158AA90494E99EE79E332C9F070361BD5B (void);
-// 0x00000407 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::EnqueueInflight(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
+// 0x00000408 System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient::EnqueueInflight(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
 extern void MqttClient_EnqueueInflight_m2922033EB6AC4C9BD9A432F3414DBF9DD2BBFD2B (void);
-// 0x00000408 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::EnqueueInternal(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
+// 0x00000409 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::EnqueueInternal(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
 extern void MqttClient_EnqueueInternal_mB0C0308208EC20A22CE68A4F0D076A746C9D5273 (void);
-// 0x00000409 System.Void uPLibrary.Networking.M2Mqtt.MqttClient::ReceiveThread()
+// 0x0000040A System.Void uPLibrary.Networking.M2Mqtt.MqttClient::ReceiveThread()
 extern void MqttClient_ReceiveThread_mEAE416764F00568D319242AF380853CAC380BE33 (void);
-// 0x0000040A System.Void uPLibrary.Networking.M2Mqtt.MqttClient::KeepAliveThread()
+// 0x0000040B System.Void uPLibrary.Networking.M2Mqtt.MqttClient::KeepAliveThread()
 extern void MqttClient_KeepAliveThread_mEC989686925BA590B6987572D4C349FDA2DE9E44 (void);
-// 0x0000040B System.Void uPLibrary.Networking.M2Mqtt.MqttClient::DispatchEventThread()
+// 0x0000040C System.Void uPLibrary.Networking.M2Mqtt.MqttClient::DispatchEventThread()
 extern void MqttClient_DispatchEventThread_mA541D5D086E5AA84D7C36535E7A1C058F0AFC29F (void);
-// 0x0000040C System.Void uPLibrary.Networking.M2Mqtt.MqttClient::ProcessInflightThread()
+// 0x0000040D System.Void uPLibrary.Networking.M2Mqtt.MqttClient::ProcessInflightThread()
 extern void MqttClient_ProcessInflightThread_m90A3286B91AE46E85D35A2F577BAE3FEC9788CC4 (void);
-// 0x0000040D System.Void uPLibrary.Networking.M2Mqtt.MqttClient::RestoreSession()
+// 0x0000040E System.Void uPLibrary.Networking.M2Mqtt.MqttClient::RestoreSession()
 extern void MqttClient_RestoreSession_m2DEE416D7272FD5CBBBE904D632D86B55EC2F04B (void);
-// 0x0000040E System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::GetMessageId()
+// 0x0000040F System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient::GetMessageId()
 extern void MqttClient_GetMessageId_m505528DB6D92C036040827A8EC3524C19B728AFC (void);
-// 0x0000040F System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler::.ctor(System.Object,System.IntPtr)
+// 0x00000410 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler::.ctor(System.Object,System.IntPtr)
 extern void MqttMsgPublishEventHandler__ctor_mFBFEDB20697D2B565591E70CCD3E8E5D357D6D11 (void);
-// 0x00000410 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs)
+// 0x00000411 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs)
 extern void MqttMsgPublishEventHandler_Invoke_mE0B775229BA8B6E3E37C0BD08DB04F90FDB3A9DD (void);
-// 0x00000411 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishedEventHandler::.ctor(System.Object,System.IntPtr)
+// 0x00000412 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishedEventHandler::.ctor(System.Object,System.IntPtr)
 extern void MqttMsgPublishedEventHandler__ctor_m6945FBD3F8634FF8F2E8A1E931AE947962282DDD (void);
-// 0x00000412 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs)
+// 0x00000413 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgPublishedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs)
 extern void MqttMsgPublishedEventHandler_Invoke_m994FA478E7F46B2EB24A7736DCFEDC5086F1EE42 (void);
-// 0x00000413 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgSubscribedEventHandler::.ctor(System.Object,System.IntPtr)
+// 0x00000414 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgSubscribedEventHandler::.ctor(System.Object,System.IntPtr)
 extern void MqttMsgSubscribedEventHandler__ctor_m586A74C11AA1C3B98CAFABB5EE7E360D526CA51F (void);
-// 0x00000414 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgSubscribedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribedEventArgs)
+// 0x00000415 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgSubscribedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribedEventArgs)
 extern void MqttMsgSubscribedEventHandler_Invoke_mBE40FC2FECB03C26F45A4364B9C5AE46E3C7B182 (void);
-// 0x00000415 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgUnsubscribedEventHandler::.ctor(System.Object,System.IntPtr)
+// 0x00000416 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgUnsubscribedEventHandler::.ctor(System.Object,System.IntPtr)
 extern void MqttMsgUnsubscribedEventHandler__ctor_m68E2BE9860CAA1004F0037A083A17DA3534BF41E (void);
-// 0x00000416 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgUnsubscribedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribedEventArgs)
+// 0x00000417 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgUnsubscribedEventHandler::Invoke(System.Object,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribedEventArgs)
 extern void MqttMsgUnsubscribedEventHandler_Invoke_m8B55D423BFAB845500509CA6BA565DBA3015FD5A (void);
-// 0x00000417 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler::.ctor(System.Object,System.IntPtr)
+// 0x00000418 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler::.ctor(System.Object,System.IntPtr)
 extern void ConnectionClosedEventHandler__ctor_mC9032EFBC5AF847F6DE0B71C5B7C5A143282ED2A (void);
-// 0x00000418 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler::Invoke(System.Object,System.EventArgs)
+// 0x00000419 System.Void uPLibrary.Networking.M2Mqtt.MqttClient/ConnectionClosedEventHandler::Invoke(System.Object,System.EventArgs)
 extern void ConnectionClosedEventHandler_Invoke_m9CFA11DC7558238090477670C7F06A875954DB19 (void);
-// 0x00000419 System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::get_MessageId()
+// 0x0000041A System.UInt16 uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::get_MessageId()
 extern void MqttMsgContextFinder_get_MessageId_m4710E17ED1F6D171E89E2A9CCA35A3C2A044A500 (void);
-// 0x0000041A System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::set_MessageId(System.UInt16)
+// 0x0000041B System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::set_MessageId(System.UInt16)
 extern void MqttMsgContextFinder_set_MessageId_m18E2B26508A6046A9A1D9C68FC2AC4321964C696 (void);
-// 0x0000041B uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::get_Flow()
+// 0x0000041C uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::get_Flow()
 extern void MqttMsgContextFinder_get_Flow_m9BD60C3547FEA90C109DEB64CF087E0C42FD334A (void);
-// 0x0000041C System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::set_Flow(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
+// 0x0000041D System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::set_Flow(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
 extern void MqttMsgContextFinder_set_Flow_m23D3EF849DAF0B2F709904AFACA9FBBCDBCD7C82 (void);
-// 0x0000041D System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::.ctor(System.UInt16,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
+// 0x0000041E System.Void uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::.ctor(System.UInt16,uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
 extern void MqttMsgContextFinder__ctor_m56EDE643374680BA890033BB7E1DA1D645D69FA4 (void);
-// 0x0000041E System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::Find(System.Object)
+// 0x0000041F System.Boolean uPLibrary.Networking.M2Mqtt.MqttClient/MqttMsgContextFinder::Find(System.Object)
 extern void MqttMsgContextFinder_Find_mD96A505A95BC23981ADE478862B08BA4EDA61557 (void);
-// 0x0000041F System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_Port(System.Int32)
+// 0x00000420 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_Port(System.Int32)
 extern void MqttSettings_set_Port_mEAFD1762398035601233E2CD443AAF7A9E4238C1 (void);
-// 0x00000420 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_SslPort(System.Int32)
+// 0x00000421 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_SslPort(System.Int32)
 extern void MqttSettings_set_SslPort_m40F9C49DCA1D3DF244F5C1B1A7298289A6469598 (void);
-// 0x00000421 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_TimeoutOnConnection(System.Int32)
+// 0x00000422 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_TimeoutOnConnection(System.Int32)
 extern void MqttSettings_set_TimeoutOnConnection_m5DCF751B2F71C486243D35F9E7301FF72CA59FD7 (void);
-// 0x00000422 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_TimeoutOnReceiving(System.Int32)
+// 0x00000423 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_TimeoutOnReceiving(System.Int32)
 extern void MqttSettings_set_TimeoutOnReceiving_mAAED790CB6398722413AD0AED5DD09A4BCA8EC0A (void);
-// 0x00000423 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_AttemptsOnRetry()
+// 0x00000424 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_AttemptsOnRetry()
 extern void MqttSettings_get_AttemptsOnRetry_m55F3DCD3CE19EAEDACEE906A9C9C0D908CDCAB18 (void);
-// 0x00000424 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_AttemptsOnRetry(System.Int32)
+// 0x00000425 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_AttemptsOnRetry(System.Int32)
 extern void MqttSettings_set_AttemptsOnRetry_m4376079D3D450FA91F28CE55A2B16CF06C365E99 (void);
-// 0x00000425 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_DelayOnRetry()
+// 0x00000426 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_DelayOnRetry()
 extern void MqttSettings_get_DelayOnRetry_m985DC1646A32452E7BB7BC5E09D574AA794275D4 (void);
-// 0x00000426 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_DelayOnRetry(System.Int32)
+// 0x00000427 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_DelayOnRetry(System.Int32)
 extern void MqttSettings_set_DelayOnRetry_m101AB64A29EA8773491BC57E94E6944763B2D35D (void);
-// 0x00000427 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_InflightQueueSize()
+// 0x00000428 System.Int32 uPLibrary.Networking.M2Mqtt.MqttSettings::get_InflightQueueSize()
 extern void MqttSettings_get_InflightQueueSize_m69FB8423DBDCCDED6B59727EAC6C1D8A0C345D01 (void);
-// 0x00000428 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_InflightQueueSize(System.Int32)
+// 0x00000429 System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::set_InflightQueueSize(System.Int32)
 extern void MqttSettings_set_InflightQueueSize_mDA725F314F43748B991D5EDA48B4658F9FFF9FFA (void);
-// 0x00000429 uPLibrary.Networking.M2Mqtt.MqttSettings uPLibrary.Networking.M2Mqtt.MqttSettings::get_Instance()
+// 0x0000042A uPLibrary.Networking.M2Mqtt.MqttSettings uPLibrary.Networking.M2Mqtt.MqttSettings::get_Instance()
 extern void MqttSettings_get_Instance_m01D1C5437A55AE2560627965DB6DAC35B4C17AD8 (void);
-// 0x0000042A System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::.ctor()
+// 0x0000042B System.Void uPLibrary.Networking.M2Mqtt.MqttSettings::.ctor()
 extern void MqttSettings__ctor_m57F496A9780E85CA1011186C6BB34A9862B99D22 (void);
-// 0x0000042B System.Void uPLibrary.Networking.M2Mqtt.Fx::StartThread(System.Threading.ThreadStart)
+// 0x0000042C System.Void uPLibrary.Networking.M2Mqtt.Fx::StartThread(System.Threading.ThreadStart)
 extern void Fx_StartThread_m6B56454843B03578B1005FAA9EFDD15EAD29AAB3 (void);
-// 0x0000042C System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::.ctor(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.LocalCertificateSelectionCallback)
+// 0x0000042D System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::.ctor(System.String,System.Int32,System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Certificate,uPLibrary.Networking.M2Mqtt.MqttSslProtocols,System.Net.Security.RemoteCertificateValidationCallback,System.Net.Security.LocalCertificateSelectionCallback)
 extern void MqttNetworkChannel__ctor_m62D2797AC906A025A482EB2B51AF8B748DB84CF4 (void);
-// 0x0000042D System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Connect()
+// 0x0000042E System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Connect()
 extern void MqttNetworkChannel_Connect_m493B32B4B200505CF880A2F296C271D8E7822F13 (void);
-// 0x0000042E System.Int32 uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Send(System.Byte[])
+// 0x0000042F System.Int32 uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Send(System.Byte[])
 extern void MqttNetworkChannel_Send_m2F4B9D36F43CC952A24B24FF1CF35B9922A14236 (void);
-// 0x0000042F System.Int32 uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Receive(System.Byte[])
+// 0x00000430 System.Int32 uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Receive(System.Byte[])
 extern void MqttNetworkChannel_Receive_mFBB198BBDBF40F8263FB95E5C9721A853FE342A9 (void);
-// 0x00000430 System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Close()
+// 0x00000431 System.Void uPLibrary.Networking.M2Mqtt.MqttNetworkChannel::Close()
 extern void MqttNetworkChannel_Close_m75161AA68585EC2985A5A02091A550A612A29390 (void);
-// 0x00000431 System.Net.Sockets.AddressFamily uPLibrary.Networking.M2Mqtt.IPAddressUtility::GetAddressFamily(System.Net.IPAddress)
+// 0x00000432 System.Net.Sockets.AddressFamily uPLibrary.Networking.M2Mqtt.IPAddressUtility::GetAddressFamily(System.Net.IPAddress)
 extern void IPAddressUtility_GetAddressFamily_m957FC4686D7C42B0177CCAD98A5F07B5D49A25E7 (void);
-// 0x00000432 System.Object uPLibrary.Networking.M2Mqtt.Utility.QueueExtension::Get(System.Collections.Queue,uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate)
+// 0x00000433 System.Object uPLibrary.Networking.M2Mqtt.Utility.QueueExtension::Get(System.Collections.Queue,uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate)
 extern void QueueExtension_Get_mBDF549720ABE09C37169D4AFBA486F724A329E39 (void);
-// 0x00000433 System.Void uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate::.ctor(System.Object,System.IntPtr)
+// 0x00000434 System.Void uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate::.ctor(System.Object,System.IntPtr)
 extern void QueuePredicate__ctor_mD81E57F512D7764520CCF2CD158868A604FF8D1D (void);
-// 0x00000434 System.Boolean uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate::Invoke(System.Object)
+// 0x00000435 System.Boolean uPLibrary.Networking.M2Mqtt.Utility.QueueExtension/QueuePredicate::Invoke(System.Object)
 extern void QueuePredicate_Invoke_mBDAB5063584DC494848A6B360E575AD768B59A57 (void);
-// 0x00000435 System.Void uPLibrary.Networking.M2Mqtt.Utility.WriteTrace::.ctor(System.Object,System.IntPtr)
+// 0x00000436 System.Void uPLibrary.Networking.M2Mqtt.Utility.WriteTrace::.ctor(System.Object,System.IntPtr)
 extern void WriteTrace__ctor_m2EE3BE67838BD364984CC601AC6875179AE67CFE (void);
-// 0x00000436 System.Void uPLibrary.Networking.M2Mqtt.Utility.WriteTrace::Invoke(System.String,System.Object[])
+// 0x00000437 System.Void uPLibrary.Networking.M2Mqtt.Utility.WriteTrace::Invoke(System.String,System.Object[])
 extern void WriteTrace_Invoke_mFE650B81232ABC5DF50C8A9D6B7BCE3670E4D05A (void);
-// 0x00000437 System.Void uPLibrary.Networking.M2Mqtt.Utility.Trace::WriteLine(uPLibrary.Networking.M2Mqtt.Utility.TraceLevel,System.String,System.Object)
+// 0x00000438 System.Void uPLibrary.Networking.M2Mqtt.Utility.Trace::WriteLine(uPLibrary.Networking.M2Mqtt.Utility.TraceLevel,System.String,System.Object)
 extern void Trace_WriteLine_mF9150299A7D4BA3BFC2E2256C9C1D31E838DE1EA (void);
-// 0x00000438 System.Void uPLibrary.Networking.M2Mqtt.Session.MqttClientSession::.ctor(System.String)
+// 0x00000439 System.Void uPLibrary.Networking.M2Mqtt.Session.MqttClientSession::.ctor(System.String)
 extern void MqttClientSession__ctor_m93858DF9C51CDFC0019C52BB0BAFD937742B8582 (void);
-// 0x00000439 System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::set_ClientId(System.String)
+// 0x0000043A System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::set_ClientId(System.String)
 extern void MqttSession_set_ClientId_mFFA166189D9D9A7D44FAB44D65781C09C5A1B481 (void);
-// 0x0000043A System.Collections.Hashtable uPLibrary.Networking.M2Mqtt.Session.MqttSession::get_InflightMessages()
+// 0x0000043B System.Collections.Hashtable uPLibrary.Networking.M2Mqtt.Session.MqttSession::get_InflightMessages()
 extern void MqttSession_get_InflightMessages_m8EDD5AD4B2326B394FDEE8D8E07F2DD3A3556CB0 (void);
-// 0x0000043B System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::set_InflightMessages(System.Collections.Hashtable)
+// 0x0000043C System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::set_InflightMessages(System.Collections.Hashtable)
 extern void MqttSession_set_InflightMessages_m7E7CBC47033BB2FD213E0B4DDA9D2C829D4CD5B6 (void);
-// 0x0000043C System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::.ctor(System.String)
+// 0x0000043D System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::.ctor(System.String)
 extern void MqttSession__ctor_m75DDE1C4D2AAE34330E03AE5A73FD6A168D08A84 (void);
-// 0x0000043D System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::Clear()
+// 0x0000043E System.Void uPLibrary.Networking.M2Mqtt.Session.MqttSession::Clear()
 extern void MqttSession_Clear_m634CA89B54A491EA945FA21BED713F736A397807 (void);
-// 0x0000043E System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_Type()
+// 0x0000043F System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_Type()
 extern void MqttMsgBase_get_Type_mFBC9F62B677216E35506C058CD98E25547A0B380 (void);
-// 0x0000043F System.Boolean uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_DupFlag()
+// 0x00000440 System.Boolean uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_DupFlag()
 extern void MqttMsgBase_get_DupFlag_m9515B8ABD8080AEFC49C6915F2A03627A52F8F2E (void);
-// 0x00000440 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::set_DupFlag(System.Boolean)
+// 0x00000441 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::set_DupFlag(System.Boolean)
 extern void MqttMsgBase_set_DupFlag_m5614C9E9B6B04B8AC020D7C14F06A5EC1D767094 (void);
-// 0x00000441 System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_QosLevel()
+// 0x00000442 System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_QosLevel()
 extern void MqttMsgBase_get_QosLevel_mE49CCCD4AB1DF6C8053ED230FA518F074464F5CB (void);
-// 0x00000442 System.Boolean uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_Retain()
+// 0x00000443 System.Boolean uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_Retain()
 extern void MqttMsgBase_get_Retain_m3CD4FE6AB3B391B4ADFC88237BA6376126BD045E (void);
-// 0x00000443 System.UInt16 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_MessageId()
+// 0x00000444 System.UInt16 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::get_MessageId()
 extern void MqttMsgBase_get_MessageId_mB5D7DB290F2DABCDEED25C96F285D5F876856AD9 (void);
-// 0x00000444 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::set_MessageId(System.UInt16)
+// 0x00000445 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::set_MessageId(System.UInt16)
 extern void MqttMsgBase_set_MessageId_m66784CE56A3257B8BCE9DFF35ABBBFEBA1E8DB28 (void);
-// 0x00000445 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetBytes(System.Byte)
-// 0x00000446 System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::encodeRemainingLength(System.Int32,System.Byte[],System.Int32)
+// 0x00000446 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetBytes(System.Byte)
+// 0x00000447 System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::encodeRemainingLength(System.Int32,System.Byte[],System.Int32)
 extern void MqttMsgBase_encodeRemainingLength_m43EA5D6E75723B929A7F2D60D97BCAF1D724A3F0 (void);
-// 0x00000447 System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::decodeRemainingLength(uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000448 System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::decodeRemainingLength(uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgBase_decodeRemainingLength_m32109912AD3FC39DDAD36F80B217EA8D84C8038C (void);
-// 0x00000448 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetTraceString(System.String,System.Object[],System.Object[])
+// 0x00000449 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetTraceString(System.String,System.Object[],System.Object[])
 extern void MqttMsgBase_GetTraceString_m6D9E6F411392B228473698AE841DA7E84A6FD539 (void);
-// 0x00000449 System.Object uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetStringObject(System.Object)
+// 0x0000044A System.Object uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::GetStringObject(System.Object)
 extern void MqttMsgBase_GetStringObject_m845AFFF8349F565565E1055EC9999AAB09554917 (void);
-// 0x0000044A System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::.ctor()
+// 0x0000044B System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase::.ctor()
 extern void MqttMsgBase__ctor_mF28855DB7DEB32CB604E2F21839C216465C98B6A (void);
-// 0x0000044B System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::get_ReturnCode()
+// 0x0000044C System.Byte uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::get_ReturnCode()
 extern void MqttMsgConnack_get_ReturnCode_m4EFDCAC156656B0552A3EA8A8BD336C44E60F485 (void);
-// 0x0000044C System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::.ctor()
+// 0x0000044D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::.ctor()
 extern void MqttMsgConnack__ctor_m9DC0B9219E32D98964FBE8ADECCCC3E7919F1D61 (void);
-// 0x0000044D uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x0000044E uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgConnack_Parse_mF176898C4A01F203B82F08E60E419DF980989F5A (void);
-// 0x0000044E System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::GetBytes(System.Byte)
+// 0x0000044F System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::GetBytes(System.Byte)
 extern void MqttMsgConnack_GetBytes_mEFCBC3285917A27038AB270FD5FF427D2A714073 (void);
-// 0x0000044F System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::ToString()
+// 0x00000450 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnack::ToString()
 extern void MqttMsgConnack_ToString_mD11EC7D923A4143E4B751D60A10A514A8B5804A9 (void);
-// 0x00000450 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::.ctor(System.String,System.String,System.String,System.Boolean,System.Byte,System.Boolean,System.String,System.String,System.Boolean,System.UInt16,System.Byte)
+// 0x00000451 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::.ctor(System.String,System.String,System.String,System.Boolean,System.Byte,System.Boolean,System.String,System.String,System.Boolean,System.UInt16,System.Byte)
 extern void MqttMsgConnect__ctor_m350F9EBDC8792A4A0C1769017F4448532F0C4B6B (void);
-// 0x00000451 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::GetBytes(System.Byte)
+// 0x00000452 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::GetBytes(System.Byte)
 extern void MqttMsgConnect_GetBytes_m96CF8B8667EC640CA0EF2B1EB65058012F8DA6C2 (void);
-// 0x00000452 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::ToString()
+// 0x00000453 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgConnect::ToString()
 extern void MqttMsgConnect_ToString_mDE5B27A817021B32001ED908724C90614FAF3C88 (void);
-// 0x00000453 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Message()
+// 0x00000454 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Message()
 extern void MqttMsgContext_get_Message_m116B080E9FF59F8BD705D8D83F10DFB5CEDEF0B9 (void);
-// 0x00000454 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Message(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
+// 0x00000455 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Message(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
 extern void MqttMsgContext_set_Message_mB8A0819CB3912D2EDBA83BD64685B469564CE75D (void);
-// 0x00000455 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgState uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_State()
+// 0x00000456 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgState uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_State()
 extern void MqttMsgContext_get_State_mC5B833819724914F950F61B516022A6F2CC7484A (void);
-// 0x00000456 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_State(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgState)
+// 0x00000457 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_State(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgState)
 extern void MqttMsgContext_set_State_m3823D7A28653C5B5FEE32A5B0F22B74BAD3C4A68 (void);
-// 0x00000457 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Flow()
+// 0x00000458 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Flow()
 extern void MqttMsgContext_get_Flow_m2697D59B454DCBC8FE299191AAC199E9A8959B94 (void);
-// 0x00000458 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Flow(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
+// 0x00000459 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Flow(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgFlow)
 extern void MqttMsgContext_set_Flow_m6D8C695BDAD389C80270770143B5C7DBF5068154 (void);
-// 0x00000459 System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Timestamp()
+// 0x0000045A System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Timestamp()
 extern void MqttMsgContext_get_Timestamp_m634D1C01C286C9427CE0E27C306547E5793EF6CF (void);
-// 0x0000045A System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Timestamp(System.Int32)
+// 0x0000045B System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Timestamp(System.Int32)
 extern void MqttMsgContext_set_Timestamp_m18FC79B41BFB160EAD734A08DFDA1EDAFBF0506D (void);
-// 0x0000045B System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Attempt()
+// 0x0000045C System.Int32 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Attempt()
 extern void MqttMsgContext_get_Attempt_mCEE8092CDA8C5B4FB9AB231F84B5583D4108FE81 (void);
-// 0x0000045C System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Attempt(System.Int32)
+// 0x0000045D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::set_Attempt(System.Int32)
 extern void MqttMsgContext_set_Attempt_mF675E1964CA65321B263C15FC3B587D216CC19C8 (void);
-// 0x0000045D System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Key()
+// 0x0000045E System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::get_Key()
 extern void MqttMsgContext_get_Key_m97AACAA78249261AAA6632A7E035B84949D2B239 (void);
-// 0x0000045E System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::.ctor()
+// 0x0000045F System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgContext::.ctor()
 extern void MqttMsgContext__ctor_m664D69687B24569969912FBCDEC6E85E1407E33D (void);
-// 0x0000045F System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::.ctor()
+// 0x00000460 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::.ctor()
 extern void MqttMsgDisconnect__ctor_m1CD1F70A995CD4B1267153CDDA55D7F2414B2679 (void);
-// 0x00000460 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::GetBytes(System.Byte)
+// 0x00000461 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::GetBytes(System.Byte)
 extern void MqttMsgDisconnect_GetBytes_mCBAA77ED52AE83FAC1D0ED03F0EEF4E0A275A040 (void);
-// 0x00000461 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::ToString()
+// 0x00000462 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgDisconnect::ToString()
 extern void MqttMsgDisconnect_ToString_m38455E98B7F9AF26F9958FBF3CCA00F1625C7BBD (void);
-// 0x00000462 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::.ctor()
+// 0x00000463 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::.ctor()
 extern void MqttMsgPingReq__ctor_m5900AB0EC0A0F92FCF735E46A1E6AAAFA9FEE96D (void);
-// 0x00000463 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::GetBytes(System.Byte)
+// 0x00000464 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::GetBytes(System.Byte)
 extern void MqttMsgPingReq_GetBytes_m5FC15EE3770296842E2CD337C3CDBE5D0445B682 (void);
-// 0x00000464 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::ToString()
+// 0x00000465 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingReq::ToString()
 extern void MqttMsgPingReq_ToString_mA7FB7073AD15BF60FDD9FB06E01F7B503A20A2FA (void);
-// 0x00000465 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::.ctor()
+// 0x00000466 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::.ctor()
 extern void MqttMsgPingResp__ctor_m5F4815F8FBD9AB6594458CD0DB7A9561AAD54873 (void);
-// 0x00000466 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000467 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPingResp_Parse_mA79F4E4C3E06E71002BF3A5AFE5EB7BCFA0785D8 (void);
-// 0x00000467 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::GetBytes(System.Byte)
+// 0x00000468 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::GetBytes(System.Byte)
 extern void MqttMsgPingResp_GetBytes_m8CB0E9832E6E67BCAD71D42B6031ACAD5BC75EC3 (void);
-// 0x00000468 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::ToString()
+// 0x00000469 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPingResp::ToString()
 extern void MqttMsgPingResp_ToString_m5EBF39DA03948DCBF67FE81A62667AFD320E109B (void);
-// 0x00000469 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::.ctor()
+// 0x0000046A System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::.ctor()
 extern void MqttMsgPuback__ctor_mF180301EA3419DCBD8C8CE4E5E691A2B585A05AD (void);
-// 0x0000046A System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::GetBytes(System.Byte)
+// 0x0000046B System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::GetBytes(System.Byte)
 extern void MqttMsgPuback_GetBytes_m0D3EB8AF4D75353D1CAD9EF2CF2ADA76FF807F04 (void);
-// 0x0000046B uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x0000046C uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPuback_Parse_mC85BE03448D7751D6206D8B7324DB15A5FFE3F9E (void);
-// 0x0000046C System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::ToString()
+// 0x0000046D System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPuback::ToString()
 extern void MqttMsgPuback_ToString_m88C0F43C487BD4A400898BA2237262147EA4339B (void);
-// 0x0000046D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::.ctor()
+// 0x0000046E System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::.ctor()
 extern void MqttMsgPubcomp__ctor_m7FEB6335A05D280A6C6F2EB4EBFEBE23508E5A1E (void);
-// 0x0000046E System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::GetBytes(System.Byte)
+// 0x0000046F System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::GetBytes(System.Byte)
 extern void MqttMsgPubcomp_GetBytes_mF80B79C071FA3F8DF9D52D6A91A3F81E2BC1AB03 (void);
-// 0x0000046F uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000470 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPubcomp_Parse_mFF7E638FF02FFC2634AC319551A3B8493035CDAF (void);
-// 0x00000470 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::ToString()
+// 0x00000471 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubcomp::ToString()
 extern void MqttMsgPubcomp_ToString_m20C7B93EF9D6A51FAB1A0E27829983C64A8413B7 (void);
-// 0x00000471 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::get_Topic()
+// 0x00000472 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::get_Topic()
 extern void MqttMsgPublish_get_Topic_mFBFCA12374312BED82162826DB2B9F3D95FB7B52 (void);
-// 0x00000472 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::get_Message()
+// 0x00000473 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::get_Message()
 extern void MqttMsgPublish_get_Message_mCF10D2BA4666A06CEF296F796143A7A6A61D5866 (void);
-// 0x00000473 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::.ctor()
+// 0x00000474 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::.ctor()
 extern void MqttMsgPublish__ctor_mEBCB0917FF5442CAB39A95FAE1F70598989D187E (void);
-// 0x00000474 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::.ctor(System.String,System.Byte[],System.Boolean,System.Byte,System.Boolean)
+// 0x00000475 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::.ctor(System.String,System.Byte[],System.Boolean,System.Byte,System.Boolean)
 extern void MqttMsgPublish__ctor_m293046A7E9F398FC7DAD0B30DFDDFDC1999BC2D7 (void);
-// 0x00000475 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::GetBytes(System.Byte)
+// 0x00000476 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::GetBytes(System.Byte)
 extern void MqttMsgPublish_GetBytes_m340EEC3C62DF70AB15B3DD792C5919F5F757FB36 (void);
-// 0x00000476 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000477 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPublish_Parse_m6E5CE86359CFBAC2952E151726CEE05F58DCAB53 (void);
-// 0x00000477 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::ToString()
+// 0x00000478 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublish::ToString()
 extern void MqttMsgPublish_ToString_m8265CB85BA26DD4AA05F7ECA9745413C5C29E28F (void);
-// 0x00000478 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs::.ctor(System.UInt16,System.Boolean)
+// 0x00000479 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs::.ctor(System.UInt16,System.Boolean)
 extern void MqttMsgPublishedEventArgs__ctor_m37945B4C38E4232B730B87A6AFCFAC6CE2659939 (void);
-// 0x00000479 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::get_Topic()
+// 0x0000047A System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::get_Topic()
 extern void MqttMsgPublishEventArgs_get_Topic_m061650CA33601B27674084A690293F09EAAC065E (void);
-// 0x0000047A System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::get_Message()
+// 0x0000047B System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::get_Message()
 extern void MqttMsgPublishEventArgs_get_Message_m3F04F811144A7FC49C889389C56757689E328693 (void);
-// 0x0000047B System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::.ctor(System.String,System.Byte[],System.Boolean,System.Byte,System.Boolean)
+// 0x0000047C System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs::.ctor(System.String,System.Byte[],System.Boolean,System.Byte,System.Boolean)
 extern void MqttMsgPublishEventArgs__ctor_mC973BF4474D2585B305EF27273F574456AB28517 (void);
-// 0x0000047C System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::.ctor()
+// 0x0000047D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::.ctor()
 extern void MqttMsgPubrec__ctor_mB30BDB84C12336787A6E4A86AEF1BD72607938D2 (void);
-// 0x0000047D System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::GetBytes(System.Byte)
+// 0x0000047E System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::GetBytes(System.Byte)
 extern void MqttMsgPubrec_GetBytes_m16EE84E6F5F1320F3477F024F05B3012A5EAB7AB (void);
-// 0x0000047E uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x0000047F uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPubrec_Parse_m3DB26E5FEB864D49A4DFDC3DCEB29C35B6CFA131 (void);
-// 0x0000047F System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::ToString()
+// 0x00000480 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrec::ToString()
 extern void MqttMsgPubrec_ToString_mD9DACC8A1C52A3D8F2480A8CA12B5B39C489D9DC (void);
-// 0x00000480 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::.ctor()
+// 0x00000481 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::.ctor()
 extern void MqttMsgPubrel__ctor_m0F8CDE90BB655C17120673B7E73A5F1408FDD6EB (void);
-// 0x00000481 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::GetBytes(System.Byte)
+// 0x00000482 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::GetBytes(System.Byte)
 extern void MqttMsgPubrel_GetBytes_m107F0D310AF4AD936C687B61E8CF5D8DDF095D84 (void);
-// 0x00000482 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000483 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgPubrel_Parse_m17EAD687465D39B4BC2BF31E17D10483E1FA0A3F (void);
-// 0x00000483 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::ToString()
+// 0x00000484 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPubrel::ToString()
 extern void MqttMsgPubrel_ToString_m26EBDD54A5BAAE3C702585C0ECC7E4EF97BD9F17 (void);
-// 0x00000484 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::get_GrantedQoSLevels()
+// 0x00000485 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::get_GrantedQoSLevels()
 extern void MqttMsgSuback_get_GrantedQoSLevels_m881CE92269A02B2C37E26A08FE4F3A4A81128C38 (void);
-// 0x00000485 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::.ctor()
+// 0x00000486 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::.ctor()
 extern void MqttMsgSuback__ctor_m469D8F0B93A0B36C1A4D295F3AEB14E5B0FBFDBC (void);
-// 0x00000486 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x00000487 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgSuback_Parse_m47D0130E2A428D6094ED726B3959F94556E85925 (void);
-// 0x00000487 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::GetBytes(System.Byte)
+// 0x00000488 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::GetBytes(System.Byte)
 extern void MqttMsgSuback_GetBytes_mD8E27F4456B2A95CC39DC94CC80C034F14D5F352 (void);
-// 0x00000488 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::ToString()
+// 0x00000489 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSuback::ToString()
 extern void MqttMsgSuback_ToString_mF3452B6FB23598C0DD8E77C1E9B47DF058982E92 (void);
-// 0x00000489 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::.ctor(System.String[],System.Byte[])
+// 0x0000048A System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::.ctor(System.String[],System.Byte[])
 extern void MqttMsgSubscribe__ctor_m03C757BE9B7FB41EC068B5AEFEBD42D3F8E9FBAB (void);
-// 0x0000048A System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::GetBytes(System.Byte)
+// 0x0000048B System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::GetBytes(System.Byte)
 extern void MqttMsgSubscribe_GetBytes_m7FCB240ECBD2094E87DB1449A16E5FFD1EDCC4A1 (void);
-// 0x0000048B System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::ToString()
+// 0x0000048C System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribe::ToString()
 extern void MqttMsgSubscribe_ToString_mF3C92B0EE686890CF9A58382FD0B170D864C7625 (void);
-// 0x0000048C System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribedEventArgs::.ctor(System.UInt16,System.Byte[])
+// 0x0000048D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgSubscribedEventArgs::.ctor(System.UInt16,System.Byte[])
 extern void MqttMsgSubscribedEventArgs__ctor_mADEE5005EB6EF967769EC330CA265B4E168B147D (void);
-// 0x0000048D System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::.ctor()
+// 0x0000048E System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::.ctor()
 extern void MqttMsgUnsuback__ctor_mE20D77A0C9F8A1F6F6B4D4597A11A4C6747FC568 (void);
-// 0x0000048E uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
+// 0x0000048F uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::Parse(System.Byte,System.Byte,uPLibrary.Networking.M2Mqtt.IMqttNetworkChannel)
 extern void MqttMsgUnsuback_Parse_m3487BA8F1FE928B7AF963A1FDC039B7C1D5F3065 (void);
-// 0x0000048F System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::GetBytes(System.Byte)
+// 0x00000490 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::GetBytes(System.Byte)
 extern void MqttMsgUnsuback_GetBytes_m30DC727322F12E81ECA5151E9CD032F8262D3A62 (void);
-// 0x00000490 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::ToString()
+// 0x00000491 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsuback::ToString()
 extern void MqttMsgUnsuback_ToString_mB4331A74ADF9109B769B78CC579C614C09200E31 (void);
-// 0x00000491 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::.ctor(System.String[])
+// 0x00000492 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::.ctor(System.String[])
 extern void MqttMsgUnsubscribe__ctor_m456E5394BB897F90B09436C4A0AF7D5E4955F2B7 (void);
-// 0x00000492 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::GetBytes(System.Byte)
+// 0x00000493 System.Byte[] uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::GetBytes(System.Byte)
 extern void MqttMsgUnsubscribe_GetBytes_m937D276453E8FB292ACBEE1B4BAC08A757B95A54 (void);
-// 0x00000493 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::ToString()
+// 0x00000494 System.String uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribe::ToString()
 extern void MqttMsgUnsubscribe_ToString_m137BEF83C0D58EE8CD6D179111874504F41D3385 (void);
-// 0x00000494 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribedEventArgs::.ctor(System.UInt16)
+// 0x00000495 System.Void uPLibrary.Networking.M2Mqtt.Messages.MqttMsgUnsubscribedEventArgs::.ctor(System.UInt16)
 extern void MqttMsgUnsubscribedEventArgs__ctor_m333FE1E9970E80D75E5D22A9067F5C1F86BBE8A4 (void);
-// 0x00000495 System.Void uPLibrary.Networking.M2Mqtt.Internal.InternalEvent::.ctor()
+// 0x00000496 System.Void uPLibrary.Networking.M2Mqtt.Internal.InternalEvent::.ctor()
 extern void InternalEvent__ctor_mCA1DB6F9F0C187BBE3C18FDD5B93919DAFC004EC (void);
-// 0x00000496 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.Internal.MsgInternalEvent::get_Message()
+// 0x00000497 uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase uPLibrary.Networking.M2Mqtt.Internal.MsgInternalEvent::get_Message()
 extern void MsgInternalEvent_get_Message_m28B4FCC92193372BE26B1BC9BF8173A1B7D1DB6F (void);
-// 0x00000497 System.Void uPLibrary.Networking.M2Mqtt.Internal.MsgInternalEvent::.ctor(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
+// 0x00000498 System.Void uPLibrary.Networking.M2Mqtt.Internal.MsgInternalEvent::.ctor(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase)
 extern void MsgInternalEvent__ctor_mD2ECF81AE8634E936664761C86E173B6D85824D7 (void);
-// 0x00000498 System.Void uPLibrary.Networking.M2Mqtt.Internal.MsgPublishedInternalEvent::.ctor(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,System.Boolean)
+// 0x00000499 System.Void uPLibrary.Networking.M2Mqtt.Internal.MsgPublishedInternalEvent::.ctor(uPLibrary.Networking.M2Mqtt.Messages.MqttMsgBase,System.Boolean)
 extern void MsgPublishedInternalEvent__ctor_mE3654CE99F37363D95DB561D402B778B12DDB894 (void);
-// 0x00000499 System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientException::.ctor(uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientErrorCode)
+// 0x0000049A System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientException::.ctor(uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientErrorCode)
 extern void MqttClientException__ctor_mD99103EBA8073F64C47D8972DB5E21A065869FCF (void);
-// 0x0000049A uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientErrorCode uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientException::get_ErrorCode()
+// 0x0000049B uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientErrorCode uPLibrary.Networking.M2Mqtt.Exceptions.MqttClientException::get_ErrorCode()
 extern void MqttClientException_get_ErrorCode_m58062C993177C18A6B3F59F810920634FF3F8B4D (void);
-// 0x0000049B System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttCommunicationException::.ctor()
+// 0x0000049C System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttCommunicationException::.ctor()
 extern void MqttCommunicationException__ctor_mD4031454FE16E33887D5E318BE3440BFBDF0FB77 (void);
-// 0x0000049C System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttCommunicationException::.ctor(System.Exception)
+// 0x0000049D System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttCommunicationException::.ctor(System.Exception)
 extern void MqttCommunicationException__ctor_m0AF8276EBCE12EDEF85EC8CAB5D75CC3933F392B (void);
-// 0x0000049D System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttConnectionException::.ctor(System.String,System.Exception)
+// 0x0000049E System.Void uPLibrary.Networking.M2Mqtt.Exceptions.MqttConnectionException::.ctor(System.String,System.Exception)
 extern void MqttConnectionException__ctor_mB3D08501C9415D641FA2A3EB4F4BBAFB3F36DF37 (void);
-// 0x0000049E System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
+// 0x0000049F System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
 extern void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876 (void);
-static Il2CppMethodPointer s_methodPointers[1182] = 
+static Il2CppMethodPointer s_methodPointers[1183] = 
 {
 	ApplicationChrome__cctor_m2362AD08C7821EAB884C72BDFDDE186375E6D345,
 	ApplicationChrome_applyUIStates_m3AEE201E8503E7F2D6FED4460C59B71767BCECE3,
@@ -3003,6 +3005,7 @@ static Il2CppMethodPointer s_methodPointers[1182] =
 	ShowMonitorStationOMT_Update_m60C6739933C19BD27418F007BC2E6063E459134A,
 	ShowMonitorStationOMT_OnShowingMonitorStation_m973B4C7A70D28894FF9E2DC27A89E7A8CF233497,
 	ShowMonitorStationOMT_ReturnCanvas_m1A5B02AC032315B66C79190D3BD2694D492D7AC6,
+	ShowMonitorStationOMT_IsInputTriggered_m6821A6190C63696E1493CA6A3ADAF2BE7782F376,
 	ShowMonitorStationOMT__ctor_mBE83680B29600A86CA957F8C7C856FF5ED19D27B,
 	ShowMonitorTag_Start_m1AF5C7C9B3CB9D777ECEE40040D312A23A93A935,
 	ShowMonitorTag_Update_m8B8D3F9A7A1BD99647D72E7792C86930866E3BA4,
@@ -3556,1197 +3559,1198 @@ static Il2CppMethodPointer s_methodPointers[1182] =
 	MqttConnectionException__ctor_mB3D08501C9415D641FA2A3EB4F4BBAFB3F36DF37,
 	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876,
 };
-static const int32_t s_InvokerIndices[1182] = 
+static const int32_t s_InvokerIndices[1183] = 
 {
-	11792,
-	11792,
-	11792,
-	11792,
-	11559,
-	11555,
-	11792,
-	11555,
-	11792,
-	11792,
-	11792,
-	11555,
-	11555,
-	11568,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	6273,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7598,
-	7744,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	11792,
-	7744,
-	6210,
-	6210,
-	2779,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7598,
-	7744,
-	7744,
-	6210,
-	7744,
-	11792,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	3493,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	2779,
-	6210,
-	6210,
-	6210,
-	1324,
-	1912,
-	1912,
-	1324,
-	3515,
-	1912,
-	1912,
-	1324,
-	5501,
-	7744,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	4481,
-	7744,
-	7744,
-	6210,
-	7744,
-	11792,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	6336,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	6210,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	6210,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	3228,
-	3156,
-	3156,
-	3515,
-	3515,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	3156,
-	1806,
-	6210,
-	5501,
-	7598,
-	7744,
-	6210,
-	5501,
-	11792,
-	7744,
-	4481,
-	6210,
-	5501,
-	5501,
-	7744,
-	7744,
-	6210,
-	7744,
-	4481,
-	4481,
-	7744,
-	4481,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7493,
-	6210,
-	6210,
-	6210,
-	1324,
-	1912,
-	1912,
-	1324,
-	3515,
-	1912,
-	1912,
-	1324,
-	3515,
-	6210,
-	2779,
-	7744,
-	11792,
-	5501,
-	7744,
-	6210,
-	11792,
-	7744,
-	6210,
-	5501,
-	5501,
-	6210,
-	7744,
-	4481,
-	4481,
-	4481,
-	7744,
-	4481,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
+	12849,
+	12849,
+	12849,
+	12849,
+	12575,
+	12571,
+	12849,
+	12571,
+	12849,
+	12849,
+	12849,
+	12571,
+	12571,
+	12584,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	6810,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8318,
+	8471,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	12849,
+	8471,
+	6745,
+	6745,
+	2985,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8318,
+	8471,
+	8471,
+	6745,
+	8471,
+	12849,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	3775,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	2985,
+	6745,
+	6745,
+	6745,
+	1409,
+	2030,
+	2030,
+	1409,
+	3800,
+	2030,
+	2030,
+	1409,
+	5974,
+	8471,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	4835,
+	8471,
+	8471,
+	6745,
+	8471,
+	12849,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	6875,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	6745,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	6745,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	3471,
+	3393,
+	3393,
+	3800,
+	3800,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	3393,
+	1918,
+	6745,
+	5974,
+	8318,
+	8471,
+	6745,
+	5974,
+	12849,
+	8471,
+	4835,
+	6745,
+	5974,
+	5974,
+	8471,
+	8471,
+	6745,
+	8471,
+	4835,
+	4835,
+	8471,
+	4835,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8201,
+	6745,
+	6745,
+	6745,
+	1409,
+	2030,
+	2030,
+	1409,
+	3800,
+	2030,
+	2030,
+	1409,
+	3800,
+	6745,
+	2985,
+	8471,
+	12849,
+	5974,
+	8471,
+	6745,
+	12849,
+	8471,
+	6745,
+	5974,
+	5974,
+	6745,
+	8471,
+	4835,
+	4835,
+	4835,
+	8471,
+	4835,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
 	59,
-	7744,
-	7744,
-	7744,
+	8471,
+	8471,
+	8471,
 	59,
-	2949,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
+	3166,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
 	59,
-	7744,
-	7744,
-	7744,
+	8471,
+	8471,
+	8471,
 	59,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	5497,
-	5497,
-	3506,
-	6177,
-	3228,
-	7744,
-	7744,
-	11792,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	5497,
-	7744,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	11754,
-	1675,
-	7744,
-	1675,
-	7744,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7744,
-	7744,
-	6210,
-	6210,
-	3602,
-	3602,
-	1880,
-	1880,
-	1908,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	5501,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	5501,
-	5501,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7598,
-	7598,
-	7744,
-	11792,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	3602,
-	3602,
-	1880,
-	1880,
-	1908,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7744,
-	6210,
-	6210,
-	6210,
-	6210,
-	6177,
-	7744,
-	7744,
-	7744,
-	7744,
-	6177,
-	7744,
-	7744,
-	7744,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7598,
-	7744,
-	7744,
-	2508,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	7744,
-	5501,
-	7598,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	6210,
-	6210,
-	6210,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	3515,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	3515,
-	3515,
-	7598,
-	7598,
-	7744,
-	7744,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	6177,
-	7744,
-	7493,
-	7598,
-	7744,
-	7598,
-	7744,
-	6210,
-	6210,
-	6109,
-	6210,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	3515,
-	6210,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	5967,
+	5967,
+	3790,
+	6709,
+	3471,
+	8471,
+	8471,
+	12849,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	2292,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	5967,
+	8471,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	12805,
+	1781,
+	8471,
+	1781,
+	8471,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8471,
+	8471,
+	6745,
+	6745,
+	3893,
+	3893,
+	1997,
+	1997,
+	2026,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	5974,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	5974,
+	5974,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8318,
+	8318,
+	8471,
+	12849,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	3893,
+	3893,
+	1997,
+	1997,
+	2026,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8471,
+	6745,
+	6745,
+	6745,
+	6745,
+	6709,
+	8471,
+	8471,
+	8471,
+	8471,
+	6709,
+	8471,
+	8471,
+	8471,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8318,
+	8471,
+	8471,
+	2680,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	8471,
+	5974,
+	8318,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	6745,
+	6745,
+	6745,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	3800,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	3800,
+	3800,
+	8318,
+	8318,
+	8471,
+	8471,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	6709,
+	8471,
+	8201,
+	8318,
+	8471,
+	8318,
+	8471,
+	6745,
+	6745,
+	6633,
+	6745,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	3800,
+	6745,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
 	0,
 	0,
 	0,
 	0,
-	6210,
-	6210,
-	6210,
-	6210,
-	7493,
-	6109,
-	7598,
-	6210,
-	7493,
-	6109,
-	6109,
-	6109,
-	6210,
-	6210,
-	7560,
-	6177,
-	7598,
-	315,
+	6745,
+	6745,
+	6745,
+	6745,
+	8201,
+	6633,
+	8318,
+	6745,
+	8201,
+	6633,
+	6633,
+	6633,
+	6745,
+	6745,
+	8277,
+	6709,
+	8318,
+	321,
 	129,
-	1469,
+	1565,
 	28,
-	7744,
-	7744,
-	7598,
-	2834,
-	5702,
-	1134,
-	6210,
-	7744,
-	6210,
-	3601,
-	6210,
-	6331,
-	7744,
-	6210,
-	6210,
-	2777,
-	5501,
-	2777,
-	2245,
-	6210,
-	7744,
-	7744,
-	7744,
-	7744,
-	7744,
-	7727,
-	3508,
-	3515,
-	3508,
-	3515,
-	3508,
-	3515,
-	3508,
-	3515,
-	3508,
-	3515,
-	7727,
-	6331,
-	7560,
-	6177,
-	3602,
-	4481,
-	6177,
-	6177,
-	6177,
-	6177,
-	7560,
-	6177,
-	7560,
-	6177,
-	7560,
-	6177,
-	11754,
-	7744,
-	11559,
+	8471,
+	8471,
+	8318,
+	3044,
+	6189,
+	1208,
+	6745,
+	8471,
+	6745,
+	3892,
+	6745,
+	6869,
+	8471,
+	6745,
+	6745,
+	2982,
+	5974,
+	2982,
+	2383,
+	6745,
+	8471,
+	8471,
+	8471,
+	8471,
+	8471,
+	8453,
+	3792,
+	3800,
+	3792,
+	3800,
+	3792,
+	3800,
+	3792,
+	3800,
+	3792,
+	3800,
+	8453,
+	6869,
+	8277,
+	6709,
+	3893,
+	4835,
+	6709,
+	6709,
+	6709,
+	6709,
+	8277,
+	6709,
+	8277,
+	6709,
+	8277,
+	6709,
+	12805,
+	8471,
+	12575,
 	129,
-	7744,
-	5189,
-	5189,
-	7744,
-	11135,
-	10331,
-	3508,
-	4481,
-	3508,
-	3515,
-	9811,
-	6210,
-	6210,
-	7598,
-	6210,
-	6210,
-	7744,
-	7493,
-	7493,
-	6109,
-	7493,
-	7493,
-	7727,
-	6331,
+	8471,
+	5609,
+	5609,
+	8471,
+	12123,
+	11271,
+	3792,
+	4835,
+	3792,
+	3800,
+	10710,
+	6745,
+	6745,
+	8318,
+	6745,
+	6745,
+	8471,
+	8201,
+	8201,
+	6633,
+	8201,
+	8201,
+	8453,
+	6869,
 	0,
-	1559,
-	11135,
-	1640,
-	5501,
-	7744,
-	7493,
-	7744,
-	9484,
-	5484,
-	7598,
+	1659,
+	12123,
+	1741,
+	5974,
+	8471,
+	8201,
+	8471,
+	10373,
+	5954,
+	8318,
 	23,
-	5484,
-	7598,
-	7598,
-	6210,
-	7560,
-	6177,
-	7560,
-	6177,
-	7560,
-	6177,
-	7560,
-	6177,
-	7598,
-	7744,
-	7744,
-	5484,
-	7598,
-	7744,
-	5484,
-	7598,
-	7744,
-	9484,
-	5484,
-	7598,
-	7744,
-	5484,
-	9484,
-	7598,
-	7744,
-	5484,
-	9484,
-	7598,
-	7598,
-	7598,
-	7744,
-	655,
-	5484,
-	9484,
-	7598,
-	3601,
-	7598,
-	7598,
-	655,
-	7744,
-	5484,
-	9484,
-	7598,
-	7744,
-	5484,
-	9484,
-	7598,
-	7598,
-	7744,
-	9484,
-	5484,
-	7598,
-	3515,
-	5484,
-	7598,
-	3603,
-	7744,
-	9484,
-	5484,
-	7598,
-	6210,
-	5484,
-	7598,
-	6331,
-	7744,
-	7598,
-	6210,
-	3493,
-	6177,
-	7560,
-	7744,
-	6210,
-	3515,
-	11484,
+	5954,
+	8318,
+	8318,
+	6745,
+	8277,
+	6709,
+	8277,
+	6709,
+	8277,
+	6709,
+	8277,
+	6709,
+	8318,
+	8471,
+	8471,
+	5954,
+	8318,
+	8471,
+	5954,
+	8318,
+	8471,
+	10373,
+	5954,
+	8318,
+	8471,
+	5954,
+	10373,
+	8318,
+	8471,
+	5954,
+	10373,
+	8318,
+	8318,
+	8318,
+	8471,
+	689,
+	5954,
+	10373,
+	8318,
+	3892,
+	8318,
+	8318,
+	689,
+	8471,
+	5954,
+	10373,
+	8318,
+	8471,
+	5954,
+	10373,
+	8318,
+	8318,
+	8471,
+	10373,
+	5954,
+	8318,
+	3800,
+	5954,
+	8318,
+	3894,
+	8471,
+	10373,
+	5954,
+	8318,
+	6745,
+	5954,
+	8318,
+	6869,
+	8471,
+	8318,
+	6745,
+	3775,
+	6709,
+	8277,
+	8471,
+	6745,
+	3800,
+	12498,
 };
 extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationAssemblyU2DCSharp;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1182,
+	1183,
 	s_methodPointers,
 	0,
 	NULL,

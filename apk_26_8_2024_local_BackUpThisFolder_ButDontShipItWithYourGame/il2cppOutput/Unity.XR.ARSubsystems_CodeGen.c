@@ -910,659 +910,671 @@ extern void XRTrackedImage_Equals_m95C7E1338C9CD5F37EE9D6452AE5820D2BC87FB7 (voi
 extern void XRTrackedImage_Equals_m54F9B4F5CC42200E927B5025274C6E765264C9BF (void);
 // 0x000001C4 System.Void UnityEngine.XR.ARSubsystems.XRTrackedImage::.cctor()
 extern void XRTrackedImage__cctor_mFFD6CBB4C4AA72F753B6C48B94A7441D2072777E (void);
-// 0x000001C5 Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.NativeCopyUtility::PtrToNativeArrayWithDefault(T,System.Void*,System.Int32,System.Int32,Unity.Collections.Allocator)
-// 0x000001C6 System.Void UnityEngine.XR.ARSubsystems.NativeCopyUtility::FillArrayWithValue(Unity.Collections.NativeArray`1<T>,T)
-// 0x000001C7 Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.NativeCopyUtility::CreateArrayFilledWithValue(T,System.Int32,Unity.Collections.Allocator)
-// 0x000001C8 System.Boolean UnityEngine.XR.ARSubsystems.EnvironmentDepthModeExtension::Enabled(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
+// 0x000001C5 UnityEngine.InputSystem.Controls.Vector3Control UnityEngine.XR.ARSubsystems.HandheldARInputDevice::get_devicePosition()
+extern void HandheldARInputDevice_get_devicePosition_mEA94A0592CC39ADECED0B21A3B015B0C3F217894 (void);
+// 0x000001C6 System.Void UnityEngine.XR.ARSubsystems.HandheldARInputDevice::set_devicePosition(UnityEngine.InputSystem.Controls.Vector3Control)
+extern void HandheldARInputDevice_set_devicePosition_mFACF712435D25DBC04E7595C073EB2FFB60938EB (void);
+// 0x000001C7 UnityEngine.InputSystem.Controls.QuaternionControl UnityEngine.XR.ARSubsystems.HandheldARInputDevice::get_deviceRotation()
+extern void HandheldARInputDevice_get_deviceRotation_m839A043DBB843829F25EE4F120D43C3C82C30892 (void);
+// 0x000001C8 System.Void UnityEngine.XR.ARSubsystems.HandheldARInputDevice::set_deviceRotation(UnityEngine.InputSystem.Controls.QuaternionControl)
+extern void HandheldARInputDevice_set_deviceRotation_mFF98E66E587EB92247C73A5EDF34317014BB15F1 (void);
+// 0x000001C9 System.Void UnityEngine.XR.ARSubsystems.HandheldARInputDevice::FinishSetup()
+extern void HandheldARInputDevice_FinishSetup_m35BA4889F0CA64587C4146B741D8875BFE46352C (void);
+// 0x000001CA System.Void UnityEngine.XR.ARSubsystems.HandheldARInputDevice::.ctor()
+extern void HandheldARInputDevice__ctor_m6CD9A2A4F215809FADC75915093A7DDA5E9C226D (void);
+// 0x000001CB Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.NativeCopyUtility::PtrToNativeArrayWithDefault(T,System.Void*,System.Int32,System.Int32,Unity.Collections.Allocator)
+// 0x000001CC System.Void UnityEngine.XR.ARSubsystems.NativeCopyUtility::FillArrayWithValue(Unity.Collections.NativeArray`1<T>,T)
+// 0x000001CD Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.NativeCopyUtility::CreateArrayFilledWithValue(T,System.Int32,Unity.Collections.Allocator)
+// 0x000001CE System.Boolean UnityEngine.XR.ARSubsystems.EnvironmentDepthModeExtension::Enabled(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
 extern void EnvironmentDepthModeExtension_Enabled_m82D050848451FF9CA7F7491FE1243091B4F5C391 (void);
-// 0x000001C9 System.Boolean UnityEngine.XR.ARSubsystems.SegmentationDepthModeExtension::Enabled(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
+// 0x000001CF System.Boolean UnityEngine.XR.ARSubsystems.SegmentationDepthModeExtension::Enabled(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
 extern void SegmentationDepthModeExtension_Enabled_mE436D9333AC945C4CEF2121001360C19A5FCFA87 (void);
-// 0x000001CA System.Boolean UnityEngine.XR.ARSubsystems.SegmentationStencilModeExtension::Enabled(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
+// 0x000001D0 System.Boolean UnityEngine.XR.ARSubsystems.SegmentationStencilModeExtension::Enabled(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
 extern void SegmentationStencilModeExtension_Enabled_mBD3C16DBA3951DB0A975B9EC8E4EAED9D182D027 (void);
-// 0x000001CB UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedHumanStencilMode()
+// 0x000001D1 UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedHumanStencilMode()
 extern void XROcclusionSubsystem_get_requestedHumanStencilMode_mEB05499AF0F84F62FBF38A21B0CC721290436DE2 (void);
-// 0x000001CC System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedHumanStencilMode(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
+// 0x000001D2 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedHumanStencilMode(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
 extern void XROcclusionSubsystem_set_requestedHumanStencilMode_m49451B1709E24F803E7E2BEE1EC50AAFA3DE3AC3 (void);
-// 0x000001CD UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentHumanStencilMode()
+// 0x000001D3 UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentHumanStencilMode()
 extern void XROcclusionSubsystem_get_currentHumanStencilMode_m128A8322B2160F8087302AC6AEA2123F5D0BD708 (void);
-// 0x000001CE UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedHumanDepthMode()
+// 0x000001D4 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedHumanDepthMode()
 extern void XROcclusionSubsystem_get_requestedHumanDepthMode_m5717AA8084D53E5679252BF409A0813C6DA7117F (void);
-// 0x000001CF System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedHumanDepthMode(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
+// 0x000001D5 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedHumanDepthMode(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
 extern void XROcclusionSubsystem_set_requestedHumanDepthMode_m5F644A70E20B294E9F5CE17B17715855733ABF37 (void);
-// 0x000001D0 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentHumanDepthMode()
+// 0x000001D6 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentHumanDepthMode()
 extern void XROcclusionSubsystem_get_currentHumanDepthMode_m664A81974FA236426C74B71978EEB718AA6B7F15 (void);
-// 0x000001D1 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedEnvironmentDepthMode()
+// 0x000001D7 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedEnvironmentDepthMode()
 extern void XROcclusionSubsystem_get_requestedEnvironmentDepthMode_mE10379901B371DE2D3101B0C0B70CE3A04703BB6 (void);
-// 0x000001D2 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedEnvironmentDepthMode(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
+// 0x000001D8 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedEnvironmentDepthMode(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
 extern void XROcclusionSubsystem_set_requestedEnvironmentDepthMode_mF15D23AFD9CE80BC9D49C15C9FD4C7406BFA1140 (void);
-// 0x000001D3 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentEnvironmentDepthMode()
+// 0x000001D9 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentEnvironmentDepthMode()
 extern void XROcclusionSubsystem_get_currentEnvironmentDepthMode_mEB2572194995692EF2953ED4F4F1A2926054D51F (void);
-// 0x000001D4 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_environmentDepthTemporalSmoothingRequested()
+// 0x000001DA System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_environmentDepthTemporalSmoothingRequested()
 extern void XROcclusionSubsystem_get_environmentDepthTemporalSmoothingRequested_mAB4DEE3A6F2F32E466DE912B98E8638365BBD491 (void);
-// 0x000001D5 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_environmentDepthTemporalSmoothingRequested(System.Boolean)
+// 0x000001DB System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_environmentDepthTemporalSmoothingRequested(System.Boolean)
 extern void XROcclusionSubsystem_set_environmentDepthTemporalSmoothingRequested_mB49EE42E0E68422E0BFD07774AF191DF921CC89C (void);
-// 0x000001D6 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_environmentDepthTemporalSmoothingEnabled()
+// 0x000001DC System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_environmentDepthTemporalSmoothingEnabled()
 extern void XROcclusionSubsystem_get_environmentDepthTemporalSmoothingEnabled_mDBB09B1740A54904F1E8CB734F42C1277C9187D0 (void);
-// 0x000001D7 UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedOcclusionPreferenceMode()
+// 0x000001DD UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_requestedOcclusionPreferenceMode()
 extern void XROcclusionSubsystem_get_requestedOcclusionPreferenceMode_mD16E1325C05F61D49B3E9E254B34751258AFB48E (void);
-// 0x000001D8 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedOcclusionPreferenceMode(UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode)
+// 0x000001DE System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::set_requestedOcclusionPreferenceMode(UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode)
 extern void XROcclusionSubsystem_set_requestedOcclusionPreferenceMode_m256CEB52B2162D428ACDB8031E5D3FE9E62C3E20 (void);
-// 0x000001D9 UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentOcclusionPreferenceMode()
+// 0x000001DF UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::get_currentOcclusionPreferenceMode()
 extern void XROcclusionSubsystem_get_currentOcclusionPreferenceMode_mF26316112165324B11B50A2F40E1CA1B6851200C (void);
-// 0x000001DA System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::.ctor()
+// 0x000001E0 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::.ctor()
 extern void XROcclusionSubsystem__ctor_m3D4915FA8E43BA7BD96CB3B9D4E4377E3833C189 (void);
-// 0x000001DB System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetHumanStencil(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x000001E1 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetHumanStencil(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void XROcclusionSubsystem_TryGetHumanStencil_mD2FFD71CB444CA2F5C0DD059F78EBC8C084563DF (void);
-// 0x000001DC System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireHumanStencilCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001E2 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireHumanStencilCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireHumanStencilCpuImage_m8310E58DA83757ED46F9953EE66C50968D022883 (void);
-// 0x000001DD System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetHumanDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x000001E3 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetHumanDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void XROcclusionSubsystem_TryGetHumanDepth_mE0C4446D29599251D41C78CBA0E14C9D0D620DF5 (void);
-// 0x000001DE System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireHumanDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001E4 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireHumanDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireHumanDepthCpuImage_m2775C08F3043DFC6DD780E7361CE0B226848BA88 (void);
-// 0x000001DF System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetEnvironmentDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x000001E5 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetEnvironmentDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void XROcclusionSubsystem_TryGetEnvironmentDepth_m401276ABEA03CB060E5220DF61E5DB93AAE539B0 (void);
-// 0x000001E0 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001E6 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireEnvironmentDepthCpuImage_m2A0E8CF20892BC54DAF118E7BE5158DBED8C7103 (void);
-// 0x000001E1 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireRawEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001E7 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireRawEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireRawEnvironmentDepthCpuImage_m0F7B57B62CFFE1AA86A991AAA36E1AA65EDDCB97 (void);
-// 0x000001E2 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireSmoothedEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001E8 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireSmoothedEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireSmoothedEnvironmentDepthCpuImage_m0E2FBDD491C658A0F35AC4AA8E71946F7B984F89 (void);
-// 0x000001E3 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetEnvironmentDepthConfidence(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x000001E9 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryGetEnvironmentDepthConfidence(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void XROcclusionSubsystem_TryGetEnvironmentDepthConfidence_m7665C1DB56B8A41659BCCF7F93DBFCC6C42225DC (void);
-// 0x000001E4 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireEnvironmentDepthConfidenceCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
+// 0x000001EA System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::TryAcquireEnvironmentDepthConfidenceCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage&)
 extern void XROcclusionSubsystem_TryAcquireEnvironmentDepthConfidenceCpuImage_mDEB7DD6583B814A66D6D4ED8F216A6C8461939A1 (void);
-// 0x000001E5 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRTextureDescriptor> UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::GetTextureDescriptors(Unity.Collections.Allocator)
+// 0x000001EB Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRTextureDescriptor> UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::GetTextureDescriptors(Unity.Collections.Allocator)
 extern void XROcclusionSubsystem_GetTextureDescriptors_mD667D3C1F1C019B70E7B1B37131DBCF5A3962FF3 (void);
-// 0x000001E6 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::GetMaterialKeywords(System.Collections.Generic.List`1<System.String>&,System.Collections.Generic.List`1<System.String>&)
+// 0x000001EC System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::GetMaterialKeywords(System.Collections.Generic.List`1<System.String>&,System.Collections.Generic.List`1<System.String>&)
 extern void XROcclusionSubsystem_GetMaterialKeywords_m2139A79542D673AE59B6F4D0F3829027792AB150 (void);
-// 0x000001E7 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::Register(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
+// 0x000001ED System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem::Register(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
 extern void XROcclusionSubsystem_Register_m734F3D1F3186CFCF3F60A14BDA8A2906BB4EC2CA (void);
-// 0x000001E8 UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedHumanStencilMode()
+// 0x000001EE UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedHumanStencilMode()
 extern void Provider_get_requestedHumanStencilMode_m02D0E05F66EEB135680476AD4EC02D4B2794EF9E (void);
-// 0x000001E9 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedHumanStencilMode(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
+// 0x000001EF System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedHumanStencilMode(UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode)
 extern void Provider_set_requestedHumanStencilMode_m2C054B14D026BAA9253619D1008CCC90813129AE (void);
-// 0x000001EA UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentHumanStencilMode()
+// 0x000001F0 UnityEngine.XR.ARSubsystems.HumanSegmentationStencilMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentHumanStencilMode()
 extern void Provider_get_currentHumanStencilMode_m420FA0B1871114E7449879089880D30E0097AF88 (void);
-// 0x000001EB UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedHumanDepthMode()
+// 0x000001F1 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedHumanDepthMode()
 extern void Provider_get_requestedHumanDepthMode_m1A6A24D866AF602986F0CAE91118E94F1BD567C5 (void);
-// 0x000001EC System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedHumanDepthMode(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
+// 0x000001F2 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedHumanDepthMode(UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode)
 extern void Provider_set_requestedHumanDepthMode_mB20690D0279BBF6E8326EDA78F76B89F617BD7B3 (void);
-// 0x000001ED UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentHumanDepthMode()
+// 0x000001F3 UnityEngine.XR.ARSubsystems.HumanSegmentationDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentHumanDepthMode()
 extern void Provider_get_currentHumanDepthMode_m057D9E76208F1A01AC2E5E3FCCCDEBCC6553B25C (void);
-// 0x000001EE UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedEnvironmentDepthMode()
+// 0x000001F4 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedEnvironmentDepthMode()
 extern void Provider_get_requestedEnvironmentDepthMode_m0652674FBE2080EF267BF1A1E2CF85C601F8DBE0 (void);
-// 0x000001EF System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedEnvironmentDepthMode(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
+// 0x000001F5 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedEnvironmentDepthMode(UnityEngine.XR.ARSubsystems.EnvironmentDepthMode)
 extern void Provider_set_requestedEnvironmentDepthMode_m9F873C36A3DE66E23322B9F009FBCC72BC5355D9 (void);
-// 0x000001F0 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentEnvironmentDepthMode()
+// 0x000001F6 UnityEngine.XR.ARSubsystems.EnvironmentDepthMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentEnvironmentDepthMode()
 extern void Provider_get_currentEnvironmentDepthMode_m63B399BC6600EACB3BF5E5DF7A2218DAEF9BD71D (void);
-// 0x000001F1 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthTemporalSmoothingRequested()
+// 0x000001F7 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthTemporalSmoothingRequested()
 extern void Provider_get_environmentDepthTemporalSmoothingRequested_m89320DDAF30F855C21E6A2958C3E54E488D4F7AE (void);
-// 0x000001F2 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_environmentDepthTemporalSmoothingRequested(System.Boolean)
+// 0x000001F8 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_environmentDepthTemporalSmoothingRequested(System.Boolean)
 extern void Provider_set_environmentDepthTemporalSmoothingRequested_m67FB296501D21757E9620951F787BB64DAA43248 (void);
-// 0x000001F3 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthTemporalSmoothingEnabled()
+// 0x000001F9 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthTemporalSmoothingEnabled()
 extern void Provider_get_environmentDepthTemporalSmoothingEnabled_mF5A5DEB423E20A8D6623C6C5D59A7BAB33B6B105 (void);
-// 0x000001F4 UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedOcclusionPreferenceMode()
+// 0x000001FA UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_requestedOcclusionPreferenceMode()
 extern void Provider_get_requestedOcclusionPreferenceMode_mAF6706610847D5B9E241E88A1465EFDE70A5DC9C (void);
-// 0x000001F5 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedOcclusionPreferenceMode(UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode)
+// 0x000001FB System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::set_requestedOcclusionPreferenceMode(UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode)
 extern void Provider_set_requestedOcclusionPreferenceMode_mC3935B4D950080DAB0EC013E2C5670ED45C5A456 (void);
-// 0x000001F6 UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentOcclusionPreferenceMode()
+// 0x000001FC UnityEngine.XR.ARSubsystems.OcclusionPreferenceMode UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_currentOcclusionPreferenceMode()
 extern void Provider_get_currentOcclusionPreferenceMode_mB1E452A0FA4BA3B8EF138F43C76219365750C7FF (void);
-// 0x000001F7 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetHumanStencil(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x000001FD System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetHumanStencil(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void Provider_TryGetHumanStencil_m6196011447FE5DF70B523186981744EFA71256A5 (void);
-// 0x000001F8 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireHumanStencilCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x000001FE System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireHumanStencilCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireHumanStencilCpuImage_mFC2EDA1E1EF465E4B50AE1947FAC5959182FC99C (void);
-// 0x000001F9 UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_humanStencilCpuImageApi()
+// 0x000001FF UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_humanStencilCpuImageApi()
 extern void Provider_get_humanStencilCpuImageApi_mC79E875A9D2FC1E06E8A6E927BA2C31FD07995D5 (void);
-// 0x000001FA System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetHumanDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x00000200 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetHumanDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void Provider_TryGetHumanDepth_mD898071B7B422E264EEADFE7C99D802B10696AA0 (void);
-// 0x000001FB System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireHumanDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x00000201 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireHumanDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireHumanDepthCpuImage_m7385F63DBA5724F1A33A58D189B07EE94A9BBA68 (void);
-// 0x000001FC UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_humanDepthCpuImageApi()
+// 0x00000202 UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_humanDepthCpuImageApi()
 extern void Provider_get_humanDepthCpuImageApi_m880F91E737CF90D36A272FE9DFAE99CF9E5534D4 (void);
-// 0x000001FD System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetEnvironmentDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x00000203 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetEnvironmentDepth(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void Provider_TryGetEnvironmentDepth_mFF3B8C72028987673D5079C935332A6E005C357F (void);
-// 0x000001FE System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x00000204 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireEnvironmentDepthCpuImage_m35551DC93914ADDCBE8A7F3EE21BF2753DA085BD (void);
-// 0x000001FF System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireRawEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x00000205 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireRawEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireRawEnvironmentDepthCpuImage_m57D3628D7EE8A1D2E81E027637BC5BD3DC4AA606 (void);
-// 0x00000200 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireSmoothedEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x00000206 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireSmoothedEnvironmentDepthCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireSmoothedEnvironmentDepthCpuImage_m6790C57B075FC05D095DA3FF6202EF41B9A6EE08 (void);
-// 0x00000201 UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthCpuImageApi()
+// 0x00000207 UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthCpuImageApi()
 extern void Provider_get_environmentDepthCpuImageApi_m01271E261AB308C5996B4C64C3C6C559C5BE7EAC (void);
-// 0x00000202 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetEnvironmentDepthConfidence(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
+// 0x00000208 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryGetEnvironmentDepthConfidence(UnityEngine.XR.ARSubsystems.XRTextureDescriptor&)
 extern void Provider_TryGetEnvironmentDepthConfidence_m7F357AB09577179B0ACB3804018D29371CE07037 (void);
-// 0x00000203 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireEnvironmentDepthConfidenceCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
+// 0x00000209 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::TryAcquireEnvironmentDepthConfidenceCpuImage(UnityEngine.XR.ARSubsystems.XRCpuImage/Cinfo&)
 extern void Provider_TryAcquireEnvironmentDepthConfidenceCpuImage_m097B6ECA156BFD8D303FCA344DC1D048F60D09E4 (void);
-// 0x00000204 UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthConfidenceCpuImageApi()
+// 0x0000020A UnityEngine.XR.ARSubsystems.XRCpuImage/Api UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::get_environmentDepthConfidenceCpuImageApi()
 extern void Provider_get_environmentDepthConfidenceCpuImageApi_mF94BCCC60E8F21B0DF7BC901A64339E669FC1995 (void);
-// 0x00000205 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRTextureDescriptor> UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::GetTextureDescriptors(UnityEngine.XR.ARSubsystems.XRTextureDescriptor,Unity.Collections.Allocator)
+// 0x0000020B Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRTextureDescriptor> UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::GetTextureDescriptors(UnityEngine.XR.ARSubsystems.XRTextureDescriptor,Unity.Collections.Allocator)
 extern void Provider_GetTextureDescriptors_mCEB2B41F247F9287871D2FCB36DCD3B1900D9297 (void);
-// 0x00000206 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::GetMaterialKeywords(System.Collections.Generic.List`1<System.String>&,System.Collections.Generic.List`1<System.String>&)
+// 0x0000020C System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::GetMaterialKeywords(System.Collections.Generic.List`1<System.String>&,System.Collections.Generic.List`1<System.String>&)
 extern void Provider_GetMaterialKeywords_mA35506435187EC4672F50E5BC87F1C30798E48D7 (void);
-// 0x00000207 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::.ctor()
+// 0x0000020D System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystem/Provider::.ctor()
 extern void Provider__ctor_m50964AC0676294C1CDEF2B3C8E05657DE364ED2A (void);
-// 0x00000208 System.String UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_id()
+// 0x0000020E System.String UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_id()
 extern void XROcclusionSubsystemCinfo_get_id_mF11E38C57E4AB8E81F9E7875A0A41D04A19C4039 (void);
-// 0x00000209 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_id(System.String)
+// 0x0000020F System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_id(System.String)
 extern void XROcclusionSubsystemCinfo_set_id_mF8B41D7F5FACF940467D57208BC03DDD89D9B7A8 (void);
-// 0x0000020A System.Type UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_providerType()
+// 0x00000210 System.Type UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_providerType()
 extern void XROcclusionSubsystemCinfo_get_providerType_m98D7D72FF4C0B36F28D6E39BC498E43691AE718B (void);
-// 0x0000020B System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_providerType(System.Type)
+// 0x00000211 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_providerType(System.Type)
 extern void XROcclusionSubsystemCinfo_set_providerType_m5D9D3B330216EAB023F4B17F4853D5A612B07380 (void);
-// 0x0000020C System.Type UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_subsystemTypeOverride()
+// 0x00000212 System.Type UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_subsystemTypeOverride()
 extern void XROcclusionSubsystemCinfo_get_subsystemTypeOverride_mAE0D5036913033AB1D45B54C10047F180648BD3E (void);
-// 0x0000020D System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_subsystemTypeOverride(System.Type)
+// 0x00000213 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_subsystemTypeOverride(System.Type)
 extern void XROcclusionSubsystemCinfo_set_subsystemTypeOverride_mA0E976FA9B7955BD224DF93F7AB9AEA883779563 (void);
-// 0x0000020E System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_supportsHumanSegmentationStencilImage()
+// 0x00000214 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_supportsHumanSegmentationStencilImage()
 extern void XROcclusionSubsystemCinfo_get_supportsHumanSegmentationStencilImage_mB151BF0F40B3C9D9D2DE26318FD219FEF0C2AB9D (void);
-// 0x0000020F System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_humanSegmentationStencilImageSupportedDelegate()
+// 0x00000215 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_humanSegmentationStencilImageSupportedDelegate()
 extern void XROcclusionSubsystemCinfo_get_humanSegmentationStencilImageSupportedDelegate_m77677BDADCDA75FD77F97A942FA6B29706500292 (void);
-// 0x00000210 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_supportsHumanSegmentationDepthImage()
+// 0x00000216 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_supportsHumanSegmentationDepthImage()
 extern void XROcclusionSubsystemCinfo_get_supportsHumanSegmentationDepthImage_mB73625A00528D80575D712BE5621FF9219E3B6E9 (void);
-// 0x00000211 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_humanSegmentationDepthImageSupportedDelegate()
+// 0x00000217 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_humanSegmentationDepthImageSupportedDelegate()
 extern void XROcclusionSubsystemCinfo_get_humanSegmentationDepthImageSupportedDelegate_m67F62406957D42F2EF689DE57FD0074C3DAF2BD5 (void);
-// 0x00000212 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthTemporalSmoothingSupportedDelegate()
+// 0x00000218 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthTemporalSmoothingSupportedDelegate()
 extern void XROcclusionSubsystemCinfo_get_environmentDepthTemporalSmoothingSupportedDelegate_mD84F3F4F9DFCFC8C4CE86F9276EEA5ACA2392D1D (void);
-// 0x00000213 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthTemporalSmoothingSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
+// 0x00000219 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthTemporalSmoothingSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
 extern void XROcclusionSubsystemCinfo_set_environmentDepthTemporalSmoothingSupportedDelegate_m6B67C82AEA73E79B7CD03F9912746C6B52C27949 (void);
-// 0x00000214 System.Func`1<System.Boolean> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_queryForSupportsEnvironmentDepthImage()
+// 0x0000021A System.Func`1<System.Boolean> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_queryForSupportsEnvironmentDepthImage()
 extern void XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthImage_mA29F2AB5C4AA073556B074CFD5A88D3345D596B3 (void);
-// 0x00000215 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthImageSupportedDelegate()
+// 0x0000021B System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthImageSupportedDelegate()
 extern void XROcclusionSubsystemCinfo_get_environmentDepthImageSupportedDelegate_m540B191F5215CDD7A1DEC6E370065AE8C9ADE75C (void);
-// 0x00000216 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthImageSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
+// 0x0000021C System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthImageSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
 extern void XROcclusionSubsystemCinfo_set_environmentDepthImageSupportedDelegate_m18E4C878D993208EB9EEA9D667CA5C88E4E1D4BE (void);
-// 0x00000217 System.Func`1<System.Boolean> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_queryForSupportsEnvironmentDepthConfidenceImage()
+// 0x0000021D System.Func`1<System.Boolean> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_queryForSupportsEnvironmentDepthConfidenceImage()
 extern void XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthConfidenceImage_mA3552C9DF07B609155051A3A80FA30AFDE2D3D1F (void);
-// 0x00000218 System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthConfidenceImageSupportedDelegate()
+// 0x0000021E System.Func`1<UnityEngine.XR.ARSubsystems.Supported> UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::get_environmentDepthConfidenceImageSupportedDelegate()
 extern void XROcclusionSubsystemCinfo_get_environmentDepthConfidenceImageSupportedDelegate_m562A6E788BE3D0CCD49F0DC2DC698CFAB87DDA6C (void);
-// 0x00000219 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthConfidenceImageSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
+// 0x0000021F System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::set_environmentDepthConfidenceImageSupportedDelegate(System.Func`1<UnityEngine.XR.ARSubsystems.Supported>)
 extern void XROcclusionSubsystemCinfo_set_environmentDepthConfidenceImageSupportedDelegate_m0F91D5C5B63DEFD91FE9A00EF95B45ED9711461A (void);
-// 0x0000021A System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::Equals(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
+// 0x00000220 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::Equals(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
 extern void XROcclusionSubsystemCinfo_Equals_mEFD9C210D7814A35FFE675EBD2EE91E6A3856623 (void);
-// 0x0000021B System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::Equals(System.Object)
+// 0x00000221 System.Boolean UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::Equals(System.Object)
 extern void XROcclusionSubsystemCinfo_Equals_m232468ACCEB9CD8E20E096E270EEC1B262013812 (void);
-// 0x0000021C System.Int32 UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::GetHashCode()
+// 0x00000222 System.Int32 UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo::GetHashCode()
 extern void XROcclusionSubsystemCinfo_GetHashCode_m672CF4A97241C59DE78E46E2D41245EACC13B09E (void);
-// 0x0000021D System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
+// 0x00000223 System.Void UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
 extern void XROcclusionSubsystemDescriptor__ctor_mBBF9386E58133376619E4EF143BDA4826E0B5153 (void);
-// 0x0000021E UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_humanSegmentationStencilImageSupported()
+// 0x00000224 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_humanSegmentationStencilImageSupported()
 extern void XROcclusionSubsystemDescriptor_get_humanSegmentationStencilImageSupported_mFD38298D6EE716F04F941DDC4970DE420C19BEC8 (void);
-// 0x0000021F UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_humanSegmentationDepthImageSupported()
+// 0x00000225 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_humanSegmentationDepthImageSupported()
 extern void XROcclusionSubsystemDescriptor_get_humanSegmentationDepthImageSupported_m4B58731FE66946A339E57D07B4970286F3FAC61C (void);
-// 0x00000220 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthImageSupported()
+// 0x00000226 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthImageSupported()
 extern void XROcclusionSubsystemDescriptor_get_environmentDepthImageSupported_mCD6A87F2AE78B41341FABE82E85BB0331CF8433A (void);
-// 0x00000221 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthTemporalSmoothingSupported()
+// 0x00000227 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthTemporalSmoothingSupported()
 extern void XROcclusionSubsystemDescriptor_get_environmentDepthTemporalSmoothingSupported_mFCB0CBE3BAD8C25FEE42FEE7EA9B8BB8A85649F6 (void);
-// 0x00000222 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthConfidenceImageSupported()
+// 0x00000228 UnityEngine.XR.ARSubsystems.Supported UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::get_environmentDepthConfidenceImageSupported()
 extern void XROcclusionSubsystemDescriptor_get_environmentDepthConfidenceImageSupported_mEAA745B711055E3D0A07857DA2A5C58A8E301160 (void);
-// 0x00000223 UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::Create(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
+// 0x00000229 UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor UnityEngine.XR.ARSubsystems.XROcclusionSubsystemDescriptor::Create(UnityEngine.XR.ARSubsystems.XROcclusionSubsystemCinfo)
 extern void XROcclusionSubsystemDescriptor_Create_m4DFED9463984990C7091D9E6B4502BA2F2DE84B2 (void);
-// 0x00000224 UnityEngine.XR.ARSubsystems.BoundedPlane UnityEngine.XR.ARSubsystems.BoundedPlane::get_defaultValue()
+// 0x0000022A UnityEngine.XR.ARSubsystems.BoundedPlane UnityEngine.XR.ARSubsystems.BoundedPlane::get_defaultValue()
 extern void BoundedPlane_get_defaultValue_m8231738F569F3ABD6A5A5697B1293C3A75F47D31 (void);
-// 0x00000225 System.Void UnityEngine.XR.ARSubsystems.BoundedPlane::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.PlaneAlignment,UnityEngine.XR.ARSubsystems.TrackingState,System.IntPtr,UnityEngine.XR.ARSubsystems.PlaneClassification)
+// 0x0000022B System.Void UnityEngine.XR.ARSubsystems.BoundedPlane::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.PlaneAlignment,UnityEngine.XR.ARSubsystems.TrackingState,System.IntPtr,UnityEngine.XR.ARSubsystems.PlaneClassification)
 extern void BoundedPlane__ctor_m95C41A6B0DB95A2636683BE716E9F92A0465EF87 (void);
-// 0x00000226 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.BoundedPlane::get_trackableId()
+// 0x0000022C UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.BoundedPlane::get_trackableId()
 extern void BoundedPlane_get_trackableId_m7AA7FD63EA8F8A903300EFDF15616315ACFDA8AA (void);
-// 0x00000227 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.BoundedPlane::get_subsumedById()
+// 0x0000022D UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.BoundedPlane::get_subsumedById()
 extern void BoundedPlane_get_subsumedById_m27EFD2CAFFDCF6560D445115D596F23094F612B9 (void);
-// 0x00000228 UnityEngine.Pose UnityEngine.XR.ARSubsystems.BoundedPlane::get_pose()
+// 0x0000022E UnityEngine.Pose UnityEngine.XR.ARSubsystems.BoundedPlane::get_pose()
 extern void BoundedPlane_get_pose_mE6F416B0C7519EDA0D1AE8D8BD4D627E4CEA96CC (void);
-// 0x00000229 UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_center()
+// 0x0000022F UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_center()
 extern void BoundedPlane_get_center_m3BB7635D2137C7C414FC682EBE0CB5E1F8D3F7D3 (void);
-// 0x0000022A UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_extents()
+// 0x00000230 UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_extents()
 extern void BoundedPlane_get_extents_m60341CDB176C9039D5B88B2F52534D356E11F400 (void);
-// 0x0000022B UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_size()
+// 0x00000231 UnityEngine.Vector2 UnityEngine.XR.ARSubsystems.BoundedPlane::get_size()
 extern void BoundedPlane_get_size_m2645C0FF517DF15F381B268DF6366F4D14381DC8 (void);
-// 0x0000022C UnityEngine.XR.ARSubsystems.PlaneAlignment UnityEngine.XR.ARSubsystems.BoundedPlane::get_alignment()
+// 0x00000232 UnityEngine.XR.ARSubsystems.PlaneAlignment UnityEngine.XR.ARSubsystems.BoundedPlane::get_alignment()
 extern void BoundedPlane_get_alignment_m4E43582A7059AE23DD506878BCF164C61422DBEF (void);
-// 0x0000022D UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.BoundedPlane::get_trackingState()
+// 0x00000233 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.BoundedPlane::get_trackingState()
 extern void BoundedPlane_get_trackingState_mC294F13F8F79D53F8F04D8FB4E160B092BA6A577 (void);
-// 0x0000022E System.IntPtr UnityEngine.XR.ARSubsystems.BoundedPlane::get_nativePtr()
+// 0x00000234 System.IntPtr UnityEngine.XR.ARSubsystems.BoundedPlane::get_nativePtr()
 extern void BoundedPlane_get_nativePtr_mE8E2608856FE4327913A38005F4A8590D65A43E7 (void);
-// 0x0000022F UnityEngine.XR.ARSubsystems.PlaneClassification UnityEngine.XR.ARSubsystems.BoundedPlane::get_classification()
+// 0x00000235 UnityEngine.XR.ARSubsystems.PlaneClassification UnityEngine.XR.ARSubsystems.BoundedPlane::get_classification()
 extern void BoundedPlane_get_classification_m4EA9556C440097648A87D3AB7EC433776468A725 (void);
-// 0x00000230 System.String UnityEngine.XR.ARSubsystems.BoundedPlane::ToString()
+// 0x00000236 System.String UnityEngine.XR.ARSubsystems.BoundedPlane::ToString()
 extern void BoundedPlane_ToString_mA4FBDD41FC676DB2C2EEB22DA2E624099EF06ADA (void);
-// 0x00000231 System.Boolean UnityEngine.XR.ARSubsystems.BoundedPlane::Equals(System.Object)
+// 0x00000237 System.Boolean UnityEngine.XR.ARSubsystems.BoundedPlane::Equals(System.Object)
 extern void BoundedPlane_Equals_mE1A074D048C20E980CB7016FAFA7EDFDA52DB15D (void);
-// 0x00000232 System.Int32 UnityEngine.XR.ARSubsystems.BoundedPlane::GetHashCode()
+// 0x00000238 System.Int32 UnityEngine.XR.ARSubsystems.BoundedPlane::GetHashCode()
 extern void BoundedPlane_GetHashCode_m8C684989A748253B2A3772BCAA87D8758FB98941 (void);
-// 0x00000233 System.Boolean UnityEngine.XR.ARSubsystems.BoundedPlane::Equals(UnityEngine.XR.ARSubsystems.BoundedPlane)
+// 0x00000239 System.Boolean UnityEngine.XR.ARSubsystems.BoundedPlane::Equals(UnityEngine.XR.ARSubsystems.BoundedPlane)
 extern void BoundedPlane_Equals_m1F738CE040A5D498E41B35521109A3FFBEB7196D (void);
-// 0x00000234 System.Void UnityEngine.XR.ARSubsystems.BoundedPlane::.cctor()
+// 0x0000023A System.Void UnityEngine.XR.ARSubsystems.BoundedPlane::.cctor()
 extern void BoundedPlane__cctor_mFBFFC643A005EC73B9D042217D880CD0121D8E91 (void);
-// 0x00000235 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::.ctor()
+// 0x0000023B System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::.ctor()
 extern void XRPlaneSubsystem__ctor_mDE29D107C740A5CB086A7159DCC17E567A666603 (void);
-// 0x00000236 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::get_requestedPlaneDetectionMode()
+// 0x0000023C UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::get_requestedPlaneDetectionMode()
 extern void XRPlaneSubsystem_get_requestedPlaneDetectionMode_m303F2743295F6A35D586107BA463A80D445398F5 (void);
-// 0x00000237 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::set_requestedPlaneDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
+// 0x0000023D System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::set_requestedPlaneDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
 extern void XRPlaneSubsystem_set_requestedPlaneDetectionMode_m35162C34975D7AF454CF0D077029BA9DA32284B8 (void);
-// 0x00000238 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::get_currentPlaneDetectionMode()
+// 0x0000023E UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::get_currentPlaneDetectionMode()
 extern void XRPlaneSubsystem_get_currentPlaneDetectionMode_m45E78CABE7A117E62B2AA2A3F92D05A6158CE936 (void);
-// 0x00000239 UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.BoundedPlane> UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::GetChanges(Unity.Collections.Allocator)
+// 0x0000023F UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.BoundedPlane> UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::GetChanges(Unity.Collections.Allocator)
 extern void XRPlaneSubsystem_GetChanges_m180B0681AF9853EB236AD62835F92E90F5E1908C (void);
-// 0x0000023A System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::GetBoundary(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<UnityEngine.Vector2>&)
+// 0x00000240 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem::GetBoundary(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<UnityEngine.Vector2>&)
 extern void XRPlaneSubsystem_GetBoundary_mF1638B7F45F420D6A56A25D5749A91AF6C46B961 (void);
-// 0x0000023B System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::CreateOrResizeNativeArrayIfNecessary(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<T>&)
-// 0x0000023C System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::GetBoundary(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<UnityEngine.Vector2>&)
+// 0x00000241 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::CreateOrResizeNativeArrayIfNecessary(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<T>&)
+// 0x00000242 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::GetBoundary(UnityEngine.XR.ARSubsystems.TrackableId,Unity.Collections.Allocator,Unity.Collections.NativeArray`1<UnityEngine.Vector2>&)
 extern void Provider_GetBoundary_m85479D05365E9665B11E24CADDC45AFDC9A43158 (void);
-// 0x0000023D UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.BoundedPlane> UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::GetChanges(UnityEngine.XR.ARSubsystems.BoundedPlane,Unity.Collections.Allocator)
-// 0x0000023E UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::get_requestedPlaneDetectionMode()
+// 0x00000243 UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.BoundedPlane> UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::GetChanges(UnityEngine.XR.ARSubsystems.BoundedPlane,Unity.Collections.Allocator)
+// 0x00000244 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::get_requestedPlaneDetectionMode()
 extern void Provider_get_requestedPlaneDetectionMode_m44A491A20B7336C2783B01835473BF1032570135 (void);
-// 0x0000023F System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::set_requestedPlaneDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
+// 0x00000245 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::set_requestedPlaneDetectionMode(UnityEngine.XR.ARSubsystems.PlaneDetectionMode)
 extern void Provider_set_requestedPlaneDetectionMode_mEC2045B55C836A6D80F35FDC31682FB6A2F00E3F (void);
-// 0x00000240 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::get_currentPlaneDetectionMode()
+// 0x00000246 UnityEngine.XR.ARSubsystems.PlaneDetectionMode UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::get_currentPlaneDetectionMode()
 extern void Provider_get_currentPlaneDetectionMode_m72405CAD5E46C4CBD1DF9BABEDE6F7D3CF2F162E (void);
-// 0x00000241 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::.ctor()
+// 0x00000247 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystem/Provider::.ctor()
 extern void Provider__ctor_m54E6412FCE1B1A4CB7852D23AC643A9698BC4001 (void);
-// 0x00000242 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsHorizontalPlaneDetection(System.Boolean)
+// 0x00000248 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsHorizontalPlaneDetection(System.Boolean)
 extern void XRPlaneSubsystemDescriptor_set_supportsHorizontalPlaneDetection_m839AD1DED4EBAEBED2F90F802A6DD88AA2959CDF (void);
-// 0x00000243 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsVerticalPlaneDetection(System.Boolean)
+// 0x00000249 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsVerticalPlaneDetection(System.Boolean)
 extern void XRPlaneSubsystemDescriptor_set_supportsVerticalPlaneDetection_m9BF239DBD1EE5568557F5086E5CB0EECFC1853CD (void);
-// 0x00000244 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsArbitraryPlaneDetection(System.Boolean)
+// 0x0000024A System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsArbitraryPlaneDetection(System.Boolean)
 extern void XRPlaneSubsystemDescriptor_set_supportsArbitraryPlaneDetection_m1754591F55E83D9D6734B5CAAAD452F9BC84D1E1 (void);
-// 0x00000245 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::get_supportsBoundaryVertices()
+// 0x0000024B System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::get_supportsBoundaryVertices()
 extern void XRPlaneSubsystemDescriptor_get_supportsBoundaryVertices_m591A2527B7E06AF0AB1C46197EA9E8C21BF76206 (void);
-// 0x00000246 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsBoundaryVertices(System.Boolean)
+// 0x0000024C System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsBoundaryVertices(System.Boolean)
 extern void XRPlaneSubsystemDescriptor_set_supportsBoundaryVertices_m03857A490FF676C5E3E8C6596CABC70D7CFBEC96 (void);
-// 0x00000247 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsClassification(System.Boolean)
+// 0x0000024D System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::set_supportsClassification(System.Boolean)
 extern void XRPlaneSubsystemDescriptor_set_supportsClassification_m68CBEB689207F4B058CB8B2F878F2FDC1AA321C4 (void);
-// 0x00000248 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::Create(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
+// 0x0000024E System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::Create(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
 extern void XRPlaneSubsystemDescriptor_Create_m436344F4D6E1681E25A6EB110E13B4B78D63FF59 (void);
-// 0x00000249 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
+// 0x0000024F System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
 extern void XRPlaneSubsystemDescriptor__ctor_m73149431D0358E0258082B14FA2EB05F49CED36B (void);
-// 0x0000024A System.String UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_id()
+// 0x00000250 System.String UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_id()
 extern void Cinfo_get_id_m3C9491FE6D19662F5CDE221328F86862621B6DE2 (void);
-// 0x0000024B System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_id(System.String)
+// 0x00000251 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_id(System.String)
 extern void Cinfo_set_id_mCADBFEB62A645F33A8FE7684CE21D11A837FB6F9 (void);
-// 0x0000024C System.Type UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_providerType()
+// 0x00000252 System.Type UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_providerType()
 extern void Cinfo_get_providerType_m43F95297A90490AFA397FC61B990A33F74259EF5 (void);
-// 0x0000024D System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_providerType(System.Type)
+// 0x00000253 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_providerType(System.Type)
 extern void Cinfo_set_providerType_m75AA9217739457DA075AB764BF440217E87A1126 (void);
-// 0x0000024E System.Type UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
+// 0x00000254 System.Type UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
 extern void Cinfo_get_subsystemTypeOverride_m30B55A83F149F3B304AAAD85FE3E80BFCD75552D (void);
-// 0x0000024F System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
+// 0x00000255 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
 extern void Cinfo_set_subsystemTypeOverride_m8880B201EBF541B726CA629EF2DBA762E5ACB010 (void);
-// 0x00000250 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsHorizontalPlaneDetection()
+// 0x00000256 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsHorizontalPlaneDetection()
 extern void Cinfo_get_supportsHorizontalPlaneDetection_m25246A60EFD930C7AC4C50A950E910E7716C9315 (void);
-// 0x00000251 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsHorizontalPlaneDetection(System.Boolean)
+// 0x00000257 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsHorizontalPlaneDetection(System.Boolean)
 extern void Cinfo_set_supportsHorizontalPlaneDetection_m73E4DE44A091E9B268214E732EFA29174703EEF1 (void);
-// 0x00000252 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsVerticalPlaneDetection()
+// 0x00000258 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsVerticalPlaneDetection()
 extern void Cinfo_get_supportsVerticalPlaneDetection_mEA496CC68069CCAD03DBC1B57F53DDA57D56A8BF (void);
-// 0x00000253 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsVerticalPlaneDetection(System.Boolean)
+// 0x00000259 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsVerticalPlaneDetection(System.Boolean)
 extern void Cinfo_set_supportsVerticalPlaneDetection_m989F6D7C88D39981D1DD342DEC887E9DB3E44AF3 (void);
-// 0x00000254 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsArbitraryPlaneDetection()
+// 0x0000025A System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsArbitraryPlaneDetection()
 extern void Cinfo_get_supportsArbitraryPlaneDetection_m7E19D041E3828651646769D594B9647149B5A0F4 (void);
-// 0x00000255 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsArbitraryPlaneDetection(System.Boolean)
+// 0x0000025B System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsArbitraryPlaneDetection(System.Boolean)
 extern void Cinfo_set_supportsArbitraryPlaneDetection_m423FEFB76FB81C496A35BB358EF04592C8EE9C10 (void);
-// 0x00000256 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsBoundaryVertices()
+// 0x0000025C System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsBoundaryVertices()
 extern void Cinfo_get_supportsBoundaryVertices_m75615CA66C3E0020B75915F8426FE6B2B475BEDD (void);
-// 0x00000257 System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsBoundaryVertices(System.Boolean)
+// 0x0000025D System.Void UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::set_supportsBoundaryVertices(System.Boolean)
 extern void Cinfo_set_supportsBoundaryVertices_m96752ABD368822EE7EE393F7AE3AAE631A4C3657 (void);
-// 0x00000258 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsClassification()
+// 0x0000025E System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::get_supportsClassification()
 extern void Cinfo_get_supportsClassification_m2596CCB90308DA90A90177C91854DDFBF18F464A (void);
-// 0x00000259 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
+// 0x0000025F System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo)
 extern void Cinfo_Equals_m8A992E8675D4C2A5FCF7FCD7714CD1DBD734FEC0 (void);
-// 0x0000025A System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::Equals(System.Object)
+// 0x00000260 System.Boolean UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::Equals(System.Object)
 extern void Cinfo_Equals_m2B155451B272C1E8954EDA6D6DFD1C151408D393 (void);
-// 0x0000025B System.Int32 UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::GetHashCode()
+// 0x00000261 System.Int32 UnityEngine.XR.ARSubsystems.XRPlaneSubsystemDescriptor/Cinfo::GetHashCode()
 extern void Cinfo_GetHashCode_mC8813973E6CB5AB8D267B6D76693B6F96C006BF9 (void);
-// 0x0000025C System.Boolean UnityEngine.XR.ARSubsystems.Promise`1::get_keepWaiting()
-// 0x0000025D T UnityEngine.XR.ARSubsystems.Promise`1::get_result()
-// 0x0000025E System.Void UnityEngine.XR.ARSubsystems.Promise`1::set_result(T)
-// 0x0000025F UnityEngine.XR.ARSubsystems.Promise`1<T> UnityEngine.XR.ARSubsystems.Promise`1::CreateResolvedPromise(T)
-// 0x00000260 System.Void UnityEngine.XR.ARSubsystems.Promise`1::Resolve(T)
-// 0x00000261 System.Void UnityEngine.XR.ARSubsystems.Promise`1::OnKeepWaiting()
-// 0x00000262 System.Void UnityEngine.XR.ARSubsystems.Promise`1::.ctor()
-// 0x00000263 System.Void UnityEngine.XR.ARSubsystems.Promise`1/ImmediatePromise::OnKeepWaiting()
-// 0x00000264 System.Void UnityEngine.XR.ARSubsystems.Promise`1/ImmediatePromise::.ctor(T)
-// 0x00000265 UnityEngine.XR.ARSubsystems.XRRaycast UnityEngine.XR.ARSubsystems.XRRaycast::get_defaultValue()
+// 0x00000262 System.Boolean UnityEngine.XR.ARSubsystems.Promise`1::get_keepWaiting()
+// 0x00000263 T UnityEngine.XR.ARSubsystems.Promise`1::get_result()
+// 0x00000264 System.Void UnityEngine.XR.ARSubsystems.Promise`1::set_result(T)
+// 0x00000265 UnityEngine.XR.ARSubsystems.Promise`1<T> UnityEngine.XR.ARSubsystems.Promise`1::CreateResolvedPromise(T)
+// 0x00000266 System.Void UnityEngine.XR.ARSubsystems.Promise`1::Resolve(T)
+// 0x00000267 System.Void UnityEngine.XR.ARSubsystems.Promise`1::OnKeepWaiting()
+// 0x00000268 System.Void UnityEngine.XR.ARSubsystems.Promise`1::.ctor()
+// 0x00000269 System.Void UnityEngine.XR.ARSubsystems.Promise`1/ImmediatePromise::OnKeepWaiting()
+// 0x0000026A System.Void UnityEngine.XR.ARSubsystems.Promise`1/ImmediatePromise::.ctor(T)
+// 0x0000026B UnityEngine.XR.ARSubsystems.XRRaycast UnityEngine.XR.ARSubsystems.XRRaycast::get_defaultValue()
 extern void XRRaycast_get_defaultValue_m37D4F9D561AA6422EEB957A49FDC8B9E1669A48E (void);
-// 0x00000266 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycast::get_trackableId()
+// 0x0000026C UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycast::get_trackableId()
 extern void XRRaycast_get_trackableId_mA844E950A9862ABA13C47395893C18A55C9117AB (void);
-// 0x00000267 UnityEngine.Pose UnityEngine.XR.ARSubsystems.XRRaycast::get_pose()
+// 0x0000026D UnityEngine.Pose UnityEngine.XR.ARSubsystems.XRRaycast::get_pose()
 extern void XRRaycast_get_pose_mADE80A4AABEFCCCB8297186D7E836EAE5B730F73 (void);
-// 0x00000268 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRRaycast::get_trackingState()
+// 0x0000026E UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRRaycast::get_trackingState()
 extern void XRRaycast_get_trackingState_mDBA1DEB482B9346E44263E8B2201C1D8AF919B09 (void);
-// 0x00000269 System.IntPtr UnityEngine.XR.ARSubsystems.XRRaycast::get_nativePtr()
+// 0x0000026F System.IntPtr UnityEngine.XR.ARSubsystems.XRRaycast::get_nativePtr()
 extern void XRRaycast_get_nativePtr_m79D980249D35343744B394D7238F8A8FB943D484 (void);
-// 0x0000026A System.Single UnityEngine.XR.ARSubsystems.XRRaycast::get_distance()
+// 0x00000270 System.Single UnityEngine.XR.ARSubsystems.XRRaycast::get_distance()
 extern void XRRaycast_get_distance_m0B11F8743558DCA40C4E724ECAB8E4DD5ECFFD2B (void);
-// 0x0000026B UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycast::get_hitTrackableId()
+// 0x00000271 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycast::get_hitTrackableId()
 extern void XRRaycast_get_hitTrackableId_m54245AC20302081DF8658019AA0261DEE1E7D6FE (void);
-// 0x0000026C System.Void UnityEngine.XR.ARSubsystems.XRRaycast::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,UnityEngine.XR.ARSubsystems.TrackingState,System.IntPtr,System.Single,UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x00000272 System.Void UnityEngine.XR.ARSubsystems.XRRaycast::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,UnityEngine.XR.ARSubsystems.TrackingState,System.IntPtr,System.Single,UnityEngine.XR.ARSubsystems.TrackableId)
 extern void XRRaycast__ctor_m0ACF53702D817AC34FD8C21F2C01EF7A8F592F9D (void);
-// 0x0000026D System.Int32 UnityEngine.XR.ARSubsystems.XRRaycast::GetHashCode()
+// 0x00000273 System.Int32 UnityEngine.XR.ARSubsystems.XRRaycast::GetHashCode()
 extern void XRRaycast_GetHashCode_m94E4A6BDC4CD5E875F40777E273D1E9CD37D54A6 (void);
-// 0x0000026E System.Boolean UnityEngine.XR.ARSubsystems.XRRaycast::Equals(System.Object)
+// 0x00000274 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycast::Equals(System.Object)
 extern void XRRaycast_Equals_m7F141CB415FF28341035CBD2B32037DC80469575 (void);
-// 0x0000026F System.Boolean UnityEngine.XR.ARSubsystems.XRRaycast::Equals(UnityEngine.XR.ARSubsystems.XRRaycast)
+// 0x00000275 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycast::Equals(UnityEngine.XR.ARSubsystems.XRRaycast)
 extern void XRRaycast_Equals_m2A00EBA5AD411F5BFF724BB7D60175FAE69F8D74 (void);
-// 0x00000270 System.Void UnityEngine.XR.ARSubsystems.XRRaycast::.cctor()
+// 0x00000276 System.Void UnityEngine.XR.ARSubsystems.XRRaycast::.cctor()
 extern void XRRaycast__cctor_m88C247D8041D39ED011C71BD40B6F42310EE48DB (void);
-// 0x00000271 UnityEngine.XR.ARSubsystems.XRRaycastHit UnityEngine.XR.ARSubsystems.XRRaycastHit::get_defaultValue()
+// 0x00000277 UnityEngine.XR.ARSubsystems.XRRaycastHit UnityEngine.XR.ARSubsystems.XRRaycastHit::get_defaultValue()
 extern void XRRaycastHit_get_defaultValue_m330E18C6389B68E95AB5CFF26531D5CF5DE6E090 (void);
-// 0x00000272 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycastHit::get_trackableId()
+// 0x00000278 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.XRRaycastHit::get_trackableId()
 extern void XRRaycastHit_get_trackableId_m8B92C0F8977D274743D9388DEB7DCEBCC88E7325 (void);
-// 0x00000273 UnityEngine.Pose UnityEngine.XR.ARSubsystems.XRRaycastHit::get_pose()
+// 0x00000279 UnityEngine.Pose UnityEngine.XR.ARSubsystems.XRRaycastHit::get_pose()
 extern void XRRaycastHit_get_pose_m3B8D69B763A39178CB583948B4E08255FE9A633E (void);
-// 0x00000274 System.Single UnityEngine.XR.ARSubsystems.XRRaycastHit::get_distance()
+// 0x0000027A System.Single UnityEngine.XR.ARSubsystems.XRRaycastHit::get_distance()
 extern void XRRaycastHit_get_distance_m7098B7C90D22697CA37FBBDF50A4109AD055CA80 (void);
-// 0x00000275 UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARSubsystems.XRRaycastHit::get_hitType()
+// 0x0000027B UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARSubsystems.XRRaycastHit::get_hitType()
 extern void XRRaycastHit_get_hitType_m30A8013E847E6B2B70A9511B522099C03102E933 (void);
-// 0x00000276 System.Void UnityEngine.XR.ARSubsystems.XRRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,System.Single,UnityEngine.XR.ARSubsystems.TrackableType)
+// 0x0000027C System.Void UnityEngine.XR.ARSubsystems.XRRaycastHit::.ctor(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.Pose,System.Single,UnityEngine.XR.ARSubsystems.TrackableType)
 extern void XRRaycastHit__ctor_mEFB9D7632D78C282C02A913F1E4A2F7866C6B641 (void);
-// 0x00000277 System.Int32 UnityEngine.XR.ARSubsystems.XRRaycastHit::GetHashCode()
+// 0x0000027D System.Int32 UnityEngine.XR.ARSubsystems.XRRaycastHit::GetHashCode()
 extern void XRRaycastHit_GetHashCode_m7C9DBAE43B929D3D4BBFF37E15E4E01143BC4A6B (void);
-// 0x00000278 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastHit::Equals(System.Object)
+// 0x0000027E System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastHit::Equals(System.Object)
 extern void XRRaycastHit_Equals_m319801A0EFB8A841B3B7E6197BB612780698759A (void);
-// 0x00000279 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastHit::Equals(UnityEngine.XR.ARSubsystems.XRRaycastHit)
+// 0x0000027F System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastHit::Equals(UnityEngine.XR.ARSubsystems.XRRaycastHit)
 extern void XRRaycastHit_Equals_mE45E36906807C4F3C5E28C1F54228142D444DA0A (void);
-// 0x0000027A System.Void UnityEngine.XR.ARSubsystems.XRRaycastHit::.cctor()
+// 0x00000280 System.Void UnityEngine.XR.ARSubsystems.XRRaycastHit::.cctor()
 extern void XRRaycastHit__cctor_m5484BC89F33E0E0E1C846CB135139037484009D8 (void);
-// 0x0000027B System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::.ctor()
+// 0x00000281 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::.ctor()
 extern void XRRaycastSubsystem__ctor_m883CA69818A86683F768E24C30896A03AB231744 (void);
-// 0x0000027C UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRRaycast> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::GetChanges(Unity.Collections.Allocator)
+// 0x00000282 UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRRaycast> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::GetChanges(Unity.Collections.Allocator)
 extern void XRRaycastSubsystem_GetChanges_mAAF6A88E1636E9143D46216A137FC40065756B36 (void);
-// 0x0000027D System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::TryAddRaycast(UnityEngine.Vector2,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
+// 0x00000283 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::TryAddRaycast(UnityEngine.Vector2,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
 extern void XRRaycastSubsystem_TryAddRaycast_mD0D3CCD94C1EAF43E5DA8130DD35CB2B95785DEF (void);
-// 0x0000027E System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::TryAddRaycast(UnityEngine.Ray,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
+// 0x00000284 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::TryAddRaycast(UnityEngine.Ray,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
 extern void XRRaycastSubsystem_TryAddRaycast_m8B4904E8E52037689CC8A28E952BC532DAC13B8B (void);
-// 0x0000027F System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::RemoveRaycast(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x00000285 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::RemoveRaycast(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void XRRaycastSubsystem_RemoveRaycast_mD95EEE6441B70215E92C6FE47B8B586F61F5E331 (void);
-// 0x00000280 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x00000286 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::Raycast(UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void XRRaycastSubsystem_Raycast_m8F80A2A2DB7028A18192426BC8A12C1AEE8BAE12 (void);
-// 0x00000281 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::Raycast(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x00000287 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem::Raycast(UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void XRRaycastSubsystem_Raycast_mA1E217F2C1B58EDE213F651AD6F966E77D67F688 (void);
-// 0x00000282 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Start()
+// 0x00000288 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Start()
 extern void Provider_Start_m1857D20E067E44CF3BAD3E96A368619BAB6474FA (void);
-// 0x00000283 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Stop()
+// 0x00000289 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Stop()
 extern void Provider_Stop_m1B4BADF1B98C07455D3BEEEB7A22FD8444904952 (void);
-// 0x00000284 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Destroy()
+// 0x0000028A System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Destroy()
 extern void Provider_Destroy_mB9445EA71155D4A8A69DA2E3A929FDAF5C4BB3B3 (void);
-// 0x00000285 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::TryAddRaycast(UnityEngine.Vector2,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
+// 0x0000028B System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::TryAddRaycast(UnityEngine.Vector2,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
 extern void Provider_TryAddRaycast_mF21620620C50F046E545FBC7BD33B411C466D0A5 (void);
-// 0x00000286 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::TryAddRaycast(UnityEngine.Ray,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
+// 0x0000028C System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::TryAddRaycast(UnityEngine.Ray,System.Single,UnityEngine.XR.ARSubsystems.XRRaycast&)
 extern void Provider_TryAddRaycast_m42D31584099F01A3FC95D884A08C23BAA7515143 (void);
-// 0x00000287 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::RemoveRaycast(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x0000028D System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::RemoveRaycast(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void Provider_RemoveRaycast_m255F5FAC2D9A0E406FDE819156EBC7C11B23DF94 (void);
-// 0x00000288 UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRRaycast> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::GetChanges(UnityEngine.XR.ARSubsystems.XRRaycast,Unity.Collections.Allocator)
+// 0x0000028E UnityEngine.XR.ARSubsystems.TrackableChanges`1<UnityEngine.XR.ARSubsystems.XRRaycast> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::GetChanges(UnityEngine.XR.ARSubsystems.XRRaycast,Unity.Collections.Allocator)
 extern void Provider_GetChanges_m62ED7DA58CBC28C0C63EDFF72C9C6B7421A3B2B5 (void);
-// 0x00000289 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Raycast(UnityEngine.XR.ARSubsystems.XRRaycastHit,UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x0000028F Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Raycast(UnityEngine.XR.ARSubsystems.XRRaycastHit,UnityEngine.Ray,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void Provider_Raycast_mB206D5960A72ECCC6BC44AA91719306F790C4854 (void);
-// 0x0000028A Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Raycast(UnityEngine.XR.ARSubsystems.XRRaycastHit,UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
+// 0x00000290 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit> UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::Raycast(UnityEngine.XR.ARSubsystems.XRRaycastHit,UnityEngine.Vector2,UnityEngine.XR.ARSubsystems.TrackableType,Unity.Collections.Allocator)
 extern void Provider_Raycast_mDB7696CAE66690693DA105DDC40B319A327807E6 (void);
-// 0x0000028B System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::.ctor()
+// 0x00000291 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystem/Provider::.ctor()
 extern void Provider__ctor_mA6631023676667A3E88702E327B8CCC05F58F678 (void);
-// 0x0000028C System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::get_supportsViewportBasedRaycast()
+// 0x00000292 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::get_supportsViewportBasedRaycast()
 extern void XRRaycastSubsystemDescriptor_get_supportsViewportBasedRaycast_m9B041E253DF77C3584BC482D253746AB8A0B4FDB (void);
-// 0x0000028D System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsViewportBasedRaycast(System.Boolean)
+// 0x00000293 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsViewportBasedRaycast(System.Boolean)
 extern void XRRaycastSubsystemDescriptor_set_supportsViewportBasedRaycast_m1860360556D5F4BBD3B242C93D8C92B3F8FA8D90 (void);
-// 0x0000028E System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::get_supportsWorldBasedRaycast()
+// 0x00000294 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::get_supportsWorldBasedRaycast()
 extern void XRRaycastSubsystemDescriptor_get_supportsWorldBasedRaycast_m06932061F9A99D5B2EDF87E420811B985EBD0F82 (void);
-// 0x0000028F System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsWorldBasedRaycast(System.Boolean)
+// 0x00000295 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsWorldBasedRaycast(System.Boolean)
 extern void XRRaycastSubsystemDescriptor_set_supportsWorldBasedRaycast_m2A57C6AF5B8A21E2780A2CDC288F2917DB4BC590 (void);
-// 0x00000290 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportedTrackableTypes(UnityEngine.XR.ARSubsystems.TrackableType)
+// 0x00000296 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportedTrackableTypes(UnityEngine.XR.ARSubsystems.TrackableType)
 extern void XRRaycastSubsystemDescriptor_set_supportedTrackableTypes_m99EBD94098B7BD499391301B0099EC9381D32558 (void);
-// 0x00000291 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsTrackedRaycasts(System.Boolean)
+// 0x00000297 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::set_supportsTrackedRaycasts(System.Boolean)
 extern void XRRaycastSubsystemDescriptor_set_supportsTrackedRaycasts_m9C99240C24C64818B63A368C025689018E8C4044 (void);
-// 0x00000292 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::RegisterDescriptor(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
+// 0x00000298 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::RegisterDescriptor(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
 extern void XRRaycastSubsystemDescriptor_RegisterDescriptor_m5F967AE129CABAC92A8774272B77B97D5D52F5E9 (void);
-// 0x00000293 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
+// 0x00000299 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
 extern void XRRaycastSubsystemDescriptor__ctor_m95E810A79E27BB9FE0CC927BCBDEE2BFC5A0B011 (void);
-// 0x00000294 System.String UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_id()
+// 0x0000029A System.String UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_id()
 extern void Cinfo_get_id_m14E2737CF1E90C961F8D5B282C17E125018668E0 (void);
-// 0x00000295 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_id(System.String)
+// 0x0000029B System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_id(System.String)
 extern void Cinfo_set_id_m962E07A26F49D8C32DAEFEC4F9E0F79EBC128533 (void);
-// 0x00000296 System.Type UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_providerType()
+// 0x0000029C System.Type UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_providerType()
 extern void Cinfo_get_providerType_mB4A72CE35BDA5CCC57B2CCC3E1D88672D9E59021 (void);
-// 0x00000297 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_providerType(System.Type)
+// 0x0000029D System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_providerType(System.Type)
 extern void Cinfo_set_providerType_m5D183591B4A3ECA1EC2AA9015C02DCD1EB1F076F (void);
-// 0x00000298 System.Type UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
+// 0x0000029E System.Type UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
 extern void Cinfo_get_subsystemTypeOverride_m473983CC8B06F42BC47E92AA261EC2CCBEBFC292 (void);
-// 0x00000299 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
+// 0x0000029F System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
 extern void Cinfo_set_subsystemTypeOverride_m20C9DAD8677611ACD22689DA249911EEDE46EBF7 (void);
-// 0x0000029A System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsViewportBasedRaycast()
+// 0x000002A0 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsViewportBasedRaycast()
 extern void Cinfo_get_supportsViewportBasedRaycast_mBAE62868186C81B758E7B9B87F3C67F6C1586700 (void);
-// 0x0000029B System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsViewportBasedRaycast(System.Boolean)
+// 0x000002A1 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsViewportBasedRaycast(System.Boolean)
 extern void Cinfo_set_supportsViewportBasedRaycast_mC7DB604D2E288A145177EC66F8C1DAA50F38693F (void);
-// 0x0000029C System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsWorldBasedRaycast()
+// 0x000002A2 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsWorldBasedRaycast()
 extern void Cinfo_get_supportsWorldBasedRaycast_m6D9743F420975015239E33D6641CA95A092D501D (void);
-// 0x0000029D System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsWorldBasedRaycast(System.Boolean)
+// 0x000002A3 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsWorldBasedRaycast(System.Boolean)
 extern void Cinfo_set_supportsWorldBasedRaycast_m05D5BC11896AED796A6E237BBB98FA4EF3CF17A4 (void);
-// 0x0000029E UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportedTrackableTypes()
+// 0x000002A4 UnityEngine.XR.ARSubsystems.TrackableType UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportedTrackableTypes()
 extern void Cinfo_get_supportedTrackableTypes_mA59CFA06B5968E2DF45075C6C40E0A776CC19488 (void);
-// 0x0000029F System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportedTrackableTypes(UnityEngine.XR.ARSubsystems.TrackableType)
+// 0x000002A5 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportedTrackableTypes(UnityEngine.XR.ARSubsystems.TrackableType)
 extern void Cinfo_set_supportedTrackableTypes_m319BC9C9EB554C35CD40B791917A603D63BEEE0A (void);
-// 0x000002A0 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsTrackedRaycasts()
+// 0x000002A6 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::get_supportsTrackedRaycasts()
 extern void Cinfo_get_supportsTrackedRaycasts_mF9B448767ADE954E8357D686935ACCF3208DB1B8 (void);
-// 0x000002A1 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsTrackedRaycasts(System.Boolean)
+// 0x000002A7 System.Void UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::set_supportsTrackedRaycasts(System.Boolean)
 extern void Cinfo_set_supportsTrackedRaycasts_m7E65DAEB9ED0CB4C4C83DB751C1547145949AA41 (void);
-// 0x000002A2 System.Int32 UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::GetHashCode()
+// 0x000002A8 System.Int32 UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::GetHashCode()
 extern void Cinfo_GetHashCode_m6CC66C9C4BA7904DF1E9E9D7A3C74DC8D6A6C1BA (void);
-// 0x000002A3 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::Equals(System.Object)
+// 0x000002A9 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::Equals(System.Object)
 extern void Cinfo_Equals_m4D9FFB9CFA4DF03E9AF2763D3E91926896FCD64D (void);
-// 0x000002A4 System.String UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::ToString()
+// 0x000002AA System.String UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::ToString()
 extern void Cinfo_ToString_m3022468C4555B097321DCDB08B4079DA430EBB3A (void);
-// 0x000002A5 System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
+// 0x000002AB System.Boolean UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRRaycastSubsystemDescriptor/Cinfo)
 extern void Cinfo_Equals_mD2E403B4E791DCE658297F8CA484149EB2D5F5B8 (void);
-// 0x000002A6 System.Void UnityEngine.XR.ARSubsystems.ScopedProfiler::.ctor(System.String)
+// 0x000002AC System.Void UnityEngine.XR.ARSubsystems.ScopedProfiler::.ctor(System.String)
 extern void ScopedProfiler__ctor_m652B5689DE1A3C3EF7D12801DA27FA3B40E4412F (void);
-// 0x000002A7 System.Void UnityEngine.XR.ARSubsystems.ScopedProfiler::Dispose()
+// 0x000002AD System.Void UnityEngine.XR.ARSubsystems.ScopedProfiler::Dispose()
 extern void ScopedProfiler_Dispose_m7B646405B4E52CC4677329D3B860BE9C17A9DAC4 (void);
-// 0x000002A8 System.Boolean UnityEngine.XR.ARSubsystems.SessionAvailabilityExtensions::IsSupported(UnityEngine.XR.ARSubsystems.SessionAvailability)
+// 0x000002AE System.Boolean UnityEngine.XR.ARSubsystems.SessionAvailabilityExtensions::IsSupported(UnityEngine.XR.ARSubsystems.SessionAvailability)
 extern void SessionAvailabilityExtensions_IsSupported_m9105265F71A68B18269095FFE362CD24148F6E7C (void);
-// 0x000002A9 System.Boolean UnityEngine.XR.ARSubsystems.SessionAvailabilityExtensions::IsInstalled(UnityEngine.XR.ARSubsystems.SessionAvailability)
+// 0x000002AF System.Boolean UnityEngine.XR.ARSubsystems.SessionAvailabilityExtensions::IsInstalled(UnityEngine.XR.ARSubsystems.SessionAvailability)
 extern void SessionAvailabilityExtensions_IsInstalled_m5AA4AE58BC0BA7C30E77B1B06038BED076ABFFDB (void);
-// 0x000002AA UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::GetAvailabilityAsync()
+// 0x000002B0 UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::GetAvailabilityAsync()
 extern void XRSessionSubsystem_GetAvailabilityAsync_m30808B871A7C1BC1BAC7EE85B0F36DB4422769BF (void);
-// 0x000002AB UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::InstallAsync()
+// 0x000002B1 UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::InstallAsync()
 extern void XRSessionSubsystem_InstallAsync_m7E278495740EB305D92109D0FFE0895B774D3DA7 (void);
-// 0x000002AC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::.ctor()
+// 0x000002B2 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::.ctor()
 extern void XRSessionSubsystem__ctor_mB926772E21C65B0CBCE36FD4610CEC1B677999C8 (void);
-// 0x000002AD System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::Reset()
+// 0x000002B3 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::Reset()
 extern void XRSessionSubsystem_Reset_m7413F6A15AA7A69B40F473129325FC71593ABAA6 (void);
-// 0x000002AE System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::DetermineConfiguration(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000002B4 System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::DetermineConfiguration(UnityEngine.XR.ARSubsystems.Feature)
 extern void XRSessionSubsystem_DetermineConfiguration_m0A5C3F6A14CB8F2D74D5162CCCD5FBD3D51F58A5 (void);
-// 0x000002AF System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
+// 0x000002B5 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
 extern void XRSessionSubsystem_Update_m25DA803713B0800B1C39326D71817305C6A38749 (void);
-// 0x000002B0 System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_currentConfiguration()
+// 0x000002B6 System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_currentConfiguration()
 extern void XRSessionSubsystem_get_currentConfiguration_m1AB222F75B6C1645DB3405CB9AE18740EE66F0E5 (void);
-// 0x000002B1 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_currentConfiguration(System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration>)
+// 0x000002B7 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_currentConfiguration(System.Nullable`1<UnityEngine.XR.ARSubsystems.Configuration>)
 extern void XRSessionSubsystem_set_currentConfiguration_m4299FA74038DD6293A125B425179E4C948D09917 (void);
-// 0x000002B2 System.String UnityEngine.XR.ARSubsystems.XRSessionSubsystem::HexString(System.IntPtr)
+// 0x000002B8 System.String UnityEngine.XR.ARSubsystems.XRSessionSubsystem::HexString(System.IntPtr)
 extern void XRSessionSubsystem_HexString_m4BB0D6C1C291C1713B9365C2268941FAD0FB53AB (void);
-// 0x000002B3 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::DebugPrintConfigurationChange(UnityEngine.XR.ARSubsystems.Configuration,UnityEngine.XR.ARSubsystems.Feature)
+// 0x000002B9 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::DebugPrintConfigurationChange(UnityEngine.XR.ARSubsystems.Configuration,UnityEngine.XR.ARSubsystems.Feature)
 extern void XRSessionSubsystem_DebugPrintConfigurationChange_m1A02C301784F7EE669CB6CD5BBBB5B3A595CCFB5 (void);
-// 0x000002B4 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_requestedFeatures()
+// 0x000002BA UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_requestedFeatures()
 extern void XRSessionSubsystem_get_requestedFeatures_m2193DB34D2CC44D20701580C9FA062EA111CFCE3 (void);
-// 0x000002B5 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::GetConfigurationDescriptors(Unity.Collections.Allocator)
+// 0x000002BB Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor> UnityEngine.XR.ARSubsystems.XRSessionSubsystem::GetConfigurationDescriptors(Unity.Collections.Allocator)
 extern void XRSessionSubsystem_GetConfigurationDescriptors_m437FE62BDE0C6F37AC5A75C1A11674AB403147F2 (void);
-// 0x000002B6 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::OnApplicationPause()
+// 0x000002BC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::OnApplicationPause()
 extern void XRSessionSubsystem_OnApplicationPause_mE4BBAAC4555EA3AAF9B8113406DC920054A1307D (void);
-// 0x000002B7 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::OnApplicationResume()
+// 0x000002BD System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::OnApplicationResume()
 extern void XRSessionSubsystem_OnApplicationResume_mCECA16418E8ECAFFCAEDE50D80364B4709A0D488 (void);
-// 0x000002B8 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_trackingState()
+// 0x000002BE UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_trackingState()
 extern void XRSessionSubsystem_get_trackingState_mC2FE654BEB0240C5C3FF85E31DA35E52F85DB550 (void);
-// 0x000002B9 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_requestedTrackingMode()
+// 0x000002BF UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_requestedTrackingMode()
 extern void XRSessionSubsystem_get_requestedTrackingMode_m9C8B343227EE42F5ED9980A26008BBEFA101D49F (void);
-// 0x000002BA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_requestedTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000002C0 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_requestedTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
 extern void XRSessionSubsystem_set_requestedTrackingMode_m8BBE750492C85A5D35063E246E1F090D5DF73026 (void);
-// 0x000002BB UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_currentTrackingMode()
+// 0x000002C1 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_currentTrackingMode()
 extern void XRSessionSubsystem_get_currentTrackingMode_mD059B4FBD0D07A428470FF2677002EA51AA2CFB5 (void);
-// 0x000002BC UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_notTrackingReason()
+// 0x000002C2 UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_notTrackingReason()
 extern void XRSessionSubsystem_get_notTrackingReason_m78C6CAA0D4570B7E410C1D375A3CC0AEEC1AFE5A (void);
-// 0x000002BD System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_matchFrameRateEnabled()
+// 0x000002C3 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_matchFrameRateEnabled()
 extern void XRSessionSubsystem_get_matchFrameRateEnabled_m0D73F1F3C3B72ACBA97EDA22A62E69C727D2EDB7 (void);
-// 0x000002BE System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_matchFrameRateRequested()
+// 0x000002C4 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_matchFrameRateRequested()
 extern void XRSessionSubsystem_get_matchFrameRateRequested_m6344C601746F6822B56E362F1FC4C4ABE15D22A4 (void);
-// 0x000002BF System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_matchFrameRateRequested(System.Boolean)
+// 0x000002C5 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem::set_matchFrameRateRequested(System.Boolean)
 extern void XRSessionSubsystem_set_matchFrameRateRequested_m778FF485C34682FE76BCA4871EB4D1D2F5AF73F1 (void);
-// 0x000002C0 System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_frameRate()
+// 0x000002C6 System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem::get_frameRate()
 extern void XRSessionSubsystem_get_frameRate_m08D6A4F0F598E99A26747827F0630CFDB922A4E3 (void);
-// 0x000002C1 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Start()
+// 0x000002C7 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Start()
 extern void Provider_Start_m6E563F958F1D15385E35A74FC8A82E6AEA46343E (void);
-// 0x000002C2 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Stop()
+// 0x000002C8 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Stop()
 extern void Provider_Stop_m333D402B548DA93070E850B93D06EC4F1FB07026 (void);
-// 0x000002C3 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
+// 0x000002C9 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
 extern void Provider_Update_mED507841F7B7D096FC116F775A144293B59E783A (void);
-// 0x000002C4 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams,UnityEngine.XR.ARSubsystems.Configuration)
+// 0x000002CA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Update(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams,UnityEngine.XR.ARSubsystems.Configuration)
 extern void Provider_Update_m7DA03CBB0EBA3A2798DF9681CBDDBCA0AE224C85 (void);
-// 0x000002C5 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_requestedFeatures()
+// 0x000002CB UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_requestedFeatures()
 extern void Provider_get_requestedFeatures_m10A009D1F22281A8E1BDEA2156B6DF78C03BA855 (void);
-// 0x000002C6 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_requestedTrackingMode()
+// 0x000002CC UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_requestedTrackingMode()
 extern void Provider_get_requestedTrackingMode_m7B7AC5BD9BAEB3B75E96FCC308EDB19523AF2834 (void);
-// 0x000002C7 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_requestedTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
+// 0x000002CD System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_requestedTrackingMode(UnityEngine.XR.ARSubsystems.Feature)
 extern void Provider_set_requestedTrackingMode_m8E0E2EBDB0E20C7E4B4DDD4BFCEDF3C8009BA2E3 (void);
-// 0x000002C8 UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_currentTrackingMode()
+// 0x000002CE UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_currentTrackingMode()
 extern void Provider_get_currentTrackingMode_m65B8B630C321A5B41ACDC2F01D0DE2FF111CE638 (void);
-// 0x000002C9 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetConfigurationDescriptors(Unity.Collections.Allocator)
+// 0x000002CF Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetConfigurationDescriptors(Unity.Collections.Allocator)
 extern void Provider_GetConfigurationDescriptors_m66DEAAC3E52B4D710710989049669C7DC7B6D643 (void);
-// 0x000002CA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Destroy()
+// 0x000002D0 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Destroy()
 extern void Provider_Destroy_m8A97A126A24DE21208CC6C23BDA3C462F7DD0311 (void);
-// 0x000002CB System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Reset()
+// 0x000002D1 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::Reset()
 extern void Provider_Reset_mC3F1E5323D153985545F3EDDF20DA73703468FC2 (void);
-// 0x000002CC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::OnApplicationPause()
+// 0x000002D2 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::OnApplicationPause()
 extern void Provider_OnApplicationPause_m8FB7F1B59209A522883E89CCFD925A67198E9C90 (void);
-// 0x000002CD System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::OnApplicationResume()
+// 0x000002D3 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::OnApplicationResume()
 extern void Provider_OnApplicationResume_m744FBE7BF974465A14E7ABD2EBAD3EC7E588B117 (void);
-// 0x000002CE UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetAvailabilityAsync()
+// 0x000002D4 UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionAvailability> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::GetAvailabilityAsync()
 extern void Provider_GetAvailabilityAsync_m0CC77C1C614055744ADFBB72CA4297D4E51A0EE9 (void);
-// 0x000002CF UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::InstallAsync()
+// 0x000002D5 UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus> UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::InstallAsync()
 extern void Provider_InstallAsync_mC7CC25E00D2B78EF1D9B8615ADF663BDA2DB2419 (void);
-// 0x000002D0 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_trackingState()
+// 0x000002D6 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_trackingState()
 extern void Provider_get_trackingState_m0203345C74B979CB55AC990DA824AD8DE0CA1ADB (void);
-// 0x000002D1 UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_notTrackingReason()
+// 0x000002D7 UnityEngine.XR.ARSubsystems.NotTrackingReason UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_notTrackingReason()
 extern void Provider_get_notTrackingReason_m1D74C45C3CB3C617E7AB3D79C31F0B77CE7ECA32 (void);
-// 0x000002D2 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateEnabled()
+// 0x000002D8 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateEnabled()
 extern void Provider_get_matchFrameRateEnabled_m99E9CB391AC8D0CCFEBB9591C6725B2B06E2C5B9 (void);
-// 0x000002D3 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateRequested()
+// 0x000002D9 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_matchFrameRateRequested()
 extern void Provider_get_matchFrameRateRequested_m227999FA334E01B18CCB64CEDE9683FB6055B6C1 (void);
-// 0x000002D4 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_matchFrameRateRequested(System.Boolean)
+// 0x000002DA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::set_matchFrameRateRequested(System.Boolean)
 extern void Provider_set_matchFrameRateRequested_m7D3DF9134FA202F846C13A322D4E895801E1B19A (void);
-// 0x000002D5 System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_frameRate()
+// 0x000002DB System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::get_frameRate()
 extern void Provider_get_frameRate_m3D2F14E59249D30B755798C8C0732B0CEFA059E3 (void);
-// 0x000002D6 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::.ctor()
+// 0x000002DC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystem/Provider::.ctor()
 extern void Provider__ctor_m43661C1B8B6373D456C0CDA35F96AACBAB01290A (void);
-// 0x000002D7 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::get_supportsInstall()
+// 0x000002DD System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::get_supportsInstall()
 extern void XRSessionSubsystemDescriptor_get_supportsInstall_m3EE93DA405D5C59B746B621FC30D4CC182BB1E53 (void);
-// 0x000002D8 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::set_supportsInstall(System.Boolean)
+// 0x000002DE System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::set_supportsInstall(System.Boolean)
 extern void XRSessionSubsystemDescriptor_set_supportsInstall_m6BF049FADBC0C98964ED4DC227535BB27BBDA6B7 (void);
-// 0x000002D9 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::get_supportsMatchFrameRate()
+// 0x000002DF System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::get_supportsMatchFrameRate()
 extern void XRSessionSubsystemDescriptor_get_supportsMatchFrameRate_m516AB9E3CDBE8002D4EBD036EDFD787C46C5FF26 (void);
-// 0x000002DA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::set_supportsMatchFrameRate(System.Boolean)
+// 0x000002E0 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::set_supportsMatchFrameRate(System.Boolean)
 extern void XRSessionSubsystemDescriptor_set_supportsMatchFrameRate_m7E8D8FF23A84B20582BF51BEF07DCDFF325ACDF8 (void);
-// 0x000002DB System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::RegisterDescriptor(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
+// 0x000002E1 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::RegisterDescriptor(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
 extern void XRSessionSubsystemDescriptor_RegisterDescriptor_m93A3C60962B96C0AC75288931A21E2D2C0CF3895 (void);
-// 0x000002DC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
+// 0x000002E2 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor::.ctor(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
 extern void XRSessionSubsystemDescriptor__ctor_mB1B365F156769946A415E3A37A4FDDE167D5D5B7 (void);
-// 0x000002DD System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_supportsInstall()
+// 0x000002E3 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_supportsInstall()
 extern void Cinfo_get_supportsInstall_mEEEDF86E5DE1B7515989BAECAF2F1714A327B720 (void);
-// 0x000002DE System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_supportsInstall(System.Boolean)
+// 0x000002E4 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_supportsInstall(System.Boolean)
 extern void Cinfo_set_supportsInstall_mA4CF39BDB54C42BC8CBD401F6A77353B59EB074F (void);
-// 0x000002DF System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_supportsMatchFrameRate()
+// 0x000002E5 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_supportsMatchFrameRate()
 extern void Cinfo_get_supportsMatchFrameRate_mD86213A3EA6096133BF355DDDC55823027B48B7C (void);
-// 0x000002E0 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_supportsMatchFrameRate(System.Boolean)
+// 0x000002E6 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_supportsMatchFrameRate(System.Boolean)
 extern void Cinfo_set_supportsMatchFrameRate_mC501E193696EC21EF655C7B789CABFE2D7D2B3E4 (void);
-// 0x000002E1 System.String UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_id()
+// 0x000002E7 System.String UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_id()
 extern void Cinfo_get_id_m20097DC1BBE19C329FD6F99312B6B5CD14678921 (void);
-// 0x000002E2 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_id(System.String)
+// 0x000002E8 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_id(System.String)
 extern void Cinfo_set_id_m7ABF4746E3D8D5C9F5E845638AB861FFBF665594 (void);
-// 0x000002E3 System.Type UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_providerType()
+// 0x000002E9 System.Type UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_providerType()
 extern void Cinfo_get_providerType_m89ED3FB1640690CFD1735E14FB7834A2BF9203EC (void);
-// 0x000002E4 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_providerType(System.Type)
+// 0x000002EA System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_providerType(System.Type)
 extern void Cinfo_set_providerType_m2B27139CECCAF21A444D7891124893D11B7B6484 (void);
-// 0x000002E5 System.Type UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
+// 0x000002EB System.Type UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::get_subsystemTypeOverride()
 extern void Cinfo_get_subsystemTypeOverride_m5A1888DCB068C90C7C5197246602893767C5A2B7 (void);
-// 0x000002E6 System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
+// 0x000002EC System.Void UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::set_subsystemTypeOverride(System.Type)
 extern void Cinfo_set_subsystemTypeOverride_m5DD40EFEE5ADFC4A6624E1EF7345F63D66027423 (void);
-// 0x000002E7 System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::GetHashCode()
+// 0x000002ED System.Int32 UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::GetHashCode()
 extern void Cinfo_GetHashCode_m2D7B3F90910D284E6D8696F3E187E61436768107 (void);
-// 0x000002E8 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
+// 0x000002EE System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::Equals(UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo)
 extern void Cinfo_Equals_m0C051CCCCA3A44F0C851768FE1CDB49DAC6D82B6 (void);
-// 0x000002E9 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::Equals(System.Object)
+// 0x000002EF System.Boolean UnityEngine.XR.ARSubsystems.XRSessionSubsystemDescriptor/Cinfo::Equals(System.Object)
 extern void Cinfo_Equals_m053CC1A9E8D4DBF1FAFACF66083B615EF36CA572 (void);
-// 0x000002EA UnityEngine.ScreenOrientation UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::get_screenOrientation()
+// 0x000002F0 UnityEngine.ScreenOrientation UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::get_screenOrientation()
 extern void XRSessionUpdateParams_get_screenOrientation_m5BD0BD187D579592C71665C78BB09685F08BB23C (void);
-// 0x000002EB System.Void UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::set_screenOrientation(UnityEngine.ScreenOrientation)
+// 0x000002F1 System.Void UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::set_screenOrientation(UnityEngine.ScreenOrientation)
 extern void XRSessionUpdateParams_set_screenOrientation_m95E8C1C9AEEFCD0577AE4605645FA8CD8F1D6B9B (void);
-// 0x000002EC UnityEngine.Vector2Int UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::get_screenDimensions()
+// 0x000002F2 UnityEngine.Vector2Int UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::get_screenDimensions()
 extern void XRSessionUpdateParams_get_screenDimensions_mED2BC29E3B820C5CF96ED275DFA172B23EA52119 (void);
-// 0x000002ED System.Void UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::set_screenDimensions(UnityEngine.Vector2Int)
+// 0x000002F3 System.Void UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::set_screenDimensions(UnityEngine.Vector2Int)
 extern void XRSessionUpdateParams_set_screenDimensions_mC99924339E008CEFCF202EC394463F00DF0DA4B3 (void);
-// 0x000002EE System.Int32 UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::GetHashCode()
+// 0x000002F4 System.Int32 UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::GetHashCode()
 extern void XRSessionUpdateParams_GetHashCode_m735A861B2C2718DBF5588467EC76FC6EC77EFE8D (void);
-// 0x000002EF System.Boolean UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::Equals(System.Object)
+// 0x000002F5 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::Equals(System.Object)
 extern void XRSessionUpdateParams_Equals_mE2FA6A03BEBC662F543FA73D25561369FAEE7EAF (void);
-// 0x000002F0 System.String UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::ToString()
+// 0x000002F6 System.String UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::ToString()
 extern void XRSessionUpdateParams_ToString_m82D102D9405D9B5FCA96E55074C982F225287D80 (void);
-// 0x000002F1 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::Equals(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
+// 0x000002F7 System.Boolean UnityEngine.XR.ARSubsystems.XRSessionUpdateParams::Equals(UnityEngine.XR.ARSubsystems.XRSessionUpdateParams)
 extern void XRSessionUpdateParams_Equals_mEC4D21B1DFB2DB2327FCE21B43C144DD2003828C (void);
-// 0x000002F2 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.TrackableId::get_invalidId()
+// 0x000002F8 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.TrackableId::get_invalidId()
 extern void TrackableId_get_invalidId_mDAEC47FD9C1E08B9D5752DA8F185E7A783DBE494 (void);
-// 0x000002F3 System.Void UnityEngine.XR.ARSubsystems.TrackableId::.ctor(System.UInt64,System.UInt64)
+// 0x000002F9 System.Void UnityEngine.XR.ARSubsystems.TrackableId::.ctor(System.UInt64,System.UInt64)
 extern void TrackableId__ctor_mB12C56ADDEFA44578A429DDA57A6C78B833B41F5 (void);
-// 0x000002F4 System.String UnityEngine.XR.ARSubsystems.TrackableId::ToString()
+// 0x000002FA System.String UnityEngine.XR.ARSubsystems.TrackableId::ToString()
 extern void TrackableId_ToString_m4BE1AD91726751D994E6FB864B231BE5D7D3F85F (void);
-// 0x000002F5 System.Int32 UnityEngine.XR.ARSubsystems.TrackableId::GetHashCode()
+// 0x000002FB System.Int32 UnityEngine.XR.ARSubsystems.TrackableId::GetHashCode()
 extern void TrackableId_GetHashCode_m6150BF091C3C17A84021CC18B443D5C297F89537 (void);
-// 0x000002F6 System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::Equals(System.Object)
+// 0x000002FC System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::Equals(System.Object)
 extern void TrackableId_Equals_m67C98169A04DB96CCEBC08A05B3FF9544B52C3E5 (void);
-// 0x000002F7 System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::Equals(UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x000002FD System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::Equals(UnityEngine.XR.ARSubsystems.TrackableId)
 extern void TrackableId_Equals_m7263BB158392C4F1B57BEE16D4F1FBBCF01E4A6E (void);
-// 0x000002F8 System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::op_Equality(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.XR.ARSubsystems.TrackableId)
+// 0x000002FE System.Boolean UnityEngine.XR.ARSubsystems.TrackableId::op_Equality(UnityEngine.XR.ARSubsystems.TrackableId,UnityEngine.XR.ARSubsystems.TrackableId)
 extern void TrackableId_op_Equality_m9E51E31C58CA710A1BD2E3AE1D2286E2FE5B3529 (void);
-// 0x000002F9 System.Void UnityEngine.XR.ARSubsystems.TrackableId::.cctor()
+// 0x000002FF System.Void UnityEngine.XR.ARSubsystems.TrackableId::.cctor()
 extern void TrackableId__cctor_m0233247C572757642543FD7F9D7AFFA432EC916F (void);
-// 0x000002FA UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.ITrackable::get_trackableId()
-// 0x000002FB UnityEngine.Pose UnityEngine.XR.ARSubsystems.ITrackable::get_pose()
-// 0x000002FC UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.ITrackable::get_trackingState()
-// 0x000002FD Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_added()
-// 0x000002FE Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_updated()
-// 0x000002FF Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.TrackableId> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_removed()
-// 0x00000300 System.Boolean UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_isCreated()
-// 0x00000301 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::set_isCreated(System.Boolean)
-// 0x00000302 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::.ctor(System.Int32,System.Int32,System.Int32,Unity.Collections.Allocator,T)
-// 0x00000303 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::.ctor(System.Void*,System.Int32,System.Void*,System.Int32,System.Void*,System.Int32,T,System.Int32,Unity.Collections.Allocator)
-// 0x00000304 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::Dispose()
-// 0x00000305 UnityEngine.XR.ARSubsystems.TrackableChanges`1<TTrackable> UnityEngine.XR.ARSubsystems.TrackingSubsystem`4::GetChanges(Unity.Collections.Allocator)
-// 0x00000306 System.Void UnityEngine.XR.ARSubsystems.TrackingSubsystem`4::.ctor()
-// 0x00000307 System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::ValidateAndThrow(UnityEngine.XR.ARSubsystems.TrackableChanges`1<T>)
-// 0x00000308 System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::ValidateAndDisposeIfThrown(UnityEngine.XR.ARSubsystems.TrackableChanges`1<T>)
-// 0x00000309 System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::AddToSetAndThrowIfDuplicate(UnityEngine.XR.ARSubsystems.TrackableId,System.Boolean,System.String)
-// 0x0000030A System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::.ctor()
-// 0x0000030B System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::.cctor()
-// 0x0000030C System.IntPtr UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_nativeTexture()
+// 0x00000300 UnityEngine.XR.ARSubsystems.TrackableId UnityEngine.XR.ARSubsystems.ITrackable::get_trackableId()
+// 0x00000301 UnityEngine.Pose UnityEngine.XR.ARSubsystems.ITrackable::get_pose()
+// 0x00000302 UnityEngine.XR.ARSubsystems.TrackingState UnityEngine.XR.ARSubsystems.ITrackable::get_trackingState()
+// 0x00000303 Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_added()
+// 0x00000304 Unity.Collections.NativeArray`1<T> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_updated()
+// 0x00000305 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.TrackableId> UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_removed()
+// 0x00000306 System.Boolean UnityEngine.XR.ARSubsystems.TrackableChanges`1::get_isCreated()
+// 0x00000307 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::set_isCreated(System.Boolean)
+// 0x00000308 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::.ctor(System.Int32,System.Int32,System.Int32,Unity.Collections.Allocator,T)
+// 0x00000309 System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::.ctor(System.Void*,System.Int32,System.Void*,System.Int32,System.Void*,System.Int32,T,System.Int32,Unity.Collections.Allocator)
+// 0x0000030A System.Void UnityEngine.XR.ARSubsystems.TrackableChanges`1::Dispose()
+// 0x0000030B UnityEngine.XR.ARSubsystems.TrackableChanges`1<TTrackable> UnityEngine.XR.ARSubsystems.TrackingSubsystem`4::GetChanges(Unity.Collections.Allocator)
+// 0x0000030C System.Void UnityEngine.XR.ARSubsystems.TrackingSubsystem`4::.ctor()
+// 0x0000030D System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::ValidateAndThrow(UnityEngine.XR.ARSubsystems.TrackableChanges`1<T>)
+// 0x0000030E System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::ValidateAndDisposeIfThrown(UnityEngine.XR.ARSubsystems.TrackableChanges`1<T>)
+// 0x0000030F System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::AddToSetAndThrowIfDuplicate(UnityEngine.XR.ARSubsystems.TrackableId,System.Boolean,System.String)
+// 0x00000310 System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::.ctor()
+// 0x00000311 System.Void UnityEngine.XR.ARSubsystems.ValidationUtility`1::.cctor()
+// 0x00000312 System.IntPtr UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_nativeTexture()
 extern void XRTextureDescriptor_get_nativeTexture_m1E27C0E1DC11DDC6139178509EE91B8DF54DBAD4 (void);
-// 0x0000030D System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_width()
+// 0x00000313 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_width()
 extern void XRTextureDescriptor_get_width_m570472F03994BC63F21751414105A2E0C112DBF2 (void);
-// 0x0000030E System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_height()
+// 0x00000314 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_height()
 extern void XRTextureDescriptor_get_height_mC0B37241C24FA883E2594B9411080EDF654E3E01 (void);
-// 0x0000030F System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_mipmapCount()
+// 0x00000315 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_mipmapCount()
 extern void XRTextureDescriptor_get_mipmapCount_m4B2ED0D6EBE06AD86E356203B4AB5DE3807C1D31 (void);
-// 0x00000310 UnityEngine.TextureFormat UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_format()
+// 0x00000316 UnityEngine.TextureFormat UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_format()
 extern void XRTextureDescriptor_get_format_mA745AA87046D4FE4846C11B8285B980FF6DDDD1A (void);
-// 0x00000311 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_propertyNameId()
+// 0x00000317 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_propertyNameId()
 extern void XRTextureDescriptor_get_propertyNameId_mF5A620F0DAEE746BDD293DB7F02909FB5404DCC1 (void);
-// 0x00000312 System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_valid()
+// 0x00000318 System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_valid()
 extern void XRTextureDescriptor_get_valid_mBEE2CC268CC8773618BAB7794118746E235A6761 (void);
-// 0x00000313 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_depth()
+// 0x00000319 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_depth()
 extern void XRTextureDescriptor_get_depth_m5885EBF7D767C918B1483D63D1B11EE60D939E7D (void);
-// 0x00000314 UnityEngine.Rendering.TextureDimension UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_dimension()
+// 0x0000031A UnityEngine.Rendering.TextureDimension UnityEngine.XR.ARSubsystems.XRTextureDescriptor::get_dimension()
 extern void XRTextureDescriptor_get_dimension_mAEB2447102404A845F9B20317A2AB82B956E4A12 (void);
-// 0x00000315 System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::hasIdenticalTextureMetadata(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x0000031B System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::hasIdenticalTextureMetadata(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void XRTextureDescriptor_hasIdenticalTextureMetadata_mB4DA1A4CFF4ABB66F8FF3AF1F310E60BA1B3F872 (void);
-// 0x00000316 System.Void UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Reset()
+// 0x0000031C System.Void UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Reset()
 extern void XRTextureDescriptor_Reset_m1BE8024830BA7AFB94AAD01731FDB449DD12A01F (void);
-// 0x00000317 System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Equals(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
+// 0x0000031D System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Equals(UnityEngine.XR.ARSubsystems.XRTextureDescriptor)
 extern void XRTextureDescriptor_Equals_m4931F85C225CAC63EC71FBCE246204E244B6CA2B (void);
-// 0x00000318 System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Equals(System.Object)
+// 0x0000031E System.Boolean UnityEngine.XR.ARSubsystems.XRTextureDescriptor::Equals(System.Object)
 extern void XRTextureDescriptor_Equals_m42127F01DF3CDEA1F38CF07E6057E8AD9E6F4570 (void);
-// 0x00000319 System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::GetHashCode()
+// 0x0000031F System.Int32 UnityEngine.XR.ARSubsystems.XRTextureDescriptor::GetHashCode()
 extern void XRTextureDescriptor_GetHashCode_mFEB456F0A0985232D0E342B8F10669149F190012 (void);
-// 0x0000031A System.String UnityEngine.XR.ARSubsystems.XRTextureDescriptor::ToString()
+// 0x00000320 System.String UnityEngine.XR.ARSubsystems.XRTextureDescriptor::ToString()
 extern void XRTextureDescriptor_ToString_m452F36D253986001921C5F627E67E2452D685493 (void);
-static Il2CppMethodPointer s_methodPointers[794] = 
+static Il2CppMethodPointer s_methodPointers[800] = 
 {
 	XRAnchor_get_defaultValue_mF68ABF2D0EC8B54DD8D5333FCD56EEF14A985A9A,
 	XRAnchor_get_trackableId_m0F50E81D0152D0BA4152EF9B66F648EF9FC664AE,
@@ -2016,6 +2028,12 @@ static Il2CppMethodPointer s_methodPointers[794] =
 	XRTrackedImage_Equals_m95C7E1338C9CD5F37EE9D6452AE5820D2BC87FB7,
 	XRTrackedImage_Equals_m54F9B4F5CC42200E927B5025274C6E765264C9BF,
 	XRTrackedImage__cctor_mFFD6CBB4C4AA72F753B6C48B94A7441D2072777E,
+	HandheldARInputDevice_get_devicePosition_mEA94A0592CC39ADECED0B21A3B015B0C3F217894,
+	HandheldARInputDevice_set_devicePosition_mFACF712435D25DBC04E7595C073EB2FFB60938EB,
+	HandheldARInputDevice_get_deviceRotation_m839A043DBB843829F25EE4F120D43C3C82C30892,
+	HandheldARInputDevice_set_deviceRotation_mFF98E66E587EB92247C73A5EDF34317014BB15F1,
+	HandheldARInputDevice_FinishSetup_m35BA4889F0CA64587C4146B741D8875BFE46352C,
+	HandheldARInputDevice__ctor_m6CD9A2A4F215809FADC75915093A7DDA5E9C226D,
 	NULL,
 	NULL,
 	NULL,
@@ -3068,747 +3086,751 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[420] =
 	{ 0x060001C1, XRTrackedImage_GetHashCode_m3900E50D96F2687C63C8F78C9BEA6E469FAE5E2C_AdjustorThunk },
 	{ 0x060001C2, XRTrackedImage_Equals_m95C7E1338C9CD5F37EE9D6452AE5820D2BC87FB7_AdjustorThunk },
 	{ 0x060001C3, XRTrackedImage_Equals_m54F9B4F5CC42200E927B5025274C6E765264C9BF_AdjustorThunk },
-	{ 0x06000208, XROcclusionSubsystemCinfo_get_id_mF11E38C57E4AB8E81F9E7875A0A41D04A19C4039_AdjustorThunk },
-	{ 0x06000209, XROcclusionSubsystemCinfo_set_id_mF8B41D7F5FACF940467D57208BC03DDD89D9B7A8_AdjustorThunk },
-	{ 0x0600020A, XROcclusionSubsystemCinfo_get_providerType_m98D7D72FF4C0B36F28D6E39BC498E43691AE718B_AdjustorThunk },
-	{ 0x0600020B, XROcclusionSubsystemCinfo_set_providerType_m5D9D3B330216EAB023F4B17F4853D5A612B07380_AdjustorThunk },
-	{ 0x0600020C, XROcclusionSubsystemCinfo_get_subsystemTypeOverride_mAE0D5036913033AB1D45B54C10047F180648BD3E_AdjustorThunk },
-	{ 0x0600020D, XROcclusionSubsystemCinfo_set_subsystemTypeOverride_mA0E976FA9B7955BD224DF93F7AB9AEA883779563_AdjustorThunk },
-	{ 0x0600020E, XROcclusionSubsystemCinfo_get_supportsHumanSegmentationStencilImage_mB151BF0F40B3C9D9D2DE26318FD219FEF0C2AB9D_AdjustorThunk },
-	{ 0x0600020F, XROcclusionSubsystemCinfo_get_humanSegmentationStencilImageSupportedDelegate_m77677BDADCDA75FD77F97A942FA6B29706500292_AdjustorThunk },
-	{ 0x06000210, XROcclusionSubsystemCinfo_get_supportsHumanSegmentationDepthImage_mB73625A00528D80575D712BE5621FF9219E3B6E9_AdjustorThunk },
-	{ 0x06000211, XROcclusionSubsystemCinfo_get_humanSegmentationDepthImageSupportedDelegate_m67F62406957D42F2EF689DE57FD0074C3DAF2BD5_AdjustorThunk },
-	{ 0x06000212, XROcclusionSubsystemCinfo_get_environmentDepthTemporalSmoothingSupportedDelegate_mD84F3F4F9DFCFC8C4CE86F9276EEA5ACA2392D1D_AdjustorThunk },
-	{ 0x06000213, XROcclusionSubsystemCinfo_set_environmentDepthTemporalSmoothingSupportedDelegate_m6B67C82AEA73E79B7CD03F9912746C6B52C27949_AdjustorThunk },
-	{ 0x06000214, XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthImage_mA29F2AB5C4AA073556B074CFD5A88D3345D596B3_AdjustorThunk },
-	{ 0x06000215, XROcclusionSubsystemCinfo_get_environmentDepthImageSupportedDelegate_m540B191F5215CDD7A1DEC6E370065AE8C9ADE75C_AdjustorThunk },
-	{ 0x06000216, XROcclusionSubsystemCinfo_set_environmentDepthImageSupportedDelegate_m18E4C878D993208EB9EEA9D667CA5C88E4E1D4BE_AdjustorThunk },
-	{ 0x06000217, XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthConfidenceImage_mA3552C9DF07B609155051A3A80FA30AFDE2D3D1F_AdjustorThunk },
-	{ 0x06000218, XROcclusionSubsystemCinfo_get_environmentDepthConfidenceImageSupportedDelegate_m562A6E788BE3D0CCD49F0DC2DC698CFAB87DDA6C_AdjustorThunk },
-	{ 0x06000219, XROcclusionSubsystemCinfo_set_environmentDepthConfidenceImageSupportedDelegate_m0F91D5C5B63DEFD91FE9A00EF95B45ED9711461A_AdjustorThunk },
-	{ 0x0600021A, XROcclusionSubsystemCinfo_Equals_mEFD9C210D7814A35FFE675EBD2EE91E6A3856623_AdjustorThunk },
-	{ 0x0600021B, XROcclusionSubsystemCinfo_Equals_m232468ACCEB9CD8E20E096E270EEC1B262013812_AdjustorThunk },
-	{ 0x0600021C, XROcclusionSubsystemCinfo_GetHashCode_m672CF4A97241C59DE78E46E2D41245EACC13B09E_AdjustorThunk },
-	{ 0x06000225, BoundedPlane__ctor_m95C41A6B0DB95A2636683BE716E9F92A0465EF87_AdjustorThunk },
-	{ 0x06000226, BoundedPlane_get_trackableId_m7AA7FD63EA8F8A903300EFDF15616315ACFDA8AA_AdjustorThunk },
-	{ 0x06000227, BoundedPlane_get_subsumedById_m27EFD2CAFFDCF6560D445115D596F23094F612B9_AdjustorThunk },
-	{ 0x06000228, BoundedPlane_get_pose_mE6F416B0C7519EDA0D1AE8D8BD4D627E4CEA96CC_AdjustorThunk },
-	{ 0x06000229, BoundedPlane_get_center_m3BB7635D2137C7C414FC682EBE0CB5E1F8D3F7D3_AdjustorThunk },
-	{ 0x0600022A, BoundedPlane_get_extents_m60341CDB176C9039D5B88B2F52534D356E11F400_AdjustorThunk },
-	{ 0x0600022B, BoundedPlane_get_size_m2645C0FF517DF15F381B268DF6366F4D14381DC8_AdjustorThunk },
-	{ 0x0600022C, BoundedPlane_get_alignment_m4E43582A7059AE23DD506878BCF164C61422DBEF_AdjustorThunk },
-	{ 0x0600022D, BoundedPlane_get_trackingState_mC294F13F8F79D53F8F04D8FB4E160B092BA6A577_AdjustorThunk },
-	{ 0x0600022E, BoundedPlane_get_nativePtr_mE8E2608856FE4327913A38005F4A8590D65A43E7_AdjustorThunk },
-	{ 0x0600022F, BoundedPlane_get_classification_m4EA9556C440097648A87D3AB7EC433776468A725_AdjustorThunk },
-	{ 0x06000230, BoundedPlane_ToString_mA4FBDD41FC676DB2C2EEB22DA2E624099EF06ADA_AdjustorThunk },
-	{ 0x06000231, BoundedPlane_Equals_mE1A074D048C20E980CB7016FAFA7EDFDA52DB15D_AdjustorThunk },
-	{ 0x06000232, BoundedPlane_GetHashCode_m8C684989A748253B2A3772BCAA87D8758FB98941_AdjustorThunk },
-	{ 0x06000233, BoundedPlane_Equals_m1F738CE040A5D498E41B35521109A3FFBEB7196D_AdjustorThunk },
-	{ 0x0600024A, Cinfo_get_id_m3C9491FE6D19662F5CDE221328F86862621B6DE2_AdjustorThunk },
-	{ 0x0600024B, Cinfo_set_id_mCADBFEB62A645F33A8FE7684CE21D11A837FB6F9_AdjustorThunk },
-	{ 0x0600024C, Cinfo_get_providerType_m43F95297A90490AFA397FC61B990A33F74259EF5_AdjustorThunk },
-	{ 0x0600024D, Cinfo_set_providerType_m75AA9217739457DA075AB764BF440217E87A1126_AdjustorThunk },
-	{ 0x0600024E, Cinfo_get_subsystemTypeOverride_m30B55A83F149F3B304AAAD85FE3E80BFCD75552D_AdjustorThunk },
-	{ 0x0600024F, Cinfo_set_subsystemTypeOverride_m8880B201EBF541B726CA629EF2DBA762E5ACB010_AdjustorThunk },
-	{ 0x06000250, Cinfo_get_supportsHorizontalPlaneDetection_m25246A60EFD930C7AC4C50A950E910E7716C9315_AdjustorThunk },
-	{ 0x06000251, Cinfo_set_supportsHorizontalPlaneDetection_m73E4DE44A091E9B268214E732EFA29174703EEF1_AdjustorThunk },
-	{ 0x06000252, Cinfo_get_supportsVerticalPlaneDetection_mEA496CC68069CCAD03DBC1B57F53DDA57D56A8BF_AdjustorThunk },
-	{ 0x06000253, Cinfo_set_supportsVerticalPlaneDetection_m989F6D7C88D39981D1DD342DEC887E9DB3E44AF3_AdjustorThunk },
-	{ 0x06000254, Cinfo_get_supportsArbitraryPlaneDetection_m7E19D041E3828651646769D594B9647149B5A0F4_AdjustorThunk },
-	{ 0x06000255, Cinfo_set_supportsArbitraryPlaneDetection_m423FEFB76FB81C496A35BB358EF04592C8EE9C10_AdjustorThunk },
-	{ 0x06000256, Cinfo_get_supportsBoundaryVertices_m75615CA66C3E0020B75915F8426FE6B2B475BEDD_AdjustorThunk },
-	{ 0x06000257, Cinfo_set_supportsBoundaryVertices_m96752ABD368822EE7EE393F7AE3AAE631A4C3657_AdjustorThunk },
-	{ 0x06000258, Cinfo_get_supportsClassification_m2596CCB90308DA90A90177C91854DDFBF18F464A_AdjustorThunk },
-	{ 0x06000259, Cinfo_Equals_m8A992E8675D4C2A5FCF7FCD7714CD1DBD734FEC0_AdjustorThunk },
-	{ 0x0600025A, Cinfo_Equals_m2B155451B272C1E8954EDA6D6DFD1C151408D393_AdjustorThunk },
-	{ 0x0600025B, Cinfo_GetHashCode_mC8813973E6CB5AB8D267B6D76693B6F96C006BF9_AdjustorThunk },
-	{ 0x06000266, XRRaycast_get_trackableId_mA844E950A9862ABA13C47395893C18A55C9117AB_AdjustorThunk },
-	{ 0x06000267, XRRaycast_get_pose_mADE80A4AABEFCCCB8297186D7E836EAE5B730F73_AdjustorThunk },
-	{ 0x06000268, XRRaycast_get_trackingState_mDBA1DEB482B9346E44263E8B2201C1D8AF919B09_AdjustorThunk },
-	{ 0x06000269, XRRaycast_get_nativePtr_m79D980249D35343744B394D7238F8A8FB943D484_AdjustorThunk },
-	{ 0x0600026A, XRRaycast_get_distance_m0B11F8743558DCA40C4E724ECAB8E4DD5ECFFD2B_AdjustorThunk },
-	{ 0x0600026B, XRRaycast_get_hitTrackableId_m54245AC20302081DF8658019AA0261DEE1E7D6FE_AdjustorThunk },
-	{ 0x0600026C, XRRaycast__ctor_m0ACF53702D817AC34FD8C21F2C01EF7A8F592F9D_AdjustorThunk },
-	{ 0x0600026D, XRRaycast_GetHashCode_m94E4A6BDC4CD5E875F40777E273D1E9CD37D54A6_AdjustorThunk },
-	{ 0x0600026E, XRRaycast_Equals_m7F141CB415FF28341035CBD2B32037DC80469575_AdjustorThunk },
-	{ 0x0600026F, XRRaycast_Equals_m2A00EBA5AD411F5BFF724BB7D60175FAE69F8D74_AdjustorThunk },
-	{ 0x06000272, XRRaycastHit_get_trackableId_m8B92C0F8977D274743D9388DEB7DCEBCC88E7325_AdjustorThunk },
-	{ 0x06000273, XRRaycastHit_get_pose_m3B8D69B763A39178CB583948B4E08255FE9A633E_AdjustorThunk },
-	{ 0x06000274, XRRaycastHit_get_distance_m7098B7C90D22697CA37FBBDF50A4109AD055CA80_AdjustorThunk },
-	{ 0x06000275, XRRaycastHit_get_hitType_m30A8013E847E6B2B70A9511B522099C03102E933_AdjustorThunk },
-	{ 0x06000276, XRRaycastHit__ctor_mEFB9D7632D78C282C02A913F1E4A2F7866C6B641_AdjustorThunk },
-	{ 0x06000277, XRRaycastHit_GetHashCode_m7C9DBAE43B929D3D4BBFF37E15E4E01143BC4A6B_AdjustorThunk },
-	{ 0x06000278, XRRaycastHit_Equals_m319801A0EFB8A841B3B7E6197BB612780698759A_AdjustorThunk },
-	{ 0x06000279, XRRaycastHit_Equals_mE45E36906807C4F3C5E28C1F54228142D444DA0A_AdjustorThunk },
-	{ 0x06000294, Cinfo_get_id_m14E2737CF1E90C961F8D5B282C17E125018668E0_AdjustorThunk },
-	{ 0x06000295, Cinfo_set_id_m962E07A26F49D8C32DAEFEC4F9E0F79EBC128533_AdjustorThunk },
-	{ 0x06000296, Cinfo_get_providerType_mB4A72CE35BDA5CCC57B2CCC3E1D88672D9E59021_AdjustorThunk },
-	{ 0x06000297, Cinfo_set_providerType_m5D183591B4A3ECA1EC2AA9015C02DCD1EB1F076F_AdjustorThunk },
-	{ 0x06000298, Cinfo_get_subsystemTypeOverride_m473983CC8B06F42BC47E92AA261EC2CCBEBFC292_AdjustorThunk },
-	{ 0x06000299, Cinfo_set_subsystemTypeOverride_m20C9DAD8677611ACD22689DA249911EEDE46EBF7_AdjustorThunk },
-	{ 0x0600029A, Cinfo_get_supportsViewportBasedRaycast_mBAE62868186C81B758E7B9B87F3C67F6C1586700_AdjustorThunk },
-	{ 0x0600029B, Cinfo_set_supportsViewportBasedRaycast_mC7DB604D2E288A145177EC66F8C1DAA50F38693F_AdjustorThunk },
-	{ 0x0600029C, Cinfo_get_supportsWorldBasedRaycast_m6D9743F420975015239E33D6641CA95A092D501D_AdjustorThunk },
-	{ 0x0600029D, Cinfo_set_supportsWorldBasedRaycast_m05D5BC11896AED796A6E237BBB98FA4EF3CF17A4_AdjustorThunk },
-	{ 0x0600029E, Cinfo_get_supportedTrackableTypes_mA59CFA06B5968E2DF45075C6C40E0A776CC19488_AdjustorThunk },
-	{ 0x0600029F, Cinfo_set_supportedTrackableTypes_m319BC9C9EB554C35CD40B791917A603D63BEEE0A_AdjustorThunk },
-	{ 0x060002A0, Cinfo_get_supportsTrackedRaycasts_mF9B448767ADE954E8357D686935ACCF3208DB1B8_AdjustorThunk },
-	{ 0x060002A1, Cinfo_set_supportsTrackedRaycasts_m7E65DAEB9ED0CB4C4C83DB751C1547145949AA41_AdjustorThunk },
-	{ 0x060002A2, Cinfo_GetHashCode_m6CC66C9C4BA7904DF1E9E9D7A3C74DC8D6A6C1BA_AdjustorThunk },
-	{ 0x060002A3, Cinfo_Equals_m4D9FFB9CFA4DF03E9AF2763D3E91926896FCD64D_AdjustorThunk },
-	{ 0x060002A4, Cinfo_ToString_m3022468C4555B097321DCDB08B4079DA430EBB3A_AdjustorThunk },
-	{ 0x060002A5, Cinfo_Equals_mD2E403B4E791DCE658297F8CA484149EB2D5F5B8_AdjustorThunk },
-	{ 0x060002A6, ScopedProfiler__ctor_m652B5689DE1A3C3EF7D12801DA27FA3B40E4412F_AdjustorThunk },
-	{ 0x060002A7, ScopedProfiler_Dispose_m7B646405B4E52CC4677329D3B860BE9C17A9DAC4_AdjustorThunk },
-	{ 0x060002DD, Cinfo_get_supportsInstall_mEEEDF86E5DE1B7515989BAECAF2F1714A327B720_AdjustorThunk },
-	{ 0x060002DE, Cinfo_set_supportsInstall_mA4CF39BDB54C42BC8CBD401F6A77353B59EB074F_AdjustorThunk },
-	{ 0x060002DF, Cinfo_get_supportsMatchFrameRate_mD86213A3EA6096133BF355DDDC55823027B48B7C_AdjustorThunk },
-	{ 0x060002E0, Cinfo_set_supportsMatchFrameRate_mC501E193696EC21EF655C7B789CABFE2D7D2B3E4_AdjustorThunk },
-	{ 0x060002E1, Cinfo_get_id_m20097DC1BBE19C329FD6F99312B6B5CD14678921_AdjustorThunk },
-	{ 0x060002E2, Cinfo_set_id_m7ABF4746E3D8D5C9F5E845638AB861FFBF665594_AdjustorThunk },
-	{ 0x060002E3, Cinfo_get_providerType_m89ED3FB1640690CFD1735E14FB7834A2BF9203EC_AdjustorThunk },
-	{ 0x060002E4, Cinfo_set_providerType_m2B27139CECCAF21A444D7891124893D11B7B6484_AdjustorThunk },
-	{ 0x060002E5, Cinfo_get_subsystemTypeOverride_m5A1888DCB068C90C7C5197246602893767C5A2B7_AdjustorThunk },
-	{ 0x060002E6, Cinfo_set_subsystemTypeOverride_m5DD40EFEE5ADFC4A6624E1EF7345F63D66027423_AdjustorThunk },
-	{ 0x060002E7, Cinfo_GetHashCode_m2D7B3F90910D284E6D8696F3E187E61436768107_AdjustorThunk },
-	{ 0x060002E8, Cinfo_Equals_m0C051CCCCA3A44F0C851768FE1CDB49DAC6D82B6_AdjustorThunk },
-	{ 0x060002E9, Cinfo_Equals_m053CC1A9E8D4DBF1FAFACF66083B615EF36CA572_AdjustorThunk },
-	{ 0x060002EA, XRSessionUpdateParams_get_screenOrientation_m5BD0BD187D579592C71665C78BB09685F08BB23C_AdjustorThunk },
-	{ 0x060002EB, XRSessionUpdateParams_set_screenOrientation_m95E8C1C9AEEFCD0577AE4605645FA8CD8F1D6B9B_AdjustorThunk },
-	{ 0x060002EC, XRSessionUpdateParams_get_screenDimensions_mED2BC29E3B820C5CF96ED275DFA172B23EA52119_AdjustorThunk },
-	{ 0x060002ED, XRSessionUpdateParams_set_screenDimensions_mC99924339E008CEFCF202EC394463F00DF0DA4B3_AdjustorThunk },
-	{ 0x060002EE, XRSessionUpdateParams_GetHashCode_m735A861B2C2718DBF5588467EC76FC6EC77EFE8D_AdjustorThunk },
-	{ 0x060002EF, XRSessionUpdateParams_Equals_mE2FA6A03BEBC662F543FA73D25561369FAEE7EAF_AdjustorThunk },
-	{ 0x060002F0, XRSessionUpdateParams_ToString_m82D102D9405D9B5FCA96E55074C982F225287D80_AdjustorThunk },
-	{ 0x060002F1, XRSessionUpdateParams_Equals_mEC4D21B1DFB2DB2327FCE21B43C144DD2003828C_AdjustorThunk },
-	{ 0x060002F3, TrackableId__ctor_mB12C56ADDEFA44578A429DDA57A6C78B833B41F5_AdjustorThunk },
-	{ 0x060002F4, TrackableId_ToString_m4BE1AD91726751D994E6FB864B231BE5D7D3F85F_AdjustorThunk },
-	{ 0x060002F5, TrackableId_GetHashCode_m6150BF091C3C17A84021CC18B443D5C297F89537_AdjustorThunk },
-	{ 0x060002F6, TrackableId_Equals_m67C98169A04DB96CCEBC08A05B3FF9544B52C3E5_AdjustorThunk },
-	{ 0x060002F7, TrackableId_Equals_m7263BB158392C4F1B57BEE16D4F1FBBCF01E4A6E_AdjustorThunk },
-	{ 0x0600030C, XRTextureDescriptor_get_nativeTexture_m1E27C0E1DC11DDC6139178509EE91B8DF54DBAD4_AdjustorThunk },
-	{ 0x0600030D, XRTextureDescriptor_get_width_m570472F03994BC63F21751414105A2E0C112DBF2_AdjustorThunk },
-	{ 0x0600030E, XRTextureDescriptor_get_height_mC0B37241C24FA883E2594B9411080EDF654E3E01_AdjustorThunk },
-	{ 0x0600030F, XRTextureDescriptor_get_mipmapCount_m4B2ED0D6EBE06AD86E356203B4AB5DE3807C1D31_AdjustorThunk },
-	{ 0x06000310, XRTextureDescriptor_get_format_mA745AA87046D4FE4846C11B8285B980FF6DDDD1A_AdjustorThunk },
-	{ 0x06000311, XRTextureDescriptor_get_propertyNameId_mF5A620F0DAEE746BDD293DB7F02909FB5404DCC1_AdjustorThunk },
-	{ 0x06000312, XRTextureDescriptor_get_valid_mBEE2CC268CC8773618BAB7794118746E235A6761_AdjustorThunk },
-	{ 0x06000313, XRTextureDescriptor_get_depth_m5885EBF7D767C918B1483D63D1B11EE60D939E7D_AdjustorThunk },
-	{ 0x06000314, XRTextureDescriptor_get_dimension_mAEB2447102404A845F9B20317A2AB82B956E4A12_AdjustorThunk },
-	{ 0x06000315, XRTextureDescriptor_hasIdenticalTextureMetadata_mB4DA1A4CFF4ABB66F8FF3AF1F310E60BA1B3F872_AdjustorThunk },
-	{ 0x06000316, XRTextureDescriptor_Reset_m1BE8024830BA7AFB94AAD01731FDB449DD12A01F_AdjustorThunk },
-	{ 0x06000317, XRTextureDescriptor_Equals_m4931F85C225CAC63EC71FBCE246204E244B6CA2B_AdjustorThunk },
-	{ 0x06000318, XRTextureDescriptor_Equals_m42127F01DF3CDEA1F38CF07E6057E8AD9E6F4570_AdjustorThunk },
-	{ 0x06000319, XRTextureDescriptor_GetHashCode_mFEB456F0A0985232D0E342B8F10669149F190012_AdjustorThunk },
-	{ 0x0600031A, XRTextureDescriptor_ToString_m452F36D253986001921C5F627E67E2452D685493_AdjustorThunk },
+	{ 0x0600020E, XROcclusionSubsystemCinfo_get_id_mF11E38C57E4AB8E81F9E7875A0A41D04A19C4039_AdjustorThunk },
+	{ 0x0600020F, XROcclusionSubsystemCinfo_set_id_mF8B41D7F5FACF940467D57208BC03DDD89D9B7A8_AdjustorThunk },
+	{ 0x06000210, XROcclusionSubsystemCinfo_get_providerType_m98D7D72FF4C0B36F28D6E39BC498E43691AE718B_AdjustorThunk },
+	{ 0x06000211, XROcclusionSubsystemCinfo_set_providerType_m5D9D3B330216EAB023F4B17F4853D5A612B07380_AdjustorThunk },
+	{ 0x06000212, XROcclusionSubsystemCinfo_get_subsystemTypeOverride_mAE0D5036913033AB1D45B54C10047F180648BD3E_AdjustorThunk },
+	{ 0x06000213, XROcclusionSubsystemCinfo_set_subsystemTypeOverride_mA0E976FA9B7955BD224DF93F7AB9AEA883779563_AdjustorThunk },
+	{ 0x06000214, XROcclusionSubsystemCinfo_get_supportsHumanSegmentationStencilImage_mB151BF0F40B3C9D9D2DE26318FD219FEF0C2AB9D_AdjustorThunk },
+	{ 0x06000215, XROcclusionSubsystemCinfo_get_humanSegmentationStencilImageSupportedDelegate_m77677BDADCDA75FD77F97A942FA6B29706500292_AdjustorThunk },
+	{ 0x06000216, XROcclusionSubsystemCinfo_get_supportsHumanSegmentationDepthImage_mB73625A00528D80575D712BE5621FF9219E3B6E9_AdjustorThunk },
+	{ 0x06000217, XROcclusionSubsystemCinfo_get_humanSegmentationDepthImageSupportedDelegate_m67F62406957D42F2EF689DE57FD0074C3DAF2BD5_AdjustorThunk },
+	{ 0x06000218, XROcclusionSubsystemCinfo_get_environmentDepthTemporalSmoothingSupportedDelegate_mD84F3F4F9DFCFC8C4CE86F9276EEA5ACA2392D1D_AdjustorThunk },
+	{ 0x06000219, XROcclusionSubsystemCinfo_set_environmentDepthTemporalSmoothingSupportedDelegate_m6B67C82AEA73E79B7CD03F9912746C6B52C27949_AdjustorThunk },
+	{ 0x0600021A, XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthImage_mA29F2AB5C4AA073556B074CFD5A88D3345D596B3_AdjustorThunk },
+	{ 0x0600021B, XROcclusionSubsystemCinfo_get_environmentDepthImageSupportedDelegate_m540B191F5215CDD7A1DEC6E370065AE8C9ADE75C_AdjustorThunk },
+	{ 0x0600021C, XROcclusionSubsystemCinfo_set_environmentDepthImageSupportedDelegate_m18E4C878D993208EB9EEA9D667CA5C88E4E1D4BE_AdjustorThunk },
+	{ 0x0600021D, XROcclusionSubsystemCinfo_get_queryForSupportsEnvironmentDepthConfidenceImage_mA3552C9DF07B609155051A3A80FA30AFDE2D3D1F_AdjustorThunk },
+	{ 0x0600021E, XROcclusionSubsystemCinfo_get_environmentDepthConfidenceImageSupportedDelegate_m562A6E788BE3D0CCD49F0DC2DC698CFAB87DDA6C_AdjustorThunk },
+	{ 0x0600021F, XROcclusionSubsystemCinfo_set_environmentDepthConfidenceImageSupportedDelegate_m0F91D5C5B63DEFD91FE9A00EF95B45ED9711461A_AdjustorThunk },
+	{ 0x06000220, XROcclusionSubsystemCinfo_Equals_mEFD9C210D7814A35FFE675EBD2EE91E6A3856623_AdjustorThunk },
+	{ 0x06000221, XROcclusionSubsystemCinfo_Equals_m232468ACCEB9CD8E20E096E270EEC1B262013812_AdjustorThunk },
+	{ 0x06000222, XROcclusionSubsystemCinfo_GetHashCode_m672CF4A97241C59DE78E46E2D41245EACC13B09E_AdjustorThunk },
+	{ 0x0600022B, BoundedPlane__ctor_m95C41A6B0DB95A2636683BE716E9F92A0465EF87_AdjustorThunk },
+	{ 0x0600022C, BoundedPlane_get_trackableId_m7AA7FD63EA8F8A903300EFDF15616315ACFDA8AA_AdjustorThunk },
+	{ 0x0600022D, BoundedPlane_get_subsumedById_m27EFD2CAFFDCF6560D445115D596F23094F612B9_AdjustorThunk },
+	{ 0x0600022E, BoundedPlane_get_pose_mE6F416B0C7519EDA0D1AE8D8BD4D627E4CEA96CC_AdjustorThunk },
+	{ 0x0600022F, BoundedPlane_get_center_m3BB7635D2137C7C414FC682EBE0CB5E1F8D3F7D3_AdjustorThunk },
+	{ 0x06000230, BoundedPlane_get_extents_m60341CDB176C9039D5B88B2F52534D356E11F400_AdjustorThunk },
+	{ 0x06000231, BoundedPlane_get_size_m2645C0FF517DF15F381B268DF6366F4D14381DC8_AdjustorThunk },
+	{ 0x06000232, BoundedPlane_get_alignment_m4E43582A7059AE23DD506878BCF164C61422DBEF_AdjustorThunk },
+	{ 0x06000233, BoundedPlane_get_trackingState_mC294F13F8F79D53F8F04D8FB4E160B092BA6A577_AdjustorThunk },
+	{ 0x06000234, BoundedPlane_get_nativePtr_mE8E2608856FE4327913A38005F4A8590D65A43E7_AdjustorThunk },
+	{ 0x06000235, BoundedPlane_get_classification_m4EA9556C440097648A87D3AB7EC433776468A725_AdjustorThunk },
+	{ 0x06000236, BoundedPlane_ToString_mA4FBDD41FC676DB2C2EEB22DA2E624099EF06ADA_AdjustorThunk },
+	{ 0x06000237, BoundedPlane_Equals_mE1A074D048C20E980CB7016FAFA7EDFDA52DB15D_AdjustorThunk },
+	{ 0x06000238, BoundedPlane_GetHashCode_m8C684989A748253B2A3772BCAA87D8758FB98941_AdjustorThunk },
+	{ 0x06000239, BoundedPlane_Equals_m1F738CE040A5D498E41B35521109A3FFBEB7196D_AdjustorThunk },
+	{ 0x06000250, Cinfo_get_id_m3C9491FE6D19662F5CDE221328F86862621B6DE2_AdjustorThunk },
+	{ 0x06000251, Cinfo_set_id_mCADBFEB62A645F33A8FE7684CE21D11A837FB6F9_AdjustorThunk },
+	{ 0x06000252, Cinfo_get_providerType_m43F95297A90490AFA397FC61B990A33F74259EF5_AdjustorThunk },
+	{ 0x06000253, Cinfo_set_providerType_m75AA9217739457DA075AB764BF440217E87A1126_AdjustorThunk },
+	{ 0x06000254, Cinfo_get_subsystemTypeOverride_m30B55A83F149F3B304AAAD85FE3E80BFCD75552D_AdjustorThunk },
+	{ 0x06000255, Cinfo_set_subsystemTypeOverride_m8880B201EBF541B726CA629EF2DBA762E5ACB010_AdjustorThunk },
+	{ 0x06000256, Cinfo_get_supportsHorizontalPlaneDetection_m25246A60EFD930C7AC4C50A950E910E7716C9315_AdjustorThunk },
+	{ 0x06000257, Cinfo_set_supportsHorizontalPlaneDetection_m73E4DE44A091E9B268214E732EFA29174703EEF1_AdjustorThunk },
+	{ 0x06000258, Cinfo_get_supportsVerticalPlaneDetection_mEA496CC68069CCAD03DBC1B57F53DDA57D56A8BF_AdjustorThunk },
+	{ 0x06000259, Cinfo_set_supportsVerticalPlaneDetection_m989F6D7C88D39981D1DD342DEC887E9DB3E44AF3_AdjustorThunk },
+	{ 0x0600025A, Cinfo_get_supportsArbitraryPlaneDetection_m7E19D041E3828651646769D594B9647149B5A0F4_AdjustorThunk },
+	{ 0x0600025B, Cinfo_set_supportsArbitraryPlaneDetection_m423FEFB76FB81C496A35BB358EF04592C8EE9C10_AdjustorThunk },
+	{ 0x0600025C, Cinfo_get_supportsBoundaryVertices_m75615CA66C3E0020B75915F8426FE6B2B475BEDD_AdjustorThunk },
+	{ 0x0600025D, Cinfo_set_supportsBoundaryVertices_m96752ABD368822EE7EE393F7AE3AAE631A4C3657_AdjustorThunk },
+	{ 0x0600025E, Cinfo_get_supportsClassification_m2596CCB90308DA90A90177C91854DDFBF18F464A_AdjustorThunk },
+	{ 0x0600025F, Cinfo_Equals_m8A992E8675D4C2A5FCF7FCD7714CD1DBD734FEC0_AdjustorThunk },
+	{ 0x06000260, Cinfo_Equals_m2B155451B272C1E8954EDA6D6DFD1C151408D393_AdjustorThunk },
+	{ 0x06000261, Cinfo_GetHashCode_mC8813973E6CB5AB8D267B6D76693B6F96C006BF9_AdjustorThunk },
+	{ 0x0600026C, XRRaycast_get_trackableId_mA844E950A9862ABA13C47395893C18A55C9117AB_AdjustorThunk },
+	{ 0x0600026D, XRRaycast_get_pose_mADE80A4AABEFCCCB8297186D7E836EAE5B730F73_AdjustorThunk },
+	{ 0x0600026E, XRRaycast_get_trackingState_mDBA1DEB482B9346E44263E8B2201C1D8AF919B09_AdjustorThunk },
+	{ 0x0600026F, XRRaycast_get_nativePtr_m79D980249D35343744B394D7238F8A8FB943D484_AdjustorThunk },
+	{ 0x06000270, XRRaycast_get_distance_m0B11F8743558DCA40C4E724ECAB8E4DD5ECFFD2B_AdjustorThunk },
+	{ 0x06000271, XRRaycast_get_hitTrackableId_m54245AC20302081DF8658019AA0261DEE1E7D6FE_AdjustorThunk },
+	{ 0x06000272, XRRaycast__ctor_m0ACF53702D817AC34FD8C21F2C01EF7A8F592F9D_AdjustorThunk },
+	{ 0x06000273, XRRaycast_GetHashCode_m94E4A6BDC4CD5E875F40777E273D1E9CD37D54A6_AdjustorThunk },
+	{ 0x06000274, XRRaycast_Equals_m7F141CB415FF28341035CBD2B32037DC80469575_AdjustorThunk },
+	{ 0x06000275, XRRaycast_Equals_m2A00EBA5AD411F5BFF724BB7D60175FAE69F8D74_AdjustorThunk },
+	{ 0x06000278, XRRaycastHit_get_trackableId_m8B92C0F8977D274743D9388DEB7DCEBCC88E7325_AdjustorThunk },
+	{ 0x06000279, XRRaycastHit_get_pose_m3B8D69B763A39178CB583948B4E08255FE9A633E_AdjustorThunk },
+	{ 0x0600027A, XRRaycastHit_get_distance_m7098B7C90D22697CA37FBBDF50A4109AD055CA80_AdjustorThunk },
+	{ 0x0600027B, XRRaycastHit_get_hitType_m30A8013E847E6B2B70A9511B522099C03102E933_AdjustorThunk },
+	{ 0x0600027C, XRRaycastHit__ctor_mEFB9D7632D78C282C02A913F1E4A2F7866C6B641_AdjustorThunk },
+	{ 0x0600027D, XRRaycastHit_GetHashCode_m7C9DBAE43B929D3D4BBFF37E15E4E01143BC4A6B_AdjustorThunk },
+	{ 0x0600027E, XRRaycastHit_Equals_m319801A0EFB8A841B3B7E6197BB612780698759A_AdjustorThunk },
+	{ 0x0600027F, XRRaycastHit_Equals_mE45E36906807C4F3C5E28C1F54228142D444DA0A_AdjustorThunk },
+	{ 0x0600029A, Cinfo_get_id_m14E2737CF1E90C961F8D5B282C17E125018668E0_AdjustorThunk },
+	{ 0x0600029B, Cinfo_set_id_m962E07A26F49D8C32DAEFEC4F9E0F79EBC128533_AdjustorThunk },
+	{ 0x0600029C, Cinfo_get_providerType_mB4A72CE35BDA5CCC57B2CCC3E1D88672D9E59021_AdjustorThunk },
+	{ 0x0600029D, Cinfo_set_providerType_m5D183591B4A3ECA1EC2AA9015C02DCD1EB1F076F_AdjustorThunk },
+	{ 0x0600029E, Cinfo_get_subsystemTypeOverride_m473983CC8B06F42BC47E92AA261EC2CCBEBFC292_AdjustorThunk },
+	{ 0x0600029F, Cinfo_set_subsystemTypeOverride_m20C9DAD8677611ACD22689DA249911EEDE46EBF7_AdjustorThunk },
+	{ 0x060002A0, Cinfo_get_supportsViewportBasedRaycast_mBAE62868186C81B758E7B9B87F3C67F6C1586700_AdjustorThunk },
+	{ 0x060002A1, Cinfo_set_supportsViewportBasedRaycast_mC7DB604D2E288A145177EC66F8C1DAA50F38693F_AdjustorThunk },
+	{ 0x060002A2, Cinfo_get_supportsWorldBasedRaycast_m6D9743F420975015239E33D6641CA95A092D501D_AdjustorThunk },
+	{ 0x060002A3, Cinfo_set_supportsWorldBasedRaycast_m05D5BC11896AED796A6E237BBB98FA4EF3CF17A4_AdjustorThunk },
+	{ 0x060002A4, Cinfo_get_supportedTrackableTypes_mA59CFA06B5968E2DF45075C6C40E0A776CC19488_AdjustorThunk },
+	{ 0x060002A5, Cinfo_set_supportedTrackableTypes_m319BC9C9EB554C35CD40B791917A603D63BEEE0A_AdjustorThunk },
+	{ 0x060002A6, Cinfo_get_supportsTrackedRaycasts_mF9B448767ADE954E8357D686935ACCF3208DB1B8_AdjustorThunk },
+	{ 0x060002A7, Cinfo_set_supportsTrackedRaycasts_m7E65DAEB9ED0CB4C4C83DB751C1547145949AA41_AdjustorThunk },
+	{ 0x060002A8, Cinfo_GetHashCode_m6CC66C9C4BA7904DF1E9E9D7A3C74DC8D6A6C1BA_AdjustorThunk },
+	{ 0x060002A9, Cinfo_Equals_m4D9FFB9CFA4DF03E9AF2763D3E91926896FCD64D_AdjustorThunk },
+	{ 0x060002AA, Cinfo_ToString_m3022468C4555B097321DCDB08B4079DA430EBB3A_AdjustorThunk },
+	{ 0x060002AB, Cinfo_Equals_mD2E403B4E791DCE658297F8CA484149EB2D5F5B8_AdjustorThunk },
+	{ 0x060002AC, ScopedProfiler__ctor_m652B5689DE1A3C3EF7D12801DA27FA3B40E4412F_AdjustorThunk },
+	{ 0x060002AD, ScopedProfiler_Dispose_m7B646405B4E52CC4677329D3B860BE9C17A9DAC4_AdjustorThunk },
+	{ 0x060002E3, Cinfo_get_supportsInstall_mEEEDF86E5DE1B7515989BAECAF2F1714A327B720_AdjustorThunk },
+	{ 0x060002E4, Cinfo_set_supportsInstall_mA4CF39BDB54C42BC8CBD401F6A77353B59EB074F_AdjustorThunk },
+	{ 0x060002E5, Cinfo_get_supportsMatchFrameRate_mD86213A3EA6096133BF355DDDC55823027B48B7C_AdjustorThunk },
+	{ 0x060002E6, Cinfo_set_supportsMatchFrameRate_mC501E193696EC21EF655C7B789CABFE2D7D2B3E4_AdjustorThunk },
+	{ 0x060002E7, Cinfo_get_id_m20097DC1BBE19C329FD6F99312B6B5CD14678921_AdjustorThunk },
+	{ 0x060002E8, Cinfo_set_id_m7ABF4746E3D8D5C9F5E845638AB861FFBF665594_AdjustorThunk },
+	{ 0x060002E9, Cinfo_get_providerType_m89ED3FB1640690CFD1735E14FB7834A2BF9203EC_AdjustorThunk },
+	{ 0x060002EA, Cinfo_set_providerType_m2B27139CECCAF21A444D7891124893D11B7B6484_AdjustorThunk },
+	{ 0x060002EB, Cinfo_get_subsystemTypeOverride_m5A1888DCB068C90C7C5197246602893767C5A2B7_AdjustorThunk },
+	{ 0x060002EC, Cinfo_set_subsystemTypeOverride_m5DD40EFEE5ADFC4A6624E1EF7345F63D66027423_AdjustorThunk },
+	{ 0x060002ED, Cinfo_GetHashCode_m2D7B3F90910D284E6D8696F3E187E61436768107_AdjustorThunk },
+	{ 0x060002EE, Cinfo_Equals_m0C051CCCCA3A44F0C851768FE1CDB49DAC6D82B6_AdjustorThunk },
+	{ 0x060002EF, Cinfo_Equals_m053CC1A9E8D4DBF1FAFACF66083B615EF36CA572_AdjustorThunk },
+	{ 0x060002F0, XRSessionUpdateParams_get_screenOrientation_m5BD0BD187D579592C71665C78BB09685F08BB23C_AdjustorThunk },
+	{ 0x060002F1, XRSessionUpdateParams_set_screenOrientation_m95E8C1C9AEEFCD0577AE4605645FA8CD8F1D6B9B_AdjustorThunk },
+	{ 0x060002F2, XRSessionUpdateParams_get_screenDimensions_mED2BC29E3B820C5CF96ED275DFA172B23EA52119_AdjustorThunk },
+	{ 0x060002F3, XRSessionUpdateParams_set_screenDimensions_mC99924339E008CEFCF202EC394463F00DF0DA4B3_AdjustorThunk },
+	{ 0x060002F4, XRSessionUpdateParams_GetHashCode_m735A861B2C2718DBF5588467EC76FC6EC77EFE8D_AdjustorThunk },
+	{ 0x060002F5, XRSessionUpdateParams_Equals_mE2FA6A03BEBC662F543FA73D25561369FAEE7EAF_AdjustorThunk },
+	{ 0x060002F6, XRSessionUpdateParams_ToString_m82D102D9405D9B5FCA96E55074C982F225287D80_AdjustorThunk },
+	{ 0x060002F7, XRSessionUpdateParams_Equals_mEC4D21B1DFB2DB2327FCE21B43C144DD2003828C_AdjustorThunk },
+	{ 0x060002F9, TrackableId__ctor_mB12C56ADDEFA44578A429DDA57A6C78B833B41F5_AdjustorThunk },
+	{ 0x060002FA, TrackableId_ToString_m4BE1AD91726751D994E6FB864B231BE5D7D3F85F_AdjustorThunk },
+	{ 0x060002FB, TrackableId_GetHashCode_m6150BF091C3C17A84021CC18B443D5C297F89537_AdjustorThunk },
+	{ 0x060002FC, TrackableId_Equals_m67C98169A04DB96CCEBC08A05B3FF9544B52C3E5_AdjustorThunk },
+	{ 0x060002FD, TrackableId_Equals_m7263BB158392C4F1B57BEE16D4F1FBBCF01E4A6E_AdjustorThunk },
+	{ 0x06000312, XRTextureDescriptor_get_nativeTexture_m1E27C0E1DC11DDC6139178509EE91B8DF54DBAD4_AdjustorThunk },
+	{ 0x06000313, XRTextureDescriptor_get_width_m570472F03994BC63F21751414105A2E0C112DBF2_AdjustorThunk },
+	{ 0x06000314, XRTextureDescriptor_get_height_mC0B37241C24FA883E2594B9411080EDF654E3E01_AdjustorThunk },
+	{ 0x06000315, XRTextureDescriptor_get_mipmapCount_m4B2ED0D6EBE06AD86E356203B4AB5DE3807C1D31_AdjustorThunk },
+	{ 0x06000316, XRTextureDescriptor_get_format_mA745AA87046D4FE4846C11B8285B980FF6DDDD1A_AdjustorThunk },
+	{ 0x06000317, XRTextureDescriptor_get_propertyNameId_mF5A620F0DAEE746BDD293DB7F02909FB5404DCC1_AdjustorThunk },
+	{ 0x06000318, XRTextureDescriptor_get_valid_mBEE2CC268CC8773618BAB7794118746E235A6761_AdjustorThunk },
+	{ 0x06000319, XRTextureDescriptor_get_depth_m5885EBF7D767C918B1483D63D1B11EE60D939E7D_AdjustorThunk },
+	{ 0x0600031A, XRTextureDescriptor_get_dimension_mAEB2447102404A845F9B20317A2AB82B956E4A12_AdjustorThunk },
+	{ 0x0600031B, XRTextureDescriptor_hasIdenticalTextureMetadata_mB4DA1A4CFF4ABB66F8FF3AF1F310E60BA1B3F872_AdjustorThunk },
+	{ 0x0600031C, XRTextureDescriptor_Reset_m1BE8024830BA7AFB94AAD01731FDB449DD12A01F_AdjustorThunk },
+	{ 0x0600031D, XRTextureDescriptor_Equals_m4931F85C225CAC63EC71FBCE246204E244B6CA2B_AdjustorThunk },
+	{ 0x0600031E, XRTextureDescriptor_Equals_m42127F01DF3CDEA1F38CF07E6057E8AD9E6F4570_AdjustorThunk },
+	{ 0x0600031F, XRTextureDescriptor_GetHashCode_mFEB456F0A0985232D0E342B8F10669149F190012_AdjustorThunk },
+	{ 0x06000320, XRTextureDescriptor_ToString_m452F36D253986001921C5F627E67E2452D685493_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[794] = 
+static const int32_t s_InvokerIndices[800] = 
 {
-	11797,
-	7718,
-	7610,
-	7560,
-	7562,
-	7550,
-	7560,
-	4643,
-	4481,
-	11792,
-	7744,
-	3954,
-	2264,
-	1494,
-	4599,
+	12854,
+	8443,
+	8331,
+	8277,
+	8279,
+	8260,
+	8277,
+	5001,
+	4835,
+	12849,
+	8471,
+	4278,
+	2408,
+	1593,
+	4956,
 	0,
-	2264,
-	1494,
-	4599,
-	7744,
-	6109,
-	11571,
-	6498,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7560,
-	4481,
-	4755,
-	7560,
-	7560,
-	7340,
-	7560,
-	7598,
-	7560,
-	4481,
-	4644,
-	10135,
-	7561,
-	7662,
-	7662,
-	7497,
-	7590,
-	7590,
-	7662,
-	7520,
-	7662,
-	7662,
-	7497,
-	7735,
-	7663,
-	7790,
-	7662,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	7493,
-	4645,
-	4481,
-	7560,
-	7598,
-	7733,
-	7733,
-	4646,
-	4481,
-	7560,
-	7598,
-	6273,
-	6273,
-	6273,
-	6273,
-	6177,
-	4647,
-	4481,
-	7560,
-	7598,
-	7744,
-	7729,
-	7729,
-	6333,
-	7493,
-	7493,
-	6109,
-	7729,
-	7729,
-	6333,
-	3850,
-	7598,
-	6177,
-	4335,
-	3847,
-	7366,
-	5981,
-	7493,
-	2357,
-	7493,
-	2911,
-	4335,
-	11032,
-	7598,
-	7598,
-	7493,
-	7493,
-	7729,
-	7729,
-	6333,
-	7744,
-	7744,
-	7744,
-	2357,
-	7493,
-	7493,
-	6109,
-	7729,
-	7729,
-	6333,
-	4335,
-	2042,
-	7366,
-	5981,
-	2049,
-	2911,
-	4335,
-	5501,
-	6177,
-	7744,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	4648,
-	4481,
-	7560,
-	6384,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
+	2408,
+	1593,
+	4956,
+	8471,
+	6633,
+	12588,
+	7066,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8277,
+	4835,
+	5140,
+	8277,
+	8277,
+	8031,
+	8277,
+	8318,
+	8277,
+	4835,
+	5002,
+	11059,
+	8278,
+	8385,
+	8385,
+	8205,
+	8308,
+	8308,
+	8385,
+	8228,
+	8385,
+	8385,
+	8205,
+	8462,
+	8386,
+	8518,
+	8385,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	8201,
+	5003,
+	4835,
+	8277,
+	8318,
+	8460,
+	8460,
+	5004,
+	4835,
+	8277,
+	8318,
+	6810,
+	6810,
+	6810,
+	6810,
+	6709,
+	5005,
+	4835,
+	8277,
+	8318,
+	8471,
+	8455,
+	8455,
+	6871,
+	8201,
+	8201,
+	6633,
+	8455,
+	8455,
+	6871,
+	4166,
+	8318,
+	6709,
+	4680,
+	4163,
+	8057,
+	6497,
+	8201,
+	2505,
+	8201,
+	3124,
+	4680,
+	12012,
+	8318,
+	8318,
+	8201,
+	8201,
+	8455,
+	8455,
+	6871,
+	8471,
+	8471,
+	8471,
+	2505,
+	8201,
+	8201,
+	6633,
+	8455,
+	8455,
+	6871,
+	4680,
+	2165,
+	8057,
+	6497,
+	2172,
+	3124,
+	4680,
+	5974,
+	6709,
+	8471,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	5006,
+	4835,
+	8277,
+	6923,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	12293,
+	8211,
+	6644,
+	8455,
+	6871,
+	3157,
+	8277,
+	4736,
+	4835,
+	10932,
+	0,
+	8471,
+	8279,
+	8455,
+	8277,
+	5969,
+	8318,
+	8277,
+	4737,
+	4835,
+	2591,
+	8471,
+	11044,
+	11044,
+	11427,
+	11427,
+	12528,
+	12528,
+	12528,
+	12528,
 	11297,
-	7503,
-	6120,
-	7729,
-	6333,
-	2941,
-	7560,
-	4391,
-	4481,
-	10020,
+	12130,
+	8461,
+	6876,
+	8277,
+	8277,
+	8277,
+	6709,
+	8277,
+	6709,
+	8228,
+	6663,
+	8201,
+	3836,
+	7345,
+	9403,
+	8471,
+	8471,
+	8277,
+	4835,
+	5007,
+	8318,
+	12849,
+	1521,
+	4796,
+	6709,
+	8471,
+	3792,
+	654,
+	8350,
+	8461,
+	8277,
+	8277,
+	8277,
+	5142,
+	4835,
+	8318,
+	8277,
+	6709,
+	8277,
+	6709,
+	7998,
+	6402,
+	8277,
+	4835,
+	5143,
+	8318,
+	8279,
+	8277,
+	8277,
+	8277,
+	5171,
+	4835,
+	8277,
+	8318,
+	8277,
+	8461,
+	8277,
+	8228,
+	8277,
+	5141,
+	4835,
+	8277,
+	8318,
+	4281,
+	8471,
+	8471,
+	8471,
+	8471,
 	0,
-	7744,
-	7562,
-	7729,
-	7560,
-	5499,
-	7598,
-	7560,
-	4392,
-	4481,
-	2430,
-	7744,
-	10120,
-	10120,
-	10483,
-	10483,
-	11513,
-	11513,
-	11513,
-	11513,
-	10355,
-	11142,
-	7734,
-	6337,
-	7560,
-	7560,
-	7560,
-	6177,
-	7560,
-	6177,
-	7520,
-	6139,
-	7493,
-	3548,
-	6725,
-	8587,
-	7744,
-	7744,
-	7560,
-	4481,
-	4649,
-	7598,
-	11792,
-	1430,
-	4445,
-	6177,
-	7744,
-	3508,
-	623,
-	7627,
-	7734,
-	7560,
-	7560,
-	7560,
-	4757,
-	4481,
-	7598,
-	7560,
-	6177,
-	7560,
-	6177,
-	7309,
-	5888,
-	7560,
-	4481,
-	4758,
-	7598,
-	7562,
-	7560,
-	7560,
-	7560,
-	4782,
-	4481,
-	7560,
-	7598,
-	7560,
-	7734,
-	7560,
-	7520,
-	7560,
-	4756,
-	4481,
-	7560,
-	7598,
-	3957,
-	7744,
-	7744,
-	7744,
-	7744,
+	8471,
+	7067,
+	6633,
+	6633,
+	6633,
+	12589,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8277,
+	6709,
+	5144,
+	4835,
+	8277,
+	12857,
+	8443,
+	8331,
+	8277,
+	8277,
+	5014,
+	4835,
+	12849,
+	12855,
+	8443,
+	6862,
+	8331,
+	6760,
+	8277,
+	5008,
+	4835,
+	8277,
+	8318,
+	5974,
+	12849,
+	8471,
+	4279,
+	12013,
 	0,
-	7744,
-	6499,
-	6109,
-	6109,
-	6109,
-	11572,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7560,
-	6177,
-	4759,
-	4481,
-	7560,
-	11800,
-	7718,
-	7610,
-	7560,
-	7560,
-	4655,
-	4481,
-	11792,
-	11798,
-	7718,
-	6324,
-	7610,
-	6224,
-	7560,
-	4650,
-	4481,
-	7560,
-	7598,
-	5501,
-	11792,
-	7744,
-	3955,
-	11033,
+	8471,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	5009,
+	4835,
+	8277,
+	6925,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	6633,
+	12294,
+	12856,
+	8443,
+	8331,
+	8277,
+	8279,
+	8331,
+	8331,
+	8462,
+	4835,
+	8277,
+	5010,
+	12849,
+	8471,
+	4280,
 	0,
-	7744,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	4651,
-	4481,
-	7560,
-	6386,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	6109,
-	11298,
-	11799,
-	7718,
-	7610,
-	7560,
-	7562,
-	7610,
-	7610,
-	7735,
-	4481,
-	7560,
-	4652,
-	11792,
-	7744,
-	3956,
-	0,
-	7744,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	4419,
-	4481,
-	7560,
-	6148,
-	11553,
-	10219,
-	11135,
-	9404,
-	8805,
-	8283,
-	8120,
-	8039,
-	7988,
-	7962,
-	7948,
-	11010,
-	7744,
-	7744,
-	7744,
-	3959,
+	8471,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	4764,
+	4835,
+	8277,
+	6672,
+	12569,
+	11155,
+	12123,
+	10286,
+	9639,
+	9061,
+	8885,
+	8803,
+	8751,
+	8724,
+	8710,
+	11990,
+	8471,
+	8471,
+	8471,
+	4283,
 	0,
 	0,
-	7744,
-	11573,
-	6500,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	7493,
-	6109,
-	7493,
-	6109,
-	7560,
-	4760,
-	4481,
-	11803,
-	7718,
-	7610,
-	7560,
-	7560,
-	4660,
-	4481,
-	11792,
+	8471,
+	12590,
+	7068,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	8201,
+	6633,
+	8201,
+	6633,
+	8277,
+	5145,
+	4835,
+	12860,
+	8443,
+	8331,
+	8277,
+	8277,
+	5019,
+	4835,
+	12849,
+	8318,
+	6745,
+	8318,
+	6745,
+	8471,
+	8471,
 	0,
 	0,
 	0,
-	11010,
-	11010,
-	11010,
-	7560,
-	6177,
-	7560,
-	7560,
-	6177,
-	7560,
-	7560,
-	6177,
-	7560,
-	7493,
-	6109,
-	7493,
-	7560,
-	6177,
-	7560,
-	7744,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	4335,
-	3850,
-	2911,
-	11034,
-	7560,
-	6177,
-	7560,
-	7560,
-	6177,
-	7560,
-	7560,
-	6177,
-	7560,
-	7493,
-	6109,
-	7493,
-	7560,
-	6177,
-	7560,
-	4335,
-	4335,
-	7598,
-	4335,
-	4335,
-	7598,
-	4335,
-	4335,
-	4335,
-	4335,
-	7598,
-	4335,
-	4335,
-	7598,
-	2049,
-	2911,
-	7744,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	7598,
-	7493,
-	7598,
-	7598,
-	6210,
-	7598,
-	7598,
-	6210,
-	7598,
-	7598,
-	6210,
-	4654,
-	4481,
-	7560,
-	6389,
-	7560,
-	7560,
-	7560,
-	7560,
-	7560,
-	11299,
-	11727,
+	11990,
+	11990,
+	11990,
+	8277,
+	6709,
+	8277,
+	8277,
+	6709,
+	8277,
+	8277,
+	6709,
+	8277,
+	8201,
+	6633,
+	8201,
+	8277,
+	6709,
+	8277,
+	8471,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4680,
+	4166,
+	3124,
+	12014,
+	8277,
+	6709,
+	8277,
+	8277,
+	6709,
+	8277,
+	8277,
+	6709,
+	8277,
+	8201,
+	6633,
+	8201,
+	8277,
+	6709,
+	8277,
+	4680,
+	4680,
+	8318,
+	4680,
+	4680,
+	8318,
+	4680,
+	4680,
+	4680,
+	4680,
+	8318,
+	4680,
+	4680,
+	8318,
+	2172,
+	3124,
+	8471,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	8318,
+	8201,
+	8318,
+	8318,
+	6745,
+	8318,
+	8318,
+	6745,
+	8318,
+	8318,
+	6745,
+	5013,
+	4835,
+	8277,
+	6929,
+	8277,
+	8277,
+	8277,
+	8277,
+	8277,
+	12295,
+	12774,
 	72,
-	7718,
-	7718,
-	7610,
-	7733,
-	7733,
-	7733,
-	7560,
-	7560,
-	7562,
-	7560,
-	7598,
-	4481,
-	7560,
-	4378,
-	11792,
-	7744,
-	7560,
-	6177,
-	7560,
-	3953,
-	1971,
+	8443,
+	8443,
+	8331,
+	8460,
+	8460,
+	8460,
+	8277,
+	8277,
+	8279,
+	8277,
+	8318,
+	4835,
+	8277,
+	4723,
+	12849,
+	8471,
+	8277,
+	6709,
+	8277,
+	4277,
+	2090,
 	0,
-	1971,
+	2090,
 	0,
-	7560,
-	6177,
-	7560,
-	7744,
-	6109,
-	6109,
-	6109,
-	7493,
-	6109,
-	6109,
-	11574,
-	6501,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	6109,
-	7493,
-	4761,
-	4481,
-	7560,
-	0,
-	0,
+	8277,
+	6709,
+	8277,
+	8471,
+	6633,
+	6633,
+	6633,
+	8201,
+	6633,
+	6633,
+	12591,
+	7069,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	6633,
+	8201,
+	5146,
+	4835,
+	8277,
 	0,
 	0,
 	0,
@@ -3816,157 +3838,157 @@ static const int32_t s_InvokerIndices[794] =
 	0,
 	0,
 	0,
-	11801,
-	7718,
-	7610,
-	7560,
-	7562,
-	7662,
-	7718,
-	360,
-	7560,
-	4481,
-	4656,
-	11792,
-	11802,
-	7718,
-	7610,
-	7662,
-	7560,
-	1367,
-	7560,
-	4481,
-	4657,
-	11792,
-	7744,
-	3958,
-	1504,
-	1488,
-	6324,
-	1390,
-	1391,
-	7744,
-	7744,
-	7744,
-	1504,
-	1488,
-	6324,
-	2113,
-	700,
-	701,
-	7744,
-	7493,
-	6109,
-	7493,
-	6109,
-	6177,
-	6109,
-	11575,
-	6502,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7493,
-	6109,
-	7493,
-	6109,
-	7560,
-	6177,
-	7493,
-	6109,
-	7560,
-	4481,
-	7598,
-	4762,
-	6210,
-	7744,
-	11010,
-	11010,
-	7598,
-	7598,
-	7744,
-	7744,
-	3860,
-	6393,
-	7333,
-	5946,
-	5499,
-	2940,
-	7729,
-	3837,
-	7744,
-	7744,
-	7560,
-	7729,
-	6333,
-	7729,
-	7560,
-	7493,
-	7493,
-	6109,
-	7560,
-	7744,
-	7744,
-	6393,
-	3631,
-	7729,
-	7729,
-	6333,
-	7729,
-	3837,
-	7744,
-	7744,
-	7744,
-	7744,
-	7598,
-	7598,
-	7560,
-	7560,
-	7493,
-	7493,
-	6109,
-	7560,
-	7744,
-	7493,
-	6109,
-	7493,
-	6109,
-	11576,
-	6503,
-	7493,
-	6109,
-	7493,
-	6109,
-	7598,
-	6210,
-	7598,
-	6210,
-	7598,
-	6210,
-	7560,
-	4763,
-	4481,
-	7560,
-	6177,
-	7734,
-	6337,
-	7560,
-	4481,
-	7598,
-	4658,
-	11783,
-	3615,
-	7598,
-	7560,
-	4481,
-	4599,
-	10108,
-	11792,
 	0,
 	0,
+	12858,
+	8443,
+	8331,
+	8277,
+	8279,
+	8385,
+	8443,
+	366,
+	8277,
+	4835,
+	5015,
+	12849,
+	12859,
+	8443,
+	8331,
+	8385,
+	8277,
+	1453,
+	8277,
+	4835,
+	5016,
+	12849,
+	8471,
+	4282,
+	1603,
+	1587,
+	6862,
+	1478,
+	1479,
+	8471,
+	8471,
+	8471,
+	1603,
+	1587,
+	6862,
+	2237,
+	735,
+	736,
+	8471,
+	8201,
+	6633,
+	8201,
+	6633,
+	6709,
+	6633,
+	12592,
+	7070,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8201,
+	6633,
+	8201,
+	6633,
+	8277,
+	6709,
+	8201,
+	6633,
+	8277,
+	4835,
+	8318,
+	5147,
+	6745,
+	8471,
+	11990,
+	11990,
+	8318,
+	8318,
+	8471,
+	8471,
+	4176,
+	6933,
+	8023,
+	6461,
+	5969,
+	3156,
+	8455,
+	4153,
+	8471,
+	8471,
+	8277,
+	8455,
+	6871,
+	8455,
+	8277,
+	8201,
+	8201,
+	6633,
+	8277,
+	8471,
+	8471,
+	6933,
+	3925,
+	8455,
+	8455,
+	6871,
+	8455,
+	4153,
+	8471,
+	8471,
+	8471,
+	8471,
+	8318,
+	8318,
+	8277,
+	8277,
+	8201,
+	8201,
+	6633,
+	8277,
+	8471,
+	8201,
+	6633,
+	8201,
+	6633,
+	12593,
+	7071,
+	8201,
+	6633,
+	8201,
+	6633,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8277,
+	5148,
+	4835,
+	8277,
+	6709,
+	8461,
+	6876,
+	8277,
+	4835,
+	8318,
+	5017,
+	12840,
+	3907,
+	8318,
+	8277,
+	4835,
+	4956,
+	11032,
+	12849,
 	0,
 	0,
 	0,
@@ -3983,21 +4005,23 @@ static const int32_t s_InvokerIndices[794] =
 	0,
 	0,
 	0,
-	7562,
-	7560,
-	7560,
-	7560,
-	7560,
-	7560,
-	7493,
-	7560,
-	7560,
-	4659,
-	7744,
-	4659,
-	4481,
-	7560,
-	7598,
+	0,
+	0,
+	8279,
+	8277,
+	8277,
+	8277,
+	8277,
+	8277,
+	8201,
+	8277,
+	8277,
+	5018,
+	8471,
+	5018,
+	4835,
+	8277,
+	8318,
 };
 static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[1] = 
 {
@@ -4005,15 +4029,15 @@ static const Il2CppTokenIndexMethodTuple s_reversePInvokeIndices[1] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[9] = 
 {
-	{ 0x02000052, { 11, 5 } },
-	{ 0x02000053, { 16, 3 } },
-	{ 0x02000068, { 19, 5 } },
-	{ 0x02000069, { 24, 2 } },
-	{ 0x0200006A, { 26, 14 } },
-	{ 0x060001C5, { 0, 3 } },
-	{ 0x060001C6, { 3, 2 } },
-	{ 0x060001C7, { 5, 2 } },
-	{ 0x0600023B, { 7, 4 } },
+	{ 0x02000053, { 11, 5 } },
+	{ 0x02000054, { 16, 3 } },
+	{ 0x02000069, { 19, 5 } },
+	{ 0x0200006A, { 24, 2 } },
+	{ 0x0200006B, { 26, 14 } },
+	{ 0x060001CB, { 0, 3 } },
+	{ 0x060001CC, { 3, 2 } },
+	{ 0x060001CD, { 5, 2 } },
+	{ 0x06000241, { 7, 4 } },
 };
 extern const uint32_t g_rgctx_NativeCopyUtility_CreateArrayFilledWithValue_TisT_t46F0637140E4FF25028DE7404F0247222D7797BE_mD1585AC9C86748B292EEC47448DC0C741A8909A8;
 extern const uint32_t g_rgctx_NativeArrayUnsafeUtility_GetUnsafePtr_TisT_t46F0637140E4FF25028DE7404F0247222D7797BE_m9E5CE904967575F9F4A704ACECB92B458D185431;
@@ -4103,7 +4127,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_XR_ARSubsystems_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_XR_ARSubsystems_CodeGenModule = 
 {
 	"Unity.XR.ARSubsystems.dll",
-	794,
+	800,
 	s_methodPointers,
 	420,
 	s_adjustorThunks,

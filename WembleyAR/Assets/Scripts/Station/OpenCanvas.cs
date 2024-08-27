@@ -22,37 +22,45 @@ public class OpenCanvas : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Kiểm tra cho sự kiện chạm hoặc nhấn chuột
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // Xử lý raycast để phát hiện chạm vào đối tượng
+            Ray ray;
+            if (Input.touchCount > 0)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            }
+            else
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            }
+
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName))
             {
                 if (isShowCanvas)
                 {
                     onCloseCanvas();
-                    isShowCanvas = false;
                     if (isOpen_MC_Error_CN_Cavas)
                     {
                         buttonCanvas.SetActive(true);
                     }
+                    isShowCanvas = false;
+
                 }
                 else
                 {
                     onOpenCanvas();
-                    isShowCanvas = true;
                     if (isOpen_MC_Error_CN_Cavas)
                     {
-
                         buttonCanvas.SetActive(false);
-
                     }
+                    isShowCanvas = true;
                 }
 
             }
-
         }
-
     }
 
     void onOpenCanvas()
@@ -60,15 +68,11 @@ public class OpenCanvas : MonoBehaviour
         targetCanvas.SetActive(true);
         arrowClose.SetActive(true);
         arrowOpen.SetActive(false);
-
-
     }
     void onCloseCanvas()
     {
         targetCanvas.SetActive(false);
-        arrowClose.SetActive(false);
         arrowOpen.SetActive(true);
-
-
+        arrowClose.SetActive(false);
     }
 }

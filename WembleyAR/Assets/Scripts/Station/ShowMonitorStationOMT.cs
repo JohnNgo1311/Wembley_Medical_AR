@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
@@ -10,41 +8,61 @@ public class ShowMonitorStationOMT : MonoBehaviour
     public string tagName;
     public Camera ARCamera;
 
+    private VuforiaBehaviour vuforiaBehaviour;
+
     void Start()
     {
         MonitorStation.SetActive(false);
+        vuforiaBehaviour = ARCamera.GetComponent<VuforiaBehaviour>();
     }
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Check for mouse or touch input
+        if (IsInputTriggered(out Ray ray, out RaycastHit hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName))
+            if (hit.collider.CompareTag(tagName))
             {
                 ReturnCanvas();
             }
         }
     }
+
     public void OnShowingMonitorStation()
     {
         stationCanvas.SetActive(false);
         MonitorStation.SetActive(true);
-        ARCamera.GetComponent<VuforiaBehaviour>().enabled = false;
+        vuforiaBehaviour.enabled = false;
         // arrowClose.SetActive(false);
     }
+
     private void ReturnCanvas()
     {
         MonitorStation.SetActive(false);
         stationCanvas.SetActive(true);
-        ARCamera.GetComponent<VuforiaBehaviour>().enabled = true;
+        vuforiaBehaviour.enabled = true;
         // arrowClose.SetActive(true);
     }
 
+    private bool IsInputTriggered(out Ray ray, out RaycastHit hit)
+    {
+        ray = default;
+        hit = default;
 
+        if (Input.touchCount > 0)
+        {
+            // Handle touch input
+            Touch touch = Input.GetTouch(0);
+            ray = Camera.main.ScreenPointToRay(touch.position);
+            return Physics.Raycast(ray, out hit);
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            // Handle mouse input
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            return Physics.Raycast(ray, out hit);
+        }
 
-
-
-
+        return false;
+    }
 }

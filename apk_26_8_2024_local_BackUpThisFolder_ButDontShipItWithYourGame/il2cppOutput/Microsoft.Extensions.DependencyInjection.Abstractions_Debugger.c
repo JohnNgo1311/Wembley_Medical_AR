@@ -224,9 +224,9 @@ Il2CppSequencePoint g_sequencePointsMicrosoft_Extensions_DependencyInjection_Abs
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 65571, 18323, 30, 0, -1 },
-{ 65621, -1, 53, -1, -1 },
-{ 65709, -1, 179, -1, -1 },
+{ 69515, 19337, 30, 0, -1 },
+{ 69565, -1, 53, -1, -1 },
+{ 69653, -1, 179, -1, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

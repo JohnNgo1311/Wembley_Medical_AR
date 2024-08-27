@@ -274,11 +274,11 @@ Il2CppSequencePoint g_sequencePointsSystem_Threading_Channels[1] = { { 0, 0, 0, 
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 64731, 18323, 30, 0, -1 },
-{ 64856, -1, 84, -1, -1 },
-{ 64859, 15014, 157, 0, -1 },
-{ 64871, 15014, 53, 0, -1 },
-{ 64875, 15014, 160, 0, -1 },
+{ 68675, 19337, 30, 0, -1 },
+{ 68800, -1, 84, -1, -1 },
+{ 68803, 15794, 157, 0, -1 },
+{ 68815, 15794, 53, 0, -1 },
+{ 68819, 15794, 160, 0, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

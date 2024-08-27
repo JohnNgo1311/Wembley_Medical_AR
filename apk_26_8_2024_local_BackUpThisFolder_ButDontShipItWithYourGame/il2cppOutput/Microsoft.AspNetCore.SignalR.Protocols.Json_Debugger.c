@@ -142,13 +142,13 @@ Il2CppSequencePoint g_sequencePointsMicrosoft_AspNetCore_SignalR_Protocols_Json[
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 67399, 17304, 1317, 0, -1 },
-{ 67399, 15014, 662, 1, 0 },
-{ 67399, 15014, 815, 2, 0 },
-{ 67399, 15014, 1031, 3, 0 },
-{ 67399, 15014, 1104, 4, 0 },
-{ 67399, 17304, 1177, 5, 0 },
-{ 67419, 15014, 61, 0, -1 },
+{ 71343, 18302, 1317, 0, -1 },
+{ 71343, 15794, 662, 1, 0 },
+{ 71343, 15794, 815, 2, 0 },
+{ 71343, 15794, 1031, 3, 0 },
+{ 71343, 15794, 1104, 4, 0 },
+{ 71343, 18302, 1177, 5, 0 },
+{ 71363, 15794, 61, 0, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };
