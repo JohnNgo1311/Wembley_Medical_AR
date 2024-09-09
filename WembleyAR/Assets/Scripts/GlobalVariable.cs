@@ -10,11 +10,11 @@ public class GlobalVariable : MonoBehaviour
 {
     public static HubConnection hubConnection;
     //public static string url = "https://wembleymedicalscada1.azurewebsites.net/NotificationHub"; // chung server
-    public static string url = "http://10.0.70.45:81/NotificationHub"; // chung 
-    //! SignalR nên phải có NotificationHub
+    public static string url = "https://wembleyscada79-ekfcezfabncfcdce.koreacentral-01.azurewebsites.net/NotificationHub"; // chung 
+    /* https://wembleyscada79-ekfcezfabncfcdce.koreacentral-01.azurewebsites.net                                                                                                             //! SignalR nên phải có NotificationHub
+     http://10.0.70.45:81*/
 
-
-    //! OMT
+    //! MNC
     public static string basedTopic = "WembleyMedical/HCM/IE-F2-HCA01";
     //? Lưu ý chỗ này bao nhiêu ký tự ==> VCL quan trọng
     public static List<string> initialTopic = new List<string> {
@@ -46,7 +46,7 @@ public class GlobalVariable : MonoBehaviour
         $"{basedTopicOMT}/IE-F3-BLO06/Parameter",                //? S1 Production Data,S1 Error, S1 End Error
         $"{basedTopicOMT}/IE-F3-BLO06/Setting/Setting",          //? S1 Time Setting
         $"{basedTopicOMT}/IE-F3-BLO06/Setting/StationStatus",    //? S1 Enable
-        $"{basedTopicOMT}/IE-F3-BLO06/ChemicalDetection" ,
+        //$"{basedTopicOMT}/IE-F3-BLO06/ChemicalDetection" ,
         //! S2
         $"{basedTopicOMT}/IE-F3-BLO01/Status/isConnectPLC",      //? S2 Connection PLC
         $"{basedTopicOMT}/IE-F3-BLO01/Status/machineStatus",     //? S2 Machine Status
@@ -55,18 +55,16 @@ public class GlobalVariable : MonoBehaviour
         $"{basedTopicOMT}/IE-F3-BLO01/Setting/StationStatus",    //? S2 Enable
         $"{basedTopicOMT}/IE-F3-BLO01/Extension",                //? S2 I/O
         //! S3
-        $"{basedTopicOMT}/IE-F3-BLO02/Status/isConnectPLC",      //? S3Connection PLC
-        $"{basedTopicOMT}/IE-F3-BLO02/Status/machineStatus",     //? S3Machine Status
-        $"{basedTopicOMT}/IE-F3-BLO02/Parameter",                //? S3Production Data,S3Error, S3End Error
-        $"{basedTopicOMT}/IE-F3-BLO02/Setting/Setting",          //? S3Time Setting
-        $"{basedTopicOMT}/IE-F3-BLO02/Setting/StationStatus",    //? S3Enable
-        $"{basedTopicOMT}/IE-F3-BLO02/Extension",                //? S3I/O
+        $"{basedTopicOMT}/IE-F3-BLO02/Status/isConnectPLC",      //? S3 Connection PLC
+        $"{basedTopicOMT}/IE-F3-BLO02/Status/machineStatus",     //? S3 Machine Status
+        $"{basedTopicOMT}/IE-F3-BLO02/Parameter",                //? S3 Production Data,S3Error, S3End Error
+        $"{basedTopicOMT}/IE-F3-BLO02/Setting/Setting",          //? S3 Time Setting
+        $"{basedTopicOMT}/IE-F3-BLO02/Setting/StationStatus",    //? S3 Enable
+        $"{basedTopicOMT}/IE-F3-BLO02/Extension",                //? S3 I/O
     };
     public static bool networkConnected = false;
-    public static bool serverConnected = false;
     public static bool isConnecting = false;
-    public static bool errorServerConnected = false;
-
+    public static bool serverConnected = false;
     public static bool isInternetConnected = false;
 
 
@@ -137,9 +135,9 @@ public class GlobalVariable : MonoBehaviour
     public static string operationTime = "00:00:00";
     public static double effective = 0.0;
     public static double oEEValue = 0.0;
-    public static double P = 0.0;
-    public static double A = 0.0;
-    public static double Q = 0.0;
+    public static double PValue = 0.0;
+    public static double AValue = 0.0;
+    public static double QValue = 0.0;
 
     public static int[] goodProductCountTR = new int[4];
     public static int[] badProductCountTR = new int[4];

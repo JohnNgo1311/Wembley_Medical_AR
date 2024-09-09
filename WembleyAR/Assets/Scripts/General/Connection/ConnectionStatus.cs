@@ -27,7 +27,7 @@ public class ConnectionStatus : MonoBehaviour
                 }
                 else
                 {
-                    if (GlobalVariable.errorServerConnected)
+                    if (!GlobalVariable.serverConnected)
                     {
                         connectionStatusText.text = "Xảy ra lỗi kết nối với server";
                         connectionStatusText.color = Color.red;
@@ -58,7 +58,8 @@ public class ConnectionStatus : MonoBehaviour
                 {
                     Debug.Log("There was an error opening the connection:" + task.Exception.GetBaseException());
                     GlobalVariable.isConnecting = false;
-                    GlobalVariable.errorServerConnected = true;
+                    GlobalVariable.serverConnected = false;
+
                 }
                 if (task.IsCompletedSuccessfully)
                 {

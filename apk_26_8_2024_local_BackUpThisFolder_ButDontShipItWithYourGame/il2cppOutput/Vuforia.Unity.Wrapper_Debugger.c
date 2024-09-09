@@ -1044,7 +1044,7 @@ Il2CppSequencePoint g_sequencePointsVuforia_Unity_Wrapper[1] = { { 0, 0, 0, 0, 0
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 61501, 15345, 31, 0, -1 },
+{ 61532, 15346, 31, 0, -1 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

@@ -9,12 +9,12 @@ using System;
 public class OperationTimeScript : MonoBehaviour
 {
     public static List<string> url = new List<string>() {
-       /* "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
-        "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO01",
-        "https://wembleymedicalscada1.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",*/
-        "http://10.0.70.45:81/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
+       "https://wembleyscada79-ekfcezfabncfcdce.koreacentral-01.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
+        "https://wembleyscada79-ekfcezfabncfcdce.koreacentral-01.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO01",
+        "https://wembleyscada79-ekfcezfabncfcdce.koreacentral-01.azurewebsites.net/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",
+       /* "http://10.0.70.45:81/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO06",
         "http://10.0.70.45:81/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO01",
-        "http://10.0.70.45:81/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",
+        "http://10.0.70.45:81/api/MachineStatuses/LatestOnOff?StationId=IE-F3-BLO02",*/
     };
 
     public TMP_Text operationTimeText;

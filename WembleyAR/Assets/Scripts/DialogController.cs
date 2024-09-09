@@ -13,6 +13,7 @@ public class DialogController : MonoBehaviour
     private Image frameDialogImage;
     [SerializeField] private bool isInitialize = false;
 
+
     void Awake()
     {
         frameDialogImage = dialogModel.frameDialog.GetComponent<Image>();
@@ -27,9 +28,9 @@ public class DialogController : MonoBehaviour
                 OnClickShowDialog();
                 GlobalVariable.loginSuccess = true;
             }
-
         }
     }
+
 
     private IEnumerator ShowDialogRoutine()
     {

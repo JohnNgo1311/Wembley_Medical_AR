@@ -11,6 +11,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using System.Xml.Serialization;
 using System.Threading;
+using System.Net.Http;
 
 public class SignalRDataOMT : MonoBehaviour
 {
@@ -52,9 +53,10 @@ public class SignalRDataOMT : MonoBehaviour
     public GameObject[] connectionStatusFrameS3;
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
+    public Slider[] Sliders;
     private Dictionary<string, Action<DataSignalR>> dataHandlers;
     private static HashSet<string> processedStrings = new HashSet<string>();
-
+    // private bool isWantReconnect = false;
     Dictionary<string, DateTime> elementWithTimestamp = new Dictionary<string, DateTime>();
 
     //! Hàm Start chỉ chạy 1 lần duy nhất khi Run Scence 
@@ -68,10 +70,27 @@ public class SignalRDataOMT : MonoBehaviour
 
     void OnDestroy() //! OnDestroy được gọi khi instance bị destroy hoặc thoát scene
     {
+        //   isWantReconnect = false;
+        GlobalVariable.serverConnected = false;
+        GlobalVariable.isConnecting = false;
+        GlobalVariable.isInternetConnected = false;
         if (GlobalVariable.hubConnection != null)
         {
             GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", new List<string>() { });
-            GlobalVariable.hubConnection.StopAsync();
+            // Đảm bảo kết nối được ngắt khi đối tượng bị hủy
+            GlobalVariable.hubConnection.StopAsync().ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("There was an error opening the connection:" + task.Exception.GetBaseException());
+                }
+                else
+                {
+                    Debug.Log("Connection closed successfully.");
+                }
+            });
+            GlobalVariable.hubConnection = null;
+
         }
     }
 
@@ -87,11 +106,10 @@ public class SignalRDataOMT : MonoBehaviour
     }
     private void Update()
     {
+        if (GlobalVariable.hubConnection != null) Debug.Log("Connection State: " + GlobalVariable.hubConnection.State);
         string strSaved = "";
 
-        if (GlobalVariable.hubConnection != null)
-        {
-            GlobalVariable.hubConnection.On<string>("OnTagChanged", (str) =>
+        GlobalVariable.hubConnection?.On<string>("OnTagChanged", (str) =>
                                 {
                                     /* string lastCharacter = str.Substring(str.Length - 14); // Tách phần tử cuối cùng của chuỗi
 
@@ -115,7 +133,6 @@ public class SignalRDataOMT : MonoBehaviour
                                     }
                                 }
                                 );
-        }
 
         // Xóa phần tử quá hạn
         foreach (var item in elementWithTimestamp.Keys.ToList())
@@ -128,110 +145,128 @@ public class SignalRDataOMT : MonoBehaviour
             }
         }
     }
-    private void StartConnectWebApi()
+
+
+    private async void StartConnectWebApi()
     {
-        //? Kết nối với server
-        if (GlobalVariable.hubConnection == null || GlobalVariable.hubConnection.State == HubConnectionState.Disconnected)
-        {
-            GlobalVariable.hubConnection = new HubConnectionBuilder().WithUrl(GlobalVariable.url).WithAutomaticReconnect().Build();
-            Debug.Log("CreateHubConnection");
-            //  GlobalVariable.isConnecting = true;
-        }
-        //? Kết nối thành công
+        // Bắt đầu kết nối nếu chưa kết nối
+
+        GlobalVariable.hubConnection = new HubConnectionBuilder()
+         .WithUrl(GlobalVariable.url)
+         .WithAutomaticReconnect()
+         .Build();
+        Debug.Log("GlobalVariable.hubConnection created.");
+        RegisterEvents();
+        await StartConnectionAsync();
+
+
+        // Đăng ký các sự kiện kết nối
         GlobalVariable.hubConnection.On<string>("LogInfoMessage", (str) =>
         {
             if (str.Contains("Connected"))
             {
-                Debug.Log("Connected");
+                Debug.Log("Connected to server.");
                 GlobalVariable.isConnecting = false;
                 GlobalVariable.serverConnected = true;
-                GlobalVariable.errorServerConnected = false;
             }
         });
 
-
-        GlobalVariable.hubConnection.Closed += (error) =>
+        // Bắt đầu kết nối nếu chưa kết nối
+        /* if (GlobalVariable.hubConnection != null && GlobalVariable.hubConnection.State == GlobalVariable.hubConnectionState.Disconnected)
          {
-             Debug.Log($"Connection closed: {error?.Message}");
-             GlobalVariable.serverConnected = false;
-             GlobalVariable.errorServerConnected = true;
-             GlobalVariable.isConnecting = false;
-             TryReconnectAsync();
-             return Task.CompletedTask;
-         };
-        GlobalVariable.hubConnection.Reconnecting += (error) =>
+             await TryReconnectAsync();
+         }*/
+    }
+
+
+    private void RegisterEvents()
+    {
+        GlobalVariable.hubConnection.Reconnected += async (connectionId) =>
         {
-            Debug.Log($"Reconnecting: {error?.Message}");
-            GlobalVariable.isConnecting = true;
-            GlobalVariable.serverConnected = false;
-            GlobalVariable.errorServerConnected = false;
-            return Task.CompletedTask;
-        };
-        GlobalVariable.hubConnection.Reconnected += (connectionId) =>
-        {
-            Debug.Log($"Reconnected: {connectionId}");
-            GlobalVariable.isConnecting = false;
-            GlobalVariable.errorServerConnected = false;
-            GlobalVariable.serverConnected = true;
-            // Gọi hàm tải lại dữ liệu khi kết nối lại thành công
-            // LoadInitialData().Wait();
-            // TryReconnectAsync();
-            return Task.CompletedTask;
+            Debug.Log($"Reconnected successfully: {connectionId}");
+            await Task.CompletedTask;
         };
 
-        // Thử khởi động kết nối
+        GlobalVariable.hubConnection.Closed += async (error) =>
+        {
+            //Debug.LogError($"Connection closed: {error?.Message}");
+            await StartConnectionAsync(); // Thử kết nối lại
+        };
+
+        GlobalVariable.hubConnection.Reconnecting += async (error) =>
+        {
+            Debug.LogWarning($"Reconnecting: {error?.Message}");
+            await Task.CompletedTask;
+        };
+    }
+
+    private async Task StartConnectionAsync()
+    {
+
         try
         {
-            while (!GlobalVariable.isInternetConnected)
-            {
-                IsInternetAvailable();
-            }
-            if (GlobalVariable.isInternetConnected)
-            {
-                GlobalVariable.hubConnection.StartAsync().ContinueWith(task =>
-                                        {
-                                            if (task.IsFaulted)
-                                            {
-                                                Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
-                                                GlobalVariable.errorServerConnected = true;
-                                                GlobalVariable.serverConnected = false;
-                                                GlobalVariable.isConnecting = false;
-                                            }
-                                            else if (task.IsCompletedSuccessfully)
-                                            {
-                                            }
-                                        });
-            }
+            Debug.Log("Attempting to start connection...");
+            await GlobalVariable.hubConnection.StartAsync();
+            Debug.Log("Connection started successfully.");
         }
-        catch (Exception e)
+        catch (HttpRequestException httpEx)
         {
-            Debug.Log("Error: " + e.Message);
-            throw;
+            //  Debug.LogError($"HTTP Request Error: {httpEx.Message}");
+            // Thử kết nối lại sau một khoảng thời gian
+            await Task.Delay(TimeSpan.FromSeconds(2));
+            await StartConnectionAsync();
+        }
+        catch (Exception ex)
+        {
+            if (ex.Message != "The HubConnection cannot be started if it is not in the Disconnected state")
+            {
+                // Debug.LogError($"Failed to start connection: {ex.Message}");
+                // Thử kết nối lại sau một khoảng thời gian
+                await Task.Delay(TimeSpan.FromSeconds(2));
+                await StartConnectionAsync();
+            }
+
         }
     }
-    private void TryReconnectAsync()
+
+
+
+    private async Task TryReconnectAsync()
     {
         while (!GlobalVariable.serverConnected)
         {
             if (IsInternetAvailable())
             {
-                Debug.Log("Reconnecting...");
                 try
                 {
-                    StartConnectWebApi();
+                    Debug.Log("Attempting to reconnect...");
+                    await GlobalVariable.hubConnection.StartAsync();
+                    GlobalVariable.serverConnected = true;
+                    GlobalVariable.isConnecting = false;
+                    Debug.Log("Reconnected successfully.");
                 }
                 catch (Exception ex)
                 {
                     Debug.LogError($"Failed to reconnect: {ex.Message}");
+                    // Delay before retrying
                 }
             }
             else
             {
-                Debug.Log("No internet connection. Waiting to retry...");
+                Debug.LogWarning("No internet connection. Waiting to retry...");
             }
-
         }
     }
+
+    private bool IsInternetAvailable()
+    {
+        bool isConnected = Application.internetReachability != NetworkReachability.NotReachable;
+        Debug.Log("Internet connection: " + isConnected);
+        GlobalVariable.isInternetConnected = isConnected;
+        return isConnected;
+    }
+
+
 
     /* private async Task LoadInitialData()
      {
@@ -256,16 +291,10 @@ public class SignalRDataOMT : MonoBehaviour
     {
         GlobalVariable.hubConnection.InvokeAsync("UpdateTopics", topics);
     }
-    private bool IsInternetAvailable()
+
+    async void HandleStationS1(DataSignalR data)
     {
-        bool isConnected = Application.internetReachability != NetworkReachability.NotReachable;
-        Debug.Log("Internet connection: " + isConnected);
-        GlobalVariable.isInternetConnected = isConnected;
-        return isConnected;
-    }
-    void HandleStationS1(DataSignalR data)
-    {
-        UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
+        await UpdateIO(data, "S1", inputCheckS1, outputCheckS1);
         UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
         UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
         UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
@@ -275,9 +304,9 @@ public class SignalRDataOMT : MonoBehaviour
         UpdateListError(data, "S1");
     }
 
-    void HandleStationS2(DataSignalR data)
+    async void HandleStationS2(DataSignalR data)
     {
-        UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
+        await UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
         UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
         UpdateMachineStatus(data, listMachineStatusS2);
         UpdateConnectionStatus(data, connectionStatusFrameS2, connectionStatusValueS2);
@@ -288,9 +317,9 @@ public class SignalRDataOMT : MonoBehaviour
 
     }
 
-    void HandleStationS3(DataSignalR data)
+    async void HandleStationS3(DataSignalR data)
     {
-        UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
+        await UpdateIO(data, "S3", inputCheckS3, outputCheckS3);
         UpdateProductionData(data, GlobalVariable.productionDataBLO02, productionDataS3);
         UpdateSetting(data, GlobalVariable.settingValuesBLO02, settingValuesS3);
         UpdateMachineStatus(data, listMachineStatusS3);
@@ -301,8 +330,10 @@ public class SignalRDataOMT : MonoBehaviour
 
     }
 
-    void UpdateIO(DataSignalR data, string stationPrefix, GameObject[] inputChecks, GameObject[] outputChecks)
+    async Task UpdateIO(DataSignalR data, string stationPrefix, GameObject[] inputChecks, GameObject[] outputChecks)
     {
+        await Task.Yield();
+
         string tagId = data.TagId;
         int prefixLengthIn = stationPrefix.Length + 4;  // Độ dài của stationPrefix + "/in/"
         int prefixLengthOut = stationPrefix.Length + 5; // Độ dài của stationPrefix + "/out/"
@@ -424,7 +455,7 @@ public class SignalRDataOMT : MonoBehaviour
         Color serverColor;
         string serverStatus;
 
-        if (GlobalVariable.errorServerConnected)
+        if (!GlobalVariable.serverConnected)
         {
             serverColor = GlobalVariable.colors[3];
             serverStatus = "Server Connection: Disconnected";
@@ -460,24 +491,36 @@ public class SignalRDataOMT : MonoBehaviour
         switch (data.TagId)
         {
             case "EFF":
-                GlobalVariable.effective = parsedValue;
-                productionDataValues[index].text = data.TagValue;
+                double effectiveValue = parsedValue;
+                productionDataValues[index].text = Math.Round(effectiveValue, 2).ToString(); ;
+                Sliders[0].GetComponent<Slider>().value = (float)effectiveValue;
                 break;
-
             case "OEE":
-                GlobalVariable.oEEValue = parsedValue;
-                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                double oEEValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(oEEValue, 2).ToString();
+                Sliders[1].GetComponent<Slider>().value = (float)(oEEValue / 100);
                 break;
-
             case "P":
+                double PValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(PValue, 2).ToString();
+                Sliders[2].GetComponent<Slider>().value = (float)(PValue / 100);
+                break;
             case "A":
+                double AValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(AValue, 2).ToString();
+                Sliders[3].GetComponent<Slider>().value = (float)(AValue / 100);
+                break;
             case "Q":
-                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
+                double QValue = (float)parsedValue * 100;
+                productionDataValues[index].text = Math.Round(QValue, 2).ToString();
+                Sliders[4].GetComponent<Slider>().value = (float)(QValue / 100);
                 break;
             default:
-                productionDataValues[index].text = data.TagValue;
+                productionDataValues[index].text = parsedValue.ToString();
                 break;
         }
+
+
     }
 
 
@@ -499,85 +542,73 @@ public class SignalRDataOMT : MonoBehaviour
     void UpdateListError(DataSignalR data, string stationPrefix)
     {
         if (data.TagId == "errorStatus" && data.TagValue != "Wifi disconnected")
-        //    &&
-        //  !GlobalVariable.errorInfors.Any(x => x.errorName == data.TagValue)
-
         {
-            //   Debug.Log(data.TagValue);
-            if (stationPrefix == "S1")
+            var errorInfor = new ErrorInfor
             {
-                var errorInfor = new ErrorInfor
-                {
-                    errorName = data.TagValue,
-                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
-                };
-                //  Debug.Log("Error S1");
-                GlobalVariable.errorInfors1.Add(errorInfor);
-                UpdateStationErrorList("S1");
+                errorName = data.TagValue,
+                time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
+            };
 
+            List<ErrorInfor> errorList = null;
+
+            switch (stationPrefix)
+            {
+                case "S1":
+                    errorList = GlobalVariable.errorInfors1;
+                    break;
+                case "S2":
+                    errorList = GlobalVariable.errorInfors2;
+                    break;
+                case "S3":
+                    errorList = GlobalVariable.errorInfors3;
+                    break;
             }
-            else if (stationPrefix == "S2")
+
+            if (errorList != null)
             {
-                var errorInfor = new ErrorInfor
-                {
-                    errorName = data.TagValue,
-                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
-                };
-                //  Debug.Log("Error S2");
-
-                GlobalVariable.errorInfors2.Add(errorInfor);
-                UpdateStationErrorList("S2");
-
-            }
-            else if (stationPrefix == "S3")
-            {
-                var errorInfor = new ErrorInfor
-                {
-                    errorName = data.TagValue,
-                    time = data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"),
-                };
-                // Debug.Log("Error S3");
-                GlobalVariable.errorInfors3.Add(errorInfor);
-                // Debug.Log("Error: " + data.TagValue + " at " + data.TimeStamp?.ToString("HH:mm:ss dd/MM/yyyy"));
-                UpdateStationErrorList("S3");
-
+                errorList.Add(errorInfor);
+                UpdateStationErrorList(stationPrefix);
             }
         }
         else if (data.TagId == "endErrorStatus")
         {
-            if (stationPrefix.Contains("S1"))
-            {
-                //    Debug.Log("End Error S1");
-                GlobalVariable.errorInfors1.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
-                UpdateStationErrorList(stationPrefix);
+            List<ErrorInfor> errorList = null;
 
-            }
-            else if (stationPrefix.Contains("S2"))
+            switch (stationPrefix)
             {
-                //  Debug.Log("End Error S2");
-                GlobalVariable.errorInfors2.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
+                case "S1":
+                    errorList = GlobalVariable.errorInfors1;
+                    break;
+                case "S2":
+                    errorList = GlobalVariable.errorInfors2;
+                    break;
+                case "S3":
+                    errorList = GlobalVariable.errorInfors3;
+                    break;
             }
-            else if (stationPrefix.Contains("S3"))
+
+            if (errorList != null)
             {
-                //   Debug.Log("End Error S3");
-                GlobalVariable.errorInfors3.RemoveAll(x => x.errorName == data.TagValue); // xóa những lỗi nào có giá trị là data.TagValue
+                errorList.RemoveAll(x => x.errorName == data.TagValue);
+                UpdateStationErrorList(stationPrefix);
             }
         }
     }
+
 
     void UpdateStationErrorList(string stationPrefix)
     {
         if (stationPrefix == "S1")
         {
-            alarmScriptS1.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
+            alarmScriptS1.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors1, "S1");
         }
         else if (stationPrefix == "S2")
         {
-            alarmScriptS2.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
+            alarmScriptS2.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors2, "S2");
         }
         else if (stationPrefix == "S3")
         {
-            alarmScriptS3.gameObject.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
+            alarmScriptS3.GetComponent<ErrorListView>().GenerateListView(GlobalVariable.errorInfors3, "S3");
         }
     }
 
@@ -683,4 +714,5 @@ public class SignalRDataOMT : MonoBehaviour
          if (tags is null) return new List<DataSignalR>();
          return tags;
      }*/
+
 }

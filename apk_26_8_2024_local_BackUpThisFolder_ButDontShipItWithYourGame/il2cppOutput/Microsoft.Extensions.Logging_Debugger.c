@@ -226,11 +226,11 @@ Il2CppSequencePoint g_sequencePointsMicrosoft_Extensions_Logging[1] = { { 0, 0, 
 #endif
 #if IL2CPP_MONO_DEBUGGER
 static const Il2CppCatchPoint g_catchPoints[] = {
-{ 70171, 19337, 30, 0, -1 },
-{ 70250, 15794, 77, 0, -1 },
-{ 70253, 15794, 20, 0, -1 },
-{ 70254, 15794, 15, 0, -1 },
-{ 70271, 19938, 79, 1, 0 },
+{ 70202, 19338, 30, 0, -1 },
+{ 70281, 15795, 77, 0, -1 },
+{ 70284, 15795, 20, 0, -1 },
+{ 70285, 15795, 15, 0, -1 },
+{ 70302, 19939, 79, 1, 0 },
 };
 #else
 static const Il2CppCatchPoint g_catchPoints[1] = { { 0, 0, 0, 0, } };

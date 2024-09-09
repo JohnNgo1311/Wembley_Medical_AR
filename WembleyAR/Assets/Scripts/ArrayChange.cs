@@ -9,78 +9,61 @@ public class ArrayChange : MonoBehaviour
     public string tagName2;
 
     private int index;
-    // Start is called before the first frame update
+    private GameObject currentActivePanel;
+
     void Start()
     {
         index = 0;
+        currentActivePanel = stepPanel[index];
+        currentActivePanel.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName1))
-            {
+            Ray ray = Input.touchCount > 0 ?
+                      Camera.main.ScreenPointToRay(Input.GetTouch(0).position) :
+                      Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                next();
-
-            }
-            if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag(tagName2))
+            if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                previous();
-            }
-
-
-            if (index >= 8)
-            {
-                index = 8;
-            }
-            if (index < 0)
-            {
-                index = 0;
-            }
-            if (index == 0)
-                for (int i = 0; i < stepPanel.Length; i++)
+                if (hit.collider.CompareTag(tagName1))
                 {
-                    stepPanel[i].gameObject.SetActive(false);
-                    stepPanel[0].gameObject.SetActive(true);
+                    Next();
                 }
+                else if (hit.collider.CompareTag(tagName2))
+                {
+                    Previous();
+                }
+            }
         }
-
-
-
-
-
-
-
     }
-    //! Next_Arrow_Btn
-    private void next()
+
+    private void Next()
     {
-        //? Mỗi lần nhấn thì index tăng 1
-        if (index <= 6) index += 1; // index = index +1        
-        for (int i = 0; i < stepPanel.Length; i++)
-        { //! Ví dụ: index = 5, nhấn thì i =0 ==>7 thì chỉ có stepPanel[5] là sáng;
-            stepPanel[i].gameObject.SetActive(false);
-            stepPanel[index].gameObject.SetActive(true);
+        if (index < stepPanel.Length - 1)
+        {
+            ChangePanel(index + 1);
         }
-        //   Debug.Log(index);
     }
-    //! Previous_Arrow_Btn
-    private void previous()
+
+    private void Previous()
     {
-        //? Mỗi lần nhấn thì index giảm 1
-        if (index >= 1) index -= 1; // index = index -11
-
-        for (int i = 0; i < stepPanel.Length; i++)
-        { //! Ví dụ: index = 5, nhấn thì i =0 ==>7 thì chỉ có stepPanel[5] là sáng;
-            stepPanel[i].gameObject.SetActive(false);
-            stepPanel[index].gameObject.SetActive(true);
-
+        if (index > 0)
+        {
+            ChangePanel(index - 1);
         }
-        //  Debug.Log(index);
+    }
+
+    private void ChangePanel(int newIndex)
+    {
+        if (index != newIndex)
+        {
+            currentActivePanel.SetActive(false);
+            index = newIndex;
+            currentActivePanel = stepPanel[index];
+            currentActivePanel.SetActive(true);
+        }
     }
 }

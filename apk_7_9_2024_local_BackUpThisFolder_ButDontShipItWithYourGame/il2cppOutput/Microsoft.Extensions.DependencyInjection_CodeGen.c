@@ -1,0 +1,1806 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+// 0x00000001 System.Void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor()
+extern void EmbeddedAttribute__ctor_m58603E2CC1F3A5C87912D16BC7A5D1C9441C0F21 (void);
+// 0x00000002 System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte)
+extern void NullableAttribute__ctor_m42E341ED3E0300DDEC0FBC8E7BD7BBF2283CBD3F (void);
+// 0x00000003 System.Void System.Runtime.CompilerServices.NullableAttribute::.ctor(System.Byte[])
+extern void NullableAttribute__ctor_m89138048B008022BD1AF1D394A1624DC26D82114 (void);
+// 0x00000004 System.Void System.Runtime.CompilerServices.NullableContextAttribute::.ctor(System.Byte)
+extern void NullableContextAttribute__ctor_m13FCE9220EFEE3B67B686BCFE8C5B9614E5B75F9 (void);
+// 0x00000005 System.Void System.Runtime.CompilerServices.NullablePublicOnlyAttribute::.ctor(System.Boolean)
+extern void NullablePublicOnlyAttribute__ctor_m5D70D8FDAC10CD05B75F4DCE63A569EAFAD09BBB (void);
+// 0x00000006 System.Boolean System.SR::UsingResourceKeys()
+extern void SR_UsingResourceKeys_m197015C33BFC35F8B19535895C653AC30AE56DCA (void);
+// 0x00000007 System.String System.SR::GetResourceString(System.String,System.String)
+extern void SR_GetResourceString_m522890F1DA129374CA010AD8A00C92B276791749 (void);
+// 0x00000008 System.String System.SR::Format(System.String,System.Object)
+extern void SR_Format_m70A778D895139E76B026B5A2B45A721AC1A590A2 (void);
+// 0x00000009 System.String System.SR::Format(System.String,System.Object,System.Object)
+extern void SR_Format_m64DD8B889F97CB883FFE24841BFF3856105490FE (void);
+// 0x0000000A System.String System.SR::Format(System.String,System.Object,System.Object,System.Object)
+extern void SR_Format_m9DB5DB09F87960A2B568BC6E4547EF616C8B028F (void);
+// 0x0000000B System.String System.SR::Format(System.String,System.Object[])
+extern void SR_Format_m4F3F23BACE720DC376CCACEA374061A45E117E10 (void);
+// 0x0000000C System.String System.SR::Format(System.IFormatProvider,System.String,System.Object)
+extern void SR_Format_mF0651B0DD6DAABAFF2754D38E52CD31AF4DF69A8 (void);
+// 0x0000000D System.String System.SR::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+extern void SR_Format_mE72F79B52CC4934E519F46EB3F970E7C526DFD32 (void);
+// 0x0000000E System.String System.SR::Format(System.IFormatProvider,System.String,System.Object,System.Object,System.Object)
+extern void SR_Format_mE4CA405ACC364200CF0CBC65728CC05E3AC80298 (void);
+// 0x0000000F System.String System.SR::Format(System.IFormatProvider,System.String,System.Object[])
+extern void SR_Format_m2461147E3AEFFA7CF5296ED79499A221050BFFAA (void);
+// 0x00000010 System.Resources.ResourceManager System.SR::get_ResourceManager()
+extern void SR_get_ResourceManager_m50615AC30B63D6FCE97492B85F9F802302D27183 (void);
+// 0x00000011 System.String System.SR::get_AmbiguousConstructorException()
+extern void SR_get_AmbiguousConstructorException_m289BE6CDB71489FC9B4FC9868213BADE8D08D1F8 (void);
+// 0x00000012 System.String System.SR::get_CannotResolveService()
+extern void SR_get_CannotResolveService_m8BFB3690AAE8346C6FBEF80733C8D16953CA0C49 (void);
+// 0x00000013 System.String System.SR::get_CircularDependencyException()
+extern void SR_get_CircularDependencyException_m2DCFA1848FFCC93EB7D30688FBAF07C202233DB9 (void);
+// 0x00000014 System.String System.SR::get_UnableToActivateTypeException()
+extern void SR_get_UnableToActivateTypeException_m73D25BDB8A8E3C9587FA35B5B39815548AB923A6 (void);
+// 0x00000015 System.String System.SR::get_OpenGenericServiceRequiresOpenGenericImplementation()
+extern void SR_get_OpenGenericServiceRequiresOpenGenericImplementation_m064AE221598FE3D31EB4BA7856AE08D33AAE780B (void);
+// 0x00000016 System.String System.SR::get_TypeCannotBeActivated()
+extern void SR_get_TypeCannotBeActivated_m10C3E85BE68CFA1EB03CDD5A10E7CA702C50C83F (void);
+// 0x00000017 System.String System.SR::get_NoConstructorMatch()
+extern void SR_get_NoConstructorMatch_m87D0CBCF7ECBF95BD62E2C809D5CBEDD3F7B45F6 (void);
+// 0x00000018 System.String System.SR::get_ScopedInSingletonException()
+extern void SR_get_ScopedInSingletonException_m95F7970CA6D1CBB99D8D82AC5C557D4C4A9606E7 (void);
+// 0x00000019 System.String System.SR::get_ScopedResolvedFromRootException()
+extern void SR_get_ScopedResolvedFromRootException_mD35D4E6D538E5DA37D96D178D28297162D23ADEA (void);
+// 0x0000001A System.String System.SR::get_DirectScopedResolvedFromRootException()
+extern void SR_get_DirectScopedResolvedFromRootException_m225996DFEB9298CD3473D2CF283CD7B007A2F01D (void);
+// 0x0000001B System.String System.SR::get_ConstantCantBeConvertedToServiceType()
+extern void SR_get_ConstantCantBeConvertedToServiceType_m9D62F7E243CD17111860764FCB058AACA28C8F66 (void);
+// 0x0000001C System.String System.SR::get_ImplementationTypeCantBeConvertedToServiceType()
+extern void SR_get_ImplementationTypeCantBeConvertedToServiceType_m2586FBF988ABD284B5690F555E9796DA60EE4A92 (void);
+// 0x0000001D System.String System.SR::get_AsyncDisposableServiceDispose()
+extern void SR_get_AsyncDisposableServiceDispose_m6BDA71E501E964E10FA25207D2A525C149A4F5CF (void);
+// 0x0000001E System.Void System.SR::.cctor()
+extern void SR__cctor_m439E9F30D1DC90FC216A8F11D399B9C2689E0CDD (void);
+// 0x0000001F System.Void System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute::.ctor(System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes)
+extern void DynamicallyAccessedMembersAttribute__ctor_m04AB38BDC656E7759224DF23751CA1188700F511 (void);
+// 0x00000020 System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes System.Diagnostics.CodeAnalysis.DynamicallyAccessedMembersAttribute::get_MemberTypes()
+extern void DynamicallyAccessedMembersAttribute_get_MemberTypes_m68D5021F5528E1799DB6544BB159ADC1933FC430 (void);
+// 0x00000021 System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::.ctor(System.String,System.String)
+extern void UnconditionalSuppressMessageAttribute__ctor_mE3B9F1757741E3DF39B1C62161309BA12FEAAA3F (void);
+// 0x00000022 System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Category()
+extern void UnconditionalSuppressMessageAttribute_get_Category_mE58856C294338D160E3C9C9483925C96E4D96366 (void);
+// 0x00000023 System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_CheckId()
+extern void UnconditionalSuppressMessageAttribute_get_CheckId_m0FFB9EFEF281FBE7A52B4A9E21B9D8857859AFB4 (void);
+// 0x00000024 System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Scope()
+extern void UnconditionalSuppressMessageAttribute_get_Scope_m523F6898F3CFBEC4752E03DD527BA1E9FA07FFAC (void);
+// 0x00000025 System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Scope(System.String)
+extern void UnconditionalSuppressMessageAttribute_set_Scope_mB5F189D8F461F7FD906ADCD7EBCC49D675AA72DD (void);
+// 0x00000026 System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Target()
+extern void UnconditionalSuppressMessageAttribute_get_Target_m3A2EBF8CC190A93FECC38844CD25682CA6421F10 (void);
+// 0x00000027 System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Target(System.String)
+extern void UnconditionalSuppressMessageAttribute_set_Target_mF696C55211D365B5FD5627E3D519433232C18130 (void);
+// 0x00000028 System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_MessageId()
+extern void UnconditionalSuppressMessageAttribute_get_MessageId_m5AB758F39125951CABCF9D75CB9BF2C38968850D (void);
+// 0x00000029 System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_MessageId(System.String)
+extern void UnconditionalSuppressMessageAttribute_set_MessageId_m5E5A50A486C27C123F6263D8ABE7FA9CE96CAEA4 (void);
+// 0x0000002A System.String System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::get_Justification()
+extern void UnconditionalSuppressMessageAttribute_get_Justification_m72185F25A2F9A5D37475A984D564A14194B2EF0C (void);
+// 0x0000002B System.Void System.Diagnostics.CodeAnalysis.UnconditionalSuppressMessageAttribute::set_Justification(System.String)
+extern void UnconditionalSuppressMessageAttribute_set_Justification_mACAFBDE1649F566C527F436B4DE1C52B295477EF (void);
+// 0x0000002C System.Boolean Microsoft.Extensions.Internal.ParameterDefaultValue::TryGetDefaultValue(System.Reflection.ParameterInfo,System.Object&)
+extern void ParameterDefaultValue_TryGetDefaultValue_m8E036419064C7518C4E6EBBA68AF0F5F8ACD8A8F (void);
+// 0x0000002D System.Void Microsoft.Extensions.Internal.ParameterDefaultValue::.ctor()
+extern void ParameterDefaultValue__ctor_m5FCF31F585DBD3172441AD8F67AF2A20AE9F992B (void);
+// 0x0000002E System.Void Microsoft.Extensions.Internal.ParameterDefaultValue::.cctor()
+extern void ParameterDefaultValue__cctor_m1781370B95C911867A2C4910619255A51B97EB5A (void);
+// 0x0000002F System.Object Microsoft.Extensions.Internal.ParameterDefaultValue::<TryGetDefaultValue>g__CreateValueType|1_0(System.Type)
+extern void ParameterDefaultValue_U3CTryGetDefaultValueU3Eg__CreateValueTypeU7C1_0_mB9838FB6054FB33A37F35949F5B8182509DE309B (void);
+// 0x00000030 System.String Microsoft.Extensions.Internal.TypeNameHelper::GetTypeDisplayName(System.Object,System.Boolean)
+extern void TypeNameHelper_GetTypeDisplayName_m8E9E2025958DD9347F20F01567C5811A8561C8E0 (void);
+// 0x00000031 System.String Microsoft.Extensions.Internal.TypeNameHelper::GetTypeDisplayName(System.Type,System.Boolean,System.Boolean,System.Boolean,System.Char)
+extern void TypeNameHelper_GetTypeDisplayName_mE6B8DD697BFDC486CFD2A90FA255122413248D5B (void);
+// 0x00000032 System.Void Microsoft.Extensions.Internal.TypeNameHelper::ProcessType(System.Text.StringBuilder,System.Type,Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions&)
+extern void TypeNameHelper_ProcessType_m9156C8687596519FFA18E9BDB701F1C13ABD9F8D (void);
+// 0x00000033 System.Void Microsoft.Extensions.Internal.TypeNameHelper::ProcessArrayType(System.Text.StringBuilder,System.Type,Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions&)
+extern void TypeNameHelper_ProcessArrayType_mBC5B9DA28533ABAEBF6CDC44B39A6773B615DBD8 (void);
+// 0x00000034 System.Void Microsoft.Extensions.Internal.TypeNameHelper::ProcessGenericType(System.Text.StringBuilder,System.Type,System.Type[],System.Int32,Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions&)
+extern void TypeNameHelper_ProcessGenericType_mF18CD0EE018CF5CBBAD6A2033F7F0ADC4578108F (void);
+// 0x00000035 System.Void Microsoft.Extensions.Internal.TypeNameHelper::.cctor()
+extern void TypeNameHelper__cctor_mDC7BBCF68D1247398ED098201D29F6EE83D32B78 (void);
+// 0x00000036 System.Void Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions::.ctor(System.Boolean,System.Boolean,System.Boolean,System.Char)
+extern void DisplayNameOptions__ctor_m381B8E264DA53F0FD2697F7B51B7BA345B708A5C (void);
+// 0x00000037 System.Boolean Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions::get_FullName()
+extern void DisplayNameOptions_get_FullName_mE2D256AABE29FE34DFB3C840581988442234B583 (void);
+// 0x00000038 System.Boolean Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions::get_IncludeGenericParameters()
+extern void DisplayNameOptions_get_IncludeGenericParameters_m933420A509C59AA31091DDC62082CBBB039032F8 (void);
+// 0x00000039 System.Boolean Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions::get_IncludeGenericParameterNames()
+extern void DisplayNameOptions_get_IncludeGenericParameterNames_mEEBEFEC05A09F34509EBCA5BAA49A1828ACF640C (void);
+// 0x0000003A System.Char Microsoft.Extensions.Internal.TypeNameHelper/DisplayNameOptions::get_NestedTypeDelimiter()
+extern void DisplayNameOptions_get_NestedTypeDelimiter_mFB07B7D2B82380F65CA2F4346D02C7280A79745A (void);
+// 0x0000003B System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::.ctor()
+extern void CallSiteJsonFormatter__ctor_mCD4FA20C3B0F45BA7822B4A7C1F35C1B3098C756 (void);
+// 0x0000003C System.String Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::Format(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CallSiteJsonFormatter_Format_mF3C5A3E3E57753BFAB8BD5AF03FE97FDA541C821 (void);
+// 0x0000003D System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitConstructor_mFC84466EE4184ADDD70BF02D60401C19576F60BB (void);
+// 0x0000003E System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitCallSiteMain(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitCallSiteMain_mA0ED80441F3433C37D814C42E034204E7AD8CB79 (void);
+// 0x0000003F System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitConstant_mFBC7A609FBA25BA740ADF280235BE6423FE2D23D (void);
+// 0x00000040 System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitServiceProvider_mEBDF13E7CF4C99C209BAA20E48976A358FB28151 (void);
+// 0x00000041 System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitServiceScopeFactory_mB63476667677F1D032B5506A3DC9AA6E2D5F6D65 (void);
+// 0x00000042 System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitIEnumerable_m59CE94043202A89AF0487CF98EF3AC50A15A0786 (void);
+// 0x00000043 System.Object Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext)
+extern void CallSiteJsonFormatter_VisitFactory_m18D5F59A4A452B5A3E84FF3F8079F9D41A51B09D (void);
+// 0x00000044 System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter::.cctor()
+extern void CallSiteJsonFormatter__cctor_m35FF79E6C9776F0F2233EA95EF9B09CC23C3CDD9 (void);
+// 0x00000045 System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::.ctor(System.Text.StringBuilder,System.Int32,System.Collections.Generic.HashSet`1<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite>)
+extern void CallSiteFormatterContext__ctor_m987F48B9B3A9B4034E70326CE1069F8EABA5ACD9 (void);
+// 0x00000046 System.Int32 Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::get_Offset()
+extern void CallSiteFormatterContext_get_Offset_m243E1081D74DE3254EC319A3DAD2B254FEAB8723 (void);
+// 0x00000047 System.Text.StringBuilder Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::get_Builder()
+extern void CallSiteFormatterContext_get_Builder_m577AEBC3F276A90608E2EC36751D8652850CB20D (void);
+// 0x00000048 System.Boolean Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::ShouldFormat(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CallSiteFormatterContext_ShouldFormat_mA43F1D8230B3087ECA0A74B68999AA348E45F4E6 (void);
+// 0x00000049 Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::IncrementOffset()
+extern void CallSiteFormatterContext_IncrementOffset_m353858D57EE30EEAA83345CC00FBA83825017512 (void);
+// 0x0000004A Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::StartObject()
+extern void CallSiteFormatterContext_StartObject_m45B348A3C1D6FA0E5049645F9C6584EB6440270B (void);
+// 0x0000004B System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::EndObject()
+extern void CallSiteFormatterContext_EndObject_mAC19C8A0D6CA1FEA072721B53EBD5EBC8D4955DC (void);
+// 0x0000004C System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::StartProperty(System.String)
+extern void CallSiteFormatterContext_StartProperty_m68029F2A9622CA03C4B395A2A02C4C8847C88A8D (void);
+// 0x0000004D System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::StartArrayItem()
+extern void CallSiteFormatterContext_StartArrayItem_mA5C2DC1790E1F1BF665449E3FAE7D35F928A79F8 (void);
+// 0x0000004E System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::WriteProperty(System.String,System.Object)
+extern void CallSiteFormatterContext_WriteProperty_m46CD34839B89CF374AFAA1941203F45DC3413FCF (void);
+// 0x0000004F Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::StartArray()
+extern void CallSiteFormatterContext_StartArray_m83B7DC171B831814C89BA43F99FB1D4BE6D2459E (void);
+// 0x00000050 System.Void Microsoft.Extensions.DependencyInjection.CallSiteJsonFormatter/CallSiteFormatterContext::EndArray()
+extern void CallSiteFormatterContext_EndArray_mBC2E8E737D605D91317F4B111E11368F4250D1D7 (void);
+// 0x00000051 System.Void Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory::.ctor()
+extern void DefaultServiceProviderFactory__ctor_m773FD62A4145298A5BE5DAE8DAA539D60DB48414 (void);
+// 0x00000052 System.Void Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory::.ctor(Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)
+extern void DefaultServiceProviderFactory__ctor_m44BD96EE20B2CFB7209FDC639E8791DFE1989916 (void);
+// 0x00000053 Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory::CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+extern void DefaultServiceProviderFactory_CreateBuilder_m3039F9E1AAC47AFFBB55F4D3C8C0D593814A6A42 (void);
+// 0x00000054 System.IServiceProvider Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory::CreateServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+extern void DefaultServiceProviderFactory_CreateServiceProvider_mD94E3E622C5B779F3E16E8DF1547D315C15F8A5D (void);
+// 0x00000055 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::.ctor()
+extern void DependencyInjectionEventSource__ctor_m296BC23BAB619A04FEAAEE294859F3FDDFC9E490 (void);
+// 0x00000056 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::CallSiteBuilt(System.String,System.String,System.Int32,System.Int32)
+extern void DependencyInjectionEventSource_CallSiteBuilt_m1E77A02D72172825D71912F0E3CAD220D97A2F22 (void);
+// 0x00000057 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::ServiceResolved(System.String)
+extern void DependencyInjectionEventSource_ServiceResolved_m81EED35C462B5F0F48EDEEE8B80D08E5D3C54292 (void);
+// 0x00000058 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::ExpressionTreeGenerated(System.String,System.Int32)
+extern void DependencyInjectionEventSource_ExpressionTreeGenerated_m422E86F0E6DE65254DC599E2DB285604B3576CA5 (void);
+// 0x00000059 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::DynamicMethodBuilt(System.String,System.Int32)
+extern void DependencyInjectionEventSource_DynamicMethodBuilt_m34E8AFDFFE99BD285C9295605D81D9828CCC8FED (void);
+// 0x0000005A System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::ServiceResolved(System.Type)
+extern void DependencyInjectionEventSource_ServiceResolved_m4118903353045D2246CC0DD2097FC7FD9ADCD58B (void);
+// 0x0000005B System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::CallSiteBuilt(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void DependencyInjectionEventSource_CallSiteBuilt_m5FFDA3632D6AD20E18EF744787767A4AE960BC8F (void);
+// 0x0000005C System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::DynamicMethodBuilt(System.Type,System.Int32)
+extern void DependencyInjectionEventSource_DynamicMethodBuilt_m05185AC6D01DA8CACA8432BFAEC1A6EB6828859C (void);
+// 0x0000005D System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource::.cctor()
+extern void DependencyInjectionEventSource__cctor_m077AC69124831E3C3084797084F701FE0E077496 (void);
+// 0x0000005E System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSourceExtensions::ExpressionTreeGenerated(Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSource,System.Type,System.Linq.Expressions.Expression)
+extern void DependencyInjectionEventSourceExtensions_ExpressionTreeGenerated_m3B183BF1C02B188CC0260BC0F0FC8BDEF6DBEC99 (void);
+// 0x0000005F System.Int32 Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSourceExtensions/NodeCountingVisitor::get_NodeCount()
+extern void NodeCountingVisitor_get_NodeCount_m6531F1683FF2617A68361B660D1538666CC18BB0 (void);
+// 0x00000060 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSourceExtensions/NodeCountingVisitor::set_NodeCount(System.Int32)
+extern void NodeCountingVisitor_set_NodeCount_m11DAAE762A7249AB60548322BB720C37334C8683 (void);
+// 0x00000061 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSourceExtensions/NodeCountingVisitor::Visit(System.Linq.Expressions.Expression)
+extern void NodeCountingVisitor_Visit_m41C615E0086D7FB251BA821506C80E1CF39C450D (void);
+// 0x00000062 System.Void Microsoft.Extensions.DependencyInjection.DependencyInjectionEventSourceExtensions/NodeCountingVisitor::.ctor()
+extern void NodeCountingVisitor__ctor_mDADD790061F62FE1646034DA297B96EB5D3AEE5D (void);
+// 0x00000063 System.Int32 Microsoft.Extensions.DependencyInjection.ServiceCollection::get_Count()
+extern void ServiceCollection_get_Count_m39B06F413CFB543B0D31C234CD7636B94B78DD8F (void);
+// 0x00000064 System.Boolean Microsoft.Extensions.DependencyInjection.ServiceCollection::get_IsReadOnly()
+extern void ServiceCollection_get_IsReadOnly_m5E02442C7E4F7CAA1C9AF7A4BB082E157BA1CD06 (void);
+// 0x00000065 Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceCollection::get_Item(System.Int32)
+extern void ServiceCollection_get_Item_mF5261EA01044898F8839CF2A6BAED54B00D52E7C (void);
+// 0x00000066 System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::set_Item(System.Int32,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_set_Item_m429228AC92958DC8BB498B1FB881EDF6FEF1B7DD (void);
+// 0x00000067 System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::Clear()
+extern void ServiceCollection_Clear_m1C5FCE0195AE6A0C9D420A762FB9338583377792 (void);
+// 0x00000068 System.Boolean Microsoft.Extensions.DependencyInjection.ServiceCollection::Contains(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_Contains_m042527248782002CB4269247616D89DB164CAD3B (void);
+// 0x00000069 System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::CopyTo(Microsoft.Extensions.DependencyInjection.ServiceDescriptor[],System.Int32)
+extern void ServiceCollection_CopyTo_mC2C3A33928193E7CCB0D247C999C107806011100 (void);
+// 0x0000006A System.Boolean Microsoft.Extensions.DependencyInjection.ServiceCollection::Remove(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_Remove_m2728338CCF1EB6416848A4CE4D565F02BB6F4026 (void);
+// 0x0000006B System.Collections.Generic.IEnumerator`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor> Microsoft.Extensions.DependencyInjection.ServiceCollection::GetEnumerator()
+extern void ServiceCollection_GetEnumerator_mF09718435CE545CF23A527250392B4E94BA79BD0 (void);
+// 0x0000006C System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::System.Collections.Generic.ICollection<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>.Add(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_System_Collections_Generic_ICollectionU3CMicrosoft_Extensions_DependencyInjection_ServiceDescriptorU3E_Add_m4176C22D86E4B086916078B5E3D798E4BD25C6D0 (void);
+// 0x0000006D System.Collections.IEnumerator Microsoft.Extensions.DependencyInjection.ServiceCollection::System.Collections.IEnumerable.GetEnumerator()
+extern void ServiceCollection_System_Collections_IEnumerable_GetEnumerator_m8517BEA4EF5B61E14DA97C5BD5A8A4DB59E4BC1B (void);
+// 0x0000006E System.Int32 Microsoft.Extensions.DependencyInjection.ServiceCollection::IndexOf(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_IndexOf_mE1CE84EF4CAF4081C2A4F354B3634A53E90303A8 (void);
+// 0x0000006F System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::Insert(System.Int32,Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceCollection_Insert_mBF7872DF6F6B2FEE6CFE031C5C54BE3D2FF52302 (void);
+// 0x00000070 System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::RemoveAt(System.Int32)
+extern void ServiceCollection_RemoveAt_m873FAAD2C23DCB0BE54821FBC987B7FBAC17B8DD (void);
+// 0x00000071 System.Void Microsoft.Extensions.DependencyInjection.ServiceCollection::.ctor()
+extern void ServiceCollection__ctor_mA233C9A5191A8A87B928617BE9B81E15F0F312C1 (void);
+// 0x00000072 Microsoft.Extensions.DependencyInjection.ServiceProvider Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions::BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+extern void ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_m75A46B576C4EAF4DA4D94EEB9DD8941F3F19CDB2 (void);
+// 0x00000073 Microsoft.Extensions.DependencyInjection.ServiceProvider Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions::BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)
+extern void ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_m12720DD77C4BDDCB5223B05AE8445FE558AEC8C1 (void);
+// 0x00000074 Microsoft.Extensions.DependencyInjection.ServiceProvider Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions::BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)
+extern void ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_mC012B95D3D23D8FA9F1E05BFEF2DB36F087340F8 (void);
+// 0x00000075 System.Void Microsoft.Extensions.DependencyInjection.ServiceProvider::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>,Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngine,Microsoft.Extensions.DependencyInjection.ServiceProviderOptions)
+extern void ServiceProvider__ctor_m147242100DF98FCC6D390513FC3BB3A81B2468E6 (void);
+// 0x00000076 System.Object Microsoft.Extensions.DependencyInjection.ServiceProvider::GetService(System.Type)
+extern void ServiceProvider_GetService_mA9C822EE0E1F2E54F2D843B35F8FD2BE5DAD43A7 (void);
+// 0x00000077 System.Void Microsoft.Extensions.DependencyInjection.ServiceProvider::Dispose()
+extern void ServiceProvider_Dispose_m3F83B5922E0481B2A6200ECA06167C783BAB76F5 (void);
+// 0x00000078 System.Void Microsoft.Extensions.DependencyInjection.ServiceProvider::Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback.OnCreate(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ServiceProvider_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngineCallback_OnCreate_m8E50D91539F29E9A9AD731E1224F254005F185A4 (void);
+// 0x00000079 System.Void Microsoft.Extensions.DependencyInjection.ServiceProvider::Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback.OnResolve(System.Type,Microsoft.Extensions.DependencyInjection.IServiceScope)
+extern void ServiceProvider_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngineCallback_OnResolve_mA4045640AAF35C46AE0D00432181A1B09B5524CB (void);
+// 0x0000007A System.Threading.Tasks.ValueTask Microsoft.Extensions.DependencyInjection.ServiceProvider::DisposeAsync()
+extern void ServiceProvider_DisposeAsync_m45FA93FF27A16D0A46381081DAA823D01D082C3A (void);
+// 0x0000007B System.Boolean Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::get_ValidateScopes()
+extern void ServiceProviderOptions_get_ValidateScopes_m270A46EE3B3CF7F7F9C41CEB537620986145130B (void);
+// 0x0000007C System.Void Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::set_ValidateScopes(System.Boolean)
+extern void ServiceProviderOptions_set_ValidateScopes_m38C5EF73FC30FB4CB163C78CF8136DCBA1686BF3 (void);
+// 0x0000007D System.Boolean Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::get_ValidateOnBuild()
+extern void ServiceProviderOptions_get_ValidateOnBuild_m69C2F1A1631578CC75D6206F4C53F3B4FE59B2C6 (void);
+// 0x0000007E System.Void Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::set_ValidateOnBuild(System.Boolean)
+extern void ServiceProviderOptions_set_ValidateOnBuild_m5E1FD63C2F23B0C2C6876EC7D5E186563B8E3956 (void);
+// 0x0000007F System.Void Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::.ctor()
+extern void ServiceProviderOptions__ctor_m604EDD2AE22C1F9C956BACAA53CB138423FF4F48 (void);
+// 0x00000080 System.Void Microsoft.Extensions.DependencyInjection.ServiceProviderOptions::.cctor()
+extern void ServiceProviderOptions__cctor_mB433482B1E98BB19049F3A43F9186CD3EF52F03B (void);
+// 0x00000081 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::.ctor()
+extern void CallSiteChain__ctor_m7B5C132E004FF3C99FBBF30E149D4805E11BE940 (void);
+// 0x00000082 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::CheckCircularDependency(System.Type)
+extern void CallSiteChain_CheckCircularDependency_mA201682CA8688106BF576E5D0B9E5CB5E4E4037D (void);
+// 0x00000083 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::Remove(System.Type)
+extern void CallSiteChain_Remove_m8784C57455327F1B9094391724622FA0E7893E68 (void);
+// 0x00000084 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::Add(System.Type,System.Type)
+extern void CallSiteChain_Add_m43561F9B9E4E078DFE123CA27DD4FA1728C42221 (void);
+// 0x00000085 System.String Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::CreateCircularDependencyExceptionMessage(System.Type)
+extern void CallSiteChain_CreateCircularDependencyExceptionMessage_m823AE56858D167DE74A1FE25091123B14AF5FEE5 (void);
+// 0x00000086 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain::AppendResolutionPath(System.Text.StringBuilder,System.Type)
+extern void CallSiteChain_AppendResolutionPath_m8BD79AB5E819B54551E00111A742A77FAACF8868 (void);
+// 0x00000087 System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/ChainItemInfo::get_Order()
+extern void ChainItemInfo_get_Order_m6DD46F06B4FE04FDEC962854422DCBF8DBBA7D00 (void);
+// 0x00000088 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/ChainItemInfo::get_ImplementationType()
+extern void ChainItemInfo_get_ImplementationType_mFCD8DD94D09A597FAE7A28195C031FF250949A48 (void);
+// 0x00000089 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/ChainItemInfo::.ctor(System.Int32,System.Type)
+extern void ChainItemInfo__ctor_m7BE2FF2AD9894E7F88808EDAD2A400310C5C4D50 (void);
+// 0x0000008A System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/<>c::.cctor()
+extern void U3CU3Ec__cctor_m1C2B9F6D55EDD12501285C2190CBB0E7A248F614 (void);
+// 0x0000008B System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/<>c::.ctor()
+extern void U3CU3Ec__ctor_mE43236B4006A9FFA0FB006F6369F6594D83AE5C3 (void);
+// 0x0000008C System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/<>c::<AppendResolutionPath>b__6_0(System.Collections.Generic.KeyValuePair`2<System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain/ChainItemInfo>)
+extern void U3CU3Ec_U3CAppendResolutionPathU3Eb__6_0_mD4387C16050565B5D4A3F48ADA87E1E40A064025 (void);
+// 0x0000008D System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void CallSiteFactory__ctor_mF902E67EA39E83DC4849E3870780F7F368722D2D (void);
+// 0x0000008E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::Populate()
+extern void CallSiteFactory_Populate_mD071C7448702B46FF368CCABE251D3531FD15D85 (void);
+// 0x0000008F Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::GetCallSite(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_GetCallSite_m11412DC4C8C4E8DCCB42CEF0A92604B1357AC31E (void);
+// 0x00000090 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::GetCallSite(Microsoft.Extensions.DependencyInjection.ServiceDescriptor,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_GetCallSite_mD12EC820D0C46648A307E4C77C97F7B833F7F39F (void);
+// 0x00000091 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::CreateCallSite(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_CreateCallSite_m71E3F8187A0F1A05577B39F405D1DF8D9D0AB2FD (void);
+// 0x00000092 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::TryCreateExact(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_TryCreateExact_m1E8F46404082BFC43D82E2A9C7185887742685BF (void);
+// 0x00000093 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::TryCreateOpenGeneric(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_TryCreateOpenGeneric_m809A761C261779781CE5801B438CDF5EA477381A (void);
+// 0x00000094 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::TryCreateEnumerable(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_TryCreateEnumerable_m929E54EFD06E26D784B119C6580962C71960A1F3 (void);
+// 0x00000095 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::GetCommonCacheLocation(Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation)
+extern void CallSiteFactory_GetCommonCacheLocation_m3D542FDAA420B2B7B65799BAAD3CABDDBE118F80 (void);
+// 0x00000096 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::TryCreateExact(Microsoft.Extensions.DependencyInjection.ServiceDescriptor,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain,System.Int32)
+extern void CallSiteFactory_TryCreateExact_mBD8B11749B1257F5A6FFEEF9F443FC55CBBE02D0 (void);
+// 0x00000097 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::TryCreateOpenGeneric(Microsoft.Extensions.DependencyInjection.ServiceDescriptor,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain,System.Int32,System.Boolean)
+extern void CallSiteFactory_TryCreateOpenGeneric_m102E16F7547575ACDACBA1D3601927E1DAFDAE38 (void);
+// 0x00000098 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::CreateConstructorCallSite(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_CreateConstructorCallSite_m6F692EA10BE17F431520E368A3DCD03C51F7A7D0 (void);
+// 0x00000099 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite[] Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::CreateArgumentCallSites(System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain,System.Reflection.ParameterInfo[],System.Boolean)
+extern void CallSiteFactory_CreateArgumentCallSites_mEC83494F52743F6B5D42E6FE5CEB72FDEEB55343 (void);
+// 0x0000009A System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::Add(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CallSiteFactory_Add_mE8641892BA631EE0EA6D6D3DCAD2EA9E0A9D4B94 (void);
+// 0x0000009B Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory::<CreateCallSite>b__9_0(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteChain)
+extern void CallSiteFactory_U3CCreateCallSiteU3Eb__9_0_mEF0247C6CF8DC88C0FB896737A0170AE24AC05C7 (void);
+// 0x0000009C Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem::get_Last()
+extern void ServiceDescriptorCacheItem_get_Last_m4584035BF41A3C70B84C665E382320EE7AE92E45 (void);
+// 0x0000009D System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem::get_Count()
+extern void ServiceDescriptorCacheItem_get_Count_m8979932157396A550C3C6468B1AA07409213BF3B (void);
+// 0x0000009E Microsoft.Extensions.DependencyInjection.ServiceDescriptor Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem::get_Item(System.Int32)
+extern void ServiceDescriptorCacheItem_get_Item_mEAB96C6579B12DFB2AD9FC39C51A84CC24B122C2 (void);
+// 0x0000009F System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem::GetSlot(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceDescriptorCacheItem_GetSlot_m1626CE2FB135FBF3B5E00ABACEE9156C2158C582 (void);
+// 0x000000A0 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/ServiceDescriptorCacheItem::Add(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceDescriptorCacheItem_Add_m12F6016B8E7F6CD3EFDC1ED1726B600605B5806A (void);
+// 0x000000A1 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c__DisplayClass7_0::.ctor()
+extern void U3CU3Ec__DisplayClass7_0__ctor_mF7B2D822E463B08586A230FDE40D91320C1E86A4 (void);
+// 0x000000A2 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c__DisplayClass7_0::<GetCallSite>b__0(System.Type)
+extern void U3CU3Ec__DisplayClass7_0_U3CGetCallSiteU3Eb__0_m90A5BE8422EC8B828FDE18931B293FAFC722FFB5 (void);
+// 0x000000A3 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c::.cctor()
+extern void U3CU3Ec__cctor_m1434CD30DA21D7DB3A3961BBA08B1FF5009A8BFB (void);
+// 0x000000A4 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c::.ctor()
+extern void U3CU3Ec__ctor_m2F3C71FB8BF95D74E90F36F01C4182ADA01C8A27 (void);
+// 0x000000A5 System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c::<CreateConstructorCallSite>b__16_0(System.Reflection.ConstructorInfo,System.Reflection.ConstructorInfo)
+extern void U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_0_m35C24B2A3CF8369EF4E9DE0F05243FD0CCCCAFEF (void);
+// 0x000000A6 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c::<CreateConstructorCallSite>b__16_1(System.Reflection.ParameterInfo)
+extern void U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_1_m9586FB8120301D0F5F6947CDD9A6141CA669714A (void);
+// 0x000000A7 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory/<>c::<CreateConstructorCallSite>b__16_2(System.Reflection.ParameterInfo)
+extern void U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_2_mE9D577D46EA724002B8B2A3563E47D879C9C6CE4 (void);
+// 0x000000A8 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::Resolve(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void CallSiteRuntimeResolver_Resolve_m9F98335AA00ED6D76D705ACEF7376A4EE389BFFA (void);
+// 0x000000A9 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitDisposeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitDisposeCache_mA8820FC3AE157CBB5CB9015FFECA5D1DE04D0AA4 (void);
+// 0x000000AA System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitConstructor_m41E6164E3DD0450E47E525A8D4374FABECDD3ABE (void);
+// 0x000000AB System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitRootCache_m32085FD52B208FA9CD7285539E77047D1B2F51A2 (void);
+// 0x000000AC System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitScopeCache_m0D2703C64D2DD15111CB5B2180DE39621437D23F (void);
+// 0x000000AD System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverLock)
+extern void CallSiteRuntimeResolver_VisitCache_m043AC1A677FA2F6921AFA83F0E3D15567B127B5F (void);
+// 0x000000AE System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitConstant_mD7296B2D62CA104F17095B699DD3CB345A956038 (void);
+// 0x000000AF System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitServiceProvider_mBC12A4BFC80EB53DA75CB2DAFABDD1C85568E863 (void);
+// 0x000000B0 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitServiceScopeFactory_mB6F09FBA4236053DD51B1A3279C94BE749AA8991 (void);
+// 0x000000B1 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitIEnumerable_mB43452E61689CF00C9746598E42BEDC1A54181BD (void);
+// 0x000000B2 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext)
+extern void CallSiteRuntimeResolver_VisitFactory_m1BEDE51E5621A485E9AE11B36228371BC5A9DA5A (void);
+// 0x000000B3 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver::.ctor()
+extern void CallSiteRuntimeResolver__ctor_m54F6BF4AA4787FCDBD4019EC4FF17A91A9F57837 (void);
+// 0x000000B4 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext::get_Scope()
+extern void RuntimeResolverContext_get_Scope_m6EDA737B0C2CE7FA4FBA1A7D07BC1E99DF0C3D70 (void);
+// 0x000000B5 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext::set_Scope(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void RuntimeResolverContext_set_Scope_m1EAA8E61408BFDC4AD7AA867B9B73B384F03B305 (void);
+// 0x000000B6 Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverLock Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext::get_AcquiredLocks()
+extern void RuntimeResolverContext_get_AcquiredLocks_mD8623CB1A86194CE38F7164759E05CDDDB7E1C15 (void);
+// 0x000000B7 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverContext::set_AcquiredLocks(Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeResolverLock)
+extern void RuntimeResolverContext_set_AcquiredLocks_m576E28B8ADB394E1E8AE60981EE7F4724A13AB31 (void);
+// 0x000000B8 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::ValidateCallSite(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CallSiteValidator_ValidateCallSite_m4302C5C9C76188D149AF4CB098C274766F7C2787 (void);
+// 0x000000B9 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::ValidateResolution(System.Type,Microsoft.Extensions.DependencyInjection.IServiceScope,Microsoft.Extensions.DependencyInjection.IServiceScope)
+extern void CallSiteValidator_ValidateResolution_mAB68415DA44398B6CF2EE1AB06CD54FA1D18C03E (void);
+// 0x000000BA System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitConstructor_m7214A3658C4A3237AEB34085863B9DCF56097DF2 (void);
+// 0x000000BB System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitIEnumerable_mAD1C29624FA4AD18D9C06E189F08E027BF11DEFB (void);
+// 0x000000BC System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitRootCache_m6C1C91E4E4CF4D7540ED31BAB2CD5D9EAA4DF284 (void);
+// 0x000000BD System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitScopeCache_mB2F78879EF3FC5352122B142FC8F32DE30B1C8E5 (void);
+// 0x000000BE System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitConstant_m6CF36BF47C60F7A8BB436341E11C28FFD0482750 (void);
+// 0x000000BF System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitServiceProvider_m3C3D6ACADE52FACB2BEB8E2912547B6892D0E970 (void);
+// 0x000000C0 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitServiceScopeFactory_mEDFBC7FA042CA308281EDB227A5D66BCFCBD7413 (void);
+// 0x000000C1 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState)
+extern void CallSiteValidator_VisitFactory_mE43301BE13D740BEA04E314AA2A67CFE971DB417 (void);
+// 0x000000C2 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator::.ctor()
+extern void CallSiteValidator__ctor_mBB3DFBE504F8FEABFE025624748C7E3D5EC6CDDC (void);
+// 0x000000C3 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState::get_Singleton()
+extern void CallSiteValidatorState_get_Singleton_mFCA960A590ED5EC7E79EB1F800D1C16993A5660B (void);
+// 0x000000C4 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator/CallSiteValidatorState::set_Singleton(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CallSiteValidatorState_set_Singleton_m2881D2A36F3CB9AD579792EF0D12396C16A2CDF2 (void);
+// 0x000000C5 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::.ctor()
+// 0x000000C6 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitCallSite(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000C7 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitCallSiteMain(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000C8 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitNoCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000C9 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitDisposeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000CA TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000CB TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000CC TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,TArgument)
+// 0x000000CD TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,TArgument)
+// 0x000000CE TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,TArgument)
+// 0x000000CF TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,TArgument)
+// 0x000000D0 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,TArgument)
+// 0x000000D1 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,TArgument)
+// 0x000000D2 TResult Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2::<VisitCallSite>b__2_0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,TArgument)
+// 0x000000D3 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine::get_ResolverBuilder()
+extern void CompiledServiceProviderEngine_get_ResolverBuilder_m7B6EF01654F320829D18312613614F3E362C90EC (void);
+// 0x000000D4 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void CompiledServiceProviderEngine__ctor_mDCFB2AA0D3FA0561A31BB853E2D8C650F67AACEC (void);
+// 0x000000D5 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void CompiledServiceProviderEngine_RealizeService_mFF85D8627067F67BE29F62B75C959F7921F6C562 (void);
+// 0x000000D6 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite::get_DefaultValue()
+extern void ConstantCallSite_get_DefaultValue_m921F91AAC1D6DFD1183EC34EFB2F4A071B73FF3F (void);
+// 0x000000D7 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite::.ctor(System.Type,System.Object)
+extern void ConstantCallSite__ctor_m2DBE8D6A1A5A152E2B0E557086F13092C84597BC (void);
+// 0x000000D8 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite::get_ServiceType()
+extern void ConstantCallSite_get_ServiceType_m0D5890A7A851281D1612FCB777CACDCC93AD7026 (void);
+// 0x000000D9 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite::get_ImplementationType()
+extern void ConstantCallSite_get_ImplementationType_m84F051F33ED0672C2F7D699AC90B46E66AA63BE8 (void);
+// 0x000000DA Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite::get_Kind()
+extern void ConstantCallSite_get_Kind_m8830A948453BA3E0033D7E9977635796CFD5C37C (void);
+// 0x000000DB System.Reflection.ConstructorInfo Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::get_ConstructorInfo()
+extern void ConstructorCallSite_get_ConstructorInfo_mC6642D0BC3E08455CF234E8A588BBB607A561075 (void);
+// 0x000000DC Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite[] Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::get_ParameterCallSites()
+extern void ConstructorCallSite_get_ParameterCallSites_m285509B4AE1A4D8E91AED4CB502C5FDAECA387B5 (void);
+// 0x000000DD System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache,System.Type,System.Reflection.ConstructorInfo)
+extern void ConstructorCallSite__ctor_mBC3F8957E78B71F394DDA46794AD7805C329ED44 (void);
+// 0x000000DE System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache,System.Type,System.Reflection.ConstructorInfo,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite[])
+extern void ConstructorCallSite__ctor_m47B5ABA7386166CD86E05ADFD5F05655C38D1367 (void);
+// 0x000000DF System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::get_ServiceType()
+extern void ConstructorCallSite_get_ServiceType_m41E60BF81543E34A426C40B19A5960EA758F7C99 (void);
+// 0x000000E0 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::get_ImplementationType()
+extern void ConstructorCallSite_get_ImplementationType_mA0810E5B1F92FEC56558E1F0A6542BF504BD21F0 (void);
+// 0x000000E1 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite::get_Kind()
+extern void ConstructorCallSite_get_Kind_m733DFBC3D70607DF592D060F2B35C81C2038CF21 (void);
+// 0x000000E2 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void DynamicServiceProviderEngine__ctor_m5332D2DB217BF2E25181EB351C60541D20A54554 (void);
+// 0x000000E3 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void DynamicServiceProviderEngine_RealizeService_m1C1D8A8E199E84F7A7B5A1D7910209C8DADDD33F (void);
+// 0x000000E4 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine::<>n__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void DynamicServiceProviderEngine_U3CU3En__0_mB58D3FE5FD67136F63D4D52F6C9632F7E6D018E6 (void);
+// 0x000000E5 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine/<>c__DisplayClass1_0::.ctor()
+extern void U3CU3Ec__DisplayClass1_0__ctor_mA4D6633398DEC0F602EA0C285B22960B307CCF09 (void);
+// 0x000000E6 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine/<>c__DisplayClass1_0::<RealizeService>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__0_mE5A7DB677F0342335FB79004EB0C23ED72B1BC76 (void);
+// 0x000000E7 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine/<>c__DisplayClass1_0::<RealizeService>b__1(System.Object)
+extern void U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__1_m63F2138CBE56073606E8F64E5807BAC8345F6B6D (void);
+// 0x000000E8 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void ExpressionResolverBuilder__ctor_m801559AE0A705DD4AAF59D611F138FEA9FC96BF8 (void);
+// 0x000000E9 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::Build(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionResolverBuilder_Build_m73D8CC57870A5D1DB6FF1FEB5C6CC15BCFB4153B (void);
+// 0x000000EA System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::BuildNoCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionResolverBuilder_BuildNoCache_mBACF23A35D149E4131DCCDBF22043A9F142E59E8 (void);
+// 0x000000EB System.Linq.Expressions.Expression`1<System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object>> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::BuildExpression(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionResolverBuilder_BuildExpression_m8A87CAAD886261E13E703E122B7C4AA5FF170141 (void);
+// 0x000000EC System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitRootCache_mF0DA868F99BAC801768116CDBE68A737EF3AA7E8 (void);
+// 0x000000ED System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitConstant_m0F142F939288040D5851177D214B0662613309D1 (void);
+// 0x000000EE System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitServiceProvider_mE00F80ACA03F7B620DAEDA6E943F763EA88F530C (void);
+// 0x000000EF System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitServiceScopeFactory_m819FE79548DABA3EEA1C62E747D2A612B19DEE0D (void);
+// 0x000000F0 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitFactory_mD7332F7C7AC516D080DB3F819BC53B66946A2F29 (void);
+// 0x000000F1 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitIEnumerable_m580D2EAFA77995445E7AEFD8DE096DBBBCEB3E7C (void);
+// 0x000000F2 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitDisposeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitDisposeCache_mB87B52DBA0C5C102719F54C7E77CE2051CC2C5FE (void);
+// 0x000000F3 System.Reflection.MethodInfo Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::GetArrayEmptyMethodInfo(System.Type)
+extern void ExpressionResolverBuilder_GetArrayEmptyMethodInfo_mEBADB926A777A7F95BC61B145FDF81E902086947 (void);
+// 0x000000F4 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::TryCaptureDisposable(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression)
+extern void ExpressionResolverBuilder_TryCaptureDisposable_m9C2AE5033E2EFFD3064C64D2242DF3B4BB0857DB (void);
+// 0x000000F5 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitConstructor_mA248C2A8E55E62B7A6E7354010EAEA0D823BB175 (void);
+// 0x000000F6 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::Convert(System.Linq.Expressions.Expression,System.Type,System.Boolean)
+extern void ExpressionResolverBuilder_Convert_m8B5BAE235911ACDB471F8C8A8A0AAB09455999C2 (void);
+// 0x000000F7 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ExpressionResolverBuilder_VisitScopeCache_m7EE6E138F73173B1AA3CEB890C7492231D38C0CE (void);
+// 0x000000F8 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::BuildScopedExpression(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionResolverBuilder_BuildScopedExpression_m4E93352D18E37002CE34A4D083C168230DEADD77 (void);
+// 0x000000F9 System.Reflection.MethodInfo Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::GetMethodInfo(System.Linq.Expressions.Expression`1<T>)
+// 0x000000FA System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::GetCaptureDisposable(System.Linq.Expressions.ParameterExpression)
+extern void ExpressionResolverBuilder_GetCaptureDisposable_m5A257BC807795FFC14CBA5500FD4F73C633BB667 (void);
+// 0x000000FB System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::.cctor()
+extern void ExpressionResolverBuilder__cctor_m6B9D044E299D064C00005A4535DD2C51397C7258 (void);
+// 0x000000FC System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder::<.ctor>b__17_0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionResolverBuilder_U3C_ctorU3Eb__17_0_m7E713DCF1BE56561BF67F5ED7AF04601895D9882 (void);
+// 0x000000FD System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass18_0::.ctor()
+extern void U3CU3Ec__DisplayClass18_0__ctor_mC6D47B619BAAAA231D30CB182324882FD27F8BDF (void);
+// 0x000000FE System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass18_0::<Build>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void U3CU3Ec__DisplayClass18_0_U3CBuildU3Eb__0_mC598937E5DE3F2A927AC7D2C0E8BF8B5B0E463FA (void);
+// 0x000000FF System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass18_1::.ctor()
+extern void U3CU3Ec__DisplayClass18_1__ctor_m731F97AAB32266CCDCA6D561F7D088C6C0970B99 (void);
+// 0x00000100 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass18_1::<Build>b__1(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec__DisplayClass18_1_U3CBuildU3Eb__1_mD45A1097F0FAB069327829257CC0BF843783015D (void);
+// 0x00000101 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass26_0::.ctor()
+extern void U3CU3Ec__DisplayClass26_0__ctor_m556BD3C5480F6C7E1AE53C554222FABCF0447EBC (void);
+// 0x00000102 System.Linq.Expressions.Expression Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c__DisplayClass26_0::<VisitIEnumerable>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void U3CU3Ec__DisplayClass26_0_U3CVisitIEnumerableU3Eb__0_mB38CA68BCD833B875A558514D41B0D2CCDF56C3D (void);
+// 0x00000103 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c::.cctor()
+extern void U3CU3Ec__cctor_mD4E5334B05DD33E31E603BB5867107EF92677D37 (void);
+// 0x00000104 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionResolverBuilder/<>c::.ctor()
+extern void U3CU3Ec__ctor_m7BFF07D4CDD04A926B9FC4E1EEFD2BD901320F87 (void);
+// 0x00000105 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionsServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void ExpressionsServiceProviderEngine__ctor_m878B09F76F44D14600AD53AE8773772125146CA5 (void);
+// 0x00000106 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ExpressionsServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ExpressionsServiceProviderEngine_RealizeService_m8F19C45F42AAC29852507823AC78C866B7456F3D (void);
+// 0x00000107 System.Func`2<System.IServiceProvider,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite::get_Factory()
+extern void FactoryCallSite_get_Factory_m5A90B0368398B08CDB732165BD54219C653EB948 (void);
+// 0x00000108 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache,System.Type,System.Func`2<System.IServiceProvider,System.Object>)
+extern void FactoryCallSite__ctor_m27D6F8056A25EA986F7A027174F934E7513953BA (void);
+// 0x00000109 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite::get_ServiceType()
+extern void FactoryCallSite_get_ServiceType_mFE9F318A5C409E032D6AC31DC5C251C0F4DC4DC2 (void);
+// 0x0000010A System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite::get_ImplementationType()
+extern void FactoryCallSite_get_ImplementationType_m1CD9F21D44D809F81F617D27F6A73EC3A7A0188C (void);
+// 0x0000010B Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite::get_Kind()
+extern void FactoryCallSite_get_Kind_m9E347418951560255DF745ABC32509BFE94F18FE (void);
+// 0x0000010C System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::get_ItemType()
+extern void IEnumerableCallSite_get_ItemType_m692AD86DE0D5CDC96180A350A4B2933B37C24013 (void);
+// 0x0000010D Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite[] Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::get_ServiceCallSites()
+extern void IEnumerableCallSite_get_ServiceCallSites_mA80E82D6256200A3CA4A7A8C28D61671D7EFD5A3 (void);
+// 0x0000010E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite[])
+extern void IEnumerableCallSite__ctor_m56EF30622C6021D0605E6DBA25785921D7D2A204 (void);
+// 0x0000010F System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::get_ServiceType()
+extern void IEnumerableCallSite_get_ServiceType_mC3769A12F5A10838696F2B5191290A9FD6A4FA23 (void);
+// 0x00000110 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::get_ImplementationType()
+extern void IEnumerableCallSite_get_ImplementationType_m06A51AE0704BC14CAE97D695BEF7D75DDEE5DBB3 (void);
+// 0x00000111 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite::get_Kind()
+extern void IEnumerableCallSite_get_Kind_m76D7AE772403A70560C7B78634B41C01ADB59BBE (void);
+// 0x00000112 Microsoft.Extensions.DependencyInjection.IServiceScope Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngine::get_RootScope()
+// 0x00000113 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngine::InitializeCallback(Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback)
+// 0x00000114 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngine::ValidateService(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+// 0x00000115 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback::OnCreate(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+// 0x00000116 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback::OnResolve(System.Type,Microsoft.Extensions.DependencyInjection.IServiceScope)
+// 0x00000117 Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::get_None()
+extern void ResultCache_get_None_m56841A9BF8319E55A41B05103B4851DDFBEC09EB (void);
+// 0x00000118 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void ResultCache__ctor_mD100A86B9DB5CBBED04CBB7CF3AD8510263F0437 (void);
+// 0x00000119 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLifetime,System.Type,System.Int32)
+extern void ResultCache__ctor_mE35D6FA6C4FB0AB209D17155E13CC43F970C5FBC (void);
+// 0x0000011A Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::get_Location()
+extern void ResultCache_get_Location_mC6998DC9DA8081C280FDC4058B401DEEE26BCE0F (void);
+// 0x0000011B System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::set_Location(Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteResultCacheLocation)
+extern void ResultCache_set_Location_m6713C29A59D2EFF8885C5FE4F4E860B2751F8537 (void);
+// 0x0000011C Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::get_Key()
+extern void ResultCache_get_Key_m3C2B723CFAB736075A45A9B4B9E08EAE69BB89F4 (void);
+// 0x0000011D System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::set_Key(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void ResultCache_set_Key_m895DE0D45DF9B6AEC7649FAD5A34913C002CCCA5 (void);
+// 0x0000011E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache::.cctor()
+extern void ResultCache__cctor_m2A4A9EE2C0802545CAACB1D8FDCAB38C631982E7 (void);
+// 0x0000011F System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void RuntimeServiceProviderEngine__ctor_mF3BF5A6C0BC32FEFF2C4AE88E277DD23AB92D0A6 (void);
+// 0x00000120 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void RuntimeServiceProviderEngine_RealizeService_m00ECAAB2F1E5EEB7A75CA5E542061B187F9CA64E (void);
+// 0x00000121 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine/<>c__DisplayClass1_0::.ctor()
+extern void U3CU3Ec__DisplayClass1_0__ctor_mB93BA7A0FBD19218DFFE977DCAE1DF96C730AD56 (void);
+// 0x00000122 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine/<>c__DisplayClass1_0::<RealizeService>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__0_m77CE9806270CC5362BA596AC4CB3632720DA333C (void);
+// 0x00000123 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.RuntimeServiceProviderEngine/<>c__DisplayClass1_0::<RealizeService>b__1(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__1_m16C2434F7F7C9A7EAC82DAF4AE66C9B45F1C20E2 (void);
+// 0x00000124 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::get_Empty()
+extern void ServiceCacheKey_get_Empty_mAE34009AD0EA47E3DBD10A25919EC27B1DE22E24 (void);
+// 0x00000125 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::get_Type()
+extern void ServiceCacheKey_get_Type_m5ED22D00E11A31475310D1D5C4D75747A448AB1D (void);
+// 0x00000126 System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::get_Slot()
+extern void ServiceCacheKey_get_Slot_m2E351CF073D9910205760D9CFB994BFF52689143 (void);
+// 0x00000127 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::.ctor(System.Type,System.Int32)
+extern void ServiceCacheKey__ctor_m64A22FC7E77F6816F9A4CDDFA54F360ECC72F8CA (void);
+// 0x00000128 System.Boolean Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::Equals(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void ServiceCacheKey_Equals_m7C056BBE5A52033112596955EF76DFCB22A60C27 (void);
+// 0x00000129 System.Int32 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::GetHashCode()
+extern void ServiceCacheKey_GetHashCode_mDD372F844B83E82A6F7C664C12F48F5ACD356835 (void);
+// 0x0000012A System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey::.cctor()
+extern void ServiceCacheKey__cctor_m4F9948E435D864AD216F214E00CF85ACEFE61662 (void);
+// 0x0000012B System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache)
+extern void ServiceCallSite__ctor_m944ACFB64DD1472A75203A7309AD9BAD97B10EA6 (void);
+// 0x0000012C System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::get_ServiceType()
+// 0x0000012D System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::get_ImplementationType()
+// 0x0000012E Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::get_Kind()
+// 0x0000012F Microsoft.Extensions.DependencyInjection.ServiceLookup.ResultCache Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::get_Cache()
+extern void ServiceCallSite_get_Cache_mE771FF8F1F7BB301CE468B79FA791639DDD0698F (void);
+// 0x00000130 System.Boolean Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite::get_CaptureDisposable()
+extern void ServiceCallSite_get_CaptureDisposable_mC70227526CF19FCDE33C55D137DFDCB152C28686 (void);
+// 0x00000131 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite::.ctor()
+extern void ServiceProviderCallSite__ctor_mE95D239C1063D7B2C55F2E905702CF43DE0C9173 (void);
+// 0x00000132 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite::get_ServiceType()
+extern void ServiceProviderCallSite_get_ServiceType_m7E592EB3798F1969BF63E29C4FA363DB97B1D5B8 (void);
+// 0x00000133 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite::get_ImplementationType()
+extern void ServiceProviderCallSite_get_ImplementationType_mBE354778D5DAB76304C7895FAE8571ED2F7FE8D9 (void);
+// 0x00000134 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite::get_Kind()
+extern void ServiceProviderCallSite_get_Kind_mDD76B93291996E67A0CF9355DAEA4A637B110F00 (void);
+// 0x00000135 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void ServiceProviderEngine__ctor_m2C293ACDA9F3E854B1BF9867CBD7744C0B56F11D (void);
+// 0x00000136 System.Collections.Concurrent.ConcurrentDictionary`2<System.Type,System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object>> Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::get_RealizedServices()
+extern void ServiceProviderEngine_get_RealizedServices_mD596FD2FA756ACC7A80E03A184BE902584B521A9 (void);
+// 0x00000137 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::get_CallSiteFactory()
+extern void ServiceProviderEngine_get_CallSiteFactory_m3F691D34510522C88D8DCE83801B3F5061DF284A (void);
+// 0x00000138 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::get_RuntimeResolver()
+extern void ServiceProviderEngine_get_RuntimeResolver_m8A44173763CE8BD0330159E20EEE4D2C89D94F41 (void);
+// 0x00000139 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::get_Root()
+extern void ServiceProviderEngine_get_Root_m79CC5777B53E346770FB309C4FD962472DBC73C1 (void);
+// 0x0000013A Microsoft.Extensions.DependencyInjection.IServiceScope Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::get_RootScope()
+extern void ServiceProviderEngine_get_RootScope_m2447B3357D6FAF0A2778C731D7F8150FDDF76770 (void);
+// 0x0000013B System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngine.InitializeCallback(Microsoft.Extensions.DependencyInjection.ServiceLookup.IServiceProviderEngineCallback)
+extern void ServiceProviderEngine_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngine_InitializeCallback_mF02282B144025CB367BC72E018E50CED9E44E1C1 (void);
+// 0x0000013C System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::ValidateService(Microsoft.Extensions.DependencyInjection.ServiceDescriptor)
+extern void ServiceProviderEngine_ValidateService_m7378DF2FF9AE51BEE931F08A2FCF2ECEF86A0C46 (void);
+// 0x0000013D System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::GetService(System.Type)
+extern void ServiceProviderEngine_GetService_m70E8DFFA4048401BAE4121C159A4A2A85EC33758 (void);
+// 0x0000013E System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+// 0x0000013F System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::Dispose()
+extern void ServiceProviderEngine_Dispose_mDE139C829ACD0047564E54DF76438856128B9683 (void);
+// 0x00000140 System.Threading.Tasks.ValueTask Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::DisposeAsync()
+extern void ServiceProviderEngine_DisposeAsync_m547BEDE1086FEF53526227F0D15CD4B383FFF354 (void);
+// 0x00000141 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::GetService(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void ServiceProviderEngine_GetService_mEE590B690DBE62672B947D6221D85592E1AEAEBE (void);
+// 0x00000142 Microsoft.Extensions.DependencyInjection.IServiceScope Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::CreateScope()
+extern void ServiceProviderEngine_CreateScope_m437198AE342800383C5590BDBCC8CF283A5096C5 (void);
+// 0x00000143 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine::CreateServiceAccessor(System.Type)
+extern void ServiceProviderEngine_CreateServiceAccessor_m976C99954F7AE1BEFB7F5EEF172C40A697F9C9C3 (void);
+// 0x00000144 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine/<>c::.cctor()
+extern void U3CU3Ec__cctor_mC7CAEE8A8542C0E4E0E231EE5A7928D2C1424DEA (void);
+// 0x00000145 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine/<>c::.ctor()
+extern void U3CU3Ec__ctor_m71530BD4B42DA1DA7F4FEB310CC9EA7051D7A4E6 (void);
+// 0x00000146 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine/<>c::<CreateServiceAccessor>b__26_0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec_U3CCreateServiceAccessorU3Eb__26_0_m5EEE2858AA3BA9691B379D37B01DB86006BECF21 (void);
+// 0x00000147 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine)
+extern void ServiceProviderEngineScope__ctor_mD3180A991D2D00414F2EF73BFFE24A5F42F95B1E (void);
+// 0x00000148 System.Collections.Generic.Dictionary`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::get_ResolvedServices()
+extern void ServiceProviderEngineScope_get_ResolvedServices_m50E7F71A77F85E8BBEECB4F6BCFD5F03FBEF6D65 (void);
+// 0x00000149 Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::get_Engine()
+extern void ServiceProviderEngineScope_get_Engine_m114EC3D3A9998B3D73169C9B2558B688A37D7721 (void);
+// 0x0000014A System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::GetService(System.Type)
+extern void ServiceProviderEngineScope_GetService_m9F7E02DDD9609FBBA3A4AEE0F10D77D061F7D29D (void);
+// 0x0000014B System.IServiceProvider Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::get_ServiceProvider()
+extern void ServiceProviderEngineScope_get_ServiceProvider_m862E0DA7BED32D676773E9282A23BD2228AF1A01 (void);
+// 0x0000014C System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::CaptureDisposable(System.Object)
+extern void ServiceProviderEngineScope_CaptureDisposable_m209748A7E1C5F780FB7413ECB27CFAD480A8555C (void);
+// 0x0000014D System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::Dispose()
+extern void ServiceProviderEngineScope_Dispose_mBE818E78F3868C0A2256955262A9B9A6C1526A7F (void);
+// 0x0000014E System.Threading.Tasks.ValueTask Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::DisposeAsync()
+extern void ServiceProviderEngineScope_DisposeAsync_mE4DA77BF93C71167A49951804FD9DB9C4B99A665 (void);
+// 0x0000014F System.Collections.Generic.List`1<System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::BeginDispose()
+extern void ServiceProviderEngineScope_BeginDispose_m2F62F49BAE51846F24D03160D133F6947B6C4438 (void);
+// 0x00000150 System.Threading.Tasks.ValueTask Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope::<DisposeAsync>g__Await|15_0(System.Int32,System.Threading.Tasks.ValueTask,System.Collections.Generic.List`1<System.Object>)
+extern void ServiceProviderEngineScope_U3CDisposeAsyncU3Eg__AwaitU7C15_0_m79DEEDF06811162838671C15ABA56845A6612A34 (void);
+// 0x00000151 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope/<<DisposeAsync>g__Await|15_0>d::MoveNext()
+extern void U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_MoveNext_mF53AD9E8BFEC5B4C64976BD5D8DECEF301F3CD0A (void);
+// 0x00000152 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope/<<DisposeAsync>g__Await|15_0>d::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_SetStateMachine_m8F30B0CACF3E67C0130D0FF7CAA6CFD3E6FF3234 (void);
+// 0x00000153 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite::.ctor()
+extern void ServiceScopeFactoryCallSite__ctor_m8ABE0500B9956971DFC986D7587B048C322BFE03 (void);
+// 0x00000154 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite::get_ServiceType()
+extern void ServiceScopeFactoryCallSite_get_ServiceType_m03D2C5F4E0AE5557B0FBCA3D902CC44EFBBDA188 (void);
+// 0x00000155 System.Type Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite::get_ImplementationType()
+extern void ServiceScopeFactoryCallSite_get_ImplementationType_mEEFE093C2B07AEBBD154A8308650CB3A172DA6E5 (void);
+// 0x00000156 Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteKind Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite::get_Kind()
+extern void ServiceScopeFactoryCallSite_get_Kind_m42DCBFE19D84E96ECC776816CAC695DA6ADE3897 (void);
+// 0x00000157 System.Boolean Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard::TryEnterOnCurrentStack()
+extern void StackGuard_TryEnterOnCurrentStack_m5AAB578B1036B3F8069325C2024202C6C4692765 (void);
+// 0x00000158 TR Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard::RunOnEmptyStack(System.Func`3<T1,T2,TR>,T1,T2)
+// 0x00000159 R Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard::RunOnEmptyStackCore(System.Func`2<System.Object,R>,System.Object)
+// 0x0000015A System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard::.ctor()
+extern void StackGuard__ctor_m4B252A87F209BBD46C295CF11B28E3964E70FA05 (void);
+// 0x0000015B System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard/<>c__3`3::.cctor()
+// 0x0000015C System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard/<>c__3`3::.ctor()
+// 0x0000015D TR Microsoft.Extensions.DependencyInjection.ServiceLookup.StackGuard/<>c__3`3::<RunOnEmptyStack>b__3_0(System.Object)
+// 0x0000015E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ThrowHelper::ThrowObjectDisposedException()
+extern void ThrowHelper_ThrowObjectDisposedException_mB2639AABFD0F45A194C6B705C940B3193608C2EA (void);
+// 0x0000015F System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ThrowHelper::.ctor()
+extern void ThrowHelper__ctor_m99C5151F94FD2A727C2047EBB6B53E09443BE8B3 (void);
+// 0x00000160 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult::.ctor(System.Int32)
+extern void ILEmitCallSiteAnalysisResult__ctor_m73A38316C16DEC0493E3E62AC277AD57CD4861DC (void);
+// 0x00000161 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult::.ctor(System.Int32,System.Boolean)
+extern void ILEmitCallSiteAnalysisResult__ctor_m697E79A462FDE1E1DE43B2CC7013FEF3F3594E4F (void);
+// 0x00000162 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult::Add(Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult&)
+extern void ILEmitCallSiteAnalysisResult_Add_mBEA591D96A58D84CB8DE2DB284214D77CB67E7F2 (void);
+// 0x00000163 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::get_Instance()
+extern void ILEmitCallSiteAnalyzer_get_Instance_m63A80D9173CA9EBD665E3DDC201A1F5549BC46F4 (void);
+// 0x00000164 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitDisposeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitDisposeCache_m8FA769B54CFA1F9A82C34B4C7D3420CF57E35DF3 (void);
+// 0x00000165 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitConstructor_m5CC25B2026055C4B259A203FCAE636A0FCA72066 (void);
+// 0x00000166 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitRootCache_mB2B09F6B432817F14CACC4A97EAA81536DC13313 (void);
+// 0x00000167 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitScopeCache_m4A04633B4B22BF9D5352F2F664AB032297F2128A (void);
+// 0x00000168 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitConstant_m3DB4104188B1626D501C4E14AB10A5069C22F21B (void);
+// 0x00000169 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitServiceProvider_m2B9617AA5314B37743E7D0CAB567F3F0B2A4975E (void);
+// 0x0000016A Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitServiceScopeFactory_m0193055DA39FD4A236FFE07D2CE28F51A59DD658 (void);
+// 0x0000016B Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitIEnumerable_m0FAD914CC49A1FA10D7B33035ECB5CD7A8B87F37 (void);
+// 0x0000016C Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,System.Object)
+extern void ILEmitCallSiteAnalyzer_VisitFactory_m493A0311A05C3A6E68E74649F168611A7DFC6AF0 (void);
+// 0x0000016D Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalysisResult Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::CollectGenerationInfo(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitCallSiteAnalyzer_CollectGenerationInfo_mBCF713C952A4E51A7F4517010B33518ACF99A2FE (void);
+// 0x0000016E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::.ctor()
+extern void ILEmitCallSiteAnalyzer__ctor_m7AF6DB5998A1487F744ADD03F93AA89583D6E98F (void);
+// 0x0000016F System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitCallSiteAnalyzer::.cctor()
+extern void ILEmitCallSiteAnalyzer__cctor_m10A013AEA0090FA2D311A282E8EE17BB938A6CFC (void);
+// 0x00000170 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::.ctor(Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver,Microsoft.Extensions.DependencyInjection.IServiceScopeFactory,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void ILEmitResolverBuilder__ctor_m233953F61B9631FC487822DD7F27321CD1ADB88D (void);
+// 0x00000171 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::Build(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitResolverBuilder_Build_m8A85125EC4888B8AE664F1DD3B9324CC384EA6E9 (void);
+// 0x00000172 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/GeneratedMethod Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::BuildType(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitResolverBuilder_BuildType_mB4AA21A9D40128D4BC1931D358E62D188A3F4755 (void);
+// 0x00000173 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/GeneratedMethod Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::BuildTypeNoCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitResolverBuilder_BuildTypeNoCache_mE0F3D0C66129CCB33CFEB69A0E0C58A078EED3C2 (void);
+// 0x00000174 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitDisposeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitDisposeCache_mBAB0FEE933C012BAAF97226905E6936162A96FC2 (void);
+// 0x00000175 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitConstructor(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstructorCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitConstructor_m4B598FD1B8C579901DEA0143C553ADC26A91087C (void);
+// 0x00000176 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitRootCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitRootCache_m7E3C266CDE7A666FCD1CC8351A07CD65A9C0C16A (void);
+// 0x00000177 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitScopeCache(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitScopeCache_mDA6332ADE9EA98AD45AB36903C804B2C11ACC680 (void);
+// 0x00000178 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ConstantCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitConstant_m117517E7F43DC5E60DE5D3CF8E1812DB1F44F527 (void);
+// 0x00000179 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitServiceProvider(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitServiceProvider_mC85E2C4649087E74CD41E23012B7534142BD7765 (void);
+// 0x0000017A System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitServiceScopeFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceScopeFactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitServiceScopeFactory_m3002AB77C836DD2B4EFE4AAC218C5CEF41DF4BA0 (void);
+// 0x0000017B System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitIEnumerable(Microsoft.Extensions.DependencyInjection.ServiceLookup.IEnumerableCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitIEnumerable_m77BDC1358096F51D074D4472130DC0EA02CCB794 (void);
+// 0x0000017C System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::VisitFactory(Microsoft.Extensions.DependencyInjection.ServiceLookup.FactoryCallSite,Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_VisitFactory_m6292E33EE5797CA652F2059770CD0D40839E48D1 (void);
+// 0x0000017D System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::AddConstant(Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext,System.Object)
+extern void ILEmitResolverBuilder_AddConstant_mE2B19216D6E64C2054733625695969CB3A6E1332 (void);
+// 0x0000017E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::AddCacheKey(Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void ILEmitResolverBuilder_AddCacheKey_mE7D2566ABFBE24960A0EDFB6491EBDE287B04FBC (void);
+// 0x0000017F Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/ILEmitResolverBuilderRuntimeContext Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::GenerateMethodBody(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite,System.Reflection.Emit.ILGenerator)
+extern void ILEmitResolverBuilder_GenerateMethodBody_mD4FACC5527A5D5568E83B905115311714A1B543F (void);
+// 0x00000180 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::BeginCaptureDisposable(Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_BeginCaptureDisposable_m105BBE0542DD40AC1D4733F8B5C11B8A93A870FE (void);
+// 0x00000181 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::EndCaptureDisposable(Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext)
+extern void ILEmitResolverBuilder_EndCaptureDisposable_mC2B230FD363C3F28AD91B7E1B7A2442BB2F5CE96 (void);
+// 0x00000182 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::Ldloc(System.Reflection.Emit.ILGenerator,System.Int32)
+extern void ILEmitResolverBuilder_Ldloc_m3EE748252D90D1CFA9FFEAB6249234C9C62D3D50 (void);
+// 0x00000183 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::Stloc(System.Reflection.Emit.ILGenerator,System.Int32)
+extern void ILEmitResolverBuilder_Stloc_m4FCDAC0FE2A2FDEF37B664C04C67DF8D26D5337E (void);
+// 0x00000184 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::.cctor()
+extern void ILEmitResolverBuilder__cctor_mE7DB25AD8E5EE7B13F7A9406B7B485D7665AAB7B (void);
+// 0x00000185 Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/GeneratedMethod Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder::<.ctor>b__12_0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey,Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitResolverBuilder_U3C_ctorU3Eb__12_0_m0FFF5134FD68994953BAFDFF12C3A815D1337029 (void);
+// 0x00000186 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/ILEmitResolverBuilderRuntimeContext::.ctor()
+extern void ILEmitResolverBuilderRuntimeContext__ctor_mF521E6819751E224EAE3F8757F778D48E7EF59EA (void);
+// 0x00000187 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/<>c__DisplayClass13_0::.ctor()
+extern void U3CU3Ec__DisplayClass13_0__ctor_mCE55CF6477DAFDEE6ECDF20D53E428F3E073B508 (void);
+// 0x00000188 System.Object Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/<>c__DisplayClass13_0::<Build>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope)
+extern void U3CU3Ec__DisplayClass13_0_U3CBuildU3Eb__0_mB7FBCA550974A810D7683572D6DCED1AF6F179E7 (void);
+// 0x00000189 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/<>c__DisplayClass14_0::.ctor()
+extern void U3CU3Ec__DisplayClass14_0__ctor_mFA412466515C9892463BB18B8AC996248F8406A0 (void);
+// 0x0000018A Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/GeneratedMethod Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilder/<>c__DisplayClass14_0::<BuildType>b__0(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCacheKey)
+extern void U3CU3Ec__DisplayClass14_0_U3CBuildTypeU3Eb__0_m893FFC3DFCB770C3A8A6A583457EB1ADD9F0D1EE (void);
+// 0x0000018B System.Reflection.Emit.ILGenerator Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::get_Generator()
+extern void ILEmitResolverBuilderContext_get_Generator_mB03F3998E0E89930FBA1E3C72E125ED9B227B203 (void);
+// 0x0000018C System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::set_Generator(System.Reflection.Emit.ILGenerator)
+extern void ILEmitResolverBuilderContext_set_Generator_mABC23D210AC137AB9FEC3BD6AFDC3D0786DA449B (void);
+// 0x0000018D System.Collections.Generic.List`1<System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::get_Constants()
+extern void ILEmitResolverBuilderContext_get_Constants_mD7A739010CA48AE6CA67A5D4CC3828029A6ECD08 (void);
+// 0x0000018E System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::set_Constants(System.Collections.Generic.List`1<System.Object>)
+extern void ILEmitResolverBuilderContext_set_Constants_m52A87A298D586FD331D3C91BB187AACD2AEB43F1 (void);
+// 0x0000018F System.Collections.Generic.List`1<System.Func`2<System.IServiceProvider,System.Object>> Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::get_Factories()
+extern void ILEmitResolverBuilderContext_get_Factories_m5A84ED746C9EDC9E2C097D8D0B8D5DEF152E42C2 (void);
+// 0x00000190 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::set_Factories(System.Collections.Generic.List`1<System.Func`2<System.IServiceProvider,System.Object>>)
+extern void ILEmitResolverBuilderContext_set_Factories_m79475FC83EFA2E4D33A2C8C854B1036D7F5F0CC6 (void);
+// 0x00000191 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitResolverBuilderContext::.ctor()
+extern void ILEmitResolverBuilderContext__ctor_m558CA556A48CF5B94F407A7C8F1260E7B52DFC98 (void);
+// 0x00000192 System.Void Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitServiceProviderEngine::.ctor(System.Collections.Generic.IEnumerable`1<Microsoft.Extensions.DependencyInjection.ServiceDescriptor>)
+extern void ILEmitServiceProviderEngine__ctor_m177D011096E540306E4C56CA0834CDA6EC075DAD (void);
+// 0x00000193 System.Func`2<Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope,System.Object> Microsoft.Extensions.DependencyInjection.ServiceLookup.ILEmitServiceProviderEngine::RealizeService(Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceCallSite)
+extern void ILEmitServiceProviderEngine_RealizeService_m11136E4F56BB553D4EC9DF3C59FD15B765C9BBB9 (void);
+static Il2CppMethodPointer s_methodPointers[403] = 
+{
+	EmbeddedAttribute__ctor_m58603E2CC1F3A5C87912D16BC7A5D1C9441C0F21,
+	NullableAttribute__ctor_m42E341ED3E0300DDEC0FBC8E7BD7BBF2283CBD3F,
+	NullableAttribute__ctor_m89138048B008022BD1AF1D394A1624DC26D82114,
+	NullableContextAttribute__ctor_m13FCE9220EFEE3B67B686BCFE8C5B9614E5B75F9,
+	NullablePublicOnlyAttribute__ctor_m5D70D8FDAC10CD05B75F4DCE63A569EAFAD09BBB,
+	SR_UsingResourceKeys_m197015C33BFC35F8B19535895C653AC30AE56DCA,
+	SR_GetResourceString_m522890F1DA129374CA010AD8A00C92B276791749,
+	SR_Format_m70A778D895139E76B026B5A2B45A721AC1A590A2,
+	SR_Format_m64DD8B889F97CB883FFE24841BFF3856105490FE,
+	SR_Format_m9DB5DB09F87960A2B568BC6E4547EF616C8B028F,
+	SR_Format_m4F3F23BACE720DC376CCACEA374061A45E117E10,
+	SR_Format_mF0651B0DD6DAABAFF2754D38E52CD31AF4DF69A8,
+	SR_Format_mE72F79B52CC4934E519F46EB3F970E7C526DFD32,
+	SR_Format_mE4CA405ACC364200CF0CBC65728CC05E3AC80298,
+	SR_Format_m2461147E3AEFFA7CF5296ED79499A221050BFFAA,
+	SR_get_ResourceManager_m50615AC30B63D6FCE97492B85F9F802302D27183,
+	SR_get_AmbiguousConstructorException_m289BE6CDB71489FC9B4FC9868213BADE8D08D1F8,
+	SR_get_CannotResolveService_m8BFB3690AAE8346C6FBEF80733C8D16953CA0C49,
+	SR_get_CircularDependencyException_m2DCFA1848FFCC93EB7D30688FBAF07C202233DB9,
+	SR_get_UnableToActivateTypeException_m73D25BDB8A8E3C9587FA35B5B39815548AB923A6,
+	SR_get_OpenGenericServiceRequiresOpenGenericImplementation_m064AE221598FE3D31EB4BA7856AE08D33AAE780B,
+	SR_get_TypeCannotBeActivated_m10C3E85BE68CFA1EB03CDD5A10E7CA702C50C83F,
+	SR_get_NoConstructorMatch_m87D0CBCF7ECBF95BD62E2C809D5CBEDD3F7B45F6,
+	SR_get_ScopedInSingletonException_m95F7970CA6D1CBB99D8D82AC5C557D4C4A9606E7,
+	SR_get_ScopedResolvedFromRootException_mD35D4E6D538E5DA37D96D178D28297162D23ADEA,
+	SR_get_DirectScopedResolvedFromRootException_m225996DFEB9298CD3473D2CF283CD7B007A2F01D,
+	SR_get_ConstantCantBeConvertedToServiceType_m9D62F7E243CD17111860764FCB058AACA28C8F66,
+	SR_get_ImplementationTypeCantBeConvertedToServiceType_m2586FBF988ABD284B5690F555E9796DA60EE4A92,
+	SR_get_AsyncDisposableServiceDispose_m6BDA71E501E964E10FA25207D2A525C149A4F5CF,
+	SR__cctor_m439E9F30D1DC90FC216A8F11D399B9C2689E0CDD,
+	DynamicallyAccessedMembersAttribute__ctor_m04AB38BDC656E7759224DF23751CA1188700F511,
+	DynamicallyAccessedMembersAttribute_get_MemberTypes_m68D5021F5528E1799DB6544BB159ADC1933FC430,
+	UnconditionalSuppressMessageAttribute__ctor_mE3B9F1757741E3DF39B1C62161309BA12FEAAA3F,
+	UnconditionalSuppressMessageAttribute_get_Category_mE58856C294338D160E3C9C9483925C96E4D96366,
+	UnconditionalSuppressMessageAttribute_get_CheckId_m0FFB9EFEF281FBE7A52B4A9E21B9D8857859AFB4,
+	UnconditionalSuppressMessageAttribute_get_Scope_m523F6898F3CFBEC4752E03DD527BA1E9FA07FFAC,
+	UnconditionalSuppressMessageAttribute_set_Scope_mB5F189D8F461F7FD906ADCD7EBCC49D675AA72DD,
+	UnconditionalSuppressMessageAttribute_get_Target_m3A2EBF8CC190A93FECC38844CD25682CA6421F10,
+	UnconditionalSuppressMessageAttribute_set_Target_mF696C55211D365B5FD5627E3D519433232C18130,
+	UnconditionalSuppressMessageAttribute_get_MessageId_m5AB758F39125951CABCF9D75CB9BF2C38968850D,
+	UnconditionalSuppressMessageAttribute_set_MessageId_m5E5A50A486C27C123F6263D8ABE7FA9CE96CAEA4,
+	UnconditionalSuppressMessageAttribute_get_Justification_m72185F25A2F9A5D37475A984D564A14194B2EF0C,
+	UnconditionalSuppressMessageAttribute_set_Justification_mACAFBDE1649F566C527F436B4DE1C52B295477EF,
+	ParameterDefaultValue_TryGetDefaultValue_m8E036419064C7518C4E6EBBA68AF0F5F8ACD8A8F,
+	ParameterDefaultValue__ctor_m5FCF31F585DBD3172441AD8F67AF2A20AE9F992B,
+	ParameterDefaultValue__cctor_m1781370B95C911867A2C4910619255A51B97EB5A,
+	ParameterDefaultValue_U3CTryGetDefaultValueU3Eg__CreateValueTypeU7C1_0_mB9838FB6054FB33A37F35949F5B8182509DE309B,
+	TypeNameHelper_GetTypeDisplayName_m8E9E2025958DD9347F20F01567C5811A8561C8E0,
+	TypeNameHelper_GetTypeDisplayName_mE6B8DD697BFDC486CFD2A90FA255122413248D5B,
+	TypeNameHelper_ProcessType_m9156C8687596519FFA18E9BDB701F1C13ABD9F8D,
+	TypeNameHelper_ProcessArrayType_mBC5B9DA28533ABAEBF6CDC44B39A6773B615DBD8,
+	TypeNameHelper_ProcessGenericType_mF18CD0EE018CF5CBBAD6A2033F7F0ADC4578108F,
+	TypeNameHelper__cctor_mDC7BBCF68D1247398ED098201D29F6EE83D32B78,
+	DisplayNameOptions__ctor_m381B8E264DA53F0FD2697F7B51B7BA345B708A5C,
+	DisplayNameOptions_get_FullName_mE2D256AABE29FE34DFB3C840581988442234B583,
+	DisplayNameOptions_get_IncludeGenericParameters_m933420A509C59AA31091DDC62082CBBB039032F8,
+	DisplayNameOptions_get_IncludeGenericParameterNames_mEEBEFEC05A09F34509EBCA5BAA49A1828ACF640C,
+	DisplayNameOptions_get_NestedTypeDelimiter_mFB07B7D2B82380F65CA2F4346D02C7280A79745A,
+	CallSiteJsonFormatter__ctor_mCD4FA20C3B0F45BA7822B4A7C1F35C1B3098C756,
+	CallSiteJsonFormatter_Format_mF3C5A3E3E57753BFAB8BD5AF03FE97FDA541C821,
+	CallSiteJsonFormatter_VisitConstructor_mFC84466EE4184ADDD70BF02D60401C19576F60BB,
+	CallSiteJsonFormatter_VisitCallSiteMain_mA0ED80441F3433C37D814C42E034204E7AD8CB79,
+	CallSiteJsonFormatter_VisitConstant_mFBC7A609FBA25BA740ADF280235BE6423FE2D23D,
+	CallSiteJsonFormatter_VisitServiceProvider_mEBDF13E7CF4C99C209BAA20E48976A358FB28151,
+	CallSiteJsonFormatter_VisitServiceScopeFactory_mB63476667677F1D032B5506A3DC9AA6E2D5F6D65,
+	CallSiteJsonFormatter_VisitIEnumerable_m59CE94043202A89AF0487CF98EF3AC50A15A0786,
+	CallSiteJsonFormatter_VisitFactory_m18D5F59A4A452B5A3E84FF3F8079F9D41A51B09D,
+	CallSiteJsonFormatter__cctor_m35FF79E6C9776F0F2233EA95EF9B09CC23C3CDD9,
+	CallSiteFormatterContext__ctor_m987F48B9B3A9B4034E70326CE1069F8EABA5ACD9,
+	CallSiteFormatterContext_get_Offset_m243E1081D74DE3254EC319A3DAD2B254FEAB8723,
+	CallSiteFormatterContext_get_Builder_m577AEBC3F276A90608E2EC36751D8652850CB20D,
+	CallSiteFormatterContext_ShouldFormat_mA43F1D8230B3087ECA0A74B68999AA348E45F4E6,
+	CallSiteFormatterContext_IncrementOffset_m353858D57EE30EEAA83345CC00FBA83825017512,
+	CallSiteFormatterContext_StartObject_m45B348A3C1D6FA0E5049645F9C6584EB6440270B,
+	CallSiteFormatterContext_EndObject_mAC19C8A0D6CA1FEA072721B53EBD5EBC8D4955DC,
+	CallSiteFormatterContext_StartProperty_m68029F2A9622CA03C4B395A2A02C4C8847C88A8D,
+	CallSiteFormatterContext_StartArrayItem_mA5C2DC1790E1F1BF665449E3FAE7D35F928A79F8,
+	CallSiteFormatterContext_WriteProperty_m46CD34839B89CF374AFAA1941203F45DC3413FCF,
+	CallSiteFormatterContext_StartArray_m83B7DC171B831814C89BA43F99FB1D4BE6D2459E,
+	CallSiteFormatterContext_EndArray_mBC2E8E737D605D91317F4B111E11368F4250D1D7,
+	DefaultServiceProviderFactory__ctor_m773FD62A4145298A5BE5DAE8DAA539D60DB48414,
+	DefaultServiceProviderFactory__ctor_m44BD96EE20B2CFB7209FDC639E8791DFE1989916,
+	DefaultServiceProviderFactory_CreateBuilder_m3039F9E1AAC47AFFBB55F4D3C8C0D593814A6A42,
+	DefaultServiceProviderFactory_CreateServiceProvider_mD94E3E622C5B779F3E16E8DF1547D315C15F8A5D,
+	DependencyInjectionEventSource__ctor_m296BC23BAB619A04FEAAEE294859F3FDDFC9E490,
+	DependencyInjectionEventSource_CallSiteBuilt_m1E77A02D72172825D71912F0E3CAD220D97A2F22,
+	DependencyInjectionEventSource_ServiceResolved_m81EED35C462B5F0F48EDEEE8B80D08E5D3C54292,
+	DependencyInjectionEventSource_ExpressionTreeGenerated_m422E86F0E6DE65254DC599E2DB285604B3576CA5,
+	DependencyInjectionEventSource_DynamicMethodBuilt_m34E8AFDFFE99BD285C9295605D81D9828CCC8FED,
+	DependencyInjectionEventSource_ServiceResolved_m4118903353045D2246CC0DD2097FC7FD9ADCD58B,
+	DependencyInjectionEventSource_CallSiteBuilt_m5FFDA3632D6AD20E18EF744787767A4AE960BC8F,
+	DependencyInjectionEventSource_DynamicMethodBuilt_m05185AC6D01DA8CACA8432BFAEC1A6EB6828859C,
+	DependencyInjectionEventSource__cctor_m077AC69124831E3C3084797084F701FE0E077496,
+	DependencyInjectionEventSourceExtensions_ExpressionTreeGenerated_m3B183BF1C02B188CC0260BC0F0FC8BDEF6DBEC99,
+	NodeCountingVisitor_get_NodeCount_m6531F1683FF2617A68361B660D1538666CC18BB0,
+	NodeCountingVisitor_set_NodeCount_m11DAAE762A7249AB60548322BB720C37334C8683,
+	NodeCountingVisitor_Visit_m41C615E0086D7FB251BA821506C80E1CF39C450D,
+	NodeCountingVisitor__ctor_mDADD790061F62FE1646034DA297B96EB5D3AEE5D,
+	ServiceCollection_get_Count_m39B06F413CFB543B0D31C234CD7636B94B78DD8F,
+	ServiceCollection_get_IsReadOnly_m5E02442C7E4F7CAA1C9AF7A4BB082E157BA1CD06,
+	ServiceCollection_get_Item_mF5261EA01044898F8839CF2A6BAED54B00D52E7C,
+	ServiceCollection_set_Item_m429228AC92958DC8BB498B1FB881EDF6FEF1B7DD,
+	ServiceCollection_Clear_m1C5FCE0195AE6A0C9D420A762FB9338583377792,
+	ServiceCollection_Contains_m042527248782002CB4269247616D89DB164CAD3B,
+	ServiceCollection_CopyTo_mC2C3A33928193E7CCB0D247C999C107806011100,
+	ServiceCollection_Remove_m2728338CCF1EB6416848A4CE4D565F02BB6F4026,
+	ServiceCollection_GetEnumerator_mF09718435CE545CF23A527250392B4E94BA79BD0,
+	ServiceCollection_System_Collections_Generic_ICollectionU3CMicrosoft_Extensions_DependencyInjection_ServiceDescriptorU3E_Add_m4176C22D86E4B086916078B5E3D798E4BD25C6D0,
+	ServiceCollection_System_Collections_IEnumerable_GetEnumerator_m8517BEA4EF5B61E14DA97C5BD5A8A4DB59E4BC1B,
+	ServiceCollection_IndexOf_mE1CE84EF4CAF4081C2A4F354B3634A53E90303A8,
+	ServiceCollection_Insert_mBF7872DF6F6B2FEE6CFE031C5C54BE3D2FF52302,
+	ServiceCollection_RemoveAt_m873FAAD2C23DCB0BE54821FBC987B7FBAC17B8DD,
+	ServiceCollection__ctor_mA233C9A5191A8A87B928617BE9B81E15F0F312C1,
+	ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_m75A46B576C4EAF4DA4D94EEB9DD8941F3F19CDB2,
+	ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_m12720DD77C4BDDCB5223B05AE8445FE558AEC8C1,
+	ServiceCollectionContainerBuilderExtensions_BuildServiceProvider_mC012B95D3D23D8FA9F1E05BFEF2DB36F087340F8,
+	ServiceProvider__ctor_m147242100DF98FCC6D390513FC3BB3A81B2468E6,
+	ServiceProvider_GetService_mA9C822EE0E1F2E54F2D843B35F8FD2BE5DAD43A7,
+	ServiceProvider_Dispose_m3F83B5922E0481B2A6200ECA06167C783BAB76F5,
+	ServiceProvider_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngineCallback_OnCreate_m8E50D91539F29E9A9AD731E1224F254005F185A4,
+	ServiceProvider_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngineCallback_OnResolve_mA4045640AAF35C46AE0D00432181A1B09B5524CB,
+	ServiceProvider_DisposeAsync_m45FA93FF27A16D0A46381081DAA823D01D082C3A,
+	ServiceProviderOptions_get_ValidateScopes_m270A46EE3B3CF7F7F9C41CEB537620986145130B,
+	ServiceProviderOptions_set_ValidateScopes_m38C5EF73FC30FB4CB163C78CF8136DCBA1686BF3,
+	ServiceProviderOptions_get_ValidateOnBuild_m69C2F1A1631578CC75D6206F4C53F3B4FE59B2C6,
+	ServiceProviderOptions_set_ValidateOnBuild_m5E1FD63C2F23B0C2C6876EC7D5E186563B8E3956,
+	ServiceProviderOptions__ctor_m604EDD2AE22C1F9C956BACAA53CB138423FF4F48,
+	ServiceProviderOptions__cctor_mB433482B1E98BB19049F3A43F9186CD3EF52F03B,
+	CallSiteChain__ctor_m7B5C132E004FF3C99FBBF30E149D4805E11BE940,
+	CallSiteChain_CheckCircularDependency_mA201682CA8688106BF576E5D0B9E5CB5E4E4037D,
+	CallSiteChain_Remove_m8784C57455327F1B9094391724622FA0E7893E68,
+	CallSiteChain_Add_m43561F9B9E4E078DFE123CA27DD4FA1728C42221,
+	CallSiteChain_CreateCircularDependencyExceptionMessage_m823AE56858D167DE74A1FE25091123B14AF5FEE5,
+	CallSiteChain_AppendResolutionPath_m8BD79AB5E819B54551E00111A742A77FAACF8868,
+	ChainItemInfo_get_Order_m6DD46F06B4FE04FDEC962854422DCBF8DBBA7D00,
+	ChainItemInfo_get_ImplementationType_mFCD8DD94D09A597FAE7A28195C031FF250949A48,
+	ChainItemInfo__ctor_m7BE2FF2AD9894E7F88808EDAD2A400310C5C4D50,
+	U3CU3Ec__cctor_m1C2B9F6D55EDD12501285C2190CBB0E7A248F614,
+	U3CU3Ec__ctor_mE43236B4006A9FFA0FB006F6369F6594D83AE5C3,
+	U3CU3Ec_U3CAppendResolutionPathU3Eb__6_0_mD4387C16050565B5D4A3F48ADA87E1E40A064025,
+	CallSiteFactory__ctor_mF902E67EA39E83DC4849E3870780F7F368722D2D,
+	CallSiteFactory_Populate_mD071C7448702B46FF368CCABE251D3531FD15D85,
+	CallSiteFactory_GetCallSite_m11412DC4C8C4E8DCCB42CEF0A92604B1357AC31E,
+	CallSiteFactory_GetCallSite_mD12EC820D0C46648A307E4C77C97F7B833F7F39F,
+	CallSiteFactory_CreateCallSite_m71E3F8187A0F1A05577B39F405D1DF8D9D0AB2FD,
+	CallSiteFactory_TryCreateExact_m1E8F46404082BFC43D82E2A9C7185887742685BF,
+	CallSiteFactory_TryCreateOpenGeneric_m809A761C261779781CE5801B438CDF5EA477381A,
+	CallSiteFactory_TryCreateEnumerable_m929E54EFD06E26D784B119C6580962C71960A1F3,
+	CallSiteFactory_GetCommonCacheLocation_m3D542FDAA420B2B7B65799BAAD3CABDDBE118F80,
+	CallSiteFactory_TryCreateExact_mBD8B11749B1257F5A6FFEEF9F443FC55CBBE02D0,
+	CallSiteFactory_TryCreateOpenGeneric_m102E16F7547575ACDACBA1D3601927E1DAFDAE38,
+	CallSiteFactory_CreateConstructorCallSite_m6F692EA10BE17F431520E368A3DCD03C51F7A7D0,
+	CallSiteFactory_CreateArgumentCallSites_mEC83494F52743F6B5D42E6FE5CEB72FDEEB55343,
+	CallSiteFactory_Add_mE8641892BA631EE0EA6D6D3DCAD2EA9E0A9D4B94,
+	CallSiteFactory_U3CCreateCallSiteU3Eb__9_0_mEF0247C6CF8DC88C0FB896737A0170AE24AC05C7,
+	ServiceDescriptorCacheItem_get_Last_m4584035BF41A3C70B84C665E382320EE7AE92E45,
+	ServiceDescriptorCacheItem_get_Count_m8979932157396A550C3C6468B1AA07409213BF3B,
+	ServiceDescriptorCacheItem_get_Item_mEAB96C6579B12DFB2AD9FC39C51A84CC24B122C2,
+	ServiceDescriptorCacheItem_GetSlot_m1626CE2FB135FBF3B5E00ABACEE9156C2158C582,
+	ServiceDescriptorCacheItem_Add_m12F6016B8E7F6CD3EFDC1ED1726B600605B5806A,
+	U3CU3Ec__DisplayClass7_0__ctor_mF7B2D822E463B08586A230FDE40D91320C1E86A4,
+	U3CU3Ec__DisplayClass7_0_U3CGetCallSiteU3Eb__0_m90A5BE8422EC8B828FDE18931B293FAFC722FFB5,
+	U3CU3Ec__cctor_m1434CD30DA21D7DB3A3961BBA08B1FF5009A8BFB,
+	U3CU3Ec__ctor_m2F3C71FB8BF95D74E90F36F01C4182ADA01C8A27,
+	U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_0_m35C24B2A3CF8369EF4E9DE0F05243FD0CCCCAFEF,
+	U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_1_m9586FB8120301D0F5F6947CDD9A6141CA669714A,
+	U3CU3Ec_U3CCreateConstructorCallSiteU3Eb__16_2_mE9D577D46EA724002B8B2A3563E47D879C9C6CE4,
+	CallSiteRuntimeResolver_Resolve_m9F98335AA00ED6D76D705ACEF7376A4EE389BFFA,
+	CallSiteRuntimeResolver_VisitDisposeCache_mA8820FC3AE157CBB5CB9015FFECA5D1DE04D0AA4,
+	CallSiteRuntimeResolver_VisitConstructor_m41E6164E3DD0450E47E525A8D4374FABECDD3ABE,
+	CallSiteRuntimeResolver_VisitRootCache_m32085FD52B208FA9CD7285539E77047D1B2F51A2,
+	CallSiteRuntimeResolver_VisitScopeCache_m0D2703C64D2DD15111CB5B2180DE39621437D23F,
+	CallSiteRuntimeResolver_VisitCache_m043AC1A677FA2F6921AFA83F0E3D15567B127B5F,
+	CallSiteRuntimeResolver_VisitConstant_mD7296B2D62CA104F17095B699DD3CB345A956038,
+	CallSiteRuntimeResolver_VisitServiceProvider_mBC12A4BFC80EB53DA75CB2DAFABDD1C85568E863,
+	CallSiteRuntimeResolver_VisitServiceScopeFactory_mB6F09FBA4236053DD51B1A3279C94BE749AA8991,
+	CallSiteRuntimeResolver_VisitIEnumerable_mB43452E61689CF00C9746598E42BEDC1A54181BD,
+	CallSiteRuntimeResolver_VisitFactory_m1BEDE51E5621A485E9AE11B36228371BC5A9DA5A,
+	CallSiteRuntimeResolver__ctor_m54F6BF4AA4787FCDBD4019EC4FF17A91A9F57837,
+	RuntimeResolverContext_get_Scope_m6EDA737B0C2CE7FA4FBA1A7D07BC1E99DF0C3D70,
+	RuntimeResolverContext_set_Scope_m1EAA8E61408BFDC4AD7AA867B9B73B384F03B305,
+	RuntimeResolverContext_get_AcquiredLocks_mD8623CB1A86194CE38F7164759E05CDDDB7E1C15,
+	RuntimeResolverContext_set_AcquiredLocks_m576E28B8ADB394E1E8AE60981EE7F4724A13AB31,
+	CallSiteValidator_ValidateCallSite_m4302C5C9C76188D149AF4CB098C274766F7C2787,
+	CallSiteValidator_ValidateResolution_mAB68415DA44398B6CF2EE1AB06CD54FA1D18C03E,
+	CallSiteValidator_VisitConstructor_m7214A3658C4A3237AEB34085863B9DCF56097DF2,
+	CallSiteValidator_VisitIEnumerable_mAD1C29624FA4AD18D9C06E189F08E027BF11DEFB,
+	CallSiteValidator_VisitRootCache_m6C1C91E4E4CF4D7540ED31BAB2CD5D9EAA4DF284,
+	CallSiteValidator_VisitScopeCache_mB2F78879EF3FC5352122B142FC8F32DE30B1C8E5,
+	CallSiteValidator_VisitConstant_m6CF36BF47C60F7A8BB436341E11C28FFD0482750,
+	CallSiteValidator_VisitServiceProvider_m3C3D6ACADE52FACB2BEB8E2912547B6892D0E970,
+	CallSiteValidator_VisitServiceScopeFactory_mEDFBC7FA042CA308281EDB227A5D66BCFCBD7413,
+	CallSiteValidator_VisitFactory_mE43301BE13D740BEA04E314AA2A67CFE971DB417,
+	CallSiteValidator__ctor_mBB3DFBE504F8FEABFE025624748C7E3D5EC6CDDC,
+	CallSiteValidatorState_get_Singleton_mFCA960A590ED5EC7E79EB1F800D1C16993A5660B,
+	CallSiteValidatorState_set_Singleton_m2881D2A36F3CB9AD579792EF0D12396C16A2CDF2,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	CompiledServiceProviderEngine_get_ResolverBuilder_m7B6EF01654F320829D18312613614F3E362C90EC,
+	CompiledServiceProviderEngine__ctor_mDCFB2AA0D3FA0561A31BB853E2D8C650F67AACEC,
+	CompiledServiceProviderEngine_RealizeService_mFF85D8627067F67BE29F62B75C959F7921F6C562,
+	ConstantCallSite_get_DefaultValue_m921F91AAC1D6DFD1183EC34EFB2F4A071B73FF3F,
+	ConstantCallSite__ctor_m2DBE8D6A1A5A152E2B0E557086F13092C84597BC,
+	ConstantCallSite_get_ServiceType_m0D5890A7A851281D1612FCB777CACDCC93AD7026,
+	ConstantCallSite_get_ImplementationType_m84F051F33ED0672C2F7D699AC90B46E66AA63BE8,
+	ConstantCallSite_get_Kind_m8830A948453BA3E0033D7E9977635796CFD5C37C,
+	ConstructorCallSite_get_ConstructorInfo_mC6642D0BC3E08455CF234E8A588BBB607A561075,
+	ConstructorCallSite_get_ParameterCallSites_m285509B4AE1A4D8E91AED4CB502C5FDAECA387B5,
+	ConstructorCallSite__ctor_mBC3F8957E78B71F394DDA46794AD7805C329ED44,
+	ConstructorCallSite__ctor_m47B5ABA7386166CD86E05ADFD5F05655C38D1367,
+	ConstructorCallSite_get_ServiceType_m41E60BF81543E34A426C40B19A5960EA758F7C99,
+	ConstructorCallSite_get_ImplementationType_mA0810E5B1F92FEC56558E1F0A6542BF504BD21F0,
+	ConstructorCallSite_get_Kind_m733DFBC3D70607DF592D060F2B35C81C2038CF21,
+	DynamicServiceProviderEngine__ctor_m5332D2DB217BF2E25181EB351C60541D20A54554,
+	DynamicServiceProviderEngine_RealizeService_m1C1D8A8E199E84F7A7B5A1D7910209C8DADDD33F,
+	DynamicServiceProviderEngine_U3CU3En__0_mB58D3FE5FD67136F63D4D52F6C9632F7E6D018E6,
+	U3CU3Ec__DisplayClass1_0__ctor_mA4D6633398DEC0F602EA0C285B22960B307CCF09,
+	U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__0_mE5A7DB677F0342335FB79004EB0C23ED72B1BC76,
+	U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__1_m63F2138CBE56073606E8F64E5807BAC8345F6B6D,
+	ExpressionResolverBuilder__ctor_m801559AE0A705DD4AAF59D611F138FEA9FC96BF8,
+	ExpressionResolverBuilder_Build_m73D8CC57870A5D1DB6FF1FEB5C6CC15BCFB4153B,
+	ExpressionResolverBuilder_BuildNoCache_mBACF23A35D149E4131DCCDBF22043A9F142E59E8,
+	ExpressionResolverBuilder_BuildExpression_m8A87CAAD886261E13E703E122B7C4AA5FF170141,
+	ExpressionResolverBuilder_VisitRootCache_mF0DA868F99BAC801768116CDBE68A737EF3AA7E8,
+	ExpressionResolverBuilder_VisitConstant_m0F142F939288040D5851177D214B0662613309D1,
+	ExpressionResolverBuilder_VisitServiceProvider_mE00F80ACA03F7B620DAEDA6E943F763EA88F530C,
+	ExpressionResolverBuilder_VisitServiceScopeFactory_m819FE79548DABA3EEA1C62E747D2A612B19DEE0D,
+	ExpressionResolverBuilder_VisitFactory_mD7332F7C7AC516D080DB3F819BC53B66946A2F29,
+	ExpressionResolverBuilder_VisitIEnumerable_m580D2EAFA77995445E7AEFD8DE096DBBBCEB3E7C,
+	ExpressionResolverBuilder_VisitDisposeCache_mB87B52DBA0C5C102719F54C7E77CE2051CC2C5FE,
+	ExpressionResolverBuilder_GetArrayEmptyMethodInfo_mEBADB926A777A7F95BC61B145FDF81E902086947,
+	ExpressionResolverBuilder_TryCaptureDisposable_m9C2AE5033E2EFFD3064C64D2242DF3B4BB0857DB,
+	ExpressionResolverBuilder_VisitConstructor_mA248C2A8E55E62B7A6E7354010EAEA0D823BB175,
+	ExpressionResolverBuilder_Convert_m8B5BAE235911ACDB471F8C8A8A0AAB09455999C2,
+	ExpressionResolverBuilder_VisitScopeCache_m7EE6E138F73173B1AA3CEB890C7492231D38C0CE,
+	ExpressionResolverBuilder_BuildScopedExpression_m4E93352D18E37002CE34A4D083C168230DEADD77,
+	NULL,
+	ExpressionResolverBuilder_GetCaptureDisposable_m5A257BC807795FFC14CBA5500FD4F73C633BB667,
+	ExpressionResolverBuilder__cctor_m6B9D044E299D064C00005A4535DD2C51397C7258,
+	ExpressionResolverBuilder_U3C_ctorU3Eb__17_0_m7E713DCF1BE56561BF67F5ED7AF04601895D9882,
+	U3CU3Ec__DisplayClass18_0__ctor_mC6D47B619BAAAA231D30CB182324882FD27F8BDF,
+	U3CU3Ec__DisplayClass18_0_U3CBuildU3Eb__0_mC598937E5DE3F2A927AC7D2C0E8BF8B5B0E463FA,
+	U3CU3Ec__DisplayClass18_1__ctor_m731F97AAB32266CCDCA6D561F7D088C6C0970B99,
+	U3CU3Ec__DisplayClass18_1_U3CBuildU3Eb__1_mD45A1097F0FAB069327829257CC0BF843783015D,
+	U3CU3Ec__DisplayClass26_0__ctor_m556BD3C5480F6C7E1AE53C554222FABCF0447EBC,
+	U3CU3Ec__DisplayClass26_0_U3CVisitIEnumerableU3Eb__0_mB38CA68BCD833B875A558514D41B0D2CCDF56C3D,
+	U3CU3Ec__cctor_mD4E5334B05DD33E31E603BB5867107EF92677D37,
+	U3CU3Ec__ctor_m7BFF07D4CDD04A926B9FC4E1EEFD2BD901320F87,
+	ExpressionsServiceProviderEngine__ctor_m878B09F76F44D14600AD53AE8773772125146CA5,
+	ExpressionsServiceProviderEngine_RealizeService_m8F19C45F42AAC29852507823AC78C866B7456F3D,
+	FactoryCallSite_get_Factory_m5A90B0368398B08CDB732165BD54219C653EB948,
+	FactoryCallSite__ctor_m27D6F8056A25EA986F7A027174F934E7513953BA,
+	FactoryCallSite_get_ServiceType_mFE9F318A5C409E032D6AC31DC5C251C0F4DC4DC2,
+	FactoryCallSite_get_ImplementationType_m1CD9F21D44D809F81F617D27F6A73EC3A7A0188C,
+	FactoryCallSite_get_Kind_m9E347418951560255DF745ABC32509BFE94F18FE,
+	IEnumerableCallSite_get_ItemType_m692AD86DE0D5CDC96180A350A4B2933B37C24013,
+	IEnumerableCallSite_get_ServiceCallSites_mA80E82D6256200A3CA4A7A8C28D61671D7EFD5A3,
+	IEnumerableCallSite__ctor_m56EF30622C6021D0605E6DBA25785921D7D2A204,
+	IEnumerableCallSite_get_ServiceType_mC3769A12F5A10838696F2B5191290A9FD6A4FA23,
+	IEnumerableCallSite_get_ImplementationType_m06A51AE0704BC14CAE97D695BEF7D75DDEE5DBB3,
+	IEnumerableCallSite_get_Kind_m76D7AE772403A70560C7B78634B41C01ADB59BBE,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ResultCache_get_None_m56841A9BF8319E55A41B05103B4851DDFBEC09EB,
+	ResultCache__ctor_mD100A86B9DB5CBBED04CBB7CF3AD8510263F0437,
+	ResultCache__ctor_mE35D6FA6C4FB0AB209D17155E13CC43F970C5FBC,
+	ResultCache_get_Location_mC6998DC9DA8081C280FDC4058B401DEEE26BCE0F,
+	ResultCache_set_Location_m6713C29A59D2EFF8885C5FE4F4E860B2751F8537,
+	ResultCache_get_Key_m3C2B723CFAB736075A45A9B4B9E08EAE69BB89F4,
+	ResultCache_set_Key_m895DE0D45DF9B6AEC7649FAD5A34913C002CCCA5,
+	ResultCache__cctor_m2A4A9EE2C0802545CAACB1D8FDCAB38C631982E7,
+	RuntimeServiceProviderEngine__ctor_mF3BF5A6C0BC32FEFF2C4AE88E277DD23AB92D0A6,
+	RuntimeServiceProviderEngine_RealizeService_m00ECAAB2F1E5EEB7A75CA5E542061B187F9CA64E,
+	U3CU3Ec__DisplayClass1_0__ctor_mB93BA7A0FBD19218DFFE977DCAE1DF96C730AD56,
+	U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__0_m77CE9806270CC5362BA596AC4CB3632720DA333C,
+	U3CU3Ec__DisplayClass1_0_U3CRealizeServiceU3Eb__1_m16C2434F7F7C9A7EAC82DAF4AE66C9B45F1C20E2,
+	ServiceCacheKey_get_Empty_mAE34009AD0EA47E3DBD10A25919EC27B1DE22E24,
+	ServiceCacheKey_get_Type_m5ED22D00E11A31475310D1D5C4D75747A448AB1D,
+	ServiceCacheKey_get_Slot_m2E351CF073D9910205760D9CFB994BFF52689143,
+	ServiceCacheKey__ctor_m64A22FC7E77F6816F9A4CDDFA54F360ECC72F8CA,
+	ServiceCacheKey_Equals_m7C056BBE5A52033112596955EF76DFCB22A60C27,
+	ServiceCacheKey_GetHashCode_mDD372F844B83E82A6F7C664C12F48F5ACD356835,
+	ServiceCacheKey__cctor_m4F9948E435D864AD216F214E00CF85ACEFE61662,
+	ServiceCallSite__ctor_m944ACFB64DD1472A75203A7309AD9BAD97B10EA6,
+	NULL,
+	NULL,
+	NULL,
+	ServiceCallSite_get_Cache_mE771FF8F1F7BB301CE468B79FA791639DDD0698F,
+	ServiceCallSite_get_CaptureDisposable_mC70227526CF19FCDE33C55D137DFDCB152C28686,
+	ServiceProviderCallSite__ctor_mE95D239C1063D7B2C55F2E905702CF43DE0C9173,
+	ServiceProviderCallSite_get_ServiceType_m7E592EB3798F1969BF63E29C4FA363DB97B1D5B8,
+	ServiceProviderCallSite_get_ImplementationType_mBE354778D5DAB76304C7895FAE8571ED2F7FE8D9,
+	ServiceProviderCallSite_get_Kind_mDD76B93291996E67A0CF9355DAEA4A637B110F00,
+	ServiceProviderEngine__ctor_m2C293ACDA9F3E854B1BF9867CBD7744C0B56F11D,
+	ServiceProviderEngine_get_RealizedServices_mD596FD2FA756ACC7A80E03A184BE902584B521A9,
+	ServiceProviderEngine_get_CallSiteFactory_m3F691D34510522C88D8DCE83801B3F5061DF284A,
+	ServiceProviderEngine_get_RuntimeResolver_m8A44173763CE8BD0330159E20EEE4D2C89D94F41,
+	ServiceProviderEngine_get_Root_m79CC5777B53E346770FB309C4FD962472DBC73C1,
+	ServiceProviderEngine_get_RootScope_m2447B3357D6FAF0A2778C731D7F8150FDDF76770,
+	ServiceProviderEngine_Microsoft_Extensions_DependencyInjection_ServiceLookup_IServiceProviderEngine_InitializeCallback_mF02282B144025CB367BC72E018E50CED9E44E1C1,
+	ServiceProviderEngine_ValidateService_m7378DF2FF9AE51BEE931F08A2FCF2ECEF86A0C46,
+	ServiceProviderEngine_GetService_m70E8DFFA4048401BAE4121C159A4A2A85EC33758,
+	NULL,
+	ServiceProviderEngine_Dispose_mDE139C829ACD0047564E54DF76438856128B9683,
+	ServiceProviderEngine_DisposeAsync_m547BEDE1086FEF53526227F0D15CD4B383FFF354,
+	ServiceProviderEngine_GetService_mEE590B690DBE62672B947D6221D85592E1AEAEBE,
+	ServiceProviderEngine_CreateScope_m437198AE342800383C5590BDBCC8CF283A5096C5,
+	ServiceProviderEngine_CreateServiceAccessor_m976C99954F7AE1BEFB7F5EEF172C40A697F9C9C3,
+	U3CU3Ec__cctor_mC7CAEE8A8542C0E4E0E231EE5A7928D2C1424DEA,
+	U3CU3Ec__ctor_m71530BD4B42DA1DA7F4FEB310CC9EA7051D7A4E6,
+	U3CU3Ec_U3CCreateServiceAccessorU3Eb__26_0_m5EEE2858AA3BA9691B379D37B01DB86006BECF21,
+	ServiceProviderEngineScope__ctor_mD3180A991D2D00414F2EF73BFFE24A5F42F95B1E,
+	ServiceProviderEngineScope_get_ResolvedServices_m50E7F71A77F85E8BBEECB4F6BCFD5F03FBEF6D65,
+	ServiceProviderEngineScope_get_Engine_m114EC3D3A9998B3D73169C9B2558B688A37D7721,
+	ServiceProviderEngineScope_GetService_m9F7E02DDD9609FBBA3A4AEE0F10D77D061F7D29D,
+	ServiceProviderEngineScope_get_ServiceProvider_m862E0DA7BED32D676773E9282A23BD2228AF1A01,
+	ServiceProviderEngineScope_CaptureDisposable_m209748A7E1C5F780FB7413ECB27CFAD480A8555C,
+	ServiceProviderEngineScope_Dispose_mBE818E78F3868C0A2256955262A9B9A6C1526A7F,
+	ServiceProviderEngineScope_DisposeAsync_mE4DA77BF93C71167A49951804FD9DB9C4B99A665,
+	ServiceProviderEngineScope_BeginDispose_m2F62F49BAE51846F24D03160D133F6947B6C4438,
+	ServiceProviderEngineScope_U3CDisposeAsyncU3Eg__AwaitU7C15_0_m79DEEDF06811162838671C15ABA56845A6612A34,
+	U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_MoveNext_mF53AD9E8BFEC5B4C64976BD5D8DECEF301F3CD0A,
+	U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_SetStateMachine_m8F30B0CACF3E67C0130D0FF7CAA6CFD3E6FF3234,
+	ServiceScopeFactoryCallSite__ctor_m8ABE0500B9956971DFC986D7587B048C322BFE03,
+	ServiceScopeFactoryCallSite_get_ServiceType_m03D2C5F4E0AE5557B0FBCA3D902CC44EFBBDA188,
+	ServiceScopeFactoryCallSite_get_ImplementationType_mEEFE093C2B07AEBBD154A8308650CB3A172DA6E5,
+	ServiceScopeFactoryCallSite_get_Kind_m42DCBFE19D84E96ECC776816CAC695DA6ADE3897,
+	StackGuard_TryEnterOnCurrentStack_m5AAB578B1036B3F8069325C2024202C6C4692765,
+	NULL,
+	NULL,
+	StackGuard__ctor_m4B252A87F209BBD46C295CF11B28E3964E70FA05,
+	NULL,
+	NULL,
+	NULL,
+	ThrowHelper_ThrowObjectDisposedException_mB2639AABFD0F45A194C6B705C940B3193608C2EA,
+	ThrowHelper__ctor_m99C5151F94FD2A727C2047EBB6B53E09443BE8B3,
+	ILEmitCallSiteAnalysisResult__ctor_m73A38316C16DEC0493E3E62AC277AD57CD4861DC,
+	ILEmitCallSiteAnalysisResult__ctor_m697E79A462FDE1E1DE43B2CC7013FEF3F3594E4F,
+	ILEmitCallSiteAnalysisResult_Add_mBEA591D96A58D84CB8DE2DB284214D77CB67E7F2,
+	ILEmitCallSiteAnalyzer_get_Instance_m63A80D9173CA9EBD665E3DDC201A1F5549BC46F4,
+	ILEmitCallSiteAnalyzer_VisitDisposeCache_m8FA769B54CFA1F9A82C34B4C7D3420CF57E35DF3,
+	ILEmitCallSiteAnalyzer_VisitConstructor_m5CC25B2026055C4B259A203FCAE636A0FCA72066,
+	ILEmitCallSiteAnalyzer_VisitRootCache_mB2B09F6B432817F14CACC4A97EAA81536DC13313,
+	ILEmitCallSiteAnalyzer_VisitScopeCache_m4A04633B4B22BF9D5352F2F664AB032297F2128A,
+	ILEmitCallSiteAnalyzer_VisitConstant_m3DB4104188B1626D501C4E14AB10A5069C22F21B,
+	ILEmitCallSiteAnalyzer_VisitServiceProvider_m2B9617AA5314B37743E7D0CAB567F3F0B2A4975E,
+	ILEmitCallSiteAnalyzer_VisitServiceScopeFactory_m0193055DA39FD4A236FFE07D2CE28F51A59DD658,
+	ILEmitCallSiteAnalyzer_VisitIEnumerable_m0FAD914CC49A1FA10D7B33035ECB5CD7A8B87F37,
+	ILEmitCallSiteAnalyzer_VisitFactory_m493A0311A05C3A6E68E74649F168611A7DFC6AF0,
+	ILEmitCallSiteAnalyzer_CollectGenerationInfo_mBCF713C952A4E51A7F4517010B33518ACF99A2FE,
+	ILEmitCallSiteAnalyzer__ctor_m7AF6DB5998A1487F744ADD03F93AA89583D6E98F,
+	ILEmitCallSiteAnalyzer__cctor_m10A013AEA0090FA2D311A282E8EE17BB938A6CFC,
+	ILEmitResolverBuilder__ctor_m233953F61B9631FC487822DD7F27321CD1ADB88D,
+	ILEmitResolverBuilder_Build_m8A85125EC4888B8AE664F1DD3B9324CC384EA6E9,
+	ILEmitResolverBuilder_BuildType_mB4AA21A9D40128D4BC1931D358E62D188A3F4755,
+	ILEmitResolverBuilder_BuildTypeNoCache_mE0F3D0C66129CCB33CFEB69A0E0C58A078EED3C2,
+	ILEmitResolverBuilder_VisitDisposeCache_mBAB0FEE933C012BAAF97226905E6936162A96FC2,
+	ILEmitResolverBuilder_VisitConstructor_m4B598FD1B8C579901DEA0143C553ADC26A91087C,
+	ILEmitResolverBuilder_VisitRootCache_m7E3C266CDE7A666FCD1CC8351A07CD65A9C0C16A,
+	ILEmitResolverBuilder_VisitScopeCache_mDA6332ADE9EA98AD45AB36903C804B2C11ACC680,
+	ILEmitResolverBuilder_VisitConstant_m117517E7F43DC5E60DE5D3CF8E1812DB1F44F527,
+	ILEmitResolverBuilder_VisitServiceProvider_mC85E2C4649087E74CD41E23012B7534142BD7765,
+	ILEmitResolverBuilder_VisitServiceScopeFactory_m3002AB77C836DD2B4EFE4AAC218C5CEF41DF4BA0,
+	ILEmitResolverBuilder_VisitIEnumerable_m77BDC1358096F51D074D4472130DC0EA02CCB794,
+	ILEmitResolverBuilder_VisitFactory_m6292E33EE5797CA652F2059770CD0D40839E48D1,
+	ILEmitResolverBuilder_AddConstant_mE2B19216D6E64C2054733625695969CB3A6E1332,
+	ILEmitResolverBuilder_AddCacheKey_mE7D2566ABFBE24960A0EDFB6491EBDE287B04FBC,
+	ILEmitResolverBuilder_GenerateMethodBody_mD4FACC5527A5D5568E83B905115311714A1B543F,
+	ILEmitResolverBuilder_BeginCaptureDisposable_m105BBE0542DD40AC1D4733F8B5C11B8A93A870FE,
+	ILEmitResolverBuilder_EndCaptureDisposable_mC2B230FD363C3F28AD91B7E1B7A2442BB2F5CE96,
+	ILEmitResolverBuilder_Ldloc_m3EE748252D90D1CFA9FFEAB6249234C9C62D3D50,
+	ILEmitResolverBuilder_Stloc_m4FCDAC0FE2A2FDEF37B664C04C67DF8D26D5337E,
+	ILEmitResolverBuilder__cctor_mE7DB25AD8E5EE7B13F7A9406B7B485D7665AAB7B,
+	ILEmitResolverBuilder_U3C_ctorU3Eb__12_0_m0FFF5134FD68994953BAFDFF12C3A815D1337029,
+	ILEmitResolverBuilderRuntimeContext__ctor_mF521E6819751E224EAE3F8757F778D48E7EF59EA,
+	U3CU3Ec__DisplayClass13_0__ctor_mCE55CF6477DAFDEE6ECDF20D53E428F3E073B508,
+	U3CU3Ec__DisplayClass13_0_U3CBuildU3Eb__0_mB7FBCA550974A810D7683572D6DCED1AF6F179E7,
+	U3CU3Ec__DisplayClass14_0__ctor_mFA412466515C9892463BB18B8AC996248F8406A0,
+	U3CU3Ec__DisplayClass14_0_U3CBuildTypeU3Eb__0_m893FFC3DFCB770C3A8A6A583457EB1ADD9F0D1EE,
+	ILEmitResolverBuilderContext_get_Generator_mB03F3998E0E89930FBA1E3C72E125ED9B227B203,
+	ILEmitResolverBuilderContext_set_Generator_mABC23D210AC137AB9FEC3BD6AFDC3D0786DA449B,
+	ILEmitResolverBuilderContext_get_Constants_mD7A739010CA48AE6CA67A5D4CC3828029A6ECD08,
+	ILEmitResolverBuilderContext_set_Constants_m52A87A298D586FD331D3C91BB187AACD2AEB43F1,
+	ILEmitResolverBuilderContext_get_Factories_m5A84ED746C9EDC9E2C097D8D0B8D5DEF152E42C2,
+	ILEmitResolverBuilderContext_set_Factories_m79475FC83EFA2E4D33A2C8C854B1036D7F5F0CC6,
+	ILEmitResolverBuilderContext__ctor_m558CA556A48CF5B94F407A7C8F1260E7B52DFC98,
+	ILEmitServiceProviderEngine__ctor_m177D011096E540306E4C56CA0834CDA6EC075DAD,
+	ILEmitServiceProviderEngine_RealizeService_m11136E4F56BB553D4EC9DF3C59FD15B765C9BBB9,
+};
+extern void DisplayNameOptions__ctor_m381B8E264DA53F0FD2697F7B51B7BA345B708A5C_AdjustorThunk (void);
+extern void DisplayNameOptions_get_FullName_mE2D256AABE29FE34DFB3C840581988442234B583_AdjustorThunk (void);
+extern void DisplayNameOptions_get_IncludeGenericParameters_m933420A509C59AA31091DDC62082CBBB039032F8_AdjustorThunk (void);
+extern void DisplayNameOptions_get_IncludeGenericParameterNames_mEEBEFEC05A09F34509EBCA5BAA49A1828ACF640C_AdjustorThunk (void);
+extern void DisplayNameOptions_get_NestedTypeDelimiter_mFB07B7D2B82380F65CA2F4346D02C7280A79745A_AdjustorThunk (void);
+extern void CallSiteFormatterContext__ctor_m987F48B9B3A9B4034E70326CE1069F8EABA5ACD9_AdjustorThunk (void);
+extern void CallSiteFormatterContext_get_Offset_m243E1081D74DE3254EC319A3DAD2B254FEAB8723_AdjustorThunk (void);
+extern void CallSiteFormatterContext_get_Builder_m577AEBC3F276A90608E2EC36751D8652850CB20D_AdjustorThunk (void);
+extern void CallSiteFormatterContext_ShouldFormat_mA43F1D8230B3087ECA0A74B68999AA348E45F4E6_AdjustorThunk (void);
+extern void CallSiteFormatterContext_IncrementOffset_m353858D57EE30EEAA83345CC00FBA83825017512_AdjustorThunk (void);
+extern void CallSiteFormatterContext_StartObject_m45B348A3C1D6FA0E5049645F9C6584EB6440270B_AdjustorThunk (void);
+extern void CallSiteFormatterContext_EndObject_mAC19C8A0D6CA1FEA072721B53EBD5EBC8D4955DC_AdjustorThunk (void);
+extern void CallSiteFormatterContext_StartProperty_m68029F2A9622CA03C4B395A2A02C4C8847C88A8D_AdjustorThunk (void);
+extern void CallSiteFormatterContext_StartArrayItem_mA5C2DC1790E1F1BF665449E3FAE7D35F928A79F8_AdjustorThunk (void);
+extern void CallSiteFormatterContext_WriteProperty_m46CD34839B89CF374AFAA1941203F45DC3413FCF_AdjustorThunk (void);
+extern void CallSiteFormatterContext_StartArray_m83B7DC171B831814C89BA43F99FB1D4BE6D2459E_AdjustorThunk (void);
+extern void CallSiteFormatterContext_EndArray_mBC2E8E737D605D91317F4B111E11368F4250D1D7_AdjustorThunk (void);
+extern void ChainItemInfo_get_Order_m6DD46F06B4FE04FDEC962854422DCBF8DBBA7D00_AdjustorThunk (void);
+extern void ChainItemInfo_get_ImplementationType_mFCD8DD94D09A597FAE7A28195C031FF250949A48_AdjustorThunk (void);
+extern void ChainItemInfo__ctor_m7BE2FF2AD9894E7F88808EDAD2A400310C5C4D50_AdjustorThunk (void);
+extern void ServiceDescriptorCacheItem_get_Last_m4584035BF41A3C70B84C665E382320EE7AE92E45_AdjustorThunk (void);
+extern void ServiceDescriptorCacheItem_get_Count_m8979932157396A550C3C6468B1AA07409213BF3B_AdjustorThunk (void);
+extern void ServiceDescriptorCacheItem_get_Item_mEAB96C6579B12DFB2AD9FC39C51A84CC24B122C2_AdjustorThunk (void);
+extern void ServiceDescriptorCacheItem_GetSlot_m1626CE2FB135FBF3B5E00ABACEE9156C2158C582_AdjustorThunk (void);
+extern void ServiceDescriptorCacheItem_Add_m12F6016B8E7F6CD3EFDC1ED1726B600605B5806A_AdjustorThunk (void);
+extern void RuntimeResolverContext_get_Scope_m6EDA737B0C2CE7FA4FBA1A7D07BC1E99DF0C3D70_AdjustorThunk (void);
+extern void RuntimeResolverContext_set_Scope_m1EAA8E61408BFDC4AD7AA867B9B73B384F03B305_AdjustorThunk (void);
+extern void RuntimeResolverContext_get_AcquiredLocks_mD8623CB1A86194CE38F7164759E05CDDDB7E1C15_AdjustorThunk (void);
+extern void RuntimeResolverContext_set_AcquiredLocks_m576E28B8ADB394E1E8AE60981EE7F4724A13AB31_AdjustorThunk (void);
+extern void CallSiteValidatorState_get_Singleton_mFCA960A590ED5EC7E79EB1F800D1C16993A5660B_AdjustorThunk (void);
+extern void CallSiteValidatorState_set_Singleton_m2881D2A36F3CB9AD579792EF0D12396C16A2CDF2_AdjustorThunk (void);
+extern void ResultCache__ctor_mD100A86B9DB5CBBED04CBB7CF3AD8510263F0437_AdjustorThunk (void);
+extern void ResultCache__ctor_mE35D6FA6C4FB0AB209D17155E13CC43F970C5FBC_AdjustorThunk (void);
+extern void ResultCache_get_Location_mC6998DC9DA8081C280FDC4058B401DEEE26BCE0F_AdjustorThunk (void);
+extern void ResultCache_set_Location_m6713C29A59D2EFF8885C5FE4F4E860B2751F8537_AdjustorThunk (void);
+extern void ResultCache_get_Key_m3C2B723CFAB736075A45A9B4B9E08EAE69BB89F4_AdjustorThunk (void);
+extern void ResultCache_set_Key_m895DE0D45DF9B6AEC7649FAD5A34913C002CCCA5_AdjustorThunk (void);
+extern void ServiceCacheKey_get_Type_m5ED22D00E11A31475310D1D5C4D75747A448AB1D_AdjustorThunk (void);
+extern void ServiceCacheKey_get_Slot_m2E351CF073D9910205760D9CFB994BFF52689143_AdjustorThunk (void);
+extern void ServiceCacheKey__ctor_m64A22FC7E77F6816F9A4CDDFA54F360ECC72F8CA_AdjustorThunk (void);
+extern void ServiceCacheKey_Equals_m7C056BBE5A52033112596955EF76DFCB22A60C27_AdjustorThunk (void);
+extern void ServiceCacheKey_GetHashCode_mDD372F844B83E82A6F7C664C12F48F5ACD356835_AdjustorThunk (void);
+extern void U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_MoveNext_mF53AD9E8BFEC5B4C64976BD5D8DECEF301F3CD0A_AdjustorThunk (void);
+extern void U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_SetStateMachine_m8F30B0CACF3E67C0130D0FF7CAA6CFD3E6FF3234_AdjustorThunk (void);
+extern void ILEmitCallSiteAnalysisResult__ctor_m73A38316C16DEC0493E3E62AC277AD57CD4861DC_AdjustorThunk (void);
+extern void ILEmitCallSiteAnalysisResult__ctor_m697E79A462FDE1E1DE43B2CC7013FEF3F3594E4F_AdjustorThunk (void);
+extern void ILEmitCallSiteAnalysisResult_Add_mBEA591D96A58D84CB8DE2DB284214D77CB67E7F2_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[47] = 
+{
+	{ 0x06000036, DisplayNameOptions__ctor_m381B8E264DA53F0FD2697F7B51B7BA345B708A5C_AdjustorThunk },
+	{ 0x06000037, DisplayNameOptions_get_FullName_mE2D256AABE29FE34DFB3C840581988442234B583_AdjustorThunk },
+	{ 0x06000038, DisplayNameOptions_get_IncludeGenericParameters_m933420A509C59AA31091DDC62082CBBB039032F8_AdjustorThunk },
+	{ 0x06000039, DisplayNameOptions_get_IncludeGenericParameterNames_mEEBEFEC05A09F34509EBCA5BAA49A1828ACF640C_AdjustorThunk },
+	{ 0x0600003A, DisplayNameOptions_get_NestedTypeDelimiter_mFB07B7D2B82380F65CA2F4346D02C7280A79745A_AdjustorThunk },
+	{ 0x06000045, CallSiteFormatterContext__ctor_m987F48B9B3A9B4034E70326CE1069F8EABA5ACD9_AdjustorThunk },
+	{ 0x06000046, CallSiteFormatterContext_get_Offset_m243E1081D74DE3254EC319A3DAD2B254FEAB8723_AdjustorThunk },
+	{ 0x06000047, CallSiteFormatterContext_get_Builder_m577AEBC3F276A90608E2EC36751D8652850CB20D_AdjustorThunk },
+	{ 0x06000048, CallSiteFormatterContext_ShouldFormat_mA43F1D8230B3087ECA0A74B68999AA348E45F4E6_AdjustorThunk },
+	{ 0x06000049, CallSiteFormatterContext_IncrementOffset_m353858D57EE30EEAA83345CC00FBA83825017512_AdjustorThunk },
+	{ 0x0600004A, CallSiteFormatterContext_StartObject_m45B348A3C1D6FA0E5049645F9C6584EB6440270B_AdjustorThunk },
+	{ 0x0600004B, CallSiteFormatterContext_EndObject_mAC19C8A0D6CA1FEA072721B53EBD5EBC8D4955DC_AdjustorThunk },
+	{ 0x0600004C, CallSiteFormatterContext_StartProperty_m68029F2A9622CA03C4B395A2A02C4C8847C88A8D_AdjustorThunk },
+	{ 0x0600004D, CallSiteFormatterContext_StartArrayItem_mA5C2DC1790E1F1BF665449E3FAE7D35F928A79F8_AdjustorThunk },
+	{ 0x0600004E, CallSiteFormatterContext_WriteProperty_m46CD34839B89CF374AFAA1941203F45DC3413FCF_AdjustorThunk },
+	{ 0x0600004F, CallSiteFormatterContext_StartArray_m83B7DC171B831814C89BA43F99FB1D4BE6D2459E_AdjustorThunk },
+	{ 0x06000050, CallSiteFormatterContext_EndArray_mBC2E8E737D605D91317F4B111E11368F4250D1D7_AdjustorThunk },
+	{ 0x06000087, ChainItemInfo_get_Order_m6DD46F06B4FE04FDEC962854422DCBF8DBBA7D00_AdjustorThunk },
+	{ 0x06000088, ChainItemInfo_get_ImplementationType_mFCD8DD94D09A597FAE7A28195C031FF250949A48_AdjustorThunk },
+	{ 0x06000089, ChainItemInfo__ctor_m7BE2FF2AD9894E7F88808EDAD2A400310C5C4D50_AdjustorThunk },
+	{ 0x0600009C, ServiceDescriptorCacheItem_get_Last_m4584035BF41A3C70B84C665E382320EE7AE92E45_AdjustorThunk },
+	{ 0x0600009D, ServiceDescriptorCacheItem_get_Count_m8979932157396A550C3C6468B1AA07409213BF3B_AdjustorThunk },
+	{ 0x0600009E, ServiceDescriptorCacheItem_get_Item_mEAB96C6579B12DFB2AD9FC39C51A84CC24B122C2_AdjustorThunk },
+	{ 0x0600009F, ServiceDescriptorCacheItem_GetSlot_m1626CE2FB135FBF3B5E00ABACEE9156C2158C582_AdjustorThunk },
+	{ 0x060000A0, ServiceDescriptorCacheItem_Add_m12F6016B8E7F6CD3EFDC1ED1726B600605B5806A_AdjustorThunk },
+	{ 0x060000B4, RuntimeResolverContext_get_Scope_m6EDA737B0C2CE7FA4FBA1A7D07BC1E99DF0C3D70_AdjustorThunk },
+	{ 0x060000B5, RuntimeResolverContext_set_Scope_m1EAA8E61408BFDC4AD7AA867B9B73B384F03B305_AdjustorThunk },
+	{ 0x060000B6, RuntimeResolverContext_get_AcquiredLocks_mD8623CB1A86194CE38F7164759E05CDDDB7E1C15_AdjustorThunk },
+	{ 0x060000B7, RuntimeResolverContext_set_AcquiredLocks_m576E28B8ADB394E1E8AE60981EE7F4724A13AB31_AdjustorThunk },
+	{ 0x060000C3, CallSiteValidatorState_get_Singleton_mFCA960A590ED5EC7E79EB1F800D1C16993A5660B_AdjustorThunk },
+	{ 0x060000C4, CallSiteValidatorState_set_Singleton_m2881D2A36F3CB9AD579792EF0D12396C16A2CDF2_AdjustorThunk },
+	{ 0x06000118, ResultCache__ctor_mD100A86B9DB5CBBED04CBB7CF3AD8510263F0437_AdjustorThunk },
+	{ 0x06000119, ResultCache__ctor_mE35D6FA6C4FB0AB209D17155E13CC43F970C5FBC_AdjustorThunk },
+	{ 0x0600011A, ResultCache_get_Location_mC6998DC9DA8081C280FDC4058B401DEEE26BCE0F_AdjustorThunk },
+	{ 0x0600011B, ResultCache_set_Location_m6713C29A59D2EFF8885C5FE4F4E860B2751F8537_AdjustorThunk },
+	{ 0x0600011C, ResultCache_get_Key_m3C2B723CFAB736075A45A9B4B9E08EAE69BB89F4_AdjustorThunk },
+	{ 0x0600011D, ResultCache_set_Key_m895DE0D45DF9B6AEC7649FAD5A34913C002CCCA5_AdjustorThunk },
+	{ 0x06000125, ServiceCacheKey_get_Type_m5ED22D00E11A31475310D1D5C4D75747A448AB1D_AdjustorThunk },
+	{ 0x06000126, ServiceCacheKey_get_Slot_m2E351CF073D9910205760D9CFB994BFF52689143_AdjustorThunk },
+	{ 0x06000127, ServiceCacheKey__ctor_m64A22FC7E77F6816F9A4CDDFA54F360ECC72F8CA_AdjustorThunk },
+	{ 0x06000128, ServiceCacheKey_Equals_m7C056BBE5A52033112596955EF76DFCB22A60C27_AdjustorThunk },
+	{ 0x06000129, ServiceCacheKey_GetHashCode_mDD372F844B83E82A6F7C664C12F48F5ACD356835_AdjustorThunk },
+	{ 0x06000151, U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_MoveNext_mF53AD9E8BFEC5B4C64976BD5D8DECEF301F3CD0A_AdjustorThunk },
+	{ 0x06000152, U3CU3CDisposeAsyncU3Eg__AwaitU7C15_0U3Ed_SetStateMachine_m8F30B0CACF3E67C0130D0FF7CAA6CFD3E6FF3234_AdjustorThunk },
+	{ 0x06000160, ILEmitCallSiteAnalysisResult__ctor_m73A38316C16DEC0493E3E62AC277AD57CD4861DC_AdjustorThunk },
+	{ 0x06000161, ILEmitCallSiteAnalysisResult__ctor_m697E79A462FDE1E1DE43B2CC7013FEF3F3594E4F_AdjustorThunk },
+	{ 0x06000162, ILEmitCallSiteAnalysisResult_Add_mBEA591D96A58D84CB8DE2DB284214D77CB67E7F2_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[403] = 
+{
+	8471,
+	6633,
+	6745,
+	6633,
+	6633,
+	12777,
+	11273,
+	11273,
+	10416,
+	9875,
+	11273,
+	10416,
+	9875,
+	9240,
+	10416,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12807,
+	12851,
+	6709,
+	8277,
+	3800,
+	8318,
+	8318,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	10975,
+	8471,
+	12851,
+	12275,
+	11263,
+	9217,
+	10768,
+	10768,
+	9484,
+	12851,
+	1252,
+	8201,
+	8201,
+	8201,
+	8453,
+	8471,
+	5974,
+	2989,
+	2989,
+	2989,
+	2989,
+	2989,
+	2989,
+	2989,
+	12851,
+	2000,
+	8277,
+	8318,
+	4835,
+	8539,
+	8539,
+	8471,
+	6745,
+	8471,
+	3800,
+	8539,
+	8471,
+	8471,
+	6745,
+	5974,
+	5974,
+	8471,
+	1401,
+	6745,
+	3790,
+	3790,
+	6745,
+	3800,
+	3790,
+	12851,
+	10773,
+	8277,
+	6709,
+	5974,
+	8471,
+	8277,
+	8201,
+	5967,
+	3471,
+	8471,
+	4835,
+	3790,
+	4835,
+	8318,
+	6745,
+	8318,
+	5609,
+	3471,
+	6709,
+	8471,
+	12275,
+	11263,
+	11273,
+	2030,
+	5974,
+	8471,
+	6745,
+	3800,
+	8457,
+	8201,
+	6633,
+	8201,
+	6633,
+	8471,
+	12851,
+	8471,
+	6745,
+	6745,
+	3800,
+	5974,
+	3800,
+	8277,
+	8318,
+	3471,
+	12851,
+	8471,
+	5422,
+	6745,
+	8471,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2680,
+	1189,
+	572,
+	1199,
+	574,
+	3800,
+	2985,
+	8318,
+	8277,
+	5967,
+	5609,
+	7195,
+	8471,
+	5974,
+	12851,
+	8471,
+	2714,
+	5974,
+	5974,
+	2985,
+	2987,
+	2987,
+	2987,
+	2987,
+	1193,
+	2987,
+	2987,
+	2987,
+	2987,
+	2987,
+	8471,
+	8318,
+	6745,
+	8277,
+	6709,
+	6745,
+	2030,
+	2990,
+	2990,
+	2990,
+	2990,
+	2990,
+	2990,
+	2990,
+	2990,
+	8471,
+	8318,
+	6745,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	8318,
+	6745,
+	5974,
+	8318,
+	3800,
+	8318,
+	8318,
+	8277,
+	8318,
+	8318,
+	2079,
+	1441,
+	8318,
+	8318,
+	8277,
+	6745,
+	5974,
+	5974,
+	8471,
+	5974,
+	6745,
+	2030,
+	5974,
+	5974,
+	5974,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	12275,
+	1741,
+	2985,
+	10413,
+	2985,
+	5974,
+	0,
+	5974,
+	12851,
+	2993,
+	8471,
+	5980,
+	8471,
+	5974,
+	8471,
+	5974,
+	12851,
+	8471,
+	6745,
+	5974,
+	8318,
+	2079,
+	8318,
+	8318,
+	8277,
+	8318,
+	8318,
+	2079,
+	8318,
+	8318,
+	8277,
+	0,
+	0,
+	0,
+	0,
+	0,
+	12828,
+	3512,
+	1933,
+	8277,
+	6709,
+	8382,
+	6806,
+	12851,
+	6745,
+	5974,
+	8471,
+	5974,
+	5974,
+	12833,
+	8318,
+	8277,
+	3790,
+	4890,
+	8277,
+	12851,
+	6792,
+	0,
+	0,
+	0,
+	8362,
+	8201,
+	8471,
+	8318,
+	8318,
+	8277,
+	6745,
+	8318,
+	8318,
+	8318,
+	8318,
+	8318,
+	6745,
+	6745,
+	5974,
+	0,
+	8471,
+	8457,
+	2985,
+	8318,
+	5974,
+	12851,
+	8471,
+	5974,
+	6745,
+	8318,
+	8318,
+	5974,
+	8318,
+	5974,
+	8471,
+	8457,
+	8318,
+	10497,
+	8471,
+	6745,
+	8471,
+	8318,
+	8318,
+	8277,
+	8201,
+	0,
+	0,
+	8471,
+	0,
+	0,
+	0,
+	12851,
+	8471,
+	6709,
+	3393,
+	5270,
+	12807,
+	2604,
+	2604,
+	2604,
+	2604,
+	2604,
+	2604,
+	2604,
+	2604,
+	2604,
+	5272,
+	8471,
+	12851,
+	2030,
+	5974,
+	7234,
+	7234,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	2985,
+	3800,
+	3807,
+	2985,
+	12577,
+	12577,
+	3790,
+	3790,
+	12851,
+	3958,
+	8471,
+	8471,
+	5974,
+	8471,
+	7235,
+	8318,
+	6745,
+	8318,
+	6745,
+	8318,
+	6745,
+	8471,
+	6745,
+	5974,
+};
+static const Il2CppTokenRangePair s_rgctxIndices[4] = 
+{
+	{ 0x02000026, { 0, 17 } },
+	{ 0x02000042, { 28, 9 } },
+	{ 0x06000158, { 17, 6 } },
+	{ 0x06000159, { 23, 5 } },
+};
+extern const uint32_t g_rgctx_CallSiteVisitor_2_U3CVisitCallSiteU3Eb__2_0_m3852243225FCAAC2BF304213CB4B9E6D40C0085D;
+extern const uint32_t g_rgctx_Func_3_tF7503B87A7A06089D51C929CF71E4A74908675F3;
+extern const uint32_t g_rgctx_Func_3__ctor_mBF8EAA6F4513B92BFFCC24245443C9917703CF94;
+extern const uint32_t g_rgctx_StackGuard_RunOnEmptyStack_TisServiceCallSite_t02242E51148132C39919A425448D74C7C0D5E2EC_TisTArgument_tC80F6A0641D05A59620A052AF565DA44757FCAA9_TisTResult_t2C35B8E3F2B0CFBACF072A7DA7E9CD390BFC2E93_mC86AB69BBA6F8C72844F458034F3B238A402497A;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_tED49D9E9F0F75FF10E4ACA2E4423CD3C1981738F;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitRootCache_mA2C8B20300467F62F3B0333C634A9261FCEC6151;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitScopeCache_m566209CFE6294155A42ED1BAA1636DB1837525F0;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitDisposeCache_mAB9531DD09034817C56DE062DA67DB6D9DFBA0FD;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitNoCache_m860BF9645B95BE118ED9AB89EE443D39CED5EC15;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitFactory_mC9A179D2EF1F75FE39F498C3CE5DEE7E7DD0AEE1;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitIEnumerable_mA6E26AD75582F602880D42D3E6850A89CDA4385B;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitConstructor_mBC002729854A613ACFAA3D9AA2AFB5443B38E030;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitConstant_m080BBCBDB162256ACAE59E1405BD4561AAEBFA07;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitServiceProvider_m878E8BFC6A0A4B916FD047B84EB8F009C993D64C;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitServiceScopeFactory_m789B4F56E33651E2A644905D5B1915EDC5801A26;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitCallSiteMain_mC499D263B4769C34DC37F844C349377370AC085C;
+extern const uint32_t g_rgctx_CallSiteVisitor_2_VisitCallSite_mACE618EC011F88E7FC5A241D4304F9359A7585CE;
+extern const uint32_t g_rgctx_U3CU3Ec__3_3_t1D465F6DC84B90F6D8EC145ADF480616E2C72C4B;
+extern const uint32_t g_rgctx_U3CU3Ec__3_3_U3CRunOnEmptyStackU3Eb__3_0_mD04B4254D555723B616BCCE16765F3456539C5A4;
+extern const uint32_t g_rgctx_Func_2_tE224AD8A0747535FABA1CD040014543AFFABC2F9;
+extern const uint32_t g_rgctx_Func_2__ctor_m5DFF1CCC3B0E8D692ACCEA9662F634A48DCC5CC3;
+extern const uint32_t g_rgctx_Tuple_Create_TisFunc_3_t4B679B9EF9C6893C297A152488568901E70BB6D5_TisT1_t38816E675A85AEDBFC4AE4E18A44E8B3DAB81733_TisT2_tA559174A913B6FAC26FB57661D3ADA3E6172244F_m9DF1FFF581419A057BEE8C6A51C7B5004EBF76DA;
+extern const uint32_t g_rgctx_StackGuard_RunOnEmptyStackCore_TisTR_tF08A79E6F5C75480F2580DA0D7FD27EC9265DA2B_m364D66648088A674B9BF8B16743ADBBA1AB0ED03;
+extern const uint32_t g_rgctx_TaskFactory_StartNew_TisR_t38FF6E7840C1C2288E8F2AA0A8A2477A1B18947D_mFE8B5868DCBA84F60D0008DF1EA81AB30D4938AA;
+extern const uint32_t g_rgctx_Task_1_tC0384F126BB6B6885E3BDF2064FA71E84B15DB8C;
+extern const uint32_t g_rgctx_Task_1_GetAwaiter_m9D3015FE0164F4F80A5988CB26E601ED89501440;
+extern const uint32_t g_rgctx_TaskAwaiter_1_get_IsCompleted_m14403709F15DE314EF041371111DD65A757137AA;
+extern const uint32_t g_rgctx_TaskAwaiter_1_GetResult_m18872048EC333120F9EF9B9F7E7F1B3920715934;
+extern const uint32_t g_rgctx_U3CU3Ec__3_3_t3CD1F8CA7177FF0BB829988133A68BC68D538543;
+extern const uint32_t g_rgctx_U3CU3Ec__3_3__ctor_m801471F719DC7D7ED99CBFDA4D6D24FE30387DC6;
+extern const uint32_t g_rgctx_U3CU3Ec__3_3_t3CD1F8CA7177FF0BB829988133A68BC68D538543;
+extern const uint32_t g_rgctx_Tuple_3_t17014CB765F7F26E3B0DF371BBA1FD57F14C0C62;
+extern const uint32_t g_rgctx_Tuple_3_get_Item1_m821F59BDCD97FEE67B9BE57D28922C7467D87A84;
+extern const uint32_t g_rgctx_Tuple_3_get_Item2_m458C4F80F58D942FAD4AEA5C4F7A1A5E33D2A70E;
+extern const uint32_t g_rgctx_Tuple_3_get_Item3_mFDA553B584BD5424FE089E87DE2F4D750F0E2689;
+extern const uint32_t g_rgctx_Func_3_t117945384CF2EE8540346754BC1B1D31792252FD;
+extern const uint32_t g_rgctx_Func_3_Invoke_mCCD517353A3832797705B8187C2E585AD6943E04;
+static const Il2CppRGCTXDefinition s_rgctxValues[37] = 
+{
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_U3CVisitCallSiteU3Eb__2_0_m3852243225FCAAC2BF304213CB4B9E6D40C0085D },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_3_tF7503B87A7A06089D51C929CF71E4A74908675F3 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_3__ctor_mBF8EAA6F4513B92BFFCC24245443C9917703CF94 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_StackGuard_RunOnEmptyStack_TisServiceCallSite_t02242E51148132C39919A425448D74C7C0D5E2EC_TisTArgument_tC80F6A0641D05A59620A052AF565DA44757FCAA9_TisTResult_t2C35B8E3F2B0CFBACF072A7DA7E9CD390BFC2E93_mC86AB69BBA6F8C72844F458034F3B238A402497A },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_CallSiteVisitor_2_tED49D9E9F0F75FF10E4ACA2E4423CD3C1981738F },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitRootCache_mA2C8B20300467F62F3B0333C634A9261FCEC6151 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitScopeCache_m566209CFE6294155A42ED1BAA1636DB1837525F0 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitDisposeCache_mAB9531DD09034817C56DE062DA67DB6D9DFBA0FD },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitNoCache_m860BF9645B95BE118ED9AB89EE443D39CED5EC15 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitFactory_mC9A179D2EF1F75FE39F498C3CE5DEE7E7DD0AEE1 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitIEnumerable_mA6E26AD75582F602880D42D3E6850A89CDA4385B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitConstructor_mBC002729854A613ACFAA3D9AA2AFB5443B38E030 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitConstant_m080BBCBDB162256ACAE59E1405BD4561AAEBFA07 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitServiceProvider_m878E8BFC6A0A4B916FD047B84EB8F009C993D64C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitServiceScopeFactory_m789B4F56E33651E2A644905D5B1915EDC5801A26 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitCallSiteMain_mC499D263B4769C34DC37F844C349377370AC085C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_CallSiteVisitor_2_VisitCallSite_mACE618EC011F88E7FC5A241D4304F9359A7585CE },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec__3_3_t1D465F6DC84B90F6D8EC145ADF480616E2C72C4B },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec__3_3_U3CRunOnEmptyStackU3Eb__3_0_mD04B4254D555723B616BCCE16765F3456539C5A4 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_2_tE224AD8A0747535FABA1CD040014543AFFABC2F9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_2__ctor_m5DFF1CCC3B0E8D692ACCEA9662F634A48DCC5CC3 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Tuple_Create_TisFunc_3_t4B679B9EF9C6893C297A152488568901E70BB6D5_TisT1_t38816E675A85AEDBFC4AE4E18A44E8B3DAB81733_TisT2_tA559174A913B6FAC26FB57661D3ADA3E6172244F_m9DF1FFF581419A057BEE8C6A51C7B5004EBF76DA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_StackGuard_RunOnEmptyStackCore_TisTR_tF08A79E6F5C75480F2580DA0D7FD27EC9265DA2B_m364D66648088A674B9BF8B16743ADBBA1AB0ED03 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_TaskFactory_StartNew_TisR_t38FF6E7840C1C2288E8F2AA0A8A2477A1B18947D_mFE8B5868DCBA84F60D0008DF1EA81AB30D4938AA },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Task_1_tC0384F126BB6B6885E3BDF2064FA71E84B15DB8C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Task_1_GetAwaiter_m9D3015FE0164F4F80A5988CB26E601ED89501440 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_TaskAwaiter_1_get_IsCompleted_m14403709F15DE314EF041371111DD65A757137AA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_TaskAwaiter_1_GetResult_m18872048EC333120F9EF9B9F7E7F1B3920715934 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec__3_3_t3CD1F8CA7177FF0BB829988133A68BC68D538543 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_U3CU3Ec__3_3__ctor_m801471F719DC7D7ED99CBFDA4D6D24FE30387DC6 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_U3CU3Ec__3_3_t3CD1F8CA7177FF0BB829988133A68BC68D538543 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Tuple_3_t17014CB765F7F26E3B0DF371BBA1FD57F14C0C62 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Tuple_3_get_Item1_m821F59BDCD97FEE67B9BE57D28922C7467D87A84 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Tuple_3_get_Item2_m458C4F80F58D942FAD4AEA5C4F7A1A5E33D2A70E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Tuple_3_get_Item3_mFDA553B584BD5424FE089E87DE2F4D750F0E2689 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_3_t117945384CF2EE8540346754BC1B1D31792252FD },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_3_Invoke_mCCD517353A3832797705B8187C2E585AD6943E04 },
+};
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationMicrosoft_Extensions_DependencyInjection;
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_Extensions_DependencyInjection_CodeGenModule;
+const Il2CppCodeGenModule g_Microsoft_Extensions_DependencyInjection_CodeGenModule = 
+{
+	"Microsoft.Extensions.DependencyInjection.dll",
+	403,
+	s_methodPointers,
+	47,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	4,
+	s_rgctxIndices,
+	37,
+	s_rgctxValues,
+	&g_DebuggerMetadataRegistrationMicrosoft_Extensions_DependencyInjection,
+	NULL, // module initializer,
+	NULL,
+	NULL,
+	NULL,
+};

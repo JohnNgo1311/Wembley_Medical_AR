@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class GetBufferStation : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class GetBufferStation : MonoBehaviour
     public TMP_Text[] settingValuesS2;
     public TMP_Text[] settingValuesS3;
     public string station_Id_Specific;
+    public Slider[] Sliders;
 
     [SerializeField]
     private string update_Specific_Function = "default";
@@ -115,9 +117,9 @@ public class GetBufferStation : MonoBehaviour
                 Debug.Log("IO: " + data.TagValue);
                 break;
             default:
+                UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
                 UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO06, visionProcessingValuesS1);
                 UpdateEnableValues(data, GlobalVariable.enableStationBLO06, enableValuesS1, enableFrameS1);
-                UpdateProductionData(data, GlobalVariable.productionDataBLO06, productionDataS1);
                 break;
         }
     }
@@ -136,9 +138,9 @@ public class GetBufferStation : MonoBehaviour
                 UpdateIO(data, "S2", inputCheckS2, outputCheckS2);
                 break;
             default:
+                UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
                 UpdateVisionProcessing(data, GlobalVariable.visionProcessingBLO01, visionProcessingValuesS2);
                 UpdateEnableValues(data, GlobalVariable.enableStationBLO01, enableValuesS2, enableFrameS2);
-                UpdateProductionData(data, GlobalVariable.productionDataBLO01, productionDataS2);
                 UpdateSetting(data, GlobalVariable.settingValuesBLO01, settingValuesS2);
                 break;
         }
@@ -286,7 +288,7 @@ public class GetBufferStation : MonoBehaviour
         // Determine server connection status
         Color serverColor;
         string serverStatus;
-        if (GlobalVariable.errorServerConnected)
+        if (!GlobalVariable.serverConnected)
         {
             serverColor = GlobalVariable.colors[3];
             serverStatus = "Server Connection: Disconnected";
@@ -321,24 +323,32 @@ public class GetBufferStation : MonoBehaviour
         switch (data.TagId)
         {
             case "EFF":
-                GlobalVariable.effective = parsedValue;
-                productionDataValues[index].text = data.TagValue;
+                double effectiveValue = parsedValue;
+                productionDataValues[index].text = Math.Round(effectiveValue, 2).ToString(); ;
+                Sliders[0].GetComponent<Slider>().value = (float)effectiveValue;
                 break;
-
             case "OEE":
-                GlobalVariable.oEEValue = parsedValue;
-                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
-                Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+                double oEEValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(oEEValue, 2).ToString();
+                Sliders[1].GetComponent<Slider>().value = (float)(oEEValue / 100);
                 break;
-
             case "P":
+                double PValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(PValue, 2).ToString();
+                Sliders[2].GetComponent<Slider>().value = (float)(PValue / 100);
+                break;
             case "A":
+                double AValue = parsedValue * 100;
+                productionDataValues[index].text = Math.Round(AValue, 2).ToString();
+                Sliders[3].GetComponent<Slider>().value = (float)(AValue / 100);
+                break;
             case "Q":
-                productionDataValues[index].text = (parsedValue * 100).ToString("0.00");
-                Debug.Log("PAQ: " + data.TagId + " " + data.TagValue);
+                double QValue = (float)parsedValue * 100;
+                productionDataValues[index].text = Math.Round(QValue, 2).ToString();
+                Sliders[4].GetComponent<Slider>().value = (float)(QValue / 100);
                 break;
             default:
-                productionDataValues[index].text = data.TagValue;
+                productionDataValues[index].text = parsedValue.ToString();
                 break;
         }
     }

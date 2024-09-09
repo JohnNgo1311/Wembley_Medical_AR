@@ -146,7 +146,6 @@ public class SignalRData : MonoBehaviour
                 if (task.IsFaulted)
                 {
                     Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + task.Exception.GetBaseException());
-                    GlobalVariable.errorServerConnected = true;
                     GlobalVariable.isConnecting = false;
                 }
                 if (task.IsCompletedSuccessfully)
@@ -170,7 +169,6 @@ public class SignalRData : MonoBehaviour
                 if (exception != null)
                 {
                     Debug.Log("There was an error opening the GlobalVariable.hubConnection:" + exception.GetBaseException());
-                    GlobalVariable.errorServerConnected = true;
                     GlobalVariable.isConnecting = false;
                 }
 
